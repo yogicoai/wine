@@ -4,7 +4,8 @@ import { getDb } from "@/lib/mongodb";
 import { catalogKey, saveCatalog } from "@/lib/catalog";
 import { buildSeedList } from "@/lib/seedList";
 import { SYSTEM_PROMPT, userPromptByName } from "@/lib/prompts";
-import { parseJson } from "@/lib/claude";
+import { parseJson, readApiKey } from "@/lib/claude";
+import { env } from "@/lib/env";
 
 export const runtime = "nodejs";
 export const maxDuration = 60; // Vercel Hobby 상한. 배치 생성 자체는 수 초면 끝난다.
@@ -23,7 +24,7 @@ function estimate(count) {
 }
 
 function client() {
-  return new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  return new Anthropic({ apiKey: readApiKey() });
 }
 
 /**
@@ -34,8 +35,8 @@ function client() {
  * confirm: true 를 보내야 실제 배치가 생성된다.
  */
 export async function POST(request) {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    return NextResponse.json({ error: "ANTHROPIC_API_KEY 미설정" }, { status: 400 });
+  if (!readApiKey()) {
+    return NextResponse.json({ error: "ANTHROPIC_API_KEY 미설정 또는 형식 오류" }, { status: 400 });
   }
   const db = await getDb();
   if (!db) return NextResponse.json({ error: "DB 미설정" }, { status: 503 });
@@ -87,7 +88,7 @@ export async function POST(request) {
     requests: fresh.map((item, i) => ({
       custom_id: `seed-${i}`,
       params: {
-        model: process.env.CLAUDE_MODEL || "claude-sonnet-5",
+        model: env("CLAUDE_MODEL", "claude-sonnet-5"),
         max_tokens: 8000,
         system: SYSTEM_PROMPT,
         messages: [{ role: "user", content: userPromptByName(item.name) }],
@@ -172,7 +173,7 @@ export async function GET(request) {
       result.seedName = nameByCustomId.get(row.custom_id) || null;
       const ok = await saveCatalog(result, {
         usedWeb: false,
-        model: process.env.CLAUDE_MODEL || "claude-sonnet-5",
+        model: env("CLAUDE_MODEL", "claude-sonnet-5"),
         source: "seed",
       });
       ok ? ingested++ : failed++;
