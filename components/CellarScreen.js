@@ -185,7 +185,9 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
               {it.thumb ? (
                 <img className="hist-thumb" src={it.thumb} alt="" />
               ) : (
-                <div className="hist-thumb">{cat.icon}</div>
+                <div className="hist-thumb">
+                  <CatIcon category={it.category} size={26} />
+                </div>
               )}
               <div className="cellar-info">
                 <div className="hist-name">{it.name}</div>

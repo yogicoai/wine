@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { catOf } from "@/lib/cats";
 import Radar from "./Radar";
+import CatIcon from "./CatIcon";
 import CellarActions from "./CellarActions";
 import VintageCompare from "./VintageCompare";
 
@@ -291,7 +292,11 @@ export default function ResultScreen({
           style={{ background: `radial-gradient(360px 240px at 50% 0%, ${glow}, transparent 70%)` }}
         />
         {thumb && <img className="hero-thumb" src={thumb} alt={r.name} />}
-        <span className="hero-cat">{cat.icon} {cat.label}{r.type ? ` · ${r.type}` : ""}</span>
+        <span className="hero-cat">
+          <CatIcon category={r.category} size={22} />
+          {cat.label}
+          {r.type ? ` · ${r.type}` : ""}
+        </span>
         <h1 className="hero-name">{r.name}</h1>
         <div className="hero-rule"><i>✦</i></div>
         <div className="hero-meta">
