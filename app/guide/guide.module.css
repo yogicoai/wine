@@ -1,0 +1,305 @@
+/* 기능 설명서 페이지 — 앱의 셀러 테마 토큰(globals.css)을 그대로 사용 */
+
+.wrap {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── 상단 바 ── */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.brand {
+  font-family: var(--font-d);
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  text-decoration: none;
+}
+.brand em { font-style: italic; }
+.back {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  padding: 0.55rem 1rem;
+  transition: border-color 0.25s, color 0.25s;
+}
+.back:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ── 히어로 ── */
+.hero { padding: 4.5rem 0 3rem; border-bottom: 1px solid var(--line); }
+.eyebrow {
+  font-family: var(--font-d);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 1.4rem;
+}
+.title {
+  font-family: var(--font-d);
+  font-size: clamp(2.3rem, 7vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1.08;
+  margin: 0;
+  letter-spacing: 0.01em;
+  background: linear-gradient(178deg, #f4e9ce 8%, var(--gold-hi) 42%, var(--gold) 78%, var(--gold-lo));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-wrap: balance;
+}
+.titleKo {
+  display: block;
+  font-size: 0.4em;
+  margin-top: 0.7rem;
+  color: var(--ink-dim);
+  background: none;
+  -webkit-text-fill-color: var(--ink-dim);
+  letter-spacing: 0.06em;
+}
+.lede {
+  max-width: 36rem;
+  margin: 1.8rem 0 0;
+  font-family: var(--font-s);
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: var(--ink-dim);
+}
+.lede b { color: var(--ink); font-weight: 600; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 1px;
+  background: var(--line-soft);
+  border: 1px solid var(--line-soft);
+  margin-top: 2.8rem;
+}
+.stat { background: var(--bg-2); padding: 1.2rem 1.1rem; }
+.stat b {
+  display: block;
+  font-family: var(--font-d);
+  font-size: 1.85rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--gold-hi);
+  font-variant-numeric: tabular-nums;
+}
+.stat span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.74rem;
+  color: var(--ink-dim);
+  letter-spacing: 0.08em;
+}
+
+/* ── 섹션 ── */
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 2.5rem;
+  padding: 3.2rem 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.section:last-of-type { border-bottom: none; }
+@media (min-width: 46rem) {
+  .section { grid-template-columns: 4rem 1fr; }
+}
+.num {
+  font-family: var(--font-d);
+  font-size: 1rem;
+  color: var(--gold);
+  padding-top: 0.4rem;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 45.999rem) {
+  .num { display: none; }
+}
+.body { min-width: 0; }
+
+.h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.sub { color: var(--ink-dim); margin: 0 0 1.8rem; font-size: 0.9rem; line-height: 1.75; }
+.h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin: 2.1rem 0 0.7rem;
+  color: var(--ink);
+}
+.p {
+  margin: 0 0 0.95rem;
+  max-width: 44rem;
+  font-family: var(--font-s);
+  font-size: 0.93rem;
+  line-height: 1.9;
+  color: var(--ink);
+}
+.p:last-child { margin-bottom: 0; }
+
+/* ── 표 ── */
+.scroll { overflow-x: auto; margin: 0 0 1rem; }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+  min-width: 30rem;
+}
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.8rem 0.9rem;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+  line-height: 1.7;
+}
+.table th {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  font-weight: 600;
+  border-bottom-color: var(--line);
+}
+.table td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; }
+.was { color: var(--ink-dim); }
+.now { color: var(--ink); }
+.now b { color: var(--gold-hi); font-weight: 700; }
+.numCell {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+  color: var(--ink-dim);
+}
+.priceHi { color: #d98b7a; font-weight: 700; }
+.priceLo { color: var(--gold-hi); font-weight: 700; }
+.faint { font-weight: 400; color: var(--ink-dim); font-size: 0.8rem; }
+
+/* ── 리스트 ── */
+.list { margin: 0 0 1rem; padding: 0; list-style: none; }
+.list li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.6rem;
+  max-width: 44rem;
+  font-family: var(--font-s);
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--ink);
+}
+.list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.78em;
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+}
+
+/* ── 화면 카드 ── */
+.screens { display: grid; gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); }
+.screen { background: var(--bg-2); padding: 1.5rem 1.4rem; }
+.tag {
+  font-family: var(--font-d);
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.h4 { margin: 0 0 0.5rem; font-size: 1rem; font-weight: 700; color: var(--ink); }
+.screen .p { font-size: 0.87rem; color: var(--ink-dim); margin-bottom: 0.8rem; }
+.screen .list li { font-size: 0.85rem; color: var(--ink-dim); margin-bottom: 0.45rem; }
+.screen .list li b { color: var(--ink); }
+
+/* ── 차별점 ── */
+.edge {
+  border-left: 2px solid var(--gold-lo);
+  padding: 0.2rem 0 0.2rem 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 44rem;
+}
+.edge .h4 { margin-bottom: 0.35rem; font-size: 0.96rem; }
+.edge .p { font-size: 0.88rem; color: var(--ink-dim); margin: 0; }
+
+/* ── 우선순위 ── */
+.prio { display: grid; gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); }
+.item { background: var(--bg-2); padding: 1.35rem; display: grid; gap: 0.4rem 1rem; }
+@media (min-width: 34rem) {
+  .item { grid-template-columns: 1fr auto; align-items: start; }
+}
+.item .h4 { margin: 0; }
+.item .p { grid-column: 1; font-size: 0.88rem; color: var(--ink-dim); margin: 0; }
+.flag {
+  justify-self: start;
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.32rem 0.62rem;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+  font-weight: 600;
+}
+@media (min-width: 34rem) {
+  .flag { grid-row: 1; grid-column: 2; justify-self: end; }
+}
+.must { color: #d98b7a; }
+.soon { color: var(--gold); }
+.idea { color: var(--ink-dim); }
+
+/* ── 콜아웃 ── */
+.callout {
+  background: var(--bg-3);
+  border-left: 2px solid var(--gold);
+  padding: 1.15rem 1.25rem;
+  margin: 1.4rem 0;
+  font-family: var(--font-s);
+  font-size: 0.89rem;
+  line-height: 1.85;
+  color: var(--ink-dim);
+  max-width: 44rem;
+}
+.callout b { color: var(--ink); }
+
+/* ── FAQ ── */
+.faq { border-top: 1px solid var(--line-soft); margin: 0; }
+.qa { border-bottom: 1px solid var(--line-soft); padding: 1.15rem 0; max-width: 44rem; }
+.qa dt { font-weight: 700; margin-bottom: 0.4rem; font-size: 0.94rem; color: var(--ink); }
+.qa dd {
+  margin: 0;
+  color: var(--ink-dim);
+  font-family: var(--font-s);
+  font-size: 0.89rem;
+  line-height: 1.85;
+}
+
+.footer {
+  padding: 2.6rem 0 0;
+  color: var(--ink-dim);
+  font-size: 0.76rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  letter-spacing: 0.08em;
+}

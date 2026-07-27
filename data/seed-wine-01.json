@@ -1,0 +1,1183 @@
+[
+  {
+    "category": "wine",
+    "name": "카시예로 델 디아블로 카베르네 소비뇽",
+    "searchKeyword": "카시예로 델 디아블로 카베르네",
+    "producer": "Concha y Toro",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "센트럴 밸리",
+    "country": "칠레",
+    "alcohol": "13.5%",
+    "liquidColor": "#5B1424",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "세계적으로 판매량이 많은 칠레 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 70 },
+      { "axis": "탄닌", "value": 58 },
+      { "axis": "산도", "value": 55 },
+      { "axis": "당도", "value": 22 }
+    ],
+    "tastingNotes": "블랙커런트와 자두의 잘 익은 과일 향에 은은한 바닐라와 커피 뉘앙스가 더해집니다. 탄닌이 부드러워 편하게 마실 수 있습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽" },
+      { "label": "숙성", "value": "오크 숙성" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      { "year": "1883", "event": "돈 멜초르가 콘차이토로 설립" },
+      { "year": "1891", "event": "'악마의 저장고' 전설이 만들어짐" },
+      { "year": "현재", "event": "세계 145개국에 수출되는 칠레 대표 브랜드" }
+    ],
+    "story": "창업자가 최고급 와인을 도둑맞지 않으려고 '이 저장고에 악마가 산다'는 소문을 퍼뜨렸다는 이야기에서 이름이 유래했습니다. 그 전설이 그대로 브랜드가 되었습니다.",
+    "winery": "콘차이토로는 칠레 최대 와인 기업이며, 남미 와인의 세계화를 이끈 곳으로 평가받습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "소고기 구이", "why": "탄닌이 기름기를 정리해 줍니다", "shopKeyword": "소고기 구이용" },
+      { "emoji": "🍝", "food": "볼로네제 파스타", "why": "토마토의 산미와 균형이 좋습니다", "shopKeyword": "볼로네제 소스" },
+      { "emoji": "🧀", "food": "고다 치즈", "why": "고소함이 과일 향을 살립니다", "shopKeyword": "고다 치즈" }
+    ],
+    "pairingTip": "개봉 후 20~30분 두면 향이 열립니다.",
+    "avoidPairing": "담백한 흰살 생선과는 어울리지 않습니다.",
+    "similar": ["몬테스 알파 카베르네 소비뇽", "1865 카베르네 소비뇽", "산타 리타 120"],
+    "trivia": "라벨의 악마 문양은 1891년의 전설에서 따온 것으로, 브랜드 스토리텔링의 고전적 성공 사례로 자주 인용됩니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "보르도 글라스에 서빙합니다.",
+    "aging": "오크 숙성",
+    "tips": ["가격대비 안정적이라 홈파티용으로 적합합니다"]
+  },
+  {
+    "category": "wine",
+    "name": "산타 리타 120 카베르네 소비뇽",
+    "searchKeyword": "산타리타 120 카베르네",
+    "producer": "Santa Rita",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "센트럴 밸리",
+    "country": "칠레",
+    "alcohol": "13.5%",
+    "liquidColor": "#5A1523",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "국내에 널리 유통되는 데일리 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 65 },
+      { "axis": "탄닌", "value": 52 },
+      { "axis": "산도", "value": 55 },
+      { "axis": "당도", "value": 22 }
+    ],
+    "tastingNotes": "붉은 자두와 체리의 산뜻한 과일 향이 중심입니다. 무겁지 않고 깔끔해 매일 마시기 좋은 스타일입니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽" },
+      { "label": "스타일", "value": "미디엄 바디 데일리 와인" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2026",
+    "drinkUntil": "2029",
+    "history": [
+      { "year": "1880", "event": "산타 리타 와이너리 설립" },
+      { "year": "1814", "event": "독립전쟁 당시 120명의 병사가 이 저택에 은신" },
+      { "year": "현재", "event": "칠레를 대표하는 대중 와인 브랜드로 자리잡음" }
+    ],
+    "story": "칠레 독립전쟁 때 병사 120명이 이 와이너리 지하에 숨어 목숨을 건졌다는 이야기에서 '120'이라는 이름이 나왔습니다.",
+    "winery": "산타 리타는 칠레 3대 와이너리 중 하나로, 대중 와인부터 프리미엄까지 폭넓게 생산합니다.",
+    "foodPairing": [
+      { "emoji": "🍕", "food": "피자", "why": "가볍고 산뜻해 부담 없이 어울립니다", "shopKeyword": "냉동 피자" },
+      { "emoji": "🍗", "food": "로스트 치킨", "why": "과일 향이 담백한 육류와 맞습니다", "shopKeyword": "닭 한마리" },
+      { "emoji": "🧀", "food": "체다 치즈", "why": "짠맛이 과일 향을 끌어올립니다", "shopKeyword": "체다 치즈" }
+    ],
+    "pairingTip": "가볍게 칠링해도 좋습니다.",
+    "avoidPairing": "무거운 스튜에는 힘이 부족할 수 있습니다.",
+    "similar": ["카시예로 델 디아블로", "1865 카베르네 소비뇽", "프론테라"],
+    "trivia": "'120'은 도수나 숙성 기간이 아니라 사람 수를 뜻하는, 흔치 않은 작명 사례입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "일반 레드 와인 글라스면 충분합니다.",
+    "aging": null,
+    "tips": ["편의점·마트에서도 쉽게 구할 수 있습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "알라모스 말벡",
+    "searchKeyword": "알라모스 말벡",
+    "producer": "Bodega Catena Zapata",
+    "type": "레드 와인 · 말벡",
+    "vintage": null,
+    "region": "멘도사",
+    "country": "아르헨티나",
+    "alcohol": "13.5%",
+    "liquidColor": "#4E1128",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "아르헨티나 말벡의 대표적인 입문 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 72 },
+      { "axis": "탄닌", "value": 58 },
+      { "axis": "산도", "value": 52 },
+      { "axis": "당도", "value": 25 }
+    ],
+    "tastingNotes": "짙은 블랙베리와 자두에 제비꽃 향이 겹칩니다. 말벡 특유의 벨벳 같은 질감과 부드러운 탄닌이 인상적입니다.",
+    "specs": [
+      { "label": "품종", "value": "말벡" },
+      { "label": "재배", "value": "고도 1,000m 이상 안데스 산기슭" },
+      { "label": "숙성", "value": "오크 숙성" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2028",
+    "drinkUntil": "2031",
+    "history": [
+      { "year": "1902", "event": "카테나 가문이 멘도사에서 와인 생산 시작" },
+      { "year": "1990년대", "event": "니콜라스 카테나가 고지대 재배로 말벡의 품질 혁신" },
+      { "year": "현재", "event": "아르헨티나 말벡을 세계에 알린 대표 생산자" }
+    ],
+    "story": "말벡은 원래 프랑스 품종이지만, 안데스 고지대의 강한 일조량과 큰 일교차를 만나 아르헨티나에서 완전히 다른 와인이 되었습니다. 알라모스는 그 특징을 가장 쉽게 경험할 수 있는 와인입니다.",
+    "winery": "카테나 자파타는 아르헨티나 와인의 품질 혁명을 이끈 가문으로, 고도별 밭 연구로 유명합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "아사도 스타일 구이", "why": "말벡과 소고기는 아르헨티나의 정석 조합입니다", "shopKeyword": "소고기 등심" },
+      { "emoji": "🍖", "food": "돼지 목살 구이", "why": "부드러운 탄닌이 기름기를 감쌉니다", "shopKeyword": "돼지 목살" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "짭짤함이 과일 향을 살립니다", "shopKeyword": "숙성 체다치즈" }
+    ],
+    "pairingTip": "고기 구울 때 함께 열어 두면 좋습니다.",
+    "avoidPairing": "가벼운 샐러드와는 무게가 맞지 않습니다.",
+    "similar": ["트라피체 오크 캐스크 말벡", "몬테스 알파 카베르네 소비뇽", "카테나 말벡"],
+    "trivia": "'알라모스'는 포플러 나무를 뜻하며, 멘도사 포도밭 주변에 바람막이로 심는 나무에서 이름을 따왔습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "보르도 글라스에 서빙하고 30분 열어 두면 좋습니다.",
+    "aging": "오크 숙성",
+    "tips": ["말벡 입문용으로 가장 무난한 선택입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "트라피체 오크 캐스크 말벡",
+    "searchKeyword": "트라피체 오크캐스크 말벡",
+    "producer": "Trapiche",
+    "type": "레드 와인 · 말벡",
+    "vintage": null,
+    "region": "멘도사",
+    "country": "아르헨티나",
+    "alcohol": "13.5%",
+    "liquidColor": "#4F1226",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "국내에 널리 유통되는 아르헨티나 말벡으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 70 },
+      { "axis": "탄닌", "value": 55 },
+      { "axis": "산도", "value": 50 },
+      { "axis": "당도", "value": 28 }
+    ],
+    "tastingNotes": "잘 익은 검은 과일에 오크에서 온 바닐라와 코코아가 얹힙니다. 알라모스보다 조금 더 달콤하고 둥근 인상입니다.",
+    "specs": [
+      { "label": "품종", "value": "말벡" },
+      { "label": "숙성", "value": "오크 캐스크 숙성" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      { "year": "1883", "event": "트라피체 설립, 아르헨티나 최초의 근대적 와이너리 중 하나" },
+      { "year": "1970년대", "event": "프랑스 오크 배럴 도입으로 품질 개선" },
+      { "year": "현재", "event": "아르헨티나 최대 수출 와이너리 중 하나" }
+    ],
+    "story": "트라피체는 아르헨티나 와인 산업의 시작과 함께한 와이너리로, 대중적인 가격대에서 말벡의 매력을 잘 보여 주는 제품을 만듭니다.",
+    "winery": "멘도사에 자리한 대형 와이너리로, 140년 가까운 역사를 가지고 있습니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "바비큐 립", "why": "달콤한 소스와 오크 향이 맞물립니다", "shopKeyword": "바비큐 폭립" },
+      { "emoji": "🍔", "food": "햄버거", "why": "부드러운 탄닌이 부담 없이 어울립니다", "shopKeyword": "수제버거 패티" },
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "코코아 뉘앙스가 겹칩니다", "shopKeyword": "다크 초콜릿 70" }
+    ],
+    "pairingTip": "약간 서늘하게 마시면 단맛이 정돈됩니다.",
+    "avoidPairing": "섬세한 해산물 요리와는 맞지 않습니다.",
+    "similar": ["알라모스 말벡", "카시예로 델 디아블로", "산타 리타 120"],
+    "trivia": "'트라피체'는 포도를 으깨던 전통 압착기를 뜻하는 단어로, 와이너리 부지에 있던 옛 기계에서 이름을 따왔습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "레드 와인 글라스에 서빙합니다.",
+    "aging": "오크 캐스크",
+    "tips": ["단맛이 있어 와인 입문자에게 권할 만합니다"]
+  },
+  {
+    "category": "wine",
+    "name": "옐로우 테일 샤르도네",
+    "searchKeyword": "옐로우테일 샤르도네",
+    "producer": "Casella Family Brands",
+    "type": "화이트 와인 · 샤르도네",
+    "vintage": null,
+    "region": "사우스 이스턴 오스트레일리아",
+    "country": "호주",
+    "alcohol": "13%",
+    "liquidColor": "#EBD98A",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "세계적으로 판매량이 많은 대중 화이트 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 52 },
+      { "axis": "탄닌", "value": 8 },
+      { "axis": "산도", "value": 55 },
+      { "axis": "당도", "value": 40 }
+    ],
+    "tastingNotes": "복숭아와 파인애플의 열대 과일 향에 부드러운 바닐라가 더해집니다. 산미가 과하지 않아 마시기 편합니다.",
+    "specs": [
+      { "label": "품종", "value": "샤르도네" },
+      { "label": "스타일", "value": "과실 중심, 가벼운 오크" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2028",
+    "history": [
+      { "year": "1969", "event": "카셀라 가문이 호주 리베리나에서 와인 생산 시작" },
+      { "year": "2001", "event": "'옐로우 테일' 브랜드 출시" },
+      { "year": "현재", "event": "세계에서 가장 많이 팔리는 호주 와인 브랜드" }
+    ],
+    "story": "노란 꼬리 왈라비 라벨로 유명한 시리즈의 화이트 와인 버전입니다. 복잡한 설명 없이 누구나 마시기 좋게 만들어졌습니다.",
+    "winery": "이탈리아 이민자 가문이 세운 호주 와이너리로, 현재 호주 최대 와인 수출 기업 중 하나입니다.",
+    "foodPairing": [
+      { "emoji": "🍤", "food": "새우 요리", "why": "과일 향이 단맛 있는 해산물과 맞습니다", "shopKeyword": "생새우살" },
+      { "emoji": "🥗", "food": "샐러드", "why": "가벼운 산미가 채소와 어울립니다", "shopKeyword": "샐러드 채소" },
+      { "emoji": "🧀", "food": "크림치즈", "why": "부드러운 질감끼리 잘 맞습니다", "shopKeyword": "크림치즈" }
+    ],
+    "pairingTip": "8~10℃로 충분히 차갑게 마셔야 산뜻합니다.",
+    "avoidPairing": "붉은 육류 요리와는 어울리지 않습니다.",
+    "similar": ["제이콥스 크릭 샤르도네", "켄달 잭슨 샤르도네", "몬테스 알파 샤르도네"],
+    "trivia": "옐로우 테일의 성공 이후 와인 업계에서 '동물 라벨(크리터 와인)' 유행이 시작됐습니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "화이트 와인 글라스에 차갑게 서빙합니다.",
+    "aging": null,
+    "tips": ["냉장고에서 2시간 정도 두었다 여세요"]
+  },
+  {
+    "category": "wine",
+    "name": "제이콥스 크릭 쉬라즈 카베르네",
+    "searchKeyword": "제이콥스크릭 쉬라즈 카베르네",
+    "producer": "Jacob's Creek",
+    "type": "레드 와인 · 쉬라즈 블렌드",
+    "vintage": null,
+    "region": "사우스 오스트레일리아",
+    "country": "호주",
+    "alcohol": "13.9%",
+    "liquidColor": "#571526",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "국내에 오래 유통된 호주 대중 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 66 },
+      { "axis": "탄닌", "value": 55 },
+      { "axis": "산도", "value": 52 },
+      { "axis": "당도", "value": 25 }
+    ],
+    "tastingNotes": "쉬라즈의 잘 익은 과일 향과 카베르네의 구조감이 함께 느껴집니다. 후추 같은 스파이스가 끝에 살짝 남습니다.",
+    "specs": [
+      { "label": "품종", "value": "쉬라즈 + 카베르네 소비뇽" },
+      { "label": "스타일", "value": "미디엄 풀 바디" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      { "year": "1847", "event": "요한 그람프가 바로사 밸리 제이콥스 크릭 강가에 포도 식재" },
+      { "year": "1976", "event": "'제이콥스 크릭' 브랜드 출시" },
+      { "year": "현재", "event": "호주를 대표하는 수출 와인 브랜드" }
+    ],
+    "story": "호주 와인의 대중화를 이끈 브랜드로, 쉬라즈와 카베르네를 섞어 과일 향과 구조감을 동시에 잡은 것이 특징입니다.",
+    "winery": "바로사 밸리에 기반을 둔 대형 와이너리로, 페르노리카 그룹 소속입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "스테이크", "why": "구조감이 붉은 육류를 받쳐 줍니다", "shopKeyword": "소고기 등심 스테이크" },
+      { "emoji": "🍖", "food": "양념 갈비", "why": "달콤한 양념과 과일 향이 맞습니다", "shopKeyword": "돼지갈비 양념" },
+      { "emoji": "🍕", "food": "피자", "why": "무난하게 어울리는 조합입니다", "shopKeyword": "냉동 피자" }
+    ],
+    "pairingTip": "개봉 후 30분 정도 두면 후추 향이 부드러워집니다.",
+    "avoidPairing": "생선회와는 맞지 않습니다.",
+    "similar": ["울프 블라스 옐로우 라벨", "옐로우 테일 쉬라즈", "하디스 스탬프"],
+    "trivia": "'제이콥스 크릭'은 실제로 존재하는 개울 이름으로, 1840년대 독일 이민자 윌리엄 제이콥의 이름에서 왔습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "레드 와인 글라스에 서빙합니다.",
+    "aging": "오크 숙성",
+    "tips": ["가격대비 안정적이라 부담 없이 고를 수 있습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "울프 블라스 옐로우 라벨 카베르네 소비뇽",
+    "searchKeyword": "울프블라스 옐로우라벨 카베르네",
+    "producer": "Wolf Blass",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "사우스 오스트레일리아",
+    "country": "호주",
+    "alcohol": "14%",
+    "liquidColor": "#551523",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "국내에 널리 유통되는 호주 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 72 },
+      { "axis": "탄닌", "value": 62 },
+      { "axis": "산도", "value": 54 },
+      { "axis": "당도", "value": 20 }
+    ],
+    "tastingNotes": "블랙커런트와 민트의 상쾌한 향이 특징이며, 오크에서 온 삼나무 뉘앙스가 뒤를 받칩니다. 호주 카베르네다운 또렷한 과일 맛입니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽" },
+      { "label": "숙성", "value": "프렌치·아메리칸 오크" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2028",
+    "drinkUntil": "2032",
+    "history": [
+      { "year": "1966", "event": "독일 출신 볼프강 블라스가 바로사 밸리에 와이너리 설립" },
+      { "year": "1970년대", "event": "호주 최고 권위 트로피를 3년 연속 수상하며 명성 확보" },
+      { "year": "현재", "event": "라벨 색으로 등급을 나누는 체계로 유명" }
+    ],
+    "story": "옐로우·그레이·블랙 등 라벨 색으로 등급을 구분하는 방식이 잘 알려져 있습니다. 옐로우 라벨은 그중 가장 대중적인 라인입니다.",
+    "winery": "바로사 밸리의 대표 와이너리 중 하나로, 창업자의 이름을 그대로 브랜드로 씁니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "양고기 스테이크", "why": "민트 향과 양고기는 고전적인 조합입니다", "shopKeyword": "양갈비" },
+      { "emoji": "🍖", "food": "소갈비찜", "why": "진한 양념을 탄닌이 받쳐 줍니다", "shopKeyword": "소갈비" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "짠맛이 과일 향을 살립니다", "shopKeyword": "숙성 체다치즈" }
+    ],
+    "pairingTip": "디캔팅 30분이면 향이 훨씬 부드러워집니다.",
+    "avoidPairing": "가벼운 채소 요리와는 무게가 맞지 않습니다.",
+    "similar": ["제이콥스 크릭 쉬라즈 카베르네", "베린저 파운더스 에스테이트", "몬테스 알파"],
+    "trivia": "호주 카베르네에서 자주 언급되는 '유칼립투스·민트 향'은 포도밭 주변 유칼립투스 나무의 영향이라는 연구가 있습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "보르도 글라스를 권합니다.",
+    "aging": "오크 숙성",
+    "tips": ["양고기와 함께라면 특히 좋은 선택입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "로버트 몬다비 프라이빗 셀렉션 카베르네 소비뇽",
+    "searchKeyword": "로버트 몬다비 프라이빗 셀렉션 카베르네",
+    "producer": "Robert Mondavi",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "캘리포니아",
+    "country": "미국",
+    "alcohol": "13.5%",
+    "liquidColor": "#5A1322",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "미국 캘리포니아 와인의 대표 브랜드로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 74 },
+      { "axis": "탄닌", "value": 60 },
+      { "axis": "산도", "value": 52 },
+      { "axis": "당도", "value": 28 }
+    ],
+    "tastingNotes": "잘 익은 검은 과일에 바닐라와 모카가 얹히는 전형적인 캘리포니아 스타일입니다. 부드럽고 둥근 인상이 강합니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽" },
+      { "label": "숙성", "value": "아메리칸·프렌치 오크" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2028",
+    "drinkUntil": "2031",
+    "history": [
+      { "year": "1966", "event": "로버트 몬다비가 나파 밸리에 와이너리 설립" },
+      { "year": "1976", "event": "파리의 심판을 계기로 캘리포니아 와인의 위상 상승" },
+      { "year": "현재", "event": "미국 와인 대중화를 이끈 상징적 브랜드" }
+    ],
+    "story": "로버트 몬다비는 캘리포니아 와인을 세계 수준으로 끌어올린 인물로 평가받습니다. 프라이빗 셀렉션은 그 철학을 대중적인 가격대에 담은 라인입니다.",
+    "winery": "나파 밸리에 본거지를 둔 와이너리로, 미국 와인 산업의 근대화를 이끌었습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "티본 스테이크", "why": "묵직한 과일 향이 붉은 육류와 맞습니다", "shopKeyword": "소고기 티본 스테이크" },
+      { "emoji": "🍔", "food": "치즈버거", "why": "미국식 조합으로 무난합니다", "shopKeyword": "수제버거 패티" },
+      { "emoji": "🍄", "food": "버섯 요리", "why": "흙내음이 오크 향과 어울립니다", "shopKeyword": "표고버섯" }
+    ],
+    "pairingTip": "30분~1시간 디캔팅하면 더 부드러워집니다.",
+    "avoidPairing": "산미가 강한 요리와는 부딪힙니다.",
+    "similar": ["베린저 파운더스 에스테이트", "켄달 잭슨", "조슈 셀라스"],
+    "trivia": "1976년 파리 블라인드 테이스팅에서 캘리포니아 와인이 프랑스를 이긴 '파리의 심판'은 몬다비가 이끌던 시기의 상징적 사건입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "보르도 글라스에 서빙합니다.",
+    "aging": "오크 숙성",
+    "tips": ["미국 와인 입문용으로 무난합니다"]
+  },
+  {
+    "category": "wine",
+    "name": "켄달 잭슨 빈트너스 리저브 샤르도네",
+    "searchKeyword": "켄달잭슨 빈트너스 리저브 샤르도네",
+    "producer": "Kendall-Jackson",
+    "type": "화이트 와인 · 샤르도네",
+    "vintage": null,
+    "region": "캘리포니아",
+    "country": "미국",
+    "alcohol": "13.5%",
+    "liquidColor": "#E8D179",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "미국에서 가장 많이 팔리는 샤르도네로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 62 },
+      { "axis": "탄닌", "value": 8 },
+      { "axis": "산도", "value": 58 },
+      { "axis": "당도", "value": 32 }
+    ],
+    "tastingNotes": "잘 익은 복숭아와 파인애플에 버터와 바닐라가 겹치는 풍만한 스타일입니다. 오크 숙성 샤르도네의 교과서 같은 맛입니다.",
+    "specs": [
+      { "label": "품종", "value": "샤르도네" },
+      { "label": "숙성", "value": "프렌치 오크 배럴 발효·숙성" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2026",
+    "drinkUntil": "2029",
+    "history": [
+      { "year": "1982", "event": "제스 잭슨이 첫 빈트너스 리저브 샤르도네 출시" },
+      { "year": "1983", "event": "출시 직후 미국 주요 대회에서 수상" },
+      { "year": "현재", "event": "미국 샤르도네 판매 1위를 오래 유지" }
+    ],
+    "story": "미국에서 30년 넘게 샤르도네 판매 1위를 지켜 온 와인입니다. 서늘한 해안 지역 포도를 섞어 산미를 잃지 않으면서도 풍만한 질감을 만듭니다.",
+    "winery": "캘리포니아 소노마에 기반을 둔 가족 경영 와이너리입니다.",
+    "foodPairing": [
+      { "emoji": "🦞", "food": "버터 새우", "why": "버터 뉘앙스끼리 정확히 맞물립니다", "shopKeyword": "생새우살" },
+      { "emoji": "🐔", "food": "크림 소스 치킨", "why": "크리미한 질감이 서로를 살립니다", "shopKeyword": "닭가슴살" },
+      { "emoji": "🧀", "food": "브리 치즈", "why": "부드러운 치즈와 잘 어울립니다", "shopKeyword": "브리 치즈" }
+    ],
+    "pairingTip": "너무 차게 마시면 향이 닫히니 10~12℃가 적당합니다.",
+    "avoidPairing": "매운 음식과는 어울리지 않습니다.",
+    "similar": ["옐로우 테일 샤르도네", "루이 자도 부르고뉴 블랑", "몬테스 알파 샤르도네"],
+    "trivia": "오크 숙성 샤르도네 특유의 버터 향은 젖산 발효에서 생기는 성분 때문으로, 이 스타일을 좋아하는 사람과 싫어하는 사람이 뚜렷이 갈립니다.",
+    "servingTemp": "10~12℃",
+    "servingNote": "볼이 넓은 화이트 와인 글라스를 권합니다.",
+    "aging": "프렌치 오크",
+    "tips": ["냉장고에서 꺼내 10분 두었다 마시면 향이 더 살아납니다"]
+  },
+  {
+    "category": "wine",
+    "name": "베린저 파운더스 에스테이트 카베르네 소비뇽",
+    "searchKeyword": "베린저 파운더스 에스테이트 카베르네",
+    "producer": "Beringer",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "캘리포니아",
+    "country": "미국",
+    "alcohol": "13.5%",
+    "liquidColor": "#591424",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "국내에 널리 유통되는 미국 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 70 },
+      { "axis": "탄닌", "value": 58 },
+      { "axis": "산도", "value": 52 },
+      { "axis": "당도", "value": 26 }
+    ],
+    "tastingNotes": "블랙체리와 자두의 부드러운 과일 향에 은은한 오크가 더해집니다. 탄닌이 매끄러워 바로 마시기 좋습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽" },
+      { "label": "숙성", "value": "오크 숙성" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      { "year": "1876", "event": "베린저 형제가 나파 밸리에 와이너리 설립" },
+      { "year": "1934", "event": "금주법 시대에도 운영을 이어간 몇 안 되는 와이너리" },
+      { "year": "현재", "event": "나파에서 가장 오래 연속 운영된 와이너리로 알려짐" }
+    ],
+    "story": "1876년 설립 이후 금주법 시대에도 미사용 와인을 만들며 문을 닫지 않은 것으로 유명합니다. 나파 밸리에서 가장 오래된 와이너리 중 하나입니다.",
+    "winery": "독일계 이민자 형제가 세운 나파 밸리 와이너리로, 역사적 건축물로도 잘 알려져 있습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "소고기 스테이크", "why": "부드러운 탄닌이 육즙과 어울립니다", "shopKeyword": "소고기 등심 스테이크" },
+      { "emoji": "🍝", "food": "미트 소스 파스타", "why": "과일 향이 토마토와 균형을 이룹니다", "shopKeyword": "미트 소스" },
+      { "emoji": "🧀", "food": "고다 치즈", "why": "고소함이 오크 향을 살립니다", "shopKeyword": "고다 치즈" }
+    ],
+    "pairingTip": "개봉 후 20분이면 충분히 열립니다.",
+    "avoidPairing": "생선 요리와는 맞지 않습니다.",
+    "similar": ["로버트 몬다비 프라이빗 셀렉션", "조슈 셀라스", "울프 블라스 옐로우 라벨"],
+    "trivia": "금주법 시기에 베린저는 종교 의식용 와인 생산 허가를 받아 명맥을 유지했습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "보르도 글라스에 서빙합니다.",
+    "aging": "오크 숙성",
+    "tips": ["선물용으로도 무난한 가격대입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "무통 카데 루즈",
+    "searchKeyword": "무통 카데 레드",
+    "producer": "Baron Philippe de Rothschild",
+    "type": "레드 와인 · 보르도 블렌드",
+    "vintage": null,
+    "region": "보르도",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#57121F",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "세계적으로 가장 많이 팔리는 보르도 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 62 },
+      { "axis": "탄닌", "value": 55 },
+      { "axis": "산도", "value": 58 },
+      { "axis": "당도", "value": 18 }
+    ],
+    "tastingNotes": "붉은 과일과 은은한 삼나무 향이 어우러진 단정한 보르도 스타일입니다. 화려하기보다 균형이 좋은 편입니다.",
+    "specs": [
+      { "label": "품종", "value": "메를로, 카베르네 소비뇽, 카베르네 프랑" },
+      { "label": "등급", "value": "보르도 AOC" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2027",
+    "drinkUntil": "2031",
+    "history": [
+      { "year": "1930", "event": "필립 드 로칠드 남작이 '무통 카데' 첫 출시" },
+      { "year": "1947", "event": "브랜드로 정착하며 대중 보르도의 문을 염" },
+      { "year": "현재", "event": "세계에서 가장 많이 팔리는 보르도 와인" }
+    ],
+    "story": "'카데'는 프랑스어로 '막내'라는 뜻입니다. 작황이 좋지 않은 해의 포도로 만든 세컨드 와인에서 출발해, 지금은 보르도를 처음 접하는 사람들의 관문이 되었습니다.",
+    "winery": "샤토 무통 로칠드를 소유한 로칠드 가문이 운영하는 브랜드입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "안심 스테이크", "why": "단정한 구조가 고기를 받쳐 줍니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🧀", "food": "까망베르 치즈", "why": "부드러운 치즈와 균형이 좋습니다", "shopKeyword": "까망베르 치즈" },
+      { "emoji": "🍖", "food": "오리 구이", "why": "붉은 과일 향이 오리와 잘 맞습니다", "shopKeyword": "훈제 오리" }
+    ],
+    "pairingTip": "30분 정도 열어 두면 향이 정리됩니다.",
+    "avoidPairing": "강한 향신료 요리는 섬세함을 덮습니다.",
+    "similar": ["샤또 딸보", "루이 자도 부르고뉴 피노 누아", "산타 크리스티나"],
+    "trivia": "무통 카데는 로칠드 가문이 만든 첫 '브랜드 와인'으로, 특정 샤토가 아니라 여러 밭의 포도를 섞어 일정한 맛을 유지하는 방식을 보르도에 처음 도입했습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "보르도 글라스에 서빙합니다.",
+    "aging": "오크 숙성",
+    "tips": ["보르도 입문용으로 가장 흔히 추천됩니다"]
+  },
+  {
+    "category": "wine",
+    "name": "루이 자도 부르고뉴 피노 누아",
+    "searchKeyword": "루이자도 부르고뉴 피노누아",
+    "producer": "Maison Louis Jadot",
+    "type": "레드 와인 · 피노 누아",
+    "vintage": null,
+    "region": "부르고뉴",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#7A2233",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "부르고뉴 입문 와인의 대표격으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 48 },
+      { "axis": "탄닌", "value": 38 },
+      { "axis": "산도", "value": 70 },
+      { "axis": "당도", "value": 15 }
+    ],
+    "tastingNotes": "체리와 라즈베리의 붉은 과일 향에 흙내음과 버섯 뉘앙스가 스칩니다. 탄닌이 가볍고 산미가 또렷해 섬세합니다.",
+    "specs": [
+      { "label": "품종", "value": "피노 누아 100%" },
+      { "label": "등급", "value": "부르고뉴 AOC" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      { "year": "1859", "event": "루이 앙리 드니 자도가 본에 메종 설립" },
+      { "year": "20세기", "event": "부르고뉴 전역의 밭을 확보하며 대표 네고시앙으로 성장" },
+      { "year": "현재", "event": "부르고뉴 와인의 세계 유통을 이끄는 곳 중 하나" }
+    ],
+    "story": "부르고뉴 피노 누아는 값이 비싸기로 유명하지만, 루이 자도의 지역 등급 와인은 그 스타일을 합리적인 가격에 경험할 수 있게 해 줍니다.",
+    "winery": "1859년 설립된 부르고뉴의 대표 네고시앙으로, 직접 소유한 밭과 매입 포도를 함께 씁니다.",
+    "foodPairing": [
+      { "emoji": "🍗", "food": "로스트 치킨", "why": "가벼운 탄닌이 담백한 육류와 맞습니다", "shopKeyword": "닭 한마리" },
+      { "emoji": "🍄", "food": "버섯 리조또", "why": "흙내음끼리 공명합니다", "shopKeyword": "표고버섯" },
+      { "emoji": "🐟", "food": "연어 구이", "why": "산미가 기름진 생선을 정리합니다", "shopKeyword": "생연어" }
+    ],
+    "pairingTip": "14~16℃로 약간 서늘하게 마시면 향이 산뜻합니다.",
+    "avoidPairing": "양념이 강한 구이류는 섬세함을 덮습니다.",
+    "similar": ["조르주 뒤뵈프 보졸레", "무통 카데", "도미닉 라퐁 부르고뉴"],
+    "trivia": "피노 누아는 껍질이 얇고 병충해에 약해 '재배가 가장 까다로운 품종'으로 불리며, 그래서 같은 등급이라도 생산자에 따라 편차가 큽니다.",
+    "servingTemp": "14~16℃",
+    "servingNote": "볼이 넓은 부르고뉴 글라스를 권합니다.",
+    "aging": "오크 숙성",
+    "tips": ["살짝 칠링하면 산미가 더 산뜻해집니다"]
+  },
+  {
+    "category": "wine",
+    "name": "산타 크리스티나 토스카나",
+    "searchKeyword": "산타 크리스티나 토스카나",
+    "producer": "Antinori",
+    "type": "레드 와인 · 산지오베제 블렌드",
+    "vintage": null,
+    "region": "토스카나",
+    "country": "이탈리아",
+    "alcohol": "13%",
+    "liquidColor": "#66182A",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "이탈리아 안티노리의 대중 라인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 58 },
+      { "axis": "탄닌", "value": 50 },
+      { "axis": "산도", "value": 68 },
+      { "axis": "당도", "value": 18 }
+    ],
+    "tastingNotes": "붉은 체리와 자두에 허브 향이 스치고, 이탈리아 와인다운 또렷한 산미가 중심을 잡습니다. 음식과 함께일 때 특히 좋습니다.",
+    "specs": [
+      { "label": "품종", "value": "산지오베제 중심 블렌드" },
+      { "label": "등급", "value": "토스카나 IGT" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      { "year": "1385", "event": "안티노리 가문이 피렌체 와인 조합에 가입" },
+      { "year": "1946", "event": "산타 크리스티나 첫 빈티지 출시" },
+      { "year": "현재", "event": "26대째 이어지는 가족 경영" }
+    ],
+    "story": "안티노리는 600년 넘게 이어져 온 와인 가문으로, 산타 크리스티나는 그 명성을 부담 없는 가격에 만날 수 있는 라인입니다.",
+    "winery": "이탈리아에서 가장 오래된 와인 가문 중 하나로, 슈퍼 투스칸 시대를 연 곳으로도 평가받습니다.",
+    "foodPairing": [
+      { "emoji": "🍝", "food": "토마토 파스타", "why": "산미끼리 잘 맞습니다", "shopKeyword": "토마토 파스타 소스" },
+      { "emoji": "🍕", "food": "마르게리타 피자", "why": "이탈리아 정석 조합입니다", "shopKeyword": "냉동 피자" },
+      { "emoji": "🧀", "food": "파르미지아노", "why": "짭짤한 감칠맛이 산미를 받쳐 줍니다", "shopKeyword": "파르미지아노 치즈" }
+    ],
+    "pairingTip": "음식 없이 단독으로 마시기보다 식사와 함께가 잘 어울립니다.",
+    "avoidPairing": "단 디저트와는 산미가 부딪힙니다.",
+    "similar": ["반피 키안티 클라시코", "마시 캄포피오린", "무통 카데"],
+    "trivia": "안티노리 가문은 1385년부터 와인을 만들어 온 것으로 기록되어, 세계에서 가장 오래된 가족 기업 중 하나로 꼽힙니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "레드 와인 글라스에 서빙합니다.",
+    "aging": "오크 숙성",
+    "tips": ["이탈리아 음식과 함께라면 실패가 없습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "마시 캄포피오린",
+    "searchKeyword": "마시 캄포피오린",
+    "producer": "Masi",
+    "type": "레드 와인 · 코르비나 블렌드",
+    "vintage": null,
+    "region": "베네토",
+    "country": "이탈리아",
+    "alcohol": "13%",
+    "liquidColor": "#5E1526",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "리파소 방식의 대표 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 68 },
+      { "axis": "탄닌", "value": 55 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "당도", "value": 30 }
+    ],
+    "tastingNotes": "말린 체리와 자두의 농축된 향에 계피와 정향이 겹칩니다. 아마로네를 닮은 진한 풍미를 훨씬 편한 가격에 만날 수 있습니다.",
+    "specs": [
+      { "label": "품종", "value": "코르비나, 론디넬라" },
+      { "label": "제법", "value": "리파소 (아마로네 껍질 재발효)" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2028",
+    "drinkUntil": "2032",
+    "history": [
+      { "year": "1772", "event": "보스카이니 가문이 발폴리첼라에서 와인 생산 시작" },
+      { "year": "1964", "event": "마시가 캄포피오린으로 리파소 방식을 현대적으로 부활" },
+      { "year": "현재", "event": "'베이비 아마로네'라는 별명으로 널리 알려짐" }
+    ],
+    "story": "아마로네를 만들고 남은 포도 껍질에 일반 와인을 다시 발효시키는 '리파소' 방식으로 만듭니다. 마시가 이 기법을 현대에 되살린 것으로 평가받습니다.",
+    "winery": "마시는 베네토 발폴리첼라 지역의 대표 생산자로, 아마로네 분야의 권위자로 꼽힙니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "소갈비찜", "why": "진한 양념과 농축된 과일 향이 맞물립니다", "shopKeyword": "소갈비" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "강한 풍미끼리 균형을 이룹니다", "shopKeyword": "파르미지아노 치즈" },
+      { "emoji": "🍝", "food": "라구 파스타", "why": "묵직한 소스를 받쳐 줍니다", "shopKeyword": "라구 파스타 소스" }
+    ],
+    "pairingTip": "디캔팅 30분이면 향이 활짝 열립니다.",
+    "avoidPairing": "가벼운 요리에는 너무 진합니다.",
+    "similar": ["반피 키안티 클라시코", "산타 크리스티나", "아마로네"],
+    "trivia": "리파소는 이탈리아어로 '다시 지나가다'라는 뜻으로, 아마로네의 껍질을 한 번 더 통과시킨다는 공정을 그대로 이름에 담았습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "볼이 큰 레드 와인 글라스를 권합니다.",
+    "aging": "오크 숙성",
+    "tips": ["아마로네가 부담스러울 때 좋은 대안입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "반피 키안티 클라시코",
+    "searchKeyword": "반피 키안티 클라시코",
+    "producer": "Castello Banfi",
+    "type": "레드 와인 · 산지오베제",
+    "vintage": null,
+    "region": "토스카나 키안티 클라시코",
+    "country": "이탈리아",
+    "alcohol": "13.5%",
+    "liquidColor": "#671A2B",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "국내에 유통되는 대표적인 키안티 클라시코로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 60 },
+      { "axis": "탄닌", "value": 58 },
+      { "axis": "산도", "value": 72 },
+      { "axis": "당도", "value": 15 }
+    ],
+    "tastingNotes": "체리와 말린 허브, 가죽 뉘앙스가 어우러집니다. 산미와 탄닌이 또렷해 기름진 음식과 특히 잘 맞습니다.",
+    "specs": [
+      { "label": "품종", "value": "산지오베제 중심" },
+      { "label": "등급", "value": "키안티 클라시코 DOCG" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2028",
+    "drinkUntil": "2032",
+    "history": [
+      { "year": "1978", "event": "마리아니 형제가 몬탈치노에 카스텔로 반피 설립" },
+      { "year": "1980년대", "event": "브루넬로 디 몬탈치노로 국제적 명성 확보" },
+      { "year": "현재", "event": "토스카나 전역에서 와인을 생산" }
+    ],
+    "story": "키안티 클라시코는 검은 수탉 마크로 구분되는 원조 키안티 지역의 와인입니다. 반피는 그 지역의 전형적인 스타일을 안정적으로 보여 줍니다.",
+    "winery": "반피는 몬탈치노에 본거지를 둔 대형 와이너리로, 브루넬로로 특히 유명합니다.",
+    "foodPairing": [
+      { "emoji": "🍝", "food": "볼로네제 파스타", "why": "산미가 육류 소스를 정리합니다", "shopKeyword": "볼로네제 소스" },
+      { "emoji": "🥩", "food": "티본 스테이크", "why": "토스카나의 고전적 조합입니다", "shopKeyword": "소고기 티본 스테이크" },
+      { "emoji": "🍕", "food": "피자", "why": "치즈의 기름기를 씻어 냅니다", "shopKeyword": "냉동 피자" }
+    ],
+    "pairingTip": "음식과 함께 마실 때 진가가 드러납니다.",
+    "avoidPairing": "단독으로 마시기에는 산미가 도드라질 수 있습니다.",
+    "similar": ["산타 크리스티나", "마시 캄포피오린", "프레스코발디 니포짜노"],
+    "trivia": "키안티 클라시코 병목의 검은 수탉(Gallo Nero)은 원조 지역임을 나타내는 표식으로, 중세 피렌체와 시에나의 영토 분쟁 설화에서 유래했습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "레드 와인 글라스에 서빙합니다.",
+    "aging": "오크 숙성",
+    "tips": ["파스타·피자와 함께라면 최고의 선택 중 하나입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "마르께스 데 리스칼 리제르바",
+    "searchKeyword": "마르께스 데 리스칼 리제르바",
+    "producer": "Marqués de Riscal",
+    "type": "레드 와인 · 템프라니요",
+    "vintage": null,
+    "region": "리오하",
+    "country": "스페인",
+    "alcohol": "14%",
+    "liquidColor": "#5D1526",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "리오하를 대표하는 와이너리의 주력 제품으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 68 },
+      { "axis": "탄닌", "value": 58 },
+      { "axis": "산도", "value": 60 },
+      { "axis": "당도", "value": 20 }
+    ],
+    "tastingNotes": "붉은 과일에 바닐라, 담뱃잎, 가죽 향이 겹치는 전형적인 리오하 스타일입니다. 오크 숙성에서 온 부드러운 질감이 특징입니다.",
+    "specs": [
+      { "label": "품종", "value": "템프라니요 중심" },
+      { "label": "숙성", "value": "아메리칸 오크 24개월 이상" },
+      { "label": "등급", "value": "리오하 DOCa 리제르바" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2029",
+    "drinkUntil": "2034",
+    "history": [
+      { "year": "1858", "event": "리오하 최초의 근대 와이너리로 설립" },
+      { "year": "1972", "event": "병에 금색 철망을 두르는 상징적 포장 도입" },
+      { "year": "2006", "event": "프랭크 게리가 설계한 호텔 개관으로 화제" }
+    ],
+    "story": "병을 감싼 금색 철망은 위조를 막기 위해 만들어진 장치였는데, 지금은 브랜드의 상징이 되었습니다. 리오하에서 가장 오래된 근대 와이너리입니다.",
+    "winery": "1858년 설립된 리오하의 상징적 와이너리로, 프랭크 게리가 설계한 건축물로도 유명합니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "이베리코 하몽", "why": "스페인 정석 조합입니다", "shopKeyword": "이베리코 하몽" },
+      { "emoji": "🥩", "food": "양갈비", "why": "오크 향이 허브와 어울립니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "만체고 치즈", "why": "짭짤한 양젖 치즈와 잘 맞습니다", "shopKeyword": "만체고 치즈" }
+    ],
+    "pairingTip": "디캔팅 30분이면 가죽 향이 부드러워집니다.",
+    "avoidPairing": "담백한 생선은 향에 눌립니다.",
+    "similar": ["캄포 비에호 리오하", "무통 카데", "베린저 파운더스 에스테이트"],
+    "trivia": "리오하의 등급은 숙성 기간으로 나뉘며 크리안사 → 리제르바 → 그란 리제르바 순으로 길어집니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "보르도 글라스에 서빙합니다.",
+    "aging": "아메리칸 오크 24개월 이상",
+    "tips": ["스페인 음식과 함께라면 특히 좋습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "캄포 비에호 리오하 템프라니요",
+    "searchKeyword": "캄포 비에호 템프라니요",
+    "producer": "Campo Viejo",
+    "type": "레드 와인 · 템프라니요",
+    "vintage": null,
+    "region": "리오하",
+    "country": "스페인",
+    "alcohol": "13.5%",
+    "liquidColor": "#5F1727",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "리오하에서 판매량이 많은 대중 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 62 },
+      { "axis": "탄닌", "value": 50 },
+      { "axis": "산도", "value": 58 },
+      { "axis": "당도", "value": 24 }
+    ],
+    "tastingNotes": "잘 익은 딸기와 체리의 밝은 과일 향이 앞서고, 바닐라가 가볍게 받쳐 줍니다. 부담 없이 마시기 좋은 리오하입니다.",
+    "specs": [
+      { "label": "품종", "value": "템프라니요" },
+      { "label": "숙성", "value": "오크 숙성" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      { "year": "1959", "event": "리오하에서 캄포 비에호 설립" },
+      { "year": "2000년대", "event": "친환경 인증 와이너리로 전환" },
+      { "year": "현재", "event": "리오하 최대 판매 브랜드 중 하나" }
+    ],
+    "story": "리오하 와인을 부담 없는 가격으로 널리 알린 브랜드입니다. 무겁지 않으면서도 리오하 특유의 바닐라 뉘앙스를 갖추고 있습니다.",
+    "winery": "리오하에 위치한 대형 와이너리로, 지속가능 농법 인증을 받은 것으로 알려져 있습니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "초리조", "why": "스페인식 소시지와 잘 맞습니다", "shopKeyword": "초리조" },
+      { "emoji": "🍗", "food": "닭 요리", "why": "가벼운 탄닌이 담백함과 어울립니다", "shopKeyword": "닭 한마리" },
+      { "emoji": "🥘", "food": "파에야", "why": "스페인 요리와의 정석 조합입니다", "shopKeyword": "파에야 재료" }
+    ],
+    "pairingTip": "약간 서늘하게 마셔도 좋습니다.",
+    "avoidPairing": "무거운 스튜에는 힘이 부족할 수 있습니다.",
+    "similar": ["마르께스 데 리스칼 리제르바", "산타 리타 120", "토레스 상그레 데 토로"],
+    "trivia": "템프라니요는 '일찍(temprano) 익는다'는 뜻에서 온 이름으로, 스페인을 대표하는 토착 품종입니다.",
+    "servingTemp": "15~17℃",
+    "servingNote": "레드 와인 글라스에 서빙합니다.",
+    "aging": "오크 숙성",
+    "tips": ["가격 대비 만족도가 높은 데일리 와인입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "클라우디 베이 소비뇽 블랑",
+    "searchKeyword": "클라우디베이 소비뇽블랑",
+    "producer": "Cloudy Bay",
+    "type": "화이트 와인 · 소비뇽 블랑",
+    "vintage": null,
+    "region": "말보로",
+    "country": "뉴질랜드",
+    "alcohol": "13%",
+    "liquidColor": "#E9EBB0",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "뉴질랜드 소비뇽 블랑의 대표 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 45 },
+      { "axis": "탄닌", "value": 5 },
+      { "axis": "산도", "value": 82 },
+      { "axis": "당도", "value": 22 }
+    ],
+    "tastingNotes": "패션프루트와 자몽, 갓 벤 풀 향이 폭발적으로 터집니다. 날카로운 산미와 미네랄이 끝까지 이어지는 청량한 스타일입니다.",
+    "specs": [
+      { "label": "품종", "value": "소비뇽 블랑" },
+      { "label": "산지", "value": "말보로 와이라우 밸리" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2029",
+    "history": [
+      { "year": "1985", "event": "클라우디 베이 첫 빈티지 생산" },
+      { "year": "1980년대 후반", "event": "뉴질랜드 소비뇽 블랑을 세계에 알림" },
+      { "year": "현재", "event": "말보로 스타일의 기준으로 평가받음" }
+    ],
+    "story": "1985년 등장과 함께 '뉴질랜드 소비뇽 블랑'이라는 장르 자체를 세계에 각인시킨 와인입니다. 지금도 이 스타일의 기준으로 언급됩니다.",
+    "winery": "말보로 지역의 선구적 와이너리로, 현재 LVMH 그룹 소속입니다.",
+    "foodPairing": [
+      { "emoji": "🦪", "food": "생굴", "why": "짠맛과 산미가 완벽하게 맞물립니다", "shopKeyword": "생굴" },
+      { "emoji": "🥗", "food": "염소치즈 샐러드", "why": "허브 향끼리 공명합니다", "shopKeyword": "염소 치즈" },
+      { "emoji": "🍤", "food": "새우 세비체", "why": "라임 산미와 정확히 어울립니다", "shopKeyword": "생새우살" }
+    ],
+    "pairingTip": "8℃ 정도로 차갑게 마셔야 산미가 살아납니다.",
+    "avoidPairing": "붉은 육류와는 맞지 않습니다.",
+    "similar": ["오이스터 베이 소비뇽 블랑", "킴 크로포드 소비뇽 블랑", "셀락 소비뇽 블랑"],
+    "trivia": "'클라우디 베이'는 실제 만(灣)의 이름으로, 제임스 쿡 선장이 흙탕물이 흘러드는 것을 보고 붙인 이름입니다.",
+    "servingTemp": "7~9℃",
+    "servingNote": "화이트 와인 글라스에 아주 차갑게 서빙합니다.",
+    "aging": null,
+    "tips": ["가능하면 어린 빈티지를 고르는 편이 좋습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "오이스터 베이 소비뇽 블랑",
+    "searchKeyword": "오이스터베이 소비뇽블랑",
+    "producer": "Oyster Bay",
+    "type": "화이트 와인 · 소비뇽 블랑",
+    "vintage": null,
+    "region": "말보로",
+    "country": "뉴질랜드",
+    "alcohol": "12.5%",
+    "liquidColor": "#E7EAAD",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "국내에 널리 유통되는 뉴질랜드 화이트 와인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 42 },
+      { "axis": "탄닌", "value": 5 },
+      { "axis": "산도", "value": 76 },
+      { "axis": "당도", "value": 25 }
+    ],
+    "tastingNotes": "라임과 구스베리의 상큼한 향에 열대 과일이 더해집니다. 클라우디 베이보다 부드럽고 접근하기 쉬운 편입니다.",
+    "specs": [
+      { "label": "품종", "value": "소비뇽 블랑" },
+      { "label": "산지", "value": "말보로" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2028",
+    "history": [
+      { "year": "1990", "event": "오이스터 베이 브랜드 출범" },
+      { "year": "2000년대", "event": "세계 시장에서 뉴질랜드 화이트 와인 수요 확대를 견인" },
+      { "year": "현재", "event": "여러 국가에서 판매 상위권 유지" }
+    ],
+    "story": "말보로 소비뇽 블랑의 특징을 유지하면서도 산미를 조금 눌러, 처음 마시는 사람도 편하게 즐길 수 있도록 만든 와인입니다.",
+    "winery": "뉴질랜드 델러갓 가문이 운영하는 와이너리 브랜드입니다.",
+    "foodPairing": [
+      { "emoji": "🍣", "food": "초밥", "why": "산미가 생선의 기름기를 정리합니다", "shopKeyword": "초밥 세트" },
+      { "emoji": "🥗", "food": "그린 샐러드", "why": "허브 향이 채소와 겹칩니다", "shopKeyword": "샐러드 채소" },
+      { "emoji": "🧀", "food": "리코타 치즈", "why": "가벼운 치즈와 잘 맞습니다", "shopKeyword": "리코타 치즈" }
+    ],
+    "pairingTip": "차갑게 마시고, 남으면 마개를 막아 이틀 내 마십니다.",
+    "avoidPairing": "진한 소스 요리와는 어울리지 않습니다.",
+    "similar": ["클라우디 베이 소비뇽 블랑", "킴 크로포드", "옐로우 테일 샤르도네"],
+    "trivia": "말보로 소비뇽 블랑의 강렬한 향은 이 지역의 큰 일교차 때문으로, 낮에 익고 밤에 산미를 지키는 조건이 만들어집니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "화이트 와인 글라스에 차갑게 서빙합니다.",
+    "aging": null,
+    "tips": ["해산물 요리와 함께라면 실패가 없습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "모엣 샹동 임페리얼 브뤼",
+    "searchKeyword": "모엣샹동 임페리얼",
+    "producer": "Moët & Chandon",
+    "type": "샴페인 · 브뤼",
+    "vintage": null,
+    "region": "샹파뉴",
+    "country": "프랑스",
+    "alcohol": "12%",
+    "liquidColor": "#F0E2A8",
+    "confidence": 95,
+    "knowledge": "rich",
+    "basis": "세계에서 가장 널리 알려진 샴페인으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 50 },
+      { "axis": "탄닌", "value": 5 },
+      { "axis": "산도", "value": 72 },
+      { "axis": "당도", "value": 32 }
+    ],
+    "tastingNotes": "청사과와 감귤의 산뜻한 향에 브리오슈 같은 이스트 뉘앙스가 겹칩니다. 기포가 섬세하고 마무리가 깔끔합니다.",
+    "specs": [
+      { "label": "품종", "value": "피노 누아, 피노 뮈니에, 샤르도네" },
+      { "label": "제법", "value": "샴페인 전통 방식 병내 2차 발효" },
+      { "label": "당도", "value": "브뤼 (드라이)" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      { "year": "1743", "event": "클로드 모엣이 샹파뉴에 하우스 설립" },
+      { "year": "1869", "event": "'임페리얼' 이름 도입" },
+      { "year": "현재", "event": "세계 최대 샴페인 하우스" }
+    ],
+    "story": "나폴레옹과의 인연으로 '임페리얼'이라는 이름이 붙었다고 전해집니다. 축하 자리에서 가장 많이 열리는 샴페인입니다.",
+    "winery": "1743년 설립된 세계 최대 샴페인 하우스로, LVMH 그룹의 중심 브랜드입니다.",
+    "foodPairing": [
+      { "emoji": "🦪", "food": "굴", "why": "샴페인과 굴은 고전적인 조합입니다", "shopKeyword": "생굴" },
+      { "emoji": "🍤", "food": "튀김", "why": "기포가 기름기를 씻어 냅니다", "shopKeyword": "냉동 새우튀김" },
+      { "emoji": "🧀", "food": "브리 치즈", "why": "이스트 향과 크리미함이 어울립니다", "shopKeyword": "브리 치즈" }
+    ],
+    "pairingTip": "6~8℃로 차갑게, 플루트보다 튤립형 잔이 향에 유리합니다.",
+    "avoidPairing": "매운 음식은 기포의 자극을 키웁니다.",
+    "similar": ["뵈브 클리코 옐로 라벨", "라 마르카 프로세코", "테탱저 브뤼"],
+    "trivia": "샴페인 병 바닥이 오목하게 들어간 것은 병내 압력을 견디기 위한 구조로, 내부 압력은 자동차 타이어의 약 3배에 이릅니다.",
+    "servingTemp": "6~8℃",
+    "servingNote": "얼음물에 20분 담근 뒤 튤립형 잔에 서빙합니다.",
+    "aging": null,
+    "tips": ["개봉 후에는 전용 마개로 막아야 기포가 유지됩니다"]
+  },
+  {
+    "category": "wine",
+    "name": "뵈브 클리코 옐로 라벨 브뤼",
+    "searchKeyword": "뵈브클리코 옐로라벨",
+    "producer": "Veuve Clicquot",
+    "type": "샴페인 · 브뤼",
+    "vintage": null,
+    "region": "샹파뉴",
+    "country": "프랑스",
+    "alcohol": "12%",
+    "liquidColor": "#F2DF9C",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "세계적으로 잘 알려진 샴페인 하우스의 대표 제품으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 58 },
+      { "axis": "탄닌", "value": 5 },
+      { "axis": "산도", "value": 70 },
+      { "axis": "당도", "value": 30 }
+    ],
+    "tastingNotes": "노란 과일과 비스킷 향이 도드라지고, 모엣보다 무게감이 조금 더 있습니다. 피노 누아 비중이 높아 구조가 단단합니다.",
+    "specs": [
+      { "label": "품종", "value": "피노 누아 중심 블렌드" },
+      { "label": "제법", "value": "전통 방식 병내 2차 발효" }
+    ],
+    "drinkFrom": "2024",
+    "drinkPeak": "2028",
+    "drinkUntil": "2031",
+    "history": [
+      { "year": "1772", "event": "필립 클리코가 하우스 설립" },
+      { "year": "1805", "event": "27세에 미망인이 된 바브 니콜 클리코가 경영을 맡음" },
+      { "year": "1816", "event": "리들링 기법을 고안해 맑은 샴페인 생산에 성공" }
+    ],
+    "story": "'뵈브'는 프랑스어로 미망인이라는 뜻입니다. 남편을 잃은 젊은 부인이 하우스를 이끌며 침전물을 제거하는 리들링 기법을 고안해, 오늘날 맑은 샴페인의 기초를 만들었습니다.",
+    "winery": "250년 역사의 샴페인 하우스로, 강렬한 노란색 라벨이 상징입니다.",
+    "foodPairing": [
+      { "emoji": "🦐", "food": "랍스터", "why": "구조감 있는 샴페인이 갑각류와 잘 맞습니다", "shopKeyword": "랍스터" },
+      { "emoji": "🍗", "food": "로스트 치킨", "why": "비스킷 향이 구운 육류와 어울립니다", "shopKeyword": "닭 한마리" },
+      { "emoji": "🧀", "food": "콩테 치즈", "why": "견과 풍미가 겹칩니다", "shopKeyword": "꽁떼 치즈" }
+    ],
+    "pairingTip": "너무 차갑게 하면 향이 닫히니 8℃ 정도가 좋습니다.",
+    "avoidPairing": "단 디저트와는 브뤼의 드라이함이 부딪힙니다.",
+    "similar": ["모엣 샹동 임페리얼", "테탱저 브뤼", "볼랭저 스페셜 뀌베"],
+    "trivia": "리들링은 병을 조금씩 돌려 침전물을 병목에 모으는 기법으로, 바브 니콜 클리코가 식탁에 구멍을 뚫어 실험한 데서 시작됐다고 전해집니다.",
+    "servingTemp": "7~9℃",
+    "servingNote": "튤립형 잔에 서빙하면 향이 잘 모입니다.",
+    "aging": null,
+    "tips": ["선물용으로 가장 무난한 샴페인 중 하나입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "라 마르카 프로세코",
+    "searchKeyword": "라마르카 프로세코",
+    "producer": "La Marca",
+    "type": "스파클링 와인 · 프로세코",
+    "vintage": null,
+    "region": "베네토",
+    "country": "이탈리아",
+    "alcohol": "11%",
+    "liquidColor": "#F3E7B4",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "국내에 널리 유통되는 프로세코로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 38 },
+      { "axis": "탄닌", "value": 3 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "당도", "value": 45 }
+    ],
+    "tastingNotes": "청사과와 배, 흰꽃 향이 가볍게 퍼집니다. 샴페인보다 부드럽고 살짝 달아 편하게 마시기 좋습니다.",
+    "specs": [
+      { "label": "품종", "value": "글레라" },
+      { "label": "제법", "value": "샤르마 방식 (탱크 2차 발효)" },
+      { "label": "등급", "value": "프로세코 DOC" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2027",
+    "history": [
+      { "year": "1968", "event": "베네토 지역 협동조합으로 라 마르카 출범" },
+      { "year": "2000년대", "event": "미국 시장에서 프로세코 붐을 이끔" },
+      { "year": "현재", "event": "세계적으로 판매량이 많은 프로세코 브랜드" }
+    ],
+    "story": "프로세코는 샴페인과 달리 큰 탱크에서 2차 발효를 해, 신선한 과일 향이 그대로 살아 있는 것이 특징입니다. 가격 부담도 적어 가볍게 즐기기 좋습니다.",
+    "winery": "베네토 지역 생산자들이 모인 조합 기반 브랜드입니다.",
+    "foodPairing": [
+      { "emoji": "🍓", "food": "딸기", "why": "과일 향끼리 잘 어울립니다", "shopKeyword": "딸기" },
+      { "emoji": "🧀", "food": "부라타 치즈", "why": "가벼운 기포가 크리미함을 정리합니다", "shopKeyword": "부라타 치즈" },
+      { "emoji": "🍤", "food": "새우 카나페", "why": "식전주로 잘 맞습니다", "shopKeyword": "생새우살" }
+    ],
+    "pairingTip": "식전주로 내면 자리 분위기가 가볍게 열립니다.",
+    "avoidPairing": "무거운 육류 요리와는 맞지 않습니다.",
+    "similar": ["마르티니 아스티", "모엣 샹동 임페리얼", "미오네토 프로세코"],
+    "trivia": "프로세코는 탱크에서 2차 발효하기 때문에 샴페인보다 생산 비용이 낮고, 그래서 훨씬 저렴한 가격이 가능합니다.",
+    "servingTemp": "6~8℃",
+    "servingNote": "차갑게 해서 플루트 잔에 서빙합니다.",
+    "aging": null,
+    "tips": ["개봉하면 그날 안에 마시는 것이 좋습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "마르티니 아스티",
+    "searchKeyword": "마르티니 아스티",
+    "producer": "Martini & Rossi",
+    "type": "스파클링 와인 · 모스카토 다스티",
+    "vintage": null,
+    "region": "피에몬테 아스티",
+    "country": "이탈리아",
+    "alcohol": "7.5%",
+    "liquidColor": "#F5E9B8",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "국내에서 널리 팔리는 스위트 스파클링으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 35 },
+      { "axis": "탄닌", "value": 2 },
+      { "axis": "산도", "value": 48 },
+      { "axis": "당도", "value": 80 }
+    ],
+    "tastingNotes": "머스캣 포도와 복숭아의 달콤한 향이 가득합니다. 알코올이 낮고 달아서 와인을 어려워하는 사람도 부담 없이 마실 수 있습니다.",
+    "specs": [
+      { "label": "품종", "value": "모스카토 비앙코" },
+      { "label": "등급", "value": "아스티 DOCG" },
+      { "label": "특징", "value": "저알코올 스위트 스파클링" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2027",
+    "history": [
+      { "year": "1863", "event": "마르티니 앤 로시 설립" },
+      { "year": "20세기", "event": "베르무트와 스파클링으로 세계 시장 진출" },
+      { "year": "현재", "event": "스위트 스파클링의 대표 브랜드로 자리잡음" }
+    ],
+    "story": "도수가 7.5%로 낮고 단맛이 뚜렷해, 파티나 디저트 자리에서 많이 선택됩니다. 와인 입문자에게 가장 자주 권해지는 제품 중 하나입니다.",
+    "winery": "마르티니 앤 로시는 이탈리아 토리노에서 시작한 브랜드로, 베르무트로도 유명합니다.",
+    "foodPairing": [
+      { "emoji": "🍰", "food": "케이크", "why": "디저트와의 단맛끼리 잘 맞습니다", "shopKeyword": "생크림 케이크" },
+      { "emoji": "🍑", "food": "복숭아", "why": "같은 계열의 향이 겹칩니다", "shopKeyword": "복숭아" },
+      { "emoji": "🧀", "food": "고르곤졸라", "why": "단맛이 블루치즈의 짠맛을 감쌉니다", "shopKeyword": "고르곤졸라 치즈" }
+    ],
+    "pairingTip": "충분히 차갑게 해야 단맛이 무겁지 않습니다.",
+    "avoidPairing": "짭짤한 메인 요리와는 어울리지 않습니다.",
+    "similar": ["라 마르카 프로세코", "칸티 모스카토 다스티", "리유니트 람브루스코"],
+    "trivia": "아스티는 발효 도중 온도를 낮춰 발효를 멈추는 방식으로 만들어, 포도의 단맛과 낮은 알코올이 동시에 남습니다.",
+    "servingTemp": "5~7℃",
+    "servingNote": "아주 차갑게 해서 플루트 잔에 서빙합니다.",
+    "aging": null,
+    "tips": ["디저트 와인으로 가장 접근하기 쉬운 선택입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "조르주 뒤뵈프 보졸레 빌라주",
+    "searchKeyword": "조르주 뒤뵈프 보졸레",
+    "producer": "Georges Duboeuf",
+    "type": "레드 와인 · 가메",
+    "vintage": null,
+    "region": "보졸레",
+    "country": "프랑스",
+    "alcohol": "12.5%",
+    "liquidColor": "#8A2438",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "보졸레를 대표하는 생산자의 제품으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 38 },
+      { "axis": "탄닌", "value": 28 },
+      { "axis": "산도", "value": 68 },
+      { "axis": "당도", "value": 20 }
+    ],
+    "tastingNotes": "딸기와 라즈베리의 밝은 과일 향에 바나나 같은 발효 뉘앙스가 스칩니다. 탄닌이 거의 느껴지지 않아 가볍게 즐기기 좋습니다.",
+    "specs": [
+      { "label": "품종", "value": "가메" },
+      { "label": "제법", "value": "탄산 침용(마세라시옹 카르보니크)" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2027",
+    "history": [
+      { "year": "1964", "event": "조르주 뒤뵈프가 보졸레 생산자 연합 결성" },
+      { "year": "1970년대", "event": "보졸레 누보를 세계적 이벤트로 만든 주역" },
+      { "year": "현재", "event": "'보졸레의 왕'으로 불림" }
+    ],
+    "story": "매년 11월 셋째 주 목요일에 출시되는 보졸레 누보 문화를 세계에 퍼뜨린 생산자입니다. 빌라주 등급은 누보보다 조금 더 구조가 있습니다.",
+    "winery": "보졸레 지역 최대 생산자로, 지역 와인의 국제화를 이끌었습니다.",
+    "foodPairing": [
+      { "emoji": "🍗", "food": "닭 요리", "why": "가벼운 탄닌이 담백함과 맞습니다", "shopKeyword": "닭 한마리" },
+      { "emoji": "🥓", "food": "베이컨", "why": "짭짤함이 과일 향을 살립니다", "shopKeyword": "베이컨 슬라이스" },
+      { "emoji": "🧀", "food": "까망베르 치즈", "why": "부드러운 치즈와 잘 어울립니다", "shopKeyword": "까망베르 치즈" }
+    ],
+    "pairingTip": "13~15℃로 살짝 칠링하면 훨씬 산뜻합니다.",
+    "avoidPairing": "묵직한 스테이크에는 힘이 부족합니다.",
+    "similar": ["루이 자도 부르고뉴 피노 누아", "산타 크리스티나", "무통 카데"],
+    "trivia": "가메는 탄산 침용이라는 특수한 발효를 거치는데, 이 과정에서 바나나·사탕 같은 독특한 향이 생깁니다.",
+    "servingTemp": "13~15℃",
+    "servingNote": "약간 차게 해서 마시는 것이 정석입니다.",
+    "aging": null,
+    "tips": ["레드 와인 중 드물게 칠링해서 마시는 와인입니다"]
+  }
+]

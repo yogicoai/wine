@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+build/
+
+# 환경변수 — 절대 커밋하지 말 것 (Vercel 대시보드에 직접 입력)
+.env
+.env.local
+.env.*.local
+
+npm-debug.log*
+yarn-error.log*
+.vercel
+.DS_Store
+Thumbs.db

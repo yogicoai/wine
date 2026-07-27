@@ -1,0 +1,603 @@
+import Link from "next/link";
+import s from "./guide.module.css";
+
+export const metadata = {
+  title: "보틀 렌즈 — 기능 설명서",
+  description: "술 라벨을 촬영하면 AI가 주종·가격·역사·페어링을 분석하고 구매까지 연결하는 웹 앱의 기능 설명서.",
+};
+
+export default function GuidePage() {
+  return (
+    <div className={s.wrap}>
+      <div className={s.topbar}>
+        <Link href="/" className={s.brand}>
+          Bottle <em>Lens</em>
+        </Link>
+        <Link href="/" className={s.back}>
+          앱으로 돌아가기
+        </Link>
+      </div>
+
+      <header className={s.hero}>
+        <p className={s.eyebrow}>제품 기능 설명서</p>
+        <h1 className={s.title}>
+          보틀 렌즈
+          <span className={s.titleKo}>술 라벨을 읽는 AI 소믈리에</span>
+        </h1>
+        <p className={s.lede}>
+          술병 라벨을 카메라로 찍으면 <b>AI가 그 술의 모든 것</b>을 읽어내고, 실제로 살 수 있는 곳까지
+          연결합니다. 사전에 상품 데이터베이스를 만들 필요가 없습니다.
+        </p>
+        <div className={s.stats}>
+          <div className={s.stat}><b>16</b><span>자동 판별 주종</span></div>
+          <div className={s.stat}><b>0</b><span>사전 등록 상품 수</span></div>
+          <div className={s.stat}><b>30초</b><span>스캔당 분석 시간</span></div>
+          <div className={s.stat}><b>63원</b><span>스캔당 AI 비용</span></div>
+        </div>
+      </header>
+
+      {/* 01 */}
+      <section className={s.section}>
+        <div className={s.num}>01</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>어떤 앱인가</h2>
+          <p className={s.sub}>
+            와인 · 위스키 · 사케 · 전통주 · 막걸리 · 맥주 · 브랜디 · 백주 · 데킬라 · 럼 · 진 · 보드카 · 리큐르 ·
+            하이볼(RTD) · 소주 · 기타 — 16개 주종으로 자동 분류합니다.
+          </p>
+          <p className={s.p}>
+            여기서 16은 <b>인식할 수 있는 술의 가짓수가 아니라 결과를 정리하는 분류 체계</b>입니다. 주종에 따라
+            아이콘, 맛 프로필의 축(와인은 탄닌·산도, 위스키는 피트·스파이스), 생산자 표기(와이너리·증류소·양조장)가
+            달라집니다. 어떤 술이든 이 중 하나로 분류되어 그에 맞는 형식으로 보여집니다.
+          </p>
+          <p className={s.p}>
+            핵심은 <b>상품 데이터를 미리 수집하지 않는다</b>는 점입니다. AI가 라벨의 글자와 디자인을 직접 읽어
+            제품을 특정하고, 학습된 지식으로 역사·맛·페어링을 설명합니다. 가격처럼 자주 바뀌는 정보는
+            네이버쇼핑에서 실시간으로 가져옵니다. 그래서 등록 작업 없이 세상의 거의 모든 술을 첫날부터 다룰 수 있습니다.
+          </p>
+          <div className={s.callout}>
+            <b>정직한 AI로 설계했습니다.</b> 모르는 술을 그럴듯하게 지어내지 않도록, 스스로 얼마나 아는지를{" "}
+            <b>확실한 정보 / 부분 확인 / 일반 추정</b> 세 단계로 표시합니다.
+          </div>
+        </div>
+      </section>
+
+      {/* 02 */}
+      <section className={s.section}>
+        <div className={s.num}>02</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>인수받은 원본에서 달라진 점</h2>
+          <p className={s.sub}>단일 HTML 파일로 되어 있던 원본을 상용 서비스 구조로 다시 지었습니다.</p>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead>
+                <tr><th>항목</th><th>원본</th><th>현재</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>구조</td><td className={s.was}>HTML 파일 1개</td><td className={s.now}>Next.js 웹 애플리케이션</td></tr>
+                <tr><td>AI 호출</td><td className={s.was}>브라우저에서 직접 호출 — API 키가 사용자에게 노출</td><td className={s.now}><b>서버에서 호출</b> — 키가 외부에 노출되지 않음</td></tr>
+                <tr><td>데이터 저장</td><td className={s.was}>브라우저 저장소 — 기기를 바꾸면 사라짐</td><td className={s.now}><b>MongoDB</b> — 영구 보관, 기기 무관</td></tr>
+                <tr><td>구매 연결</td><td className={s.was}>없음</td><td className={s.now}><b>실제 판매처 · 최저가 · 구매 링크</b></td></tr>
+                <tr><td>개인 기록</td><td className={s.was}>최근 스캔 40건</td><td className={s.now}><b>나의 셀러</b> — 재고 · 별점 · 테이스팅 노트 · 취향 분석</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* 03 */}
+      <section className={s.section}>
+        <div className={s.num}>03</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>화면별 사용법</h2>
+          <p className={s.sub}>촬영 → 분석 → 결과 → 기록, 네 개의 화면으로 이루어집니다.</p>
+          <div className={s.screens}>
+            <div className={s.screen}>
+              <span className={s.tag}>Screen 1</span>
+              <h3 className={s.h4}>촬영</h3>
+              <p className={s.p}>라벨을 프레임 안에 맞추고 가운데 금색 셔터를 누릅니다.</p>
+              <ul className={s.list}>
+                <li><b>카메라 촬영</b> — 가운데 셔터 버튼</li>
+                <li><b>사진 업로드</b> — 왼쪽 갤러리 버튼</li>
+                <li><b>드래그 앤 드롭</b> — PC에서 이미지를 끌어다 놓기</li>
+                <li><b>붙여넣기</b> — 복사한 이미지를 Ctrl+V</li>
+              </ul>
+              <p className={s.p} style={{ marginTop: "0.9rem" }}>
+                카메라는 보안 정책상 HTTPS 주소에서만 열립니다. 배포하면 자동으로 해결되며, 그전에는 사진 업로드로 사용하시면 됩니다.
+              </p>
+            </div>
+
+            <div className={s.screen}>
+              <span className={s.tag}>Screen 2</span>
+              <h3 className={s.h4}>분석 중</h3>
+              <p className={s.p}>
+                라벨을 읽고 주종을 판별한 뒤 결과를 정리합니다. 약 30초 걸립니다.
+                가격 정보는 결과 화면에서 네이버쇼핑을 통해 실시간으로 함께 조회됩니다.
+              </p>
+            </div>
+
+            <div className={s.screen}>
+              <span className={s.tag}>Screen 3</span>
+              <h3 className={s.h4}>결과</h3>
+              <p className={s.p}>분석 결과가 잡지 화보 형태로 정리됩니다.</p>
+              <ul className={s.list}>
+                <li><b>제품 정보</b> — 이름 · 생산자 · 빈티지 · 지역 · 도수, 인식 신뢰도</li>
+                <li><b>예상 가격</b> — 국내 가격대와 5단계 등급</li>
+                <li><b>구매 정보</b> — 판매처의 실제 상품 사진 · 최저가 · 구매 링크</li>
+                <li><b>빈티지별 가격</b> — 같은 술의 연도별 가격 비교</li>
+                <li><b>플레이버 시그니처</b> — 주종에 맞는 4개 축 맛 프로필</li>
+                <li><b>음용 적기</b> — 언제부터 언제까지, 피크 시점</li>
+                <li><b>히스토리 · 스토리 · 생산자</b> — 이 술의 연대기와 이야기</li>
+                <li><b>푸드 페어링</b> — 어울리는 음식과 그 음식을 살 수 있는 링크</li>
+                <li><b>평점 · 서빙 · 상식 · 음용 팁</b></li>
+                <li><b>타이머</b> — 칠링 20분 / 디캔팅 60분 / 롱 디캔팅 120분</li>
+                <li><b>유사주 추천</b> — 이름을 누르면 그 술도 바로 분석</li>
+              </ul>
+            </div>
+
+            <div className={s.screen}>
+              <span className={s.tag}>Screen 4</span>
+              <h3 className={s.h4}>나의 셀러</h3>
+              <p className={s.p}>헤더의 와인잔 아이콘에서 열립니다. 애호가를 위한 개인 기록 공간입니다.</p>
+              <ul className={s.list}>
+                <li><b>요약</b> — 보유 병 수 / 마신 술 / 위시리스트</li>
+                <li><b>특가 알림</b> — 목표가에 도달하거나 최저가가 떨어지면 상단에 표시</li>
+                <li><b>나의 취향</b> — 별점 기록을 분석해 “탄닌 강한 · 바디 강한 스타일을 선호합니다” 같은 취향 레이더 생성</li>
+                <li><b>재고 관리</b> — 병 수 증감, 마시면 자동 차감</li>
+                <li><b>음용 적기 배지</b> — 지금이 피크 / 곧 적기 마감 / 적기 지남</li>
+                <li><b>테이스팅 노트</b> — 마신 날짜, 별점, 느낀 향 태그, 메모</li>
+              </ul>
+              <p className={s.p} style={{ marginTop: "0.9rem" }}>
+                향 태그는 주종에 따라 다르게 제공됩니다. 와인은 블랙베리 · 제비꽃 · 삼나무, 위스키는 피트 · 훈연 · 요오드처럼
+                타이핑 없이 눌러서 기록합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 04 */}
+      <section className={s.section}>
+        <div className={s.num}>04</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>이 앱만의 차별점</h2>
+          <p className={s.sub}>경쟁 서비스와 갈리는 지점입니다.</p>
+
+          <div className={s.edge}>
+            <h3 className={s.h4}>사전 데이터 구축이 필요 없다</h3>
+            <p className={s.p}>상품 DB를 만들거나 관리할 인력이 들지 않습니다. 등록되지 않은 술이라는 개념 자체가 없습니다.</p>
+          </div>
+          <div className={s.edge}>
+            <h3 className={s.h4}>정보에서 끝나지 않고 구매처까지 안내한다</h3>
+            <p className={s.p}>
+              실제 판매처의 상품 사진과 현재 가격을 함께 보여주고, 누르면 해당 판매 페이지로 이동합니다.
+              직접 판매하는 것은 아니며, 어디서 얼마에 파는지를 찾아 주는 역할입니다.
+            </p>
+          </div>
+          <div className={s.edge}>
+            <h3 className={s.h4}>안주까지 함께 소개한다</h3>
+            <p className={s.p}>
+              “스테이크와 어울립니다”에서 멈추지 않고, 그에 해당하는 실제 식품이 어떤 것이 있고 대략 얼마인지까지
+              보여줍니다. 나중에 제휴를 붙인다면 객단가를 높일 수 있는 지점이기도 합니다.
+            </p>
+          </div>
+          <div className={s.edge}>
+            <h3 className={s.h4}>모르는 것을 지어내지 않는다</h3>
+            <p className={s.p}>확신 정도를 신뢰도로 표시하고, 가격은 실제 판매 데이터로 확인합니다.</p>
+          </div>
+          <div className={s.edge}>
+            <h3 className={s.h4}>기록이 쌓일수록 개인화된다</h3>
+            <p className={s.p}>별점과 테이스팅 노트가 모여 취향 프로필이 되고, 이는 추천 정확도의 기반이 됩니다.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 05 */}
+      <section className={s.section}>
+        <div className={s.num}>05</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>운영에 필요한 것</h2>
+          <p className={s.sub}>설정 파일에 세 종류의 값만 넣으면 동작합니다.</p>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead><tr><th>항목</th><th>용도</th><th>발급처</th></tr></thead>
+              <tbody>
+                <tr><td>Anthropic API 키</td><td className={s.now}>AI 분석</td><td className={s.was}>console.anthropic.com</td></tr>
+                <tr><td>MongoDB 주소</td><td className={s.now}>데이터 저장</td><td className={s.was}>MongoDB Atlas</td></tr>
+                <tr><td>네이버 검색 키</td><td className={s.now}>상품 · 가격 조회</td><td className={s.was}>developers.naver.com (무료)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className={s.p}>
+            <b>키가 없어도 동작합니다.</b> AI 키가 없으면 샘플 4종이 순환하는 데모 모드로 화면을 확인할 수 있고,
+            네이버 키가 없으면 구매 정보만 빠진 채 나머지는 정상 동작합니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 06 */}
+      <section className={s.section}>
+        <div className={s.num}>06</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>AI 사용 비용 — 실측</h2>
+          <p className={s.sub}>
+            2026년 7월 27일, 실제 스캔을 돌려 토큰 사용량을 측정한 값입니다. Claude Sonnet 5 기준, 환율 1,450원 가정.
+          </p>
+
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead>
+                <tr><th>구분</th><th>입력 토큰</th><th>출력 토큰</th><th>소요 시간</th><th>스캔 1회</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>웹 검색 끔<br /><span className={s.faint}>현재 기본 설정</span></td>
+                  <td className={s.numCell}>2,860</td>
+                  <td className={s.numCell}>2,304</td>
+                  <td className={s.numCell}>30초</td>
+                  <td className={`${s.numCell} ${s.priceLo}`}>약 63원</td>
+                </tr>
+                <tr>
+                  <td>웹 검색 켬</td>
+                  <td className={s.numCell}>78,411</td>
+                  <td className={s.numCell}>6,129</td>
+                  <td className={s.numCell}>179초</td>
+                  <td className={`${s.numCell} ${s.priceHi}`}>약 474원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className={s.callout}>
+            <b>웹 검색을 켜면 비용이 7.5배, 시간이 6배로 늘어납니다.</b> 검색 결과 텍스트가 입력 토큰을 76,000개나
+            차지하기 때문입니다. 그런데 검색이 주로 찾아오는 가격 정보는 <b>이미 무료인 네이버쇼핑 조회가 담당</b>하고
+            있어 상당 부분 중복이었습니다. 그래서 <b>웹 검색을 기본으로 끈 상태</b>로 설정했고, 필요할 때만 결과 화면의
+            “최신 정보 더 찾기” 버튼으로 켤 수 있게 했습니다.
+          </div>
+
+          <h3 className={s.h3}>월간 예상 비용</h3>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead><tr><th>월 스캔 수</th><th>현재 설정 (검색 끔)</th><th>검색을 켠다면</th></tr></thead>
+              <tbody>
+                <tr><td>100회</td><td className={`${s.numCell} ${s.priceLo}`}>약 6천원</td><td className={s.numCell}>약 5만원</td></tr>
+                <tr><td>1,000회</td><td className={`${s.numCell} ${s.priceLo}`}>약 6만원</td><td className={s.numCell}>약 52만원</td></tr>
+                <tr><td>10,000회</td><td className={`${s.numCell} ${s.priceLo}`}>약 63만원</td><td className={`${s.numCell} ${s.priceHi}`}>약 516만원</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className={s.p}>
+            프로모션 단가(2026년 8월 31일까지)를 적용하면 각각 42원 / 316원으로 더 낮아집니다.
+            웹 검색을 켤 경우 검색 도구 자체 요금이 별도로 부과되며, 정확한 단가는 Anthropic 요금표에서 확인이 필요합니다.
+          </p>
+
+          <h3 className={s.h3}>비용을 더 줄이는 방법</h3>
+          <ul className={s.list}>
+            <li>
+              <b>결과 캐싱 (다음 작업 예정)</b> — 이미 스캔된 술은 재분석 없이 즉시 응답하므로 <b>비용 0원</b>.
+              인기 있는 술이 스캔의 대부분을 차지하므로 효과가 가장 큽니다.
+            </li>
+            <li><b>저비용 모델 전환</b> — 잘 알려진 술은 저비용 모델로 처리하는 2단계 구조를 둡니다.</li>
+            <li><b>사용량 제한</b> — 무료 사용자의 월 스캔 횟수를 제한합니다.</li>
+          </ul>
+
+          <h3 className={s.h3}>그 외 비용</h3>
+          <ul className={s.list}>
+            <li><b>네이버쇼핑 검색</b> — 무료 (일 25,000회)</li>
+            <li><b>데이터베이스</b> — 무료 티어로 초기 운영 가능</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* 07 */}
+      <section className={s.section}>
+        <div className={s.num}>07</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>토큰 비용을 어떻게 회수할 것인가</h2>
+          <p className={s.sub}>
+            스캔 한 번에 AI 비용이 발생하므로, 그 비용을 누가 어떻게 부담할지가 사업 구조의 핵심입니다.
+            아래 숫자는 모두 실측값에 근거합니다.
+          </p>
+
+          <h3 className={s.h3}>먼저, 원가는 사용할수록 내려갑니다</h3>
+          <p className={s.p}>
+            분석한 술은 카탈로그에 쌓여 다음 사람에게는 다시 분석하지 않고 제공됩니다. 사진 스캔의 경우 저비용 모델이
+            라벨에서 제품명만 읽어 카탈로그를 조회하므로, 이미 있는 술이면 <b>약 3원</b>으로 끝납니다.
+          </p>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead>
+                <tr><th>상황</th><th>AI 호출</th><th>스캔 1회 원가</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>카탈로그에 있음<br /><span className={s.faint}>사진 스캔</span></td><td className={s.was}>라벨 판독만</td><td className={`${s.numCell} ${s.priceLo}`}>약 3원</td></tr>
+                <tr><td>카탈로그에 있음<br /><span className={s.faint}>이름 검색</span></td><td className={s.was}>없음</td><td className={`${s.numCell} ${s.priceLo}`}>0원</td></tr>
+                <tr><td>카탈로그에 없음</td><td className={s.was}>판독 + 본분석</td><td className={s.numCell}>약 66원</td></tr>
+                <tr><td>최신 정보 더 찾기<br /><span className={s.faint}>사용자가 직접 실행</span></td><td className={s.was}>웹 검색 포함</td><td className={`${s.numCell} ${s.priceHi}`}>약 474원</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 className={s.h3}>카탈로그 적중률에 따른 평균 원가</h3>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead>
+                <tr><th>적중률</th><th>스캔 평균 원가</th><th>월 1만 회</th><th>시점</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>0%</td><td className={s.numCell}>66원</td><td className={s.numCell}>66만원</td><td className={s.was}>선적재 전</td></tr>
+                <tr><td>50%</td><td className={s.numCell}>34원</td><td className={s.numCell}>34만원</td><td className={s.was}>초기 운영</td></tr>
+                <tr><td>80%</td><td className={`${s.numCell} ${s.priceLo}`}>16원</td><td className={`${s.numCell} ${s.priceLo}`}>16만원</td><td className={s.now}>선적재 + 누적</td></tr>
+                <tr><td>90%</td><td className={`${s.numCell} ${s.priceLo}`}>9원</td><td className={`${s.numCell} ${s.priceLo}`}>9만원</td><td className={s.now}>성숙 단계</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div className={s.callout}>
+            인기 있는 술이 스캔의 대부분을 차지하므로 적중률은 빠르게 올라갑니다. 인기 상품 500종을 미리 채워 넣는
+            데 드는 비용은 <b>약 1만 6천원(건당 32원, 배치 할인 적용)</b>이며, 한 번만 지출하면 됩니다.
+          </div>
+
+          <h3 className={s.h3}>판매 방식 — 세 가지 선택지</h3>
+          <div className={s.prio}>
+            <div className={s.item}>
+              <h4 className={s.h4}>정액 구독제</h4>
+              <span className={`${s.flag} ${s.must}`}>권장</span>
+              <p className={s.p}>
+                매출이 예측 가능하고 사용자도 부담을 미리 압니다. 원가가 스캔당 10~20원 수준이라 마진이 매우 큽니다.
+                무료 구간을 함께 두어 유입을 확보합니다.
+              </p>
+            </div>
+            <div className={s.item}>
+              <h4 className={s.h4}>횟수제 (크레딧)</h4>
+              <span className={`${s.flag} ${s.soon}`}>보조</span>
+              <p className={s.p}>
+                가끔 쓰는 사용자를 위한 선택지입니다. 예: 10회 1,000원. 구독을 부담스러워하는 층을 흡수하지만,
+                결제 빈도가 낮아 주력으로는 적합하지 않습니다.
+              </p>
+            </div>
+            <div className={s.item}>
+              <h4 className={s.h4}>완전 무료 + 제휴 수수료</h4>
+              <span className={`${s.flag} ${s.idea}`}>병행</span>
+              <p className={s.p}>
+                원가가 낮아 가능한 전략입니다. 구매 링크에서 발생하는 수수료로 비용을 회수합니다.
+                특히 안주(식품)는 온라인 판매 제한이 없어 제휴가 수월합니다.
+              </p>
+            </div>
+          </div>
+
+          <h3 className={s.h3}>제안하는 요금제</h3>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead>
+                <tr><th>구간</th><th>가격</th><th>제공</th><th>월 원가<span className={s.faint}> (적중률 80%)</span></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>무료</td>
+                  <td className={s.numCell}>0원</td>
+                  <td className={s.was}>월 5회 스캔, 셀러 10병, 특가 알림 3종</td>
+                  <td className={s.numCell}>약 80원</td>
+                </tr>
+                <tr>
+                  <td>스탠다드</td>
+                  <td className={`${s.numCell} ${s.priceLo}`}>3,900원</td>
+                  <td className={s.was}>월 50회 스캔, 셀러·특가 알림 무제한</td>
+                  <td className={s.numCell}>약 800원</td>
+                </tr>
+                <tr>
+                  <td>프리미엄</td>
+                  <td className={`${s.numCell} ${s.priceLo}`}>9,900원</td>
+                  <td className={s.was}>무제한(월 300회 공정사용), 최신 정보 검색 월 10회 포함</td>
+                  <td className={s.numCell}>약 9,500원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className={s.p}>
+            실제 사용자는 대부분 한도를 다 쓰지 않습니다. 스탠다드 구독자가 월 20회를 스캔한다고 보면 원가는
+            <b> 약 320원</b>으로, 마진율이 90%를 넘습니다. 프리미엄의 원가가 높아 보이는 이유는 웹 검색(회당 474원)이
+            포함되기 때문이며, 이 기능만 별도 한도로 묶어 두면 비용이 통제됩니다.
+          </p>
+
+          <h3 className={s.h3}>무료 사용자는 어떻게 감당하나</h3>
+          <p className={s.p}>
+            무료 사용자 한 명의 월 원가는 <b>약 80원</b>입니다. 구매 링크에서 수수료가 한 번만 발생해도
+            수십 명분을 회수합니다. 안주 상품(식품)은 온라인 판매 제한이 없어 일반 제휴 프로그램을 그대로 쓸 수 있고,
+            주류는 매장 픽업 서비스와의 제휴가 현실적인 경로입니다.
+          </p>
+
+          <h3 className={s.h3}>B2B — 마진이 가장 큰 영역</h3>
+          <ul className={s.list}>
+            <li><b>보틀샵·마트 위젯</b> — 매대 QR로 상품 정보를 보여주는 서비스. 월 구독형으로 판매합니다.</li>
+            <li><b>분석 API 판매</b> — 주류 이커머스에 건당 과금. 원가 16원 수준이므로 건당 200원에 팔아도 경쟁력이 있습니다.</li>
+            <li><b>주류사 스폰서</b> — 특정 브랜드의 상세 콘텐츠나 신제품 노출을 유료화합니다.</li>
+          </ul>
+
+          <h3 className={s.h3}>AI 외 고정비</h3>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead><tr><th>항목</th><th>초기</th><th>확장 시</th></tr></thead>
+              <tbody>
+                <tr><td>네이버쇼핑 조회</td><td className={s.now}>무료</td><td className={s.now}>무료 (일 25,000회)</td></tr>
+                <tr><td>이미지 저장</td><td className={s.now}>기존 Cafe24 호스팅 활용</td><td className={s.now}>추가 비용 없음</td></tr>
+                <tr><td>데이터베이스</td><td className={s.now}>무료 티어</td><td className={s.was}>월 8만원 수준</td></tr>
+                <tr><td>웹 서버</td><td className={s.now}>무료 티어</td><td className={s.was}>월 3만원 수준</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className={s.callout}>
+            <b>정리하면.</b> 원가 구조상 스캔 한 번이 10~20원이므로, 월 3,900원 구독 하나로 사용자 한 명의 AI 비용을
+            여유 있게 감당합니다. 관건은 요금이 아니라 <b>사용자를 모으는 것</b>이며, 그래서 무료 구간과 공유 카드가
+            요금제만큼 중요합니다.
+          </div>
+        </div>
+      </section>
+
+      {/* 08 */}
+      <section className={s.section}>
+        <div className={s.num}>08</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>이미지 저장 현황</h2>
+          <p className={s.sub}>현재 Cafe24(yogibo 오픈호스팅) 연동은 되어 있지 않습니다.</p>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead><tr><th>이미지</th><th>현재 저장 위치</th><th>권장</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>스캔 썸네일<br /><span className={s.faint}>320px</span></td>
+                  <td className={s.was}>데이터베이스에 문자열로 직접 저장</td>
+                  <td className={s.now}><b>Cafe24 이미지 호스팅으로 이전</b></td>
+                </tr>
+                <tr><td>배경 이미지</td><td className={s.was}>앱 소스에 포함</td><td className={s.now}>현행 유지 가능</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className={s.p}>
+            <b>왜 옮겨야 하나.</b> 이미지를 데이터베이스에 문자열로 넣으면 문서 용량이 커져 조회가 느려지고, 무료 티어
+            용량(512MB)을 빠르게 소진합니다. 썸네일 한 장이 약 20~40KB이므로 1만 건이면 200~400MB에 이릅니다.
+          </p>
+          <p className={s.p}>
+            <b>이전하면.</b> 데이터베이스에는 이미지 주소만 남아 용량 부담이 사라지고, 이미지는 Cafe24 웹서버가 직접
+            전송해 로딩도 빨라집니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 09 */}
+      <section className={s.section}>
+        <div className={s.num}>09</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>다음 단계</h2>
+          <p className={s.sub}>상업 서비스로 가기 위해 권장하는 순서입니다.</p>
+          <div className={s.prio}>
+            <div className={s.item}>
+              <h3 className={s.h4}>결과 캐싱</h3>
+              <span className={`${s.flag} ${s.must}`}>최우선</span>
+              <p className={s.p}>
+                같은 술을 다른 사람이 또 스캔하면 AI를 다시 부르지 않고 저장된 결과를 즉시 보여줍니다. 응답이 즉시로
+                바뀌고 AI 비용이 0원이 되며, 스캔이 쌓일수록 자체 술 데이터베이스가 저절로 완성됩니다.
+              </p>
+            </div>
+
+            <div className={s.item}>
+              <h3 className={s.h4}>로그인 · 만 19세 인증 · 사용량 제한</h3>
+              <span className={`${s.flag} ${s.must}`}>상업화 필수</span>
+              <p className={s.p}>
+                현재는 기록이 공용입니다. 사용자별 셀러를 만들려면 로그인이 필요하고, 주류 서비스는 청소년보호법상 성인
+                확인과 음주 경고 문구가 필요하며 앱스토어 심사에서도 확인합니다. 카카오 · 네이버 소셜 로그인으로 1차
+                확인 후 정식 서비스에는 본인인증 연동을 권장합니다. 무료 사용자의 스캔 횟수를 제한하지 않으면 AI 비용이
+                그대로 적자가 됩니다.
+              </p>
+            </div>
+
+            <div className={s.item}>
+              <h3 className={s.h4}>공유 카드</h3>
+              <span className={`${s.flag} ${s.soon}`}>권장</span>
+              <p className={s.p}>
+                분석 결과를 이미지 한 장으로 만들어 인스타그램 · 카카오톡에 공유합니다. 광고비가 들지 않는 유입 경로가 됩니다.
+              </p>
+            </div>
+
+            <div className={s.item}>
+              <h3 className={s.h4}>이미지 저장소 이전</h3>
+              <span className={`${s.flag} ${s.soon}`}>권장</span>
+              <p className={s.p}>썸네일을 Cafe24 이미지 호스팅으로 옮겨 데이터베이스 용량 부담을 없앱니다.</p>
+            </div>
+
+            <div className={s.item}>
+              <h3 className={s.h4}>모바일 앱화</h3>
+              <span className={`${s.flag} ${s.soon}`}>권장</span>
+              <p className={s.p}>
+                홈 화면에 설치되는 앱 형태로 만들고 HTTPS로 배포하면 카메라 촬영이 활성화됩니다. 안드로이드는 이 상태로
+                스토어 등록까지 가능합니다.
+              </p>
+            </div>
+
+            <div className={s.item}>
+              <h3 className={s.h4}>수익 모델</h3>
+              <span className={`${s.flag} ${s.soon}`}>권장</span>
+              <p className={s.p}>
+                구독제(무료 월 N회 / 프리미엄 무제한), 구매 연결 제휴 수수료, 보틀샵 · 마트용 위젯이나 주류 이커머스 대상
+                분석 API 판매.
+              </p>
+            </div>
+
+            <div className={s.item}>
+              <h3 className={s.h4}>다국어 확장</h3>
+              <span className={`${s.flag} ${s.idea}`}>아이디어</span>
+              <p className={s.p}>
+                한국 술을 영어 · 일본어로 설명하는 방향. 관광객과 수출 시장은 경쟁 서비스가 거의 없는 영역입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 10 */}
+      <section className={s.section}>
+        <div className={s.num}>10</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>알려진 제약</h2>
+          <p className={s.sub}>미리 알고 계셔야 할 사항과 대응 방향입니다.</p>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead><tr><th>항목</th><th>내용</th><th>대응</th></tr></thead>
+              <tbody>
+                <tr><td>분석 시간</td><td className={s.was}>약 30초 소요</td><td className={s.now}>결과 캐싱으로 즉시 응답</td></tr>
+                <tr><td>카메라</td><td className={s.was}>HTTPS에서만 동작</td><td className={s.now}>배포 시 자동 해결</td></tr>
+                <tr><td>마이너한 술</td><td className={s.was}>정보가 부실할 수 있음</td><td className={s.now}>신뢰도 배지로 정직하게 표시</td></tr>
+                <tr><td>온라인 주류 판매</td><td className={s.was}>국내법상 일반 주류는 배송 불가</td><td className={s.now}>매장 픽업 방식으로 연결, 전통주만 직배송</td></tr>
+                <tr><td>가격 정보</td><td className={s.was}>판매처 사정에 따라 변동</td><td className={s.now}>실시간 조회로 최신값 유지</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* 11 */}
+      <section className={s.section}>
+        <div className={s.num}>11</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>자주 묻는 질문</h2>
+          <dl className={s.faq}>
+            <div className={s.qa}>
+              <dt>술 정보를 미리 입력해둬야 하나요?</dt>
+              <dd>아니요. AI가 라벨을 직접 읽고, 가격은 네이버쇼핑에서 실시간으로 가져옵니다. 등록 작업이 전혀 없습니다.</dd>
+            </div>
+            <div className={s.qa}>
+              <dt>AI가 틀린 정보를 말하면 어떻게 하나요?</dt>
+              <dd>
+                모르는 것을 지어내지 않도록 설계했고, 확신 정도를 신뢰도 배지로 표시합니다. 가격처럼 자주 바뀌는 정보는
+                실제 판매 데이터로 확인합니다.
+              </dd>
+            </div>
+            <div className={s.qa}>
+              <dt>웹 검색은 왜 꺼져 있나요?</dt>
+              <dd>
+                비용이 7.5배, 시간이 6배로 늘어나는 데 비해 얻는 정보가 네이버쇼핑 조회와 상당 부분 겹치기 때문입니다.
+                필요할 때는 결과 화면의 “최신 정보 더 찾기” 버튼으로 켤 수 있습니다.
+              </dd>
+            </div>
+            <div className={s.qa}>
+              <dt>사진 없이 술 이름만으로도 되나요?</dt>
+              <dd>됩니다. 결과 화면의 유사주 추천에서 이름을 누르면 사진 없이 바로 분석합니다.</dd>
+            </div>
+            <div className={s.qa}>
+              <dt>기록은 어디에 저장되나요?</dt>
+              <dd>
+                MongoDB에 저장되어 기기를 바꿔도 유지됩니다. 현재는 사용자 구분이 없어 공용이며, 로그인 도입 후 개인별로
+                분리됩니다.
+              </dd>
+            </div>
+          </dl>
+
+          <div className={s.footer}>
+            <span>Bottle Lens — 기능 설명서</span>
+            <span>2026. 07. 27.</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

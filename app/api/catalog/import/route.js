@@ -1,0 +1,71 @@
+import { NextResponse } from "next/server";
+import { readdir, readFile } from "node:fs/promises";
+import path from "node:path";
+import { saveCatalog, catalogKey } from "@/lib/catalog";
+import { getDb } from "@/lib/mongodb";
+
+export const runtime = "nodejs";
+export const maxDuration = 120;
+
+const DATA_DIR = path.join(process.cwd(), "data");
+
+// data/ 안의 seed-*.json 을 모두 읽어 하나로 합친다 (주종별로 파일을 나눠 관리하기 위함)
+async function readSeedFiles() {
+  const files = (await readdir(DATA_DIR))
+    .filter((f) => f.startsWith("seed-") && f.endsWith(".json"))
+    .sort();
+  const all = [];
+  for (const f of files) {
+    const parsed = JSON.parse(await readFile(path.join(DATA_DIR, f), "utf-8"));
+    if (Array.isArray(parsed)) all.push(...parsed);
+  }
+  return all;
+}
+
+// 직접 작성한 카탈로그 데이터를 적재한다 (AI 호출 없음 = 비용 0원)
+// POST /api/catalog/import              → data/seed-*.json 을 모두 읽어 적재
+// POST /api/catalog/import { items:[…] } → 본문으로 받은 항목을 적재
+export async function POST(request) {
+  const db = await getDb();
+  if (!db) return NextResponse.json({ error: "DB 미설정" }, { status: 503 });
+
+  let items;
+  try {
+    const body = await request.json().catch(() => ({}));
+    items = Array.isArray(body.items) ? body.items : null;
+    if (!items) items = await readSeedFiles();
+  } catch (err) {
+    return NextResponse.json(
+      { error: `데이터를 읽지 못했습니다: ${err.message}` },
+      { status: 400 }
+    );
+  }
+
+  if (!Array.isArray(items) || !items.length) {
+    return NextResponse.json({ error: "적재할 항목이 없습니다." }, { status: 400 });
+  }
+
+  const existing = new Set(
+    (await db.collection("catalog").find({}, { projection: { key: 1 } }).toArray()).map((d) => d.key)
+  );
+
+  let inserted = 0;
+  let updated = 0;
+  const failed = [];
+
+  for (const item of items) {
+    if (!item?.name || !item?.category) {
+      failed.push({ name: item?.name || "(이름 없음)", reason: "name/category 누락" });
+      continue;
+    }
+    const isNew = !existing.has(catalogKey(item.name, item.vintage));
+    const ok = await saveCatalog({ found: true, ...item }, { usedWeb: false, model: null, source: "manual" });
+    if (!ok) {
+      failed.push({ name: item.name, reason: "저장 실패" });
+      continue;
+    }
+    isNew ? inserted++ : updated++;
+  }
+
+  return NextResponse.json({ total: items.length, inserted, updated, failed });
+}
