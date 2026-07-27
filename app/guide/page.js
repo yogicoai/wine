@@ -249,10 +249,10 @@ export default function GuidePage() {
           </div>
 
           <div className={s.callout}>
-            <b>웹 검색을 켜면 비용이 7.5배, 시간이 6배로 늘어납니다.</b> 검색 결과 텍스트가 입력 토큰을 76,000개나
+            <b>웹 검색을 켜면 비용이 7배, 시간이 6배로 늘어납니다.</b> 검색 결과 텍스트가 입력 토큰을 76,000개나
             차지하기 때문입니다. 그런데 검색이 주로 찾아오는 가격 정보는 <b>이미 무료인 네이버쇼핑 조회가 담당</b>하고
-            있어 상당 부분 중복이었습니다. 그래서 <b>웹 검색을 기본으로 끈 상태</b>로 설정했고, 필요할 때만 결과 화면의
-            “최신 정보 더 찾기” 버튼으로 켤 수 있게 했습니다.
+            있어 상당 부분 중복이었습니다. 그래서 <b>웹 검색은 완전히 꺼 둔 상태</b>입니다. 예상치 못한 비용이 나가지
+            않도록 화면에서 감췄을 뿐 아니라 서버에서도 차단해 두었고, 필요해지면 설정값 하나로 되살릴 수 있습니다.
           </div>
 
           <h3 className={s.h3}>월간 예상 비용</h3>
@@ -313,7 +313,7 @@ export default function GuidePage() {
                 <tr><td>카탈로그에 있음<br /><span className={s.faint}>사진 스캔</span></td><td className={s.was}>라벨 판독만</td><td className={`${s.numCell} ${s.priceLo}`}>약 3원</td></tr>
                 <tr><td>카탈로그에 있음<br /><span className={s.faint}>이름 검색</span></td><td className={s.was}>없음</td><td className={`${s.numCell} ${s.priceLo}`}>0원</td></tr>
                 <tr><td>카탈로그에 없음</td><td className={s.was}>판독 + 본분석</td><td className={s.numCell}>약 66원</td></tr>
-                <tr><td>최신 정보 더 찾기<br /><span className={s.faint}>사용자가 직접 실행</span></td><td className={s.was}>웹 검색 포함</td><td className={`${s.numCell} ${s.priceHi}`}>약 474원</td></tr>
+                <tr><td>웹 검색 분석<br /><span className={s.faint}>현재 꺼둠</span></td><td className={s.was}>웹 검색 포함</td><td className={`${s.numCell} ${s.priceHi}`}>약 474원</td></tr>
               </tbody>
             </table>
           </div>
@@ -575,8 +575,9 @@ export default function GuidePage() {
             <div className={s.qa}>
               <dt>웹 검색은 왜 꺼져 있나요?</dt>
               <dd>
-                비용이 7.5배, 시간이 6배로 늘어나는 데 비해 얻는 정보가 네이버쇼핑 조회와 상당 부분 겹치기 때문입니다.
-                필요할 때는 결과 화면의 “최신 정보 더 찾기” 버튼으로 켤 수 있습니다.
+                비용이 7배(45원 → 316원), 시간이 6배(30초 → 3분)로 늘어나는 데 비해, 얻는 정보가 네이버쇼핑 조회와
+                상당 부분 겹치기 때문입니다. 예기치 않은 비용을 막기 위해 화면과 서버 양쪽에서 막아 두었으며,
+                마이너한 술까지 깊게 다뤄야 할 때 설정값 하나로 되살릴 수 있습니다.
               </dd>
             </div>
             <div className={s.qa}>

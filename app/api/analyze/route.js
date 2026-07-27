@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { callClaude, hasApiKey } from "@/lib/claude";
+import { callClaude, hasApiKey, deepSearchAllowed } from "@/lib/claude";
 import { lookupCatalog, saveCatalog } from "@/lib/catalog";
 import { identifyEnabled, identifyLabel } from "@/lib/identify";
 import { DEMOS } from "@/lib/demos";
@@ -32,7 +32,10 @@ export async function POST(request) {
       return NextResponse.json({ demo: true, result, usedWeb: false });
     }
 
-    const useCache = !fresh && web !== true; // 웹 검색을 명시적으로 요청하면 새로 분석
+    // 웹 검색을 실제로 수행할 때만 캐시를 건너뛴다.
+    // (차단된 상태에서 web:true 가 들어오면 캐시를 그대로 쓰는 게 맞다 — 괜한 재분석 비용 방지)
+    const willSearchWeb = web === true && deepSearchAllowed();
+    const useCache = !fresh && !willSearchWeb;
     let identified = null;
     let identifyUsage = null;
 

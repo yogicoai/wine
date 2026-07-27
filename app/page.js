@@ -237,7 +237,13 @@ export default function Home() {
           onExplore={explore}
           onToast={showToast}
           onCellarChanged={loadCellar}
-          onDeepSearch={(name) => explore(name, { web: true })}
+          // 웹 검색은 스캔당 원가가 7배로 뛰고 3분이 걸려 기본은 숨긴다.
+          // 쓰려면 NEXT_PUBLIC_DEEP_SEARCH=1 (+ 서버의 DEEP_SEARCH=1) 로 켠다.
+          onDeepSearch={
+            process.env.NEXT_PUBLIC_DEEP_SEARCH === "1"
+              ? (name) => explore(name, { web: true })
+              : undefined
+          }
         />
       )}
 

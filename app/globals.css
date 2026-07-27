@@ -97,7 +97,13 @@ img, video, canvas { display: block; max-width: 100%; }
   content: ""; position: absolute; inset: 7px; pointer-events: none;
   border: 1px solid var(--line-soft); z-index: 3;
 }
-.cam-frame video { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92) contrast(1.02); }
+.cam-video {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(0.92) contrast(1.02);
+  background: #000;
+}
+/* 준비 전에는 감추되 DOM에서 제거하지 않는다 (제거하면 스트림 연결이 끊긴다) */
+.cam-video.is-hidden { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .cam-guide {
   position: absolute; inset: 13%; border: 1px solid rgba(236, 215, 164, 0.5);
   pointer-events: none; z-index: 2;
