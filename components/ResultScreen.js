@@ -191,6 +191,72 @@ function DrinkWindow({ from, peak, until }) {
   );
 }
 
+// 유사주 추천 — 카탈로그에 이미 있는 술만 눌러서 볼 수 있게 한다.
+// 없는 술을 누르면 새로 분석되어 비용이 발생하므로, 보유분만 링크로 제공한다.
+function SimilarCard({ names, category, currentName, onExplore }) {
+  const list = Array.isArray(names) ? names : [];
+  const [ready, setReady] = useState(null); // 카탈로그에 있는 추천 목록
+
+  useEffect(() => {
+    if (!category) return;
+    let alive = true;
+    const qs = new URLSearchParams({
+      names: list.join("|"),
+      category,
+      exclude: currentName || "",
+    });
+    fetch(`/api/catalog/similar?${qs}`)
+      .then((r) => r.json())
+      .then((d) => alive && setReady([...(d.matched || []), ...(d.fromCatalog || [])]))
+      .catch(() => alive && setReady([]));
+    return () => {
+      alive = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [list.join("|"), category, currentName]);
+
+  if (!list.length && !ready?.length) return null;
+
+  // 추천받았지만 아직 자료가 없는 술 — 이름만 보여준다
+  const readyKeys = new Set((ready || []).map((r) => r.name));
+  const notYet = list.filter((n) => !readyKeys.has(n));
+
+  return (
+    <div className="card">
+      <div className="card-title">이런 술도 좋아하실 거예요</div>
+
+      {ready?.length > 0 && (
+        <div className="chip-row">
+          {ready.map((s, i) => (
+            <button className="chip chip-btn" key={i} onClick={() => onExplore?.(s.name)}>
+              {s.name} <em>›</em>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {notYet.length > 0 && (
+        <>
+          {ready?.length > 0 && <div className="similar-divider" />}
+          <div className="chip-row">
+            {notYet.map((n, i) => (
+              <span className="chip chip-plain" key={i}>
+                {n}
+              </span>
+            ))}
+          </div>
+        </>
+      )}
+
+      <div className="shop-note">
+        {ready?.length > 0
+          ? "금색 항목은 눌러서 바로 확인할 수 있습니다."
+          : "아직 상세 자료가 준비되지 않은 술입니다."}
+      </div>
+    </div>
+  );
+}
+
 // 디캔팅·칠링 타이머 — 애호가용 실사용 기능
 function ServingTimer() {
   const PRESETS = [
@@ -444,20 +510,13 @@ export default function ResultScreen({
       {/* 서빙 타이머 */}
       <ServingTimer />
 
-      {/* 유사주 — 누르면 그 술도 바로 분석 */}
-      {Array.isArray(r.similar) && r.similar.length > 0 && (
-        <div className="card">
-          <div className="card-title">이런 술도 좋아하실 거예요</div>
-          <div className="chip-row">
-            {r.similar.map((s, i) => (
-              <button className="chip chip-btn" key={i} onClick={() => onExplore?.(s)}>
-                {s} <em>›</em>
-              </button>
-            ))}
-          </div>
-          <div className="shop-note">이름을 누르면 사진 없이도 바로 분석해 드립니다.</div>
-        </div>
-      )}
+      {/* 유사주 — 카탈로그에 있는 술만 눌러서 볼 수 있다 (새 분석 비용 없음) */}
+      <SimilarCard
+        names={r.similar}
+        category={r.category}
+        currentName={r.name}
+        onExplore={onExplore}
+      />
       {r.trivia && (
         <div className="card"><div className="card-title">알고 마시면 더 맛있는 이야기</div><p>{r.trivia}</p></div>
       )}

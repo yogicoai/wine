@@ -128,7 +128,9 @@ export default function CaptureScreen({ onCapture }) {
           </>
         ) : (
           <div className="cam-fallback">
-            <img className="cam-emblem" src="/icons/cat/wine.png" alt="" />
+            <div className="big">
+              <Icon name="camera" size={44} stroke={1.2} />
+            </div>
             {camError ? (
               <div className="cam-msg err">{camError}</div>
             ) : (
