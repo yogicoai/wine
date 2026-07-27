@@ -10,9 +10,9 @@ const PATHS = {
   ),
   gallery: (
     <>
-      <rect x="3.5" y="5" width="17" height="14" rx="2" />
-      <circle cx="8.5" cy="10" r="1.4" />
-      <path d="m4.5 17 4.2-4.2a1.6 1.6 0 0 1 2.2 0L15 16.5m0 0 1.6-1.6a1.6 1.6 0 0 1 2.2 0l1 1" />
+      <rect x="4" y="5.5" width="16" height="13" rx="2" />
+      <circle cx="9" cy="10" r="1.5" />
+      <path d="m5 16 3.8-3.8 3 3L15 12.5l4 4" />
     </>
   ),
   glass: (

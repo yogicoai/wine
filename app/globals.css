@@ -122,6 +122,7 @@ img, video, canvas { display: block; max-width: 100%; }
   justify-content: center; gap: 14px; color: var(--ink-dim);
   padding: 24px; text-align: center; font-family: var(--font-s);
 }
+.cam-emblem { width: 96px; opacity: 0.85; filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.5)); }
 .cam-msg { font-size: 14px; line-height: 1.85; }
 .cam-msg.err { color: var(--warn, #d59a63); font-size: 13px; }
 .cam-start {
@@ -161,7 +162,8 @@ img, video, canvas { display: block; max-width: 100%; }
 .shutter:active { transform: scale(0.93); }
 .side-btn {
   width: 50px; height: 50px; border-radius: 50%;
-  background: transparent; border: 1px solid var(--line); color: var(--gold); font-size: 18px;
+  background: transparent; border: 1px solid var(--line); color: var(--gold);
+  display: grid; place-items: center; /* 아이콘 정중앙 정렬 */
   transition: border-color 0.25s, background 0.25s;
 }
 .side-btn:hover { border-color: var(--gold); background: var(--gold-soft); }
@@ -217,6 +219,15 @@ img, video, canvas { display: block; max-width: 100%; }
   border: 1px solid var(--line-soft);
 }
 .hero-glow { position: absolute; inset: 0; opacity: 0.4; pointer-events: none; filter: blur(2px); }
+/* 주종 엠블럼 워터마크 — 히어로 오른쪽 위에 은은하게 */
+.hero-mark {
+  position: absolute; top: -26px; right: -34px;
+  opacity: 0.09; pointer-events: none; z-index: 0;
+}
+/* 주종 아이콘 공통 */
+.cat-icon { display: inline-block; vertical-align: middle; object-fit: contain; }
+.hero-cat { display: inline-flex; align-items: center; gap: 8px; }
+.hist-thumb .cat-icon { opacity: 0.9; }
 .hero > * { position: relative; }
 .hero-cat {
   display: inline-flex; align-items: center; gap: 8px;

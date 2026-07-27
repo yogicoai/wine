@@ -291,6 +291,8 @@ export default function ResultScreen({
           className="hero-glow"
           style={{ background: `radial-gradient(360px 240px at 50% 0%, ${glow}, transparent 70%)` }}
         />
+        {/* 주종 엠블럼을 배경 워터마크로 */}
+        <CatIcon category={r.category} size={230} className="hero-mark" />
         {thumb && <img className="hero-thumb" src={thumb} alt={r.name} />}
         <span className="hero-cat">
           <CatIcon category={r.category} size={22} />
