@@ -95,9 +95,21 @@ export default function GuidePage() {
             <div className={s.screen}>
               <span className={s.tag}>Screen 1</span>
               <h3 className={s.h4}>촬영</h3>
-              <p className={s.p}>라벨을 프레임 안에 맞추고 가운데 금색 셔터를 누릅니다.</p>
+              <p className={s.p}>
+                화면 위쪽에서 <b>라벨 촬영 · 바코드 · 와인 리스트</b> 세 가지 방식 중 하나를 고릅니다.
+              </p>
               <ul className={s.list}>
-                <li><b>카메라 촬영</b> — 가운데 셔터 버튼</li>
+                <li><b>라벨 촬영</b> — 기본. 병 앞면 라벨을 찍습니다</li>
+                <li>
+                  <b>바코드</b> — 병 뒷면 바코드를 비추면 셔터를 누를 필요 없이 자동으로 인식합니다.
+                  AI를 부르지 않으므로 <b>비용이 들지 않습니다</b>
+                </li>
+                <li>
+                  <b>와인 리스트</b> — 식당 메뉴판을 통째로 찍으면 적힌 술을 모두 뽑아
+                  <b> 가성비 순으로 정렬</b>해 드립니다
+                </li>
+              </ul>
+              <ul className={s.list} style={{ marginTop: "0.9rem" }}>
                 <li><b>사진 업로드</b> — 왼쪽 갤러리 버튼</li>
                 <li><b>드래그 앤 드롭</b> — PC에서 이미지를 끌어다 놓기</li>
                 <li><b>붙여넣기</b> — 복사한 이미지를 Ctrl+V</li>
@@ -122,6 +134,7 @@ export default function GuidePage() {
               <p className={s.p}>분석 결과가 잡지 화보 형태로 정리됩니다.</p>
               <ul className={s.list}>
                 <li><b>제품 정보</b> — 이름 · 생산자 · 빈티지 · 지역 · 도수, 인식 신뢰도</li>
+                <li><b>사용자 평점</b> — 사용자들이 남긴 별점의 평균과 분포</li>
                 <li><b>예상 가격</b> — 국내 가격대와 5단계 등급</li>
                 <li><b>구매 정보</b> — 판매처의 실제 상품 사진 · 최저가 · 구매 링크</li>
                 <li><b>빈티지별 가격</b> — 같은 술의 연도별 가격 비교</li>
@@ -132,6 +145,7 @@ export default function GuidePage() {
                 <li><b>평점 · 서빙 · 상식 · 음용 팁</b></li>
                 <li><b>타이머</b> — 칠링 20분 / 디캔팅 60분 / 롱 디캔팅 120분</li>
                 <li><b>유사주 추천</b> — 이름을 누르면 그 술도 바로 분석</li>
+                <li><b>이미지로 공유</b> — 결과를 카드 한 장으로 만들어 인스타 · 카톡에 그대로 올리기</li>
               </ul>
             </div>
 
@@ -145,14 +159,41 @@ export default function GuidePage() {
                   <b>특가 알림</b> — 목표가에 도달하거나 최저가가 떨어지면 화면 상단에 표시되고,
                   알림을 켜 두면 앱을 닫아 두어도 <b>휴대폰으로 알려드립니다</b> (매일 자동 점검)
                 </li>
+                <li>
+                  <b>셀러 가치</b> — 보유 중인 술의 현재 최저가를 합산한 총액.
+                  시세를 아직 구하지 못한 병은 따로 밝힙니다
+                </li>
+                <li><b>가격 이력</b> — 매일 확인한 최저가를 최대 90일치 그래프로. “관찰 이래 최저”인지 한눈에 보입니다</li>
                 <li><b>나의 취향</b> — 별점 기록을 분석해 “탄닌 강한 · 바디 강한 스타일을 선호합니다” 같은 취향 레이더 생성</li>
                 <li><b>재고 관리</b> — 병 수 증감, 마시면 자동 차감</li>
-                <li><b>음용 적기 배지</b> — 지금이 피크 / 곧 적기 마감 / 적기 지남</li>
+                <li>
+                  <b>음용 적기</b> — 지금이 피크 / 곧 적기 마감 / 적기 지남을 배지로 표시하고,
+                  <b> 때가 되면 먼저 알려드립니다</b>
+                </li>
                 <li><b>테이스팅 노트</b> — 마신 날짜, 별점, 느낀 향 태그, 메모</li>
               </ul>
               <p className={s.p} style={{ marginTop: "0.9rem" }}>
                 향 태그는 주종에 따라 다르게 제공됩니다. 와인은 블랙베리 · 제비꽃 · 삼나무, 위스키는 피트 · 훈연 · 요오드처럼
                 타이핑 없이 눌러서 기록합니다.
+              </p>
+            </div>
+
+            <div className={s.screen}>
+              <span className={s.tag}>Screen 5</span>
+              <h3 className={s.h4}>와인 리스트</h3>
+              <p className={s.p}>
+                식당에서 와인 리스트를 받았을 때 진짜 문제는 “뭘 시켜야 하나”입니다.
+                메뉴판을 한 장 찍으면 적힌 항목을 모두 뽑아 정리해 드립니다.
+              </p>
+              <ul className={s.list}>
+                <li><b>가성비 판정</b> — 메뉴 가격을 온라인 최저가와 견주어 배수를 냅니다</li>
+                <li><b>정렬</b> — 가성비 순 / 평점 순 / 가격 순</li>
+                <li><b>사용자 평점</b> — 우리 DB에 있는 술은 별점을 함께 보여줍니다</li>
+                <li><b>자세히</b> — 누르면 그 술의 전체 분석으로 이동합니다</li>
+              </ul>
+              <p className={s.p} style={{ marginTop: "0.9rem" }}>
+                와인은 통상 시중가의 2~3배가 식당 관행이라, 2배 아래면 값이 좋은 편입니다.
+                항목이 10개든 30개든 AI 호출은 한 번이라 원가가 늘지 않습니다.
               </p>
             </div>
           </div>
@@ -192,6 +233,58 @@ export default function GuidePage() {
             <h3 className={s.h4}>기록이 쌓일수록 개인화된다</h3>
             <p className={s.p}>별점과 테이스팅 노트가 모여 취향 프로필이 되고, 이는 추천 정확도의 기반이 됩니다.</p>
           </div>
+          <div className={s.edge}>
+            <h3 className={s.h4}>식당에서 쓸 수 있다</h3>
+            <p className={s.p}>
+              와인 리스트를 통째로 읽어 가성비 순으로 세우는 기능은 국내 앱에서 찾기 어렵습니다.
+              “집에서 정보를 찾는 앱”이 아니라 “주문하기 직전에 꺼내는 앱”이 되는 지점입니다.
+            </p>
+          </div>
+
+          <h3 className={s.h4} style={{ marginTop: "2rem" }}>경쟁 앱 대비 위치</h3>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead>
+                <tr>
+                  <th>앱</th>
+                  <th>핵심 무기</th>
+                  <th>우리 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Vivino</td>
+                  <td>사용자 집단 평점, 와인 리스트 스캔</td>
+                  <td>리스트 스캔 보유 · 평점은 축적 시작</td>
+                </tr>
+                <tr>
+                  <td>Wine-Searcher</td>
+                  <td>전 세계 시세와 가격 이력</td>
+                  <td>국내 최저가 + 90일 이력 보유</td>
+                </tr>
+                <tr>
+                  <td>CellarTracker</td>
+                  <td>셀러 관리, 보유분 가치 평가</td>
+                  <td>셀러 · 가치 평가 · 적기 알림 모두 보유</td>
+                </tr>
+                <tr>
+                  <td>Delectable</td>
+                  <td>소믈리에 팔로우 피드</td>
+                  <td>미구현</td>
+                </tr>
+                <tr>
+                  <td>데일리샷</td>
+                  <td>근처 매장 픽업 예약</td>
+                  <td>미구현 (제휴 필요)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className={s.p} style={{ marginTop: "1rem" }}>
+            집단 평점은 하루아침에 만들 수 없는 자산입니다. Vivino가 10년에 걸쳐 쌓은 것이라
+            <b> 오늘부터 모아야</b> 1년 뒤에 값이 생깁니다. 그래서 사용자가 적은 지금부터 별점을
+            술 단위로 집계해 두었습니다.
+          </p>
         </div>
       </section>
 
@@ -473,16 +566,16 @@ export default function GuidePage() {
         <div className={s.body}>
           <h2 className={s.h2}>다음 단계</h2>
           <p className={s.sub}>상업 서비스로 가기 위해 권장하는 순서입니다.</p>
-          <div className={s.prio}>
-            <div className={s.item}>
-              <h3 className={s.h4}>결과 캐싱</h3>
-              <span className={`${s.flag} ${s.must}`}>최우선</span>
-              <p className={s.p}>
-                같은 술을 다른 사람이 또 스캔하면 AI를 다시 부르지 않고 저장된 결과를 즉시 보여줍니다. 응답이 즉시로
-                바뀌고 AI 비용이 0원이 되며, 스캔이 쌓일수록 자체 술 데이터베이스가 저절로 완성됩니다.
-              </p>
-            </div>
 
+          <h3 className={s.h4}>이미 반영된 항목</h3>
+          <p className={s.p} style={{ marginBottom: "1.6rem" }}>
+            앞서 제안드렸던 <b>결과 캐싱</b>(같은 술 재스캔 시 AI 호출 없이 즉시 응답),
+            <b> 공유 카드</b>, <b>이미지 저장소 이전</b>(Cafe24 호스팅), <b>모바일 앱화</b>는 반영을 마쳤습니다.
+            여기에 <b>가격 이력 · 셀러 가치 평가 · 바코드 스캔 · 사용자 평점 · 음용 적기 알림 · 와인 리스트 스캔</b>이
+            더해졌으며, 이 여섯 가지는 <b>추가 AI 비용 없이</b> 동작합니다.
+          </p>
+
+          <div className={s.prio}>
             <div className={s.item}>
               <h3 className={s.h4}>로그인 · 만 19세 인증 · 사용량 제한</h3>
               <span className={`${s.flag} ${s.must}`}>상업화 필수</span>
@@ -495,25 +588,11 @@ export default function GuidePage() {
             </div>
 
             <div className={s.item}>
-              <h3 className={s.h4}>공유 카드</h3>
+              <h3 className={s.h4}>개인화 추천</h3>
               <span className={`${s.flag} ${s.soon}`}>권장</span>
               <p className={s.p}>
-                분석 결과를 이미지 한 장으로 만들어 인스타그램 · 카카오톡에 공유합니다. 광고비가 들지 않는 유입 경로가 됩니다.
-              </p>
-            </div>
-
-            <div className={s.item}>
-              <h3 className={s.h4}>이미지 저장소 이전</h3>
-              <span className={`${s.flag} ${s.soon}`}>권장</span>
-              <p className={s.p}>썸네일을 Cafe24 이미지 호스팅으로 옮겨 데이터베이스 용량 부담을 없앱니다.</p>
-            </div>
-
-            <div className={s.item}>
-              <h3 className={s.h4}>모바일 앱화</h3>
-              <span className={`${s.flag} ${s.soon}`}>권장</span>
-              <p className={s.p}>
-                홈 화면에 설치되는 앱 형태로 만들고 HTTPS로 배포하면 카메라 촬영이 활성화됩니다. 안드로이드는 이 상태로
-                스토어 등록까지 가능합니다.
+                취향 레이더는 이미 만들어지고 있으나, 아직 “당신이 좋아할 와인” 추천으로 연결되지 않았습니다.
+                별점 기록과 우리 DB를 맞대면 추가 AI 비용 없이 구현할 수 있습니다.
               </p>
             </div>
 
@@ -523,6 +602,15 @@ export default function GuidePage() {
               <p className={s.p}>
                 구독제(무료 월 N회 / 프리미엄 무제한), 구매 연결 제휴 수수료, 보틀샵 · 마트용 위젯이나 주류 이커머스 대상
                 분석 API 판매.
+              </p>
+            </div>
+
+            <div className={s.item}>
+              <h3 className={s.h4}>오프라인 매장 재고 · 픽업</h3>
+              <span className={`${s.flag} ${s.idea}`}>아이디어</span>
+              <p className={s.p}>
+                국내법상 일반 주류는 배송이 불가해, 근처 매장 재고를 보여주고 픽업으로 연결하는 것이 실질적인 구매
+                전환 경로입니다. 다만 매장 제휴가 선행되어야 합니다.
               </p>
             </div>
 
