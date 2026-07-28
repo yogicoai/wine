@@ -1,0 +1,798 @@
+[
+  {
+    "category": "wine",
+    "name": "샤또 라 라귄",
+    "searchKeyword": "샤또 라라귄",
+    "producer": "Château La Lagune",
+    "type": "레드 와인 · 보르도 그랑 크뤼 3등급",
+    "vintage": null,
+    "region": "오메독",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#59131F",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "1855년 등급 3등급 샤또로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 74 },
+      { "axis": "탄닌", "value": 68 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "당도", "value": 15 }
+    ],
+    "tastingNotes": "블랙커런트와 제비꽃 향에 바닐라와 삼나무가 겹칩니다. 오메독 남부 특유의 우아함이 있어 무겁지 않으면서도 짜임새가 좋습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽, 메를로, 프티 베르도" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 3등급" },
+      { "label": "숙성", "value": "프렌치 오크 약 18개월" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2032",
+    "drinkUntil": "2042",
+    "history": [
+      { "year": "1730년대", "event": "샤르트뢰즈 양식 저택 건립" },
+      { "year": "1855", "event": "메독 그랑 크뤼 3등급 지정" },
+      { "year": "2000", "event": "프레이 가문 인수 후 대대적 설비 현대화" }
+    ],
+    "story": "메독에서 보르도 시내와 가장 가까운 그랑 크뤼로, 여성 양조 책임자 카롤린 프레이가 이끌며 섬세한 스타일로 평가가 높아졌습니다.",
+    "winery": "오메독 뤼도 마을에 위치하며, 18세기 저택과 정원이 잘 보존되어 있습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "안심 스테이크", "why": "우아한 탄닌이 부드러운 살코기와 맞습니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🦆", "food": "오리 가슴살", "why": "붉은 과일 향이 오리와 어울립니다", "shopKeyword": "오리 가슴살" },
+      { "emoji": "🧀", "food": "꽁떼 치즈", "why": "견과 풍미가 오크와 겹칩니다", "shopKeyword": "꽁떼 치즈" }
+    ],
+    "pairingTip": "디캔팅 1시간이면 향이 활짝 열립니다.",
+    "avoidPairing": "매운 양념 요리는 섬세함을 덮습니다.",
+    "similar": ["샤또 캉트메를", "샤또 지스쿠르", "샤또 딸보"],
+    "trivia": "라 라귄은 1950년대에 거의 폐허가 되었다가 복원된 샤또로, '되살아난 그랑 크뤼'로 불립니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "보르도 글라스에 서빙하고 1시간 디캔팅을 권합니다.",
+    "aging": "프렌치 오크 약 18개월",
+    "tips": ["10년 이상 숙성하면 훨씬 부드러워집니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 랭슈 바쥬",
+    "searchKeyword": "샤또 랭슈바쥬",
+    "producer": "Château Lynch-Bages",
+    "type": "레드 와인 · 보르도 그랑 크뤼 5등급",
+    "vintage": null,
+    "region": "포이약",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#4F1119",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "포이약을 대표하는 그랑 크뤼로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 85 },
+      { "axis": "탄닌", "value": 80 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "당도", "value": 15 }
+    ],
+    "tastingNotes": "짙은 블랙커런트와 담배, 삼나무 향이 강렬합니다. 포이약다운 단단한 구조와 긴 여운을 갖췄고, 시간이 지날수록 부드러워집니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 약 70%, 메를로" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 5등급" },
+      { "label": "숙성", "value": "프렌치 오크 15~18개월" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2035",
+    "drinkUntil": "2048",
+    "history": [
+      { "year": "18세기", "event": "아일랜드계 린치 가문이 소유하며 이름이 붙음" },
+      { "year": "1855", "event": "메독 그랑 크뤼 5등급 지정" },
+      { "year": "1930년대", "event": "카즈 가문 인수 후 품질이 크게 향상" }
+    ],
+    "story": "5등급이지만 오랫동안 '슈퍼 세컨드'로 불리며 상위 등급에 준하는 평가를 받아 왔습니다. 가격 대비 만족도가 높아 애호가들이 즐겨 찾습니다.",
+    "winery": "포이약 마을에 위치하며, 카즈 가문이 4대째 운영하고 있습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "숙성 등심 스테이크", "why": "강한 탄닌이 지방을 정리합니다", "shopKeyword": "한우 등심 스테이크" },
+      { "emoji": "🍖", "food": "양갈비 구이", "why": "포이약의 고전적 조합입니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "짭짤함이 과일 향을 끌어올립니다", "shopKeyword": "숙성 체다치즈" }
+    ],
+    "pairingTip": "어린 빈티지는 2시간 이상 디캔팅하세요.",
+    "avoidPairing": "담백한 흰살 생선은 향에 눌립니다.",
+    "ratings": [{ "source": "일반 평가", "score": "슈퍼 세컨드급" }],
+    "similar": ["샤또 퐁테 카네", "샤또 그뤼오 라로즈", "샤또 딸보"],
+    "trivia": "포이약에는 1등급 샤또가 세 곳(라피트·라투르·무통)이나 몰려 있는데, 랭슈 바쥬는 그 사이에서 5등급으로도 존재감을 지켜 온 곳입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스에 서빙하고 충분히 디캔팅합니다.",
+    "aging": "프렌치 오크 15~18개월",
+    "tips": ["10~20년 숙성했을 때가 가장 좋다는 평이 많습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 그뤼오 라로즈",
+    "searchKeyword": "샤또 그뤼오라로즈",
+    "producer": "Château Gruaud Larose",
+    "type": "레드 와인 · 보르도 그랑 크뤼 2등급",
+    "vintage": null,
+    "region": "생줄리앙",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#511220",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "생줄리앙의 2등급 그랑 크뤼로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 82 },
+      { "axis": "탄닌", "value": 76 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "당도", "value": 16 }
+    ],
+    "tastingNotes": "잘 익은 검은 과일에 감초와 흙내음, 가죽 뉘앙스가 층층이 쌓입니다. 생줄리앙 중에서도 진하고 남성적인 스타일로 꼽힙니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심 블렌드" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 2등급" },
+      { "label": "밭", "value": "생줄리앙 내 단일 구획" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2036",
+    "drinkUntil": "2050",
+    "history": [
+      { "year": "1757", "event": "그뤼오 기사가 포도밭을 통합" },
+      { "year": "1855", "event": "메독 그랑 크뤼 2등급 지정" },
+      { "year": "1997", "event": "메를로 가문(Merlaut) 인수" }
+    ],
+    "story": "'왕들의 와인, 와인의 왕'이라는 문구를 오래 사용해 온 샤또입니다. 생줄리앙의 우아함과 포이약의 힘을 함께 지녔다는 평을 받습니다.",
+    "winery": "생줄리앙 내륙에 자리하며, 단일 구획으로 이루어진 밭이 특징입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "티본 스테이크", "why": "묵직한 구조가 붉은 육류를 받쳐 줍니다", "shopKeyword": "소고기 티본 스테이크" },
+      { "emoji": "🍖", "food": "소갈비찜", "why": "진한 양념과 균형이 좋습니다", "shopKeyword": "소갈비" },
+      { "emoji": "🍄", "food": "트러플 요리", "why": "흙내음이 서로 공명합니다", "shopKeyword": "표고버섯" }
+    ],
+    "pairingTip": "2시간 이상 디캔팅하면 훨씬 부드러워집니다.",
+    "avoidPairing": "가벼운 요리와는 무게가 맞지 않습니다.",
+    "similar": ["샤또 딸보", "샤또 뒤크뤼 보카이유", "샤또 랭슈 바쥬"],
+    "trivia": "그뤼오 라로즈는 수확이 끝나면 샤또 탑에 깃발을 올리는 전통이 있는데, 그해 작황에 따라 깃발 색이 달라진다고 전해집니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스, 충분한 디캔팅을 권합니다.",
+    "aging": "프렌치 오크 숙성",
+    "tips": ["최소 10년은 두었다 마시는 편이 좋습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 베슈벨",
+    "searchKeyword": "샤또 베슈벨",
+    "producer": "Château Beychevelle",
+    "type": "레드 와인 · 보르도 그랑 크뤼 4등급",
+    "vintage": null,
+    "region": "생줄리앙",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#561222",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "국내에서 '용 그림 와인'으로 널리 알려진 그랑 크뤼입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 72 },
+      { "axis": "탄닌", "value": 66 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "당도", "value": 16 }
+    ],
+    "tastingNotes": "붉은 과일과 제비꽃 향이 화사하고, 탄닌이 매끈해 접근하기 쉽습니다. 생줄리앙 특유의 균형 잡힌 우아함이 잘 드러납니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽, 메를로" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 4등급" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2033",
+    "drinkUntil": "2044",
+    "history": [
+      { "year": "16세기", "event": "에페르농 공작 소유, 지나는 배가 돛을 내려 예를 표함" },
+      { "year": "1855", "event": "메독 그랑 크뤼 4등급 지정" },
+      { "year": "현재", "event": "아시아 시장에서 특히 높은 인기" }
+    ],
+    "story": "라벨의 용머리 배는 '돛을 내려라(baisse-voile)'라는 말에서 유래한 샤또 이름과 얽혀 있습니다. 아시아에서는 이 용 그림 덕에 선물용으로 특히 사랑받습니다.",
+    "winery": "생줄리앙 남쪽 지롱드 강가에 위치하며, 아름다운 정원으로도 유명합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "소고기 구이", "why": "매끈한 탄닌이 육즙과 어울립니다", "shopKeyword": "소고기 등심" },
+      { "emoji": "🦆", "food": "오리 요리", "why": "붉은 과일 향이 잘 맞습니다", "shopKeyword": "오리 훈제" },
+      { "emoji": "🧀", "food": "브리 치즈", "why": "부드러운 치즈와 균형이 좋습니다", "shopKeyword": "브리 치즈" }
+    ],
+    "pairingTip": "1시간 디캔팅이면 충분합니다.",
+    "avoidPairing": "강한 향신료 요리",
+    "similar": ["샤또 딸보", "샤또 라 라귄", "샤또 그뤼오 라로즈"],
+    "trivia": "한국·중국에서 '용 와인'으로 불리며 명절 선물 수요가 몰려, 아시아 판매 비중이 매우 높은 보르도 중 하나입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "보르도 글라스에 서빙합니다.",
+    "aging": "프렌치 오크 숙성",
+    "tips": ["보르도 입문자도 부담 없이 즐길 수 있는 스타일입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 팔머",
+    "searchKeyword": "샤또 팔머",
+    "producer": "Château Palmer",
+    "type": "레드 와인 · 보르도 그랑 크뤼 3등급",
+    "vintage": null,
+    "region": "마고",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#571225",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "마고를 대표하는 슈퍼 세컨드급 샤또로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 80 },
+      { "axis": "탄닌", "value": 72 },
+      { "axis": "산도", "value": 64 },
+      { "axis": "당도", "value": 18 }
+    ],
+    "tastingNotes": "장미와 제비꽃의 화려한 꽃향에 붉은 과일과 향신료가 이어집니다. 마고 특유의 우아함에 메를로에서 온 풍만함이 더해집니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽과 메를로 거의 동등" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 3등급" },
+      { "label": "농법", "value": "비오디나미" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2036",
+    "drinkUntil": "2050",
+    "history": [
+      { "year": "1814", "event": "영국 장군 찰스 팔머가 인수하며 이름이 붙음" },
+      { "year": "1855", "event": "메독 그랑 크뤼 3등급 지정" },
+      { "year": "2014", "event": "전 밭 비오디나미 농법 전환 완료" }
+    ],
+    "story": "3등급이지만 실질적으로 1등급에 준하는 평가와 가격을 받는 샤또입니다. 메를로 비중이 높아 마고 중에서도 풍만하고 향이 화려합니다.",
+    "winery": "마고 마을에 위치하며, 보르도 그랑 크뤼 중 드물게 비오디나미 농법을 전면 도입했습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "샤토브리앙", "why": "우아한 구조가 최고급 살코기와 맞습니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🍄", "food": "트러플 리조또", "why": "흙내음이 부케와 공명합니다", "shopKeyword": "표고버섯" },
+      { "emoji": "🧀", "food": "꽁떼 치즈", "why": "견과 풍미가 여운을 늘립니다", "shopKeyword": "꽁떼 치즈" }
+    ],
+    "pairingTip": "2시간 디캔팅 후가 가장 좋습니다.",
+    "avoidPairing": "매운 음식",
+    "similar": ["샤또 마고", "샤또 라 라귄", "샤또 랭슈 바쥬"],
+    "trivia": "1961년 빈티지는 1등급들을 제치고 최고로 꼽히는 경우가 많아, 팔머의 명성을 결정지은 해로 회자됩니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 볼의 보르도 글라스를 권합니다.",
+    "aging": "프렌치 오크 숙성",
+    "tips": ["특별한 자리를 위한 와인으로 손색이 없습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 퐁테 카네",
+    "searchKeyword": "샤또 퐁테카네",
+    "producer": "Château Pontet-Canet",
+    "type": "레드 와인 · 보르도 그랑 크뤼 5등급",
+    "vintage": null,
+    "region": "포이약",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#4D1119",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "비오디나미로 유명한 포이약 그랑 크뤼로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 84 },
+      { "axis": "탄닌", "value": 78 },
+      { "axis": "산도", "value": 64 },
+      { "axis": "당도", "value": 14 }
+    ],
+    "tastingNotes": "짙은 검은 과일에 흑연과 향신료가 겹칩니다. 힘이 있으면서도 결이 곱고, 비오디나미 특유의 생기 있는 산미가 인상적입니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 5등급" },
+      { "label": "농법", "value": "비오디나미 (인증)" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2036",
+    "drinkUntil": "2050",
+    "history": [
+      { "year": "1725", "event": "장 프랑수아 퐁테가 포도밭 조성" },
+      { "year": "1855", "event": "메독 그랑 크뤼 5등급 지정" },
+      { "year": "2010", "event": "비오디나미 인증 취득, 보르도 그랑 크뤼 최초 사례 중 하나" }
+    ],
+    "story": "말로 밭을 갈고 암포라를 숙성에 쓰는 등 전통 농법으로 돌아간 것으로 유명합니다. 5등급이지만 평가는 훨씬 높게 매겨집니다.",
+    "winery": "무통 로칠드와 밭을 맞대고 있는 포이약의 대형 샤또입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "숯불 스테이크", "why": "강한 탄닌이 불향과 어울립니다", "shopKeyword": "소고기 등심 스테이크" },
+      { "emoji": "🍖", "food": "양고기", "why": "포이약의 정석 조합입니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "블루치즈", "why": "강한 풍미끼리 균형을 이룹니다", "shopKeyword": "고르곤졸라 치즈" }
+    ],
+    "pairingTip": "젊은 빈티지는 2시간 이상 열어 두세요.",
+    "avoidPairing": "섬세한 해산물",
+    "similar": ["샤또 랭슈 바쥬", "샤또 그뤼오 라로즈", "샤또 몽로즈"],
+    "trivia": "퐁테 카네는 숙성에 오크 배럴뿐 아니라 흙으로 빚은 암포라를 함께 사용해, 나무 향에 덜 기대는 순수한 과일 맛을 추구합니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스에 충분히 디캔팅합니다.",
+    "aging": "오크 배럴 + 암포라",
+    "tips": ["유기농·비오디나미 와인에 관심 있다면 좋은 출발점입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 코스 데스투르넬",
+    "searchKeyword": "샤또 코스 데스투르넬",
+    "producer": "Château Cos d'Estournel",
+    "type": "레드 와인 · 보르도 그랑 크뤼 2등급",
+    "vintage": null,
+    "region": "생테스테프",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#4C1019",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "생테스테프를 대표하는 2등급 그랑 크뤼입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 86 },
+      { "axis": "탄닌", "value": 80 },
+      { "axis": "산도", "value": 66 },
+      { "axis": "당도", "value": 16 }
+    ],
+    "tastingNotes": "농축된 검은 과일에 향신료와 코코아가 얹힙니다. 생테스테프다운 단단한 골격에 이국적인 향이 더해져 개성이 뚜렷합니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심, 메를로" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 2등급" }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2038",
+    "drinkUntil": "2052",
+    "history": [
+      { "year": "1811", "event": "루이 가스파르 데스투르넬이 포도밭 개척" },
+      { "year": "19세기", "event": "인도에 와인을 수출하며 '생테스테프의 마하라자'라 불림" },
+      { "year": "1855", "event": "메독 그랑 크뤼 2등급 지정" }
+    ],
+    "story": "인도 무역에서 영감을 받아 지은 동양풍 파고다 건축이 상징입니다. 와인에서도 이국적인 향신료 뉘앙스가 느껴진다는 평이 많습니다.",
+    "winery": "생테스테프 남단, 포이약과 경계에 위치한 샤또입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "립아이 스테이크", "why": "강한 구조가 기름진 부위를 받쳐 줍니다", "shopKeyword": "소고기 립아이" },
+      { "emoji": "🍖", "food": "장조림·갈비찜", "why": "진한 양념과 잘 맞습니다", "shopKeyword": "소갈비" },
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "코코아 뉘앙스가 겹칩니다", "shopKeyword": "다크 초콜릿 70" }
+    ],
+    "pairingTip": "충분히 디캔팅해야 향신료 향이 열립니다.",
+    "avoidPairing": "가벼운 요리",
+    "similar": ["샤또 몽로즈", "샤또 랭슈 바쥬", "샤또 퐁테 카네"],
+    "trivia": "샤또 건물의 파고다 탑에는 잔지바르 술탄의 궁전에서 가져온 문이 달려 있다고 전해집니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스, 2시간 이상 디캔팅.",
+    "aging": "프렌치 오크 숙성",
+    "tips": ["장기 숙성형이라 어릴 때는 다소 닫혀 있습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 몽로즈",
+    "searchKeyword": "샤또 몽로즈",
+    "producer": "Château Montrose",
+    "type": "레드 와인 · 보르도 그랑 크뤼 2등급",
+    "vintage": null,
+    "region": "생테스테프",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#4B1018",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "생테스테프의 2등급 그랑 크뤼로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 87 },
+      { "axis": "탄닌", "value": 82 },
+      { "axis": "산도", "value": 66 },
+      { "axis": "당도", "value": 14 }
+    ],
+    "tastingNotes": "검은 과일과 미네랄, 흑연 향이 단단하게 결합합니다. 보르도에서 가장 장기 숙성형으로 꼽히는 와인 중 하나입니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 2등급" },
+      { "label": "위치", "value": "지롱드 강변 자갈 언덕" }
+    ],
+    "drinkFrom": "2028",
+    "drinkPeak": "2040",
+    "drinkUntil": "2055",
+    "history": [
+      { "year": "1815", "event": "테오도르 뒤물랭이 포도밭 개간" },
+      { "year": "1855", "event": "메독 그랑 크뤼 2등급 지정" },
+      { "year": "2006", "event": "부이그 형제 인수 후 대규모 현대화" }
+    ],
+    "story": "'생테스테프의 라투르'라 불릴 만큼 힘 있고 오래 가는 스타일입니다. 언덕 이름의 분홍빛 히스 꽃에서 몽로즈라는 이름이 왔다고 전해집니다.",
+    "winery": "지롱드 강을 내려다보는 자갈 언덕에 자리해 배수와 일조가 뛰어납니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "숙성 소고기", "why": "강건한 탄닌이 숙성육과 맞습니다", "shopKeyword": "드라이에이징 소고기" },
+      { "emoji": "🍖", "food": "사슴·양 등 붉은 육류", "why": "야생 풍미와 균형이 좋습니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "경성 숙성 치즈", "why": "짠맛이 탄닌을 눌러 줍니다", "shopKeyword": "파르미지아노 치즈" }
+    ],
+    "pairingTip": "젊은 빈티지는 3시간 디캔팅도 과하지 않습니다.",
+    "avoidPairing": "섬세한 요리 전반",
+    "similar": ["샤또 코스 데스투르넬", "샤또 랭슈 바쥬", "샤또 그뤼오 라로즈"],
+    "trivia": "몽로즈는 1등급 승격 후보로 자주 거론되는 샤또 중 하나로, 실제 거래가도 2등급 상위권을 유지합니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스에 오래 디캔팅합니다.",
+    "aging": "프렌치 오크 숙성",
+    "tips": ["15년 이상 두었다 열면 진가를 보여 줍니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 마고",
+    "searchKeyword": "샤또 마고",
+    "producer": "Château Margaux",
+    "type": "레드 와인 · 보르도 그랑 크뤼 1등급",
+    "vintage": null,
+    "region": "마고",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#5E1224",
+    "confidence": 95,
+    "knowledge": "rich",
+    "basis": "1855년 1등급 샤또로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 88 },
+      { "axis": "탄닌", "value": 82 },
+      { "axis": "산도", "value": 70 },
+      { "axis": "당도", "value": 12 }
+    ],
+    "tastingNotes": "블랙커런트와 제비꽃, 삼나무가 겹겹이 피어납니다. 실크 같은 탄닌과 끝없이 이어지는 여운으로 '와인의 여왕'이라 불립니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 약 90%" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 1등급" },
+      { "label": "숙성", "value": "새 오크 100%, 18~24개월" }
+    ],
+    "drinkFrom": "2028",
+    "drinkPeak": "2040",
+    "drinkUntil": "2060",
+    "history": [
+      { "year": "12세기", "event": "마고 영지에 포도 재배 시작" },
+      { "year": "1855", "event": "그랑 크뤼 1등급 지정" },
+      { "year": "1977", "event": "멘체로풀로스 가문 인수 후 품질 부활" }
+    ],
+    "story": "보르도 1등급 다섯 곳 중 가장 우아한 스타일로 꼽힙니다. 힘보다 향의 복합미와 섬세함으로 평가받아 '와인의 여왕'이라는 별칭이 붙었습니다.",
+    "winery": "신고전주의 양식의 저택으로도 유명하며, 메독을 대표하는 건축물입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "샤토브리앙", "why": "실크 같은 탄닌이 최고급 살코기와 맞습니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🍄", "food": "트러플 요리", "why": "흙내음이 부케와 공명합니다", "shopKeyword": "표고버섯" },
+      { "emoji": "🧀", "food": "꽁떼 치즈", "why": "견과 풍미가 여운을 늘립니다", "shopKeyword": "꽁떼 치즈" }
+    ],
+    "pairingTip": "디캔팅 후 1~2시간 뒤가 최적입니다.",
+    "avoidPairing": "매운 음식은 탄닌을 거칠게 만듭니다.",
+    "ratings": [{ "source": "일반 평가", "score": "1등급" }],
+    "similar": ["샤또 팔머", "샤또 라피트 로칠드", "샤또 라투르"],
+    "trivia": "라벨 디자인이 200년 가까이 거의 바뀌지 않은 것으로도 유명합니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스, 최소 1시간 디캔팅.",
+    "aging": "새 프렌치 오크 18~24개월",
+    "tips": ["장기 보관은 13℃ 셀러가 이상적입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 라투르",
+    "searchKeyword": "샤또 라투르",
+    "producer": "Château Latour",
+    "type": "레드 와인 · 보르도 그랑 크뤼 1등급",
+    "vintage": null,
+    "region": "포이약",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#4A0F18",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "1855년 1등급 샤또로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 92 },
+      { "axis": "탄닌", "value": 88 },
+      { "axis": "산도", "value": 68 },
+      { "axis": "당도", "value": 12 }
+    ],
+    "tastingNotes": "농축된 검은 과일에 흑연과 삼나무가 결합한 강건한 구조입니다. 1등급 중 가장 힘이 세고 수명이 길다는 평을 받습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 1등급" },
+      { "label": "특징", "value": "2012년부터 선물거래(엉 프리뫼르) 중단" }
+    ],
+    "drinkFrom": "2030",
+    "drinkPeak": "2045",
+    "drinkUntil": "2065",
+    "history": [
+      { "year": "14세기", "event": "지롱드 강변 요새 탑이 세워짐 (샤또 이름의 유래)" },
+      { "year": "1855", "event": "그랑 크뤼 1등급 지정" },
+      { "year": "2012", "event": "충분히 숙성된 뒤 출시하는 방식으로 전환" }
+    ],
+    "story": "라벨의 탑은 원래 있던 요새에서 왔습니다. 2012년부터는 선물거래를 중단하고 마시기 좋은 시점에 출시하는 정책으로 바꿔 화제가 됐습니다.",
+    "winery": "포이약 남단, 지롱드 강에 인접한 자갈밭에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "숙성 립아이", "why": "강력한 탄닌이 기름진 부위와 맞섭니다", "shopKeyword": "드라이에이징 소고기" },
+      { "emoji": "🍖", "food": "양고기 로스트", "why": "포이약의 고전적 조합입니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "경성 숙성 치즈", "why": "짠맛이 탄닌을 부드럽게 합니다", "shopKeyword": "파르미지아노 치즈" }
+    ],
+    "pairingTip": "젊은 빈티지는 3시간 이상 디캔팅하세요.",
+    "avoidPairing": "섬세한 요리 전반",
+    "similar": ["샤또 라피트 로칠드", "샤또 무통 로칠드", "샤또 마고"],
+    "trivia": "라투르는 작황이 나쁜 해에도 품질을 유지하는 것으로 유명해, '흉작에 강한 1등급'이라는 평을 받습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스, 긴 디캔팅.",
+    "aging": "새 프렌치 오크 숙성",
+    "tips": ["20년 이상 숙성했을 때 가장 좋다는 평이 많습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 무통 로칠드",
+    "searchKeyword": "샤또 무통 로칠드",
+    "producer": "Château Mouton Rothschild",
+    "type": "레드 와인 · 보르도 그랑 크뤼 1등급",
+    "vintage": null,
+    "region": "포이약",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#520F1C",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "1973년 1등급으로 승격된 유일한 사례로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 88 },
+      { "axis": "탄닌", "value": 84 },
+      { "axis": "산도", "value": 66 },
+      { "axis": "당도", "value": 15 }
+    ],
+    "tastingNotes": "블랙커런트와 담배, 이국적인 향신료가 어우러집니다. 포이약의 힘에 화려함이 더해진 스타일로 개성이 강합니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 1등급 (1973 승격)" },
+      { "label": "라벨", "value": "매년 다른 예술가가 디자인" }
+    ],
+    "drinkFrom": "2029",
+    "drinkPeak": "2042",
+    "drinkUntil": "2060",
+    "history": [
+      { "year": "1853", "event": "나다니엘 드 로칠드 남작 인수" },
+      { "year": "1945", "event": "종전 기념 'V' 라벨, 아트 라벨 전통 시작" },
+      { "year": "1973", "event": "2등급에서 1등급으로 승격 — 유일한 사례" }
+    ],
+    "story": "'1등급이 될 수 없으나 2등급이 되지도 않겠다'던 필립 남작이 118년 만에 승격을 이뤄냈습니다. 매년 유명 화가가 라벨을 그리는 전통으로도 유명합니다.",
+    "winery": "포이약에 위치하며, 라벨 원화를 모은 미술관을 운영합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "안심 스테이크", "why": "화려한 향이 담백한 살코기를 살립니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🍖", "food": "양갈비", "why": "포이약의 정석 조합입니다", "shopKeyword": "양갈비" },
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "향신료 뉘앙스와 어울립니다", "shopKeyword": "다크 초콜릿 70" }
+    ],
+    "pairingTip": "2시간 이상 디캔팅을 권합니다.",
+    "avoidPairing": "매운 음식",
+    "similar": ["샤또 라피트 로칠드", "샤또 라투르", "샤또 마고"],
+    "trivia": "1973년 승격 당시 라벨에는 '나는 1등급이다(Premier je suis)'라는 문구가 새겨졌습니다. 피카소·샤갈·워홀 등이 라벨을 그렸습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스, 충분한 디캔팅.",
+    "aging": "새 프렌치 오크 숙성",
+    "tips": ["아트 라벨 때문에 수집 목적으로 구매하는 사람도 많습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 라피트 로칠드",
+    "searchKeyword": "샤또 라피트 로칠드",
+    "producer": "Château Lafite Rothschild",
+    "type": "레드 와인 · 보르도 그랑 크뤼 1등급",
+    "vintage": null,
+    "region": "포이약",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#54101C",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "1855년 1등급 필두 샤또로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 84 },
+      { "axis": "탄닌", "value": 78 },
+      { "axis": "산도", "value": 70 },
+      { "axis": "당도", "value": 12 }
+    ],
+    "tastingNotes": "삼나무와 흑연, 붉은 과일이 절제된 균형을 이룹니다. 화려하기보다 우아하고 정제된 스타일로, 시간이 지날수록 진가가 드러납니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 1등급" }
+    ],
+    "drinkFrom": "2030",
+    "drinkPeak": "2045",
+    "drinkUntil": "2065",
+    "history": [
+      { "year": "17세기", "event": "세귀르 가문이 포도밭 정비" },
+      { "year": "1855", "event": "그랑 크뤼 1등급 중 첫 번째로 기재" },
+      { "year": "1868", "event": "제임스 드 로칠드 남작 인수" }
+    ],
+    "story": "1855년 등급표에서 가장 앞에 이름이 오른 샤또입니다. 절제와 균형을 중시하는 스타일로, 아시아 시장에서 특히 높은 인기를 누립니다.",
+    "winery": "포이약 북단에 위치하며, 로칠드 가문이 150년 넘게 운영하고 있습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "소고기 안심", "why": "절제된 구조가 담백한 살코기와 맞습니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🍄", "food": "버섯 요리", "why": "흙내음이 잘 어울립니다", "shopKeyword": "표고버섯" },
+      { "emoji": "🧀", "food": "꽁떼 치즈", "why": "고소함이 여운을 늘립니다", "shopKeyword": "꽁떼 치즈" }
+    ],
+    "pairingTip": "2시간 디캔팅 후 천천히 변화를 즐기세요.",
+    "avoidPairing": "강한 양념 요리",
+    "similar": ["샤또 라투르", "샤또 무통 로칠드", "샤또 마고"],
+    "trivia": "1985년 경매에서 토마스 제퍼슨의 것으로 알려진 1787년 라피트가 당시 최고가에 낙찰되며 화제가 됐습니다(진위 논란도 함께).",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스, 긴 디캔팅.",
+    "aging": "새 프렌치 오크 숙성",
+    "tips": ["어릴 때는 닫혀 있어 숙성이 필요한 와인입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 오브리옹",
+    "searchKeyword": "샤또 오브리옹",
+    "producer": "Château Haut-Brion",
+    "type": "레드 와인 · 보르도 그랑 크뤼 1등급",
+    "vintage": null,
+    "region": "페삭 레오냥",
+    "country": "프랑스",
+    "alcohol": "14%",
+    "liquidColor": "#4E1119",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "그라브 지역 유일의 1855년 1등급 샤또입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 84 },
+      { "axis": "탄닌", "value": 76 },
+      { "axis": "산도", "value": 66 },
+      { "axis": "당도", "value": 14 }
+    ],
+    "tastingNotes": "붉은 과일에 담뱃잎, 흙, 훈연 향이 어우러집니다. 그라브 특유의 자갈 미네랄이 뚜렷해 다른 1등급과 결이 다릅니다.",
+    "specs": [
+      { "label": "품종", "value": "메를로와 카베르네 소비뇽 비중이 비슷" },
+      { "label": "등급", "value": "1855 그랑 크뤼 1등급 (그라브 유일)" }
+    ],
+    "drinkFrom": "2028",
+    "drinkPeak": "2040",
+    "drinkUntil": "2058",
+    "history": [
+      { "year": "1533", "event": "장 드 퐁탁이 포도밭 취득" },
+      { "year": "1663", "event": "런던에서 이름이 언급된 최초의 보르도 와인" },
+      { "year": "1855", "event": "메독 밖에서 유일하게 1등급 지정" }
+    ],
+    "story": "보르도 시내에 거의 둘러싸인 도심형 샤또입니다. 1663년 런던 일기에 이름이 등장할 만큼, 브랜드로 인식된 최초의 와인으로 꼽힙니다.",
+    "winery": "페삭 레오냥에 위치하며, 도시 확장으로 주택가에 둘러싸인 독특한 환경입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "소고기 구이", "why": "훈연 향이 불맛과 어울립니다", "shopKeyword": "소고기 등심" },
+      { "emoji": "🍄", "food": "송로버섯 요리", "why": "흙내음이 공명합니다", "shopKeyword": "표고버섯" },
+      { "emoji": "🦆", "food": "오리 콩피", "why": "기름진 맛을 산미가 정리합니다", "shopKeyword": "오리 가슴살" }
+    ],
+    "pairingTip": "2시간 디캔팅을 권합니다.",
+    "avoidPairing": "달콤한 소스 요리",
+    "similar": ["샤또 마고", "샤또 라투르", "샤또 팔머"],
+    "trivia": "영국 일기작가 새뮤얼 피프스가 1663년 'Ho Bryan'이라는 와인을 마셨다고 기록했는데, 이것이 오브리옹입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스에 서빙합니다.",
+    "aging": "새 프렌치 오크 숙성",
+    "tips": ["보르도 1등급 중 가장 개성이 뚜렷하다는 평이 많습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "사시카이아",
+    "searchKeyword": "사시카이아",
+    "producer": "Tenuta San Guido",
+    "type": "레드 와인 · 슈퍼 투스칸",
+    "vintage": null,
+    "region": "볼게리, 토스카나",
+    "country": "이탈리아",
+    "alcohol": "13.5%",
+    "liquidColor": "#521320",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "이탈리아를 대표하는 슈퍼 투스칸으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 82 },
+      { "axis": "탄닌", "value": 74 },
+      { "axis": "산도", "value": 68 },
+      { "axis": "당도", "value": 14 }
+    ],
+    "tastingNotes": "블랙커런트와 지중해 허브, 미네랄이 어우러집니다. 보르도 품종을 쓰지만 토스카나 해안의 햇빛과 바닷바람이 더해져 독특한 결을 만듭니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 85%, 카베르네 프랑 15%" },
+      { "label": "등급", "value": "볼게리 사시카이아 DOC (단일 와인 전용 등급)" },
+      { "label": "숙성", "value": "프렌치 오크 24개월" }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2036",
+    "drinkUntil": "2050",
+    "history": [
+      { "year": "1940년대", "event": "인치사 후작이 보르도 품종을 볼게리에 식재" },
+      { "year": "1968", "event": "첫 상업 출시" },
+      { "year": "1994", "event": "이탈리아 최초로 단일 와인 전용 DOC 획득" }
+    ],
+    "story": "이탈리아 규정을 벗어난 '테이블 와인'으로 시작해 세계적 명성을 얻으며, 슈퍼 투스칸이라는 장르 자체를 만들어 냈습니다.",
+    "winery": "테누타 산 귀도는 볼게리 해안가에 위치하며, 이름은 '자갈이 많은 땅'이라는 뜻입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "비스테카 알라 피오렌티나", "why": "토스카나의 정석 조합입니다", "shopKeyword": "소고기 티본 스테이크" },
+      { "emoji": "🍖", "food": "양갈비", "why": "허브 향이 서로 어울립니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "페코리노 치즈", "why": "짭짤한 양젖 치즈와 맞습니다", "shopKeyword": "페코리노 치즈" }
+    ],
+    "pairingTip": "1~2시간 디캔팅하면 미네랄이 살아납니다.",
+    "avoidPairing": "가벼운 채소 요리",
+    "similar": ["티냐넬로", "오르넬라이아", "샤또 딸보"],
+    "trivia": "1978년 영국 디캔터지 블라인드 테이스팅에서 세계 카베르네 1위를 차지하며 이탈리아 와인의 위상을 바꿨습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스에 서빙합니다.",
+    "aging": "프렌치 오크 24개월",
+    "tips": ["10년 이상 숙성 가능한 장기형입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "티냐넬로",
+    "searchKeyword": "티냐넬로",
+    "producer": "Antinori",
+    "type": "레드 와인 · 슈퍼 투스칸",
+    "vintage": null,
+    "region": "토스카나",
+    "country": "이탈리아",
+    "alcohol": "14%",
+    "liquidColor": "#5A1524",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "산지오베제 기반 슈퍼 투스칸의 원조로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 78 },
+      { "axis": "탄닌", "value": 70 },
+      { "axis": "산도", "value": 72 },
+      { "axis": "당도", "value": 16 }
+    ],
+    "tastingNotes": "붉은 체리와 말린 허브에 바닐라와 담배 향이 겹칩니다. 산지오베제의 또렷한 산미에 카베르네의 구조가 더해져 짜임새가 좋습니다.",
+    "specs": [
+      { "label": "품종", "value": "산지오베제 약 80%, 카베르네 소비뇽·프랑" },
+      { "label": "숙성", "value": "프렌치·헝가리안 오크 12~14개월" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2034",
+    "drinkUntil": "2046",
+    "history": [
+      { "year": "1971", "event": "첫 빈티지 출시, 규정을 벗어나 테이블 와인으로 분류" },
+      { "year": "1975", "event": "산지오베제에 보르도 품종을 섞는 스타일 확립" },
+      { "year": "현재", "event": "슈퍼 투스칸의 대표 주자로 자리매김" }
+    ],
+    "story": "전통 규정을 깨고 산지오베제에 보르도 품종을 섞어 만든 와인으로, 이탈리아 와인의 현대화를 이끈 상징적인 존재입니다.",
+    "winery": "안티노리는 1385년부터 이어진 이탈리아 최고(最古) 와인 가문 중 하나입니다.",
+    "foodPairing": [
+      { "emoji": "🍝", "food": "라구 파스타", "why": "산미가 육류 소스를 정리합니다", "shopKeyword": "라구 파스타 소스" },
+      { "emoji": "🥩", "food": "스테이크", "why": "구조감이 붉은 육류를 받쳐 줍니다", "shopKeyword": "소고기 등심 스테이크" },
+      { "emoji": "🧀", "food": "파르미지아노", "why": "감칠맛이 산미와 균형을 이룹니다", "shopKeyword": "파르미지아노 치즈" }
+    ],
+    "pairingTip": "1시간 디캔팅이면 충분합니다.",
+    "avoidPairing": "달콤한 디저트",
+    "similar": ["사시카이아", "오르넬라이아", "반피 키안티 클라시코"],
+    "trivia": "티냐넬로는 작황이 좋지 않은 해에는 아예 생산하지 않는 것으로도 유명합니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 레드 와인 글라스에 서빙합니다.",
+    "aging": "오크 12~14개월",
+    "tips": ["이탈리아 음식과 함께라면 특히 좋습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "오르넬라이아",
+    "searchKeyword": "오르넬라이아",
+    "producer": "Tenuta dell'Ornellaia",
+    "type": "레드 와인 · 슈퍼 투스칸",
+    "vintage": null,
+    "region": "볼게리, 토스카나",
+    "country": "이탈리아",
+    "alcohol": "14.5%",
+    "liquidColor": "#4F1220",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "볼게리를 대표하는 슈퍼 투스칸으로 정보가 확립되어 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 86 },
+      { "axis": "탄닌", "value": 76 },
+      { "axis": "산도", "value": 64 },
+      { "axis": "당도", "value": 18 }
+    ],
+    "tastingNotes": "농익은 검은 과일에 초콜릿과 향신료가 풍성하게 얹힙니다. 사시카이아보다 진하고 풍만해 화려한 인상을 줍니다.",
+    "specs": [
+      { "label": "품종", "value": "메를로, 카베르네 소비뇽, 카베르네 프랑, 프티 베르도" },
+      { "label": "숙성", "value": "프렌치 오크 18개월" }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2036",
+    "drinkUntil": "2048",
+    "history": [
+      { "year": "1981", "event": "로도비코 안티노리가 볼게리에 설립" },
+      { "year": "1985", "event": "첫 빈티지 출시" },
+      { "year": "2005", "event": "프레스코발디 가문이 전량 인수" }
+    ],
+    "story": "매 빈티지마다 그해의 성격을 담은 이름과 아트 라벨을 붙이는 '비니테 아르티스티케' 프로젝트로도 유명합니다.",
+    "winery": "볼게리 해안 언덕에 위치하며, 현재 프레스코발디 가문이 운영합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "립아이 스테이크", "why": "풍만한 과일 향이 기름진 부위와 맞습니다", "shopKeyword": "소고기 립아이" },
+      { "emoji": "🍄", "food": "포르치니 버섯 요리", "why": "흙내음이 어울립니다", "shopKeyword": "표고버섯" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "짠맛이 단맛을 끌어올립니다", "shopKeyword": "파르미지아노 치즈" }
+    ],
+    "pairingTip": "1~2시간 디캔팅하면 향이 열립니다.",
+    "avoidPairing": "담백한 생선 요리",
+    "similar": ["사시카이아", "티냐넬로", "샤또 팔머"],
+    "trivia": "매년 그해를 상징하는 단어(예: L'Incanto, La Grazia)를 정하고 예술가가 그 주제로 라벨을 그립니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "큰 보르도 글라스를 권합니다.",
+    "aging": "프렌치 오크 18개월",
+    "tips": ["진한 스타일을 좋아한다면 사시카이아보다 이쪽입니다"]
+  }
+]

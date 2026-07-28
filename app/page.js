@@ -119,7 +119,10 @@ export default function Home() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "분석 실패");
 
+      // 사진 없이 이름으로 찾은 경우, 카탈로그에 연결해 둔 판매처 상품 이미지를 대신 보여준다
+      const shown = data.image || null;
       setResult(data.result);
+      setThumb(shown);
       setMeta({
         demo: data.demo,
         usedWeb: data.usedWeb,
@@ -134,7 +137,7 @@ export default function Home() {
         fetch("/api/sessions", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ result: data.result, thumb: null, demo: data.demo }),
+          body: JSON.stringify({ result: data.result, thumb: shown, demo: data.demo }),
         }).then(loadSessions);
       }
     } catch (err) {

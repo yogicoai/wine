@@ -637,6 +637,23 @@ img, video, canvas { display: block; max-width: 100%; }
 .note-aroma { font-size: 11.5px; color: var(--gold); margin-top: 4px; opacity: 0.85; }
 .note-item p { font-size: 12.5px; color: var(--ink); line-height: 1.7; margin-top: 5px; font-family: var(--font-s); }
 
+/* 특가 알림 설정 */
+.push-row {
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 16px; padding-top: 15px; border-top: 1px solid var(--line-soft);
+}
+.push-row b { display: block; font-size: 13px; font-family: var(--font-s); }
+.push-row span { display: block; font-size: 11.5px; color: var(--ink-dim); line-height: 1.6; margin-top: 3px; }
+.push-btn {
+  flex: none; background: transparent; border: 1px solid var(--line);
+  color: var(--gold); padding: 9px 18px; font-size: 11.5px; letter-spacing: 0.12em;
+  border-radius: var(--radius); transition: border-color 0.25s, background 0.25s, color 0.25s;
+}
+.push-btn:hover:not(:disabled) { border-color: var(--gold); background: var(--gold-soft); }
+.push-btn.on { color: var(--ink-dim); }
+.push-btn.on:hover:not(:disabled) { border-color: var(--bad); color: var(--bad); background: transparent; }
+.push-btn:disabled { opacity: 0.5; }
+
 /* 특가 알림 */
 .deal-card { border-color: rgba(212, 178, 120, 0.4); }
 .deal-row {

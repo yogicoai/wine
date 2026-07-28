@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Radar from "./Radar";
+import PushToggle from "./PushToggle";
 import { catOf } from "@/lib/cats";
 import { STATUSES, drinkWindowState } from "@/lib/cellar";
 
@@ -132,6 +133,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
           </div>
         )}
         {checking && <div className="shop-note">최저가를 확인하는 중…</div>}
+        <PushToggle onToast={onToast} />
       </div>
 
       {/* 취향 프로필 */}
