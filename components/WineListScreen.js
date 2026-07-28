@@ -102,6 +102,8 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
                   {it.glass && <span className="badge">잔</span>}
                 </div>
 
+                {/* 다른 표기로 이었으면 밝힌다 — 잘못 이었을 때 알아챌 수 있어야 한다 */}
+                {it.matchedName && <div className="wl-matched">{it.matchedName} 으로 인식</div>}
                 <div className="wl-meta">
                   {it.category && (
                     <span className="wl-cat">

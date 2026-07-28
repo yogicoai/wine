@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { callClaude, hasApiKey, deepSearchAllowed } from "@/lib/claude";
-import { lookupCatalog, saveCatalog } from "@/lib/catalog";
+import { lookupCatalog, saveCatalog, catalogNameIndex } from "@/lib/catalog";
+import { findLooseMatch } from "@/lib/match";
 import { identifyEnabled, identifyLabel } from "@/lib/identify";
 import { linkBarcode, normalizeBarcode, isValidBarcode } from "@/lib/barcode";
 import { DEMOS } from "@/lib/demos";
@@ -53,7 +54,16 @@ export async function POST(request) {
         identified = await identifyLabel(image);
         identifyUsage = identified.usage;
         if (identified.readable && identified.name && (identified.confidence ?? 0) >= 70) {
-          const hit = await lookupCatalog(identified.name, identified.vintage);
+          let hit = await lookupCatalog(identified.name, identified.vintage);
+
+          // 판독된 표기가 DB 표기와 조금 다를 때 — 토큰 겹침으로 한 번 더 찾는다.
+          // (결과 화면을 채워야 하므로 뼈대(stub)는 제외)
+          if (!hit) {
+            const index = (await catalogNameIndex()).filter((d) => d.tier !== "stub");
+            const loose = findLooseMatch(identified.name, index);
+            if (loose) hit = await lookupCatalog(loose.candidate.name, loose.candidate.vintage);
+          }
+
           if (hit) {
             console.log(
               `[analyze] 카탈로그 적중: ${identified.name} (판독 ${identifyUsage.inputTokens}+${identifyUsage.outputTokens} 토큰)`

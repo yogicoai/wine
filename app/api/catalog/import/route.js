@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { saveCatalog, catalogKey } from "@/lib/catalog";
+import { resolveWanted } from "@/lib/wanted";
 import { getDb } from "@/lib/mongodb";
 
 export const runtime = "nodejs";
@@ -96,5 +97,8 @@ export async function POST(request) {
     isNew ? inserted++ : updated++;
   }
 
-  return NextResponse.json({ total: items.length, inserted, updated, curated, skipped, failed });
+  // 이번에 채워 넣은 이름은 "못 찾은 목록"에서 지운다
+  const resolved = await resolveWanted(items.map((i) => i?.name).filter(Boolean));
+
+  return NextResponse.json({ total: items.length, inserted, updated, curated, skipped, resolved, failed });
 }

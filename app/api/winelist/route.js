@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { hasApiKey } from "@/lib/claude";
 import { readWineList, enrichWineList, sortByValue } from "@/lib/wineList";
+import { recordWanted } from "@/lib/wanted";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -27,6 +28,18 @@ export async function POST(request) {
     }
 
     const enriched = await enrichWineList(items);
+
+    // 못 찾은 항목을 기록한다 — 다음에 카탈로그에 넣을 목록이 여기서 나온다.
+    // 기록 실패가 사용자 응답을 막을 이유는 없다.
+    try {
+      await recordWanted(
+        enriched.filter((i) => !i.known).map((i) => ({ name: i.name, vintage: i.vintage, price: i.price })),
+        "winelist"
+      );
+    } catch (err) {
+      console.warn("[winelist] 미매칭 기록 실패:", err.message);
+    }
+
     return NextResponse.json({
       readable: true,
       items: sortByValue(enriched),
