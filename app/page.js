@@ -5,7 +5,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import ResultScreen from "@/components/ResultScreen";
 import HistoryDrawer from "@/components/HistoryDrawer";
 import AccountDrawer from "@/components/AccountDrawer";
-import { BrandMark, BrandWord } from "@/components/Brand";
+import { BrandMark } from "@/components/Brand";
 import CellarScreen from "@/components/CellarScreen";
 import WineListScreen from "@/components/WineListScreen";
 import DiscoverScreen from "@/components/DiscoverScreen";
@@ -281,9 +281,11 @@ export default function Home() {
       <header className="hdr">
         {/* 로고는 어디서든 처음 화면으로 돌아가는 길이다 (촬영 아이콘을 따로 두지 않는 이유) */}
         <button className="hdr-home" onClick={rescan} aria-label="처음 화면으로">
-          <BrandMark size={40} />
+          {/* 워드마크 이미지는 두 줄로 쌓인 형태라 헤더 높이로 줄이면 글자가 뭉개진다.
+              심볼만 이미지로 쓰고 글자는 조판한다. 워드마크는 여백이 있는 곳에서 쓴다. */}
+          <BrandMark size={38} />
           <span className="hdr-lockup">
-            <BrandWord height={30} />
+            <span className="hdr-logo">Bottle <em>Lens</em></span>
             <span className="hdr-sub">AI Sommelier for every bottle</span>
           </span>
         </button>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandWord } from "@/components/Brand";
 import s from "./guide.module.css";
 
 export const metadata = {
@@ -19,9 +20,10 @@ export default function GuidePage() {
       </div>
 
       <header className={s.hero}>
+        {/* 워드마크는 두 줄로 쌓인 형태라 여백이 있는 여기서 제 크기로 쓴다 */}
+        <BrandWord height={92} className={s.heroWord} />
         <p className={s.eyebrow}>제품 기능 설명서</p>
         <h1 className={s.title}>
-          보틀 렌즈
           <span className={s.titleKo}>술 라벨을 읽는 AI 소믈리에</span>
         </h1>
         <p className={s.lede}>
