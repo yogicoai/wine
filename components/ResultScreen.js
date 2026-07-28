@@ -5,6 +5,7 @@ import Radar from "./Radar";
 import CatIcon from "./CatIcon";
 import CellarActions from "./CellarActions";
 import TimerVisual from "./TimerVisual";
+import ScrollTop from "./ScrollTop";
 import VintageCompare from "./VintageCompare";
 
 // 구매 정보 — 네이버쇼핑 API(실제 제품 이미지·가격·구매 링크) + 검색 딥링크 폴백
@@ -45,7 +46,20 @@ function PurchaseCard({ name, keyword }) {
   return (
     <div className="card">
       <div className="card-title">구매 정보</div>
-      {state.loading && <div className="shop-loading">판매처를 찾는 중…</div>}
+      {state.loading && (
+        <div className="shop-list" aria-label="판매처를 찾는 중">
+          {[0, 1, 2].map((i) => (
+            <div className="shop-item skel" key={i}>
+              <span className="sk sk-img" />
+              <span className="sk-lines">
+                <span className="sk sk-line" />
+                <span className="sk sk-line short" />
+              </span>
+              <span className="sk sk-price" />
+            </div>
+          ))}
+        </div>
+      )}
       {!state.loading && state.items?.length > 0 && (
         <div className="shop-list">
           {state.items.map((it, i) => (
@@ -361,9 +375,14 @@ export default function ResultScreen({
     return (
       <div className="result">
         <div className="notfound">
-          <div className="big">🫥</div>
+          {thumb && <img className="notfound-thumb" src={thumb} alt="촬영한 사진" />}
           <h2>라벨을 읽지 못했습니다</h2>
           <p>{r?.reason || "술 라벨이 잘 보이도록 다시 촬영해 주세요."}</p>
+          <ul className="notfound-tips">
+            <li>라벨 전체가 화면 안에 들어오게 찍어주세요</li>
+            <li>글자가 흐리면 조금 더 가까이서 찍어주세요</li>
+            <li>빛 반사가 심하면 각도를 살짝 틀어보세요</li>
+          </ul>
         </div>
         <div className="result-actions">
           <button className="btn primary" onClick={onRescan}>다시 스캔</button>
@@ -569,6 +588,8 @@ export default function ResultScreen({
       <div className="result-actions">
         <button className="btn primary" onClick={onRescan}>다른 술 스캔하기</button>
       </div>
+
+      <ScrollTop />
     </div>
   );
 }

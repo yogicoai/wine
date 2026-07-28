@@ -171,10 +171,18 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
 
       {/* 목록 */}
       {!list.length && (
-        <div className="drawer-empty">
-          {tab === "have" && "보유 중인 술이 없습니다. 스캔 후 '보유 중'으로 담아보세요."}
-          {tab === "wish" && "위시리스트가 비어 있습니다. 담아두면 특가를 알려드립니다."}
-          {tab === "drunk" && "아직 기록한 술이 없습니다."}
+        <div className="empty-state">
+          <img src={`/icons/cat/${tab === "wish" ? "sake" : tab === "drunk" ? "brandy" : "wine"}.png`} alt="" />
+          <b>
+            {tab === "have" && "보유 중인 술이 없습니다"}
+            {tab === "wish" && "위시리스트가 비어 있습니다"}
+            {tab === "drunk" && "아직 기록한 술이 없습니다"}
+          </b>
+          <span>
+            {tab === "have" && "스캔한 뒤 ‘보유 중’으로 담아보세요."}
+            {tab === "wish" && "담아두면 값이 내렸을 때 알려드립니다."}
+            {tab === "drunk" && "‘마셨어요’로 별점과 향을 남겨보세요."}
+          </span>
         </div>
       )}
 

@@ -16,7 +16,11 @@ export default function HistoryDrawer({ open, sessions, noDb, onClose, onOpenSes
           </p>
         )}
         {!sessions.length && !noDb && (
-          <div className="drawer-empty">아직 스캔 기록이 없습니다.<br />첫 번째 술을 스캔해 보세요.</div>
+          <div className="empty-state">
+            <img src="/icons/cat/wine.png" alt="" />
+            <b>아직 스캔 기록이 없습니다</b>
+            <span>첫 번째 술을 찍어 보세요.</span>
+          </div>
         )}
         <a className="drawer-link" href="/guide">
           기능 설명서 보기 <em>›</em>
