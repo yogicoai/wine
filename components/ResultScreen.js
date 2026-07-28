@@ -266,6 +266,7 @@ const TIMER_PRESETS = [
 ];
 
 function ServingTimer() {
+  const [picked, setPicked] = useState(null); // 고른 항목 (아직 시작 전)
   const [run, setRun] = useState(null); // { preset, total, left }
 
   useEffect(() => {
@@ -282,12 +283,13 @@ function ServingTimer() {
     return () => clearTimeout(t);
   }, [run]);
 
-  function start(preset) {
+  function start() {
+    if (!picked) return;
     if (typeof Notification !== "undefined" && Notification.permission === "default") {
       Notification.requestPermission();
     }
-    const total = preset.min * 60;
-    setRun({ preset, total, left: total });
+    const total = picked.min * 60;
+    setRun({ preset: picked, total, left: total });
   }
 
   if (!run) {
@@ -296,7 +298,12 @@ function ServingTimer() {
         <div className="card-title">타이머</div>
         <div className="timer-presets">
           {TIMER_PRESETS.map((p) => (
-            <button className="timer-btn" key={p.kind} onClick={() => start(p)}>
+            <button
+              className={`timer-btn ${picked?.kind === p.kind ? "on" : ""}`}
+              key={p.kind}
+              aria-pressed={picked?.kind === p.kind}
+              onClick={() => setPicked(picked?.kind === p.kind ? null : p)}
+            >
               <i className="timer-thumb">
                 <TimerVisual kind={p.kind} progress={0.45} mini />
               </i>
@@ -306,6 +313,11 @@ function ServingTimer() {
             </button>
           ))}
         </div>
+
+        <button className="btn primary timer-start" disabled={!picked} onClick={start}>
+          {picked ? `${picked.label} ${picked.min}분 시작` : "시간을 먼저 선택하세요"}
+        </button>
+
         <div className="shop-note">시작하면 진행 상황이 눈에 보이고, 끝나면 알림과 진동으로 알려드립니다.</div>
       </div>
     );

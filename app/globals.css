@@ -365,6 +365,12 @@ img, video, canvas { display: block; max-width: 100%; }
   padding: 15px 8px; text-align: center; transition: background 0.25s;
 }
 .timer-btn:hover { background: var(--bg-3); }
+/* 고른 항목 — 시작 전 선택 상태 */
+.timer-btn.on { background: var(--bg-3); box-shadow: inset 0 0 0 1px var(--gold); }
+.timer-btn.on b { color: var(--gold-hi); }
+.timer-btn.on .timer-thumb { opacity: 1; }
+.timer-start { width: 100%; margin-top: 14px; }
+.timer-start:disabled { opacity: 0.45; cursor: default; filter: none; }
 .timer-btn b { display: block; font-size: 13px; font-family: var(--font-s); font-weight: 500; }
 .timer-btn span { display: block; font-family: var(--font-d); font-size: 19px; color: var(--gold-hi); margin: 4px 0 3px; }
 .timer-btn em { display: block; font-style: normal; font-size: 9.5px; color: var(--ink-dim); line-height: 1.4; }
