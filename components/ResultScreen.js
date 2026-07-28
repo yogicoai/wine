@@ -6,6 +6,7 @@ import CatIcon from "./CatIcon";
 import CellarActions from "./CellarActions";
 import TimerVisual from "./TimerVisual";
 import ScrollTop from "./ScrollTop";
+import ShareCard from "./ShareCard";
 import VintageCompare from "./VintageCompare";
 
 // 구매 정보 — 네이버쇼핑 API(실제 제품 이미지·가격·구매 링크) + 검색 딥링크 폴백
@@ -586,7 +587,8 @@ export default function ResultScreen({
       )}
 
       <div className="result-actions">
-        <button className="btn primary" onClick={onRescan}>다른 술 스캔하기</button>
+        <ShareCard result={r} thumb={thumb} onToast={onToast} />
+        <button className="btn primary" onClick={onRescan}>다른 술 스캔</button>
       </div>
 
       <ScrollTop />

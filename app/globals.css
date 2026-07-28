@@ -654,6 +654,33 @@ img, video, canvas { display: block; max-width: 100%; }
 .empty-state span { display: block; font-size: 12.5px; color: var(--ink-dim); line-height: 1.75; }
 .drawer-note { font-size: 11.5px; color: var(--ink-dim); margin-top: 16px; line-height: 1.7; }
 
+/* 공유 카드 */
+.share-modal {
+  position: fixed; z-index: 45; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: min(400px, calc(100vw - 32px)); max-height: 90vh; overflow-y: auto;
+  background: linear-gradient(180deg, var(--bg-2), var(--bg));
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+  animation: rise 0.3s cubic-bezier(0.16, 0.8, 0.24, 1);
+}
+.share-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.share-head b {
+  font-family: var(--font-d); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold);
+}
+.share-x { background: none; border: none; color: var(--ink-dim); font-size: 16px; padding: 4px 6px; }
+.share-x:hover { color: var(--ink); }
+.share-preview {
+  border: 1px solid var(--line-soft); background: var(--bg-3);
+  min-height: 220px; display: grid; place-items: center; overflow: hidden;
+}
+.share-preview img { width: 100%; display: block; }
+.share-msg { font-size: 13px; color: var(--ink-dim); font-family: var(--font-s); padding: 60px 0; }
+.share-msg.err { color: var(--bad); }
+.share-actions { display: flex; gap: 10px; margin-top: 14px; }
+.share-actions .btn { flex: 1; }
+.share-actions .btn:disabled { opacity: 0.45; }
+
 /* 맨 위로 */
 .to-top {
   position: fixed; right: 18px; z-index: 30;
