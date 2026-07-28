@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { BrandEmblem } from "./Brand";
 
 const STEPS = [
   "라벨을 읽는 중",
@@ -25,7 +26,7 @@ export default function LoadingScreen({ thumb }) {
           <img className="scan-img" src={thumb} alt="촬영한 라벨" />
         ) : (
           <div className="scan-empty">
-            <img src="/icons/icon.png" alt="" />
+            <BrandEmblem size={190} />
           </div>
         )}
         <span className="scan-line" />

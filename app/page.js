@@ -4,6 +4,8 @@ import CaptureScreen from "@/components/CaptureScreen";
 import LoadingScreen from "@/components/LoadingScreen";
 import ResultScreen from "@/components/ResultScreen";
 import HistoryDrawer from "@/components/HistoryDrawer";
+import AccountDrawer from "@/components/AccountDrawer";
+import { BrandMark, BrandWord } from "@/components/Brand";
 import CellarScreen from "@/components/CellarScreen";
 import WineListScreen from "@/components/WineListScreen";
 import DiscoverScreen from "@/components/DiscoverScreen";
@@ -19,6 +21,7 @@ export default function Home() {
   const [sessions, setSessions] = useState([]);
   const [noDb, setNoDb] = useState(false);
   const [drawer, setDrawer] = useState(false);
+  const [account, setAccount] = useState(false);
   const [toast, setToast] = useState(null); // {text, err}
   const [cellar, setCellar] = useState({ items: [], taste: null });
   // 바코드를 읽었지만 아직 우리 DB에 없는 경우, 라벨 분석 결과에 이 번호를 연결해 둔다.
@@ -276,16 +279,15 @@ export default function Home() {
   return (
     <main className="app">
       <header className="hdr">
-        <div>
-          <div className="hdr-logo">Bottle <em>Lens</em></div>
-          <div className="hdr-sub">AI Sommelier for every bottle</div>
-        </div>
+        {/* 로고는 어디서든 처음 화면으로 돌아가는 길이다 (촬영 아이콘을 따로 두지 않는 이유) */}
+        <button className="hdr-home" onClick={rescan} aria-label="처음 화면으로">
+          <BrandMark size={40} />
+          <span className="hdr-lockup">
+            <BrandWord height={30} />
+            <span className="hdr-sub">AI Sommelier for every bottle</span>
+          </span>
+        </button>
         <div className="hdr-btns">
-          {screen !== "capture" && (
-            <button className="icon-btn" title="새 스캔" aria-label="새 스캔" onClick={rescan}>
-              <Icon name="camera" />
-            </button>
-          )}
           <button
             className={`icon-btn ${screen === "discover" ? "on" : ""}`}
             title="찾기 · 추천"
@@ -309,6 +311,14 @@ export default function Home() {
             onClick={() => setDrawer(true)}
           >
             <Icon name="archive" />
+          </button>
+          <button
+            className="icon-btn"
+            title="내 정보"
+            aria-label="내 정보"
+            onClick={() => setAccount(true)}
+          >
+            <Icon name="user" />
           </button>
         </div>
       </header>
@@ -355,6 +365,13 @@ export default function Home() {
         onClose={() => setDrawer(false)}
         onOpenSession={openSession}
         onDelete={deleteSession}
+      />
+
+      <AccountDrawer
+        open={account}
+        onClose={() => setAccount(false)}
+        onOpenCellar={() => setScreen("cellar")}
+        onToast={showToast}
       />
 
       {toast && <div className={`toast ${toast.err ? "err" : ""}`}>{toast.text}</div>}
