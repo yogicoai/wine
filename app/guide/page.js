@@ -3,9 +3,12 @@ import { BrandWord } from "@/components/Brand";
 import { catalogStats } from "@/lib/catalog";
 import s from "./guide.module.css";
 
+// 클라이언트 검토용 상세 설명 — 앱 안에서는 링크하지 않고 주소로만 연다.
+// 출시 때 app/guide/ 폴더째 지우고, 고객용 도움말은 따로 만든다.
 export const metadata = {
-  title: "보틀 렌즈 — 기능 설명서",
+  title: "보틀 렌즈 — 기능 설명서 (내부)",
   description: "술 라벨을 촬영하면 AI가 주종·가격·역사·페어링을 분석하고 구매까지 연결하는 웹 앱의 기능 설명서.",
+  robots: { index: false, follow: false },
 };
 
 // 보유 종수는 계속 늘어나므로 실제 DB 값을 보여 준다 (한 시간에 한 번 갱신)

@@ -22,10 +22,6 @@ export default function HistoryDrawer({ open, sessions, noDb, onClose, onOpenSes
             <span>첫 번째 술을 찍어 보세요.</span>
           </div>
         )}
-        <a className="drawer-link" href="/guide">
-          기능 설명서 보기 <em>›</em>
-        </a>
-
         {sessions.map((s) => {
           const cat = catOf(s.result?.category);
           return (

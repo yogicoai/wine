@@ -103,9 +103,6 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onToast }) 
         <button className="drawer-link as-btn" onClick={() => { onClose?.(); onOpenCellar?.(); }}>
           나의 셀러로 이동 <em>›</em>
         </button>
-        <a className="drawer-link" href="/guide">
-          기능 설명서 보기 <em>›</em>
-        </a>
 
         <p className="drawer-note">
           로그인을 붙이면 위 항목이 기기가 아니라 계정에 묶입니다. 지금 쌓는 기록은 그때 계정으로
