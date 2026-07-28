@@ -5,7 +5,7 @@ import PushToggle from "./PushToggle";
 import CatIcon from "./CatIcon";
 import Sparkline from "./Sparkline";
 import { catOf } from "@/lib/cats";
-import { drinkWindowState, cellarValue, priceTrend } from "@/lib/cellar";
+import { drinkWindowState, cellarValue, priceTrend, priceStats, targetSuggestions } from "@/lib/cellar";
 
 const TABS = [
   { key: "have", label: "보유" },
@@ -264,6 +264,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
         const cat = catOf(it.category);
         const win = drinkWindowState(it);
         const trend = priceTrend(it);
+        const stats = priceStats(it); // 최근 6개월
         return (
           <div className="cellar-item" key={it._id}>
             <button className="cellar-main" onClick={() => onOpen?.(it._id)}>
@@ -300,21 +301,39 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
               )}
 
               {editing === it._id ? (
-                <div className="target-edit">
-                  <input
-                    type="number"
-                    value={targetInput}
-                    placeholder="목표가"
-                    onChange={(e) => setTargetInput(e.target.value)}
-                  />
-                  <button
-                    onClick={async () => {
-                      await patch(it._id, { priceTarget: targetInput });
-                      setEditing(null);
-                    }}
-                  >
-                    저장
-                  </button>
+                <div className="target-box">
+                  <div className="target-edit">
+                    <input
+                      type="number"
+                      value={targetInput}
+                      placeholder="목표가"
+                      onChange={(e) => setTargetInput(e.target.value)}
+                    />
+                    <button
+                      onClick={async () => {
+                        await patch(it._id, { priceTarget: targetInput });
+                        setEditing(null);
+                      }}
+                    >
+                      저장
+                    </button>
+                  </div>
+                  {/* 빈칸에 숫자를 넣으라고만 하면 얼마를 적어야 할지 알 수 없다.
+                      관찰된 최저가를 기준으로 후보를 준다. */}
+                  {targetSuggestions(stats).length > 0 && (
+                    <div className="target-hints">
+                      {targetSuggestions(stats).map((s) => (
+                        <button
+                          key={s.label}
+                          className="target-hint"
+                          onClick={() => setTargetInput(String(s.value))}
+                        >
+                          {s.label}
+                          <em>{s.value.toLocaleString("ko-KR")}원</em>
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ) : (
                 <button
@@ -333,29 +352,58 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
               <button className="mini-btn danger" onClick={() => remove(it._id)}>삭제</button>
             </div>
 
-            {/* 가격 이력 — 점이 두 개 이상 쌓이면 그래프, 그전에는 현재값만 */}
-            {trend ? (
+            {/* 가격 — 지금 값만으로는 싼지 알 수 없으므로 6개월 최저·최고를 함께 둔다 */}
+            {stats && (
               <div className="price-track">
-                <Sparkline trend={trend} />
-                <div className="price-range">
-                  <span>최저 {trend.min.toLocaleString("ko-KR")}원</span>
-                  <span>최고 {trend.max.toLocaleString("ko-KR")}원</span>
-                  <span>{trend.points.length}일 관찰</span>
-                </div>
-              </div>
-            ) : (
-              it.priceLast && (
-                <div className="price-track">
-                  <div className="price-first">
-                    <b>{it.priceLast.toLocaleString("ko-KR")}원</b>
-                    <span>
-                      {it.priceLow && it.priceLow < it.priceLast
-                        ? `관찰 최저 ${it.priceLow.toLocaleString("ko-KR")}원`
-                        : "관찰 시작 · 내일부터 변동 그래프가 그려집니다"}
-                    </span>
+                <div className="price-facts">
+                  <div className="pf now">
+                    <b>{stats.last.toLocaleString("ko-KR")}원</b>
+                    <span>지금 최저가</span>
                   </div>
+                  <div className="pf">
+                    <b>{stats.low.toLocaleString("ko-KR")}원</b>
+                    <span>6개월 최저</span>
+                  </div>
+                  {stats.high && (
+                    <div className="pf">
+                      <b>{stats.high.toLocaleString("ko-KR")}원</b>
+                      <span>6개월 최고</span>
+                    </div>
+                  )}
                 </div>
-              )
+
+                {stats.days > 0 && (
+                  <div className="price-verdict">
+                    {stats.isLowest
+                      ? `✦ 6개월 중 가장 쌉니다 · ${stats.days}일 관찰`
+                      : `6개월 최저보다 ${stats.overLow}% 높습니다 · ${stats.days}일 관찰`}
+                  </div>
+                )}
+                {stats.days === 0 && (
+                  <div className="price-verdict dim">
+                    관찰을 막 시작했습니다. 내일부터 최저·최고가 쌓입니다.
+                  </div>
+                )}
+
+                {/* 목표가까지 얼마나 남았는지 */}
+                {it.priceTarget && (
+                  <div className="target-gap">
+                    {stats.last <= it.priceTarget ? (
+                      <b className="hit">목표가 도달 · 지금이 살 때입니다</b>
+                    ) : (
+                      <>
+                        <i style={{ width: `${Math.min(100, (it.priceTarget / stats.last) * 100)}%` }} />
+                        <span>
+                          목표 {it.priceTarget.toLocaleString("ko-KR")}원까지{" "}
+                          {(stats.last - it.priceTarget).toLocaleString("ko-KR")}원
+                        </span>
+                      </>
+                    )}
+                  </div>
+                )}
+
+                {trend && <Sparkline trend={trend} />}
+              </div>
             )}
 
             {/* 테이스팅 노트 히스토리 */}
