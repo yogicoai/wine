@@ -29,7 +29,15 @@ function useShopItems(name, keyword) {
           const d = await fetch(`/api/shop?q=${encodeURIComponent(q)}`).then((r) => r.json());
           if (!alive) return;
           if (d.noApi) return setState({ loading: false, items: null, noApi: true });
-          if (d.items?.length) return setState({ loading: false, items: d.items, noApi: false });
+          if (d.items?.length) {
+            return setState({
+              loading: false,
+              items: d.items,
+              noApi: false,
+              reference: d.reference || null,
+              sampled: d.sampled || d.items.length,
+            });
+          }
         } catch {
           /* 다음 후보 시도 */
         }
@@ -70,6 +78,19 @@ function PurchaseCard({ shop }) {
           ))}
         </div>
       )}
+      {/* 기준 최저가 — 셀러 가치·가격 이력·특가 알림이 쓰는 것과 같은 값.
+          아래 목록은 바로 살 수 있는 판매처를 앞세운 순서라 가격순이 아니므로,
+          "얼마짜리 술인가"는 여기서 따로 알려 준다. */}
+      {!state.loading && state.reference && (
+        <div className="shop-ref">
+          <div>
+            <b>{state.reference.toLocaleString("ko-KR")}원</b>
+            <span>기준 최저가</span>
+          </div>
+          <em>판매 중인 {state.sampled}건 기준 · 소용량·미끼 상품 제외</em>
+        </div>
+      )}
+
       {!state.loading && state.items?.length > 0 && (
         <div className="shop-list">
           {state.items.map((it, i) => (
@@ -81,7 +102,7 @@ function PurchaseCard({ shop }) {
               </div>
               {it.price && (
                 <div className="shop-price">
-                  {it.price.toLocaleString("ko-KR")}원<small>최저가</small>
+                  {it.price.toLocaleString("ko-KR")}원<small>판매가</small>
                 </div>
               )}
             </a>
@@ -94,6 +115,7 @@ function PurchaseCard({ shop }) {
         </div>
       )}
       <div className="shop-note">
+        아래 목록은 가격순이 아니라, 로그인 없이 바로 구매 가능한 판매처를 앞세운 순서입니다.
         일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다. 가격은 판매처 사정에 따라 달라질 수 있습니다.
         {" · "}
         <a className="shop-more" href={naverLink} target="_blank" rel="noreferrer">네이버쇼핑에서 더 보기</a>

@@ -886,6 +886,25 @@ img, video, canvas { display: block; max-width: 100%; }
   font-family: var(--font-d); font-size: 17px; color: var(--gold-hi); letter-spacing: 0.02em;
 }
 .shop-price small { display: block; font-size: 9.5px; color: var(--ink-dim); letter-spacing: 0.12em; font-family: var(--font-b); }
+/* 기준 최저가 — 다른 화면의 가격과 같은 계산식임을 밝힌다 */
+.shop-ref {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  flex-wrap: wrap; padding: 12px 14px; margin-bottom: 12px;
+  border: 1px solid var(--line); background: rgba(0, 0, 0, 0.22);
+}
+.shop-ref > div { display: flex; align-items: baseline; gap: 8px; }
+.shop-ref b {
+  font-family: var(--font-d); font-size: 22px; font-weight: 500;
+  background: linear-gradient(178deg, var(--gold-hi), var(--gold) 70%, var(--gold-lo));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.shop-ref span {
+  font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold);
+}
+.shop-ref em {
+  font-style: normal; font-size: 11px; color: var(--ink-dim); font-family: var(--font-s);
+}
+
 .shop-links { display: flex; gap: 10px; margin-top: 14px; }
 .shop-link {
   flex: 1; text-align: center; padding: 12px; font-size: 11px; letter-spacing: 0.16em;
