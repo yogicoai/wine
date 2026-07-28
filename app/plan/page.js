@@ -1,13 +1,17 @@
 import Link from "next/link";
+import { catalogStats } from "@/lib/catalog";
 import s from "../guide/guide.module.css";
 import p from "./plan.module.css";
 
 // 내부 검토용 페이지. 출시 전에 폴더째 지우면 된다 (app/plan/).
 // 클라이언트와 나눌 자료라 링크로 열리게 두되, 검색에는 걸리지 않게 한다.
 export const metadata = {
-  title: "보틀 렌즈 — 진행 계획 · 사업성 검토 (내부)",
+  title: "보틀 렌즈 — 진행 계획 · 사업성 · 판매 전략 (내부)",
   robots: { index: false, follow: false },
 };
+
+// 보유 종수는 매일 늘어나므로 실제 DB 값을 쓴다
+export const revalidate = 3600;
 
 const COST_ROWS = [
   ["0%", "66원", "출시 첫날. DB에 아무것도 없을 때"],
@@ -18,7 +22,10 @@ const COST_ROWS = [
   ["95%", "6원", "성숙기"],
 ];
 
-export default function PlanPage() {
+export default async function PlanPage() {
+  const catalog = await catalogStats().catch(() => null);
+  const owned = catalog?.total ? catalog.total.toLocaleString("ko-KR") : "4,000+";
+
   return (
     <div className={s.wrap}>
       <div className={s.topbar}>
@@ -33,8 +40,8 @@ export default function PlanPage() {
       <header className={s.hero}>
         <p className={s.eyebrow}>내부 검토 자료</p>
         <h1 className={s.title}>
-          진행 계획과 사업성
-          <span className={s.titleKo}>광고 도입을 제외한 출시 로드맵</span>
+          진행 계획 · 사업성 · 판매 전략
+          <span className={s.titleKo}>보유 데이터 {owned}종 기준</span>
         </h1>
         <p className={s.lede}>
           지금까지 만든 것과 앞으로 해야 할 것, 그리고 이 서비스가 돈이 되는 구조인지를 정리했습니다.
@@ -64,7 +71,7 @@ export default function PlanPage() {
                 <tr><td>맞춤 추천 · 검색</td><td className={s.now}>완료</td></tr>
                 <tr><td>가격 이력 · 특가 알림</td><td className={s.was}>완료 · 데이터 축적 중</td></tr>
                 <tr><td>집단 평점</td><td className={s.was}>구조만 · 표 0개</td></tr>
-                <tr><td><b>카탈로그 데이터</b></td><td className={s.now}><b>1,200종+ — 1차 목표(1,000종) 달성, 계속 확장</b></td></tr>
+                <tr><td><b>카탈로그 데이터</b></td><td className={s.now}><b>{owned}종 — 매일 자동 확장 중</b></td></tr>
                 <tr><td><b>로그인 · 19세 인증</b></td><td className={s.was}><b>미착수 — 출시 선행 조건</b></td></tr>
               </tbody>
             </table>
@@ -98,13 +105,10 @@ export default function PlanPage() {
               <h3 className={s.h4}>2. 카탈로그 확장 — 진행 중</h3>
               <span className={`${s.flag} ${s.must}`}>비용 구조의 핵심</span>
               <p className={s.p}>
-                <b>1,200종을 넘겼습니다</b> (1차 목표 1,000종 달성). 네이버 인기 상품 수확기가
-                실제로 팔리는 술을 무료로 긁어오고, 사용자가 찾았는데 없던 이름은 자동으로
-                기록되어 다음에 채울 목록이 됩니다. 표기가 달라도 잇는 느슨한 매칭까지 갖춰,
-                <b> DB가 커지는 만큼 적중률이 실제로 오릅니다.</b>
-              </p>
-              <p className={s.p}>
-                다음 단계: 미매칭 목록 소진, 수확 주기화(주 1회), 3,000종.
+                <b>{owned}종을 보유했습니다</b> (목표 3,000종 초과 달성). 국내 대형 와인샵 한 곳의
+                취급 규모를 넘습니다. 매일 새벽 수확 크론이 새로 팔리기 시작한 술을 자동으로
+                추가하고, 사용자가 찾았는데 없던 이름은 기록되어 다음에 채울 목록이 됩니다.
+                표기가 달라도 잇는 느슨한 매칭까지 갖춰 <b>DB가 커지는 만큼 적중률이 실제로 오릅니다.</b>
               </p>
             </div>
 
@@ -328,7 +332,7 @@ export default function PlanPage() {
             </p>
           </div>
           <ol className={p.steps}>
-            <li><b>카탈로그 확장 지속</b> — 1,200종 달성. 미매칭 목록을 소진하며 3,000종으로 (비용 0원)</li>
+            <li><b>카탈로그 확장 지속</b> — {owned}종 보유, 매일 자동 수확 중 (비용 0원)</li>
             <li><b>로그인 · 19세 인증 · 사용량 제한</b> — 스토어 출시와 구독의 공통 선행 조건</li>
             <li><b>미검증 기능을 실기기로 확인</b> — 시연 사고 방지</li>
             <li><b>안주 제휴부터 연결</b> — 화면 변경 없이 붙는 유일한 수익원</li>
@@ -339,6 +343,93 @@ export default function PlanPage() {
             숫자 중 실측은 원가 부분(3장 첫 표)뿐입니다. 적중률 · 사용 빈도 · 제휴 수수료율은 가정이며,
             실제 운영 데이터가 쌓이면 다시 계산해야 합니다.
           </p>
+        </div>
+      </section>
+
+      {/* 07 판매 전략 */}
+      <section className={s.section}>
+        <div className={s.num}>07</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>판매 전략</h2>
+          <p className={s.sub}>누구에게, 무엇을 앞세워, 어떤 순서로 파는가.</p>
+
+          <h3 className={s.h4}>누구에게 — 세 부류</h3>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead><tr><th>타깃</th><th>그들의 문제</th><th>우리가 앞세울 것</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>와인 입문자</td>
+                  <td className={s.was}>뭘 사야 할지 모르고, 물어보기 민망함</td>
+                  <td className={s.now}>O·X 여덟 문항 첫날 추천 · 입문자/가격대 큐레이션</td>
+                </tr>
+                <tr>
+                  <td>식당에서 고르는 사람</td>
+                  <td className={s.was}>와인 리스트 앞에서 아는 게 없음</td>
+                  <td className={s.now}>메뉴판 스캔 → 가성비 순 정렬 (국내 앱에 거의 없음)</td>
+                </tr>
+                <tr>
+                  <td>모으는 애호가</td>
+                  <td className={s.was}>보유 현황·시세·마실 때를 못 챙김</td>
+                  <td className={s.now}>셀러 가치 · 가격 이력 · 특가/적기 알림</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 className={s.h4} style={{ marginTop: "2rem" }}>한 줄 셀링 포인트</h3>
+          <div className={p.callout}>
+            <b>&ldquo;찍으면 아는 앱이 아니라, 찍을수록 똑똑해지는 앱.&rdquo;</b> {owned}종의 자체
+            데이터베이스에서 즉시 답하고, 없는 술은 AI가 읽어 데이터베이스를 키웁니다. 경쟁자가
+            베낄 수 있는 것은 기능이지 데이터가 아닙니다.
+          </div>
+
+          <h3 className={s.h4} style={{ marginTop: "2rem" }}>어떤 순서로 — 3단계</h3>
+          <ol className={p.steps}>
+            <li>
+              <b>시연 · 클로즈드 베타</b> — 지인·와인 모임 단위로 배포. 이 기간에 미매칭 명단이
+              쌓이고 카탈로그가 실사용 기준으로 여물어집니다. 광고비 0원.
+            </li>
+            <li>
+              <b>공개 + 유입 장치 가동</b> — 공유 카드(결과를 인스타·카톡용 이미지로)가 광고비
+              없는 유입 경로입니다. 보틀샵·와인바에 테이블 QR 제휴를 제안합니다: 손님은 리스트
+              스캔으로 고르고, 매장은 설명 인력을 아낍니다.
+            </li>
+            <li>
+              <b>수익화</b> — 안주 제휴 링크(화면 변경 없이 즉시) → 스마트오더 제휴(객단가 상승)
+              → 구독(사용량 제한과 동시 도입). 광고는 사용자 규모가 생긴 뒤에만.
+            </li>
+          </ol>
+
+          <h3 className={s.h4} style={{ marginTop: "2rem" }}>클라이언트 시연 대본 (5분)</h3>
+          <ol className={p.steps}>
+            <li><b>바코드 스캔</b> — 병 뒷면을 비추면 즉시 결과. &ldquo;이 조회는 비용이 0원입니다&rdquo;</li>
+            <li><b>라벨 촬영</b> — DB에 없는 술로. 30초 분석 후 &ldquo;이제 이 술은 DB에 들어갔고, 다음 사람부터 무료입니다&rdquo;</li>
+            <li><b>와인 리스트</b> — 실제 메뉴판 촬영 → 가성비 순 정렬. 경쟁 앱과 갈리는 장면</li>
+            <li><b>셀러</b> — 담기 → 시세 갱신 → 가치 총액. &ldquo;알림은 목표가 도달·적기 임박 때 옵니다&rdquo;</li>
+            <li><b>공유 카드</b> — 결과를 이미지로 → &ldquo;이게 사용자가 스스로 퍼뜨리는 광고입니다&rdquo;</li>
+          </ol>
+
+          <h3 className={s.h4} style={{ marginTop: "2rem" }}>경쟁 대응 문답</h3>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead><tr><th>예상 질문</th><th>답</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Vivino 쓰면 되지 않나</td>
+                  <td className={s.was}>Vivino는 한국 가격·판매처가 없고, 추천을 받으려면 여러 병을 마시고 평가해야 합니다. 우리는 네이버 최저가 연동, 문답 여덟 개로 첫날 추천, 안주까지 연결합니다</td>
+                </tr>
+                <tr>
+                  <td>데이터가 계속 유지되나</td>
+                  <td className={s.was}>매일 새벽 크론이 신상품을 자동 수확하고, 사용자가 찾은 미보유 술이 다음 확장 목록이 됩니다. 사람 손 없이 자랍니다</td>
+                </tr>
+                <tr>
+                  <td>운영비는</td>
+                  <td className={s.was}>고정비 사실상 0원(무료 티어 + 무료 API). 변동비는 DB 미적중 스캔뿐이고, 적중률이 오를수록 0원에 수렴합니다</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
