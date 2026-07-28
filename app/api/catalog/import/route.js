@@ -64,12 +64,23 @@ export async function POST(request) {
   let inserted = 0;
   let updated = 0;
   let curated = 0;
+  let skipped = 0; // 이미 분석된 술을 뼈대로 덮어쓰지 않고 넘긴 수
   const failed = [];
 
   for (const item of items) {
     if (!item?.name || !item?.category) {
       failed.push({ name: item?.name || "(이름 없음)", reason: "name/category 누락" });
       continue;
+    }
+    // 이미 분석을 마친 술을 뼈대로 덮어쓰면 정보가 사라진다
+    if (item.tier === "stub" && existing.has(catalogKey(item.name, item.vintage))) {
+      const cur = await db
+        .collection("catalog")
+        .findOne({ key: catalogKey(item.name, item.vintage) }, { projection: { tier: 1 } });
+      if (cur && cur.tier !== "stub") {
+        skipped++;
+        continue;
+      }
     }
     const isNew = !existing.has(catalogKey(item.name, item.vintage));
     const extra = curation.get(item.name);
@@ -85,5 +96,5 @@ export async function POST(request) {
     isNew ? inserted++ : updated++;
   }
 
-  return NextResponse.json({ total: items.length, inserted, updated, curated, failed });
+  return NextResponse.json({ total: items.length, inserted, updated, curated, skipped, failed });
 }
