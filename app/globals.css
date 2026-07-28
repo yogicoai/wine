@@ -290,7 +290,7 @@ img, video, canvas { display: block; max-width: 100%; }
 
 .hero {
   position: relative; overflow: hidden; border-radius: var(--radius);
-  border: 1px solid var(--line); padding: 40px 26px 30px; text-align: center;
+  border: 1px solid var(--line); padding: 24px 26px 30px; text-align: center;
   background: linear-gradient(180deg, rgba(23, 18, 13, 0.82), rgba(15, 12, 9, 0.92));
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   box-shadow: 0 34px 70px -34px rgba(0, 0, 0, 0.85);
@@ -300,11 +300,6 @@ img, video, canvas { display: block; max-width: 100%; }
   border: 1px solid var(--line-soft);
 }
 .hero-glow { position: absolute; inset: 0; opacity: 0.4; pointer-events: none; filter: blur(2px); }
-/* 주종 엠블럼 워터마크 — 히어로 오른쪽 위에 은은하게 */
-.hero-mark {
-  position: absolute; top: -26px; right: -34px;
-  opacity: 0.09; pointer-events: none; z-index: 0;
-}
 /* 주종 아이콘 공통 */
 .cat-icon { display: inline-block; vertical-align: middle; object-fit: contain; }
 .hero-cat { display: inline-flex; align-items: center; gap: 8px; }
@@ -326,11 +321,47 @@ img, video, canvas { display: block; max-width: 100%; }
 .hero-rule::before, .hero-rule::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .hero-rule i { font-style: normal; color: var(--gold); font-size: 9px; }
 .hero-meta { color: var(--ink-dim); font-size: 12.5px; font-family: var(--font-s); letter-spacing: 0.06em; line-height: 1.7; }
-.hero-thumb {
-  width: 84px; height: 84px; object-fit: cover;
-  border: 1px solid var(--line); padding: 4px; background: var(--bg-2);
-  margin: 0 auto 16px;
+/* 대표 이미지 */
+.hero-visual {
+  position: relative; width: 100%; max-width: 230px; aspect-ratio: 1 / 1;
+  margin: 0 auto 20px; display: grid; place-items: center;
 }
+/* 상품을 찾는 동안 자리만 잡아 둔다 — 화면이 튀지 않게 */
+.hero-visual.is-loading {
+  border: 1px solid var(--line-soft);
+  background: linear-gradient(168deg, var(--bg-2), var(--bg-3));
+}
+.hero-shot { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+
+/* 판매처 상품컷은 대개 흰 배경이라, 어두운 카드 위에서는 흰 상자처럼 보인다.
+   진열장 유리판 위에 올린 것처럼 보이게 해 의도된 화면으로 만든다. */
+.hero-visual.is-case {
+  background: linear-gradient(168deg, #fdfaf3, #ece3d2 62%, #ddd1ba);
+  border: 1px solid var(--gold-lo);
+  /* 블렌드가 카드 배경까지 번지지 않도록 이 안에서만 섞이게 한다 */
+  isolation: isolate;
+  box-shadow:
+    0 26px 46px -22px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  padding: 16px;
+}
+.hero-visual.is-case::after {
+  content: ""; position: absolute; inset: 6px; pointer-events: none;
+  border: 1px solid rgba(143, 111, 61, 0.28);
+}
+.hero-visual.is-case .hero-shot {
+  mix-blend-mode: multiply; /* 상품컷의 흰 배경을 유리판 색과 자연스럽게 섞는다 */
+  filter: drop-shadow(0 6px 10px rgba(90, 70, 40, 0.22));
+}
+/* 내가 찍은 사진 — 대표 컷을 상품 사진에 내주고 구석에 남는다 */
+.hero-mine {
+  position: absolute; right: -10px; bottom: -10px;
+  width: 56px; height: 56px; object-fit: cover;
+  border: 1px solid var(--gold-lo); padding: 3px; background: var(--bg);
+  box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.8);
+}
+.hero-emblem { opacity: 0.5; }
+
 .badges { display: flex; justify-content: center; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
 .badge {
   font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -1034,10 +1065,11 @@ img, video, canvas { display: block; max-width: 100%; }
   .icon-btn { width: 40px; height: 40px; }
 
   /* 히어로 */
-  .hero { padding: 30px 18px 24px; }
+  .hero { padding: 20px 18px 24px; }
   .hero-name { font-size: 25px; }
   .hero-meta { font-size: 12px; }
-  .hero-thumb { width: 68px; height: 68px; }
+  .hero-visual { max-width: 196px; margin-bottom: 16px; }
+  .hero-mine { width: 48px; height: 48px; }
   .hero-cat { font-size: 9.5px; letter-spacing: 0.22em; padding: 6px 13px; }
 
   /* 카드 — 여백을 줄여 화면을 넓게 쓴다 */

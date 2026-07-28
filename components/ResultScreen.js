@@ -10,18 +10,19 @@ import ShareCard from "./ShareCard";
 import VintageCompare from "./VintageCompare";
 import CommunityRating from "./CommunityRating";
 
-// 구매 정보 — 네이버쇼핑 API(실제 제품 이미지·가격·구매 링크) + 검색 딥링크 폴백
-function PurchaseCard({ name, keyword }) {
+// 판매처 조회 — 히어로의 대표 이미지와 구매 정보 카드가 같은 결과를 쓴다.
+// 두 곳에서 따로 부르면 같은 요청이 두 번 나가고, 화면마다 다른 상품이 잡힐 수 있다.
+function useShopItems(name, keyword) {
   const cleaned = (name || "").replace(/\s*\([^)]*\)\s*/g, " ").trim(); // 괄호 병기 제거
   const noYear = cleaned.replace(/\b(19|20)\d{2}\b/g, "").replace(/\s+/g, " ").trim();
   // AI가 준 국내 통용 표기 → 이름 → 연도 제거 이름 순으로 시도
   const candidates = [...new Set([keyword, cleaned, noYear].filter(Boolean))];
-  const query = candidates[0] || "";
   const [state, setState] = useState({ loading: true, items: null, noApi: false });
 
   useEffect(() => {
-    if (!candidates.length) return;
+    if (!candidates.length) return setState({ loading: false, items: [], noApi: false });
     let alive = true;
+    setState({ loading: true, items: null, noApi: false });
     (async () => {
       for (const q of candidates) {
         try {
@@ -41,6 +42,13 @@ function PurchaseCard({ name, keyword }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [candidates.join("|")]);
 
+  return { ...state, query: candidates[0] || "" };
+}
+
+// 구매 정보 — 네이버쇼핑 API(실제 제품 이미지·가격·구매 링크) + 검색 딥링크 폴백
+function PurchaseCard({ shop }) {
+  const state = shop;
+  const query = shop.query;
   if (!query) return null;
   const naverLink = `https://search.shopping.naver.com/search/all?query=${encodeURIComponent(query)}`;
   const wsLink = `https://www.wine-searcher.com/find/${encodeURIComponent(query)}`;
@@ -361,6 +369,48 @@ function ServingTimer() {
   );
 }
 
+// 히어로 대표 이미지.
+//
+// 판매처에서 찾은 실제 상품 사진을 우선 쓴다. 사용자가 찍은 사진은 조명·각도·배경이
+// 제각각이라 대표 컷으로는 약하다. 상품 사진은 대개 흰 배경이라 어두운 카드 위에
+// 그대로 올리면 흰 상자처럼 보이므로, 진열장처럼 밝은 판 위에 얹어 의도된 화면으로 만든다.
+//
+// 상품 사진 → 촬영 사진 → 주종 엠블럼 순으로 내려간다.
+function HeroVisual({ result, thumb, shop }) {
+  const [failed, setFailed] = useState(false);
+  const product = shop.items?.find((it) => it.image)?.image || null;
+  const usingProduct = !!product && !failed;
+  const shown = usingProduct ? product : thumb;
+
+  // 상품을 찾는 동안 자리를 비워 두면 화면이 튀므로 자리를 잡아 둔다
+  if (shop.loading && !thumb) {
+    return <div className="hero-visual is-loading" aria-hidden="true" />;
+  }
+
+  if (!shown) {
+    return (
+      <div className="hero-visual">
+        <CatIcon category={result.category} size={124} className="hero-emblem" />
+      </div>
+    );
+  }
+
+  return (
+    <div className={`hero-visual ${usingProduct ? "is-case" : ""}`}>
+      <img
+        className="hero-shot"
+        src={shown}
+        alt={result.name}
+        onError={() => setFailed(true)}
+      />
+      {/* 상품 사진을 쓰는 경우, 내가 찍은 사진은 구석에 작게 남긴다 */}
+      {usingProduct && thumb && (
+        <img className="hero-mine" src={thumb} alt="내가 촬영한 사진" title="내가 촬영한 사진" />
+      )}
+    </div>
+  );
+}
+
 export default function ResultScreen({
   result,
   thumb,
@@ -372,6 +422,9 @@ export default function ResultScreen({
   onDeepSearch,
 }) {
   const r = result;
+  // 훅은 조건부로 부를 수 없으므로 이른 반환보다 위에서 부른다.
+  // 히어로 이미지와 구매 정보 카드가 이 결과를 함께 쓴다.
+  const shop = useShopItems(r?.found === false ? null : r?.name, r?.searchKeyword);
 
   if (!r || r.found === false) {
     return (
@@ -405,8 +458,7 @@ export default function ResultScreen({
           style={{ background: `radial-gradient(360px 240px at 50% 0%, ${glow}, transparent 70%)` }}
         />
         {/* 주종 엠블럼을 배경 워터마크로 */}
-        <CatIcon category={r.category} size={230} className="hero-mark" />
-        {thumb && <img className="hero-thumb" src={thumb} alt={r.name} />}
+        <HeroVisual result={r} thumb={thumb} shop={shop} />
         <span className="hero-cat">
           <CatIcon category={r.category} size={22} />
           {cat.label}
@@ -466,7 +518,7 @@ export default function ResultScreen({
       />
 
       {/* 구매 정보 (네이버쇼핑 + 딥링크) */}
-      <PurchaseCard name={r.name} keyword={r.searchKeyword} />
+      <PurchaseCard shop={shop} />
 
       {/* 빈티지별 가격 비교 */}
       <VintageCompare
@@ -591,7 +643,12 @@ export default function ResultScreen({
       )}
 
       <div className="result-actions">
-        <ShareCard result={r} thumb={thumb} onToast={onToast} />
+        {/* 공유 카드도 화면과 같은 대표 이미지를 쓴다 */}
+        <ShareCard
+          result={r}
+          thumb={shop.items?.find((it) => it.image)?.image || thumb}
+          onToast={onToast}
+        />
         <button className="btn primary" onClick={onRescan}>다른 술 스캔</button>
       </div>
 

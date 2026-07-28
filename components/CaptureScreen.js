@@ -12,6 +12,7 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
   const [camError, setCamError] = useState(null);
   const [dragging, setDragging] = useState(false);
   const [mode, setMode] = useState("label"); // label | barcode | list
+  const [scanState, setScanState] = useState(null); // loading | scanning | error
 
   // 카메라는 화면에 들어오자마자 켜지 않는다.
   // 사용자가 촬영을 시작할 때 권한을 요청해야 거부감이 적고, 배터리·발열에도 낫다.
@@ -65,17 +66,24 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
   // 바코드 모드에서는 셔터를 누를 필요 없이 계속 읽는다.
   // 바코드로 찾으면 AI를 부르지 않으므로 비용도 대기 시간도 없다.
   useEffect(() => {
-    if (mode !== "barcode" || !stream || !onBarcode) return;
+    if (mode !== "barcode" || !stream || !onBarcode) {
+      setScanState(null);
+      return;
+    }
     const video = videoRef.current;
     if (!video) return;
 
     let done = false;
-    const stop = scanLoop(video, (code) => {
-      if (done) return;
-      done = true;
-      if (navigator.vibrate) navigator.vibrate(60);
-      onBarcode(code);
-    });
+    const stop = scanLoop(
+      video,
+      (code) => {
+        if (done) return;
+        done = true;
+        if (navigator.vibrate) navigator.vibrate(60);
+        onBarcode(code);
+      },
+      { onStatus: setScanState }
+    );
     return stop;
   }, [mode, stream, onBarcode]);
 
@@ -193,9 +201,13 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
                 mode === "list" ? "is-list" : ""
               }`}
             />
-            <div className="cam-guide-txt">
+            <div className={`cam-guide-txt ${scanState === "error" ? "err" : ""}`}>
               {mode === "barcode"
-                ? "병 뒷면 바코드를 선 안에 맞춰주세요"
+                ? scanState === "loading"
+                  ? "바코드 인식기를 불러오는 중…"
+                  : scanState === "error"
+                    ? "이 브라우저에서 바코드 인식을 쓸 수 없습니다 — 라벨 촬영을 이용해 주세요"
+                    : "병 뒷면 바코드를 선 안에 맞춰주세요"
                 : mode === "list"
                   ? "메뉴판 전체가 들어오도록 정면에서 찍어주세요"
                   : "라벨이 프레임 안에 오도록 맞춰주세요"}
