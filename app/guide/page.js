@@ -538,28 +538,74 @@ export default function GuidePage() {
       <section className={s.section}>
         <div className={s.num}>08</div>
         <div className={s.body}>
-          <h2 className={s.h2}>이미지 저장 현황</h2>
-          <p className={s.sub}>현재 Cafe24(yogibo 오픈호스팅) 연동은 되어 있지 않습니다.</p>
+          <h2 className={s.h2}>이미지 저장과 저작권</h2>
+          <p className={s.sub}>어떤 이미지를 어디에 두는지, 그리고 남의 이미지를 어떻게 다루는지.</p>
           <div className={s.scroll}>
             <table className={s.table}>
-              <thead><tr><th>이미지</th><th>현재 저장 위치</th><th>권장</th></tr></thead>
+              <thead><tr><th>이미지</th><th>저장 위치</th><th>소유</th></tr></thead>
               <tbody>
                 <tr>
                   <td>스캔 썸네일<br /><span className={s.faint}>320px</span></td>
-                  <td className={s.was}>데이터베이스에 문자열로 직접 저장</td>
-                  <td className={s.now}><b>Cafe24 이미지 호스팅으로 이전</b></td>
+                  <td className={s.now}><b>Cafe24 오픈호스팅</b> — DB에는 주소만</td>
+                  <td className={s.was}>사용자 촬영</td>
                 </tr>
-                <tr><td>배경 이미지</td><td className={s.was}>앱 소스에 포함</td><td className={s.now}>현행 유지 가능</td></tr>
+                <tr>
+                  <td>배경 · 아이콘</td>
+                  <td className={s.now}>앱 소스에 포함</td>
+                  <td className={s.was}>우리 자산</td>
+                </tr>
+                <tr>
+                  <td>판매처 상품 사진</td>
+                  <td className={s.now}><b>저장하지 않음</b> — 주소만 연결</td>
+                  <td className={s.was}>판매자 소유</td>
+                </tr>
               </tbody>
             </table>
           </div>
           <p className={s.p}>
-            <b>왜 옮겨야 하나.</b> 이미지를 데이터베이스에 문자열로 넣으면 문서 용량이 커져 조회가 느려지고, 무료 티어
-            용량(512MB)을 빠르게 소진합니다. 썸네일 한 장이 약 20~40KB이므로 1만 건이면 200~400MB에 이릅니다.
+            이미지를 데이터베이스에 문자열로 넣으면 문서 용량이 커져 조회가 느려지고, 무료 티어 용량(512MB)을 빠르게
+            소진합니다. 썸네일 한 장이 약 20~40KB이므로 1만 건이면 200~400MB에 이릅니다. 지금은 주소만 저장하므로
+            그 부담이 없고, 이미지는 Cafe24 웹서버가 직접 전송해 로딩도 빠릅니다.
+          </p>
+
+          <h3 className={s.h4} style={{ marginTop: "2rem" }}>판매처 이미지 취급 원칙</h3>
+          <p className={s.p}>
+            네이버쇼핑에서 받은 상품 사진은 판매자의 저작물이고, 이미지 안에 다른 서비스 로고나 홍보 문구가 합성되어
+            있는 경우가 많습니다. 그래서 쓰는 자리를 나눠 두었습니다.
+          </p>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead><tr><th>자리</th><th>사용</th><th>이유</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>구매 정보 카드</td>
+                  <td className={s.now}>사용</td>
+                  <td className={s.was}>판매처 이름 · 가격 · 링크가 함께 붙어 출처가 명확합니다</td>
+                </tr>
+                <tr>
+                  <td>결과 대표 이미지</td>
+                  <td className={s.now}>사용 <span className={s.faint}>(“판매처 제공 이미지” 표기)</span></td>
+                  <td className={s.was}>우리가 촬영한 사진이 아님을 밝힙니다</td>
+                </tr>
+                <tr>
+                  <td>공유 카드</td>
+                  <td className={s.now}><b>사용 안 함</b></td>
+                  <td className={s.was}>
+                    우리가 만들어 배포하는 결과물입니다. 출처 없이 퍼지고 타사 로고까지 함께 나갑니다.
+                    촬영 사진이나 주종 엠블럼만 씁니다
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className={s.p}>
+            기술적으로도 판매처 이미지는 우리 서버를 거치지 않습니다. 브라우저가 판매처 주소에서 직접 불러오는
+            링크일 뿐이며, 이미지 중계는 우리 호스팅만 허용합니다. 남의 이미지를 우리 서버가 다시 내보내면
+            링크가 아니라 복제에 가까워지기 때문입니다.
           </p>
           <p className={s.p}>
-            <b>이전하면.</b> 데이터베이스에는 이미지 주소만 남아 용량 부담이 사라지고, 이미지는 Cafe24 웹서버가 직접
-            전송해 로딩도 빨라집니다.
+            <b>확인이 필요한 사항.</b> 네이버 오픈 API 이용약관의 출처 표기 · 이미지 사용 조건은 정식 오픈 전에
+            한 번 직접 확인하시기 바랍니다. 위 구조는 위험을 줄이기 위한 것이며 법률 검토를 대신하지 않습니다.
           </p>
         </div>
       </section>

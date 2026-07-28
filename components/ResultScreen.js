@@ -396,18 +396,22 @@ function HeroVisual({ result, thumb, shop }) {
   }
 
   return (
-    <div className={`hero-visual ${usingProduct ? "is-case" : ""}`}>
-      <img
-        className="hero-shot"
-        src={shown}
-        alt={result.name}
-        onError={() => setFailed(true)}
-      />
-      {/* 상품 사진을 쓰는 경우, 내가 찍은 사진은 구석에 작게 남긴다 */}
-      {usingProduct && thumb && (
-        <img className="hero-mine" src={thumb} alt="내가 촬영한 사진" title="내가 촬영한 사진" />
-      )}
-    </div>
+    <>
+      <div className={`hero-visual ${usingProduct ? "is-case" : ""}`}>
+        <img
+          className="hero-shot"
+          src={shown}
+          alt={result.name}
+          onError={() => setFailed(true)}
+        />
+        {/* 상품 사진을 쓰는 경우, 내가 찍은 사진은 구석에 작게 남긴다 */}
+        {usingProduct && thumb && (
+          <img className="hero-mine" src={thumb} alt="내가 촬영한 사진" title="내가 촬영한 사진" />
+        )}
+      </div>
+      {/* 우리가 찍은 사진이 아니라는 것을 밝힌다 */}
+      {usingProduct && <div className="hero-credit">판매처 제공 이미지</div>}
+    </>
   );
 }
 
@@ -643,12 +647,10 @@ export default function ResultScreen({
       )}
 
       <div className="result-actions">
-        {/* 공유 카드도 화면과 같은 대표 이미지를 쓴다 */}
-        <ShareCard
-          result={r}
-          thumb={shop.items?.find((it) => it.image)?.image || thumb}
-          onToast={onToast}
-        />
+        {/* 공유 카드에는 판매처 이미지를 쓰지 않는다.
+            우리가 만들어 배포하는 결과물이라, 남의 상품 사진과 그 위에 합성된
+            타사 로고가 출처 없이 퍼지게 된다. 내가 찍은 사진이나 주종 엠블럼만 쓴다. */}
+        <ShareCard result={r} thumb={thumb} onToast={onToast} />
         <button className="btn primary" onClick={onRescan}>다른 술 스캔</button>
       </div>
 

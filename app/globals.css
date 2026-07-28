@@ -361,6 +361,10 @@ img, video, canvas { display: block; max-width: 100%; }
   box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.8);
 }
 .hero-emblem { opacity: 0.5; }
+.hero-credit {
+  margin: -12px 0 16px; font-size: 9.5px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--ink-dim); opacity: 0.7;
+}
 
 .badges { display: flex; justify-content: center; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
 .badge {
