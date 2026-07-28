@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
+import CatIcon from "./CatIcon";
 import TasteQuiz from "./TasteQuiz";
 import { PRICE_BANDS } from "@/lib/curation";
 
@@ -7,10 +8,29 @@ import { PRICE_BANDS } from "@/lib/curation";
 // 이름으로 찾거나, 취향 문답으로 맞춤 추천을 받거나, 묶음에서 고른다.
 // 전부 우리 DB만 읽으므로 AI 비용이 들지 않는다.
 
+// 판매처 상품 이미지가 있으면 쓰고, 없으면 주종 엠블럼으로 내려간다.
+// 이미지는 우리가 보관하는 것이 아니라 판매처 주소를 연결만 한 것이다.
+function RowThumb({ item }) {
+  const [broken, setBroken] = useState(false);
+
+  if (item.image && !broken) {
+    return (
+      <span className="disc-thumb">
+        <img src={item.image} alt="" loading="lazy" onError={() => setBroken(true)} />
+      </span>
+    );
+  }
+  return (
+    <span className="disc-thumb is-empty" style={item.liquidColor ? { "--tint": item.liquidColor } : undefined}>
+      <CatIcon category={item.category} size={22} />
+    </span>
+  );
+}
+
 function WineRow({ item, onOpen }) {
   return (
     <button className="disc-row" onClick={() => onOpen?.(item)}>
-      <span className="disc-mark" style={item.liquidColor ? { background: item.liquidColor } : undefined} />
+      <RowThumb item={item} />
       <span className="disc-body">
         <span className="disc-name">
           {item.name}
