@@ -4,14 +4,14 @@ import { fileToDataUrl } from "@/lib/imageClient";
 import { scanLoop } from "@/lib/barcodeScan";
 import Icon from "./Icon";
 
-export default function CaptureScreen({ onCapture, onBarcode }) {
+export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
   const videoRef = useRef(null);
   const fileRef = useRef(null);
   const [stream, setStream] = useState(null);
   const [starting, setStarting] = useState(false);
   const [camError, setCamError] = useState(null);
   const [dragging, setDragging] = useState(false);
-  const [mode, setMode] = useState("label"); // label | barcode
+  const [mode, setMode] = useState("label"); // label | barcode | list
 
   // 카메라는 화면에 들어오자마자 켜지 않는다.
   // 사용자가 촬영을 시작할 때 권한을 요청해야 거부감이 적고, 배터리·발열에도 낫다.
@@ -86,6 +86,17 @@ export default function CaptureScreen({ onCapture, onBarcode }) {
     shoot();
   }
 
+  // 붙여넣기 리스너는 마운트 때 한 번만 등록되므로 그때의 mode에 묶인다.
+  // 현재 모드를 ref로 읽어 항상 최신 값을 쓰게 한다.
+  const modeRef = useRef(mode);
+  modeRef.current = mode;
+
+  // 지금 모드에 맞는 처리로 보낸다 (라벨 분석 / 리스트 판독)
+  function deliver(dataUrl) {
+    if (modeRef.current === "list" && onWineList) onWineList(dataUrl);
+    else onCapture(dataUrl);
+  }
+
   function shoot() {
     const video = videoRef.current;
     if (!video?.videoWidth) return;
@@ -94,12 +105,12 @@ export default function CaptureScreen({ onCapture, onBarcode }) {
     canvas.height = video.videoHeight;
     canvas.getContext("2d").drawImage(video, 0, 0);
     if (navigator.vibrate) navigator.vibrate(30);
-    onCapture(canvas.toDataURL("image/jpeg", 0.92));
+    deliver(canvas.toDataURL("image/jpeg", 0.92));
   }
 
   async function handleFile(file) {
     if (!file || !file.type.startsWith("image/")) return;
-    onCapture(await fileToDataUrl(file));
+    deliver(await fileToDataUrl(file));
   }
 
   // 클립보드 붙여넣기
@@ -152,6 +163,16 @@ export default function CaptureScreen({ onCapture, onBarcode }) {
           >
             바코드
           </button>
+          {onWineList && (
+            <button
+              role="tab"
+              aria-selected={mode === "list"}
+              className={mode === "list" ? "on" : ""}
+              onClick={() => setMode("list")}
+            >
+              와인 리스트
+            </button>
+          )}
         </div>
       )}
 
@@ -167,11 +188,17 @@ export default function CaptureScreen({ onCapture, onBarcode }) {
 
         {live ? (
           <>
-            <div className={`cam-guide ${mode === "barcode" ? "is-barcode" : ""}`} />
+            <div
+              className={`cam-guide ${mode === "barcode" ? "is-barcode" : ""} ${
+                mode === "list" ? "is-list" : ""
+              }`}
+            />
             <div className="cam-guide-txt">
               {mode === "barcode"
                 ? "병 뒷면 바코드를 선 안에 맞춰주세요"
-                : "라벨이 프레임 안에 오도록 맞춰주세요"}
+                : mode === "list"
+                  ? "메뉴판 전체가 들어오도록 정면에서 찍어주세요"
+                  : "라벨이 프레임 안에 오도록 맞춰주세요"}
             </div>
           </>
         ) : (
@@ -181,6 +208,18 @@ export default function CaptureScreen({ onCapture, onBarcode }) {
             </div>
             {camError ? (
               <div className="cam-msg err">{camError}</div>
+            ) : mode === "list" ? (
+              <div className="cam-msg">
+                식당 와인 리스트를 찍으면
+                <br />
+                가성비 순으로 정리해 드립니다.
+              </div>
+            ) : mode === "barcode" ? (
+              <div className="cam-msg">
+                병 뒷면 바코드를 비추면
+                <br />
+                바로 찾아드립니다.
+              </div>
             ) : (
               <div className="cam-msg">
                 술병 라벨을 찍으면
@@ -222,7 +261,9 @@ export default function CaptureScreen({ onCapture, onBarcode }) {
           ? "셔터를 누르면 카메라가 켜집니다"
           : mode === "barcode"
             ? "바코드를 인식하면 자동으로 넘어갑니다 · 잘 안 읽히면 셔터를 눌러 라벨 촬영으로"
-            : "라벨이 잘 보이게 맞추고 셔터를 누르세요"}
+            : mode === "list"
+              ? "메뉴판이 한 화면에 다 들어오게 맞추고 셔터를 누르세요"
+              : "라벨이 잘 보이게 맞추고 셔터를 누르세요"}
       </p>
 
       <input

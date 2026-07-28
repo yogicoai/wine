@@ -654,6 +654,28 @@ img, video, canvas { display: block; max-width: 100%; }
 .empty-state span { display: block; font-size: 12.5px; color: var(--ink-dim); line-height: 1.75; }
 .drawer-note { font-size: 11.5px; color: var(--ink-dim); margin-top: 16px; line-height: 1.7; }
 
+/* 와인 리스트 스캔 */
+.cam-guide.is-list { inset: 6%; border-style: dashed; }
+.wl-list { display: flex; flex-direction: column; gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); margin-top: 14px; }
+.wl-row { display: flex; gap: 12px; align-items: flex-start; background: var(--bg-2); padding: 14px 15px; }
+.wl-row.is-unknown { opacity: 0.62; }
+.wl-rank {
+  flex: none; width: 22px; text-align: center; padding-top: 2px;
+  font-family: var(--font-d); font-size: 15px; color: var(--gold-lo);
+}
+.wl-body { flex: 1; min-width: 0; }
+.wl-name { font-size: 14px; color: var(--ink); line-height: 1.5; font-family: var(--font-s); word-break: keep-all; }
+.wl-name em { font-style: normal; color: var(--gold); font-family: var(--font-d); }
+.wl-name .badge { margin-left: 6px; vertical-align: 2px; }
+.wl-meta { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-top: 5px; font-size: 11.5px; }
+.wl-cat { display: inline-flex; opacity: 0.6; }
+.wl-star { color: var(--gold); font-family: var(--font-s); }
+.wl-star i { font-style: normal; color: var(--ink-dim); margin-left: 2px; font-size: 10.5px; }
+.wl-dim { color: var(--ink-dim); font-family: var(--font-s); }
+.wl-right { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+.wl-right b { font-family: var(--font-d); font-size: 16px; color: var(--gold-hi); font-weight: 500; }
+.wl-right .mini-btn { padding: 4px 10px; font-size: 10.5px; }
+
 /* 사용자 평점 */
 .crate { display: flex; gap: 20px; align-items: center; }
 .crate-score { flex: none; text-align: center; min-width: 96px; }

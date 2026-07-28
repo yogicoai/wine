@@ -5,11 +5,13 @@ import LoadingScreen from "@/components/LoadingScreen";
 import ResultScreen from "@/components/ResultScreen";
 import HistoryDrawer from "@/components/HistoryDrawer";
 import CellarScreen from "@/components/CellarScreen";
+import WineListScreen from "@/components/WineListScreen";
 import Icon from "@/components/Icon";
 import { downscale, stripPrefix } from "@/lib/imageClient";
 
 export default function Home() {
-  const [screen, setScreen] = useState("capture"); // capture | loading | result
+  const [screen, setScreen] = useState("capture"); // capture | loading | result | cellar | winelist
+  const [wineList, setWineList] = useState(null);
   const [thumb, setThumb] = useState(null);
   const [result, setResult] = useState(null);
   const [meta, setMeta] = useState(null);
@@ -152,6 +154,40 @@ export default function Home() {
     [showToast, loadSessions]
   );
 
+  // 와인 리스트(메뉴판) 한 장을 통째로 읽는다.
+  // 저비용 모델 1회 호출이면 끝이라, 항목이 몇 개든 원가는 같다.
+  async function scanWineList(dataUrl) {
+    setScreen("loading");
+    setThumb(await downscale(dataUrl, 320, 0.6));
+    try {
+      // 메뉴판은 잔글씨라 라벨보다 크게 보낸다
+      const apiImage = await downscale(dataUrl, 1600, 0.85);
+      const res = await fetch("/api/winelist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: stripPrefix(apiImage) }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "리스트를 읽지 못했습니다.");
+
+      setWineList(data);
+      setScreen("winelist");
+      window.scrollTo({ top: 0 });
+
+      if (!data.readable) showToast("리스트를 인식하지 못했습니다. 더 가까이 찍어보세요.", true);
+      else if (!data.counts?.known)
+        showToast("인식은 했지만 아직 DB에 없는 술들입니다. 개별 스캔으로 채워집니다.");
+    } catch (err) {
+      setScreen("capture");
+      showToast(err.message || "리스트를 읽지 못했습니다.", true);
+    }
+  }
+
+  // 리스트에서 항목 하나를 눌렀을 때 — 이름으로 상세를 연다 (DB에 있으므로 무료)
+  function openListItem(item) {
+    explore(item.vintage ? `${item.name} ${item.vintage}` : item.name);
+  }
+
   // 사진 없이 이름만으로 분석 (유사주 칩 클릭 / 웹 검색 재분석)
   async function explore(name, { web = false } = {}) {
     setScreen("loading");
@@ -216,6 +252,7 @@ export default function Home() {
     setResult(null);
     setThumb(null);
     setMeta(null);
+    setWineList(null);
     setScreen("capture");
   }
 
@@ -267,8 +304,13 @@ export default function Home() {
         </div>
       </header>
 
-      {screen === "capture" && <CaptureScreen onCapture={analyze} onBarcode={scanBarcode} />}
+      {screen === "capture" && (
+        <CaptureScreen onCapture={analyze} onBarcode={scanBarcode} onWineList={scanWineList} />
+      )}
       {screen === "loading" && <LoadingScreen thumb={thumb} />}
+      {screen === "winelist" && (
+        <WineListScreen data={wineList} onOpen={openListItem} onRescan={rescan} />
+      )}
       {screen === "cellar" && (
         <CellarScreen
           data={cellar}
