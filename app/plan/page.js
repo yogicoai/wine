@@ -64,7 +64,7 @@ export default function PlanPage() {
                 <tr><td>맞춤 추천 · 검색</td><td className={s.now}>완료</td></tr>
                 <tr><td>가격 이력 · 특가 알림</td><td className={s.was}>완료 · 데이터 축적 중</td></tr>
                 <tr><td>집단 평점</td><td className={s.was}>구조만 · 표 0개</td></tr>
-                <tr><td><b>카탈로그 데이터</b></td><td className={s.was}><b>59종 — 서비스에는 부족</b></td></tr>
+                <tr><td><b>카탈로그 데이터</b></td><td className={s.now}><b>1,200종+ — 1차 목표(1,000종) 달성, 계속 확장</b></td></tr>
                 <tr><td><b>로그인 · 19세 인증</b></td><td className={s.was}><b>미착수 — 출시 선행 조건</b></td></tr>
               </tbody>
             </table>
@@ -95,15 +95,16 @@ export default function PlanPage() {
             </div>
 
             <div className={s.item}>
-              <h3 className={s.h4}>2. 카탈로그 확장</h3>
+              <h3 className={s.h4}>2. 카탈로그 확장 — 진행 중</h3>
               <span className={`${s.flag} ${s.must}`}>비용 구조의 핵심</span>
               <p className={s.p}>
-                59종은 시연에는 되지만 서비스에는 부족합니다. 추천·검색 품질이 여기 달려 있고,
-                <b> 무엇보다 스캔당 원가가 여기서 결정됩니다.</b> 3장에서 자세히 다룹니다.
+                <b>1,200종을 넘겼습니다</b> (1차 목표 1,000종 달성). 네이버 인기 상품 수확기가
+                실제로 팔리는 술을 무료로 긁어오고, 사용자가 찾았는데 없던 이름은 자동으로
+                기록되어 다음에 채울 목록이 됩니다. 표기가 달라도 잇는 느슨한 매칭까지 갖춰,
+                <b> DB가 커지는 만큼 적중률이 실제로 오릅니다.</b>
               </p>
               <p className={s.p}>
-                대화로 직접 작성하면 <b>AI 비용 0원</b>입니다. 회당 15~25종씩 늘릴 수 있습니다.
-                비어 있는 곳: 부르고뉴 · 론 · 독일 · 디저트 와인, 위스키 전반, 사케 · 전통주.
+                다음 단계: 미매칭 목록 소진, 수확 주기화(주 1회), 3,000종.
               </p>
             </div>
 
@@ -327,7 +328,7 @@ export default function PlanPage() {
             </p>
           </div>
           <ol className={p.steps}>
-            <li><b>카탈로그를 300~500종까지 채운다</b> — AI 비용 0원, 원가를 구조적으로 낮추는 유일한 방법</li>
+            <li><b>카탈로그 확장 지속</b> — 1,200종 달성. 미매칭 목록을 소진하며 3,000종으로 (비용 0원)</li>
             <li><b>로그인 · 19세 인증 · 사용량 제한</b> — 스토어 출시와 구독의 공통 선행 조건</li>
             <li><b>미검증 기능을 실기기로 확인</b> — 시연 사고 방지</li>
             <li><b>안주 제휴부터 연결</b> — 화면 변경 없이 붙는 유일한 수익원</li>

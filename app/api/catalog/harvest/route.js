@@ -24,9 +24,25 @@ export const maxDuration = 60; // Vercel Hobby 상한 — 카테고리를 나눠
 const QUERY_TYPE = {
   레드와인: "레드 와인",
   화이트와인: "화이트 와인",
+  로제와인: "로제 와인",
   샴페인: "스파클링 와인 · 샴페인",
   "스파클링 와인": "스파클링 와인",
+  프로세코: "스파클링 와인 · 프로세코",
+  "카바 와인": "스파클링 와인 · 카바",
+  포트와인: "디저트 와인 · 포트",
+  아이스와인: "디저트 와인 · 아이스와인",
+  "디저트 와인": "디저트 와인",
   "보르도 와인": "레드 와인",
+  "카베르네 소비뇽 와인": "레드 와인 · 카베르네 소비뇽",
+  "피노누아 와인": "레드 와인 · 피노 누아",
+  "메를로 와인": "레드 와인 · 메를로",
+  "쉬라즈 와인": "레드 와인 · 쉬라즈",
+  "말벡 와인": "레드 와인 · 말벡",
+  "진판델 와인": "레드 와인 · 진판델",
+  "샤르도네 와인": "화이트 와인 · 샤르도네",
+  "소비뇽블랑 와인": "화이트 와인 · 소비뇽 블랑",
+  "리슬링 와인": "화이트 와인 · 리슬링",
+  "모스카토 와인": "화이트 와인 · 모스카토",
   "부르고뉴 와인": null, // 레드·화이트가 섞여 있어 단정할 수 없다
 };
 
@@ -50,11 +66,11 @@ export async function POST(request) {
   const db = await getDb();
   if (!db) return NextResponse.json({ error: "DB 미설정" }, { status: 503 });
 
-  const { categories = ["wine"], perQuery = 20, confirm = false } = await request
+  const { categories = ["wine"], perQuery = 20, pages = 1, confirm = false } = await request
     .json()
     .catch(() => ({}));
 
-  const collected = await buildSeedList({ categories, perQuery });
+  const collected = await buildSeedList({ categories, perQuery, pages });
   if (!collected) return NextResponse.json({ error: "네이버 API 키 필요" }, { status: 400 });
 
   // 이미 있는 것은 거른다 — 정확 키뿐 아니라 느슨한 매칭으로도.

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrandWord } from "@/components/Brand";
+import { catalogStats } from "@/lib/catalog";
 import s from "./guide.module.css";
 
 export const metadata = {
@@ -7,7 +8,13 @@ export const metadata = {
   description: "술 라벨을 촬영하면 AI가 주종·가격·역사·페어링을 분석하고 구매까지 연결하는 웹 앱의 기능 설명서.",
 };
 
-export default function GuidePage() {
+// 보유 종수는 계속 늘어나므로 실제 DB 값을 보여 준다 (한 시간에 한 번 갱신)
+export const revalidate = 3600;
+
+export default async function GuidePage() {
+  const catalog = await catalogStats().catch(() => null);
+  const owned = catalog?.total ? catalog.total.toLocaleString("ko-KR") : "1,200+";
+
   return (
     <div className={s.wrap}>
       <div className={s.topbar}>
@@ -28,13 +35,14 @@ export default function GuidePage() {
         </h1>
         <p className={s.lede}>
           술병 라벨을 카메라로 찍으면 <b>AI가 그 술의 모든 것</b>을 읽어내고, 실제로 살 수 있는 곳까지
-          연결합니다. 사전에 상품 데이터베이스를 만들 필요가 없습니다.
+          연결합니다. 자체 데이터베이스에 있는 술은 비용 없이 즉시 나오고, 없는 술은 AI가 분석한 뒤
+          데이터베이스에 쌓입니다 — 쓸수록 빨라지고 싸지는 구조입니다.
         </p>
         <div className={s.stats}>
+          <div className={s.stat}><b>{owned}종</b><span>보유 술 데이터</span></div>
           <div className={s.stat}><b>16</b><span>자동 판별 주종</span></div>
-          <div className={s.stat}><b>0</b><span>사전 등록 상품 수</span></div>
           <div className={s.stat}><b>30초</b><span>스캔당 분석 시간</span></div>
-          <div className={s.stat}><b>63원</b><span>스캔당 AI 비용</span></div>
+          <div className={s.stat}><b>0원</b><span>DB 적중 시 비용</span></div>
         </div>
       </header>
 
@@ -245,8 +253,11 @@ export default function GuidePage() {
           <p className={s.sub}>경쟁 서비스와 갈리는 지점입니다.</p>
 
           <div className={s.edge}>
-            <h3 className={s.h4}>사전 데이터 구축이 필요 없다</h3>
-            <p className={s.p}>상품 DB를 만들거나 관리할 인력이 들지 않습니다. 등록되지 않은 술이라는 개념 자체가 없습니다.</p>
+            <h3 className={s.h4}>등록되지 않은 술이라는 개념이 없다</h3>
+            <p className={s.p}>
+              {owned}종을 이미 보유하고 있고, 여기 없는 술은 AI가 읽어낸 뒤 데이터베이스에
+              쌓입니다. 별도 등록 인력 없이 카탈로그가 저절로 두꺼워집니다.
+            </p>
           </div>
           <div className={s.edge}>
             <h3 className={s.h4}>정보에서 끝나지 않고 구매처까지 안내한다</h3>
