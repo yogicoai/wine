@@ -58,8 +58,14 @@ export default function Home() {
     loadCellar();
   }, [loadSessions, loadCellar]);
 
+  // DB 적중이면 응답이 1~2초 만에 와서 분석 연출이 뚝 끊겨 보인다.
+  // 최소 이만큼은 보여 주고 결과로 넘어간다 — 화면일 뿐이라 비용은 0원이다.
+  // (진짜 분석은 30초쯤 걸리므로 이 대기가 걸리는 일이 없다)
+  const MIN_SCAN_SHOW = 3200;
+
   async function analyze(dataUrl) {
     setScreen("loading");
+    const startedAt = Date.now();
     try {
       const [apiImage, thumbImage] = await Promise.all([
         downscale(dataUrl, 1280, 0.82), // API용
@@ -87,6 +93,10 @@ export default function Home() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "분석 실패");
 
+      // 저장된 결과라 순식간에 왔으면, 연출이 한 바퀴는 돌게 잠시 붙잡는다
+      const remain = MIN_SCAN_SHOW - (Date.now() - startedAt);
+      if (data.cached && remain > 0) await new Promise((r) => setTimeout(r, remain));
+
       setResult(data.result);
       setMeta({
         demo: data.demo,
@@ -97,7 +107,7 @@ export default function Home() {
       setScreen("result");
 
       if (data.demo) showToast("데모 모드 — API 키를 설정하면 실제 인식이 동작합니다.");
-      else if (data.cached) showToast("이미 분석된 술이라 저장된 정보로 즉시 보여드렸습니다.");
+      else if (data.cached) showToast("이미 분석된 술이라 추가 비용 없이 보여드렸습니다.");
       else if (data.webDisabled)
         showToast("이 계정은 웹 검색을 지원하지 않아 모델 지식으로 분석했습니다.");
 
@@ -196,6 +206,7 @@ export default function Home() {
   async function explore(name, { web = false } = {}) {
     setScreen("loading");
     setThumb(null);
+    const startedAt = Date.now();
     try {
       const res = await fetch("/api/analyze", {
         method: "POST",
@@ -204,6 +215,10 @@ export default function Home() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "분석 실패");
+
+      // 저장된 결과라 순식간에 왔으면, 연출이 한 바퀴는 돌게 잠시 붙잡는다 (비용 0원)
+      const remain = MIN_SCAN_SHOW - (Date.now() - startedAt);
+      if (data.cached && remain > 0) await new Promise((r) => setTimeout(r, remain));
 
       // 사진 없이 이름으로 찾은 경우, 카탈로그에 연결해 둔 판매처 상품 이미지를 대신 보여준다
       const shown = data.image || null;

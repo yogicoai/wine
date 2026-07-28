@@ -14,8 +14,17 @@ export default function LoadingScreen({ thumb }) {
   const [i, setI] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => setI((v) => Math.min(v + 1, STEPS.length - 1)), 2600);
-    return () => clearInterval(t);
+    // 앞 단계는 빠르게, 뒤로 갈수록 천천히.
+    // 저장된 결과(약 3초 노출)에서도 단계가 서너 개는 흘러가야 일하는 것처럼 보인다.
+    let step = 0;
+    let timer;
+    const tick = () => {
+      step = Math.min(step + 1, STEPS.length - 1);
+      setI(step);
+      if (step < STEPS.length - 1) timer = setTimeout(tick, step < 3 ? 1100 : 2800);
+    };
+    timer = setTimeout(tick, 1100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
