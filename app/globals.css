@@ -689,6 +689,83 @@ img, video, canvas { display: block; max-width: 100%; }
 .empty-state span { display: block; font-size: 12.5px; color: var(--ink-dim); line-height: 1.75; }
 .drawer-note { font-size: 11.5px; color: var(--ink-dim); margin-top: 16px; line-height: 1.7; }
 
+/* ── 발견 · 추천 ── */
+.disc-search {
+  width: 100%; padding: 13px 15px; background: rgba(0, 0, 0, 0.28);
+  border: 1px solid var(--line); color: var(--ink); font-size: 14px;
+  font-family: var(--font-s); border-radius: var(--radius);
+}
+.disc-search::placeholder { color: var(--ink-dim); opacity: 0.7; }
+.disc-search:focus { outline: none; border-color: var(--gold); }
+
+.disc-list { display: flex; flex-direction: column; margin-top: 12px; }
+.disc-row {
+  display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left;
+  background: none; border: none; border-bottom: 1px solid var(--line-soft);
+  padding: 13px 2px; color: var(--ink);
+}
+.disc-row:last-child { border-bottom: none; }
+.disc-row:hover .disc-name { color: var(--gold-hi); }
+.disc-mark {
+  flex: none; width: 4px; align-self: stretch; min-height: 34px;
+  background: var(--gold-lo); opacity: 0.7;
+}
+.disc-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.disc-name { font-size: 13.5px; line-height: 1.5; font-family: var(--font-s); word-break: keep-all; transition: color 0.2s; }
+.disc-name em { font-style: normal; color: var(--gold); font-family: var(--font-d); }
+.disc-meta { font-size: 11.5px; color: var(--ink-dim); font-family: var(--font-s); }
+.disc-reason { font-size: 11.5px; color: var(--gold); font-family: var(--font-s); }
+.disc-right { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+.disc-right b { font-family: var(--font-d); font-size: 17px; color: var(--gold-hi); font-weight: 500; }
+.disc-star { font-size: 11px; color: var(--gold); }
+.disc-band {
+  font-size: 9.5px; letter-spacing: 0.08em; color: var(--ink-dim);
+  border: 1px solid var(--line-soft); padding: 2px 6px;
+}
+.disc-summary {
+  text-align: center; font-family: var(--font-d); font-size: 19px; color: var(--gold-hi);
+  margin: 4px 0 8px;
+}
+
+.disc-tabs {
+  display: flex; gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft);
+  margin-top: 18px; overflow-x: auto;
+}
+.disc-tab {
+  flex: 1 0 auto; background: var(--bg-2); border: none; color: var(--ink-dim);
+  padding: 12px 14px; font-size: 12px; font-family: var(--font-s); white-space: nowrap;
+  transition: color 0.2s, background 0.2s;
+}
+.disc-tab.on { color: var(--gold-hi); background: var(--bg-3); }
+
+/* 취향 문답 */
+.quiz-card {
+  background: linear-gradient(180deg, rgba(23, 18, 13, 0.9), rgba(15, 12, 9, 0.86));
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 24px 20px 18px; margin-top: 18px; text-align: center;
+}
+.quiz-progress { display: flex; gap: 4px; justify-content: center; margin-bottom: 18px; }
+.quiz-progress i { width: 18px; height: 2px; background: var(--line); transition: background 0.3s; }
+.quiz-progress i.on { background: var(--gold); }
+.quiz-step { font-size: 10px; letter-spacing: 0.2em; color: var(--ink-dim); }
+.quiz-q {
+  font-family: var(--font-d); font-size: 22px; font-weight: 500; line-height: 1.45;
+  margin: 12px 0 6px; color: var(--ink); word-break: keep-all;
+}
+.quiz-hint { font-size: 12px; color: var(--ink-dim); font-family: var(--font-s); margin-bottom: 4px; }
+.quiz-ox { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 14px; }
+.ox {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 20px 8px; background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--line); color: var(--ink-dim);
+  font-size: 11.5px; font-family: var(--font-s); transition: border-color 0.2s, color 0.2s;
+}
+.ox span { font-family: var(--font-d); font-size: 30px; line-height: 1; }
+.ox-o:hover, .ox-o.on { border-color: var(--gold); color: var(--gold-hi); }
+.ox-x:hover, .ox-x.on { border-color: var(--bad); color: var(--bad); }
+.ox:disabled { opacity: 0.5; }
+.quiz-foot { display: flex; gap: 10px; justify-content: center; }
+
 /* 와인 리스트 스캔 */
 .cam-guide.is-list { inset: 6%; border-style: dashed; }
 .wl-list { display: flex; flex-direction: column; gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); margin-top: 14px; }

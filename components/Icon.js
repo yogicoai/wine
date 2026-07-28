@@ -42,6 +42,12 @@ const PATHS = {
       <path d="M4.5 17h13.5M8.5 7.5h6" />
     </>
   ),
+  search: (
+    <>
+      <circle cx="10.8" cy="10.8" r="6.3" />
+      <path d="m15.5 15.5 4 4" />
+    </>
+  ),
 };
 
 export default function Icon({ name, size = 20, stroke = 1.6, className }) {

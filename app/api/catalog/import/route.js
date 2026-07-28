@@ -22,6 +22,17 @@ async function readSeedFiles() {
   return all;
 }
 
+// 큐레이션 값(가격대·초보자 점수·태그)은 술 정보와 성격이 달라 파일을 나눠 두었다.
+// 술 정보는 잘 바뀌지 않지만 큐레이션은 우리 판단이라 자주 손보게 된다.
+async function readCuration() {
+  try {
+    const parsed = JSON.parse(await readFile(path.join(DATA_DIR, "curation.json"), "utf-8"));
+    return new Map(parsed.map((c) => [c.name, c]));
+  } catch {
+    return new Map(); // 없어도 적재는 진행한다
+  }
+}
+
 // 직접 작성한 카탈로그 데이터를 적재한다 (AI 호출 없음 = 비용 0원)
 // POST /api/catalog/import              → data/seed-*.json 을 모두 읽어 적재
 // POST /api/catalog/import { items:[…] } → 본문으로 받은 항목을 적재
@@ -49,8 +60,10 @@ export async function POST(request) {
     (await db.collection("catalog").find({}, { projection: { key: 1 } }).toArray()).map((d) => d.key)
   );
 
+  const curation = await readCuration();
   let inserted = 0;
   let updated = 0;
+  let curated = 0;
   const failed = [];
 
   for (const item of items) {
@@ -59,7 +72,12 @@ export async function POST(request) {
       continue;
     }
     const isNew = !existing.has(catalogKey(item.name, item.vintage));
-    const ok = await saveCatalog({ found: true, ...item }, { usedWeb: false, model: null, source: "manual" });
+    const extra = curation.get(item.name);
+    if (extra) curated++;
+    const ok = await saveCatalog(
+      { found: true, ...item, ...(extra || {}) },
+      { usedWeb: false, model: null, source: "manual" }
+    );
     if (!ok) {
       failed.push({ name: item.name, reason: "저장 실패" });
       continue;
@@ -67,5 +85,5 @@ export async function POST(request) {
     isNew ? inserted++ : updated++;
   }
 
-  return NextResponse.json({ total: items.length, inserted, updated, failed });
+  return NextResponse.json({ total: items.length, inserted, updated, curated, failed });
 }

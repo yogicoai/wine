@@ -6,6 +6,7 @@ import ResultScreen from "@/components/ResultScreen";
 import HistoryDrawer from "@/components/HistoryDrawer";
 import CellarScreen from "@/components/CellarScreen";
 import WineListScreen from "@/components/WineListScreen";
+import DiscoverScreen from "@/components/DiscoverScreen";
 import Icon from "@/components/Icon";
 import { downscale, stripPrefix } from "@/lib/imageClient";
 
@@ -286,6 +287,14 @@ export default function Home() {
             </button>
           )}
           <button
+            className={`icon-btn ${screen === "discover" ? "on" : ""}`}
+            title="찾기 · 추천"
+            aria-label="찾기 · 추천"
+            onClick={() => setScreen(screen === "discover" ? "capture" : "discover")}
+          >
+            <Icon name="search" />
+          </button>
+          <button
             className={`icon-btn ${screen === "cellar" ? "on" : ""}`}
             title="나의 셀러"
             aria-label="나의 셀러"
@@ -311,6 +320,7 @@ export default function Home() {
       {screen === "winelist" && (
         <WineListScreen data={wineList} onOpen={openListItem} onRescan={rescan} />
       )}
+      {screen === "discover" && <DiscoverScreen onOpen={openListItem} onToast={showToast} />}
       {screen === "cellar" && (
         <CellarScreen
           data={cellar}
