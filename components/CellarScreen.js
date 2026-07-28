@@ -41,6 +41,31 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [noDb, items.length]);
 
+  // 시세 갱신 — 스테일 여부를 무시하고 전부 다시 확인한다.
+  // 판매처 API는 무료지만 항목 수만큼 시간이 걸리므로 사용자가 누를 때만 돈다.
+  async function refreshPrices() {
+    setChecking(true);
+    try {
+      const res = await fetch("/api/cellar/deals", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ all: true }),
+      });
+      const d = await res.json();
+      if (d.noApi) {
+        onToast?.("판매처 API 키가 설정되지 않아 시세를 확인할 수 없습니다.", true);
+        return;
+      }
+      setDeals(d.deals || []);
+      onReload?.();
+      onToast?.(`${d.checked ?? 0}개 항목의 시세를 갱신했습니다.`);
+    } catch {
+      onToast?.("시세를 갱신하지 못했습니다.", true);
+    } finally {
+      setChecking(false);
+    }
+  }
+
   const grouped = useMemo(() => {
     const g = { have: [], wish: [], drunk: [] };
     for (const it of items) (g[it.status] || g.have).push(it);
@@ -143,23 +168,43 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
       {value && (
         <div className="card">
           <div className="card-title">셀러 가치</div>
-          <div className="value-total">
-            <b>{value.total.toLocaleString("ko-KR")}</b>
-            <span>원</span>
-          </div>
-          <div className="value-sub">
-            현재 최저가 기준 · {value.priced}병 평가 · 평균{" "}
-            {value.average.toLocaleString("ko-KR")}원
-          </div>
+
+          {value.priced ? (
+            <>
+              <div className="value-total">
+                <b>{value.total.toLocaleString("ko-KR")}</b>
+                <span>원</span>
+              </div>
+              <div className="value-sub">
+                현재 최저가 기준 · {value.priced}병 평가 · 평균{" "}
+                {value.average.toLocaleString("ko-KR")}원
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="value-total is-empty">
+                <b>–</b>
+              </div>
+              <div className="value-sub">
+                보유 {value.bottles}병 · 아직 시세를 확인하지 않았습니다
+              </div>
+            </>
+          )}
+
           {value.gain > 0 && (
             <div className="tip-line">
               ✦ 관찰된 최고가 대비 {value.gain.toLocaleString("ko-KR")}원 낮은 값으로 채워진
               셀러입니다
             </div>
           )}
+
+          <button className="btn value-refresh" onClick={refreshPrices} disabled={checking}>
+            {checking ? "확인하는 중…" : "시세 갱신"}
+          </button>
+
           <div className="shop-note">
             {value.unpriced > 0
-              ? `${value.unpriced}병은 아직 시세를 확인하지 못했습니다. 값이 확인되면 자동으로 반영됩니다.`
+              ? `${value.unpriced}병은 아직 시세를 확인하지 못했습니다. 매일 자동으로 다시 확인하며, 지금 바로 채우려면 위 버튼을 누르세요.`
               : "판매처 최저가를 매일 확인해 반영합니다. 실제 거래가와는 다를 수 있습니다."}
           </div>
         </div>
@@ -288,8 +333,8 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
               <button className="mini-btn danger" onClick={() => remove(it._id)}>삭제</button>
             </div>
 
-            {/* 가격 이력 */}
-            {trend && (
+            {/* 가격 이력 — 점이 두 개 이상 쌓이면 그래프, 그전에는 현재값만 */}
+            {trend ? (
               <div className="price-track">
                 <Sparkline trend={trend} />
                 <div className="price-range">
@@ -298,6 +343,19 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                   <span>{trend.points.length}일 관찰</span>
                 </div>
               </div>
+            ) : (
+              it.priceLast && (
+                <div className="price-track">
+                  <div className="price-first">
+                    <b>{it.priceLast.toLocaleString("ko-KR")}원</b>
+                    <span>
+                      {it.priceLow && it.priceLow < it.priceLast
+                        ? `관찰 최저 ${it.priceLow.toLocaleString("ko-KR")}원`
+                        : "관찰 시작 · 내일부터 변동 그래프가 그려집니다"}
+                    </span>
+                  </div>
+                </div>
+              )
             )}
 
             {/* 테이스팅 노트 히스토리 */}

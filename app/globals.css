@@ -749,10 +749,13 @@ img, video, canvas { display: block; max-width: 100%; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .value-total span { font-size: 15px; color: var(--gold); font-family: var(--font-s); }
+.value-total.is-empty b { font-size: 32px; opacity: 0.5; }
 .value-sub {
   text-align: center; font-size: 12.5px; color: var(--ink-dim);
   font-family: var(--font-s); margin-bottom: 4px;
 }
+.value-refresh { width: 100%; margin: 14px 0 10px; }
+.value-refresh:disabled { opacity: 0.5; }
 
 /* 가격 이력 */
 .price-track { padding: 10px 14px 12px; border-top: 1px solid var(--line-soft); }
@@ -770,6 +773,9 @@ img, video, canvas { display: block; max-width: 100%; }
 .spark-meta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .spark-meta b { font-family: var(--font-d); font-size: 17px; color: var(--ink); font-weight: 500; }
 .spark-meta span { font-size: 11.5px; color: var(--ink-dim); font-family: var(--font-s); }
+.price-first { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.price-first b { font-family: var(--font-d); font-size: 17px; color: var(--ink); font-weight: 500; }
+.price-first span { font-size: 11.5px; color: var(--ink-dim); font-family: var(--font-s); }
 .price-range {
   display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px;
   font-size: 11px; color: var(--ink-dim); font-family: var(--font-s);
