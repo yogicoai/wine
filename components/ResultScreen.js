@@ -4,6 +4,7 @@ import { catOf } from "@/lib/cats";
 import Radar from "./Radar";
 import CatIcon from "./CatIcon";
 import CellarActions from "./CellarActions";
+import TimerVisual from "./TimerVisual";
 import VintageCompare from "./VintageCompare";
 
 // 구매 정보 — 네이버쇼핑 API(실제 제품 이미지·가격·구매 링크) + 검색 딥링크 폴백
@@ -258,63 +259,76 @@ function SimilarCard({ names, category, currentName, onExplore }) {
 }
 
 // 디캔팅·칠링 타이머 — 애호가용 실사용 기능
+const TIMER_PRESETS = [
+  { kind: "chill", label: "칠링", min: 20, hint: "냉장고에서 적정 온도까지", done: "차갑게 준비됐습니다" },
+  { kind: "decant", label: "디캔팅", min: 60, hint: "향이 열리기까지", done: "향이 열렸습니다" },
+  { kind: "long", label: "롱 디캔팅", min: 120, hint: "young · 탄닌 강한 와인", done: "충분히 열렸습니다" },
+];
+
 function ServingTimer() {
-  const PRESETS = [
-    { label: "칠링", min: 20, hint: "냉장고에서 적정 온도까지" },
-    { label: "디캔팅", min: 60, hint: "향이 열리기까지" },
-    { label: "롱 디캔팅", min: 120, hint: "young · 탄닌 강한 와인" },
-  ];
-  const [left, setLeft] = useState(null); // 남은 초
-  const [label, setLabel] = useState("");
+  const [run, setRun] = useState(null); // { preset, total, left }
 
   useEffect(() => {
-    if (left === null) return;
-    if (left <= 0) {
+    if (!run) return;
+    if (run.left <= 0) {
       if (navigator.vibrate) navigator.vibrate([120, 60, 120]);
       if (typeof Notification !== "undefined" && Notification.permission === "granted") {
-        new Notification("보틀 렌즈", { body: `${label} 완료 — 즐길 시간입니다 🍷` });
+        new Notification("보틀 렌즈", { body: `${run.preset.label} 완료 — ${run.preset.done}` });
       }
-      setLeft(null);
+      setRun(null);
       return;
     }
-    const t = setTimeout(() => setLeft((v) => v - 1), 1000);
+    const t = setTimeout(() => setRun((r) => (r ? { ...r, left: r.left - 1 } : null)), 1000);
     return () => clearTimeout(t);
-  }, [left, label]);
+  }, [run]);
 
-  function start(p) {
+  function start(preset) {
     if (typeof Notification !== "undefined" && Notification.permission === "default") {
       Notification.requestPermission();
     }
-    setLabel(p.label);
-    setLeft(p.min * 60);
+    const total = preset.min * 60;
+    setRun({ preset, total, left: total });
   }
 
-  const mm = left !== null ? String(Math.floor(left / 60)).padStart(2, "0") : null;
-  const ss = left !== null ? String(left % 60).padStart(2, "0") : null;
+  if (!run) {
+    return (
+      <div className="card">
+        <div className="card-title">타이머</div>
+        <div className="timer-presets">
+          {TIMER_PRESETS.map((p) => (
+            <button className="timer-btn" key={p.kind} onClick={() => start(p)}>
+              <i className="timer-thumb">
+                <TimerVisual kind={p.kind} progress={0.45} mini />
+              </i>
+              <b>{p.label}</b>
+              <span>{p.min}분</span>
+              <em>{p.hint}</em>
+            </button>
+          ))}
+        </div>
+        <div className="shop-note">시작하면 진행 상황이 눈에 보이고, 끝나면 알림과 진동으로 알려드립니다.</div>
+      </div>
+    );
+  }
+
+  const progress = (run.total - run.left) / run.total;
+  const mm = String(Math.floor(run.left / 60)).padStart(2, "0");
+  const ss = String(run.left % 60).padStart(2, "0");
 
   return (
     <div className="card">
       <div className="card-title">타이머</div>
-      {left === null ? (
-        <>
-          <div className="timer-presets">
-            {PRESETS.map((p) => (
-              <button className="timer-btn" key={p.label} onClick={() => start(p)}>
-                <b>{p.label}</b>
-                <span>{p.min}분</span>
-                <em>{p.hint}</em>
-              </button>
-            ))}
-          </div>
-          <div className="shop-note">완료되면 알림과 진동으로 알려드립니다.</div>
-        </>
-      ) : (
-        <div className="timer-run">
-          <div className="timer-label">{label} 진행 중</div>
-          <div className="timer-clock">{mm}:{ss}</div>
-          <button className="timer-cancel" onClick={() => setLeft(null)}>중단</button>
+      <div className="timer-run">
+        <div className="timer-stage">
+          <TimerVisual kind={run.preset.kind} progress={progress} />
         </div>
-      )}
+        <div className="timer-label">{run.preset.label} 진행 중</div>
+        <div className="timer-clock">{mm}:{ss}</div>
+        <div className="timer-bar">
+          <i style={{ width: `${progress * 100}%` }} />
+        </div>
+        <button className="timer-cancel" onClick={() => setRun(null)}>중단</button>
+      </div>
     </div>
   );
 }
