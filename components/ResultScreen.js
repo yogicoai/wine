@@ -8,6 +8,7 @@ import TimerVisual from "./TimerVisual";
 import ScrollTop from "./ScrollTop";
 import ShareCard from "./ShareCard";
 import VintageCompare from "./VintageCompare";
+import CommunityRating from "./CommunityRating";
 
 // 구매 정보 — 네이버쇼핑 API(실제 제품 이미지·가격·구매 링크) + 검색 딥링크 폴백
 function PurchaseCard({ name, keyword }) {
@@ -436,6 +437,9 @@ export default function ResultScreen({
         </div>
         {r.basis && <div className="basis">{r.basis}</div>}
       </div>
+
+      {/* 사용자 평점 — 표가 쌓이기 전에는 나타나지 않는다 */}
+      <CommunityRating name={r.name} vintage={r.vintage} />
 
       {/* 가격 */}
       {(r.priceRange || r.priceTier) && (

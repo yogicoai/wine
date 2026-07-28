@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { callClaude, hasApiKey, deepSearchAllowed } from "@/lib/claude";
 import { lookupCatalog, saveCatalog } from "@/lib/catalog";
 import { identifyEnabled, identifyLabel } from "@/lib/identify";
+import { linkBarcode, normalizeBarcode, isValidBarcode } from "@/lib/barcode";
 import { DEMOS } from "@/lib/demos";
 
 // Vercel 무료(Hobby) 플랜의 서버리스 함수 상한이 60초다.
@@ -20,7 +21,8 @@ export async function POST(request) {
   try {
     // image: base64 (data URL prefix 제거) / name: 이름으로 분석 / web: 웹 검색 강제
     // fresh: true → 캐시 무시하고 재분석
-    const { image, name, web, fresh } = await request.json();
+    // barcode: 바코드로는 못 찾아 라벨을 찍은 경우 — 분석 후 그 번호를 연결해 둔다
+    const { image, name, web, fresh, barcode } = await request.json();
     if (!image && !name && hasApiKey()) {
       return NextResponse.json({ error: "이미지 또는 이름이 필요합니다." }, { status: 400 });
     }
@@ -80,6 +82,12 @@ export async function POST(request) {
 
     // 다음 사람부터는 AI 호출 없이 응답되도록 적재
     await saveCatalog(result, { usedWeb, model, source: "scan" });
+
+    // 바코드를 읽고 온 요청이면 번호를 연결해 둔다 (같은 병은 다음부터 무료·즉시)
+    if (barcode) {
+      const code = normalizeBarcode(barcode);
+      if (code && isValidBarcode(code)) await linkBarcode(code, result);
+    }
 
     return NextResponse.json({
       demo: false,

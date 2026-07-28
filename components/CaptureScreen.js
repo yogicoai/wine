@@ -1,15 +1,17 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { fileToDataUrl } from "@/lib/imageClient";
+import { scanLoop } from "@/lib/barcodeScan";
 import Icon from "./Icon";
 
-export default function CaptureScreen({ onCapture }) {
+export default function CaptureScreen({ onCapture, onBarcode }) {
   const videoRef = useRef(null);
   const fileRef = useRef(null);
   const [stream, setStream] = useState(null);
   const [starting, setStarting] = useState(false);
   const [camError, setCamError] = useState(null);
   const [dragging, setDragging] = useState(false);
+  const [mode, setMode] = useState("label"); // label | barcode
 
   // 카메라는 화면에 들어오자마자 켜지 않는다.
   // 사용자가 촬영을 시작할 때 권한을 요청해야 거부감이 적고, 배터리·발열에도 낫다.
@@ -60,9 +62,27 @@ export default function CaptureScreen({ onCapture }) {
     return () => video.removeEventListener("loadedmetadata", play);
   }, [stream]);
 
+  // 바코드 모드에서는 셔터를 누를 필요 없이 계속 읽는다.
+  // 바코드로 찾으면 AI를 부르지 않으므로 비용도 대기 시간도 없다.
+  useEffect(() => {
+    if (mode !== "barcode" || !stream || !onBarcode) return;
+    const video = videoRef.current;
+    if (!video) return;
+
+    let done = false;
+    const stop = scanLoop(video, (code) => {
+      if (done) return;
+      done = true;
+      if (navigator.vibrate) navigator.vibrate(60);
+      onBarcode(code);
+    });
+    return stop;
+  }, [mode, stream, onBarcode]);
+
   // 셔터: 카메라가 꺼져 있으면 먼저 켜고, 켜져 있으면 촬영한다
   function onShutter() {
     if (!stream) return startCamera();
+    if (mode === "barcode") return setMode("label"); // 바코드가 안 읽히면 라벨 촬영으로
     shoot();
   }
 
@@ -111,6 +131,30 @@ export default function CaptureScreen({ onCapture }) {
         handleFile(e.dataTransfer.files?.[0]);
       }}
     >
+      {onBarcode && (
+        <div className="mode-switch" role="tablist" aria-label="인식 방식">
+          <button
+            role="tab"
+            aria-selected={mode === "label"}
+            className={mode === "label" ? "on" : ""}
+            onClick={() => setMode("label")}
+          >
+            라벨 촬영
+          </button>
+          <button
+            role="tab"
+            aria-selected={mode === "barcode"}
+            className={mode === "barcode" ? "on" : ""}
+            onClick={() => {
+              setMode("barcode");
+              if (!stream) startCamera();
+            }}
+          >
+            바코드
+          </button>
+        </div>
+      )}
+
       <div className="cam-frame">
         {/* 항상 렌더 — 준비 전에는 숨기기만 한다 */}
         <video
@@ -123,8 +167,12 @@ export default function CaptureScreen({ onCapture }) {
 
         {live ? (
           <>
-            <div className="cam-guide" />
-            <div className="cam-guide-txt">라벨이 프레임 안에 오도록 맞춰주세요</div>
+            <div className={`cam-guide ${mode === "barcode" ? "is-barcode" : ""}`} />
+            <div className="cam-guide-txt">
+              {mode === "barcode"
+                ? "병 뒷면 바코드를 선 안에 맞춰주세요"
+                : "라벨이 프레임 안에 오도록 맞춰주세요"}
+            </div>
           </>
         ) : (
           <div className="cam-fallback">
@@ -160,15 +208,21 @@ export default function CaptureScreen({ onCapture }) {
           <Icon name="gallery" />
         </button>
         <button
-          className={`shutter ${live ? "" : "is-off"}`}
-          aria-label={live ? "촬영" : "카메라 켜기"}
+          className={`shutter ${live ? "" : "is-off"} ${live && mode === "barcode" ? "is-scanning" : ""}`}
+          aria-label={
+            !live ? "카메라 켜기" : mode === "barcode" ? "라벨 촬영으로 전환" : "촬영"
+          }
           onClick={onShutter}
         />
         <div style={{ width: 52 }} />
       </div>
 
       <p className="drop-hint">
-        {live ? "라벨이 잘 보이게 맞추고 셔터를 누르세요" : "셔터를 누르면 카메라가 켜집니다"}
+        {!live
+          ? "셔터를 누르면 카메라가 켜집니다"
+          : mode === "barcode"
+            ? "바코드를 인식하면 자동으로 넘어갑니다 · 잘 안 읽히면 셔터를 눌러 라벨 촬영으로"
+            : "라벨이 잘 보이게 맞추고 셔터를 누르세요"}
       </p>
 
       <input

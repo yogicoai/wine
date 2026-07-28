@@ -18,6 +18,9 @@ export default function Home() {
   const [drawer, setDrawer] = useState(false);
   const [toast, setToast] = useState(null); // {text, err}
   const [cellar, setCellar] = useState({ items: [], taste: null });
+  // 바코드를 읽었지만 아직 우리 DB에 없는 경우, 라벨 분석 결과에 이 번호를 연결해 둔다.
+  // 그러면 다음 사람은 같은 술을 무료로 즉시 찾는다.
+  const [pendingBarcode, setPendingBarcode] = useState(null);
 
   const showToast = useCallback((text, err = false) => {
     setToast({ text, err });
@@ -72,8 +75,9 @@ export default function Home() {
       const res = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image: stripPrefix(apiImage) }),
+        body: JSON.stringify({ image: stripPrefix(apiImage), barcode: pendingBarcode }),
       });
+      setPendingBarcode(null);
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "분석 실패");
 
@@ -105,6 +109,48 @@ export default function Home() {
       showToast(err.message || "분석 중 오류가 발생했습니다.", true);
     }
   }
+
+  // 바코드로 찾기 — AI를 부르지 않으므로 비용이 들지 않는다.
+  // 우리 DB에 없는 번호면 라벨 촬영으로 넘기고, 분석이 끝난 뒤 번호를 연결해 둔다.
+  const scanBarcode = useCallback(
+    async (code) => {
+      setScreen("loading");
+      setThumb(null);
+      try {
+        const res = await fetch(`/api/barcode?code=${encodeURIComponent(code)}`);
+        const data = await res.json();
+
+        if (!data.found) {
+          setPendingBarcode(data.reason === "invalid" ? null : data.code || code);
+          setScreen("capture");
+          showToast(
+            data.reason === "invalid"
+              ? "바코드를 정확히 읽지 못했습니다. 라벨을 촬영해 주세요."
+              : "아직 등록되지 않은 바코드입니다. 라벨을 촬영하면 다음부터 바로 찾아드립니다."
+          );
+          return;
+        }
+
+        setResult(data.result);
+        setThumb(data.image || null);
+        setMeta({ cached: true, byBarcode: true });
+        setScreen("result");
+        window.scrollTo({ top: 0 });
+        if (navigator.vibrate) navigator.vibrate([20, 40, 20]);
+        showToast("바코드로 찾았습니다 — 저장된 정보라 분석 비용이 들지 않았습니다.");
+
+        fetch("/api/sessions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ result: data.result, thumb: data.image || null }),
+        }).then(loadSessions);
+      } catch {
+        setScreen("capture");
+        showToast("바코드를 조회하지 못했습니다.", true);
+      }
+    },
+    [showToast, loadSessions]
+  );
 
   // 사진 없이 이름만으로 분석 (유사주 칩 클릭 / 웹 검색 재분석)
   async function explore(name, { web = false } = {}) {
@@ -221,7 +267,7 @@ export default function Home() {
         </div>
       </header>
 
-      {screen === "capture" && <CaptureScreen onCapture={analyze} />}
+      {screen === "capture" && <CaptureScreen onCapture={analyze} onBarcode={scanBarcode} />}
       {screen === "loading" && <LoadingScreen thumb={thumb} />}
       {screen === "cellar" && (
         <CellarScreen

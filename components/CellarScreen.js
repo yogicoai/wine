@@ -2,8 +2,10 @@
 import { useEffect, useMemo, useState } from "react";
 import Radar from "./Radar";
 import PushToggle from "./PushToggle";
+import CatIcon from "./CatIcon";
+import Sparkline from "./Sparkline";
 import { catOf } from "@/lib/cats";
-import { STATUSES, drinkWindowState } from "@/lib/cellar";
+import { drinkWindowState, cellarValue, priceTrend } from "@/lib/cellar";
 
 const TABS = [
   { key: "have", label: "보유" },
@@ -46,6 +48,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
   }, [items]);
 
   const totalBottles = grouped.have.reduce((s, it) => s + (it.bottles || 0), 0);
+  const value = useMemo(() => cellarValue(items), [items]);
   const readyNow = grouped.have.filter((it) => {
     const w = drinkWindowState(it);
     return w && (w.key === "peak" || w.key === "soon");
@@ -136,6 +139,32 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
         <PushToggle onToast={onToast} />
       </div>
 
+      {/* 셀러 가치 */}
+      {value && (
+        <div className="card">
+          <div className="card-title">셀러 가치</div>
+          <div className="value-total">
+            <b>{value.total.toLocaleString("ko-KR")}</b>
+            <span>원</span>
+          </div>
+          <div className="value-sub">
+            현재 최저가 기준 · {value.priced}병 평가 · 평균{" "}
+            {value.average.toLocaleString("ko-KR")}원
+          </div>
+          {value.gain > 0 && (
+            <div className="tip-line">
+              ✦ 관찰된 최고가 대비 {value.gain.toLocaleString("ko-KR")}원 낮은 값으로 채워진
+              셀러입니다
+            </div>
+          )}
+          <div className="shop-note">
+            {value.unpriced > 0
+              ? `${value.unpriced}병은 아직 시세를 확인하지 못했습니다. 값이 확인되면 자동으로 반영됩니다.`
+              : "판매처 최저가를 매일 확인해 반영합니다. 실제 거래가와는 다를 수 있습니다."}
+          </div>
+        </div>
+      )}
+
       {/* 취향 프로필 */}
       {taste ? (
         <div className="card">
@@ -189,6 +218,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
       {list.map((it) => {
         const cat = catOf(it.category);
         const win = drinkWindowState(it);
+        const trend = priceTrend(it);
         return (
           <div className="cellar-item" key={it._id}>
             <button className="cellar-main" onClick={() => onOpen?.(it._id)}>
@@ -257,6 +287,18 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
 
               <button className="mini-btn danger" onClick={() => remove(it._id)}>삭제</button>
             </div>
+
+            {/* 가격 이력 */}
+            {trend && (
+              <div className="price-track">
+                <Sparkline trend={trend} />
+                <div className="price-range">
+                  <span>최저 {trend.min.toLocaleString("ko-KR")}원</span>
+                  <span>최고 {trend.max.toLocaleString("ko-KR")}원</span>
+                  <span>{trend.points.length}일 관찰</span>
+                </div>
+              </div>
+            )}
 
             {/* 테이스팅 노트 히스토리 */}
             {it.notes?.length > 0 && (

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/mongodb";
+import { recordRating, removeRating } from "@/lib/ratings";
 
 export const runtime = "nodejs";
 
@@ -68,6 +69,10 @@ export async function PATCH(request, { params }) {
 
   await col.updateOne({ _id }, ops);
   const updated = await col.findOne({ _id }, { projection: { result: 0 } });
+
+  // 별점이 바뀌었으면 집단 평점에도 반영한다 (다른 사람의 결과 화면에 평균으로 나타난다)
+  if (set.rating) await recordRating(updated, set.rating);
+
   return NextResponse.json({ saved: true, item: { ...updated, _id: updated._id.toString() } });
 }
 
@@ -78,5 +83,6 @@ export async function DELETE(_request, { params }) {
   const _id = oid(id);
   if (!_id) return NextResponse.json({ error: "잘못된 ID" }, { status: 400 });
   await col.deleteOne({ _id });
+  await removeRating(id); // 항목이 사라졌으면 표도 회수한다
   return NextResponse.json({ deleted: true });
 }

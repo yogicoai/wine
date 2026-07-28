@@ -654,6 +654,106 @@ img, video, canvas { display: block; max-width: 100%; }
 .empty-state span { display: block; font-size: 12.5px; color: var(--ink-dim); line-height: 1.75; }
 .drawer-note { font-size: 11.5px; color: var(--ink-dim); margin-top: 16px; line-height: 1.7; }
 
+/* 사용자 평점 */
+.crate { display: flex; gap: 20px; align-items: center; }
+.crate-score { flex: none; text-align: center; min-width: 96px; }
+.crate-score > b {
+  display: block; font-family: var(--font-d); font-size: 42px; font-weight: 500; line-height: 1;
+  background: linear-gradient(178deg, #f6ecd4, var(--gold) 55%, var(--gold-lo));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.crate-stars { margin: 6px 0 3px; font-size: 12px; letter-spacing: 2px; color: var(--line); }
+.crate-stars .on { color: var(--gold); }
+.crate-count { font-size: 10.5px; color: var(--ink-dim); letter-spacing: 0.1em; }
+.crate-bars { flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.crate-bar { display: flex; align-items: center; gap: 8px; }
+.crate-bar em {
+  font-style: normal; font-size: 10.5px; color: var(--ink-dim); width: 10px; flex: none;
+  font-family: var(--font-b, var(--font-s));
+}
+.crate-bar i { flex: 1; height: 4px; background: var(--bg-3); display: block; min-width: 0; }
+.crate-bar i span { display: block; height: 100%; background: var(--gold-lo); transition: width 0.4s; }
+.crate-bar b {
+  font-size: 10.5px; color: var(--ink-dim); width: 18px; text-align: right; flex: none;
+  font-weight: 400;
+}
+
+/* 라벨 / 바코드 전환 */
+.mode-switch {
+  display: flex; gap: 4px; margin: 0 auto 12px; width: fit-content;
+  padding: 3px; border: 1px solid var(--line-soft); border-radius: 999px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.mode-switch button {
+  background: none; border: none; border-radius: 999px; padding: 7px 18px;
+  font-family: var(--font-s); font-size: 12.5px; letter-spacing: 0.04em;
+  color: var(--ink-dim); transition: color 0.2s, background 0.2s;
+}
+.mode-switch button.on {
+  color: #1a150e; background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+  font-weight: 600;
+}
+
+/* 바코드 조준선 — 가로로 긴 띠 */
+.cam-guide.is-barcode {
+  top: 50%; bottom: auto; left: 8%; right: 8%; height: 96px;
+  transform: translateY(-50%);
+}
+.cam-guide.is-barcode::after {
+  content: ""; position: absolute; left: 6%; right: 6%; top: 50%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  animation: scanline 1.9s ease-in-out infinite;
+}
+@keyframes scanline {
+  0%, 100% { transform: translateY(-38px); opacity: 0.35; }
+  50% { transform: translateY(38px); opacity: 1; }
+}
+.shutter.is-scanning { animation: pulse-ring 1.6s ease-in-out infinite; }
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 178, 120, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(212, 178, 120, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cam-guide.is-barcode::after, .shutter.is-scanning { animation: none; }
+}
+
+/* 셀러 가치 */
+.value-total {
+  display: flex; align-items: baseline; justify-content: center; gap: 6px; margin: 6px 0 2px;
+}
+.value-total b {
+  font-family: var(--font-d); font-size: 40px; font-weight: 500; letter-spacing: -0.01em;
+  background: linear-gradient(180deg, #f6ecd4, var(--gold) 45%, #8f6f3d);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.value-total span { font-size: 15px; color: var(--gold); font-family: var(--font-s); }
+.value-sub {
+  text-align: center; font-size: 12.5px; color: var(--ink-dim);
+  font-family: var(--font-s); margin-bottom: 4px;
+}
+
+/* 가격 이력 */
+.price-track { padding: 10px 14px 12px; border-top: 1px solid var(--line-soft); }
+.spark { display: flex; align-items: center; gap: 12px; }
+.spark svg { flex: none; overflow: visible; }
+.spark-area { fill: rgba(212, 178, 120, 0.1); stroke: none; }
+.spark-line { fill: none; stroke: var(--gold); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+.spark-dot { fill: var(--gold); }
+.spark.tone-down .spark-line { stroke: var(--ok, #7bb08a); }
+.spark.tone-down .spark-area { fill: rgba(123, 176, 138, 0.1); }
+.spark.tone-down .spark-dot { fill: var(--ok, #7bb08a); }
+.spark.tone-up .spark-line { stroke: #b98a7a; }
+.spark.tone-up .spark-area { fill: rgba(185, 138, 122, 0.1); }
+.spark.tone-up .spark-dot { fill: #b98a7a; }
+.spark-meta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.spark-meta b { font-family: var(--font-d); font-size: 17px; color: var(--ink); font-weight: 500; }
+.spark-meta span { font-size: 11.5px; color: var(--ink-dim); font-family: var(--font-s); }
+.price-range {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px;
+  font-size: 11px; color: var(--ink-dim); font-family: var(--font-s);
+}
+.price-range span { letter-spacing: 0.02em; }
+
 /* 공유 카드 */
 .share-modal {
   position: fixed; z-index: 45; left: 50%; top: 50%; transform: translate(-50%, -50%);
