@@ -8,6 +8,12 @@ import { PRICE_BANDS } from "@/lib/curation";
 // 이름으로 찾거나, 취향 문답으로 맞춤 추천을 받거나, 묶음에서 고른다.
 // 전부 우리 DB만 읽으므로 AI 비용이 들지 않는다.
 
+const MOODS = [
+  { key: "taste", label: "내 취향", title: "당신 취향이면 이 술" },
+  { key: "beginner", label: "입문자", title: "처음이라면 이 술부터" },
+  { key: "browse", label: "다 보기", title: "우리가 아는 와인" },
+];
+
 // 판매처 상품 이미지가 있으면 쓰고, 없으면 주종 엠블럼으로 내려간다.
 // 이미지는 우리가 보관하는 것이 아니라 판매처 주소를 연결만 한 것이다.
 function RowThumb({ item }) {
@@ -59,7 +65,10 @@ export default function DiscoverScreen({ onOpen, onToast }) {
   const [summary, setSummary] = useState(null);
   const [answered, setAnswered] = useState(0);
 
-  const [tab, setTab] = useState("taste"); // taste | beginner | 1..5
+  // 성격과 가격은 서로 다른 축이라 따로 고른다.
+  // 한 줄에 섞어 두면 "입문자용인데 5만원 이하" 를 물을 수 없는데, 그게 가장 흔한 질문이다.
+  const [mood, setMood] = useState("taste"); // taste | beginner | browse
+  const [band, setBand] = useState(null); // null = 전체
   const [list, setList] = useState({ loading: true, items: [], needsProfile: false });
 
   // 저장된 취향 요약
@@ -73,16 +82,12 @@ export default function DiscoverScreen({ onOpen, onToast }) {
       .catch(() => {});
   }, []);
 
-  const loadList = useCallback(async (which) => {
+  const loadList = useCallback(async (which, priceBand) => {
     setList({ loading: true, items: [], needsProfile: false });
-    const url =
-      which === "taste"
-        ? "/api/recommend?mode=taste&limit=10"
-        : which === "beginner"
-          ? "/api/recommend?mode=beginner&limit=10"
-          : `/api/recommend?mode=price&band=${which}&limit=10`;
+    const params = new URLSearchParams({ mode: which, limit: "12" });
+    if (priceBand) params.set("band", String(priceBand));
     try {
-      const d = await (await fetch(url)).json();
+      const d = await (await fetch(`/api/recommend?${params}`)).json();
       setList({ loading: false, items: d.items || [], needsProfile: !!d.needsProfile });
     } catch {
       setList({ loading: false, items: [], needsProfile: false });
@@ -90,8 +95,8 @@ export default function DiscoverScreen({ onOpen, onToast }) {
   }, []);
 
   useEffect(() => {
-    loadList(tab);
-  }, [tab, loadList]);
+    loadList(mood, band);
+  }, [mood, band, loadList]);
 
   // 검색 — 입력이 멈춘 뒤에 부른다
   useEffect(() => {
@@ -149,8 +154,8 @@ export default function DiscoverScreen({ onOpen, onToast }) {
             setQuiz(false);
             setSummary(d.summary);
             setAnswered(d.profile?.answered || 0);
-            setTab("taste");
-            loadList("taste");
+            setMood("taste");
+            loadList("taste", band);
             onToast?.("취향을 저장했습니다.");
           }}
         />
@@ -175,32 +180,49 @@ export default function DiscoverScreen({ onOpen, onToast }) {
         </div>
       )}
 
-      {/* 추천 묶음 */}
-      <div className="disc-tabs">
-        <button className={`disc-tab ${tab === "taste" ? "on" : ""}`} onClick={() => setTab("taste")}>
-          맞춤
-        </button>
-        <button className={`disc-tab ${tab === "beginner" ? "on" : ""}`} onClick={() => setTab("beginner")}>
-          입문자
-        </button>
-        {PRICE_BANDS.map((b) => (
-          <button
-            key={b.band}
-            className={`disc-tab ${tab === b.band ? "on" : ""}`}
-            onClick={() => setTab(b.band)}
-          >
-            {b.short}
-          </button>
-        ))}
+      {/* 추천 — 성격과 가격을 따로 고른다 */}
+      <div className="card disc-filters">
+        <div className="filter-row">
+          <span className="filter-label">어떤 술을</span>
+          <div className="filter-chips">
+            {MOODS.map((m) => (
+              <button
+                key={m.key}
+                className={`filter-chip ${mood === m.key ? "on" : ""}`}
+                onClick={() => setMood(m.key)}
+              >
+                {m.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="filter-row">
+          <span className="filter-label">가격은</span>
+          <div className="filter-chips">
+            <button
+              className={`filter-chip ${band === null ? "on" : ""}`}
+              onClick={() => setBand(null)}
+            >
+              전체
+            </button>
+            {PRICE_BANDS.map((b) => (
+              <button
+                key={b.band}
+                className={`filter-chip ${band === b.band ? "on" : ""}`}
+                onClick={() => setBand(band === b.band ? null : b.band)}
+              >
+                {b.short}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="card">
         <div className="card-title">
-          {tab === "taste"
-            ? "당신 취향이면 이 술"
-            : tab === "beginner"
-              ? "처음이라면 이 술부터"
-              : `${PRICE_BANDS[tab - 1]?.label} · ${PRICE_BANDS[tab - 1]?.note}`}
+          {MOODS.find((m) => m.key === mood)?.title}
+          {band ? ` · ${PRICE_BANDS[band - 1]?.label}` : ""}
         </div>
 
         {list.loading && <div className="shop-note">고르는 중…</div>}
@@ -221,7 +243,7 @@ export default function DiscoverScreen({ onOpen, onToast }) {
           ))}
         </div>
 
-        {tab === "taste" && list.items.length > 0 && (
+        {mood === "taste" && list.items.length > 0 && (
           <div className="shop-note">
             우리 DB 안에서 골랐습니다. 옆의 숫자는 취향과 얼마나 가까운지를 나타냅니다.
           </div>

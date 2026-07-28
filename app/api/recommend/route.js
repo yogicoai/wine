@@ -19,14 +19,19 @@ export async function GET(request) {
 
   try {
     const category = params.get("category") || "wine";
+    // 가격대는 성격(맞춤·입문자·둘러보기)과 별개로 걸 수 있다.
+    // "입문자용인데 5만원 이하" 같은 조합이 실제로 가장 많이 나오는 질문이다.
+    const band = Number(params.get("band")) || null;
 
     if (mode === "beginner") {
-      return NextResponse.json({ mode, ...(await recommendForBeginner({ limit, category })) });
+      return NextResponse.json({
+        mode,
+        band,
+        ...(await recommendForBeginner({ limit, category, band })),
+      });
     }
 
-    if (mode === "price") {
-      const band = Number(params.get("band"));
-      if (!band) return NextResponse.json({ error: "band 필요" }, { status: 400 });
+    if (mode === "browse" || mode === "price") {
       return NextResponse.json({
         mode,
         band,
@@ -39,7 +44,7 @@ export async function GET(request) {
     const saved = await db.collection("preferences").findOne({ owner });
     const answers = saved?.answers ? profileFromAnswers(saved.answers) : null;
 
-    const result = await recommendByTaste({ answers, limit });
+    const result = await recommendByTaste({ answers, limit, band });
     if (!result) {
       // 취향을 알 방법이 아직 없다 — 화면에서 문답으로 안내한다
       return NextResponse.json({ mode, items: [], needsProfile: true });

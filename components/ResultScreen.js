@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { catOf } from "@/lib/cats";
+import { servingPlan } from "@/lib/serving";
 import Radar from "./Radar";
 import CatIcon from "./CatIcon";
 import CellarActions from "./CellarActions";
@@ -305,15 +306,12 @@ function SimilarCard({ names, category, currentName, onExplore }) {
 }
 
 // 디캔팅·칠링 타이머 — 애호가용 실사용 기능
-const TIMER_PRESETS = [
-  { kind: "chill", label: "칠링", min: 20, hint: "냉장고에서 적정 온도까지", done: "차갑게 준비됐습니다" },
-  { kind: "decant", label: "디캔팅", min: 60, hint: "향이 열리기까지", done: "향이 열렸습니다" },
-  { kind: "long", label: "롱 디캔팅", min: 120, hint: "young · 탄닌 강한 와인", done: "충분히 열렸습니다" },
-];
-
-function ServingTimer() {
+function ServingTimer({ result }) {
   const [picked, setPicked] = useState(null); // 고른 항목 (아직 시작 전)
   const [run, setRun] = useState(null); // { preset, total, left }
+
+  // 준비 시간은 술마다 다르다. 이 술에 필요한 것만 만든다.
+  const plan = servingPlan(result);
 
   useEffect(() => {
     if (!run) return;
@@ -339,16 +337,23 @@ function ServingTimer() {
   }
 
   if (!run) {
+    if (!plan.presets.length) return null;
+
     return (
       <div className="card">
-        <div className="card-title">타이머</div>
-        <div className="timer-presets">
-          {TIMER_PRESETS.map((p) => (
+        <div className="card-title">마시기 전 준비</div>
+        <div
+          className="timer-presets"
+          style={{ gridTemplateColumns: `repeat(${Math.min(3, plan.presets.length)}, 1fr)` }}
+        >
+          {plan.presets.map((p) => (
             <button
-              className={`timer-btn ${picked?.kind === p.kind ? "on" : ""}`}
-              key={p.kind}
-              aria-pressed={picked?.kind === p.kind}
-              onClick={() => setPicked(picked?.kind === p.kind ? null : p)}
+              className={`timer-btn ${picked?.min === p.min && picked?.kind === p.kind ? "on" : ""}`}
+              key={`${p.kind}-${p.min}`}
+              aria-pressed={picked?.min === p.min && picked?.kind === p.kind}
+              onClick={() =>
+                setPicked(picked?.min === p.min && picked?.kind === p.kind ? null : p)
+              }
             >
               <i className="timer-thumb">
                 <TimerVisual kind={p.kind} progress={0.45} mini />
@@ -364,6 +369,8 @@ function ServingTimer() {
           {picked ? `${picked.label} ${picked.min}분 시작` : "시간을 먼저 선택하세요"}
         </button>
 
+        {plan.avoid && <div className="avoid-line">✕ {plan.avoid}</div>}
+        {plan.note && <div className="shop-note">{plan.note}</div>}
         <div className="shop-note">시작하면 진행 상황이 눈에 보이고, 끝나면 알림과 진동으로 알려드립니다.</div>
       </div>
     );
@@ -636,7 +643,7 @@ export default function ResultScreen({
       )}
 
       {/* 서빙 타이머 */}
-      <ServingTimer />
+      <ServingTimer result={r} />
 
       {/* 유사주 — 카탈로그에 있는 술만 눌러서 볼 수 있다 (새 분석 비용 없음) */}
       <SimilarCard
