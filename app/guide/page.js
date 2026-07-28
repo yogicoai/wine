@@ -90,7 +90,7 @@ export default function GuidePage() {
         <div className={s.num}>03</div>
         <div className={s.body}>
           <h2 className={s.h2}>화면별 사용법</h2>
-          <p className={s.sub}>촬영 → 분석 → 결과 → 기록, 네 개의 화면으로 이루어집니다.</p>
+          <p className={s.sub}>촬영 → 분석 → 결과 → 기록, 그리고 사진 없이 찾는 길까지.</p>
           <div className={s.screens}>
             <div className={s.screen}>
               <span className={s.tag}>Screen 1</span>
@@ -184,6 +184,37 @@ export default function GuidePage() {
 
             <div className={s.screen}>
               <span className={s.tag}>Screen 5</span>
+              <h3 className={s.h4}>찾기 · 추천</h3>
+              <p className={s.p}>
+                사진을 찍을 상황이 아닐 때 — 집에서 고를 때, 선물을 찾을 때 — 쓰는 화면입니다.
+                전부 우리 데이터베이스만 읽으므로 <b>AI 비용이 들지 않습니다</b>.
+              </p>
+              <ul className={s.list}>
+                <li>
+                  <b>이름으로 찾기</b> — 이름 · 생산자 · 산지 · 품종. “샤또딸보”처럼 붙여 써도,
+                  “칠레”나 “보르도”처럼 산지로도 찾힙니다
+                </li>
+                <li>
+                  <b>취향 문답</b> — O · X 여덟 문항, 30초. 떫은맛 · 단맛 · 무게감 · 산미 · 예산을 묻고
+                  취향에 맞는 와인을 골라 드립니다
+                </li>
+                <li><b>입문자 추천</b> — 떫은맛이 적고 값이 부담 없는 순서로</li>
+                <li><b>가격대별 추천</b> — 2만원 이하부터 30만원 이상까지 다섯 단</li>
+              </ul>
+              <p className={s.p} style={{ marginTop: "0.9rem" }}>
+                <b>왜 문답이 필요한가.</b> 기록으로 취향을 뽑는 방식은 별점이 두 개 이상 쌓여야
+                동작합니다. 처음 온 사람에게는 아무것도 줄 수 없다는 뜻입니다. 문답이 있으면 첫날부터
+                추천이 나오고, 기록이 쌓이면 기록 쪽에 점점 더 무게가 실립니다. Vivino는 추천을 받으려면
+                먼저 여러 병을 마시고 평가해야 합니다.
+              </p>
+              <p className={s.p} style={{ marginTop: "0.9rem" }}>
+                추천마다 <b>왜 골랐는지</b> 한 줄이 붙습니다. “약한 탄닌이 취향과 맞습니다”처럼요.
+                근거 없는 추천은 신뢰를 얻지 못합니다.
+              </p>
+            </div>
+
+            <div className={s.screen}>
+              <span className={s.tag}>Screen 6</span>
               <h3 className={s.h4}>와인 리스트</h3>
               <p className={s.p}>
                 식당에서 와인 리스트를 받았을 때 진짜 문제는 “뭘 시켜야 하나”입니다.
@@ -238,6 +269,14 @@ export default function GuidePage() {
             <p className={s.p}>별점과 테이스팅 노트가 모여 취향 프로필이 되고, 이는 추천 정확도의 기반이 됩니다.</p>
           </div>
           <div className={s.edge}>
+            <h3 className={s.h4}>첫날부터 추천을 받는다</h3>
+            <p className={s.p}>
+              Vivino에서 추천을 받으려면 먼저 여러 병을 마시고 평가해야 합니다. 우리는 O · X 여덟
+              문항이면 됩니다. 기록이 쌓이면 그쪽에 점점 더 무게가 실리므로, 쓸수록 정확해지는 것은
+              같으면서 시작점이 다릅니다.
+            </p>
+          </div>
+          <div className={s.edge}>
             <h3 className={s.h4}>식당에서 쓸 수 있다</h3>
             <p className={s.p}>
               와인 리스트를 통째로 읽어 가성비 순으로 세우는 기능은 국내 앱에서 찾기 어렵습니다.
@@ -259,7 +298,7 @@ export default function GuidePage() {
                 <tr>
                   <td>Vivino</td>
                   <td>사용자 집단 평점, 와인 리스트 스캔</td>
-                  <td>리스트 스캔 보유 · 평점은 축적 시작</td>
+                  <td>리스트 스캔 보유 · 평점은 축적 시작 · 추천은 첫날부터</td>
                 </tr>
                 <tr>
                   <td>Wine-Searcher</td>
@@ -621,8 +660,9 @@ export default function GuidePage() {
           <p className={s.p} style={{ marginBottom: "1.6rem" }}>
             앞서 제안드렸던 <b>결과 캐싱</b>(같은 술 재스캔 시 AI 호출 없이 즉시 응답),
             <b> 공유 카드</b>, <b>이미지 저장소 이전</b>(Cafe24 호스팅), <b>모바일 앱화</b>는 반영을 마쳤습니다.
-            여기에 <b>가격 이력 · 셀러 가치 평가 · 바코드 스캔 · 사용자 평점 · 음용 적기 알림 · 와인 리스트 스캔</b>이
-            더해졌으며, 이 여섯 가지는 <b>추가 AI 비용 없이</b> 동작합니다.
+            여기에 <b>가격 이력 · 셀러 가치 평가 · 바코드 스캔 · 사용자 평점 · 음용 적기 알림 ·
+            와인 리스트 스캔 · 맞춤 추천 · 이름 검색</b>이 더해졌으며, 와인 리스트 스캔을 뺀
+            나머지는 모두 <b>추가 AI 비용 없이</b> 동작합니다.
           </p>
 
           <div className={s.prio}>
@@ -638,11 +678,12 @@ export default function GuidePage() {
             </div>
 
             <div className={s.item}>
-              <h3 className={s.h4}>개인화 추천</h3>
-              <span className={`${s.flag} ${s.soon}`}>권장</span>
+              <h3 className={s.h4}>데이터베이스 확장</h3>
+              <span className={`${s.flag} ${s.must}`}>최우선</span>
               <p className={s.p}>
-                취향 레이더는 이미 만들어지고 있으나, 아직 “당신이 좋아할 와인” 추천으로 연결되지 않았습니다.
-                별점 기록과 우리 DB를 맞대면 추가 AI 비용 없이 구현할 수 있습니다.
+                현재 56종(와인 43종)입니다. 추천과 검색의 품질은 결국 여기에 달려 있습니다. 스캔이
+                쌓이면 자동으로 늘지만, 초기에는 직접 채워 넣는 편이 빠릅니다. AI 호출 없이 작성하므로
+                추가 비용이 들지 않습니다.
               </p>
             </div>
 
