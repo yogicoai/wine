@@ -1,0 +1,51 @@
+/* 내부 검토 페이지 전용 — 나머지는 설명서(guide.module.css)를 그대로 쓴다 */
+
+.notice {
+  margin-top: 2rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px dashed var(--line);
+  font-family: var(--font-s);
+  font-size: 0.82rem;
+  color: var(--ink-dim);
+  line-height: 1.7;
+}
+.notice code {
+  color: var(--gold);
+  font-size: 0.9em;
+}
+
+.callout {
+  margin: 1.8rem 0;
+  padding: 1.2rem 1.3rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(212, 178, 120, 0.06);
+  font-family: var(--font-s);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--ink);
+}
+.callout b { color: var(--gold-hi); }
+
+.steps {
+  margin: 1.4rem 0 0;
+  padding-left: 1.4rem;
+  font-family: var(--font-s);
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: var(--ink);
+}
+.steps li { margin-bottom: 0.7rem; }
+.steps li::marker { color: var(--gold); font-family: var(--font-d); }
+.steps b { color: var(--gold-hi); }
+
+.footer {
+  margin-top: 4rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-s);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+  text-align: center;
+}
+.footer code { color: var(--gold-lo); }
