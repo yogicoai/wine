@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { catOf } from "@/lib/cats";
 import { servingPlan } from "@/lib/serving";
-import { flagOf } from "@/lib/flags";
+import Flag from "./Flag";
 import Radar from "./Radar";
 import CatIcon from "./CatIcon";
 import CellarActions from "./CellarActions";
@@ -501,7 +501,7 @@ export default function ResultScreen({
         <h1 className="hero-name">{r.name}</h1>
         <div className="hero-rule"><i>✦</i></div>
         <div className="hero-meta">
-          {flagOf(r.country) && <span className="flag">{flagOf(r.country)}&nbsp;</span>}
+          <Flag country={r.country} width={17} />
           {[r.producer, r.vintage, r.region, r.country, r.alcohol].filter(Boolean).join(" · ")}
         </div>
         <div className="badges">

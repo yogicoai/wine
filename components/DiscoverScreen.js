@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import CatIcon from "./CatIcon";
 import TasteQuiz from "./TasteQuiz";
 import { PRICE_BANDS } from "@/lib/curation";
-import { flagOf } from "@/lib/flags";
+import Flag from "./Flag";
 
 // 발견 — 사진을 찍을 상황이 아닐 때의 진입로.
 // 이름으로 찾거나, 취향 문답으로 맞춤 추천을 받거나, 묶음에서 고른다.
@@ -44,7 +44,7 @@ function WineRow({ item, onOpen }) {
           {item.vintage && <em> {item.vintage}</em>}
         </span>
         <span className="disc-meta">
-          {flagOf(item.country) && <em className="flag">{flagOf(item.country)}</em>}
+          <Flag country={item.country} width={15} />
           {[item.type, item.region || item.country].filter(Boolean).join(" · ")}
         </span>
         {item.reason && <span className="disc-reason">{item.reason}</span>}

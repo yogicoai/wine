@@ -16,7 +16,9 @@ export const revalidate = 3600;
 
 export default async function GuidePage() {
   const catalog = await catalogStats().catch(() => null);
-  const owned = catalog?.total ? catalog.total.toLocaleString("ko-KR") : "1,200+";
+  const owned = catalog?.total ? catalog.total.toLocaleString("ko-KR") : "4,000+";
+  // "자동 판별 주종"도 부풀리지 않고 실제 데이터를 보유한 주종 수를 쓴다
+  const cats = catalog?.byCategory?.filter((c) => c.category && c.count > 0).length || 11;
 
   return (
     <div className={s.wrap}>
@@ -43,7 +45,7 @@ export default async function GuidePage() {
         </p>
         <div className={s.stats}>
           <div className={s.stat}><b>{owned}종</b><span>보유 술 데이터</span></div>
-          <div className={s.stat}><b>16</b><span>자동 판별 주종</span></div>
+          <div className={s.stat}><b>{cats}개</b><span>데이터 보유 주종</span></div>
           <div className={s.stat}><b>30초</b><span>스캔당 분석 시간</span></div>
           <div className={s.stat}><b>0원</b><span>DB 적중 시 비용</span></div>
         </div>
