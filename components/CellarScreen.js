@@ -5,6 +5,7 @@ import PushToggle from "./PushToggle";
 import CatIcon from "./CatIcon";
 import Sparkline from "./Sparkline";
 import { catOf } from "@/lib/cats";
+import { flagOf } from "@/lib/flags";
 import { drinkWindowState, cellarValue, priceTrend, priceStats, targetSuggestions } from "@/lib/cellar";
 
 const TABS = [
@@ -278,6 +279,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
               <div className="cellar-info">
                 <div className="hist-name">{it.name}</div>
                 <div className="hist-meta">
+                  {flagOf(it.country) && <span className="flag">{flagOf(it.country)}&nbsp;</span>}
                   {[cat.label, it.vintage, it.region].filter(Boolean).join(" · ")}
                 </div>
                 <div className="cellar-badges">

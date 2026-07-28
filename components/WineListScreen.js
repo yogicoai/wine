@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import CatIcon from "./CatIcon";
+import { flagOf } from "@/lib/flags";
 
 // 메뉴가 ÷ 시중 최저가 = 배수. 와인은 통상 2~3배가 관행이다.
 // (표시 전용이라 이 파일에 둔다 — 서버 모듈을 import하면 DB 드라이버가 브라우저 번들로 딸려온다)
@@ -105,6 +106,7 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
                 {/* 다른 표기로 이었으면 밝힌다 — 잘못 이었을 때 알아챌 수 있어야 한다 */}
                 {it.matchedName && <div className="wl-matched">{it.matchedName} 으로 인식</div>}
                 <div className="wl-meta">
+                  {flagOf(it.country) && <span className="flag">{flagOf(it.country)}</span>}
                   {it.category && (
                     <span className="wl-cat">
                       <CatIcon category={it.category} size={13} />
