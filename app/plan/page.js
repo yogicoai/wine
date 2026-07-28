@@ -52,6 +52,50 @@ export default async function PlanPage() {
         </div>
       </header>
 
+      {/* 00 빠른 사용법 — 자세한 것은 /guide, 여기서는 한눈에 */}
+      <section className={s.section}>
+        <div className={s.num}>00</div>
+        <div className={s.body}>
+          <h2 className={s.h2}>빠른 사용법</h2>
+          <p className={s.sub}>
+            5가지 핵심 흐름입니다. 자세한 설명은{" "}
+            <Link href="/guide" style={{ color: "var(--gold)" }}>기능 설명서(/guide)</Link>에 있습니다.
+          </p>
+          <div className={s.scroll}>
+            <table className={s.table}>
+              <thead><tr><th>하고 싶은 것</th><th>어떻게</th><th>비용</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>이 술이 뭔지 알고 싶다</td>
+                  <td className={s.was}>첫 화면 → <b>라벨 촬영</b> → 셔터</td>
+                  <td className={s.numCell}>DB에 있으면 0원</td>
+                </tr>
+                <tr>
+                  <td>더 빠르게 확인</td>
+                  <td className={s.was}><b>바코드</b> 탭 → 병 뒷면을 비추면 자동 인식</td>
+                  <td className={s.numCell}><b>항상 0원</b></td>
+                </tr>
+                <tr>
+                  <td>식당에서 뭘 시킬지</td>
+                  <td className={s.was}><b>와인 리스트</b> 탭 → 메뉴판 한 장 촬영 → 가성비 순</td>
+                  <td className={s.numCell}>약 5원/장</td>
+                </tr>
+                <tr>
+                  <td>사진 없이 찾기 · 추천받기</td>
+                  <td className={s.was}>헤더 🔍 → 이름·산지 검색 / O·X 취향 문답 8개</td>
+                  <td className={s.numCell}>0원</td>
+                </tr>
+                <tr>
+                  <td>내 와인 관리 · 특가 알림</td>
+                  <td className={s.was}>결과 화면에서 셀러에 담기 → 헤더 🍷 → 목표가 설정</td>
+                  <td className={s.numCell}>0원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* 01 현황 */}
       <section className={s.section}>
         <div className={s.num}>01</div>
