@@ -4,6 +4,14 @@ import { fileToDataUrl } from "@/lib/imageClient";
 import { scanLoop } from "@/lib/barcodeScan";
 import Icon from "./Icon";
 
+// 모드 이름만으로는 무엇을 찍어야 할지 알 수 없다.
+// 특히 "와인 리스트"는 병을 여러 개 찍으라는 뜻으로 읽히기 쉬워 분명히 적는다.
+const MODE_NOTES = {
+  label: "술병 앞면 라벨 한 장. 이름을 읽어 정보·가격·페어링을 찾아드립니다.",
+  barcode: "병 뒷면 바코드. 셔터 없이 자동으로 읽고, 분석 비용이 들지 않습니다.",
+  list: "식당 메뉴판이나 와인 리스트를 한 장. 적힌 술을 모두 뽑아 가성비 순으로 정리합니다. 병을 여러 개 찍는 것이 아니라 글자가 적힌 목록을 찍는 기능입니다.",
+};
+
 export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
   const videoRef = useRef(null);
   const fileRef = useRef(null);
@@ -183,6 +191,10 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
           )}
         </div>
       )}
+
+      {/* 무엇을 찍으라는 것인지 먼저 알려 준다.
+          모드 이름만으로는 "와인 리스트"가 병 여러 개인지 메뉴판인지 알 수 없다. */}
+      {onBarcode && <p className="mode-note">{MODE_NOTES[mode]}</p>}
 
       <div className="cam-frame">
         {/* 항상 렌더 — 준비 전에는 숨기기만 한다 */}
