@@ -908,7 +908,12 @@ export default async function GuidePage() {
                 <div className={s.logHead}>
                   <b>{c.title}</b>
                   <span className={s.logMeta}>
-                    +{c.count}종 · 누적 {c.total.toLocaleString("ko-KR")}종
+                    {/* 정리 작업은 음수로 적는다 — "+-271종"이 되지 않게 */}
+                    {c.count < 0
+                      ? `${Math.abs(c.count).toLocaleString("ko-KR")}종 정리`
+                      : `+${c.count.toLocaleString("ko-KR")}종`}
+                    {" · 정식 분석 "}
+                    {c.total.toLocaleString("ko-KR")}종
                   </span>
                 </div>
                 <p className={s.logBody}>{c.body}</p>
