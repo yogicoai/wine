@@ -198,34 +198,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "샤또 피숑 롱그빌 콩테스 드 라랑드",
-    "producer": "Pichon Comtesse",
-    "country": "프랑스",
-    "region": "보르도 · 포이약",
-    "type": "레드 와인 · 카베르네 블렌드",
-    "priceBand": 5,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 84
-      },
-      {
-        "axis": "당도",
-        "value": 15
-      },
-      {
-        "axis": "산도",
-        "value": 64
-      },
-      {
-        "axis": "탄닌",
-        "value": 78
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "샤또 뒤크뤼 보카이유",
     "producer": "Château Ducru-Beaucaillou",
     "country": "프랑스",
@@ -310,62 +282,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "도멘 페블레 지브리 샹베르탱",
-    "producer": "Faiveley",
-    "country": "프랑스",
-    "region": "부르고뉴 · 주브레 샹베르탱",
-    "type": "레드 와인 · 피노 누아",
-    "priceBand": 5,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 62
-      },
-      {
-        "axis": "당도",
-        "value": 12
-      },
-      {
-        "axis": "산도",
-        "value": 72
-      },
-      {
-        "axis": "탄닌",
-        "value": 56
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "도멘 라플레 퓔리니 몽라셰",
-    "producer": "Domaine Leflaive",
-    "country": "프랑스",
-    "region": "부르고뉴 · 퓔리니 몽라셰",
-    "type": "화이트 와인 · 샤르도네",
-    "priceBand": 5,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 66
-      },
-      {
-        "axis": "당도",
-        "value": 12
-      },
-      {
-        "axis": "산도",
-        "value": 78
-      },
-      {
-        "axis": "탄닌",
-        "value": 4
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "휴겔 게뷔르츠트라미너",
     "producer": "Hugel",
     "country": "프랑스",
@@ -388,34 +304,6 @@
       {
         "axis": "탄닌",
         "value": 5
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "도멘 위에 부브레",
-    "producer": "Domaine Huet",
-    "country": "프랑스",
-    "region": "루아르 · 부브레",
-    "type": "화이트 와인 · 슈냉 블랑",
-    "priceBand": 3,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 48
-      },
-      {
-        "axis": "당도",
-        "value": 40
-      },
-      {
-        "axis": "산도",
-        "value": 80
-      },
-      {
-        "axis": "탄닌",
-        "value": 4
       }
     ]
   },
@@ -702,34 +590,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "마시 코스테라 아마로네",
-    "producer": "Masi",
-    "country": "이탈리아",
-    "region": "베네토 · 아마로네",
-    "type": "레드 와인 · 코르비나 블렌드",
-    "priceBand": 4,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 86
-      },
-      {
-        "axis": "당도",
-        "value": 32
-      },
-      {
-        "axis": "산도",
-        "value": 58
-      },
-      {
-        "axis": "탄닌",
-        "value": 68
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "본템피 몬테풀치아노 다브루초",
     "producer": "Bontempi",
     "country": "이탈리아",
@@ -780,34 +640,6 @@
       {
         "axis": "탄닌",
         "value": 80
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "프로두토리 델 바르바레스코 바르바레스코",
-    "producer": "Produttori del Barbaresco",
-    "country": "이탈리아",
-    "region": "피에몬테 · 바르바레스코",
-    "type": "레드 와인 · 네비올로",
-    "priceBand": 3,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 74
-      },
-      {
-        "axis": "당도",
-        "value": 13
-      },
-      {
-        "axis": "산도",
-        "value": 76
-      },
-      {
-        "axis": "탄닌",
-        "value": 76
       }
     ]
   },

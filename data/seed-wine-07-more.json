@@ -1,0 +1,493 @@
+[
+  {
+    "category": "wine",
+    "name": "샤또 파비",
+    "searchKeyword": "샤또 파비",
+    "producer": "Château Pavie",
+    "type": "레드 와인 · 메를로 블렌드",
+    "vintage": null,
+    "region": "보르도 · 생테밀리옹",
+    "country": "프랑스",
+    "alcohol": "14.5%",
+    "liquidColor": "#54141F",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "생테밀리옹 최고 등급 와인으로 자료가 충분합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 86 },
+      { "axis": "당도", "value": 18 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "탄닌", "value": 76 }
+    ],
+    "tastingNotes": "검은 과실과 초콜릿, 구운 향이 매우 진합니다. 생테밀리옹 중에서도 유난히 농밀한 편이라 처음 마시면 힘에 놀라게 됩니다.",
+    "specs": [
+      { "label": "품종", "value": "메를로, 카베르네 프랑, 카베르네 소비뇽" },
+      { "label": "등급", "value": "생테밀리옹 프리미에 그랑 크뤼 클라세 A" },
+      { "label": "토양", "value": "석회암 비탈" }
+    ],
+    "drinkFrom": "2032",
+    "drinkPeak": "2040",
+    "drinkUntil": "2058",
+    "history": [
+      { "year": "1998", "event": "제라르 페르스가 인수해 스타일을 크게 바꿈" },
+      { "year": "2012", "event": "최고 등급 A로 승격" }
+    ],
+    "story": "농밀한 스타일로 바뀐 뒤 평론가들 사이에 큰 논쟁이 있었습니다. 와인에도 유행과 취향 싸움이 있다는 것을 보여 준 사례입니다.",
+    "winery": "생테밀리옹 남향 석회암 비탈에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "숯불 등심", "why": "강한 구조가 진한 육향을 받습니다", "shopKeyword": "한우 등심" },
+      { "emoji": "🍖", "food": "양갈비", "why": "농밀한 과실이 기름을 정리합니다", "shopKeyword": "양갈비" },
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "초콜릿 향이 이어집니다", "shopKeyword": "다크초콜릿" }
+    ],
+    "pairingTip": "묵직한 요리를 준비하세요. 어중간하면 와인만 남습니다.",
+    "avoidPairing": "해산물과는 맞지 않습니다.",
+    "similar": ["샤또 앙젤뤼스", "샤또 페트뤼스", "핑구스"],
+    "trivia": "'파비'는 복숭아를 뜻하는 옛말에서 왔습니다. 예전에 이 언덕에 복숭아밭이 있었습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "15년 이상 두어야 제 모습이 나옵니다.",
+    "tips": ["젊을 때 열면 힘만 느껴집니다. 시간이 필요한 술입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 피숑 롱그빌 콩테스 드 라랑드",
+    "searchKeyword": "피숑 콩테스",
+    "producer": "Pichon Comtesse",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "보르도 · 포이약",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#571724",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "1855 그랑 크뤼 2등급으로 자료가 충분합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 84 },
+      { "axis": "당도", "value": 15 },
+      { "axis": "산도", "value": 64 },
+      { "axis": "탄닌", "value": 78 }
+    ],
+    "tastingNotes": "블랙커런트와 제비꽃, 삼나무 향이 우아하게 이어집니다. 포이약의 힘을 가졌으면서도 결이 곱다는 평을 자주 듣습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽, 메를로, 카베르네 프랑, 프티 베르도" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 2등급" },
+      { "label": "숙성", "value": "프렌치 오크 약 18개월" }
+    ],
+    "drinkFrom": "2030",
+    "drinkPeak": "2040",
+    "drinkUntil": "2058",
+    "history": [
+      { "year": "1850", "event": "피숑 가문의 밭이 남매에게 나뉨" },
+      { "year": "1855", "event": "그랑 크뤼 2등급으로 분류" },
+      { "year": "2007", "event": "루이 로드레가 인수" }
+    ],
+    "story": "원래 하나였던 밭이 형제와 자매에게 나뉘어 두 개의 샤또가 되었습니다. '콩테스'는 백작 부인이라는 뜻으로, 자매 쪽입니다.",
+    "winery": "지롱드 강이 내려다보이는 포이약 남쪽에 있습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "안심 스테이크", "why": "고운 탄닌이 부드러운 살과 맞습니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🍖", "food": "양갈비 로스트", "why": "허브 향이 삼나무와 어울립니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "숙성 하드치즈", "why": "짠맛이 과실을 밀어 올립니다", "shopKeyword": "그뤼에르 치즈" }
+    ],
+    "pairingTip": "격식 있는 자리에 어울리는 이름입니다.",
+    "avoidPairing": "매운 음식은 이 와인의 섬세함을 지웁니다.",
+    "similar": ["샤또 라투르", "샤또 무통 로칠드", "샤또 레오빌 바르통"],
+    "trivia": "'수퍼 세컨드'로 불리는 2등급 중에서도 1등급에 가장 근접하다는 평을 받습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "어릴 때는 두 시간쯤 열어 두세요.",
+    "aging": "15~30년이 가장 좋습니다.",
+    "tips": ["포이약 중에서는 부드러운 편이라 입문하기 좋습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 지스쿠르",
+    "searchKeyword": "샤또 지스쿠르",
+    "producer": "Château Giscours",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "보르도 · 마고",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#5B1825",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "마고 지역 그랑 크뤼 3등급으로 국내 유통도 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 78 },
+      { "axis": "당도", "value": 14 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "탄닌", "value": 72 }
+    ],
+    "tastingNotes": "제비꽃과 붉은 과실 향이 앞서고 뒤로 삼나무가 깔립니다. 마고 특유의 향기로움에 힘이 붙어, 우아하면서도 물러 보이지 않습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽, 메를로" },
+      { "label": "등급", "value": "1855 그랑 크뤼 클라세 3등급" },
+      { "label": "숙성", "value": "프렌치 오크 약 16개월" }
+    ],
+    "drinkFrom": "2029",
+    "drinkPeak": "2036",
+    "drinkUntil": "2050",
+    "history": [
+      { "year": "1330", "event": "기록에 처음 등장" },
+      { "year": "1855", "event": "그랑 크뤼 3등급으로 분류" }
+    ],
+    "story": "마고 마을의 와인은 '향기롭다'는 말을 가장 많이 듣습니다. 같은 보르도라도 마을에 따라 성격이 갈립니다.",
+    "winery": "넓은 공원과 저택을 갖춘 샤또입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "안심 스테이크", "why": "우아한 탄닌이 부드러운 살과 맞습니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🦆", "food": "오리 가슴살", "why": "붉은 과실이 오리의 단맛과 어울립니다", "shopKeyword": "오리고기" },
+      { "emoji": "🍄", "food": "버섯 요리", "why": "흙내가 삼나무와 이어집니다", "shopKeyword": "표고버섯" }
+    ],
+    "pairingTip": "부드러운 조리법이 이 와인의 향을 살립니다.",
+    "avoidPairing": "강한 양념은 향을 덮습니다.",
+    "similar": ["샤또 브라네 캉트냑", "샤또 시랑", "샤또 마고"],
+    "trivia": "마고 마을에는 1등급 샤또 마고 외에도 여러 그랑 크뤼가 모여 있습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한 시간 이상 열어 두세요.",
+    "aging": "10년 이상 두면 향이 활짝 열립니다.",
+    "tips": ["마고를 처음 마신다면 값과 품질의 균형이 좋습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "도멘 라플레 퓔리니 몽라셰",
+    "searchKeyword": "라플레브 퓔리니 몽라셰",
+    "producer": "Domaine Leflaive",
+    "type": "화이트 와인 · 샤르도네",
+    "vintage": null,
+    "region": "부르고뉴 · 퓔리니 몽라셰",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#EBE2A8",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "부르고뉴 화이트 최고 생산자 중 하나입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 66 },
+      { "axis": "당도", "value": 12 },
+      { "axis": "산도", "value": 78 },
+      { "axis": "탄닌", "value": 4 }
+    ],
+    "tastingNotes": "레몬과 흰 꽃, 부싯돌 같은 미네랄이 곧게 뻗습니다. 뫼르소가 살집이라면 퓔리니는 뼈대입니다 — 같은 샤르도네인데 결이 다릅니다.",
+    "specs": [
+      { "label": "품종", "value": "샤르도네 100%" },
+      { "label": "등급", "value": "퓔리니 몽라셰 마을급" },
+      { "label": "재배", "value": "비오디나미" }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2032",
+    "drinkUntil": "2040",
+    "history": [
+      { "year": "1717", "event": "라플레브 가문이 퓔리니에 정착" },
+      { "year": "1990년대", "event": "안 클로드 라플레브가 비오디나미를 도입" }
+    ],
+    "story": "화학 비료를 끊고 달의 주기에 맞춰 밭을 돌보는 방식으로 바꿨습니다. 논란이 있었지만 결과가 말을 대신했습니다.",
+    "winery": "부르고뉴 비오디나미의 선구자로 꼽힙니다.",
+    "foodPairing": [
+      { "emoji": "🦪", "food": "굴", "why": "미네랄과 바다 향이 겹칩니다", "shopKeyword": "생굴" },
+      { "emoji": "🦞", "food": "랍스터", "why": "산도가 단맛 나는 살을 조여 줍니다", "shopKeyword": "랍스터" },
+      { "emoji": "🐟", "food": "흰살 생선 구이", "why": "곧은 산도가 담백함을 살립니다", "shopKeyword": "농어" }
+    ],
+    "pairingTip": "회나 담백한 해산물과 특히 잘 맞습니다.",
+    "avoidPairing": "진한 크림 소스는 미네랄을 덮습니다.",
+    "similar": ["알베르 비쇼 뫼르소", "윌리엄 페브르 샤블리", "샤토 몬텔레나 샤르도네"],
+    "trivia": "퓔리니와 뫼르소는 붙어 있는 마을인데 화이트의 성격이 확연히 다릅니다.",
+    "servingTemp": "11~13℃",
+    "servingNote": "너무 차게 하지 마세요. 미네랄이 닫힙니다.",
+    "aging": "5~15년 갑니다.",
+    "tips": ["부르고뉴 화이트의 정수를 보고 싶을 때 권합니다"]
+  },
+  {
+    "category": "wine",
+    "name": "도멘 페블레 지브리 샹베르탱",
+    "searchKeyword": "페블레 주브레 샹베르탱",
+    "producer": "Faiveley",
+    "type": "레드 와인 · 피노 누아",
+    "vintage": null,
+    "region": "부르고뉴 · 주브레 샹베르탱",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#7A2233",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "부르고뉴 대표 도멘의 명산지 마을급 와인입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 62 },
+      { "axis": "당도", "value": 12 },
+      { "axis": "산도", "value": 72 },
+      { "axis": "탄닌", "value": 56 }
+    ],
+    "tastingNotes": "검붉은 체리와 감초, 젖은 흙 향이 이어집니다. 주브레 샹베르탱은 부르고뉴 레드 중에서도 남성적이라 불리는 마을로, 탄닌이 또렷합니다.",
+    "specs": [
+      { "label": "품종", "value": "피노 누아 100%" },
+      { "label": "등급", "value": "주브레 샹베르탱 마을급" },
+      { "label": "숙성", "value": "프렌치 오크 약 16개월" }
+    ],
+    "drinkFrom": "2029",
+    "drinkPeak": "2036",
+    "drinkUntil": "2048",
+    "history": [
+      { "year": "1825", "event": "페블레 가문 창업" },
+      { "year": "현재", "event": "7대째 가족이 운영" }
+    ],
+    "story": "나폴레옹이 즐겨 마셨다는 샹베르탱이 이 마을에 있습니다. 마을 이름에 특급 밭 이름을 붙여 '주브레 샹베르탱'이 되었습니다.",
+    "winery": "부르고뉴 최대 규모의 밭을 가진 가족 도멘 중 하나입니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "부프 부르기뇽", "why": "같은 지방의 고전 조합입니다", "shopKeyword": "소고기 사태" },
+      { "emoji": "🦆", "food": "오리 요리", "why": "탄닌이 기름진 살을 정리합니다", "shopKeyword": "오리고기" },
+      { "emoji": "🍄", "food": "버섯 리조또", "why": "흙내가 이어집니다", "shopKeyword": "모둠버섯" }
+    ],
+    "pairingTip": "국내에서는 수육·보쌈과도 잘 맞습니다.",
+    "avoidPairing": "진한 바비큐 소스는 이 와인을 덮습니다.",
+    "similar": ["루이 자도 본 로마네", "도멘 드루앙 부르고뉴 피노 누아", "부샤 페레 에 피스 부르고뉴 피노 누아"],
+    "trivia": "부르고뉴 마을들이 특급 밭 이름을 마을명에 붙이기 시작한 것은 19세기부터입니다.",
+    "servingTemp": "15~16℃",
+    "servingNote": "한 시간 열어 두면 향이 열립니다.",
+    "aging": "10년 이상 두면 좋아집니다.",
+    "tips": ["부르고뉴 레드 중 구조감을 원한다면 이 마을입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "파스칼 조리오 상세르",
+    "searchKeyword": "파스칼 조리베 상세르",
+    "producer": "Pascal Jolivet",
+    "type": "화이트 와인 · 소비뇽 블랑",
+    "vintage": null,
+    "region": "루아르 · 상세르",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#EFEBBA",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "상세르 대표 생산자로 국내 유통이 활발합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 42 },
+      { "axis": "당도", "value": 12 },
+      { "axis": "산도", "value": 84 },
+      { "axis": "탄닌", "value": 4 }
+    ],
+    "tastingNotes": "자몽과 풋고추, 젖은 돌 향이 날카롭게 섭니다. 뉴질랜드 소비뇽 블랑이 열대 과일이라면, 상세르는 광물과 허브 쪽입니다.",
+    "specs": [
+      { "label": "품종", "value": "소비뇽 블랑 100%" },
+      { "label": "토양", "value": "석회질·부싯돌" },
+      { "label": "숙성", "value": "스테인리스, 오크 사용 안 함" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2027",
+    "drinkUntil": "2031",
+    "history": [
+      { "year": "1987", "event": "파스칼 조리오가 독립" },
+      { "year": "현재", "event": "루아르 소비뇽 블랑의 기준 중 하나로 평가" }
+    ],
+    "story": "상세르의 부싯돌 토양에서 성냥을 그은 듯한 향이 난다고들 합니다. 처음엔 낯설지만 익숙해지면 그것이 매력이 됩니다.",
+    "winery": "상세르와 푸이 퓌메 양쪽에 밭을 두고 있습니다.",
+    "foodPairing": [
+      { "emoji": "🧀", "food": "염소 치즈", "why": "이 지방의 정석 조합입니다", "shopKeyword": "고트치즈" },
+      { "emoji": "🦐", "food": "새우 샐러드", "why": "산도가 단맛 나는 살을 조여 줍니다", "shopKeyword": "칵테일 새우" },
+      { "emoji": "🐟", "food": "생선회", "why": "날카로운 산도가 비린맛을 잡습니다", "shopKeyword": "광어회" }
+    ],
+    "pairingTip": "물회나 회무침처럼 새콤한 한식과도 잘 맞습니다.",
+    "avoidPairing": "크림 소스는 와인의 날을 무디게 합니다.",
+    "similar": ["클라우디 베이 소비뇽 블랑", "빌라 마리아 소비뇽 블랑", "윌리엄 페브르 샤블리"],
+    "trivia": "루아르 강 건너편 '푸이 퓌메'는 같은 품종인데 더 연기 같은 향이 납니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "차갑게 드세요.",
+    "aging": "3년 안에 마시는 것이 좋습니다.",
+    "tips": ["소비뇽 블랑이 다 비슷하다고 느꼈다면 이 술이 생각을 바꿔 줍니다"]
+  },
+  {
+    "category": "wine",
+    "name": "도멘 위에 부브레",
+    "searchKeyword": "도멘 위에 부브레",
+    "producer": "Domaine Huet",
+    "type": "화이트 와인 · 슈냉 블랑",
+    "vintage": null,
+    "region": "루아르 · 부브레",
+    "country": "프랑스",
+    "alcohol": "12.5%",
+    "liquidColor": "#F0E5A8",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "부브레를 대표하는 도멘입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 48 },
+      { "axis": "당도", "value": 40 },
+      { "axis": "산도", "value": 80 },
+      { "axis": "탄닌", "value": 4 }
+    ],
+    "tastingNotes": "모과와 꿀, 카모마일 향이 이어집니다. 슈냉 블랑은 단맛과 산도가 함께 극단으로 갈 수 있는 품종이라, 달아도 무겁지 않습니다.",
+    "specs": [
+      { "label": "품종", "value": "슈냉 블랑 100%" },
+      { "label": "당도", "value": "드미섹(약간 달콤)" },
+      { "label": "재배", "value": "비오디나미" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2035",
+    "drinkUntil": "2055",
+    "history": [
+      { "year": "1928", "event": "빅토르 위에가 설립" },
+      { "year": "1990년대", "event": "비오디나미 전환" }
+    ],
+    "story": "슈냉 블랑은 수십 년을 견딥니다. 1940년대 빈티지가 아직도 팔팔하다는 이야기가 나오는 몇 안 되는 화이트입니다.",
+    "winery": "루아르 강변 부브레의 석회암 동굴을 셀러로 씁니다.",
+    "foodPairing": [
+      { "emoji": "🧀", "food": "블루치즈", "why": "단맛이 짠맛을 받쳐 줍니다", "shopKeyword": "블루치즈" },
+      { "emoji": "🍗", "food": "닭고기 요리", "why": "산도가 담백한 살을 살립니다", "shopKeyword": "닭가슴살" },
+      { "emoji": "🌶️", "food": "매콤한 아시아 요리", "why": "약간의 단맛이 매운맛을 눌러 줍니다", "shopKeyword": "팟타이" }
+    ],
+    "pairingTip": "매운 한식과도 잘 맞는 몇 안 되는 화이트입니다.",
+    "avoidPairing": "아주 단 디저트와는 서로 지웁니다.",
+    "similar": ["닥터 루젠 리슬링 카비네트", "휴겔 게뷔르츠트라미너", "트림바크 리슬링"],
+    "trivia": "같은 밭에서 드라이·드미섹·스위트·스파클링을 모두 만듭니다. 그해 날씨가 정합니다.",
+    "servingTemp": "9~11℃",
+    "servingNote": "차갑게 하되 얼음처럼 차면 향이 닫힙니다.",
+    "aging": "20년 이상 갑니다.",
+    "tips": ["라벨의 '섹/드미섹/무엘루'가 당도입니다. 확인하고 고르세요"]
+  },
+  {
+    "category": "wine",
+    "name": "마시 코스테라 아마로네",
+    "searchKeyword": "마시 코스테라 아마로네",
+    "producer": "Masi",
+    "type": "레드 와인 · 코르비나 블렌드",
+    "vintage": null,
+    "region": "베네토 · 아마로네",
+    "country": "이탈리아",
+    "alcohol": "15%",
+    "liquidColor": "#571620",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "아마로네 대표 생산자로 국내 유통이 활발합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 86 },
+      { "axis": "당도", "value": 32 },
+      { "axis": "산도", "value": 58 },
+      { "axis": "탄닌", "value": 68 }
+    ],
+    "tastingNotes": "건포도와 체리 잼, 계피 향이 진합니다. 말린 포도로 만들어 농도가 대단한데, 산도가 남아 있어 끝이 무겁게 처지지 않습니다.",
+    "specs": [
+      { "label": "품종", "value": "코르비나, 론디넬라, 몰리나라" },
+      { "label": "양조", "value": "아파시멘토(포도 건조)" },
+      { "label": "숙성", "value": "오크 2년 이상" }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2034",
+    "drinkUntil": "2046",
+    "history": [
+      { "year": "1772", "event": "보스카이니 가문이 발폴리첼라에 밭을 얻음" },
+      { "year": "현재", "event": "아마로네 연구와 보급을 이끄는 회사" }
+    ],
+    "story": "포도를 3~4개월 말립니다. 수분이 빠지면서 당분과 향이 응축되는데, 그만큼 양이 줄어 값이 올라갑니다.",
+    "winery": "발폴리첼라 클라시코 지역에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🧀", "food": "파르미지아노", "why": "감칠맛이 농밀한 과실을 받칩니다", "shopKeyword": "파르미지아노 치즈" },
+      { "emoji": "🥩", "food": "갈비찜", "why": "달큰한 양념과 건포도 향이 맞습니다", "shopKeyword": "소갈비" },
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "식후에 그대로 이어집니다", "shopKeyword": "다크초콜릿" }
+    ],
+    "pairingTip": "식후에 그 자체로 마셔도 좋습니다.",
+    "avoidPairing": "담백한 요리는 완전히 묻힙니다.",
+    "similar": ["알레그리니 아마로네 델라 발폴리첼라", "제니 발폴리첼라 리파소", "테일러스 10년 토니 포트"],
+    "trivia": "말리고 남은 포도 껍질을 재활용해 만드는 것이 '리파소'입니다. 아마로네의 동생 격입니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "한 시간 열어 두면 알코올이 가라앉습니다.",
+    "aging": "10년 이상 갑니다.",
+    "tips": ["도수가 15%입니다. 잔을 적게 채우세요"]
+  },
+  {
+    "category": "wine",
+    "name": "프로두토리 델 바르바레스코 바르바레스코",
+    "searchKeyword": "프로두토리 바르바레스코",
+    "producer": "Produttori del Barbaresco",
+    "type": "레드 와인 · 네비올로",
+    "vintage": null,
+    "region": "피에몬테 · 바르바레스코",
+    "country": "이탈리아",
+    "alcohol": "14%",
+    "liquidColor": "#7C2A2F",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "가성비 좋은 바르바레스코로 애호가 사이에서 평이 좋습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 74 },
+      { "axis": "당도", "value": 13 },
+      { "axis": "산도", "value": 76 },
+      { "axis": "탄닌", "value": 76 }
+    ],
+    "tastingNotes": "마른 장미와 체리, 타르 향이 이어집니다. 조합이 만드는 술이라 값이 눅은데, 네비올로의 성격은 그대로 담겨 있습니다.",
+    "specs": [
+      { "label": "품종", "value": "네비올로 100%" },
+      { "label": "등급", "value": "바르바레스코 DOCG" },
+      { "label": "특징", "value": "50여 조합원 농가의 포도로 양조" }
+    ],
+    "drinkFrom": "2029",
+    "drinkPeak": "2036",
+    "drinkUntil": "2050",
+    "history": [
+      { "year": "1958", "event": "본당 신부가 농가들을 모아 조합 설립" },
+      { "year": "현재", "event": "이탈리아에서 가장 성공한 와인 조합으로 꼽힘" }
+    ],
+    "story": "가난한 농가들이 헐값에 포도를 넘기던 시절, 신부가 나서서 조합을 만들었습니다. 지금은 그 이름이 가성비의 대명사가 되었습니다.",
+    "winery": "바르바레스코 마을 한가운데 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🍄", "food": "버섯 파스타", "why": "타르 향과 흙내가 맞물립니다", "shopKeyword": "모둠버섯" },
+      { "emoji": "🥩", "food": "소고기 찜", "why": "산도가 오래 조린 고기를 정리합니다", "shopKeyword": "소고기 사태" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "감칠맛이 탄닌을 눕힙니다", "shopKeyword": "파르미지아노 치즈" }
+    ],
+    "pairingTip": "갈비찜 같은 한식 찜 요리와도 잘 맞습니다.",
+    "avoidPairing": "가벼운 음식으로는 탄닌을 감당하지 못합니다.",
+    "similar": ["가야 바르바레스코", "피오 체사레 바롤로", "체레토 바롤로"],
+    "trivia": "좋은 해에는 단일 밭 와인 아홉 종을 따로 만듭니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "두 시간쯤 열어 두세요.",
+    "aging": "10년 이상 두면 장미 향이 또렷해집니다.",
+    "tips": ["네비올로를 부담 없는 값에 경험하기 좋은 술입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "라 리오하 알타 비냐 아르단사",
+    "searchKeyword": "라리오하알타 비냐 아르단사",
+    "producer": "La Rioja Alta",
+    "type": "레드 와인 · 템프라니요",
+    "vintage": null,
+    "region": "리오하",
+    "country": "스페인",
+    "alcohol": "13.5%",
+    "liquidColor": "#6E202B",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "리오하 전통파를 대표하는 보데가입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 70 },
+      { "axis": "당도", "value": 16 },
+      { "axis": "산도", "value": 64 },
+      { "axis": "탄닌", "value": 62 }
+    ],
+    "tastingNotes": "말린 딸기와 바닐라, 담뱃잎 향이 부드럽게 이어집니다. 오래 통에서 쉬어 색이 벽돌빛으로 바래고 탄닌이 곱게 풀려 있습니다.",
+    "specs": [
+      { "label": "품종", "value": "템프라니요, 가르나차" },
+      { "label": "등급", "value": "리오하 DOCa 리제르바" },
+      { "label": "숙성", "value": "아메리칸 오크 36개월 내외" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2032",
+    "drinkUntil": "2045",
+    "history": [
+      { "year": "1890", "event": "다섯 가문이 모여 설립" },
+      { "year": "현재", "event": "통을 직접 만들고 손으로 옮겨 담는 방식을 유지" }
+    ],
+    "story": "와인을 통에서 통으로 손으로 옮겨 담습니다. 기계를 쓰면 빠르지만 그렇게 하지 않는 것이 이 집의 방식입니다.",
+    "winery": "하로 지역의 오래된 보데가입니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "이베리코 목살", "why": "바닐라 향이 돼지고기 단맛과 맞습니다", "shopKeyword": "이베리코 목살" },
+      { "emoji": "🥩", "food": "양갈비", "why": "부드러운 탄닌이 기름을 정리합니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "만체고 치즈", "why": "같은 지방의 짝입니다", "shopKeyword": "만체고 치즈" }
+    ],
+    "pairingTip": "출시 시점에 이미 마시기 좋게 나옵니다.",
+    "avoidPairing": "해산물과는 어울리지 않습니다.",
+    "similar": ["무가 리오하 리제르바", "쿠네 리오하 리제르바", "마르께스 데 리스칼 리제르바"],
+    "trivia": "리오하는 생산자가 충분히 숙성시킨 뒤 내보내는 전통이 있습니다. 사서 바로 마셔도 되는 이유입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "30분 열어 두면 좋습니다.",
+    "aging": "10년 이상 갑니다.",
+    "tips": ["숙성된 와인을 부담 없는 값에 마시고 싶을 때 리오하가 답입니다"]
+  }
+]

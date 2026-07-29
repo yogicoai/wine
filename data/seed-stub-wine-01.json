@@ -30,34 +30,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "파스칼 조리오 상세르",
-    "producer": "Pascal Jolivet",
-    "country": "프랑스",
-    "region": "루아르 · 상세르",
-    "type": "화이트 와인 · 소비뇽 블랑",
-    "priceBand": 3,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 42
-      },
-      {
-        "axis": "당도",
-        "value": 12
-      },
-      {
-        "axis": "산도",
-        "value": 84
-      },
-      {
-        "axis": "탄닌",
-        "value": 4
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "루이 라투르 부르고뉴 샤르도네",
     "producer": "Louis Latour",
     "country": "프랑스",
@@ -226,34 +198,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "샤또 지스쿠르",
-    "producer": "Château Giscours",
-    "country": "프랑스",
-    "region": "보르도 · 마고",
-    "type": "레드 와인 · 카베르네 블렌드",
-    "priceBand": 4,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 78
-      },
-      {
-        "axis": "당도",
-        "value": 14
-      },
-      {
-        "axis": "산도",
-        "value": 62
-      },
-      {
-        "axis": "탄닌",
-        "value": 72
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "샤또 캉트메를",
     "producer": "Château Cantemerle",
     "country": "프랑스",
@@ -276,62 +220,6 @@
       {
         "axis": "탄닌",
         "value": 66
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "샤또 파비",
-    "producer": "Château Pavie",
-    "country": "프랑스",
-    "region": "보르도 · 생테밀리옹",
-    "type": "레드 와인 · 메를로 블렌드",
-    "priceBand": 5,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 86
-      },
-      {
-        "axis": "당도",
-        "value": 18
-      },
-      {
-        "axis": "산도",
-        "value": 62
-      },
-      {
-        "axis": "탄닌",
-        "value": 76
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "샤또 앙젤뤼스",
-    "producer": "Château Angélus",
-    "country": "프랑스",
-    "region": "보르도 · 생테밀리옹",
-    "type": "레드 와인 · 메를로 블렌드",
-    "priceBand": 5,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 84
-      },
-      {
-        "axis": "당도",
-        "value": 17
-      },
-      {
-        "axis": "산도",
-        "value": 63
-      },
-      {
-        "axis": "탄닌",
-        "value": 74
       }
     ]
   },
@@ -528,34 +416,6 @@
       {
         "axis": "탄닌",
         "value": 48
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "라 리오하 알타 비냐 아르단사",
-    "producer": "La Rioja Alta",
-    "country": "스페인",
-    "region": "리오하",
-    "type": "레드 와인 · 템프라니요",
-    "priceBand": 3,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 70
-      },
-      {
-        "axis": "당도",
-        "value": 16
-      },
-      {
-        "axis": "산도",
-        "value": 64
-      },
-      {
-        "axis": "탄닌",
-        "value": 62
       }
     ]
   },
