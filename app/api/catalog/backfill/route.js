@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { getDb } from "@/lib/mongodb";
+import { catalogKey } from "@/lib/catalog";
 import { guessCountry } from "@/lib/countryGuess";
 import { guessTasteProfile } from "@/lib/varietal";
 import { env } from "@/lib/env";
@@ -78,5 +81,39 @@ export async function POST(request) {
     if (Object.keys(set).length) await col.updateOne({ _id: doc._id }, { $set: set });
   }
 
-  return NextResponse.json({ checked: targets.length, country, taste, byCountry });
+  // 큐레이션(가격대·초보자 점수·태그)은 적재할 때 씨드 항목에만 붙는다.
+  // 스캔이나 수확으로 들어온 술은 이름이 같아도 값을 못 받으므로 여기서 마저 채운다.
+  const curated = await applyCuration(col);
+
+  return NextResponse.json({ checked: targets.length, country, taste, byCountry, curated });
+}
+
+async function applyCuration(col) {
+  let rows;
+  try {
+    rows = JSON.parse(await readFile(path.join(process.cwd(), "data", "curation.json"), "utf-8"));
+  } catch {
+    return 0; // 파일이 없어도 나머지 백필은 그대로 진행한다
+  }
+
+  let n = 0;
+  for (const c of rows) {
+    if (!c?.name) continue;
+    const set = {};
+    if (c.priceBand != null) set.priceBand = c.priceBand;
+    if (c.beginner != null) set.beginner = c.beginner;
+    if (c.tags?.length) set.tags = c.tags;
+    if (!Object.keys(set).length) continue;
+
+    // 이름이 아니라 조회 키로 찾는다 — 괄호·띄어쓰기가 달라도 같은 술을 집는다.
+    // 가격대와 초보자 점수는 빈티지와 무관하므로 키의 이름 부분만 맞춘다
+    // ("…|" 와 "…|2022" 가 모두 걸리게).
+    const base = catalogKey(c.name, null).slice(0, -1); // 끝의 "|" 를 뗀다
+    const { modifiedCount } = await col.updateMany(
+      { key: new RegExp(`^${base.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\|`) },
+      { $set: set }
+    );
+    n += modifiedCount;
+  }
+  return n;
 }
