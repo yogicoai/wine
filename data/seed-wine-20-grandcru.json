@@ -1,0 +1,883 @@
+[
+  {
+    "category": "wine",
+    "name": "도멘 드 라 로마네 콩티 로마네 콩티",
+    "searchKeyword": "로마네 콩티",
+    "producer": "Domaine de la Romanée-Conti",
+    "type": "레드 와인 · 피노 누아",
+    "vintage": null,
+    "region": "부르고뉴 · 본 로마네",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#8A3040",
+    "confidence": 95,
+    "knowledge": "rich",
+    "basis": "세계에서 가장 비싼 와인으로 자료가 매우 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 62
+      },
+      {
+        "axis": "당도",
+        "value": 14
+      },
+      {
+        "axis": "산도",
+        "value": 78
+      },
+      {
+        "axis": "탄닌",
+        "value": 62
+      }
+    ],
+    "tastingNotes": "장미와 붉은 체리, 동양 향신료와 젖은 흙 향이 층층이 겹칩니다. 색은 놀랍도록 옅은데 향의 밀도가 비할 데 없어, 마셔 본 사람들이 한결같이 '무게가 아니라 결'이라고 말하는 술입니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아 100%"
+      },
+      {
+        "label": "밭",
+        "value": "로마네 콩티 그랑 크뤼 단일 밭 1.8ha"
+      },
+      {
+        "label": "생산량",
+        "value": "연간 약 6,000병"
+      }
+    ],
+    "drinkFrom": "2035",
+    "drinkPeak": "2050",
+    "drinkUntil": "2075",
+    "history": [
+      {
+        "year": "1232",
+        "event": "시토회 수도원이 밭을 소유"
+      },
+      {
+        "year": "1760",
+        "event": "콩티 공이 사들이며 이름을 남김"
+      },
+      {
+        "year": "1945",
+        "event": "필록세라로 밭을 갈아엎고 다시 심음"
+      }
+    ],
+    "story": "프랑스 혁명 때 몰수되어 경매에 나왔습니다. 왕족의 이름이 붙은 밭이라는 이유로 한동안 이름을 부르지 못하던 시절도 있었습니다.",
+    "winery": "본 로마네 마을의 작은 도멘으로, 그랑 크뤼 밭만 여덟 곳을 가지고 있습니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍄",
+        "food": "트러플 요리",
+        "why": "흙내가 향신료와 이어집니다",
+        "shopKeyword": "트러플 오일"
+      },
+      {
+        "emoji": "🍗",
+        "food": "닭·꿩 요리",
+        "why": "섬세한 살결이 술을 덮지 않습니다",
+        "shopKeyword": "닭고기"
+      },
+      {
+        "emoji": "🧀",
+        "food": "숙성 치즈",
+        "why": "짠맛이 향을 밀어 올립니다",
+        "shopKeyword": "콩테 치즈"
+      }
+    ],
+    "pairingTip": "음식은 최대한 단순하게. 술이 주인공인 자리입니다.",
+    "avoidPairing": "진한 소스와 매운 양념은 향을 완전히 덮습니다.",
+    "similar": [
+      "도멘 드 라 로마네 콩티 라 타슈",
+      "도멘 아르망 루소 샹베르탱",
+      "콩트 조르주 드 보귀에 뮈지니"
+    ],
+    "trivia": "위조가 가장 많은 와인이기도 합니다. 도멘은 병마다 고유 번호를 새겨 대응하고 있습니다.",
+    "servingTemp": "15~16℃",
+    "servingNote": "디캔팅보다 잔에서 천천히 열리게 두는 편을 권합니다.",
+    "aging": "40년 이상 갑니다.",
+    "tips": [
+      "부르고뉴는 색이 옅다고 가벼운 술이 아닙니다. 이 술이 그 증거입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "도멘 드 라 로마네 콩티 라 타슈",
+    "searchKeyword": "라 타슈 DRC",
+    "producer": "Domaine de la Romanée-Conti",
+    "type": "레드 와인 · 피노 누아",
+    "vintage": null,
+    "region": "부르고뉴 · 본 로마네",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#87303F",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "DRC의 대표 밭 중 하나로 자료가 충분합니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 66
+      },
+      {
+        "axis": "당도",
+        "value": 14
+      },
+      {
+        "axis": "산도",
+        "value": 76
+      },
+      {
+        "axis": "탄닌",
+        "value": 66
+      }
+    ],
+    "tastingNotes": "검붉은 체리와 감초, 삼나무와 향신료 향이 진하게 이어집니다. 로마네 콩티보다 힘이 앞서는 쪽이라, 두 밭을 나란히 놓으면 같은 도멘의 다른 얼굴을 볼 수 있습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아 100%"
+      },
+      {
+        "label": "밭",
+        "value": "라 타슈 그랑 크뤼 단일 밭 6ha"
+      },
+      {
+        "label": "소유",
+        "value": "도멘 단독 소유(모노폴)"
+      }
+    ],
+    "drinkFrom": "2034",
+    "drinkPeak": "2048",
+    "drinkUntil": "2070",
+    "history": [
+      {
+        "year": "1933",
+        "event": "도멘이 밭 전체를 확보"
+      },
+      {
+        "year": "현재",
+        "event": "로마네 콩티와 함께 도멘의 두 기둥"
+      }
+    ],
+    "story": "'라 타슈'는 도급 일감이라는 뜻입니다. 옛날 이 밭 일을 도급으로 맡기던 관습에서 왔다는 설이 있습니다.",
+    "winery": "본 로마네 마을의 작은 도멘입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍄",
+        "food": "트러플·버섯",
+        "why": "흙내끼리 이어집니다",
+        "shopKeyword": "트러플 오일"
+      },
+      {
+        "emoji": "🦆",
+        "food": "오리·비둘기",
+        "why": "탄닌이 붉은 살을 받습니다",
+        "shopKeyword": "오리고기"
+      },
+      {
+        "emoji": "🧀",
+        "food": "숙성 치즈",
+        "why": "짠맛이 향을 밀어 올립니다",
+        "shopKeyword": "콩테 치즈"
+      }
+    ],
+    "pairingTip": "음식은 단순하게 가는 편이 낫습니다.",
+    "avoidPairing": "매운 양념은 향을 완전히 덮습니다.",
+    "similar": [
+      "도멘 드 라 로마네 콩티 로마네 콩티",
+      "도멘 아르망 루소 샹베르탱",
+      "도멘 뒤작 클로 드 라 로슈"
+    ],
+    "trivia": "'모노폴'은 한 밭을 한 생산자가 통째로 가진 경우를 말합니다. 부르고뉴에서는 드문 일입니다.",
+    "servingTemp": "15~16℃",
+    "servingNote": "한 시간쯤 열어 두면 향이 펼쳐집니다.",
+    "aging": "35년 이상 갑니다.",
+    "tips": [
+      "같은 도멘이라도 밭에 따라 성격이 크게 다릅니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "도멘 아르망 루소 샹베르탱",
+    "searchKeyword": "아르망 루소 샹베르탱",
+    "producer": "Domaine Armand Rousseau",
+    "type": "레드 와인 · 피노 누아",
+    "vintage": null,
+    "region": "부르고뉴 · 주브레 샹베르탱",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#88303F",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "부르고뉴 최상급 도멘으로 자료가 매우 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 68
+      },
+      {
+        "axis": "당도",
+        "value": 14
+      },
+      {
+        "axis": "산도",
+        "value": 76
+      },
+      {
+        "axis": "탄닌",
+        "value": 70
+      }
+    ],
+    "tastingNotes": "검붉은 체리와 감초, 가죽과 흙 향이 촘촘하게 짜입니다. 주브레 샹베르탱은 부르고뉴에서 가장 남성적이라 불리는 마을로, 그중에서도 이 도멘의 술은 뼈대가 가장 곧습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아 100%"
+      },
+      {
+        "label": "밭",
+        "value": "샹베르탱 그랑 크뤼"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 신통 약 18개월"
+      }
+    ],
+    "drinkFrom": "2033",
+    "drinkPeak": "2045",
+    "drinkUntil": "2065",
+    "history": [
+      {
+        "year": "1909",
+        "event": "아르망 루소가 도멘을 시작"
+      },
+      {
+        "year": "현재",
+        "event": "4대째 가족이 운영"
+      }
+    ],
+    "story": "나폴레옹이 원정길에도 이 마을 술만 챙겼다는 이야기가 전해집니다. 물을 타서 마셨다는 말도 함께 남아 있습니다.",
+    "winery": "주브레 샹베르탱 마을에 자리한 가족 도멘입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦆",
+        "food": "오리·비둘기",
+        "why": "탄닌이 붉은 살을 받습니다",
+        "shopKeyword": "오리고기"
+      },
+      {
+        "emoji": "🍄",
+        "food": "트러플·버섯",
+        "why": "흙내끼리 이어집니다",
+        "shopKeyword": "트러플 오일"
+      },
+      {
+        "emoji": "🧀",
+        "food": "에푸아스 치즈",
+        "why": "부르고뉴의 정석 짝입니다",
+        "shopKeyword": "치즈"
+      }
+    ],
+    "pairingTip": "숙성 후에 열어야 진가가 드러납니다.",
+    "avoidPairing": "매운 음식과는 맞지 않습니다.",
+    "similar": [
+      "도멘 드 라 로마네 콩티 라 타슈",
+      "도멘 페블레 주브레 샹베르탱",
+      "콩트 조르주 드 보귀에 뮈지니"
+    ],
+    "trivia": "주브레 샹베르탱에는 그랑 크뤼가 아홉 곳으로, 부르고뉴 마을 중 가장 많습니다.",
+    "servingTemp": "15~17℃",
+    "servingNote": "한두 시간 열어 두세요.",
+    "aging": "25년 이상 갑니다.",
+    "tips": [
+      "부르고뉴 레드의 골격을 알고 싶다면 주브레 샹베르탱부터 보세요"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "콩트 조르주 드 보귀에 뮈지니",
+    "searchKeyword": "드 보귀에 뮈지니",
+    "producer": "Domaine Comte Georges de Vogüé",
+    "type": "레드 와인 · 피노 누아",
+    "vintage": null,
+    "region": "부르고뉴 · 샹볼 뮈지니",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#8E3341",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "뮈지니 그랑 크뤼 최대 소유주로 자료가 충분합니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 60
+      },
+      {
+        "axis": "당도",
+        "value": 14
+      },
+      {
+        "axis": "산도",
+        "value": 78
+      },
+      {
+        "axis": "탄닌",
+        "value": 60
+      }
+    ],
+    "tastingNotes": "장미와 제비꽃, 붉은 산딸기 향이 실크처럼 곱게 이어집니다. 샹볼 뮈지니는 부르고뉴에서 가장 여성적이라 불리는 마을로, 힘보다 향의 결로 승부합니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아 100%"
+      },
+      {
+        "label": "밭",
+        "value": "뮈지니 그랑 크뤼"
+      },
+      {
+        "label": "소유",
+        "value": "뮈지니 전체의 약 70%"
+      }
+    ],
+    "drinkFrom": "2032",
+    "drinkPeak": "2044",
+    "drinkUntil": "2062",
+    "history": [
+      {
+        "year": "1450",
+        "event": "가문이 샹볼 뮈지니에 자리 잡음"
+      },
+      {
+        "year": "현재",
+        "event": "20대째 같은 가문이 이어짐"
+      }
+    ],
+    "story": "부르고뉴에서 한 가문이 가장 오래 지켜 온 도멘 중 하나로, 500년 넘게 같은 핏줄이 이어 왔습니다.",
+    "winery": "샹볼 뮈지니 마을 한가운데 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "닭·꿩 요리",
+        "why": "섬세한 살결이 술을 덮지 않습니다",
+        "shopKeyword": "닭고기"
+      },
+      {
+        "emoji": "🍄",
+        "food": "버섯 요리",
+        "why": "흙내끼리 이어집니다",
+        "shopKeyword": "표고버섯"
+      },
+      {
+        "emoji": "🐟",
+        "food": "연어",
+        "why": "가벼운 탄닌이 기름진 살을 받칩니다",
+        "shopKeyword": "생연어"
+      }
+    ],
+    "pairingTip": "음식은 최대한 담백하게 가세요.",
+    "avoidPairing": "진한 소스는 섬세함을 완전히 덮습니다.",
+    "similar": [
+      "도멘 드 라 로마네 콩티 로마네 콩티",
+      "도멘 아르망 루소 샹베르탱",
+      "도멘 조르주 루미에 샹볼 뮈지니"
+    ],
+    "trivia": "'샹볼 뮈지니는 레이스, 주브레 샹베르탱은 갑옷'이라는 오래된 비유가 있습니다.",
+    "servingTemp": "15~16℃",
+    "servingNote": "한 시간쯤 열어 두면 향이 펼쳐집니다.",
+    "aging": "25년 이상 갑니다.",
+    "tips": [
+      "같은 피노 누아라도 마을에 따라 성격이 완전히 다릅니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 슈발 블랑",
+    "searchKeyword": "슈발 블랑",
+    "producer": "Château Cheval Blanc",
+    "type": "레드 와인 · 카베르네 프랑 블렌드",
+    "vintage": null,
+    "region": "보르도 · 생테밀리옹",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#521725",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "생테밀리옹 최상위 등급으로 자료가 매우 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 80
+      },
+      {
+        "axis": "당도",
+        "value": 16
+      },
+      {
+        "axis": "산도",
+        "value": 66
+      },
+      {
+        "axis": "탄닌",
+        "value": 72
+      }
+    ],
+    "tastingNotes": "검붉은 과실과 제비꽃, 감초와 담뱃잎 향이 곱게 겹칩니다. 카베르네 프랑을 절반 가까이 써서 향이 유난히 화사하고, 보르도 최상급 중에서도 가장 우아한 쪽으로 꼽힙니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "카베르네 프랑, 메를로"
+      },
+      {
+        "label": "등급",
+        "value": "생테밀리옹 프리미에 그랑 크뤼 클라세 A"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 신통 약 18개월"
+      }
+    ],
+    "drinkFrom": "2033",
+    "drinkPeak": "2045",
+    "drinkUntil": "2068",
+    "history": [
+      {
+        "year": "1832",
+        "event": "피작 소유에서 분리되어 독립"
+      },
+      {
+        "year": "1947",
+        "event": "전설로 남은 빈티지 생산"
+      },
+      {
+        "year": "2022",
+        "event": "생테밀리옹 등급 심사에서 자진 탈퇴"
+      }
+    ],
+    "story": "1947년산은 20세기 최고의 보르도로 자주 꼽힙니다. 그해 유난히 더워 당이 치솟았던 것이 오히려 전설이 됐습니다.",
+    "winery": "생테밀리옹 북서쪽, 포므롤과 맞닿은 자리에 있습니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "안심 스테이크",
+        "why": "고운 탄닌이 부드러운 살과 맞습니다",
+        "shopKeyword": "소고기 안심"
+      },
+      {
+        "emoji": "🦆",
+        "food": "오리 요리",
+        "why": "과실이 기름진 살을 받칩니다",
+        "shopKeyword": "오리고기"
+      },
+      {
+        "emoji": "🍄",
+        "food": "트러플 요리",
+        "why": "흙내가 담뱃잎과 이어집니다",
+        "shopKeyword": "트러플 오일"
+      }
+    ],
+    "pairingTip": "특별한 자리에 천천히 여는 술입니다.",
+    "avoidPairing": "매운 음식과는 맞지 않습니다.",
+    "similar": [
+      "샤또 페트뤼스",
+      "샤또 파비",
+      "샤또 앙젤뤼스"
+    ],
+    "trivia": "카베르네 프랑을 이만큼 많이 쓰는 최상급 보르도는 드뭅니다. 이 집의 성격을 만드는 결정적 요소입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "30년 이상 갑니다.",
+    "tips": [
+      "보르도 최상급 중 가장 향이 화사한 쪽을 찾는다면 우안으로 가세요"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "마세토",
+    "searchKeyword": "마세토",
+    "producer": "Tenuta dell'Ornellaia",
+    "type": "레드 와인 · 메를로",
+    "vintage": null,
+    "region": "토스카나 · 볼게리",
+    "country": "이탈리아",
+    "alcohol": "14.5%",
+    "liquidColor": "#4D1421",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "이탈리아 최고가 와인 중 하나로 자료가 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 88
+      },
+      {
+        "axis": "당도",
+        "value": 18
+      },
+      {
+        "axis": "산도",
+        "value": 64
+      },
+      {
+        "axis": "탄닌",
+        "value": 80
+      }
+    ],
+    "tastingNotes": "검은 자두와 초콜릿, 감초와 향신료 향이 아주 진하게 쌓입니다. 메를로 한 품종만으로 이만큼 힘과 짜임새를 낸 사례가 드물어, '이탈리아의 페트뤼스'라 불립니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "메를로 100%"
+      },
+      {
+        "label": "밭",
+        "value": "점토질 언덕 약 7ha"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 신통 약 24개월"
+      }
+    ],
+    "drinkFrom": "2032",
+    "drinkPeak": "2042",
+    "drinkUntil": "2060",
+    "history": [
+      {
+        "year": "1986",
+        "event": "첫 빈티지 생산"
+      },
+      {
+        "year": "현재",
+        "event": "이탈리아 최고가 와인 중 하나"
+      }
+    ],
+    "story": "밭에 돌이 많아 '작은 덤불'이라는 뜻의 사투리 이름이 붙었습니다. 그 척박한 점토가 메를로에 딱 맞았습니다.",
+    "winery": "오르넬라이아와 같은 회사가 만듭니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "숙성 소고기",
+        "why": "강한 탄닌이 감칠맛을 받습니다",
+        "shopKeyword": "드라이에이징 스테이크"
+      },
+      {
+        "emoji": "🍄",
+        "food": "트러플 요리",
+        "why": "흙내가 향신료와 이어집니다",
+        "shopKeyword": "트러플 오일"
+      },
+      {
+        "emoji": "🦆",
+        "food": "오리 요리",
+        "why": "농밀한 과실이 기름을 받칩니다",
+        "shopKeyword": "오리고기"
+      }
+    ],
+    "pairingTip": "특별한 자리에 여는 술입니다.",
+    "avoidPairing": "가벼운 요리와는 균형이 맞지 않습니다.",
+    "similar": [
+      "오르넬라이아",
+      "사시카이아",
+      "샤또 페트뤼스"
+    ],
+    "trivia": "볼게리는 1970년대까지 아무도 주목하지 않던 해안 지역이었습니다. 지금은 이탈리아 최고가 와인이 모여 있습니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "25년 이상 갑니다.",
+    "tips": [
+      "메를로를 '부드러운 품종'으로만 알고 있었다면 이 술이 생각을 바꿉니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "크뤼그 그랑 퀴베",
+    "searchKeyword": "크뤼그 그랑 퀴베",
+    "producer": "Krug",
+    "type": "스파클링 와인 · 샴페인",
+    "vintage": null,
+    "region": "샹파뉴",
+    "country": "프랑스",
+    "alcohol": "12%",
+    "liquidColor": "#EFE0A0",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "샴페인 최상급 하우스로 자료가 매우 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 70
+      },
+      {
+        "axis": "당도",
+        "value": 20
+      },
+      {
+        "axis": "산도",
+        "value": 80
+      },
+      {
+        "axis": "탄닌",
+        "value": 4
+      }
+    ],
+    "tastingNotes": "구운 견과와 브리오슈, 말린 감귤과 꿀 향이 겹겹이 쌓입니다. 샴페인 중 가장 무게가 있는 축이라 식사와 함께 마셔도 밀리지 않고, 기포보다 향의 밀도가 먼저 느껴집니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아, 샤르도네, 피노 뮈니에"
+      },
+      {
+        "label": "방식",
+        "value": "작은 오크 통에서 1차 발효"
+      },
+      {
+        "label": "숙성",
+        "value": "효모와 함께 6년 이상"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2032",
+    "drinkUntil": "2045",
+    "history": [
+      {
+        "year": "1843",
+        "event": "요한 요제프 크뤼그가 랭스에서 설립"
+      },
+      {
+        "year": "현재",
+        "event": "150개가 넘는 해와 밭의 술을 섞어 한 병을 만듦"
+      }
+    ],
+    "story": "매년 열 개가 넘는 해의 저장 술을 섞습니다. 해마다 맛이 달라지지 않게 하려는 것이 아니라, 매년 최고를 다시 조립하려는 방식입니다.",
+    "winery": "랭스에 자리한 소규모 최상급 하우스입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦞",
+        "food": "랍스터·게",
+        "why": "무게가 서로 맞습니다",
+        "shopKeyword": "랍스터"
+      },
+      {
+        "emoji": "🍗",
+        "food": "로스트 치킨",
+        "why": "고소한 향이 이어집니다",
+        "shopKeyword": "닭고기"
+      },
+      {
+        "emoji": "🧀",
+        "food": "숙성 치즈",
+        "why": "짠맛이 산도를 눕힙니다",
+        "shopKeyword": "콩테 치즈"
+      }
+    ],
+    "pairingTip": "식전주가 아니라 식사와 함께 마시는 샴페인입니다.",
+    "avoidPairing": "가벼운 안주만으로는 술이 남습니다.",
+    "similar": [
+      "돔 페리뇽",
+      "볼랭저 스페셜 퀴베",
+      "루이 로드레 크리스탈"
+    ],
+    "trivia": "병마다 여섯 자리 아이디가 있어, 홈페이지에 넣으면 그 병에 무엇이 섞였는지 알 수 있습니다.",
+    "servingTemp": "10~12℃",
+    "servingNote": "너무 차게 하면 향이 닫힙니다. 큰 화이트 잔이 더 좋습니다.",
+    "aging": "15년 이상 갑니다.",
+    "tips": [
+      "샴페인은 플루트 잔이 정답이 아닙니다. 향이 좋은 샴페인은 넓은 잔에 드세요"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "볼랭저 스페셜 퀴베",
+    "searchKeyword": "볼랭저 스페셜 퀴베",
+    "producer": "Bollinger",
+    "type": "스파클링 와인 · 샴페인",
+    "vintage": null,
+    "region": "샹파뉴",
+    "country": "프랑스",
+    "alcohol": "12%",
+    "liquidColor": "#EFE4A8",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 최상급 샴페인 하우스입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 64
+      },
+      {
+        "axis": "당도",
+        "value": 20
+      },
+      {
+        "axis": "산도",
+        "value": 80
+      },
+      {
+        "axis": "탄닌",
+        "value": 4
+      }
+    ],
+    "tastingNotes": "구운 사과와 브리오슈, 헤이즐넛 향이 도톰하게 이어집니다. 피노 누아 비중이 높아 샴페인 중에서도 무게가 있는 편이고, 여운에 고소함이 길게 남습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아 중심"
+      },
+      {
+        "label": "방식",
+        "value": "일부 오크 통 발효"
+      },
+      {
+        "label": "숙성",
+        "value": "효모와 함께 3년 이상"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2029",
+    "drinkUntil": "2036",
+    "history": [
+      {
+        "year": "1829",
+        "event": "아이 마을에서 설립"
+      },
+      {
+        "year": "1884",
+        "event": "영국 왕실 납품 인증"
+      }
+    ],
+    "story": "007 영화에 오래 등장한 샴페인입니다. 1970년대부터 이어진 인연이 브랜드의 상징이 됐습니다.",
+    "winery": "샹파뉴 아이 마을에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦪",
+        "food": "굴",
+        "why": "산도가 바다 향을 세워 줍니다",
+        "shopKeyword": "생굴"
+      },
+      {
+        "emoji": "🍗",
+        "food": "로스트 치킨",
+        "why": "고소한 향이 이어집니다",
+        "shopKeyword": "닭고기"
+      },
+      {
+        "emoji": "🍤",
+        "food": "튀김",
+        "why": "기포가 기름을 씻어 줍니다",
+        "shopKeyword": "새우튀김"
+      }
+    ],
+    "pairingTip": "식사와 함께 마셔도 밀리지 않습니다.",
+    "avoidPairing": "매운 음식은 기포를 따갑게 만듭니다.",
+    "similar": [
+      "크뤼그 그랑 퀴베",
+      "돔 페리뇽",
+      "루이 로드레 브뤼 프리미어"
+    ],
+    "trivia": "샴페인 하우스 중 드물게 아직도 나무 통을 상당량 씁니다. 그래서 결이 두툼합니다.",
+    "servingTemp": "9~11℃",
+    "servingNote": "차갑게, 디캔팅은 하지 마세요.",
+    "aging": "10년 안팎이 좋습니다.",
+    "tips": [
+      "피노 누아 비중이 높은 샴페인은 식사와 함께 마시기 좋습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "루이 로드레 크리스탈",
+    "searchKeyword": "루이 로드레 크리스탈",
+    "producer": "Louis Roederer",
+    "type": "스파클링 와인 · 샴페인",
+    "vintage": null,
+    "region": "샹파뉴",
+    "country": "프랑스",
+    "alcohol": "12%",
+    "liquidColor": "#F0E5A6",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "샴페인 최상급 퀴베로 자료가 매우 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 62
+      },
+      {
+        "axis": "당도",
+        "value": 18
+      },
+      {
+        "axis": "산도",
+        "value": 84
+      },
+      {
+        "axis": "탄닌",
+        "value": 4
+      }
+    ],
+    "tastingNotes": "흰 복숭아와 감귤, 아몬드와 옅은 미네랄 향이 곧게 섭니다. 무게보다 정밀함으로 승부하는 쪽이라, 크뤼그와 나란히 놓으면 샴페인 최상급의 두 방향이 뚜렷하게 갈립니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아, 샤르도네"
+      },
+      {
+        "label": "등급",
+        "value": "빈티지 프레스티지 퀴베"
+      },
+      {
+        "label": "숙성",
+        "value": "효모와 함께 6년 이상"
+      }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2035",
+    "drinkUntil": "2050",
+    "history": [
+      {
+        "year": "1876",
+        "event": "러시아 황제 알렉산드르 2세를 위해 만들어짐"
+      },
+      {
+        "year": "현재",
+        "event": "샴페인 프레스티지 퀴베의 대표 이름"
+      }
+    ],
+    "story": "황제가 독살을 두려워해 바닥이 평평한 투명 유리병을 요구했다는 이야기가 전해집니다. 그래서 지금도 병이 맑고 밑이 평평합니다.",
+    "winery": "랭스에 자리한 가족 소유 하우스입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦞",
+        "food": "랍스터·게",
+        "why": "정밀한 산도가 단맛 나는 살을 조여 줍니다",
+        "shopKeyword": "랍스터"
+      },
+      {
+        "emoji": "🍣",
+        "food": "초밥·회",
+        "why": "미네랄이 바다 향과 이어집니다",
+        "shopKeyword": "초밥"
+      },
+      {
+        "emoji": "🥚",
+        "food": "캐비아",
+        "why": "고전적인 짝입니다",
+        "shopKeyword": "캐비아"
+      }
+    ],
+    "pairingTip": "담백한 해산물과 가장 잘 맞습니다.",
+    "avoidPairing": "진한 고기 요리와는 균형이 맞지 않습니다.",
+    "similar": [
+      "돔 페리뇽",
+      "크뤼그 그랑 퀴베",
+      "볼랭저 스페셜 퀴베"
+    ],
+    "trivia": "빛에 약한 술이라 투명 병에는 자외선 차단 포장을 씌워 팝니다.",
+    "servingTemp": "9~11℃",
+    "servingNote": "차갑게, 넓은 잔에 드세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": [
+      "프레스티지 퀴베는 그해 포도만 씁니다. 라벨에 연도가 적혀 있습니다"
+    ]
+  }
+]

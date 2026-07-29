@@ -1,0 +1,493 @@
+[
+  {
+    "category": "wine",
+    "name": "스크리밍 이글 카베르네 소비뇽",
+    "searchKeyword": "스크리밍 이글",
+    "producer": "Screaming Eagle",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "나파 밸리 · 오크빌",
+    "country": "미국",
+    "alcohol": "14.5%",
+    "liquidColor": "#4C1420",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "나파 컬트 와인의 대표 이름으로 자료가 많습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 88 },
+      { "axis": "당도", "value": 20 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "탄닌", "value": 80 }
+    ],
+    "tastingNotes": "블랙커런트와 제비꽃, 흑연과 다크 초콜릿 향이 아주 촘촘하게 겹칩니다. 나파 최상급 중에서도 무겁게 밀어붙이기보다 결이 고와, 구하기 어려운 만큼 평가도 높습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심" },
+      { "label": "밭", "value": "오크빌 약 20ha" },
+      { "label": "생산량", "value": "연간 수백 케이스 수준" }
+    ],
+    "drinkFrom": "2031",
+    "drinkPeak": "2040",
+    "drinkUntil": "2055",
+    "history": [
+      { "year": "1992", "event": "첫 빈티지 생산" },
+      { "year": "2000년대", "event": "경매에서 최고가를 기록하며 컬트 와인의 상징이 됨" }
+    ],
+    "story": "일반 판매를 하지 않고 회원 명단으로만 팝니다. 그 명단에 들어가려고 몇 년씩 기다리는 사람들이 있습니다.",
+    "winery": "나파 오크빌의 작은 에스테이트입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "숙성 소고기", "why": "강한 탄닌이 감칠맛을 받습니다", "shopKeyword": "드라이에이징 스테이크" },
+      { "emoji": "🍖", "food": "양갈비", "why": "허브 향이 어울립니다", "shopKeyword": "양갈비" },
+      { "emoji": "🍄", "food": "트러플 요리", "why": "흙내가 흑연 향과 이어집니다", "shopKeyword": "트러플 오일" }
+    ],
+    "pairingTip": "특별한 자리에 여는 술입니다.",
+    "avoidPairing": "가벼운 요리와는 균형이 맞지 않습니다.",
+    "similar": ["할란 에스테이트", "오퍼스 원", "케이머스 나파 밸리 카베르네 소비뇽"],
+    "trivia": "'컬트 와인'은 생산량이 아주 적고 명단으로만 파는 나파의 소수 와이너리들을 가리키는 말입니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "25년 이상 갑니다.",
+    "tips": ["구하기 어렵다는 것 자체가 값의 상당 부분을 이룹니다"]
+  },
+  {
+    "category": "wine",
+    "name": "할란 에스테이트",
+    "searchKeyword": "할란 에스테이트",
+    "producer": "Harlan Estate",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "나파 밸리 · 오크빌",
+    "country": "미국",
+    "alcohol": "14.5%",
+    "liquidColor": "#4D1421",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "나파 컬트 와인의 대표 이름 중 하나입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 90 },
+      { "axis": "당도", "value": 18 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "탄닌", "value": 84 }
+    ],
+    "tastingNotes": "검은 과실과 삼나무, 감초와 흑연 향이 겹겹이 쌓입니다. 나파에서 가장 오래 견디는 술로 꼽히며, 어릴 때는 벽 같지만 20년을 넘기면 결이 풀립니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심(보르도 품종)" },
+      { "label": "밭", "value": "오크빌 서쪽 산비탈" },
+      { "label": "숙성", "value": "프렌치 오크 신통 약 24개월" }
+    ],
+    "drinkFrom": "2033",
+    "drinkPeak": "2043",
+    "drinkUntil": "2060",
+    "history": [
+      { "year": "1984", "event": "빌 할란이 밭을 마련" },
+      { "year": "1990", "event": "첫 빈티지 생산(1996년 출시)" }
+    ],
+    "story": "'캘리포니아의 1등급'을 만들겠다는 목표로 시작했습니다. 첫 병을 팔기까지 12년이 걸렸습니다.",
+    "winery": "나파 오크빌 서쪽 산비탈에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "숙성 소고기", "why": "강한 탄닌에 맞설 무게가 필요합니다", "shopKeyword": "드라이에이징 스테이크" },
+      { "emoji": "🍖", "food": "양고기 로스트", "why": "허브 향이 삼나무와 어울립니다", "shopKeyword": "양고기" },
+      { "emoji": "🧀", "food": "숙성 하드치즈", "why": "짠맛이 탄닌을 눕힙니다", "shopKeyword": "파르미지아노" }
+    ],
+    "pairingTip": "충분히 숙성한 뒤에 여는 술입니다.",
+    "avoidPairing": "담백한 요리는 완전히 눌립니다.",
+    "similar": ["스크리밍 이글 카베르네 소비뇽", "도미누스 에스테이트", "오퍼스 원"],
+    "trivia": "산비탈 밭은 평지보다 수확량이 적은 대신 알이 작아 향이 진해집니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두세 시간 열어 두세요.",
+    "aging": "30년 이상 갑니다.",
+    "tips": ["나파 컬트 와인은 어릴 때 열면 힘만 느껴집니다"]
+  },
+  {
+    "category": "wine",
+    "name": "도미누스 에스테이트",
+    "searchKeyword": "도미누스 에스테이트",
+    "producer": "Dominus Estate",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "나파 밸리 · 욘트빌",
+    "country": "미국",
+    "alcohol": "14%",
+    "liquidColor": "#4F1622",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "나파 최상급으로 자료가 충분합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 84 },
+      { "axis": "당도", "value": 16 },
+      { "axis": "산도", "value": 66 },
+      { "axis": "탄닌", "value": 82 }
+    ],
+    "tastingNotes": "블랙커런트와 흑연, 담뱃잎과 말린 허브 향이 곧게 섭니다. 나파치고 과실 단맛이 절제돼 보르도에 가장 가까운 결로 자주 꼽힙니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심(프티 베르도, 카베르네 프랑)" },
+      { "label": "밭", "value": "나파누크 밭" },
+      { "label": "숙성", "value": "프렌치 오크 약 18개월" }
+    ],
+    "drinkFrom": "2031",
+    "drinkPeak": "2040",
+    "drinkUntil": "2058",
+    "history": [
+      { "year": "1982", "event": "페트뤼스의 크리스티앙 무엑스가 나파누크 밭을 인수" },
+      { "year": "1995", "event": "회색 콘크리트 건물 완공" }
+    ],
+    "story": "보르도 페트뤼스를 만들던 사람이 나파에서 시작한 술입니다. '도미누스'는 라틴어로 '주인'이라는 뜻입니다.",
+    "winery": "돌망태를 쌓아 만든 건물로 건축계에서도 이름난 곳입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "등심 스테이크", "why": "단단한 탄닌이 육향을 받습니다", "shopKeyword": "소고기 등심" },
+      { "emoji": "🦆", "food": "오리 요리", "why": "과실이 기름진 살을 받칩니다", "shopKeyword": "오리고기" },
+      { "emoji": "🍄", "food": "트러플 요리", "why": "흙내가 흑연 향과 이어집니다", "shopKeyword": "트러플 오일" }
+    ],
+    "pairingTip": "숙성 후에 열어야 진가가 드러납니다.",
+    "avoidPairing": "매운 음식과는 맞지 않습니다.",
+    "similar": ["할란 에스테이트", "오퍼스 원", "샤또 페트뤼스"],
+    "trivia": "나파누크 밭은 1830년대에 처음 포도가 심긴 나파에서 가장 오래된 밭 중 하나입니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "25년 이상 갑니다.",
+    "tips": ["나파인데 보르도 같은 술을 찾는다면 이쪽입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 몽텔레나 나파 밸리 샤르도네",
+    "searchKeyword": "샤또 몽텔레나 샤르도네",
+    "producer": "Chateau Montelena",
+    "type": "화이트 와인 · 샤르도네",
+    "vintage": null,
+    "region": "나파 밸리 · 캘리스토가",
+    "country": "미국",
+    "alcohol": "13.5%",
+    "liquidColor": "#F0E5A6",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "1976년 파리 시음회 우승 와인으로 자료가 매우 많습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 64 },
+      { "axis": "당도", "value": 15 },
+      { "axis": "산도", "value": 72 },
+      { "axis": "탄닌", "value": 4 }
+    ],
+    "tastingNotes": "노란 사과와 감귤, 옅은 헤이즐넛 향이 단정하게 이어집니다. 캘리포니아 샤르도네치고 버터 향이 두껍지 않고 산도가 살아 있어, 부르고뉴 쪽에 가까운 결입니다.",
+    "specs": [
+      { "label": "품종", "value": "샤르도네 100%" },
+      { "label": "숙성", "value": "프렌치 오크 일부(신통 비중 낮음)" },
+      { "label": "지역", "value": "나파 밸리 캘리스토가" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2029",
+    "drinkUntil": "2035",
+    "history": [
+      { "year": "1882", "event": "캘리스토가에 석조 와이너리 건립" },
+      { "year": "1976", "event": "파리 시음회에서 부르고뉴 최상급을 제치고 1위" }
+    ],
+    "story": "1976년 파리에서 프랑스 심사위원들이 라벨을 가리고 뽑은 1위가 이 캘리포니아 화이트였습니다. 그날 이후 신대륙 와인을 보는 눈이 완전히 달라졌습니다.",
+    "winery": "나파 북쪽 끝 캘리스토가의 석조 성채입니다.",
+    "foodPairing": [
+      { "emoji": "🦀", "food": "게 요리", "why": "산도가 단맛 나는 살을 조여 줍니다", "shopKeyword": "대게" },
+      { "emoji": "🍗", "food": "로스트 치킨", "why": "고소한 향이 이어집니다", "shopKeyword": "닭고기" },
+      { "emoji": "🐟", "food": "흰살 생선", "why": "오크가 과하지 않아 눌리지 않습니다", "shopKeyword": "광어" }
+    ],
+    "pairingTip": "해산물과 닭요리 전반에 잘 맞습니다.",
+    "avoidPairing": "붉은 고기와는 어울리지 않습니다.",
+    "similar": ["라 크레마 소노마 코스트 샤르도네", "루이 자도 뿌이 퓌세", "몬테스 알파 샤르도네"],
+    "trivia": "그날의 우승 병은 지금 워싱턴 스미소니언 박물관에 보관돼 있습니다.",
+    "servingTemp": "10~12℃",
+    "servingNote": "너무 차게 하면 향이 닫힙니다.",
+    "aging": "8~10년이 좋습니다.",
+    "tips": ["'파리의 심판'은 와인 역사에서 가장 유명한 사건입니다. 이 병이 그 주인공입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "스택스 립 와인 셀라 카스크 23",
+    "searchKeyword": "스택스 립 카스크 23",
+    "producer": "Stag's Leap Wine Cellars",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "나파 밸리 · 스택스 립 디스트릭트",
+    "country": "미국",
+    "alcohol": "14.5%",
+    "liquidColor": "#4F1622",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "1976년 파리 시음회 레드 부문 우승 와이너리입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 82 },
+      { "axis": "당도", "value": 18 },
+      { "axis": "산도", "value": 64 },
+      { "axis": "탄닌", "value": 78 }
+    ],
+    "tastingNotes": "블랙체리와 제비꽃, 삼나무와 옅은 향신료 향이 곱게 겹칩니다. 나파 카베르네 중에서도 힘보다 우아함 쪽으로, '철권 속의 벨벳 장갑'이라는 오래된 표현이 이 집을 두고 나왔습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 100%" },
+      { "label": "밭", "value": "S.L.V.와 페이 밭의 최상 구획" },
+      { "label": "숙성", "value": "프렌치 오크 신통 약 24개월" }
+    ],
+    "drinkFrom": "2031",
+    "drinkPeak": "2040",
+    "drinkUntil": "2055",
+    "history": [
+      { "year": "1970", "event": "워런 위니아스키가 밭을 마련" },
+      { "year": "1976", "event": "파리 시음회 레드 부문 1위" },
+      { "year": "1990", "event": "카스크 23 라인 정착" }
+    ],
+    "story": "파리 시음회에서 1등급 보르도들을 제친 것이 이 집의 1973년산이었습니다. 그 사건이 나파 전체의 값을 바꿔 놓았습니다.",
+    "winery": "나파 동쪽 스택스 립 디스트릭트에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "안심 스테이크", "why": "고운 탄닌이 부드러운 살과 맞습니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🦆", "food": "오리 요리", "why": "과실이 기름진 살을 받칩니다", "shopKeyword": "오리고기" },
+      { "emoji": "🍄", "food": "버섯 요리", "why": "흙내가 삼나무와 이어집니다", "shopKeyword": "표고버섯" }
+    ],
+    "pairingTip": "숙성 후에 열어야 진가가 드러납니다.",
+    "avoidPairing": "매운 음식과는 맞지 않습니다.",
+    "similar": ["오퍼스 원", "도미누스 에스테이트", "케이머스 나파 밸리 카베르네 소비뇽"],
+    "trivia": "이름이 비슷한 'Stags' Leap Winery'는 다른 회사입니다. 소유권 분쟁 끝에 아포스트로피 위치로 구분하게 됐습니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "25년 이상 갑니다.",
+    "tips": ["나파에도 우아한 쪽이 있습니다. 이 집이 대표적입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "조셉 펠프스 인시그니아",
+    "searchKeyword": "조셉 펠프스 인시그니아",
+    "producer": "Joseph Phelps Vineyards",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "나파 밸리",
+    "country": "미국",
+    "alcohol": "14.5%",
+    "liquidColor": "#4E1521",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "미국 최초의 보르도식 블렌드로 자료가 충분합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 86 },
+      { "axis": "당도", "value": 20 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "탄닌", "value": 78 }
+    ],
+    "tastingNotes": "검은 과실과 모카, 삼나무와 감초 향이 진하게 쌓입니다. 나파의 농밀함이 분명하면서도 블렌딩 덕분에 결이 정돈돼, 미국 프리미엄 레드의 원형으로 자주 언급됩니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심(보르도 품종)" },
+      { "label": "숙성", "value": "프렌치 오크 신통 약 24개월" },
+      { "label": "지역", "value": "나파 밸리 여러 밭" }
+    ],
+    "drinkFrom": "2030",
+    "drinkPeak": "2038",
+    "drinkUntil": "2052",
+    "history": [
+      { "year": "1974", "event": "첫 빈티지 생산" },
+      { "year": "현재", "event": "미국 프리미엄 블렌드의 시초로 평가" }
+    ],
+    "story": "품종 이름이 아니라 자기 이름을 붙인 첫 미국 와인 중 하나입니다. 밭보다 블렌딩을 앞세운 발상이 당시로서는 새로웠습니다.",
+    "winery": "나파 세인트 헬레나 동쪽에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "립아이 스테이크", "why": "무게가 서로 맞습니다", "shopKeyword": "소고기 등심" },
+      { "emoji": "🍖", "food": "양갈비", "why": "허브 향이 삼나무와 어울립니다", "shopKeyword": "양갈비" },
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "모카 향이 이어집니다", "shopKeyword": "다크초콜릿" }
+    ],
+    "pairingTip": "특별한 자리에 여는 술입니다.",
+    "avoidPairing": "담백한 요리는 완전히 눌립니다.",
+    "similar": ["오퍼스 원", "케이머스 나파 밸리 카베르네 소비뇽", "안티노리 솔라이아"],
+    "trivia": "'메리티지'는 미국에서 보르도 품종을 섞은 술에 붙이는 이름입니다. 인시그니아가 그 흐름을 열었습니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 열어 두세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": ["미국 프리미엄 레드의 계보를 알고 싶다면 여기서 시작하세요"]
+  },
+  {
+    "category": "wine",
+    "name": "뵈브 클리코 라 그랑 담",
+    "searchKeyword": "뵈브 클리코 라 그랑 담",
+    "producer": "Veuve Clicquot",
+    "type": "스파클링 와인 · 샴페인",
+    "vintage": null,
+    "region": "샹파뉴",
+    "country": "프랑스",
+    "alcohol": "12%",
+    "liquidColor": "#F0E4A4",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "뵈브 클리코의 프레스티지 퀴베입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 66 },
+      { "axis": "당도", "value": 18 },
+      { "axis": "산도", "value": 82 },
+      { "axis": "탄닌", "value": 4 }
+    ],
+    "tastingNotes": "구운 견과와 브리오슈, 노란 자두와 감귤 향이 겹칩니다. 옐로 라벨보다 훨씬 오래 숙성해 기포가 곱고 여운이 길며, 피노 누아 비중이 높아 무게가 있습니다.",
+    "specs": [
+      { "label": "품종", "value": "피노 누아 중심, 샤르도네" },
+      { "label": "등급", "value": "빈티지 프레스티지 퀴베" },
+      { "label": "숙성", "value": "효모와 함께 7년 이상" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2033",
+    "drinkUntil": "2045",
+    "history": [
+      { "year": "1805", "event": "27세에 미망인이 된 클리코 부인이 사업을 이어받음" },
+      { "year": "1972", "event": "그를 기려 라 그랑 담 출시" }
+    ],
+    "story": "'뵈브'는 프랑스어로 미망인입니다. 남편을 잃은 뒤 회사를 맡아 샴페인을 세계에 알린 여성의 이름이 그대로 브랜드가 됐습니다.",
+    "winery": "랭스에 자리한 대형 하우스입니다.",
+    "foodPairing": [
+      { "emoji": "🦞", "food": "랍스터·게", "why": "무게가 서로 맞습니다", "shopKeyword": "랍스터" },
+      { "emoji": "🍗", "food": "로스트 치킨", "why": "고소한 향이 이어집니다", "shopKeyword": "닭고기" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "짠맛이 산도를 눕힙니다", "shopKeyword": "콩테 치즈" }
+    ],
+    "pairingTip": "식사와 함께 마셔도 밀리지 않습니다.",
+    "avoidPairing": "매운 음식은 기포를 따갑게 만듭니다.",
+    "similar": ["돔 페리뇽", "루이 로드레 크리스탈", "볼랭저 스페셜 퀴베"],
+    "trivia": "병을 비스듬히 꽂아 돌려 침전물을 모으는 방법을 이 집이 고안했습니다. 지금도 모든 샴페인이 이 방식을 씁니다.",
+    "servingTemp": "9~11℃",
+    "servingNote": "차갑게, 넓은 잔에 드세요.",
+    "aging": "15년 이상 갑니다.",
+    "tips": ["같은 브랜드라도 프레스티지 퀴베는 전혀 다른 술입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "페리에 주에 벨 에포크",
+    "searchKeyword": "페리에 주에 벨 에포크",
+    "producer": "Perrier-Jouët",
+    "type": "스파클링 와인 · 샴페인",
+    "vintage": null,
+    "region": "샹파뉴",
+    "country": "프랑스",
+    "alcohol": "12.5%",
+    "liquidColor": "#F0E7AC",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "아네모네 그림 병으로 널리 알려진 프레스티지 퀴베입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 58 },
+      { "axis": "당도", "value": 20 },
+      { "axis": "산도", "value": 82 },
+      { "axis": "탄닌", "value": 4 }
+    ],
+    "tastingNotes": "흰 꽃과 흰 복숭아, 감귤과 옅은 아몬드 향이 곱게 이어집니다. 샤르도네 비중이 높아 결이 가볍고 화사한 쪽이라, 무거운 샴페인이 부담스러울 때 잘 맞습니다.",
+    "specs": [
+      { "label": "품종", "value": "샤르도네 중심, 피노 누아" },
+      { "label": "등급", "value": "빈티지 프레스티지 퀴베" },
+      { "label": "숙성", "value": "효모와 함께 6년 이상" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2032",
+    "drinkUntil": "2042",
+    "history": [
+      { "year": "1811", "event": "에페르네에서 설립" },
+      { "year": "1902", "event": "에밀 갈레가 아네모네 병 그림을 디자인" }
+    ],
+    "story": "병에 그려진 흰 아네모네는 아르누보 유리공예가 에밀 갈레의 작품입니다. 70년 넘게 창고에 잊혀 있다가 1964년에 다시 발견돼 되살아났습니다.",
+    "winery": "샹파뉴 에페르네에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🦪", "food": "굴·조개", "why": "산도가 바다 향을 세워 줍니다", "shopKeyword": "생굴" },
+      { "emoji": "🍣", "food": "초밥·회", "why": "가벼운 결이 담백한 살과 맞습니다", "shopKeyword": "초밥" },
+      { "emoji": "🍤", "food": "새우 요리", "why": "산도가 단맛 나는 살을 조여 줍니다", "shopKeyword": "생새우" }
+    ],
+    "pairingTip": "축하 자리에 병 자체가 선물이 되는 술입니다.",
+    "avoidPairing": "진한 고기 요리와는 존재감이 약합니다.",
+    "similar": ["돔 페리뇽", "루이 로드레 크리스탈", "뵈브 클리코 라 그랑 담"],
+    "trivia": "샴페인 병에 예술가의 그림을 넣은 사실상 첫 사례입니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "차갑게, 디캔팅은 하지 마세요.",
+    "aging": "12년 안팎이 좋습니다.",
+    "tips": ["샤르도네 비중이 높은 샴페인은 가볍고 화사합니다"]
+  },
+  {
+    "category": "wine",
+    "name": "테탱저 콩트 드 샹파뉴 블랑 드 블랑",
+    "searchKeyword": "테탱저 콩트 드 샹파뉴",
+    "producer": "Taittinger",
+    "type": "스파클링 와인 · 샴페인",
+    "vintage": null,
+    "region": "샹파뉴",
+    "country": "프랑스",
+    "alcohol": "12.5%",
+    "liquidColor": "#F1E9B2",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "샤르도네만 쓴 프레스티지 퀴베로 자료가 충분합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 56 },
+      { "axis": "당도", "value": 16 },
+      { "axis": "산도", "value": 86 },
+      { "axis": "탄닌", "value": 4 }
+    ],
+    "tastingNotes": "레몬 껍질과 흰 꽃, 브리오슈와 분필 같은 미네랄 향이 곧게 섭니다. 샤르도네만 써서 결이 가장 정밀한 축이라, 담백한 해산물과의 궁합이 유난히 좋습니다.",
+    "specs": [
+      { "label": "품종", "value": "샤르도네 100%(블랑 드 블랑)" },
+      { "label": "밭", "value": "코트 데 블랑 그랑 크뤼" },
+      { "label": "숙성", "value": "효모와 함께 10년 안팎" }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2036",
+    "drinkUntil": "2050",
+    "history": [
+      { "year": "1734", "event": "하우스의 기원이 되는 회사 설립" },
+      { "year": "1952", "event": "콩트 드 샹파뉴 첫 빈티지" }
+    ],
+    "story": "이름은 이 지방을 다스리며 십자군에서 샤르도네를 들여왔다는 티보 4세 백작에서 왔습니다.",
+    "winery": "랭스 지하의 옛 수도원 석회 굴을 창고로 씁니다.",
+    "foodPairing": [
+      { "emoji": "🦪", "food": "굴", "why": "미네랄이 바다 향과 이어집니다", "shopKeyword": "생굴" },
+      { "emoji": "🍣", "food": "초밥·회", "why": "정밀한 산도가 비린맛을 잡습니다", "shopKeyword": "초밥" },
+      { "emoji": "🦞", "food": "랍스터", "why": "산도가 단맛 나는 살을 조여 줍니다", "shopKeyword": "랍스터" }
+    ],
+    "pairingTip": "담백한 해산물과 가장 잘 맞습니다.",
+    "avoidPairing": "진한 고기 요리와는 균형이 맞지 않습니다.",
+    "similar": ["루이 로드레 크리스탈", "돔 페리뇽", "페리에 주에 벨 에포크"],
+    "trivia": "'블랑 드 블랑'은 흰 포도만, '블랑 드 누아'는 붉은 포도만 써서 만든 흰 스파클링을 뜻합니다.",
+    "servingTemp": "9~11℃",
+    "servingNote": "차갑게, 넓은 잔에 드세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": ["샴페인 라벨의 '블랑 드 블랑'은 샤르도네 100%라는 뜻입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "실버 오크 나파 밸리 카베르네 소비뇽",
+    "searchKeyword": "실버 오크 나파 카베르네",
+    "producer": "Silver Oak Cellars",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "나파 밸리",
+    "country": "미국",
+    "alcohol": "14.5%",
+    "liquidColor": "#511723",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 나파 카베르네입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 82 },
+      { "axis": "당도", "value": 22 },
+      { "axis": "산도", "value": 60 },
+      { "axis": "탄닌", "value": 72 }
+    ],
+    "tastingNotes": "블랙체리와 코코넛, 바닐라와 딜 향이 진하게 이어집니다. 미국산 오크만 쓰는 것이 이 집의 고집이라, 프렌치 오크를 쓴 나파 와인과는 향이 확연히 다릅니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심" },
+      { "label": "숙성", "value": "아메리칸 오크 약 24개월 + 병 숙성" },
+      { "label": "지역", "value": "나파 밸리" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2033",
+    "drinkUntil": "2045",
+    "history": [
+      { "year": "1972", "event": "레이 던컨과 저스틴 마이어가 설립" },
+      { "year": "현재", "event": "자기 통 공장을 직접 운영" }
+    ],
+    "story": "이 집은 통 만드는 공장을 직접 가지고 있습니다. 미주리산 참나무를 사서 2년간 야외에서 말린 뒤 통으로 짭니다.",
+    "winery": "나파 오크빌과 소노마 알렉산더 밸리에 시설이 있습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "립아이 스테이크", "why": "무게가 서로 맞습니다", "shopKeyword": "소고기 등심" },
+      { "emoji": "🍖", "food": "양념 갈비", "why": "달큰한 오크 향이 양념과 맞물립니다", "shopKeyword": "소갈비" },
+      { "emoji": "🍔", "food": "바비큐", "why": "훈연 향이 이어집니다", "shopKeyword": "돼지갈비" }
+    ],
+    "pairingTip": "한국식 양념 고기와 잘 맞습니다.",
+    "avoidPairing": "담백한 요리는 완전히 눌립니다.",
+    "similar": ["케이머스 나파 밸리 카베르네 소비뇽", "조셉 펠프스 인시그니아", "실버 오크 알렉산더 밸리 카베르네 소비뇽"],
+    "trivia": "미국산 오크는 코코넛·바닐라 향, 프렌치 오크는 향신료·삼나무 향을 냅니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한두 시간 열어 두세요.",
+    "aging": "15년 이상 갑니다.",
+    "tips": ["오크 종류가 향을 얼마나 바꾸는지 알고 싶다면 이 집이 좋은 예입니다"]
+  }
+]
