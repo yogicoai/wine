@@ -1,0 +1,774 @@
+[
+  {
+    "category": "wine",
+    "name": "라 리오하 알타 비냐 아르단사 리제르바",
+    "searchKeyword": "라 리오하 알타 아르단사",
+    "producer": "La Rioja Alta",
+    "type": "레드 와인 · 템프라니요",
+    "vintage": null,
+    "region": "리오하",
+    "country": "스페인",
+    "alcohol": "13.5%",
+    "liquidColor": "#7A2731",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "리오하 전통파를 대표하는 리제르바입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 66
+      },
+      {
+        "axis": "당도",
+        "value": 16
+      },
+      {
+        "axis": "산도",
+        "value": 66
+      },
+      {
+        "axis": "탄닌",
+        "value": 58
+      }
+    ],
+    "tastingNotes": "말린 체리와 코코넛, 담뱃잎 향이 이어집니다. 미국산 오크를 오래 써서 달큰한 향이 분명하고, 출시 시점에 이미 탄닌이 풀려 있어 사자마자 마실 수 있습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "템프라니요, 가르나차"
+      },
+      {
+        "label": "등급",
+        "value": "리오하 DOCa 리제르바"
+      },
+      {
+        "label": "숙성",
+        "value": "미국산 오크 3년 이상"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2032",
+    "drinkUntil": "2045",
+    "history": [
+      {
+        "year": "1890",
+        "event": "다섯 가문이 하로에 공동 설립"
+      },
+      {
+        "year": "현재",
+        "event": "리오하 전통 방식을 지키는 대표 보데가"
+      }
+    ],
+    "story": "이 집은 병을 손으로 하나하나 돌려 가며 침전물을 모읍니다. 기계로 하면 몇 시간이면 될 일을 몇 주에 걸쳐 합니다.",
+    "winery": "하로 역 근처 오래된 보데가 구역에 있습니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "양갈비",
+        "why": "달큰한 오크 향이 허브와 어울립니다",
+        "shopKeyword": "양갈비"
+      },
+      {
+        "emoji": "🥩",
+        "food": "숯불 소고기",
+        "why": "부드러운 탄닌이 육향을 받습니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🧀",
+        "food": "만체고 치즈",
+        "why": "같은 지방의 짝입니다",
+        "shopKeyword": "만체고 치즈"
+      }
+    ],
+    "pairingTip": "국내 고기 구이 전반에 잘 맞습니다.",
+    "avoidPairing": "해산물과는 어울리지 않습니다.",
+    "similar": [
+      "쿠네 리오하 리제르바",
+      "무가 리오하 리제르바",
+      "마르께스 데 카세레스 리오하 크리안사"
+    ],
+    "trivia": "리오하는 만든 곳에서 숙성까지 다 마친 뒤 출시합니다. 그래서 사자마자 마시기 좋습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한 시간 열어 두면 좋습니다.",
+    "aging": "15년 이상 갑니다.",
+    "tips": [
+      "숙성된 레드를 기다리지 않고 마시고 싶다면 리오하 리제르바가 답입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "미라발 로제",
+    "searchKeyword": "미라발 로제",
+    "producer": "Château Miraval",
+    "type": "로제 와인 · 그르나슈 블렌드",
+    "vintage": null,
+    "region": "프로방스 · 코트 드 프로방스",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#F7D8D0",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 프로방스 로제입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 42
+      },
+      {
+        "axis": "당도",
+        "value": 13
+      },
+      {
+        "axis": "산도",
+        "value": 76
+      },
+      {
+        "axis": "탄닌",
+        "value": 8
+      }
+    ],
+    "tastingNotes": "붉은 자몽과 흰 복숭아, 흰 꽃 향이 산뜻하게 이어집니다. 로제치고는 살집이 있어 식사와 함께 마셔도 존재감이 남습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "쌩쏘, 그르나슈, 시라, 롤"
+      },
+      {
+        "label": "등급",
+        "value": "코트 드 프로방스 AOC"
+      },
+      {
+        "label": "방식",
+        "value": "직접 압착"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2028",
+    "history": [
+      {
+        "year": "2012",
+        "event": "페랭 가문과 손잡고 첫 빈티지 출시"
+      },
+      {
+        "year": "2013",
+        "event": "와인 스펙테이터 100대 와인에 로제 최초로 선정"
+      }
+    ],
+    "story": "배우 부부가 소유했던 것으로 널리 알려졌지만, 실제 양조는 남부 론의 명가 페랭 가문이 맡아 왔습니다.",
+    "winery": "프로방스 코랑 마을 산속에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍤",
+        "food": "해산물",
+        "why": "산도가 비린맛을 잡습니다",
+        "shopKeyword": "생새우"
+      },
+      {
+        "emoji": "🥗",
+        "food": "샐러드·카프레제",
+        "why": "가벼워서 재료를 가리지 않습니다",
+        "shopKeyword": "모차렐라"
+      },
+      {
+        "emoji": "🍗",
+        "food": "치킨",
+        "why": "부담 없이 어울립니다",
+        "shopKeyword": "치킨"
+      }
+    ],
+    "pairingTip": "더운 날 야외 식사에 잘 맞습니다.",
+    "avoidPairing": "진한 고기 요리는 눌립니다.",
+    "similar": [
+      "샤또 미네티 로제",
+      "휘스퍼링 엔젤 로제",
+      "샤또 부스코 로제"
+    ],
+    "trivia": "프로방스 로제 병은 대부분 허리가 잘록합니다. 이 지역만의 관습입니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "아주 차갑게 드세요.",
+    "aging": "출시 후 1~2년 안에 마셔야 합니다.",
+    "tips": [
+      "로제는 갓 나온 해의 것을 고르는 게 가장 좋습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "휘스퍼링 엔젤 로제",
+    "searchKeyword": "휘스퍼링 엔젤 로제",
+    "producer": "Château d'Esclans",
+    "type": "로제 와인 · 그르나슈 블렌드",
+    "vintage": null,
+    "region": "프로방스 · 코트 드 프로방스",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#F8DCD4",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "세계에서 가장 많이 팔리는 프리미엄 로제 중 하나입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 40
+      },
+      {
+        "axis": "당도",
+        "value": 14
+      },
+      {
+        "axis": "산도",
+        "value": 74
+      },
+      {
+        "axis": "탄닌",
+        "value": 7
+      }
+    ],
+    "tastingNotes": "딸기와 붉은 자몽, 흰 꽃 향이 곱게 이어집니다. 색이 아주 옅은 살구빛이고 완전히 드라이해, 프로방스 로제의 전형을 보여 줍니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "그르나슈, 쌩쏘, 롤"
+      },
+      {
+        "label": "등급",
+        "value": "코트 드 프로방스 AOC"
+      },
+      {
+        "label": "숙성",
+        "value": "스테인리스"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2027",
+    "history": [
+      {
+        "year": "2006",
+        "event": "사샤 리신이 샤또 데스클랑 인수"
+      },
+      {
+        "year": "2019",
+        "event": "모엣 헤네시가 지분 인수"
+      }
+    ],
+    "story": "이름은 와이너리 예배당 천장에 그려진 천사들에서 왔습니다. 서로 속삭이는 모습이라 붙은 이름입니다.",
+    "winery": "프로방스 데스클랑 계곡에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥗",
+        "food": "샐러드",
+        "why": "가벼워서 재료를 가리지 않습니다",
+        "shopKeyword": "샐러드 채소"
+      },
+      {
+        "emoji": "🦐",
+        "food": "새우·조개",
+        "why": "산도가 단맛 나는 살을 조여 줍니다",
+        "shopKeyword": "생새우"
+      },
+      {
+        "emoji": "🍕",
+        "food": "피자·파스타",
+        "why": "부담 없이 어울립니다",
+        "shopKeyword": "피자"
+      }
+    ],
+    "pairingTip": "브런치나 야외 모임에 좋습니다.",
+    "avoidPairing": "진한 고기 요리는 눌립니다.",
+    "similar": [
+      "미라발 로제",
+      "샤또 미네티 로제",
+      "샤또 부스코 로제"
+    ],
+    "trivia": "프로방스 로제의 색이 옅은 것은 품질이 낮아서가 아니라, 껍질과의 접촉을 일부러 짧게 하기 때문입니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "아주 차갑게 드세요.",
+    "aging": "출시 후 1년 안에 마시는 것이 가장 좋습니다.",
+    "tips": [
+      "로제가 달 거라 생각했다면 프로방스 쪽을 드셔 보세요. 전혀 달지 않습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "테일러스 LBV 포트",
+    "searchKeyword": "테일러스 LBV 포트",
+    "producer": "Taylor's",
+    "type": "주정강화 와인 · 포트",
+    "vintage": null,
+    "region": "도루",
+    "country": "포르투갈",
+    "alcohol": "20%",
+    "liquidColor": "#46101D",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 LBV 포트입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 84
+      },
+      {
+        "axis": "당도",
+        "value": 78
+      },
+      {
+        "axis": "산도",
+        "value": 54
+      },
+      {
+        "axis": "탄닌",
+        "value": 62
+      }
+    ],
+    "tastingNotes": "검은 체리와 말린 무화과, 초콜릿 향이 진하게 남습니다. 빈티지 포트를 통에서 4~6년 더 두었다가 병에 담은 것이라, 값은 훨씬 눅으면서 결은 비슷합니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "도루 토착 품종 블렌드"
+      },
+      {
+        "label": "등급",
+        "value": "레이트 보틀드 빈티지(LBV)"
+      },
+      {
+        "label": "숙성",
+        "value": "통 4~6년"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2028",
+    "drinkUntil": "2035",
+    "history": [
+      {
+        "year": "1692",
+        "event": "영국계 가문이 포르투에서 시작"
+      },
+      {
+        "year": "1970",
+        "event": "LBV 등급을 사실상 확립"
+      }
+    ],
+    "story": "빈티지 포트는 20년을 기다려야 마실 수 있습니다. LBV는 그 기다림을 대신 해 주고 나온 술입니다.",
+    "winery": "빌라 노바 드 가이아에 창고를 두고 있습니다.",
+    "foodPairing": [
+      {
+        "emoji": "🧀",
+        "food": "블루치즈",
+        "why": "짠맛이 단맛을 눕힙니다",
+        "shopKeyword": "고르곤졸라"
+      },
+      {
+        "emoji": "🍫",
+        "food": "다크 초콜릿",
+        "why": "단맛끼리 맞물립니다",
+        "shopKeyword": "다크초콜릿"
+      },
+      {
+        "emoji": "🥧",
+        "food": "베리 디저트",
+        "why": "검은 과실 향이 이어집니다",
+        "shopKeyword": "블루베리"
+      }
+    ],
+    "pairingTip": "식후에 작은 잔으로 조금만 드세요.",
+    "avoidPairing": "식사와 함께 마시면 다른 음식 맛이 묻힙니다.",
+    "similar": [
+      "그라함스 파인 루비 포트",
+      "산디만 파인 토니 포트",
+      "마시 코스테라 아마로네"
+    ],
+    "trivia": "포트는 유일하게 병을 딴 뒤 몇 주간 마실 수 있는 와인입니다. 알코올이 높기 때문입니다.",
+    "servingTemp": "15~17℃",
+    "servingNote": "살짝 서늘하게 드세요.",
+    "aging": "병 안에서도 몇 년은 더 좋아집니다.",
+    "tips": [
+      "빈티지 포트가 부담될 때 가장 가까운 대안입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "루피노 키안티 클라시코 리제르바 두칼레",
+    "searchKeyword": "루피노 리제르바 두칼레",
+    "producer": "Ruffino",
+    "type": "레드 와인 · 산지오베제",
+    "vintage": null,
+    "region": "토스카나 · 키안티 클라시코",
+    "country": "이탈리아",
+    "alcohol": "13.5%",
+    "liquidColor": "#6E202D",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "국내 유통이 매우 활발한 키안티 리제르바입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 66
+      },
+      {
+        "axis": "당도",
+        "value": 15
+      },
+      {
+        "axis": "산도",
+        "value": 74
+      },
+      {
+        "axis": "탄닌",
+        "value": 62
+      }
+    ],
+    "tastingNotes": "신 체리와 말린 허브, 담뱃잎 향이 이어집니다. 리제르바답게 오크 숙성을 거쳐 결이 정돈돼 있고, 값 대비 짜임새가 좋아 오래 사랑받아 왔습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "산지오베제 중심"
+      },
+      {
+        "label": "등급",
+        "value": "키안티 클라시코 리제르바 DOCG"
+      },
+      {
+        "label": "숙성",
+        "value": "오크 약 24개월"
+      }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2031",
+    "drinkUntil": "2040",
+    "history": [
+      {
+        "year": "1877",
+        "event": "루피노 형제가 폰타시에베에서 설립"
+      },
+      {
+        "year": "1890",
+        "event": "아오스타 공작에게 헌정하며 '두칼레' 이름을 씀"
+      }
+    ],
+    "story": "이탈리아 왕가의 공작이 이 술을 즐겨 마시자, 그의 이름을 라벨에 넣었습니다. '두칼레'는 공작의 것이라는 뜻입니다.",
+    "winery": "토스카나 폰타시에베에 본거지를 둡니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "티본 스테이크",
+        "why": "토스카나의 정석 조합입니다",
+        "shopKeyword": "티본 스테이크"
+      },
+      {
+        "emoji": "🍝",
+        "food": "고기 라구 파스타",
+        "why": "산도가 기름을 정리합니다",
+        "shopKeyword": "소고기 다짐육"
+      },
+      {
+        "emoji": "🧀",
+        "food": "페코리노",
+        "why": "짠맛이 산도를 눕힙니다",
+        "shopKeyword": "페코리노 치즈"
+      }
+    ],
+    "pairingTip": "숯불 고기와 잘 맞습니다.",
+    "avoidPairing": "크림 소스는 산도와 부딪힙니다.",
+    "similar": [
+      "안티노리 페폴리 키안티 클라시코",
+      "프레스코발디 니포짜노 키안티 루피나 리제르바",
+      "반피 브루넬로 디 몬탈치노"
+    ],
+    "trivia": "은색 라벨은 일반, 금색 라벨은 좋은 해에만 나오는 상위 등급입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한 시간 열어 두면 좋습니다.",
+    "aging": "10년 안팎이 좋습니다.",
+    "tips": [
+      "키안티를 마셨다면 리제르바로 한 단계 올려 보세요"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "프로두토리 델 바르바레스코",
+    "searchKeyword": "프로두토리 델 바르바레스코",
+    "producer": "Produttori del Barbaresco",
+    "type": "레드 와인 · 네비올로",
+    "vintage": null,
+    "region": "피에몬테 · 바르바레스코",
+    "country": "이탈리아",
+    "alcohol": "14%",
+    "liquidColor": "#84323C",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "바르바레스코 최고 가성비 생산자로 자료가 충분합니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 70
+      },
+      {
+        "axis": "당도",
+        "value": 14
+      },
+      {
+        "axis": "산도",
+        "value": 80
+      },
+      {
+        "axis": "탄닌",
+        "value": 78
+      }
+    ],
+    "tastingNotes": "장미와 말린 체리, 타르 향이 겹칩니다. 바롤로보다 조금 더 부드럽고 일찍 열리지만, 네비올로 특유의 강한 탄닌과 높은 산도는 그대로입니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "네비올로 100%"
+      },
+      {
+        "label": "등급",
+        "value": "바르바레스코 DOCG"
+      },
+      {
+        "label": "숙성",
+        "value": "대형 오크 통 약 2년"
+      }
+    ],
+    "drinkFrom": "2028",
+    "drinkPeak": "2035",
+    "drinkUntil": "2048",
+    "history": [
+      {
+        "year": "1958",
+        "event": "지역 농가 19곳이 조합으로 재설립"
+      },
+      {
+        "year": "현재",
+        "event": "50곳 넘는 농가가 참여"
+      }
+    ],
+    "story": "개인 와이너리가 아니라 마을 농가들의 조합입니다. 좋은 해에는 밭별로 아홉 종류를 따로 병입합니다.",
+    "winery": "바르바레스코 마을 한가운데 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍄",
+        "food": "트러플·버섯",
+        "why": "피에몬테의 정석 조합입니다",
+        "shopKeyword": "트러플 오일"
+      },
+      {
+        "emoji": "🥩",
+        "food": "소고기 브레이즈",
+        "why": "강한 탄닌에 맞설 무게가 필요합니다",
+        "shopKeyword": "소고기 양지"
+      },
+      {
+        "emoji": "🧀",
+        "food": "숙성 치즈",
+        "why": "짠맛이 탄닌을 눕힙니다",
+        "shopKeyword": "파르미지아노"
+      }
+    ],
+    "pairingTip": "기름진 고기 요리와 함께 드세요.",
+    "avoidPairing": "가벼운 음식은 탄닌에 눌립니다.",
+    "similar": [
+      "체레토 바롤로",
+      "피오 체사레 바롤로",
+      "가야 바르바레스코"
+    ],
+    "trivia": "바롤로와 바르바레스코는 같은 네비올로 품종입니다. 마을이 다를 뿐입니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "한두 시간 열어 두세요.",
+    "aging": "15년 이상 갑니다.",
+    "tips": [
+      "네비올로를 부담 없는 값에 제대로 맛보려면 이 조합이 가장 좋습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "본템피 몬테풀치아노 다브루초",
+    "searchKeyword": "몬테풀치아노 다브루초",
+    "producer": "Bontempi",
+    "type": "레드 와인 · 몬테풀치아노",
+    "vintage": null,
+    "region": "아브루초",
+    "country": "이탈리아",
+    "alcohol": "13%",
+    "liquidColor": "#661D2A",
+    "confidence": 83,
+    "knowledge": "medium",
+    "basis": "국내 마트에서 흔히 보이는 값싼 이탈리아 레드입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 62
+      },
+      {
+        "axis": "당도",
+        "value": 20
+      },
+      {
+        "axis": "산도",
+        "value": 64
+      },
+      {
+        "axis": "탄닌",
+        "value": 50
+      }
+    ],
+    "tastingNotes": "검붉은 자두와 감초 향이 부드럽게 이어집니다. 탄닌이 둥글고 값이 아주 눅어, 평일 저녁에 편하게 열기 좋은 레드입니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "몬테풀치아노 100%"
+      },
+      {
+        "label": "등급",
+        "value": "몬테풀치아노 다브루초 DOC"
+      },
+      {
+        "label": "숙성",
+        "value": "스테인리스 중심"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      {
+        "year": "현재",
+        "event": "이탈리아 중부 아브루초의 대표적인 일상 레드"
+      }
+    ],
+    "story": "이름이 헷갈리기 쉬운데, 토스카나의 '비노 노빌레 디 몬테풀치아노'는 마을 이름이고 이건 품종 이름입니다.",
+    "winery": "이탈리아 중부 아드리아해 쪽 아브루초에서 만듭니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍝",
+        "food": "토마토 파스타",
+        "why": "산도끼리 맞물립니다",
+        "shopKeyword": "토마토 파스타소스"
+      },
+      {
+        "emoji": "🍕",
+        "food": "피자",
+        "why": "부담 없이 어울립니다",
+        "shopKeyword": "피자"
+      },
+      {
+        "emoji": "🍖",
+        "food": "제육볶음",
+        "why": "부드러운 탄닌이 매콤함을 받습니다",
+        "shopKeyword": "돼지 앞다리살"
+      }
+    ],
+    "pairingTip": "값 대비 만족도가 높아 첫 레드로 자주 권합니다.",
+    "avoidPairing": "섬세한 요리와는 맞지 않습니다.",
+    "similar": [
+      "돈나푸가타 세다라",
+      "미켈레 키아를로 바르베라 다스티",
+      "토마시 발폴리첼라 클라시코"
+    ],
+    "trivia": "이탈리아에서 두 번째로 많이 심는 붉은 품종입니다.",
+    "servingTemp": "16~17℃",
+    "servingNote": "바로 드셔도 됩니다.",
+    "aging": "2~4년 안에 마시는 것이 좋습니다.",
+    "tips": [
+      "와인이 처음이라면 값 부담 없는 이 정도부터 시작해 보세요"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "빌라 마리아 소비뇽 블랑",
+    "searchKeyword": "빌라 마리아 소비뇽 블랑",
+    "producer": "Villa Maria",
+    "type": "화이트 와인 · 소비뇽 블랑",
+    "vintage": null,
+    "region": "말버러",
+    "country": "뉴질랜드",
+    "alcohol": "12.5%",
+    "liquidColor": "#F0EEC6",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "국내 유통이 매우 활발한 뉴질랜드 소비뇽 블랑입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 44
+      },
+      {
+        "axis": "당도",
+        "value": 18
+      },
+      {
+        "axis": "산도",
+        "value": 82
+      },
+      {
+        "axis": "탄닌",
+        "value": 4
+      }
+    ],
+    "tastingNotes": "패션프루트와 자몽, 갓 벤 풀 향이 또렷하게 올라옵니다. 클라우디 베이보다 값이 눅으면서 성격은 비슷해, 뉴질랜드 소비뇽 블랑 입문으로 좋습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "소비뇽 블랑 100%"
+      },
+      {
+        "label": "지역",
+        "value": "말버러"
+      },
+      {
+        "label": "숙성",
+        "value": "스테인리스"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2029",
+    "history": [
+      {
+        "year": "1961",
+        "event": "조지 피스토니치가 오클랜드에서 시작"
+      },
+      {
+        "year": "2001",
+        "event": "세계 최초로 전 제품을 스크루캡으로 전환"
+      }
+    ],
+    "story": "코르크 대신 스크루캡을 쓴 선구자입니다. 향이 살아 있는 화이트에는 스크루캡이 오히려 낫다는 판단이었습니다.",
+    "winery": "뉴질랜드 전역에 밭을 두고 있습니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦪",
+        "food": "굴",
+        "why": "산도가 바다 향을 세워 줍니다",
+        "shopKeyword": "생굴"
+      },
+      {
+        "emoji": "🧀",
+        "food": "염소 치즈",
+        "why": "고전적인 짝입니다",
+        "shopKeyword": "고트치즈"
+      },
+      {
+        "emoji": "🥗",
+        "food": "샐러드",
+        "why": "풀 향끼리 이어집니다",
+        "shopKeyword": "루꼴라"
+      }
+    ],
+    "pairingTip": "회무침이나 새콤한 한식과도 잘 맞습니다.",
+    "avoidPairing": "붉은 고기와는 어울리지 않습니다.",
+    "similar": [
+      "클라우디 베이 소비뇽 블랑",
+      "오이스터 베이 소비뇽 블랑",
+      "파스칼 조리오 상세르"
+    ],
+    "trivia": "스크루캡은 값싼 술의 표시가 아닙니다. 뉴질랜드는 최고급도 대부분 스크루캡입니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "차갑게 드세요.",
+    "aging": "2년 안에 마시는 것이 좋습니다.",
+    "tips": [
+      "향이 화려한 화이트를 값 부담 없이 찾을 때 가장 무난합니다"
+    ]
+  }
+]

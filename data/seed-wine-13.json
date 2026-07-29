@@ -1,0 +1,390 @@
+[
+  {
+    "category": "wine",
+    "name": "에곤 뮐러 샤츠호프베르거 리슬링",
+    "searchKeyword": "에곤 뮐러 리슬링",
+    "producer": "Weingut Egon Müller",
+    "type": "화이트 와인 · 리슬링",
+    "vintage": null,
+    "region": "모젤 · 자르",
+    "country": "독일",
+    "alcohol": "8%",
+    "liquidColor": "#F2ECB4",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "세계에서 가장 비싼 화이트 중 하나로 자료가 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 40
+      },
+      {
+        "axis": "당도",
+        "value": 52
+      },
+      {
+        "axis": "산도",
+        "value": 92
+      },
+      {
+        "axis": "탄닌",
+        "value": 3
+      }
+    ],
+    "tastingNotes": "백도와 라임, 젖은 점판암 향이 실처럼 가늘게 이어집니다. 단맛이 분명한데도 산도가 워낙 높아 물처럼 가볍게 느껴지는, 리슬링이 도달할 수 있는 극점입니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "리슬링 100%"
+      },
+      {
+        "label": "밭",
+        "value": "샤츠호프베르거 단일 밭"
+      },
+      {
+        "label": "토양",
+        "value": "점판암"
+      }
+    ],
+    "drinkFrom": "2028",
+    "drinkPeak": "2040",
+    "drinkUntil": "2070",
+    "history": [
+      {
+        "year": "1797",
+        "event": "뮐러 가문이 수도원 밭을 인수"
+      },
+      {
+        "year": "현재",
+        "event": "5대째 같은 이름으로 이어짐"
+      }
+    ],
+    "story": "밭 이름은 '보물 창고 언덕'이라는 뜻입니다. 대주교가 소유했던 땅이었습니다.",
+    "winery": "자르 강가 빌팅엔에 자리한 작은 가족 도멘입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍣",
+        "food": "초밥·회",
+        "why": "높은 산도가 비린맛을 잡습니다",
+        "shopKeyword": "초밥"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "매운 아시아 음식",
+        "why": "단맛이 매운맛을 눕힙니다",
+        "shopKeyword": "팟타이"
+      },
+      {
+        "emoji": "🧀",
+        "food": "블루치즈",
+        "why": "단맛과 짠맛이 맞물립니다",
+        "shopKeyword": "고르곤졸라"
+      }
+    ],
+    "pairingTip": "천천히 한 잔씩 음미하는 술입니다.",
+    "avoidPairing": "붉은 고기와는 전혀 맞지 않습니다.",
+    "similar": [
+      "닥터 루젠 리슬링 카비네트",
+      "트림바크 리슬링",
+      "휴겔 게뷔르츠트라미너"
+    ],
+    "trivia": "자르 지역은 독일에서도 가장 서늘해, 포도가 익지 않는 해도 있습니다.",
+    "servingTemp": "9~11℃",
+    "servingNote": "차갑게, 하지만 너무 차게 하면 향이 닫힙니다.",
+    "aging": "30년 이상 갑니다.",
+    "tips": [
+      "화이트가 30년을 간다는 게 어떤 건지 보여 주는 술입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "빌라 산디 프로세코 수페리오레",
+    "searchKeyword": "빌라 산디 프로세코",
+    "producer": "Villa Sandi",
+    "type": "스파클링 와인 · 프로세코",
+    "vintage": null,
+    "region": "베네토 · 발도비아데네",
+    "country": "이탈리아",
+    "alcohol": "11.5%",
+    "liquidColor": "#F1EFC6",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 프로세코 수페리오레입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 40
+      },
+      {
+        "axis": "당도",
+        "value": 28
+      },
+      {
+        "axis": "산도",
+        "value": 74
+      },
+      {
+        "axis": "탄닌",
+        "value": 3
+      }
+    ],
+    "tastingNotes": "초록 사과와 배, 아카시아 꽃 향이 가볍게 올라옵니다. 일반 프로세코보다 한 등급 위인 지구에서 나와 향이 더 또렷하고 여운이 깁니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "글레라 100%"
+      },
+      {
+        "label": "등급",
+        "value": "코넬리아노 발도비아데네 DOCG"
+      },
+      {
+        "label": "방식",
+        "value": "샤르마 방식"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2028",
+    "history": [
+      {
+        "year": "1622",
+        "event": "베네토에 저택 건립"
+      },
+      {
+        "year": "1980년대",
+        "event": "모레티 폴레가토 가문이 와인 사업 확장"
+      }
+    ],
+    "story": "발도비아데네의 가파른 언덕은 2019년 유네스코 세계유산이 됐습니다. 기계가 못 들어가 사람이 손으로 땁니다.",
+    "winery": "팔라디오 양식 저택이 상징입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍤",
+        "food": "튀김",
+        "why": "기포가 기름을 씻어 줍니다",
+        "shopKeyword": "새우튀김"
+      },
+      {
+        "emoji": "🍗",
+        "food": "치킨",
+        "why": "가장 흔하고 잘 맞는 조합입니다",
+        "shopKeyword": "치킨"
+      },
+      {
+        "emoji": "🧀",
+        "food": "생모차렐라",
+        "why": "가벼운 술이라 서로 눌리지 않습니다",
+        "shopKeyword": "모차렐라"
+      }
+    ],
+    "pairingTip": "식전주로 차갑게 한 잔 내기 좋습니다.",
+    "avoidPairing": "진한 고기 요리와는 존재감이 사라집니다.",
+    "similar": [
+      "미오네토 프로세코 브뤼",
+      "프레시넷 코르돈 네그로 브뤼",
+      "클라우디 베이 펠로러스"
+    ],
+    "trivia": "프로세코에는 DOC와 DOCG가 있습니다. DOCG가 더 좁고 높은 지구입니다.",
+    "servingTemp": "6~8℃",
+    "servingNote": "아주 차갑게, 디캔팅은 하지 마세요.",
+    "aging": "출시 후 1~2년 안에 마셔야 합니다.",
+    "tips": [
+      "같은 프로세코라도 DOCG 표시가 있으면 한 단계 위입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "몬테스 알파 샤르도네",
+    "searchKeyword": "몬테스 알파 샤르도네",
+    "producer": "Viña Montes",
+    "type": "화이트 와인 · 샤르도네",
+    "vintage": null,
+    "region": "카사블랑카 밸리",
+    "country": "칠레",
+    "alcohol": "13.5%",
+    "liquidColor": "#F0E7AE",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "국내 유통이 매우 활발한 칠레 샤르도네입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 62
+      },
+      {
+        "axis": "당도",
+        "value": 18
+      },
+      {
+        "axis": "산도",
+        "value": 68
+      },
+      {
+        "axis": "탄닌",
+        "value": 4
+      }
+    ],
+    "tastingNotes": "잘 익은 복숭아와 파인애플, 바닐라 향이 부드럽게 이어집니다. 오크를 분명히 써서 고소한 결이 있고, 값 대비 만족도가 높아 국내에서 오래 사랑받아 왔습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "샤르도네 100%"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 12개월"
+      },
+      {
+        "label": "지역",
+        "value": "카사블랑카 밸리"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      {
+        "year": "1987",
+        "event": "아우렐리오 몬테스가 설립"
+      },
+      {
+        "year": "현재",
+        "event": "칠레 프리미엄 와인을 이끈 브랜드"
+      }
+    ],
+    "story": "칠레가 값싼 와인만 만든다는 인식을 깬 곳입니다. '알파'는 이 집이 처음 만든 고급 라인입니다.",
+    "winery": "천사 그림 라벨로 잘 알려져 있습니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "로스트 치킨",
+        "why": "고소한 오크 향이 어울립니다",
+        "shopKeyword": "닭고기"
+      },
+      {
+        "emoji": "🍝",
+        "food": "크림 파스타",
+        "why": "살집이 있어 눌리지 않습니다",
+        "shopKeyword": "생크림"
+      },
+      {
+        "emoji": "🍤",
+        "food": "버터 새우",
+        "why": "버터 향끼리 맞물립니다",
+        "shopKeyword": "생새우"
+      }
+    ],
+    "pairingTip": "기름지고 고소한 요리와 잘 맞습니다.",
+    "avoidPairing": "담백한 회는 오크 향에 묻힙니다.",
+    "similar": [
+      "루이 자도 뿌이 퓌세",
+      "루이 라투르 부르고뉴 샤르도네",
+      "몬테스 알파 카베르네 소비뇽"
+    ],
+    "trivia": "카사블랑카 밸리는 바다 안개 덕분에 칠레에서 가장 서늘한 산지 중 하나입니다.",
+    "servingTemp": "10~12℃",
+    "servingNote": "너무 차게 하면 오크 향이 닫힙니다.",
+    "aging": "2~4년 안에 마시는 것이 좋습니다.",
+    "tips": [
+      "오크 향 있는 샤르도네를 값 부담 없이 맛보고 싶을 때 좋습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "에라주리즈 맥스 리제르바 카베르네 소비뇽",
+    "searchKeyword": "에라주리즈 맥스 리제르바",
+    "producer": "Viña Errázuriz",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "아콩카구아 밸리",
+    "country": "칠레",
+    "alcohol": "14%",
+    "liquidColor": "#571A27",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 칠레 카베르네입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 76
+      },
+      {
+        "axis": "당도",
+        "value": 17
+      },
+      {
+        "axis": "산도",
+        "value": 62
+      },
+      {
+        "axis": "탄닌",
+        "value": 70
+      }
+    ],
+    "tastingNotes": "블랙커런트와 삼나무, 옅은 민트 향이 이어집니다. 칠레 카베르네 특유의 상쾌한 허브 향이 있어, 진한 과실만 있는 신대륙 레드와는 결이 다릅니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "카베르네 소비뇽 중심"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 12개월"
+      },
+      {
+        "label": "지역",
+        "value": "아콩카구아 밸리"
+      }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2031",
+    "drinkUntil": "2038",
+    "history": [
+      {
+        "year": "1870",
+        "event": "막시미아노 에라주리즈가 설립"
+      },
+      {
+        "year": "2004",
+        "event": "베를린 시음회에서 보르도 특등급을 제침"
+      }
+    ],
+    "story": "2004년 베를린에서 라벨을 가리고 시음했을 때, 이 집 와인이 샤또 라피트와 마고를 앞섰습니다. 칠레 와인의 위상을 바꾼 사건이었습니다.",
+    "winery": "아콩카구아 밸리에 자리한 150년 넘은 와이너리입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "등심 스테이크",
+        "why": "탄닌이 육즙을 정리합니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양념 갈비",
+        "why": "과실이 양념과 맞물립니다",
+        "shopKeyword": "소갈비"
+      },
+      {
+        "emoji": "🧀",
+        "food": "숙성 치즈",
+        "why": "짠맛이 탄닌을 눕힙니다",
+        "shopKeyword": "체다치즈"
+      }
+    ],
+    "pairingTip": "한국식 고기 구이에 두루 잘 맞습니다.",
+    "avoidPairing": "담백한 생선은 눌립니다.",
+    "similar": [
+      "몬테스 알파 카베르네 소비뇽",
+      "트라피체 메달라",
+      "샤또 도르비에"
+    ],
+    "trivia": "칠레는 필록세라가 들어온 적이 없어, 접붙이지 않은 원래 뿌리로 자라는 밭이 많습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "30분~1시간 열어 두면 좋습니다.",
+    "aging": "8~10년이 좋습니다.",
+    "tips": [
+      "칠레 카베르네는 값 대비 짜임새가 좋아 실패가 적습니다"
+    ]
+  }
+]

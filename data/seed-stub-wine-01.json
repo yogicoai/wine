@@ -30,34 +30,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "루이 라투르 부르고뉴 샤르도네",
-    "producer": "Louis Latour",
-    "country": "프랑스",
-    "region": "부르고뉴",
-    "type": "화이트 와인 · 샤르도네",
-    "priceBand": 3,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 55
-      },
-      {
-        "axis": "당도",
-        "value": 14
-      },
-      {
-        "axis": "산도",
-        "value": 72
-      },
-      {
-        "axis": "탄닌",
-        "value": 5
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "기갈 크로즈 에르미타주",
     "producer": "E. Guigal",
     "country": "프랑스",
@@ -142,34 +114,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "샤또 시랑",
-    "producer": "Château Siran",
-    "country": "프랑스",
-    "region": "보르도 · 마고",
-    "type": "레드 와인 · 카베르네 블렌드",
-    "priceBand": 3,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 72
-      },
-      {
-        "axis": "당도",
-        "value": 14
-      },
-      {
-        "axis": "산도",
-        "value": 62
-      },
-      {
-        "axis": "탄닌",
-        "value": 66
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "프레시넷 코르돈 네그로",
     "producer": "Freixenet",
     "country": "스페인",
@@ -192,34 +136,6 @@
       {
         "axis": "탄닌",
         "value": 3
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "루피노 키안티 클라시코 리제르바 두칼레",
-    "producer": "Ruffino",
-    "country": "이탈리아",
-    "region": "토스카나 · 키안티 클라시코",
-    "type": "레드 와인 · 산지오베제",
-    "priceBand": 2,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 64
-      },
-      {
-        "axis": "당도",
-        "value": 15
-      },
-      {
-        "axis": "산도",
-        "value": 72
-      },
-      {
-        "axis": "탄닌",
-        "value": 60
       }
     ]
   },
@@ -534,34 +450,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "빌라 마리아 소비뇽 블랑",
-    "producer": "Villa Maria",
-    "country": "뉴질랜드",
-    "region": "말보로",
-    "type": "화이트 와인 · 소비뇽 블랑",
-    "priceBand": 2,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 44
-      },
-      {
-        "axis": "당도",
-        "value": 22
-      },
-      {
-        "axis": "산도",
-        "value": 80
-      },
-      {
-        "axis": "탄닌",
-        "value": 5
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "킴 크로포드 소비뇽 블랑",
     "producer": "Kim Crawford",
     "country": "뉴질랜드",
@@ -584,34 +472,6 @@
       {
         "axis": "탄닌",
         "value": 5
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "에곤 뮐러 샤르츠호프베르거 리슬링",
-    "producer": "Egon Müller",
-    "country": "독일",
-    "region": "모젤",
-    "type": "화이트 와인 · 리슬링",
-    "priceBand": 5,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 44
-      },
-      {
-        "axis": "당도",
-        "value": 62
-      },
-      {
-        "axis": "산도",
-        "value": 88
-      },
-      {
-        "axis": "탄닌",
-        "value": 3
       }
     ]
   },
@@ -724,34 +584,6 @@
       {
         "axis": "탄닌",
         "value": 74
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "에라주리즈 막스 리제르바 카베르네 소비뇽",
-    "producer": "Errazuriz",
-    "country": "칠레",
-    "region": "아콩카과",
-    "type": "레드 와인 · 카베르네 소비뇽",
-    "priceBand": 2,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 74
-      },
-      {
-        "axis": "당도",
-        "value": 20
-      },
-      {
-        "axis": "산도",
-        "value": 56
-      },
-      {
-        "axis": "탄닌",
-        "value": 64
       }
     ]
   },
