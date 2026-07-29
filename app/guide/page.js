@@ -18,7 +18,10 @@ export default async function GuidePage() {
   const catalog = await catalogStats().catch(() => null);
   const owned = catalog?.total ? catalog.total.toLocaleString("ko-KR") : "4,000+";
   // 스토리·페어링까지 갖춘 항목 수. 전체 보유 수와 성격이 달라 나눠서 보여 준다.
-  const deep = catalog?.full ? catalog.full.toLocaleString("ko-KR") : "100+";
+  const deep = catalog?.full ? catalog.full.toLocaleString("ko-KR") : "200+";
+  // 와인 앱이라 와인을 먼저 채운다. 정식 분석 안에서 와인이 몇인지 따로 밝힌다.
+  const deepWine = catalog?.fullWine ? catalog.fullWine.toLocaleString("ko-KR") : null;
+  const wineOwned = catalog?.byCategory?.find((c) => c.category === "wine")?.count;
 
   return (
     <div className={s.wrap}>
@@ -45,7 +48,10 @@ export default async function GuidePage() {
         </p>
         <div className={s.stats}>
           <div className={s.stat}><b>{owned}종</b><span>보유 술 데이터</span></div>
-          <div className={s.stat}><b>{deep}종</b><span>정식 분석 완료</span></div>
+          <div className={s.stat}>
+            <b>{deep}종</b>
+            <span>{deepWine ? `정식 분석 완료 (와인 ${deepWine})` : "정식 분석 완료"}</span>
+          </div>
           <div className={s.stat}><b>30초</b><span>스캔당 분석 시간</span></div>
           <div className={s.stat}><b>0원</b><span>DB 적중 시 비용</span></div>
         </div>
@@ -330,6 +336,14 @@ export default async function GuidePage() {
               정식 분석으로 올라가고, 그다음부터는 모두에게 그 깊이로 보입니다.
               <b> 모르는 것을 지어내 채우지 않는 것</b>이 이 구분의 이유입니다.
             </p>
+            {deepWine && (
+              <p className={s.p} style={{ marginTop: "0.7rem" }}>
+                정식 분석은 <b>와인부터 채우고 있습니다.</b> {deep}종 중 {deepWine}종이 와인입니다
+                {wineOwned ? ` (보유 와인 ${wineOwned.toLocaleString("ko-KR")}종)` : ""}. 보르도 1855 등급,
+                부르고뉴, 북부·남부 론, 알자스·루아르, 토스카나·피에몬테·베네토, 리오하·리베라 델 두에로,
+                나파·바로사·멘도사·말버러, 샴페인과 프로세코, 포트와 소테른까지 주요 산지를 고루 덮었습니다.
+              </p>
+            )}
           </div>
           <div className={s.edge}>
             <h3 className={s.h4}>정보에서 끝나지 않고 구매처까지 안내한다</h3>
@@ -792,9 +806,11 @@ export default async function GuidePage() {
               <h3 className={s.h4}>데이터베이스 확장</h3>
               <span className={`${s.flag} ${s.must}`}>최우선</span>
               <p className={s.p}>
-                현재 56종(와인 43종)입니다. 추천과 검색의 품질은 결국 여기에 달려 있습니다. 스캔이
-                쌓이면 자동으로 늘지만, 초기에는 직접 채워 넣는 편이 빠릅니다. AI 호출 없이 작성하므로
-                추가 비용이 들지 않습니다.
+                보유 {owned}종 중 정식 분석이 {deep}종
+                {deepWine ? `(와인 ${deepWine}종)` : ""}입니다. 추천과 검색의 품질은 결국 여기에 달려
+                있습니다. 스캔이 쌓이면 자동으로 늘지만, 초기에는 직접 채워 넣는 편이 빠릅니다. AI 호출
+                없이 작성하므로 <b>추가 비용이 들지 않습니다.</b> 와인 앱이므로 남은 뼈대도 와인부터
+                올립니다.
               </p>
             </div>
 
