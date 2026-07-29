@@ -1,89 +1,1962 @@
 [
-  { "tier": "stub", "category": "wine", "name": "샤또 무통 카데 로제", "producer": "Baron Philippe de Rothschild", "country": "프랑스", "region": "보르도", "type": "로제 와인 · 블렌드", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 38 }, { "axis": "당도", "value": 24 }, { "axis": "산도", "value": 66 }, { "axis": "탄닌", "value": 8 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 라리비에르", "producer": "Château Larivière", "country": "프랑스", "region": "보르도", "type": "레드 와인 · 메를로 블렌드", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 60 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 60 }, { "axis": "탄닌", "value": 54 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 부스코", "producer": "Château Bouscaut", "country": "프랑스", "region": "보르도 · 페삭 레오냥", "type": "레드 와인 · 카베르네 블렌드", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 74 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 66 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 스미스 오 라피트", "producer": "Château Smith Haut Lafitte", "country": "프랑스", "region": "보르도 · 페삭 레오냥", "type": "레드 와인 · 카베르네 블렌드", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 80 }, { "axis": "당도", "value": 15 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 74 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 퐁플레가드", "producer": "Château Fonplégade", "country": "프랑스", "region": "보르도 · 생테밀리옹", "type": "레드 와인 · 메를로 블렌드", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 78 }, { "axis": "당도", "value": 17 }, { "axis": "산도", "value": 60 }, { "axis": "탄닌", "value": 70 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 클리네", "producer": "Château Clinet", "country": "프랑스", "region": "보르도 · 포므롤", "type": "레드 와인 · 메를로", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 80 }, { "axis": "당도", "value": 18 }, { "axis": "산도", "value": 60 }, { "axis": "탄닌", "value": 68 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 브라네 캉트냑", "producer": "Château Brane-Cantenac", "country": "프랑스", "region": "보르도 · 마고", "type": "레드 와인 · 카베르네 블렌드", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 76 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 72 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 레오빌 바르통", "producer": "Château Léoville Barton", "country": "프랑스", "region": "보르도 · 생쥘리앙", "type": "레드 와인 · 카베르네 블렌드", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 80 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 63 }, { "axis": "탄닌", "value": 76 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 피숑 롱그빌 콩테스 드 라랑드", "producer": "Pichon Comtesse", "country": "프랑스", "region": "보르도 · 포이약", "type": "레드 와인 · 카베르네 블렌드", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 84 }, { "axis": "당도", "value": 15 }, { "axis": "산도", "value": 64 }, { "axis": "탄닌", "value": 78 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 뒤크뤼 보카이유", "producer": "Château Ducru-Beaucaillou", "country": "프랑스", "region": "보르도 · 생쥘리앙", "type": "레드 와인 · 카베르네 블렌드", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 82 }, { "axis": "당도", "value": 15 }, { "axis": "산도", "value": 64 }, { "axis": "탄닌", "value": 78 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "도멘 드루앙 샤블리", "producer": "Joseph Drouhin", "country": "프랑스", "region": "부르고뉴 · 샤블리", "type": "화이트 와인 · 샤르도네", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 48 }, { "axis": "당도", "value": 10 }, { "axis": "산도", "value": 82 }, { "axis": "탄닌", "value": 5 } ] },
-  { "tier": "stub", "category": "wine", "name": "루이 자도 뿌이 퓌세", "producer": "Louis Jadot", "country": "프랑스", "region": "부르고뉴 · 마콩", "type": "화이트 와인 · 샤르도네", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 56 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 72 }, { "axis": "탄닌", "value": 5 } ] },
-  { "tier": "stub", "category": "wine", "name": "루이 자도 본 로마네", "producer": "Louis Jadot", "country": "프랑스", "region": "부르고뉴 · 본 로마네", "type": "레드 와인 · 피노 누아", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 58 }, { "axis": "당도", "value": 13 }, { "axis": "산도", "value": 72 }, { "axis": "탄닌", "value": 50 } ] },
-  { "tier": "stub", "category": "wine", "name": "도멘 페블레 지브리 샹베르탱", "producer": "Faiveley", "country": "프랑스", "region": "부르고뉴 · 주브레 샹베르탱", "type": "레드 와인 · 피노 누아", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 62 }, { "axis": "당도", "value": 12 }, { "axis": "산도", "value": 72 }, { "axis": "탄닌", "value": 56 } ] },
-  { "tier": "stub", "category": "wine", "name": "알베르 비쇼 뫼르소", "producer": "Albert Bichot", "country": "프랑스", "region": "부르고뉴 · 뫼르소", "type": "화이트 와인 · 샤르도네", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 66 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 72 }, { "axis": "탄닌", "value": 5 } ] },
-  { "tier": "stub", "category": "wine", "name": "도멘 라플레 퓔리니 몽라셰", "producer": "Domaine Leflaive", "country": "프랑스", "region": "부르고뉴 · 퓔리니 몽라셰", "type": "화이트 와인 · 샤르도네", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 66 }, { "axis": "당도", "value": 12 }, { "axis": "산도", "value": 78 }, { "axis": "탄닌", "value": 4 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "트림바크 리슬링", "producer": "Trimbach", "country": "프랑스", "region": "알자스", "type": "화이트 와인 · 리슬링", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 44 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 82 }, { "axis": "탄닌", "value": 4 } ] },
-  { "tier": "stub", "category": "wine", "name": "휴겔 게뷔르츠트라미너", "producer": "Hugel", "country": "프랑스", "region": "알자스", "type": "화이트 와인 · 게뷔르츠트라미너", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 56 }, { "axis": "당도", "value": 44 }, { "axis": "산도", "value": 56 }, { "axis": "탄닌", "value": 5 } ] },
-  { "tier": "stub", "category": "wine", "name": "도멘 위에 부브레", "producer": "Domaine Huet", "country": "프랑스", "region": "루아르 · 부브레", "type": "화이트 와인 · 슈냉 블랑", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 48 }, { "axis": "당도", "value": 40 }, { "axis": "산도", "value": 80 }, { "axis": "탄닌", "value": 4 } ] },
-  { "tier": "stub", "category": "wine", "name": "뮈스카데 세브르 에 멘", "producer": "Muscadet", "country": "프랑스", "region": "루아르", "type": "화이트 와인 · 믈롱 드 부르고뉴", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 36 }, { "axis": "당도", "value": 10 }, { "axis": "산도", "value": 80 }, { "axis": "탄닌", "value": 3 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 미네티 코트 드 프로방스 로제", "producer": "Minuty", "country": "프랑스", "region": "프로방스", "type": "로제 와인 · 그르나슈 블렌드", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 38 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 70 }, { "axis": "탄닌", "value": 7 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤또 라 네르트 샤또네프 뒤 파프", "producer": "Château La Nerthe", "country": "프랑스", "region": "론 · 샤또네프 뒤 파프", "type": "레드 와인 · 그르나슈 블렌드", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 78 }, { "axis": "당도", "value": 18 }, { "axis": "산도", "value": 58 }, { "axis": "탄닌", "value": 66 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤푸티에 크로즈 에르미타주 레 뫼시니에", "producer": "M. Chapoutier", "country": "프랑스", "region": "론 · 크로즈 에르미타주", "type": "레드 와인 · 시라", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 74 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 60 }, { "axis": "탄닌", "value": 64 } ] },
-  { "tier": "stub", "category": "wine", "name": "델라스 코트 뒤 론 생테스프리", "producer": "Delas Frères", "country": "프랑스", "region": "론", "type": "레드 와인 · 시라 블렌드", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 64 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 58 }, { "axis": "탄닌", "value": 54 } ] },
-  { "tier": "stub", "category": "wine", "name": "조르주 뒤뵈프 플뢰리", "producer": "Georges Duboeuf", "country": "프랑스", "region": "보졸레 · 플뢰리", "type": "레드 와인 · 가메", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 44 }, { "axis": "당도", "value": 18 }, { "axis": "산도", "value": 70 }, { "axis": "탄닌", "value": 32 } ] },
-  { "tier": "stub", "category": "wine", "name": "조르주 뒤뵈프 보졸레 누보", "producer": "Georges Duboeuf", "country": "프랑스", "region": "보졸레", "type": "레드 와인 · 가메", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 34 }, { "axis": "당도", "value": 24 }, { "axis": "산도", "value": 68 }, { "axis": "탄닌", "value": 22 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "안티노리 티냐넬로 솔라이아", "producer": "Antinori", "country": "이탈리아", "region": "토스카나", "type": "레드 와인 · 카베르네 블렌드", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 84 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 68 }, { "axis": "탄닌", "value": 76 } ] },
-  { "tier": "stub", "category": "wine", "name": "안티노리 페폴리 키안티 클라시코", "producer": "Antinori", "country": "이탈리아", "region": "토스카나 · 키안티 클라시코", "type": "레드 와인 · 산지오베제", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 62 }, { "axis": "당도", "value": 15 }, { "axis": "산도", "value": 74 }, { "axis": "탄닌", "value": 58 } ] },
-  { "tier": "stub", "category": "wine", "name": "프레스코발디 니포짜노 키안티 루피나 리제르바", "producer": "Frescobaldi", "country": "이탈리아", "region": "토스카나 · 키안티 루피나", "type": "레드 와인 · 산지오베제", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 66 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 74 }, { "axis": "탄닌", "value": 62 } ] },
-  { "tier": "stub", "category": "wine", "name": "비온디 산티 브루넬로 디 몬탈치노", "producer": "Biondi-Santi", "country": "이탈리아", "region": "토스카나 · 몬탈치노", "type": "레드 와인 · 산지오베제", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 76 }, { "axis": "당도", "value": 13 }, { "axis": "산도", "value": 78 }, { "axis": "탄닌", "value": 76 } ] },
-  { "tier": "stub", "category": "wine", "name": "반피 브루넬로 디 몬탈치노", "producer": "Banfi", "country": "이탈리아", "region": "토스카나 · 몬탈치노", "type": "레드 와인 · 산지오베제", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 76 }, { "axis": "당도", "value": 15 }, { "axis": "산도", "value": 74 }, { "axis": "탄닌", "value": 72 } ] },
-  { "tier": "stub", "category": "wine", "name": "마시 코스테라 아마로네", "producer": "Masi", "country": "이탈리아", "region": "베네토 · 아마로네", "type": "레드 와인 · 코르비나 블렌드", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 86 }, { "axis": "당도", "value": 32 }, { "axis": "산도", "value": 58 }, { "axis": "탄닌", "value": 68 } ] },
-  { "tier": "stub", "category": "wine", "name": "본템피 몬테풀치아노 다브루초", "producer": "Bontempi", "country": "이탈리아", "region": "아브루초", "type": "레드 와인 · 몬테풀치아노", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 62 }, { "axis": "당도", "value": 22 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 50 } ] },
-  { "tier": "stub", "category": "wine", "name": "체레토 바롤로", "producer": "Ceretto", "country": "이탈리아", "region": "피에몬테 · 바롤로", "type": "레드 와인 · 네비올로", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 78 }, { "axis": "당도", "value": 13 }, { "axis": "산도", "value": 76 }, { "axis": "탄닌", "value": 80 } ] },
-  { "tier": "stub", "category": "wine", "name": "프로두토리 델 바르바레스코 바르바레스코", "producer": "Produttori del Barbaresco", "country": "이탈리아", "region": "피에몬테 · 바르바레스코", "type": "레드 와인 · 네비올로", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 74 }, { "axis": "당도", "value": 13 }, { "axis": "산도", "value": 76 }, { "axis": "탄닌", "value": 76 } ] },
-  { "tier": "stub", "category": "wine", "name": "미켈레 키아를로 바르베라 다스티", "producer": "Michele Chiarlo", "country": "이탈리아", "region": "피에몬테 · 아스티", "type": "레드 와인 · 바르베라", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 60 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 78 }, { "axis": "탄닌", "value": 44 } ] },
-  { "tier": "stub", "category": "wine", "name": "플라네타 에트나 로쏘", "producer": "Planeta", "country": "이탈리아", "region": "시칠리아 · 에트나", "type": "레드 와인 · 네렐로 마스칼레제", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 58 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 74 }, { "axis": "탄닌", "value": 54 } ] },
-  { "tier": "stub", "category": "wine", "name": "돈나푸가타 세다라", "producer": "Donnafugata", "country": "이탈리아", "region": "시칠리아", "type": "레드 와인 · 네로 다볼라", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 66 }, { "axis": "당도", "value": 22 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 52 } ] },
-  { "tier": "stub", "category": "wine", "name": "토마시 발폴리첼라 클라시코", "producer": "Tommasi", "country": "이탈리아", "region": "베네토 · 발폴리첼라", "type": "레드 와인 · 코르비나 블렌드", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 56 }, { "axis": "당도", "value": 20 }, { "axis": "산도", "value": 66 }, { "axis": "탄닌", "value": 46 } ] },
-  { "tier": "stub", "category": "wine", "name": "제니 루가나", "producer": "Zenato", "country": "이탈리아", "region": "롬바르디아 · 루가나", "type": "화이트 와인 · 트레비아노", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 48 }, { "axis": "당도", "value": 18 }, { "axis": "산도", "value": 70 }, { "axis": "탄닌", "value": 4 } ] },
-  { "tier": "stub", "category": "wine", "name": "가비 디 가비", "producer": "La Scolca", "country": "이탈리아", "region": "피에몬테 · 가비", "type": "화이트 와인 · 코르테제", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 44 }, { "axis": "당도", "value": 12 }, { "axis": "산도", "value": 78 }, { "axis": "탄닌", "value": 4 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "마르케스 데 카세레스 리오하 크리안사", "producer": "Marqués de Cáceres", "country": "스페인", "region": "리오하", "type": "레드 와인 · 템프라니요", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 62 }, { "axis": "당도", "value": 18 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 54 } ] },
-  { "tier": "stub", "category": "wine", "name": "쿠네 리오하 리제르바", "producer": "CVNE", "country": "스페인", "region": "리오하", "type": "레드 와인 · 템프라니요", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 68 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 60 } ] },
-  { "tier": "stub", "category": "wine", "name": "프로토스 리베라 델 두에로 크리안사", "producer": "Protos", "country": "스페인", "region": "리베라 델 두에로", "type": "레드 와인 · 템프라니요", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 74 }, { "axis": "당도", "value": 18 }, { "axis": "산도", "value": 58 }, { "axis": "탄닌", "value": 64 } ] },
-  { "tier": "stub", "category": "wine", "name": "알바리뇨 마르틴 코닥스", "producer": "Martín Códax", "country": "스페인", "region": "리아스 바이샤스", "type": "화이트 와인 · 알바리뇨", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 42 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 76 }, { "axis": "탄닌", "value": 4 } ] },
-  { "tier": "stub", "category": "wine", "name": "티오 페페 피노 셰리", "producer": "González Byass", "country": "스페인", "region": "헤레스", "type": "주정강화 와인 · 셰리", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 52 }, { "axis": "당도", "value": 6 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 5 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "샤토 몬텔레나 샤르도네", "producer": "Chateau Montelena", "country": "미국", "region": "캘리포니아 · 나파 밸리", "type": "화이트 와인 · 샤르도네", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 66 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 70 }, { "axis": "탄닌", "value": 5 } ] },
-  { "tier": "stub", "category": "wine", "name": "스택스 립 와인 셀라스 아르테미스", "producer": "Stag's Leap Wine Cellars", "country": "미국", "region": "캘리포니아 · 나파 밸리", "type": "레드 와인 · 카베르네 소비뇽", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 82 }, { "axis": "당도", "value": 22 }, { "axis": "산도", "value": 58 }, { "axis": "탄닌", "value": 72 } ] },
-  { "tier": "stub", "category": "wine", "name": "리지 몬테 벨로", "producer": "Ridge Vineyards", "country": "미국", "region": "캘리포니아 · 산타 크루즈", "type": "레드 와인 · 카베르네 블렌드", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 82 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 76 } ] },
-  { "tier": "stub", "category": "wine", "name": "본 클라이맷 피노 누아", "producer": "Au Bon Climat", "country": "미국", "region": "캘리포니아 · 산타 바바라", "type": "레드 와인 · 피노 누아", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 56 }, { "axis": "당도", "value": 18 }, { "axis": "산도", "value": 68 }, { "axis": "탄닌", "value": 42 } ] },
-  { "tier": "stub", "category": "wine", "name": "이스트 오리건 피노 누아", "producer": "A to Z Wineworks", "country": "미국", "region": "오리건 · 윌래멋 밸리", "type": "레드 와인 · 피노 누아", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 54 }, { "axis": "당도", "value": 20 }, { "axis": "산도", "value": 68 }, { "axis": "탄닌", "value": 42 } ] },
-  { "tier": "stub", "category": "wine", "name": "샤토 생 미셸 컬럼비아 밸리 리슬링", "producer": "Chateau Ste. Michelle", "country": "미국", "region": "워싱턴 · 컬럼비아 밸리", "type": "화이트 와인 · 리슬링", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 40 }, { "axis": "당도", "value": 46 }, { "axis": "산도", "value": 72 }, { "axis": "탄닌", "value": 4 } ] },
-  { "tier": "stub", "category": "wine", "name": "애플게이트 무통 카데 대체 데일리 진판델", "producer": "Gnarly Head", "country": "미국", "region": "캘리포니아 · 롯다이", "type": "레드 와인 · 진판델", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 74 }, { "axis": "당도", "value": 32 }, { "axis": "산도", "value": 54 }, { "axis": "탄닌", "value": 54 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "펜폴즈 그랜지", "producer": "Penfolds", "country": "호주", "region": "남호주", "type": "레드 와인 · 시라즈", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 90 }, { "axis": "당도", "value": 20 }, { "axis": "산도", "value": 56 }, { "axis": "탄닌", "value": 82 } ] },
-  { "tier": "stub", "category": "wine", "name": "헨쉬케 힐 오브 그레이스", "producer": "Henschke", "country": "호주", "region": "이든 밸리", "type": "레드 와인 · 시라즈", "priceBand": 5, "tasteProfile": [ { "axis": "바디", "value": 88 }, { "axis": "당도", "value": 20 }, { "axis": "산도", "value": 58 }, { "axis": "탄닌", "value": 78 } ] },
-  { "tier": "stub", "category": "wine", "name": "울프 블라스 옐로우 라벨 샤르도네", "producer": "Wolf Blass", "country": "호주", "region": "남호주", "type": "화이트 와인 · 샤르도네", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 56 }, { "axis": "당도", "value": 26 }, { "axis": "산도", "value": 62 }, { "axis": "탄닌", "value": 6 } ] },
-  { "tier": "stub", "category": "wine", "name": "하디스 스탬프 시라즈 카베르네", "producer": "Hardys", "country": "호주", "region": "남동호주", "type": "레드 와인 · 시라즈 블렌드", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 64 }, { "axis": "당도", "value": 28 }, { "axis": "산도", "value": 54 }, { "axis": "탄닌", "value": 50 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "클라우디 베이 샤르도네", "producer": "Cloudy Bay", "country": "뉴질랜드", "region": "말보로", "type": "화이트 와인 · 샤르도네", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 60 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 74 }, { "axis": "탄닌", "value": 5 } ] },
-  { "tier": "stub", "category": "wine", "name": "펠로러스 스파클링", "producer": "Cloudy Bay", "country": "뉴질랜드", "region": "말보로", "type": "스파클링 와인 · 샤르도네 블렌드", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 52 }, { "axis": "당도", "value": 24 }, { "axis": "산도", "value": 76 }, { "axis": "탄닌", "value": 4 } ] },
-  { "tier": "stub", "category": "wine", "name": "펠로리우스 센트럴 오타고 피노 누아", "producer": "Mt. Difficulty", "country": "뉴질랜드", "region": "센트럴 오타고", "type": "레드 와인 · 피노 누아", "priceBand": 4, "tasteProfile": [ { "axis": "바디", "value": 58 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 70 }, { "axis": "탄닌", "value": 48 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "닥터 루젠 리슬링 슈페트레제", "producer": "Dr. Loosen", "country": "독일", "region": "모젤", "type": "화이트 와인 · 리슬링", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 42 }, { "axis": "당도", "value": 64 }, { "axis": "산도", "value": 84 }, { "axis": "탄닌", "value": 3 } ] },
-  { "tier": "stub", "category": "wine", "name": "닥터 루젠 리슬링 트로켄", "producer": "Dr. Loosen", "country": "독일", "region": "모젤", "type": "화이트 와인 · 리슬링", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 40 }, { "axis": "당도", "value": 16 }, { "axis": "산도", "value": 84 }, { "axis": "탄닌", "value": 3 } ] },
-  { "tier": "stub", "category": "wine", "name": "그뤼너 벨트리너", "producer": "Domäne Wachau", "country": "오스트리아", "region": "바하우", "type": "화이트 와인 · 그뤼너 벨트리너", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 46 }, { "axis": "당도", "value": 14 }, { "axis": "산도", "value": 78 }, { "axis": "탄닌", "value": 4 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "산디만 10년 토니 포트", "producer": "Sandeman", "country": "포르투갈", "region": "도루", "type": "디저트 와인 · 포트", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 80 }, { "axis": "당도", "value": 76 }, { "axis": "산도", "value": 52 }, { "axis": "탄닌", "value": 40 } ] },
-  { "tier": "stub", "category": "wine", "name": "에스포랑 헤세르바 틴투", "producer": "Esporão", "country": "포르투갈", "region": "알렌테주", "type": "레드 와인 · 블렌드", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 70 }, { "axis": "당도", "value": 20 }, { "axis": "산도", "value": 60 }, { "axis": "탄닌", "value": 58 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "코노 수르 오가닉 카베르네 카르메네르", "producer": "Cono Sur", "country": "칠레", "region": "콜차구아", "type": "레드 와인 · 카베르네 블렌드", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 68 }, { "axis": "당도", "value": 22 }, { "axis": "산도", "value": 56 }, { "axis": "탄닌", "value": 56 } ] },
-  { "tier": "stub", "category": "wine", "name": "산타 헬레나 알파스 카베르네 소비뇽", "producer": "Santa Helena", "country": "칠레", "region": "센트럴 밸리", "type": "레드 와인 · 카베르네 소비뇽", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 64 }, { "axis": "당도", "value": 24 }, { "axis": "산도", "value": 54 }, { "axis": "탄닌", "value": 50 } ] },
-  { "tier": "stub", "category": "wine", "name": "운두라가 시부미 카르메네르", "producer": "Undurraga", "country": "칠레", "region": "센트럴 밸리", "type": "레드 와인 · 카르메네르", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 66 }, { "axis": "당도", "value": 24 }, { "axis": "산도", "value": 56 }, { "axis": "탄닌", "value": 52 } ] },
-  { "tier": "stub", "category": "wine", "name": "비냐 마이포 리제르바 카베르네 소비뇽", "producer": "Viña Maipo", "country": "칠레", "region": "마이포 밸리", "type": "레드 와인 · 카베르네 소비뇽", "priceBand": 1, "tasteProfile": [ { "axis": "바디", "value": 66 }, { "axis": "당도", "value": 22 }, { "axis": "산도", "value": 56 }, { "axis": "탄닌", "value": 54 } ] },
-  { "tier": "stub", "category": "wine", "name": "루이스 펠리페 에드워즈 그란 레세르바 카르메네르", "producer": "Luis Felipe Edwards", "country": "칠레", "region": "콜차구아", "type": "레드 와인 · 카르메네르", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 72 }, { "axis": "당도", "value": 24 }, { "axis": "산도", "value": 56 }, { "axis": "탄닌", "value": 58 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "트라피체 메달라 말벡", "producer": "Trapiche", "country": "아르헨티나", "region": "멘도사", "type": "레드 와인 · 말벡", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 78 }, { "axis": "당도", "value": 22 }, { "axis": "산도", "value": 54 }, { "axis": "탄닌", "value": 66 } ] },
-  { "tier": "stub", "category": "wine", "name": "노턴 리제르바 말벡", "producer": "Bodega Norton", "country": "아르헨티나", "region": "멘도사", "type": "레드 와인 · 말벡", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 74 }, { "axis": "당도", "value": 24 }, { "axis": "산도", "value": 54 }, { "axis": "탄닌", "value": 60 } ] },
-  { "tier": "stub", "category": "wine", "name": "테라자스 레세르바 말벡", "producer": "Terrazas de los Andes", "country": "아르헨티나", "region": "멘도사", "type": "레드 와인 · 말벡", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 76 }, { "axis": "당도", "value": 22 }, { "axis": "산도", "value": 54 }, { "axis": "탄닌", "value": 62 } ] },
-
-  { "tier": "stub", "category": "wine", "name": "크레이븐 스텔렌보스 카베르네 소비뇽", "producer": "Craven Wines", "country": "남아프리카공화국", "region": "스텔렌보스", "type": "레드 와인 · 카베르네 소비뇽", "priceBand": 3, "tasteProfile": [ { "axis": "바디", "value": 74 }, { "axis": "당도", "value": 18 }, { "axis": "산도", "value": 60 }, { "axis": "탄닌", "value": 64 } ] },
-  { "tier": "stub", "category": "wine", "name": "켄 포레스터 슈냉 블랑", "producer": "Ken Forrester", "country": "남아프리카공화국", "region": "스텔렌보스", "type": "화이트 와인 · 슈냉 블랑", "priceBand": 2, "tasteProfile": [ { "axis": "바디", "value": 50 }, { "axis": "당도", "value": 24 }, { "axis": "산도", "value": 72 }, { "axis": "탄닌", "value": 4 } ] }
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 무통 카데 로제",
+  "producer": "Baron Philippe de Rothschild",
+  "country": "프랑스",
+  "region": "보르도",
+  "type": "로제 와인 · 블렌드",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 38
+   },
+   {
+    "axis": "당도",
+    "value": 24
+   },
+   {
+    "axis": "산도",
+    "value": 66
+   },
+   {
+    "axis": "탄닌",
+    "value": 8
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 라리비에르",
+  "producer": "Château Larivière",
+  "country": "프랑스",
+  "region": "보르도",
+  "type": "레드 와인 · 메를로 블렌드",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 60
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 60
+   },
+   {
+    "axis": "탄닌",
+    "value": 54
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 부스코",
+  "producer": "Château Bouscaut",
+  "country": "프랑스",
+  "region": "보르도 · 페삭 레오냥",
+  "type": "레드 와인 · 카베르네 블렌드",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 74
+   },
+   {
+    "axis": "당도",
+    "value": 14
+   },
+   {
+    "axis": "산도",
+    "value": 62
+   },
+   {
+    "axis": "탄닌",
+    "value": 66
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 퐁플레가드",
+  "producer": "Château Fonplégade",
+  "country": "프랑스",
+  "region": "보르도 · 생테밀리옹",
+  "type": "레드 와인 · 메를로 블렌드",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 78
+   },
+   {
+    "axis": "당도",
+    "value": 17
+   },
+   {
+    "axis": "산도",
+    "value": 60
+   },
+   {
+    "axis": "탄닌",
+    "value": 70
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 클리네",
+  "producer": "Château Clinet",
+  "country": "프랑스",
+  "region": "보르도 · 포므롤",
+  "type": "레드 와인 · 메를로",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 80
+   },
+   {
+    "axis": "당도",
+    "value": 18
+   },
+   {
+    "axis": "산도",
+    "value": 60
+   },
+   {
+    "axis": "탄닌",
+    "value": 68
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 브라네 캉트냑",
+  "producer": "Château Brane-Cantenac",
+  "country": "프랑스",
+  "region": "보르도 · 마고",
+  "type": "레드 와인 · 카베르네 블렌드",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 76
+   },
+   {
+    "axis": "당도",
+    "value": 14
+   },
+   {
+    "axis": "산도",
+    "value": 62
+   },
+   {
+    "axis": "탄닌",
+    "value": 72
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 레오빌 바르통",
+  "producer": "Château Léoville Barton",
+  "country": "프랑스",
+  "region": "보르도 · 생쥘리앙",
+  "type": "레드 와인 · 카베르네 블렌드",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 80
+   },
+   {
+    "axis": "당도",
+    "value": 14
+   },
+   {
+    "axis": "산도",
+    "value": 63
+   },
+   {
+    "axis": "탄닌",
+    "value": 76
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 피숑 롱그빌 콩테스 드 라랑드",
+  "producer": "Pichon Comtesse",
+  "country": "프랑스",
+  "region": "보르도 · 포이약",
+  "type": "레드 와인 · 카베르네 블렌드",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 84
+   },
+   {
+    "axis": "당도",
+    "value": 15
+   },
+   {
+    "axis": "산도",
+    "value": 64
+   },
+   {
+    "axis": "탄닌",
+    "value": 78
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 뒤크뤼 보카이유",
+  "producer": "Château Ducru-Beaucaillou",
+  "country": "프랑스",
+  "region": "보르도 · 생쥘리앙",
+  "type": "레드 와인 · 카베르네 블렌드",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 82
+   },
+   {
+    "axis": "당도",
+    "value": 15
+   },
+   {
+    "axis": "산도",
+    "value": 64
+   },
+   {
+    "axis": "탄닌",
+    "value": 78
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "도멘 드루앙 샤블리",
+  "producer": "Joseph Drouhin",
+  "country": "프랑스",
+  "region": "부르고뉴 · 샤블리",
+  "type": "화이트 와인 · 샤르도네",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 48
+   },
+   {
+    "axis": "당도",
+    "value": 10
+   },
+   {
+    "axis": "산도",
+    "value": 82
+   },
+   {
+    "axis": "탄닌",
+    "value": 5
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "루이 자도 뿌이 퓌세",
+  "producer": "Louis Jadot",
+  "country": "프랑스",
+  "region": "부르고뉴 · 마콩",
+  "type": "화이트 와인 · 샤르도네",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 56
+   },
+   {
+    "axis": "당도",
+    "value": 14
+   },
+   {
+    "axis": "산도",
+    "value": 72
+   },
+   {
+    "axis": "탄닌",
+    "value": 5
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "루이 자도 본 로마네",
+  "producer": "Louis Jadot",
+  "country": "프랑스",
+  "region": "부르고뉴 · 본 로마네",
+  "type": "레드 와인 · 피노 누아",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 58
+   },
+   {
+    "axis": "당도",
+    "value": 13
+   },
+   {
+    "axis": "산도",
+    "value": 72
+   },
+   {
+    "axis": "탄닌",
+    "value": 50
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "도멘 페블레 지브리 샹베르탱",
+  "producer": "Faiveley",
+  "country": "프랑스",
+  "region": "부르고뉴 · 주브레 샹베르탱",
+  "type": "레드 와인 · 피노 누아",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 62
+   },
+   {
+    "axis": "당도",
+    "value": 12
+   },
+   {
+    "axis": "산도",
+    "value": 72
+   },
+   {
+    "axis": "탄닌",
+    "value": 56
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "알베르 비쇼 뫼르소",
+  "producer": "Albert Bichot",
+  "country": "프랑스",
+  "region": "부르고뉴 · 뫼르소",
+  "type": "화이트 와인 · 샤르도네",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 66
+   },
+   {
+    "axis": "당도",
+    "value": 14
+   },
+   {
+    "axis": "산도",
+    "value": 72
+   },
+   {
+    "axis": "탄닌",
+    "value": 5
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "도멘 라플레 퓔리니 몽라셰",
+  "producer": "Domaine Leflaive",
+  "country": "프랑스",
+  "region": "부르고뉴 · 퓔리니 몽라셰",
+  "type": "화이트 와인 · 샤르도네",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 66
+   },
+   {
+    "axis": "당도",
+    "value": 12
+   },
+   {
+    "axis": "산도",
+    "value": 78
+   },
+   {
+    "axis": "탄닌",
+    "value": 4
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "휴겔 게뷔르츠트라미너",
+  "producer": "Hugel",
+  "country": "프랑스",
+  "region": "알자스",
+  "type": "화이트 와인 · 게뷔르츠트라미너",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 56
+   },
+   {
+    "axis": "당도",
+    "value": 44
+   },
+   {
+    "axis": "산도",
+    "value": 56
+   },
+   {
+    "axis": "탄닌",
+    "value": 5
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "도멘 위에 부브레",
+  "producer": "Domaine Huet",
+  "country": "프랑스",
+  "region": "루아르 · 부브레",
+  "type": "화이트 와인 · 슈냉 블랑",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 48
+   },
+   {
+    "axis": "당도",
+    "value": 40
+   },
+   {
+    "axis": "산도",
+    "value": 80
+   },
+   {
+    "axis": "탄닌",
+    "value": 4
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "뮈스카데 세브르 에 멘",
+  "producer": "Muscadet",
+  "country": "프랑스",
+  "region": "루아르",
+  "type": "화이트 와인 · 믈롱 드 부르고뉴",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 36
+   },
+   {
+    "axis": "당도",
+    "value": 10
+   },
+   {
+    "axis": "산도",
+    "value": 80
+   },
+   {
+    "axis": "탄닌",
+    "value": 3
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 미네티 코트 드 프로방스 로제",
+  "producer": "Minuty",
+  "country": "프랑스",
+  "region": "프로방스",
+  "type": "로제 와인 · 그르나슈 블렌드",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 38
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 70
+   },
+   {
+    "axis": "탄닌",
+    "value": 7
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤또 라 네르트 샤또네프 뒤 파프",
+  "producer": "Château La Nerthe",
+  "country": "프랑스",
+  "region": "론 · 샤또네프 뒤 파프",
+  "type": "레드 와인 · 그르나슈 블렌드",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 78
+   },
+   {
+    "axis": "당도",
+    "value": 18
+   },
+   {
+    "axis": "산도",
+    "value": 58
+   },
+   {
+    "axis": "탄닌",
+    "value": 66
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤푸티에 크로즈 에르미타주 레 뫼시니에",
+  "producer": "M. Chapoutier",
+  "country": "프랑스",
+  "region": "론 · 크로즈 에르미타주",
+  "type": "레드 와인 · 시라",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 74
+   },
+   {
+    "axis": "당도",
+    "value": 14
+   },
+   {
+    "axis": "산도",
+    "value": 60
+   },
+   {
+    "axis": "탄닌",
+    "value": 64
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "델라스 코트 뒤 론 생테스프리",
+  "producer": "Delas Frères",
+  "country": "프랑스",
+  "region": "론",
+  "type": "레드 와인 · 시라 블렌드",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 64
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 58
+   },
+   {
+    "axis": "탄닌",
+    "value": 54
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "조르주 뒤뵈프 플뢰리",
+  "producer": "Georges Duboeuf",
+  "country": "프랑스",
+  "region": "보졸레 · 플뢰리",
+  "type": "레드 와인 · 가메",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 44
+   },
+   {
+    "axis": "당도",
+    "value": 18
+   },
+   {
+    "axis": "산도",
+    "value": 70
+   },
+   {
+    "axis": "탄닌",
+    "value": 32
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "안티노리 티냐넬로 솔라이아",
+  "producer": "Antinori",
+  "country": "이탈리아",
+  "region": "토스카나",
+  "type": "레드 와인 · 카베르네 블렌드",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 84
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 68
+   },
+   {
+    "axis": "탄닌",
+    "value": 76
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "안티노리 페폴리 키안티 클라시코",
+  "producer": "Antinori",
+  "country": "이탈리아",
+  "region": "토스카나 · 키안티 클라시코",
+  "type": "레드 와인 · 산지오베제",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 62
+   },
+   {
+    "axis": "당도",
+    "value": 15
+   },
+   {
+    "axis": "산도",
+    "value": 74
+   },
+   {
+    "axis": "탄닌",
+    "value": 58
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "프레스코발디 니포짜노 키안티 루피나 리제르바",
+  "producer": "Frescobaldi",
+  "country": "이탈리아",
+  "region": "토스카나 · 키안티 루피나",
+  "type": "레드 와인 · 산지오베제",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 66
+   },
+   {
+    "axis": "당도",
+    "value": 14
+   },
+   {
+    "axis": "산도",
+    "value": 74
+   },
+   {
+    "axis": "탄닌",
+    "value": 62
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "반피 브루넬로 디 몬탈치노",
+  "producer": "Banfi",
+  "country": "이탈리아",
+  "region": "토스카나 · 몬탈치노",
+  "type": "레드 와인 · 산지오베제",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 76
+   },
+   {
+    "axis": "당도",
+    "value": 15
+   },
+   {
+    "axis": "산도",
+    "value": 74
+   },
+   {
+    "axis": "탄닌",
+    "value": 72
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "마시 코스테라 아마로네",
+  "producer": "Masi",
+  "country": "이탈리아",
+  "region": "베네토 · 아마로네",
+  "type": "레드 와인 · 코르비나 블렌드",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 86
+   },
+   {
+    "axis": "당도",
+    "value": 32
+   },
+   {
+    "axis": "산도",
+    "value": 58
+   },
+   {
+    "axis": "탄닌",
+    "value": 68
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "본템피 몬테풀치아노 다브루초",
+  "producer": "Bontempi",
+  "country": "이탈리아",
+  "region": "아브루초",
+  "type": "레드 와인 · 몬테풀치아노",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 62
+   },
+   {
+    "axis": "당도",
+    "value": 22
+   },
+   {
+    "axis": "산도",
+    "value": 62
+   },
+   {
+    "axis": "탄닌",
+    "value": 50
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "체레토 바롤로",
+  "producer": "Ceretto",
+  "country": "이탈리아",
+  "region": "피에몬테 · 바롤로",
+  "type": "레드 와인 · 네비올로",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 78
+   },
+   {
+    "axis": "당도",
+    "value": 13
+   },
+   {
+    "axis": "산도",
+    "value": 76
+   },
+   {
+    "axis": "탄닌",
+    "value": 80
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "프로두토리 델 바르바레스코 바르바레스코",
+  "producer": "Produttori del Barbaresco",
+  "country": "이탈리아",
+  "region": "피에몬테 · 바르바레스코",
+  "type": "레드 와인 · 네비올로",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 74
+   },
+   {
+    "axis": "당도",
+    "value": 13
+   },
+   {
+    "axis": "산도",
+    "value": 76
+   },
+   {
+    "axis": "탄닌",
+    "value": 76
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "미켈레 키아를로 바르베라 다스티",
+  "producer": "Michele Chiarlo",
+  "country": "이탈리아",
+  "region": "피에몬테 · 아스티",
+  "type": "레드 와인 · 바르베라",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 60
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 78
+   },
+   {
+    "axis": "탄닌",
+    "value": 44
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "플라네타 에트나 로쏘",
+  "producer": "Planeta",
+  "country": "이탈리아",
+  "region": "시칠리아 · 에트나",
+  "type": "레드 와인 · 네렐로 마스칼레제",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 58
+   },
+   {
+    "axis": "당도",
+    "value": 14
+   },
+   {
+    "axis": "산도",
+    "value": 74
+   },
+   {
+    "axis": "탄닌",
+    "value": 54
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "돈나푸가타 세다라",
+  "producer": "Donnafugata",
+  "country": "이탈리아",
+  "region": "시칠리아",
+  "type": "레드 와인 · 네로 다볼라",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 66
+   },
+   {
+    "axis": "당도",
+    "value": 22
+   },
+   {
+    "axis": "산도",
+    "value": 62
+   },
+   {
+    "axis": "탄닌",
+    "value": 52
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "토마시 발폴리첼라 클라시코",
+  "producer": "Tommasi",
+  "country": "이탈리아",
+  "region": "베네토 · 발폴리첼라",
+  "type": "레드 와인 · 코르비나 블렌드",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 56
+   },
+   {
+    "axis": "당도",
+    "value": 20
+   },
+   {
+    "axis": "산도",
+    "value": 66
+   },
+   {
+    "axis": "탄닌",
+    "value": 46
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "제니 루가나",
+  "producer": "Zenato",
+  "country": "이탈리아",
+  "region": "롬바르디아 · 루가나",
+  "type": "화이트 와인 · 트레비아노",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 48
+   },
+   {
+    "axis": "당도",
+    "value": 18
+   },
+   {
+    "axis": "산도",
+    "value": 70
+   },
+   {
+    "axis": "탄닌",
+    "value": 4
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "가비 디 가비",
+  "producer": "La Scolca",
+  "country": "이탈리아",
+  "region": "피에몬테 · 가비",
+  "type": "화이트 와인 · 코르테제",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 44
+   },
+   {
+    "axis": "당도",
+    "value": 12
+   },
+   {
+    "axis": "산도",
+    "value": 78
+   },
+   {
+    "axis": "탄닌",
+    "value": 4
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "마르케스 데 카세레스 리오하 크리안사",
+  "producer": "Marqués de Cáceres",
+  "country": "스페인",
+  "region": "리오하",
+  "type": "레드 와인 · 템프라니요",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 62
+   },
+   {
+    "axis": "당도",
+    "value": 18
+   },
+   {
+    "axis": "산도",
+    "value": 62
+   },
+   {
+    "axis": "탄닌",
+    "value": 54
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "쿠네 리오하 리제르바",
+  "producer": "CVNE",
+  "country": "스페인",
+  "region": "리오하",
+  "type": "레드 와인 · 템프라니요",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 68
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 62
+   },
+   {
+    "axis": "탄닌",
+    "value": 60
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "프로토스 리베라 델 두에로 크리안사",
+  "producer": "Protos",
+  "country": "스페인",
+  "region": "리베라 델 두에로",
+  "type": "레드 와인 · 템프라니요",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 74
+   },
+   {
+    "axis": "당도",
+    "value": 18
+   },
+   {
+    "axis": "산도",
+    "value": 58
+   },
+   {
+    "axis": "탄닌",
+    "value": 64
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "알바리뇨 마르틴 코닥스",
+  "producer": "Martín Códax",
+  "country": "스페인",
+  "region": "리아스 바이샤스",
+  "type": "화이트 와인 · 알바리뇨",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 42
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 76
+   },
+   {
+    "axis": "탄닌",
+    "value": 4
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "티오 페페 피노 셰리",
+  "producer": "González Byass",
+  "country": "스페인",
+  "region": "헤레스",
+  "type": "주정강화 와인 · 셰리",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 52
+   },
+   {
+    "axis": "당도",
+    "value": 6
+   },
+   {
+    "axis": "산도",
+    "value": 62
+   },
+   {
+    "axis": "탄닌",
+    "value": 5
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤토 몬텔레나 샤르도네",
+  "producer": "Chateau Montelena",
+  "country": "미국",
+  "region": "캘리포니아 · 나파 밸리",
+  "type": "화이트 와인 · 샤르도네",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 66
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 70
+   },
+   {
+    "axis": "탄닌",
+    "value": 5
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "스택스 립 와인 셀라스 아르테미스",
+  "producer": "Stag's Leap Wine Cellars",
+  "country": "미국",
+  "region": "캘리포니아 · 나파 밸리",
+  "type": "레드 와인 · 카베르네 소비뇽",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 82
+   },
+   {
+    "axis": "당도",
+    "value": 22
+   },
+   {
+    "axis": "산도",
+    "value": 58
+   },
+   {
+    "axis": "탄닌",
+    "value": 72
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "리지 몬테 벨로",
+  "producer": "Ridge Vineyards",
+  "country": "미국",
+  "region": "캘리포니아 · 산타 크루즈",
+  "type": "레드 와인 · 카베르네 블렌드",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 82
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 62
+   },
+   {
+    "axis": "탄닌",
+    "value": 76
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "본 클라이맷 피노 누아",
+  "producer": "Au Bon Climat",
+  "country": "미국",
+  "region": "캘리포니아 · 산타 바바라",
+  "type": "레드 와인 · 피노 누아",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 56
+   },
+   {
+    "axis": "당도",
+    "value": 18
+   },
+   {
+    "axis": "산도",
+    "value": 68
+   },
+   {
+    "axis": "탄닌",
+    "value": 42
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "이스트 오리건 피노 누아",
+  "producer": "A to Z Wineworks",
+  "country": "미국",
+  "region": "오리건 · 윌래멋 밸리",
+  "type": "레드 와인 · 피노 누아",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 54
+   },
+   {
+    "axis": "당도",
+    "value": 20
+   },
+   {
+    "axis": "산도",
+    "value": 68
+   },
+   {
+    "axis": "탄닌",
+    "value": 42
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "샤토 생 미셸 컬럼비아 밸리 리슬링",
+  "producer": "Chateau Ste. Michelle",
+  "country": "미국",
+  "region": "워싱턴 · 컬럼비아 밸리",
+  "type": "화이트 와인 · 리슬링",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 40
+   },
+   {
+    "axis": "당도",
+    "value": 46
+   },
+   {
+    "axis": "산도",
+    "value": 72
+   },
+   {
+    "axis": "탄닌",
+    "value": 4
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "애플게이트 무통 카데 대체 데일리 진판델",
+  "producer": "Gnarly Head",
+  "country": "미국",
+  "region": "캘리포니아 · 롯다이",
+  "type": "레드 와인 · 진판델",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 74
+   },
+   {
+    "axis": "당도",
+    "value": 32
+   },
+   {
+    "axis": "산도",
+    "value": 54
+   },
+   {
+    "axis": "탄닌",
+    "value": 54
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "펜폴즈 그랜지",
+  "producer": "Penfolds",
+  "country": "호주",
+  "region": "남호주",
+  "type": "레드 와인 · 시라즈",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 90
+   },
+   {
+    "axis": "당도",
+    "value": 20
+   },
+   {
+    "axis": "산도",
+    "value": 56
+   },
+   {
+    "axis": "탄닌",
+    "value": 82
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "헨쉬케 힐 오브 그레이스",
+  "producer": "Henschke",
+  "country": "호주",
+  "region": "이든 밸리",
+  "type": "레드 와인 · 시라즈",
+  "priceBand": 5,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 88
+   },
+   {
+    "axis": "당도",
+    "value": 20
+   },
+   {
+    "axis": "산도",
+    "value": 58
+   },
+   {
+    "axis": "탄닌",
+    "value": 78
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "울프 블라스 옐로우 라벨 샤르도네",
+  "producer": "Wolf Blass",
+  "country": "호주",
+  "region": "남호주",
+  "type": "화이트 와인 · 샤르도네",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 56
+   },
+   {
+    "axis": "당도",
+    "value": 26
+   },
+   {
+    "axis": "산도",
+    "value": 62
+   },
+   {
+    "axis": "탄닌",
+    "value": 6
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "하디스 스탬프 시라즈 카베르네",
+  "producer": "Hardys",
+  "country": "호주",
+  "region": "남동호주",
+  "type": "레드 와인 · 시라즈 블렌드",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 64
+   },
+   {
+    "axis": "당도",
+    "value": 28
+   },
+   {
+    "axis": "산도",
+    "value": 54
+   },
+   {
+    "axis": "탄닌",
+    "value": 50
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "펠로러스 스파클링",
+  "producer": "Cloudy Bay",
+  "country": "뉴질랜드",
+  "region": "말보로",
+  "type": "스파클링 와인 · 샤르도네 블렌드",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 52
+   },
+   {
+    "axis": "당도",
+    "value": 24
+   },
+   {
+    "axis": "산도",
+    "value": 76
+   },
+   {
+    "axis": "탄닌",
+    "value": 4
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "펠로리우스 센트럴 오타고 피노 누아",
+  "producer": "Mt. Difficulty",
+  "country": "뉴질랜드",
+  "region": "센트럴 오타고",
+  "type": "레드 와인 · 피노 누아",
+  "priceBand": 4,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 58
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 70
+   },
+   {
+    "axis": "탄닌",
+    "value": 48
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "닥터 루젠 리슬링 슈페트레제",
+  "producer": "Dr. Loosen",
+  "country": "독일",
+  "region": "모젤",
+  "type": "화이트 와인 · 리슬링",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 42
+   },
+   {
+    "axis": "당도",
+    "value": 64
+   },
+   {
+    "axis": "산도",
+    "value": 84
+   },
+   {
+    "axis": "탄닌",
+    "value": 3
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "닥터 루젠 리슬링 트로켄",
+  "producer": "Dr. Loosen",
+  "country": "독일",
+  "region": "모젤",
+  "type": "화이트 와인 · 리슬링",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 40
+   },
+   {
+    "axis": "당도",
+    "value": 16
+   },
+   {
+    "axis": "산도",
+    "value": 84
+   },
+   {
+    "axis": "탄닌",
+    "value": 3
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "그뤼너 벨트리너",
+  "producer": "Domäne Wachau",
+  "country": "오스트리아",
+  "region": "바하우",
+  "type": "화이트 와인 · 그뤼너 벨트리너",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 46
+   },
+   {
+    "axis": "당도",
+    "value": 14
+   },
+   {
+    "axis": "산도",
+    "value": 78
+   },
+   {
+    "axis": "탄닌",
+    "value": 4
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "산디만 10년 토니 포트",
+  "producer": "Sandeman",
+  "country": "포르투갈",
+  "region": "도루",
+  "type": "디저트 와인 · 포트",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 80
+   },
+   {
+    "axis": "당도",
+    "value": 76
+   },
+   {
+    "axis": "산도",
+    "value": 52
+   },
+   {
+    "axis": "탄닌",
+    "value": 40
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "에스포랑 헤세르바 틴투",
+  "producer": "Esporão",
+  "country": "포르투갈",
+  "region": "알렌테주",
+  "type": "레드 와인 · 블렌드",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 70
+   },
+   {
+    "axis": "당도",
+    "value": 20
+   },
+   {
+    "axis": "산도",
+    "value": 60
+   },
+   {
+    "axis": "탄닌",
+    "value": 58
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "코노 수르 오가닉 카베르네 카르메네르",
+  "producer": "Cono Sur",
+  "country": "칠레",
+  "region": "콜차구아",
+  "type": "레드 와인 · 카베르네 블렌드",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 68
+   },
+   {
+    "axis": "당도",
+    "value": 22
+   },
+   {
+    "axis": "산도",
+    "value": 56
+   },
+   {
+    "axis": "탄닌",
+    "value": 56
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "산타 헬레나 알파스 카베르네 소비뇽",
+  "producer": "Santa Helena",
+  "country": "칠레",
+  "region": "센트럴 밸리",
+  "type": "레드 와인 · 카베르네 소비뇽",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 64
+   },
+   {
+    "axis": "당도",
+    "value": 24
+   },
+   {
+    "axis": "산도",
+    "value": 54
+   },
+   {
+    "axis": "탄닌",
+    "value": 50
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "운두라가 시부미 카르메네르",
+  "producer": "Undurraga",
+  "country": "칠레",
+  "region": "센트럴 밸리",
+  "type": "레드 와인 · 카르메네르",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 66
+   },
+   {
+    "axis": "당도",
+    "value": 24
+   },
+   {
+    "axis": "산도",
+    "value": 56
+   },
+   {
+    "axis": "탄닌",
+    "value": 52
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "비냐 마이포 리제르바 카베르네 소비뇽",
+  "producer": "Viña Maipo",
+  "country": "칠레",
+  "region": "마이포 밸리",
+  "type": "레드 와인 · 카베르네 소비뇽",
+  "priceBand": 1,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 66
+   },
+   {
+    "axis": "당도",
+    "value": 22
+   },
+   {
+    "axis": "산도",
+    "value": 56
+   },
+   {
+    "axis": "탄닌",
+    "value": 54
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "루이스 펠리페 에드워즈 그란 레세르바 카르메네르",
+  "producer": "Luis Felipe Edwards",
+  "country": "칠레",
+  "region": "콜차구아",
+  "type": "레드 와인 · 카르메네르",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 72
+   },
+   {
+    "axis": "당도",
+    "value": 24
+   },
+   {
+    "axis": "산도",
+    "value": 56
+   },
+   {
+    "axis": "탄닌",
+    "value": 58
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "트라피체 메달라 말벡",
+  "producer": "Trapiche",
+  "country": "아르헨티나",
+  "region": "멘도사",
+  "type": "레드 와인 · 말벡",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 78
+   },
+   {
+    "axis": "당도",
+    "value": 22
+   },
+   {
+    "axis": "산도",
+    "value": 54
+   },
+   {
+    "axis": "탄닌",
+    "value": 66
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "노턴 리제르바 말벡",
+  "producer": "Bodega Norton",
+  "country": "아르헨티나",
+  "region": "멘도사",
+  "type": "레드 와인 · 말벡",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 74
+   },
+   {
+    "axis": "당도",
+    "value": 24
+   },
+   {
+    "axis": "산도",
+    "value": 54
+   },
+   {
+    "axis": "탄닌",
+    "value": 60
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "테라자스 레세르바 말벡",
+  "producer": "Terrazas de los Andes",
+  "country": "아르헨티나",
+  "region": "멘도사",
+  "type": "레드 와인 · 말벡",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 76
+   },
+   {
+    "axis": "당도",
+    "value": 22
+   },
+   {
+    "axis": "산도",
+    "value": 54
+   },
+   {
+    "axis": "탄닌",
+    "value": 62
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "크레이븐 스텔렌보스 카베르네 소비뇽",
+  "producer": "Craven Wines",
+  "country": "남아프리카공화국",
+  "region": "스텔렌보스",
+  "type": "레드 와인 · 카베르네 소비뇽",
+  "priceBand": 3,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 74
+   },
+   {
+    "axis": "당도",
+    "value": 18
+   },
+   {
+    "axis": "산도",
+    "value": 60
+   },
+   {
+    "axis": "탄닌",
+    "value": 64
+   }
+  ]
+ },
+ {
+  "tier": "stub",
+  "category": "wine",
+  "name": "켄 포레스터 슈냉 블랑",
+  "producer": "Ken Forrester",
+  "country": "남아프리카공화국",
+  "region": "스텔렌보스",
+  "type": "화이트 와인 · 슈냉 블랑",
+  "priceBand": 2,
+  "tasteProfile": [
+   {
+    "axis": "바디",
+    "value": 50
+   },
+   {
+    "axis": "당도",
+    "value": 24
+   },
+   {
+    "axis": "산도",
+    "value": 72
+   },
+   {
+    "axis": "탄닌",
+    "value": 4
+   }
+  ]
+ }
 ]

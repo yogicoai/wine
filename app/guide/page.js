@@ -438,54 +438,67 @@ export default async function GuidePage() {
               </thead>
               <tbody>
                 <tr>
-                  <td>웹 검색 끔<br /><span className={s.faint}>현재 기본 설정</span></td>
+                  <td>DB에 없는 술<br /><span className={s.faint}>새로 분석</span></td>
                   <td className={s.numCell}>2,860</td>
                   <td className={s.numCell}>2,304</td>
                   <td className={s.numCell}>30초</td>
-                  <td className={`${s.numCell} ${s.priceLo}`}>약 63원</td>
+                  <td className={`${s.numCell} ${s.priceHi}`}>약 63원</td>
                 </tr>
                 <tr>
-                  <td>웹 검색 켬</td>
-                  <td className={s.numCell}>78,411</td>
-                  <td className={s.numCell}>6,129</td>
-                  <td className={s.numCell}>179초</td>
-                  <td className={`${s.numCell} ${s.priceHi}`}>약 474원</td>
+                  <td>DB에 있는 술<br /><span className={s.faint}>사진으로 조회</span></td>
+                  <td className={s.numCell}>저비용 판독만</td>
+                  <td className={s.numCell}>–</td>
+                  <td className={s.numCell}>즉시</td>
+                  <td className={`${s.numCell} ${s.priceLo}`}>약 3원</td>
+                </tr>
+                <tr>
+                  <td>바코드 · 이름 검색 · 추천</td>
+                  <td className={s.numCell}>–</td>
+                  <td className={s.numCell}>–</td>
+                  <td className={s.numCell}>즉시</td>
+                  <td className={`${s.numCell} ${s.priceLo}`}>0원</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div className={s.callout}>
-            <b>웹 검색을 켜면 비용이 7배, 시간이 6배로 늘어납니다.</b> 검색 결과 텍스트가 입력 토큰을 76,000개나
-            차지하기 때문입니다. 그런데 검색이 주로 찾아오는 가격 정보는 <b>이미 무료인 네이버쇼핑 조회가 담당</b>하고
-            있어 상당 부분 중복이었습니다. 그래서 <b>웹 검색은 완전히 꺼 둔 상태</b>입니다. 예상치 못한 비용이 나가지
-            않도록 화면에서 감췄을 뿐 아니라 서버에서도 차단해 두었고, 필요해지면 설정값 하나로 되살릴 수 있습니다.
+            <b>같은 술을 다시 찍으면 비용이 들지 않습니다.</b> 분석 결과를 데이터베이스에 쌓아 두고,
+            다음부터는 거기서 꺼내 쓰기 때문입니다. 그래서 <b>스캔이 쌓일수록 평균 원가가 내려갑니다.</b>
           </div>
 
-          <h3 className={s.h3}>월간 예상 비용</h3>
+          <h3 className={s.h3}>DB 적중률이 원가를 결정합니다</h3>
           <div className={s.scroll}>
             <table className={s.table}>
-              <thead><tr><th>월 스캔 수</th><th>현재 설정 (검색 끔)</th><th>검색을 켠다면</th></tr></thead>
+              <thead><tr><th>DB 적중률</th><th>스캔당 평균</th><th>월 1,000회 기준</th></tr></thead>
               <tbody>
-                <tr><td>100회</td><td className={`${s.numCell} ${s.priceLo}`}>약 6천원</td><td className={s.numCell}>약 5만원</td></tr>
-                <tr><td>1,000회</td><td className={`${s.numCell} ${s.priceLo}`}>약 6만원</td><td className={s.numCell}>약 52만원</td></tr>
-                <tr><td>10,000회</td><td className={`${s.numCell} ${s.priceLo}`}>약 63만원</td><td className={`${s.numCell} ${s.priceHi}`}>약 516만원</td></tr>
+                <tr><td>0% <span className={s.faint}>(출시 첫날)</span></td><td className={s.numCell}>63원</td><td className={s.numCell}>약 6만원</td></tr>
+                <tr><td>50%</td><td className={s.numCell}>33원</td><td className={s.numCell}>약 3만원</td></tr>
+                <tr><td>85%</td><td className={`${s.numCell} ${s.priceLo}`}>12원</td><td className={`${s.numCell} ${s.priceLo}`}>약 1만2천원</td></tr>
+                <tr><td>95% <span className={s.faint}>(성숙기)</span></td><td className={`${s.numCell} ${s.priceLo}`}>6원</td><td className={`${s.numCell} ${s.priceLo}`}>약 6천원</td></tr>
               </tbody>
             </table>
           </div>
           <p className={s.p}>
-            프로모션 단가(2026년 8월 31일까지)를 적용하면 각각 42원 / 316원으로 더 낮아집니다.
-            웹 검색을 켤 경우 검색 도구 자체 요금이 별도로 부과되며, 정확한 단가는 Anthropic 요금표에서 확인이 필요합니다.
+            프로모션 단가(2026년 8월 31일까지)를 적용하면 더 낮아집니다.
+            이미 {owned}종을 보유하고 있어 출시 시점의 적중률이 0%에서 시작하지 않습니다.
           </p>
 
           <h3 className={s.h3}>비용을 더 줄이는 방법</h3>
           <ul className={s.list}>
             <li>
-              <b>결과 캐싱 (다음 작업 예정)</b> — 이미 스캔된 술은 재분석 없이 즉시 응답하므로 <b>비용 0원</b>.
-              인기 있는 술이 스캔의 대부분을 차지하므로 효과가 가장 큽니다.
+              <b>결과 캐싱</b> <span className={s.faint}>— 적용 완료</span>. 이미 분석된 술은 재분석 없이
+              응답하므로 비용이 들지 않습니다.
             </li>
-            <li><b>저비용 모델 전환</b> — 잘 알려진 술은 저비용 모델로 처리하는 2단계 구조를 둡니다.</li>
-            <li><b>사용량 제한</b> — 무료 사용자의 월 스캔 횟수를 제한합니다.</li>
+            <li>
+              <b>저비용 모델 2단계 구조</b> <span className={s.faint}>— 적용 완료</span>. 사진에서 이름만
+              저비용 모델로 읽어 DB를 먼저 조회합니다. 그래서 DB 적중 시 3원입니다.
+            </li>
+            <li>
+              <b>데이터 선적재</b> <span className={s.faint}>— 진행 중</span>. 사람들이 찍을 만한 술을 미리
+              채워 두면 그만큼 새 분석이 줄어듭니다.
+            </li>
+            <li><b>사용량 제한</b> <span className={s.faint}>— 로그인 도입 시</span>. 무료 사용자의 월 스캔 횟수를 제한합니다.</li>
           </ul>
 
           <h3 className={s.h3}>그 외 비용</h3>
@@ -519,8 +532,8 @@ export default async function GuidePage() {
               <tbody>
                 <tr><td>카탈로그에 있음<br /><span className={s.faint}>사진 스캔</span></td><td className={s.was}>라벨 판독만</td><td className={`${s.numCell} ${s.priceLo}`}>약 3원</td></tr>
                 <tr><td>카탈로그에 있음<br /><span className={s.faint}>이름 검색</span></td><td className={s.was}>없음</td><td className={`${s.numCell} ${s.priceLo}`}>0원</td></tr>
-                <tr><td>카탈로그에 없음</td><td className={s.was}>판독 + 본분석</td><td className={s.numCell}>약 66원</td></tr>
-                <tr><td>웹 검색 분석<br /><span className={s.faint}>현재 꺼둠</span></td><td className={s.was}>웹 검색 포함</td><td className={`${s.numCell} ${s.priceHi}`}>약 474원</td></tr>
+                <tr><td>카탈로그에 있음<br /><span className={s.faint}>바코드</span></td><td className={s.was}>없음</td><td className={`${s.numCell} ${s.priceLo}`}>0원</td></tr>
+                <tr><td>카탈로그에 없음</td><td className={s.was}>판독 + 본분석</td><td className={`${s.numCell} ${s.priceHi}`}>약 66원</td></tr>
               </tbody>
             </table>
           </div>
@@ -594,16 +607,16 @@ export default async function GuidePage() {
                 <tr>
                   <td>프리미엄</td>
                   <td className={`${s.numCell} ${s.priceLo}`}>9,900원</td>
-                  <td className={s.was}>무제한(월 300회 공정사용), 최신 정보 검색 월 10회 포함</td>
-                  <td className={s.numCell}>약 9,500원</td>
+                  <td className={s.was}>무제한(월 300회 공정사용), 와인 리스트 스캔 무제한</td>
+                  <td className={s.numCell}>약 4,000원</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className={s.p}>
             실제 사용자는 대부분 한도를 다 쓰지 않습니다. 스탠다드 구독자가 월 20회를 스캔한다고 보면 원가는
-            <b> 약 320원</b>으로, 마진율이 90%를 넘습니다. 프리미엄의 원가가 높아 보이는 이유는 웹 검색(회당 474원)이
-            포함되기 때문이며, 이 기능만 별도 한도로 묶어 두면 비용이 통제됩니다.
+            <b> 약 320원</b>으로, 마진율이 90%를 넘습니다. 프리미엄도 한도를 모두 채워야 4,000원 수준이라
+            여유가 있고, <b>데이터베이스가 두꺼워질수록 이 원가는 계속 내려갑니다.</b>
           </p>
 
           <h3 className={s.h3}>무료 사용자는 어떻게 감당하나</h3>
@@ -838,16 +851,18 @@ export default async function GuidePage() {
               </dd>
             </div>
             <div className={s.qa}>
-              <dt>웹 검색은 왜 꺼져 있나요?</dt>
+              <dt>사진 없이 술 이름만으로도 되나요?</dt>
               <dd>
-                비용이 7배(45원 → 316원), 시간이 6배(30초 → 3분)로 늘어나는 데 비해, 얻는 정보가 네이버쇼핑 조회와
-                상당 부분 겹치기 때문입니다. 예기치 않은 비용을 막기 위해 화면과 서버 양쪽에서 막아 두었으며,
-                마이너한 술까지 깊게 다뤄야 할 때 설정값 하나로 되살릴 수 있습니다.
+                됩니다. 헤더의 돋보기에서 이름 · 생산자 · 산지 · 품종으로 찾을 수 있고,
+                결과 화면의 유사주 추천에서 이름을 눌러도 바로 열립니다. 둘 다 비용이 들지 않습니다.
               </dd>
             </div>
             <div className={s.qa}>
-              <dt>사진 없이 술 이름만으로도 되나요?</dt>
-              <dd>됩니다. 결과 화면의 유사주 추천에서 이름을 누르면 사진 없이 바로 분석합니다.</dd>
+              <dt>같은 술을 여러 번 찍으면 비용이 계속 나가나요?</dt>
+              <dd>
+                아닙니다. 한 번 분석한 술은 데이터베이스에 남아 다음부터는 거기서 꺼내 씁니다.
+                바코드로 찍거나 이름으로 찾으면 아예 0원입니다.
+              </dd>
             </div>
             <div className={s.qa}>
               <dt>기록은 어디에 저장되나요?</dt>

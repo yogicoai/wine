@@ -1,0 +1,782 @@
+[
+  {
+    "category": "whisky",
+    "name": "맥캘란 12년 셰리 오크",
+    "searchKeyword": "맥캘란 12년 셰리오크",
+    "producer": "The Macallan",
+    "type": "싱글몰트 위스키 · 스페이사이드",
+    "vintage": null,
+    "region": "스페이사이드",
+    "country": "스코틀랜드",
+    "alcohol": "40%",
+    "liquidColor": "#9E5A1E",
+    "confidence": 95,
+    "knowledge": "rich",
+    "basis": "국내에서 가장 널리 알려진 싱글몰트 중 하나입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 74
+      },
+      {
+        "axis": "당도",
+        "value": 46
+      },
+      {
+        "axis": "셰리",
+        "value": 82
+      },
+      {
+        "axis": "피트",
+        "value": 5
+      }
+    ],
+    "tastingNotes": "말린 자두와 건포도, 계피 향이 진하게 올라옵니다. 셰리 통에서만 숙성해 색이 붉고 단맛이 도드라지며, 끝에 오렌지 껍질 같은 쌉쌀함이 남습니다.",
+    "specs": [
+      {
+        "label": "숙성",
+        "value": "12년"
+      },
+      {
+        "label": "캐스크",
+        "value": "유러피언·아메리칸 셰리 오크"
+      },
+      {
+        "label": "도수",
+        "value": "40%"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2035",
+    "history": [
+      {
+        "year": "1824",
+        "event": "정식 면허를 받은 초기 증류소 중 하나"
+      },
+      {
+        "year": "1980년대",
+        "event": "셰리 캐스크 숙성으로 세계적 명성을 얻음"
+      }
+    ],
+    "story": "스페인에서 셰리를 담았던 통을 직접 주문해 씁니다. 통값이 위스키 원가의 큰 부분을 차지할 만큼, 이 집에서는 나무가 곧 맛입니다.",
+    "winery": "스페이 강가에 자리한 증류소로, 유난히 작은 증류기를 씁니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍫",
+        "food": "다크 초콜릿",
+        "why": "건과일 향과 카카오가 이어집니다",
+        "shopKeyword": "다크초콜릿"
+      },
+      {
+        "emoji": "🧀",
+        "food": "숙성 치즈",
+        "why": "짠맛이 셰리 단맛을 받칩니다",
+        "shopKeyword": "고다치즈"
+      },
+      {
+        "emoji": "🌰",
+        "food": "구운 견과",
+        "why": "고소함이 오크 향과 맞물립니다",
+        "shopKeyword": "구운 아몬드"
+      }
+    ],
+    "pairingTip": "육포나 말린 과일과도 잘 맞습니다.",
+    "avoidPairing": "매운 안주는 향을 완전히 덮습니다.",
+    "similar": [
+      "글렌피딕 15년 솔레라",
+      "발베니 더블우드 12년",
+      "글렌드로낙 12년"
+    ],
+    "trivia": "위스키 경매에서 최고가 기록을 여러 번 갈아치운 브랜드입니다.",
+    "servingTemp": "실온",
+    "servingNote": "니트로 먼저 맛보고, 물 몇 방울을 더하면 향이 열립니다.",
+    "aging": "병에 담긴 뒤로는 더 익지 않습니다. 개봉 후 6개월 안에 드세요.",
+    "tips": [
+      "얼음을 넣으면 셰리 향이 닫힙니다. 처음엔 니트로 드셔 보세요"
+    ]
+  },
+  {
+    "category": "whisky",
+    "name": "발베니 더블우드 12년",
+    "searchKeyword": "발베니 더블우드 12년",
+    "producer": "The Balvenie",
+    "type": "싱글몰트 위스키 · 스페이사이드",
+    "vintage": null,
+    "region": "스페이사이드",
+    "country": "스코틀랜드",
+    "alcohol": "40%",
+    "liquidColor": "#B5762A",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 대표 싱글몰트입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 66
+      },
+      {
+        "axis": "당도",
+        "value": 54
+      },
+      {
+        "axis": "셰리",
+        "value": 58
+      },
+      {
+        "axis": "피트",
+        "value": 5
+      }
+    ],
+    "tastingNotes": "꿀과 바닐라가 앞서고 뒤에 셰리의 건포도 향이 따라옵니다. 두 종류의 통을 거쳐 부드러움과 깊이가 함께 있습니다.",
+    "specs": [
+      {
+        "label": "숙성",
+        "value": "12년(버번 캐스크 후 셰리 캐스크 마무리)"
+      },
+      {
+        "label": "특징",
+        "value": "자체 맥아 제조(플로어 몰팅)"
+      },
+      {
+        "label": "도수",
+        "value": "40%"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2035",
+    "history": [
+      {
+        "year": "1892",
+        "event": "윌리엄 그랜트가 설립"
+      },
+      {
+        "year": "1993",
+        "event": "더블우드 출시로 캐스크 피니시를 대중화"
+      }
+    ],
+    "story": "버번 통에서 오래 재운 뒤 마지막에만 셰리 통으로 옮깁니다. 이 '마무리' 방식이 지금은 흔하지만, 이 술이 널리 알린 방법입니다.",
+    "winery": "직접 보리를 재배하고 맥아까지 만드는 몇 안 되는 증류소입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍯",
+        "food": "꿀 바른 견과",
+        "why": "꿀 향이 그대로 이어집니다",
+        "shopKeyword": "허니 넛"
+      },
+      {
+        "emoji": "🍎",
+        "food": "구운 사과",
+        "why": "과일 단맛이 바닐라와 맞습니다",
+        "shopKeyword": "사과"
+      },
+      {
+        "emoji": "🧀",
+        "food": "브리 치즈",
+        "why": "부드러운 질감끼리 어울립니다",
+        "shopKeyword": "브리치즈"
+      }
+    ],
+    "pairingTip": "단맛이 있어 디저트와도 잘 맞습니다.",
+    "avoidPairing": "강한 훈제 음식은 이 술의 섬세함을 지웁니다.",
+    "similar": [
+      "맥캘란 12년 셰리 오크",
+      "글렌피딕 15년 솔레라",
+      "글렌모렌지 라산타"
+    ],
+    "trivia": "증류소 안에 자체 통 제작소와 대장간까지 있습니다.",
+    "servingTemp": "실온",
+    "servingNote": "니트 또는 물 몇 방울. 얼음은 향을 닫습니다.",
+    "aging": "개봉 후 6개월~1년 안에 드세요.",
+    "tips": [
+      "싱글몰트 입문으로 가장 자주 권해지는 술입니다"
+    ]
+  },
+  {
+    "category": "whisky",
+    "name": "라프로익 10년",
+    "searchKeyword": "라프로익 10년",
+    "producer": "Laphroaig",
+    "type": "싱글몰트 위스키 · 아일라",
+    "vintage": null,
+    "region": "아일라",
+    "country": "스코틀랜드",
+    "alcohol": "40%",
+    "liquidColor": "#C9A046",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "피트 위스키를 대표하는 이름입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 72
+      },
+      {
+        "axis": "당도",
+        "value": 22
+      },
+      {
+        "axis": "셰리",
+        "value": 10
+      },
+      {
+        "axis": "피트",
+        "value": 92
+      }
+    ],
+    "tastingNotes": "소독약과 바다 내음, 젖은 재 냄새가 먼저 옵니다. 호불호가 극단적으로 갈리지만, 좋아하는 사람은 이것 말고는 못 마신다고 합니다.",
+    "specs": [
+      {
+        "label": "숙성",
+        "value": "10년(버번 캐스크)"
+      },
+      {
+        "label": "특징",
+        "value": "직접 피트를 캐서 맥아를 건조"
+      },
+      {
+        "label": "도수",
+        "value": "40%"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2035",
+    "history": [
+      {
+        "year": "1815",
+        "event": "존스턴 형제가 아일라 남부에 설립"
+      },
+      {
+        "year": "1920년대",
+        "event": "금주법 시대 미국에 '약용'으로 수출"
+      }
+    ],
+    "story": "금주법 시절 미국에 들어갈 수 있었던 것은 소독약 냄새 덕이라는 이야기가 전해집니다. 술이 아니라 약으로 보였다는 것입니다.",
+    "winery": "아일라 섬 남쪽 바닷가에 있어 통에 바닷바람이 스밉니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦪",
+        "food": "생굴",
+        "why": "바다 내음끼리 겹치는 고전 조합입니다",
+        "shopKeyword": "생굴"
+      },
+      {
+        "emoji": "🧀",
+        "food": "블루치즈",
+        "why": "강한 향끼리 맞서며 균형을 잡습니다",
+        "shopKeyword": "블루치즈"
+      },
+      {
+        "emoji": "🥓",
+        "food": "훈제 베이컨",
+        "why": "훈연 향이 이어집니다",
+        "shopKeyword": "베이컨"
+      }
+    ],
+    "pairingTip": "굴에 몇 방울 떨어뜨려 먹는 방식이 유명합니다.",
+    "avoidPairing": "섬세한 음식은 무엇이든 지워집니다.",
+    "similar": [
+      "아드벡 10년",
+      "라가불린 16년",
+      "탈리스커 10년"
+    ],
+    "trivia": "찰스 3세가 왕세자 시절 왕실 인증을 내린 유일한 싱글몰트입니다.",
+    "servingTemp": "실온",
+    "servingNote": "물 몇 방울을 더하면 소독약 향이 누그러지고 단맛이 드러납니다.",
+    "aging": "개봉 후 1년 안에 드세요.",
+    "tips": [
+      "처음이라면 바에서 한 잔 먼저 드셔 보고 사시길 권합니다"
+    ]
+  },
+  {
+    "category": "whisky",
+    "name": "산토리 야마자키 12년",
+    "searchKeyword": "야마자키 12년",
+    "producer": "Suntory",
+    "type": "싱글몰트 위스키 · 재패니즈",
+    "vintage": null,
+    "region": "오사카 인근 야마자키",
+    "country": "일본",
+    "alcohol": "43%",
+    "liquidColor": "#C08A35",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "일본 위스키를 대표하는 이름으로 국내 인지도가 높습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 64
+      },
+      {
+        "axis": "당도",
+        "value": 46
+      },
+      {
+        "axis": "셰리",
+        "value": 48
+      },
+      {
+        "axis": "피트",
+        "value": 8
+      }
+    ],
+    "tastingNotes": "복숭아와 꿀, 그리고 백단향 같은 은은한 향이 납니다. 일본 물참나무(미즈나라) 통에서 오는 향이 다른 위스키에는 없는 표정을 만듭니다.",
+    "specs": [
+      {
+        "label": "숙성",
+        "value": "12년"
+      },
+      {
+        "label": "캐스크",
+        "value": "버번·셰리·미즈나라"
+      },
+      {
+        "label": "도수",
+        "value": "43%"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2035",
+    "history": [
+      {
+        "year": "1923",
+        "event": "일본 최초의 몰트 증류소로 건립"
+      },
+      {
+        "year": "1984",
+        "event": "야마자키 싱글몰트 출시"
+      },
+      {
+        "year": "2010년대",
+        "event": "국제 대회 수상으로 값이 급등"
+      }
+    ],
+    "story": "물이 좋기로 이름난 곳에 세웠습니다. 센노 리큐가 차를 끓이던 물이 이 근처에서 났다고 전해집니다.",
+    "winery": "교토 외곽, 세 강이 만나는 안개 낀 골짜기에 있습니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍣",
+        "food": "초밥",
+        "why": "섬세해서 생선 맛을 덮지 않습니다",
+        "shopKeyword": "초밥"
+      },
+      {
+        "emoji": "🍤",
+        "food": "튀김",
+        "why": "하이볼로 마시면 기름을 정리합니다",
+        "shopKeyword": "새우튀김"
+      },
+      {
+        "emoji": "🌰",
+        "food": "구운 밤",
+        "why": "고소함이 미즈나라 향과 맞습니다",
+        "shopKeyword": "구운 밤"
+      }
+    ],
+    "pairingTip": "일본에서는 식사 중 하이볼로 곁들이는 것이 흔합니다.",
+    "avoidPairing": "향이 강한 안주는 미즈나라의 결을 지웁니다.",
+    "similar": [
+      "산토리 하쿠슈 12년",
+      "히비키 하모니",
+      "닛카 요이치"
+    ],
+    "trivia": "수요가 폭증해 한때 12년 제품이 시장에서 사라졌던 적이 있습니다.",
+    "servingTemp": "실온 또는 하이볼",
+    "servingNote": "하이볼은 잔을 미리 얼려 두면 훨씬 낫습니다.",
+    "aging": "개봉 후 1년 안에 드세요.",
+    "tips": [
+      "값이 많이 올랐습니다. 하이볼용이면 가쿠빈이 훨씬 합리적입니다"
+    ]
+  },
+  {
+    "category": "whisky",
+    "name": "조니워커 블루라벨",
+    "searchKeyword": "조니워커 블루라벨",
+    "producer": "Johnnie Walker",
+    "type": "블렌디드 위스키 · 스카치",
+    "vintage": null,
+    "region": "스코틀랜드",
+    "country": "스코틀랜드",
+    "alcohol": "40%",
+    "liquidColor": "#B8802F",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "선물용으로 국내에서 가장 널리 알려진 프리미엄 블렌디드입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 70
+      },
+      {
+        "axis": "당도",
+        "value": 40
+      },
+      {
+        "axis": "셰리",
+        "value": 44
+      },
+      {
+        "axis": "피트",
+        "value": 30
+      }
+    ],
+    "tastingNotes": "말린 과일과 꿀, 옅은 훈연이 층층이 쌓입니다. 어느 하나가 튀지 않고 매끄럽게 이어지는 것이 이 술의 목표입니다.",
+    "specs": [
+      {
+        "label": "종류",
+        "value": "블렌디드 스카치"
+      },
+      {
+        "label": "특징",
+        "value": "희귀 원액을 골라 소량 블렌딩"
+      },
+      {
+        "label": "도수",
+        "value": "40%"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2035",
+    "history": [
+      {
+        "year": "1820",
+        "event": "존 워커가 식료품점에서 위스키 블렌딩 시작"
+      },
+      {
+        "year": "1992",
+        "event": "블루라벨 출시"
+      }
+    ],
+    "story": "블렌디드는 싱글몰트보다 낮게 보는 시선이 있지만, 여러 증류소의 원액을 매번 같은 맛으로 맞추는 일은 그 자체로 어려운 기술입니다.",
+    "winery": "디아지오 산하 여러 증류소의 원액을 씁니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍫",
+        "food": "다크 초콜릿",
+        "why": "훈연과 카카오가 맞물립니다",
+        "shopKeyword": "다크초콜릿"
+      },
+      {
+        "emoji": "🥩",
+        "food": "육포",
+        "why": "짠맛이 단맛을 끌어올립니다",
+        "shopKeyword": "육포"
+      },
+      {
+        "emoji": "🧀",
+        "food": "숙성 치즈",
+        "why": "복합적인 향끼리 어울립니다",
+        "shopKeyword": "체다치즈"
+      }
+    ],
+    "pairingTip": "선물로 많이 나가는 술이라 격식 있는 자리에 어울립니다.",
+    "avoidPairing": "하이볼로 만들기에는 아깝습니다.",
+    "similar": [
+      "시바스리갈 18년",
+      "발렌타인 21년",
+      "로얄살루트 21년"
+    ],
+    "trivia": "병마다 고유 번호가 새겨져 있습니다.",
+    "servingTemp": "실온",
+    "servingNote": "니트로 천천히. 물 몇 방울까지가 좋습니다.",
+    "aging": "개봉 후 1년 안에 드세요.",
+    "tips": [
+      "숫자 나이 표기가 없습니다. 원액 중에는 수십 년 된 것도 섞입니다"
+    ]
+  },
+  {
+    "category": "whisky",
+    "name": "메이커스 마크",
+    "searchKeyword": "메이커스마크",
+    "producer": "Maker's Mark",
+    "type": "버번 위스키",
+    "vintage": null,
+    "region": "켄터키",
+    "country": "미국",
+    "alcohol": "45%",
+    "liquidColor": "#B5601F",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "국내 유통이 많은 대표 버번입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 66
+      },
+      {
+        "axis": "당도",
+        "value": 62
+      },
+      {
+        "axis": "셰리",
+        "value": 8
+      },
+      {
+        "axis": "피트",
+        "value": 3
+      }
+    ],
+    "tastingNotes": "캐러멜과 바닐라, 구운 옥수수 향이 달큰합니다. 호밀 대신 밀을 써서 버번치고 부드럽고 매운맛이 적습니다.",
+    "specs": [
+      {
+        "label": "곡물",
+        "value": "옥수수, 밀, 보리(호밀 없음)"
+      },
+      {
+        "label": "숙성",
+        "value": "새 아메리칸 오크 통"
+      },
+      {
+        "label": "도수",
+        "value": "45%"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2032",
+    "history": [
+      {
+        "year": "1953",
+        "event": "빌 새뮤얼스가 켄터키 로레토에 설립"
+      },
+      {
+        "year": "현재",
+        "event": "병목을 붉은 밀랍으로 봉하는 방식을 유지"
+      }
+    ],
+    "story": "병목의 붉은 밀랍은 지금도 사람이 하나씩 담가 굳힙니다. 흘러내린 모양이 병마다 달라서 같은 것이 없습니다.",
+    "winery": "미국 국가 사적지로 지정된 증류소입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "바비큐 립",
+        "why": "캐러멜 향이 소스와 맞습니다",
+        "shopKeyword": "바비큐 립"
+      },
+      {
+        "emoji": "🍫",
+        "food": "피칸 파이",
+        "why": "단맛끼리 이어집니다",
+        "shopKeyword": "피칸"
+      },
+      {
+        "emoji": "🍔",
+        "food": "버거",
+        "why": "가볍게 곁들이기 좋습니다",
+        "shopKeyword": "수제버거"
+      }
+    ],
+    "pairingTip": "칵테일 베이스로도 널리 쓰입니다.",
+    "avoidPairing": "섬세한 일식과는 어울리지 않습니다.",
+    "similar": [
+      "우드포드 리저브",
+      "버팔로 트레이스",
+      "짐빔 블랙"
+    ],
+    "trivia": "버번은 법으로 옥수수 51% 이상, 새 오크통 사용이 정해져 있습니다.",
+    "servingTemp": "실온 또는 온더락",
+    "servingNote": "얼음을 넣어도 향이 잘 버팁니다. 하이볼도 좋습니다.",
+    "aging": "개봉 후 1년 안에 드세요.",
+    "tips": [
+      "버번이 처음이라면 밀을 쓴 이 술이 가장 부드럽습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "베가 시실리아 우니코",
+    "searchKeyword": "베가시실리아 우니코",
+    "producer": "Vega Sicilia",
+    "type": "레드 와인 · 템프라니요 블렌드",
+    "vintage": null,
+    "region": "리베라 델 두에로",
+    "country": "스페인",
+    "alcohol": "14%",
+    "liquidColor": "#5E1926",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "스페인 최고의 와인으로 꼽히는 이름입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 84
+      },
+      {
+        "axis": "당도",
+        "value": 15
+      },
+      {
+        "axis": "산도",
+        "value": 64
+      },
+      {
+        "axis": "탄닌",
+        "value": 76
+      }
+    ],
+    "tastingNotes": "말린 무화과와 담배, 삼나무 향이 깊게 깔립니다. 10년 넘게 통과 병에서 재운 뒤에야 내보내기 때문에, 출시 시점에 이미 완성되어 있습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "템프라니요, 카베르네 소비뇽"
+      },
+      {
+        "label": "숙성",
+        "value": "오크 6년 이상 + 병 숙성"
+      },
+      {
+        "label": "특징",
+        "value": "좋은 해에만 생산"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2035",
+    "drinkUntil": "2055",
+    "history": [
+      {
+        "year": "1864",
+        "event": "설립"
+      },
+      {
+        "year": "1929",
+        "event": "바르셀로나 만국박람회에서 이름을 알림"
+      }
+    ],
+    "story": "스페인에서 가장 오래 숙성해 내보내는 와인입니다. 사서 바로 마셔도 되는 대신, 값이 그만큼입니다.",
+    "winery": "두에로 강가의 유서 깊은 보데가입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "새끼돼지 통구이",
+        "why": "이 지방의 고전 조합입니다",
+        "shopKeyword": "돼지 목살"
+      },
+      {
+        "emoji": "🥩",
+        "food": "숙성 소고기",
+        "why": "탄닌이 육향을 받습니다",
+        "shopKeyword": "한우 등심"
+      },
+      {
+        "emoji": "🧀",
+        "food": "만체고 치즈",
+        "why": "같은 지방의 짝입니다",
+        "shopKeyword": "만체고 치즈"
+      }
+    ],
+    "pairingTip": "특별한 날에 여는 술입니다. 요리도 그에 맞추는 편이 좋습니다.",
+    "avoidPairing": "가벼운 음식으로는 받쳐 주지 못합니다.",
+    "similar": [
+      "핑구스",
+      "무가 리오하 리제르바",
+      "샤또 라피트 로칠드"
+    ],
+    "trivia": "'우니코'는 유일하다는 뜻입니다. 이름 그대로의 위치를 지키고 있습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "오래된 병은 세워 두었다 침전물을 거르고 따르세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": [
+      "출시된 해가 아니라 빈티지를 보세요. 10년 이상 차이가 납니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "비온디 산티 브루넬로 디 몬탈치노",
+    "searchKeyword": "비온디산티 브루넬로",
+    "producer": "Biondi-Santi",
+    "type": "레드 와인 · 산지오베제",
+    "vintage": null,
+    "region": "토스카나 · 몬탈치노",
+    "country": "이탈리아",
+    "alcohol": "13.5%",
+    "liquidColor": "#7A2530",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "브루넬로를 처음 만든 집안으로 자료가 충분합니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 76
+      },
+      {
+        "axis": "당도",
+        "value": 13
+      },
+      {
+        "axis": "산도",
+        "value": 78
+      },
+      {
+        "axis": "탄닌",
+        "value": 76
+      }
+    ],
+    "tastingNotes": "마른 체리와 담뱃잎, 흙 향이 절제된 채로 이어집니다. 화려하지 않고 마른 편인데, 시간이 지날수록 향이 열립니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "산지오베제 그로소 100%"
+      },
+      {
+        "label": "등급",
+        "value": "브루넬로 디 몬탈치노 DOCG"
+      },
+      {
+        "label": "숙성",
+        "value": "대형 오크통 3년 이상"
+      }
+    ],
+    "drinkFrom": "2030",
+    "drinkPeak": "2040",
+    "drinkUntil": "2060",
+    "history": [
+      {
+        "year": "1888",
+        "event": "페루초 비온디 산티가 첫 브루넬로를 만듦"
+      },
+      {
+        "year": "1980",
+        "event": "브루넬로가 이탈리아 첫 DOCG 중 하나로 지정"
+      }
+    ],
+    "story": "산지오베제만으로 오래 가는 와인을 만들 수 있다는 것을 이 집이 증명했습니다. 브루넬로라는 이름 자체가 여기서 시작됐습니다.",
+    "winery": "몬탈치노 언덕의 일 그레포 밭에서 나옵니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "비스테카 알라 피오렌티나",
+        "why": "토스카나의 정석 조합입니다",
+        "shopKeyword": "티본 스테이크"
+      },
+      {
+        "emoji": "🍄",
+        "food": "포르치니 버섯",
+        "why": "흙내가 이어집니다",
+        "shopKeyword": "건포르치니"
+      },
+      {
+        "emoji": "🧀",
+        "food": "페코리노",
+        "why": "짠맛이 산도를 눕힙니다",
+        "shopKeyword": "페코리노 치즈"
+      }
+    ],
+    "pairingTip": "숯불 소고기 구이와 아주 잘 맞습니다.",
+    "avoidPairing": "크림 소스는 산도와 부딪힙니다.",
+    "similar": [
+      "반피 브루넬로 디 몬탈치노",
+      "안티노리 키안티 클라시코 리제르바",
+      "피오 체사레 바롤로"
+    ],
+    "trivia": "1888년 빈티지가 지금도 남아 있고, 마실 수 있다고 평가됩니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "두 시간쯤 열어 두세요. 어릴 때는 닫혀 있습니다.",
+    "aging": "15년 이상 두면 크게 달라집니다.",
+    "tips": [
+      "화려한 맛을 기대하면 실망합니다. 시간이 필요한 술입니다"
+    ]
+  }
+]
