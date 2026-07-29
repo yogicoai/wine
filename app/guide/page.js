@@ -897,10 +897,10 @@ export default async function GuidePage() {
       <section className={s.section}>
         <div className={s.num}>11</div>
         <div className={s.body}>
-          <h2 className={s.h2}>데이터가 늘어난 기록</h2>
+          <h2 className={s.h2}>데이터가 쌓이고 다듬어진 기록</h2>
           <p className={s.sub}>
-            정식 분석을 채울 때마다 무엇이 들어갔는지 여기에 남깁니다. 이 목록만 봐도 카탈로그가
-            어떤 속도로, 어느 방향으로 두꺼워지고 있는지 알 수 있습니다.
+            정식 분석을 채우거나 잘못 들어온 것을 걷어낼 때마다 여기에 남깁니다. 이 목록만 봐도
+            카탈로그가 어떤 속도로, 어느 방향으로 나아지고 있는지 알 수 있습니다.
           </p>
           <ol className={s.log}>
             {changelog.map((c) => (
@@ -908,12 +908,10 @@ export default async function GuidePage() {
                 <div className={s.logHead}>
                   <b>{c.title}</b>
                   <span className={s.logMeta}>
-                    {/* 정리 작업은 음수로 적는다 — "+-271종"이 되지 않게 */}
-                    {c.count < 0
-                      ? `${Math.abs(c.count).toLocaleString("ko-KR")}종 정리`
-                      : `+${c.count.toLocaleString("ko-KR")}종`}
-                    {" · 정식 분석 "}
-                    {c.total.toLocaleString("ko-KR")}종
+                    {/* 늘어난 것은 +N, 걷어낸 것은 N종 정리, 손질만 한 것은 종수를 적지 않는다 */}
+                    {c.count < 0 && `${Math.abs(c.count).toLocaleString("ko-KR")}종 정리 · `}
+                    {c.count > 0 && `+${c.count.toLocaleString("ko-KR")}종 · `}
+                    {`정식 분석 ${c.total.toLocaleString("ko-KR")}종`}
                   </span>
                 </div>
                 <p className={s.logBody}>{c.body}</p>
