@@ -6,6 +6,8 @@ import ResultScreen from "@/components/ResultScreen";
 import HistoryDrawer from "@/components/HistoryDrawer";
 import AccountDrawer from "@/components/AccountDrawer";
 import { BrandMark } from "@/components/Brand";
+import useActiveTimer from "@/components/useActiveTimer";
+import TimerBubble from "@/components/TimerBubble";
 import CellarScreen from "@/components/CellarScreen";
 import WineListScreen from "@/components/WineListScreen";
 import DiscoverScreen from "@/components/DiscoverScreen";
@@ -32,6 +34,10 @@ export default function Home() {
     setToast({ text, err });
     setTimeout(() => setToast(null), 4000);
   }, []);
+
+  // 서빙 준비 타이머의 주인 — 어느 화면에 있든 여기서 한 번만 알린다.
+  // (여러 곳이 알림을 울리면 두 번 울린다)
+  const { timer: activeTimer } = useActiveTimer({ owner: true, onDone: showToast });
 
   const loadSessions = useCallback(async () => {
     try {
@@ -330,9 +336,9 @@ export default function Home() {
             <Icon name="archive" />
           </button>
           <button
-            className="icon-btn"
-            title="내 정보"
-            aria-label="내 정보"
+            className={`icon-btn ${activeTimer ? "has-dot" : ""}`}
+            title={activeTimer ? `${activeTimer.label} 진행 중` : "내 정보"}
+            aria-label={activeTimer ? `내 정보 · ${activeTimer.label} 진행 중` : "내 정보"}
             onClick={() => setAccount(true)}
           >
             <Icon name="user" />
@@ -390,6 +396,9 @@ export default function Home() {
         onOpenCellar={() => setScreen("cellar")}
         onToast={showToast}
       />
+
+      {/* 진행 중인 준비 — 어느 화면에 있든 떠 있고, 누르면 자세히 볼 수 있다 */}
+      <TimerBubble onOpen={() => setAccount(true)} />
 
       {toast && <div className={`toast ${toast.err ? "err" : ""}`}>{toast.text}</div>}
     </main>

@@ -40,9 +40,27 @@ export const viewport = {
   themeColor: "#12100c", // 모바일 브라우저 상단바 색
 };
 
+// 저장해 둔 글자 크기를 첫 그림 전에 적용한다.
+// 리액트가 붙은 뒤에 적용하면 기본 크기로 한 번 그려졌다가 튄다.
+// 이 시점에는 body 가 아직 없으므로 html 의 CSS 변수로 넘긴다 (globals.css 가 받아 쓴다)
+const APPLY_SCALE = `try{
+  var k=localStorage.getItem('bottlelens.fontScale');
+  var v={s:0.92,m:1,l:1.12,xl:1.24}[k];
+  if(v)document.documentElement.style.setProperty('--ui-zoom',v);
+}catch(e){}`;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
+      <head>
+        {/* Pretendard — 한글 UI 가독성이 좋고, 쓰이는 글자만 내려받는 방식이라 가볍다 */}
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
+        <script dangerouslySetInnerHTML={{ __html: APPLY_SCALE }} />
+      </head>
       <body className={`${cormorant.variable} ${serifKr.variable} ${sansKr.variable}`}>
         {children}
       </body>

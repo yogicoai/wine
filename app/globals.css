@@ -16,12 +16,17 @@
   --radius: 4px;
   --font-d: var(--font-display), var(--font-serif-kr), serif;
   --font-s: var(--font-serif-kr), serif;
-  --font-b: var(--font-sans-kr), sans-serif;
+  /* UI 글자는 Pretendard — 작은 크기에서 한글이 또렷하다.
+     못 받아 오면 Noto Sans KR 로 내려간다 */
+  --font-b: Pretendard Variable, Pretendard, var(--font-sans-kr), sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body { background: var(--bg); color: var(--ink); font-family: var(--font-b); min-height: 100%; }
+/* 글자 크기 설정 — 치수가 px 로 짜여 있어 글자만 키우면 칸이 따라오지 않는다.
+   화면 전체를 함께 키워 글자·여백·누를 자리가 같은 비율로 커지게 한다. */
+body { zoom: var(--ui-zoom, 1); }
 
 body {
   background-image:
@@ -48,6 +53,8 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* 터치 시 브라우저가 얹는 회색 사각형을 없앤다 — 금색 톤과 어울리지 않는다 */
+button, a { -webkit-tap-highlight-color: transparent; }
 button { font-family: inherit; cursor: pointer; }
 img, video, canvas { display: block; max-width: 100%; }
 
@@ -649,10 +656,19 @@ img, video, canvas { display: block; max-width: 100%; }
   animation: slidein 0.32s cubic-bezier(0.16, 0.8, 0.24, 1);
 }
 @keyframes slidein { from { transform: translateX(48px); opacity: 0; } }
+.drawer-close {
+  position: absolute; top: 16px; right: 16px; z-index: 1;
+  width: 40px; height: 40px; display: grid; place-items: center;
+  background: rgba(0, 0, 0, 0.3); border: 1px solid var(--line);
+  border-radius: 50%; color: var(--ink-dim);
+  transition: color 0.2s, border-color 0.2s;
+}
+.drawer-close:hover { color: var(--gold); border-color: var(--gold); }
 .drawer h3 {
   font-family: var(--font-d); font-size: 13px; font-weight: 600; margin-bottom: 20px;
   letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold);
   display: flex; align-items: center; gap: 14px;
+  padding-right: 44px; /* 닫기 버튼 자리 */
 }
 .drawer h3::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
 .hist-item {
@@ -761,6 +777,76 @@ img, video, canvas { display: block; max-width: 100%; }
 .acct-list em.soon { color: var(--gold-lo); }
 
 .drawer-link.as-btn { width: 100%; background: none; border: none; text-align: left; }
+
+/* 진행 중인 준비 — 자리를 뜨는 시간이라 내 정보에서 확인할 수 있어야 한다 */
+.acct-timer {
+  display: flex; align-items: center; gap: 12px;
+  border: 1px solid var(--line); background: rgba(0, 0, 0, 0.22);
+  padding: 12px 14px; margin-bottom: 10px;
+}
+.acct-timer-stage { flex: none; width: 34px; height: 42px; }
+.acct-timer-body { flex: 1; min-width: 0; }
+.acct-timer-body b {
+  display: block; font-size: 13px; color: var(--ink); font-family: var(--font-s);
+  font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.acct-timer-body span { display: block; font-size: 11px; color: var(--gold); margin: 2px 0 6px; }
+.acct-timer-body i {
+  display: block; height: 2px; background: linear-gradient(90deg, var(--gold-lo), var(--gold));
+  transition: width 1s linear;
+}
+.acct-timer-clock {
+  flex: none; font-family: var(--font-d); font-size: 19px; color: var(--gold-hi);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 글자 크기 고르기 */
+.scale-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.scale-btn {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  padding: 12px 4px; background: rgba(0, 0, 0, 0.24);
+  border: 1px solid var(--line-soft); color: var(--ink-dim);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.scale-btn b { font-family: var(--font-s); font-weight: 500; line-height: 1; color: var(--ink); }
+.scale-btn span { font-size: 9.5px; letter-spacing: 0.04em; }
+.scale-btn:hover { border-color: var(--gold); }
+.scale-btn.on {
+  border-color: var(--gold); background: var(--gold-soft); color: var(--gold);
+}
+.scale-btn.on b { color: var(--gold-hi); }
+
+/* 진행 중인 준비 — 떠 있는 버튼 */
+.timer-bubble {
+  position: fixed; right: 16px; z-index: 30;
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  display: flex; align-items: center; gap: 10px; padding: 9px 15px 9px 10px;
+  border-radius: 999px; border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(28, 22, 15, 0.96), rgba(15, 12, 9, 0.96));
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px -12px rgba(0, 0, 0, 0.9);
+  color: var(--ink);
+  animation: rise 0.4s cubic-bezier(0.16, 0.8, 0.24, 1);
+}
+.timer-bubble:hover { border-color: var(--gold); }
+.tb-stage { flex: none; width: 26px; height: 32px; display: block; }
+.tb-text { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; }
+.tb-text b {
+  font-family: var(--font-d); font-size: 16px; font-weight: 500; color: var(--gold-hi);
+  line-height: 1; font-variant-numeric: tabular-nums;
+}
+.tb-text span { font-size: 9.5px; color: var(--ink-dim); letter-spacing: 0.06em; }
+
+/* 헤더 아이콘 위의 알림 점 — 타이머가 도는 중임을 알린다 */
+.icon-btn.has-dot { position: relative; }
+.icon-btn.has-dot::after {
+  content: ""; position: absolute; top: 6px; right: 6px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--gold); box-shadow: 0 0 0 2px var(--bg);
+  animation: dot-pulse 2s ease-in-out infinite;
+}
+@keyframes dot-pulse { 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) { .icon-btn.has-dot::after { animation: none; } }
 
 /* ── 발견 · 추천 ── */
 .disc-search {
@@ -1079,6 +1165,10 @@ img, video, canvas { display: block; max-width: 100%; }
   animation: rise 0.3s;
 }
 .to-top:active, .to-top:hover { border-color: var(--gold); background: var(--bg-3); }
+/* 타이머 버튼과 같은 구석을 쓰므로, 타이머가 도는 동안에는 위로 비켜 준다 */
+body:has(.timer-bubble) .to-top {
+  bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+}
 
 /* 토스트 */
 .toast {
@@ -1378,8 +1468,30 @@ img, video, canvas { display: block; max-width: 100%; }
     min-height: 44px;
   }
   .card:hover { border-color: var(--line-soft); }
+
+  /* 터치에서는 hover 상태가 손을 뗀 뒤에도 남아 "눌린 채"로 보인다.
+     선택 상태(.on)까지 지우면 안 되므로 그때는 건드리지 않는다. */
+  .icon-btn:hover:not(.on) {
+    border-color: var(--line); background: transparent; transform: none;
+  }
+  .hist-item:hover, .drawer-link:hover, .filter-chip:hover:not(.on),
+  .target-hint:hover, .chip:hover, .btn:hover {
+    border-color: var(--line-soft); background: transparent;
+  }
+  .btn:hover { color: var(--ink); }
+  .btn.primary:hover { color: #211705; }
+  .disc-row:hover .disc-name { color: var(--ink); }
+  .filter-chip:hover:not(.on) { color: var(--ink-dim); }
+  .target-hint:hover { color: var(--ink-dim); }
+  .target-hint:hover em { color: var(--ink); }
+  .share-x:hover { color: var(--ink-dim); }
+  .vintage-row:hover .vintage-bar i { background: var(--gold-lo); }
+  .shop-more:hover { color: var(--gold); }
+  .cellar-btn:hover:not(:disabled) { background: var(--bg-2); }
+
   .btn:active, .cellar-btn:active, .timer-btn:active, .shop-item:active,
-  .pair-buy:active, .hist-item:active, .cellar-main:active {
+  .pair-buy:active, .hist-item:active, .cellar-main:active, .icon-btn:active,
+  .filter-chip:active, .disc-row:active {
     background: var(--gold-soft);
   }
 }

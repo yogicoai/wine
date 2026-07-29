@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { catOf } from "@/lib/cats";
 import { servingPlan } from "@/lib/serving";
 import Flag from "./Flag";
+import useActiveTimer from "./useActiveTimer";
+import { startTimer, clearTimer, progressOf, formatRemain } from "@/lib/timer";
 import Radar from "./Radar";
 import CatIcon from "./CatIcon";
 import CellarActions from "./CellarActions";
@@ -309,35 +311,32 @@ function SimilarCard({ names, category, currentName, onExplore }) {
 // 디캔팅·칠링 타이머 — 애호가용 실사용 기능
 function ServingTimer({ result }) {
   const [picked, setPicked] = useState(null); // 고른 항목 (아직 시작 전)
-  const [run, setRun] = useState(null); // { preset, total, left }
+  // 진행 중인 타이머는 저장소에 있다 — 화면을 옮기거나 앱을 닫아도 이어진다.
+  // 알림은 앱 최상단이 책임지므로 여기서는 보기만 한다(owner 아님).
+  const { timer, remain } = useActiveTimer();
 
   // 준비 시간은 술마다 다르다. 이 술에 필요한 것만 만든다.
   const plan = servingPlan(result);
 
-  useEffect(() => {
-    if (!run) return;
-    if (run.left <= 0) {
-      if (navigator.vibrate) navigator.vibrate([120, 60, 120]);
-      if (typeof Notification !== "undefined" && Notification.permission === "granted") {
-        new Notification("보틀 렌즈", { body: `${run.preset.label} 완료 — ${run.preset.done}` });
-      }
-      setRun(null);
-      return;
-    }
-    const t = setTimeout(() => setRun((r) => (r ? { ...r, left: r.left - 1 } : null)), 1000);
-    return () => clearTimeout(t);
-  }, [run]);
+  // 다른 술의 타이머가 돌고 있으면 이 화면에서는 진행 상황을 보여 주지 않는다
+  const mine = timer && timer.name === result.name;
 
   function start() {
     if (!picked) return;
     if (typeof Notification !== "undefined" && Notification.permission === "default") {
       Notification.requestPermission();
     }
-    const total = picked.min * 60;
-    setRun({ preset: picked, total, left: total });
+    startTimer({
+      name: result.name,
+      kind: picked.kind,
+      label: picked.label,
+      min: picked.min,
+      doneText: picked.done,
+    });
+    setPicked(null);
   }
 
-  if (!run) {
+  if (!mine) {
     if (!plan.presets.length) return null;
 
     return (
@@ -370,30 +369,36 @@ function ServingTimer({ result }) {
           {picked ? `${picked.label} ${picked.min}분 시작` : "시간을 먼저 선택하세요"}
         </button>
 
+        {/* 다른 술의 준비가 돌고 있으면 알려 준다 — 시작하면 그쪽이 지워지기 때문이다 */}
+        {timer && (
+          <div className="avoid-line">
+            지금 {timer.name} 의 {timer.label}이(가) 진행 중입니다. 새로 시작하면 그 타이머는 사라집니다.
+          </div>
+        )}
         {plan.avoid && <div className="avoid-line">✕ {plan.avoid}</div>}
         {plan.note && <div className="shop-note">{plan.note}</div>}
-        <div className="shop-note">시작하면 진행 상황이 눈에 보이고, 끝나면 알림과 진동으로 알려드립니다.</div>
+        <div className="shop-note">
+          시작하면 다른 화면으로 옮겨도 이어지고, 끝나면 알림과 진동으로 알려드립니다.
+        </div>
       </div>
     );
   }
 
-  const progress = (run.total - run.left) / run.total;
-  const mm = String(Math.floor(run.left / 60)).padStart(2, "0");
-  const ss = String(run.left % 60).padStart(2, "0");
+  const progress = progressOf(timer);
 
   return (
     <div className="card">
       <div className="card-title">타이머</div>
       <div className="timer-run">
         <div className="timer-stage">
-          <TimerVisual kind={run.preset.kind} progress={progress} />
+          <TimerVisual kind={timer.kind} progress={progress} />
         </div>
-        <div className="timer-label">{run.preset.label} 진행 중</div>
-        <div className="timer-clock">{mm}:{ss}</div>
+        <div className="timer-label">{timer.label} 진행 중</div>
+        <div className="timer-clock">{formatRemain(remain)}</div>
         <div className="timer-bar">
           <i style={{ width: `${progress * 100}%` }} />
         </div>
-        <button className="timer-cancel" onClick={() => setRun(null)}>중단</button>
+        <button className="timer-cancel" onClick={clearTimer}>중단</button>
       </div>
     </div>
   );

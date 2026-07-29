@@ -9,6 +9,10 @@ export default function HistoryDrawer({ open, sessions, noDb, onClose, onOpenSes
     <>
       <div className="drawer-dim" onClick={onClose} />
       <aside className="drawer">
+        {/* 배경을 눌러도 닫히지만, 한 손으로 쓰는 모바일에서는 눌러야 할 곳이 보여야 한다 */}
+        <button className="drawer-close" onClick={onClose} aria-label="닫기">
+          <Icon name="close" size={16} />
+        </button>
         <h3>스캔 히스토리</h3>
         {noDb && (
           <p className="drawer-note">

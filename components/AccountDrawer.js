@@ -1,6 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Icon from "./Icon";
+import TimerVisual from "./TimerVisual";
+import FontScale from "./FontScale";
+import useActiveTimer from "./useActiveTimer";
+import { clearTimer, progressOf, formatRemain } from "@/lib/timer";
 
 // 내 정보 — 회원가입이 붙기 전의 레이아웃 초안.
 //
@@ -10,6 +14,8 @@ import Icon from "./Icon";
 // 이렇게 해 두면 인증만 붙이면 화면은 그대로 살아난다.
 export default function AccountDrawer({ open, onClose, onOpenCellar, onToast }) {
   const [stats, setStats] = useState(null);
+  // 알림은 앱 최상단이 책임진다 — 여기서는 보기만 한다
+  const { timer, remain } = useActiveTimer();
 
   useEffect(() => {
     if (!open) return;
@@ -46,6 +52,10 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onToast }) 
     <>
       <div className="drawer-dim" onClick={onClose} />
       <aside className="drawer">
+        {/* 배경을 눌러도 닫히지만, 한 손으로 쓰는 모바일에서는 눌러야 할 곳이 보여야 한다 */}
+        <button className="drawer-close" onClick={onClose} aria-label="닫기">
+          <Icon name="close" size={16} />
+        </button>
         <h3>내 정보</h3>
 
         {/* 로그인 전 — 자리만 잡아 둔다 */}
@@ -68,6 +78,27 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onToast }) 
           정식 서비스에서는 본인인증을 연동할 예정입니다.
         </p>
 
+        {/* 진행 중인 준비 — 자리를 뜨는 시간이라 여기서 확인할 수 있어야 한다 */}
+        {timer && (
+          <>
+            <div className="acct-section">진행 중</div>
+            <div className="acct-timer">
+              <div className="acct-timer-stage">
+                <TimerVisual kind={timer.kind} progress={progressOf(timer)} mini />
+              </div>
+              <div className="acct-timer-body">
+                <b>{timer.name}</b>
+                <span>{timer.label} 진행 중</span>
+                <i style={{ width: `${progressOf(timer) * 100}%` }} />
+              </div>
+              <div className="acct-timer-clock">{formatRemain(remain)}</div>
+            </div>
+            <button className="drawer-link as-btn" onClick={clearTimer}>
+              준비 중단 <em>×</em>
+            </button>
+          </>
+        )}
+
         {/* 활동 — 지금도 보여 줄 수 있는 값 */}
         <div className="acct-section">활동</div>
         <div className="acct-stats">
@@ -89,6 +120,10 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onToast }) 
             </span>
           </div>
         </div>
+
+        {/* 화면 설정 */}
+        <div className="acct-section">화면</div>
+        <FontScale />
 
         {/* 이후 로그인이 붙으면 살아나는 자리 */}
         <div className="acct-section">계정</div>
