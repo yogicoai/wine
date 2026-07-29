@@ -1,0 +1,778 @@
+[
+  {
+    "category": "wine",
+    "name": "샤또 베이슈벨",
+    "searchKeyword": "샤또 베이슈벨",
+    "producer": "Château Beychevelle",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "보르도 · 생쥘리앙",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#571925",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "국내에서 가장 인기 있는 보르도 4등급 중 하나입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 76
+      },
+      {
+        "axis": "당도",
+        "value": 15
+      },
+      {
+        "axis": "산도",
+        "value": 62
+      },
+      {
+        "axis": "탄닌",
+        "value": 72
+      }
+    ],
+    "tastingNotes": "붉은 자두와 삼나무, 제비꽃과 담뱃잎 향이 곱게 이어집니다. 생쥘리앙답게 힘과 우아함이 균형을 이뤄, 보르도 그랑 크뤼 중 국내에서 가장 사랑받는 이름입니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "카베르네 소비뇽, 메를로"
+      },
+      {
+        "label": "등급",
+        "value": "1855 그랑 크뤼 클라세 4등급"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 18개월"
+      }
+    ],
+    "drinkFrom": "2030",
+    "drinkPeak": "2038",
+    "drinkUntil": "2052",
+    "history": [
+      {
+        "year": "1587",
+        "event": "에페르농 공작이 소유"
+      },
+      {
+        "year": "1757",
+        "event": "지금의 저택 완공"
+      }
+    ],
+    "story": "라벨의 돛을 내린 배는 '돛을 내려라(baisse-voile)'라는 말에서 왔습니다. 지나는 배들이 공작에게 예를 표하던 관습을 그린 것입니다.",
+    "winery": "지롱드 강가의 아름다운 저택으로 '베르사유'라 불립니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "등심 스테이크",
+        "why": "탄닌이 육즙을 정리합니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🦆",
+        "food": "오리 요리",
+        "why": "과실이 기름진 살을 받칩니다",
+        "shopKeyword": "오리고기"
+      },
+      {
+        "emoji": "🧀",
+        "food": "하드치즈",
+        "why": "짠맛이 과실을 밀어 올립니다",
+        "shopKeyword": "그뤼에르 치즈"
+      }
+    ],
+    "pairingTip": "선물용으로 국내에서 가장 많이 나가는 보르도입니다.",
+    "avoidPairing": "매운 양념은 탄닌을 거칠게 만듭니다.",
+    "similar": [
+      "샤또 딸보",
+      "샤또 그뤼오 라로즈",
+      "샤또 레오빌 바르통"
+    ],
+    "trivia": "라벨의 배 그림 덕분에 '용선'이라는 별명으로 불리며 아시아에서 특히 인기가 높습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "두 시간쯤 열어 두세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": [
+      "선물할 보르도를 고른다면 라벨까지 이야기가 되는 쪽이 좋습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 칼롱 세귀르",
+    "searchKeyword": "칼롱 세귀르",
+    "producer": "Château Calon Ségur",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "보르도 · 생테스테프",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#551824",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "하트 라벨로 유명한 1855 3등급입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 78
+      },
+      {
+        "axis": "당도",
+        "value": 14
+      },
+      {
+        "axis": "산도",
+        "value": 64
+      },
+      {
+        "axis": "탄닌",
+        "value": 76
+      }
+    ],
+    "tastingNotes": "블랙커런트와 흑연, 담뱃잎과 삼나무 향이 촘촘하게 짜입니다. 생테스테프답게 흙내와 단단함이 분명해, 어릴 때는 닫혀 있다가 시간이 지나며 풀립니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "카베르네 소비뇽 중심"
+      },
+      {
+        "label": "등급",
+        "value": "1855 그랑 크뤼 클라세 3등급"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 20개월"
+      }
+    ],
+    "drinkFrom": "2032",
+    "drinkPeak": "2042",
+    "drinkUntil": "2058",
+    "history": [
+      {
+        "year": "1700년대",
+        "event": "세귀르 후작이 라피트·라투르와 함께 소유"
+      },
+      {
+        "year": "현재",
+        "event": "라벨의 하트가 상징이 됨"
+      }
+    ],
+    "story": "라피트와 라투르를 함께 가졌던 후작이 '내 마음은 칼롱에 있다'고 말했다는 이야기에서 하트 라벨이 나왔습니다.",
+    "winery": "메독 최북단 생테스테프에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "숯불 소고기",
+        "why": "단단한 탄닌이 육향을 받습니다",
+        "shopKeyword": "한우 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양갈비",
+        "why": "허브 향이 담뱃잎과 어울립니다",
+        "shopKeyword": "양갈비"
+      },
+      {
+        "emoji": "🍄",
+        "food": "트러플 요리",
+        "why": "흙내가 흑연 향과 이어집니다",
+        "shopKeyword": "트러플 오일"
+      }
+    ],
+    "pairingTip": "밸런타인데이 선물로 자주 나갑니다.",
+    "avoidPairing": "매운 음식과는 맞지 않습니다.",
+    "similar": [
+      "샤또 몽로즈",
+      "샤또 코스 데스투르넬",
+      "샤또 레오빌 바르통"
+    ],
+    "trivia": "생테스테프는 메독에서 점토가 가장 많아 술이 단단하고 오래 갑니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "25년 이상 갑니다.",
+    "tips": [
+      "하트 라벨 덕분에 기념일 선물로 가장 많이 찾는 보르도입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "안티노리 티냐넬로",
+    "searchKeyword": "티냐넬로",
+    "producer": "Antinori",
+    "type": "레드 와인 · 산지오베제 블렌드",
+    "vintage": null,
+    "region": "토스카나",
+    "country": "이탈리아",
+    "alcohol": "14%",
+    "liquidColor": "#5C1B27",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "슈퍼 투스칸의 원형으로 자료가 매우 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 80
+      },
+      {
+        "axis": "당도",
+        "value": 15
+      },
+      {
+        "axis": "산도",
+        "value": 74
+      },
+      {
+        "axis": "탄닌",
+        "value": 76
+      }
+    ],
+    "tastingNotes": "검붉은 체리와 담뱃잎, 감초와 삼나무 향이 겹칩니다. 산지오베제에 카베르네를 섞은 첫 시도가 이 술로, 이탈리아 와인의 방향을 바꿔 놓았습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "산지오베제 중심, 카베르네 소비뇽·프랑"
+      },
+      {
+        "label": "등급",
+        "value": "토스카나 IGT"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 14개월"
+      }
+    ],
+    "drinkFrom": "2029",
+    "drinkPeak": "2037",
+    "drinkUntil": "2050",
+    "history": [
+      {
+        "year": "1971",
+        "event": "첫 빈티지 — 등급을 포기하고 만듦"
+      },
+      {
+        "year": "현재",
+        "event": "슈퍼 투스칸이라는 말 자체를 낳은 술"
+      }
+    ],
+    "story": "당시 규정으로는 산지오베제에 흰 포도를 섞어야 했습니다. 이를 거부하고 카베르네를 섞자 최하 등급으로 떨어졌지만, 값과 평가는 최상급이 됐습니다.",
+    "winery": "26대째 가족이 운영하는 토스카나 명문입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "티본 스테이크",
+        "why": "토스카나의 정석 조합입니다",
+        "shopKeyword": "티본 스테이크"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양갈비",
+        "why": "허브 향이 담뱃잎과 어울립니다",
+        "shopKeyword": "양갈비"
+      },
+      {
+        "emoji": "🍄",
+        "food": "트러플 요리",
+        "why": "흙내가 겹칩니다",
+        "shopKeyword": "트러플 오일"
+      }
+    ],
+    "pairingTip": "숙성 후에 열어야 진가가 드러납니다.",
+    "avoidPairing": "가벼운 요리와는 균형이 맞지 않습니다.",
+    "similar": [
+      "안티노리 솔라이아",
+      "사시카이아",
+      "오르넬라이아"
+    ],
+    "trivia": "규정을 어겨 등급이 떨어졌는데 값은 최상급이 된 사건이, 이탈리아 와인법을 바꾸는 계기가 됐습니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 열어 두세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": [
+      "'슈퍼 투스칸'이 무엇인지 한 병으로 알고 싶다면 이 술입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "테누타 산 귀도 귀달베르토",
+    "searchKeyword": "귀달베르토",
+    "producer": "Tenuta San Guido",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "토스카나 · 볼게리",
+    "country": "이탈리아",
+    "alcohol": "14%",
+    "liquidColor": "#571A26",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "사시카이아를 만드는 곳의 세컨드 와인입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 76
+      },
+      {
+        "axis": "당도",
+        "value": 16
+      },
+      {
+        "axis": "산도",
+        "value": 68
+      },
+      {
+        "axis": "탄닌",
+        "value": 70
+      }
+    ],
+    "tastingNotes": "검붉은 과실과 삼나무, 지중해 허브 향이 이어집니다. 사시카이아보다 메를로 비중이 높아 결이 부드럽고, 훨씬 일찍 열립니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "카베르네 소비뇽, 메를로"
+      },
+      {
+        "label": "등급",
+        "value": "토스카나 IGT"
+      },
+      {
+        "label": "숙성",
+        "value": "오크 약 15개월"
+      }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2033",
+    "drinkUntil": "2044",
+    "history": [
+      {
+        "year": "2000",
+        "event": "첫 빈티지 출시"
+      },
+      {
+        "year": "현재",
+        "event": "사시카이아 입문용으로 자리 잡음"
+      }
+    ],
+    "story": "'귀달베르토'는 창업자 가문의 선조 이름입니다. 사시카이아의 격을 부담 없는 값에 맛보게 하려고 만들었습니다.",
+    "winery": "볼게리 해안의 사이프러스 가로수길로 유명합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "등심 스테이크",
+        "why": "탄닌이 육즙을 정리합니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🍝",
+        "food": "고기 라구 파스타",
+        "why": "산도가 기름을 정리합니다",
+        "shopKeyword": "소고기 다짐육"
+      },
+      {
+        "emoji": "🧀",
+        "food": "페코리노",
+        "why": "짠맛이 탄닌을 눕힙니다",
+        "shopKeyword": "페코리노 치즈"
+      }
+    ],
+    "pairingTip": "사시카이아가 부담될 때 좋은 대안입니다.",
+    "avoidPairing": "담백한 생선은 눌립니다.",
+    "similar": [
+      "사시카이아",
+      "오르넬라이아",
+      "마세토"
+    ],
+    "trivia": "볼게리로 이어지는 5km 사이프러스 가로수길은 이탈리아에서 가장 유명한 와인 길입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한 시간 열어 두면 좋습니다.",
+    "aging": "12년 안팎이 좋습니다.",
+    "tips": [
+      "최상급의 세컨드 와인은 값 대비 만족도가 높은 편입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "마르께스 데 무리에타 리오하 리제르바",
+    "searchKeyword": "무리에타 리오하",
+    "producer": "Marqués de Murrieta",
+    "type": "레드 와인 · 템프라니요",
+    "vintage": null,
+    "region": "리오하",
+    "country": "스페인",
+    "alcohol": "14%",
+    "liquidColor": "#6C1F2B",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "리오하 최초의 보데가로 자료가 충분합니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 70
+      },
+      {
+        "axis": "당도",
+        "value": 16
+      },
+      {
+        "axis": "산도",
+        "value": 66
+      },
+      {
+        "axis": "탄닌",
+        "value": 64
+      }
+    ],
+    "tastingNotes": "붉은 자두와 바닐라, 담뱃잎과 가죽 향이 이어집니다. 1852년에 시작한 리오하 최초의 보데가로, 전통과 현대의 중간쯤에 서 있습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "템프라니요 중심"
+      },
+      {
+        "label": "등급",
+        "value": "리오하 DOCa 리제르바"
+      },
+      {
+        "label": "숙성",
+        "value": "오크 약 24개월 + 병 숙성"
+      }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2033",
+    "drinkUntil": "2045",
+    "history": [
+      {
+        "year": "1852",
+        "event": "리오하 최초의 보데가로 설립"
+      },
+      {
+        "year": "1983",
+        "event": "세브레로스 백작 가문이 인수"
+      }
+    ],
+    "story": "보르도에서 배운 방식을 리오하에 처음 들여온 곳입니다. 지금 리오하의 모습이 여기서 시작됐습니다.",
+    "winery": "로그로뇨 근교 이가이 성에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "양갈비",
+        "why": "달큰한 오크 향이 허브와 어울립니다",
+        "shopKeyword": "양갈비"
+      },
+      {
+        "emoji": "🥩",
+        "food": "숯불 소고기",
+        "why": "부드러운 탄닌이 육향을 받습니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🧀",
+        "food": "만체고 치즈",
+        "why": "같은 지방의 짝입니다",
+        "shopKeyword": "만체고 치즈"
+      }
+    ],
+    "pairingTip": "국내 고기 구이 전반에 잘 맞습니다.",
+    "avoidPairing": "해산물과는 어울리지 않습니다.",
+    "similar": [
+      "라 리오하 알타 비냐 아르단사 리제르바",
+      "쿠네 리오하 리제르바",
+      "무가 리오하 리제르바"
+    ],
+    "trivia": "리오하에서 가장 오래된 보데가라는 자부심으로, 지금도 병에 창립 연도를 적습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한 시간 열어 두면 좋습니다.",
+    "aging": "15년 이상 갑니다.",
+    "tips": [
+      "리오하는 집마다 결이 달라 두세 곳을 비교해 보면 재미있습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "토레스 마스 라 플라나",
+    "searchKeyword": "마스 라 플라나",
+    "producer": "Familia Torres",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "페네데스",
+    "country": "스페인",
+    "alcohol": "14%",
+    "liquidColor": "#541824",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "1979년 파리 시음회 우승 와인입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 80
+      },
+      {
+        "axis": "당도",
+        "value": 15
+      },
+      {
+        "axis": "산도",
+        "value": 64
+      },
+      {
+        "axis": "탄닌",
+        "value": 76
+      }
+    ],
+    "tastingNotes": "블랙커런트와 삼나무, 향신료와 흑연 향이 촘촘합니다. 1979년 파리에서 샤또 라투르를 제친 스페인 카베르네로, 스페인 와인의 위상을 바꿨습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "카베르네 소비뇽 100%"
+      },
+      {
+        "label": "밭",
+        "value": "단일 밭 마스 라 플라나"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 18개월"
+      }
+    ],
+    "drinkFrom": "2029",
+    "drinkPeak": "2036",
+    "drinkUntil": "2050",
+    "history": [
+      {
+        "year": "1970",
+        "event": "카베르네 소비뇽을 페네데스에 심음"
+      },
+      {
+        "year": "1979",
+        "event": "파리 와인 올림피아드에서 1위"
+      }
+    ],
+    "story": "1979년 파리에서 열린 시음회에서 샤또 라투르를 앞섰습니다. 스페인 와인이 세계에서 인정받은 첫 사건입니다.",
+    "winery": "바르셀로나 근교 페네데스에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "등심 스테이크",
+        "why": "단단한 탄닌이 육향을 받습니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양갈비",
+        "why": "허브 향이 삼나무와 어울립니다",
+        "shopKeyword": "양갈비"
+      },
+      {
+        "emoji": "🧀",
+        "food": "숙성 치즈",
+        "why": "짠맛이 탄닌을 눕힙니다",
+        "shopKeyword": "만체고 치즈"
+      }
+    ],
+    "pairingTip": "숙성 후에 열어야 진가가 드러납니다.",
+    "avoidPairing": "담백한 요리는 눌립니다.",
+    "similar": [
+      "알바로 팔라시오스 레르미타",
+      "베가 시실리아 우니코",
+      "샤또 라 라귄"
+    ],
+    "trivia": "1976년 파리의 심판이 캘리포니아였다면, 1979년의 주인공은 스페인이었습니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 열어 두세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": [
+      "스페인도 카베르네로 최상급을 만듭니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "펠튼 로드 피노 누아 블록 파이브",
+    "searchKeyword": "펠튼 로드 피노 누아",
+    "producer": "Felton Road",
+    "type": "레드 와인 · 피노 누아",
+    "vintage": null,
+    "region": "센트럴 오타고",
+    "country": "뉴질랜드",
+    "alcohol": "13.5%",
+    "liquidColor": "#8A3040",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "뉴질랜드 최고 피노 누아로 꼽힙니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 62
+      },
+      {
+        "axis": "당도",
+        "value": 15
+      },
+      {
+        "axis": "산도",
+        "value": 76
+      },
+      {
+        "axis": "탄닌",
+        "value": 56
+      }
+    ],
+    "tastingNotes": "검붉은 체리와 장미, 향신료와 흙 향이 촘촘하게 이어집니다. 센트럴 오타고는 세계에서 가장 남쪽에 있는 와인 산지로, 밤낮 온도 차가 커 향이 유난히 또렷합니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아 100%"
+      },
+      {
+        "label": "밭",
+        "value": "단일 구획 블록 파이브"
+      },
+      {
+        "label": "재배",
+        "value": "비오디나미"
+      }
+    ],
+    "drinkFrom": "2028",
+    "drinkPeak": "2034",
+    "drinkUntil": "2044",
+    "history": [
+      {
+        "year": "1991",
+        "event": "센트럴 오타고 밤부르나에 밭을 마련"
+      },
+      {
+        "year": "현재",
+        "event": "뉴질랜드 피노의 기준으로 평가"
+      }
+    ],
+    "story": "센트럴 오타고는 남위 45도, 세계 최남단 와인 산지입니다. 여름 낮이 길고 밤이 서늘해 피노 누아에 맞습니다.",
+    "winery": "뉴질랜드 남섬 산악 지대에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦆",
+        "food": "오리 요리",
+        "why": "탄닌이 붉은 살을 받습니다",
+        "shopKeyword": "오리고기"
+      },
+      {
+        "emoji": "🐟",
+        "food": "연어",
+        "why": "붉은 과실이 기름진 살을 받칩니다",
+        "shopKeyword": "생연어"
+      },
+      {
+        "emoji": "🍄",
+        "food": "버섯 요리",
+        "why": "흙내끼리 이어집니다",
+        "shopKeyword": "표고버섯"
+      }
+    ],
+    "pairingTip": "살짝 서늘하게 드시면 향이 살아납니다.",
+    "avoidPairing": "진한 소스는 섬세함을 덮습니다.",
+    "similar": [
+      "도멘 드루앙 오리건 피노 누아",
+      "본 클라이맷 피노 누아",
+      "콩트 조르주 드 보귀에 뮈지니"
+    ],
+    "trivia": "센트럴 오타고는 원래 금광 지역이었습니다. 포도밭이 들어선 것은 1980년대입니다.",
+    "servingTemp": "14~16℃",
+    "servingNote": "살짝 서늘하게, 한 시간 열어 두세요.",
+    "aging": "15년 안팎이 좋습니다.",
+    "tips": [
+      "부르고뉴 밖에서 피노 누아를 찾는다면 센트럴 오타고를 보세요"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "세냐",
+    "searchKeyword": "세냐 칠레",
+    "producer": "Viñedo Chadwick / Seña",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "아콩카구아 밸리",
+    "country": "칠레",
+    "alcohol": "14%",
+    "liquidColor": "#511723",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "칠레 아이콘 와인으로 자료가 충분합니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 82
+      },
+      {
+        "axis": "당도",
+        "value": 16
+      },
+      {
+        "axis": "산도",
+        "value": 66
+      },
+      {
+        "axis": "탄닌",
+        "value": 78
+      }
+    ],
+    "tastingNotes": "검은 과실과 제비꽃, 흑연과 말린 허브 향이 이어집니다. 알마비바보다 산도가 살아 있어 결이 곧고, 유기농·비오디나미로 기른 밭의 성격이 분명합니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "카베르네 소비뇽 중심, 카르메네르·말벡"
+      },
+      {
+        "label": "재배",
+        "value": "비오디나미"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 22개월"
+      }
+    ],
+    "drinkFrom": "2030",
+    "drinkPeak": "2038",
+    "drinkUntil": "2052",
+    "history": [
+      {
+        "year": "1995",
+        "event": "에두아르도 채드윅과 로버트 몬다비가 합작"
+      },
+      {
+        "year": "2004",
+        "event": "베를린 시음회에서 보르도 특등급을 제침"
+      }
+    ],
+    "story": "2004년 베를린에서 라벨을 가리고 시음했을 때 라피트와 마고를 앞섰습니다. 이 사건이 칠레 와인의 값을 바꿨습니다.",
+    "winery": "아콩카구아 밸리 언덕에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "등심 스테이크",
+        "why": "단단한 탄닌이 육향을 받습니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양고기 로스트",
+        "why": "허브 향이 어울립니다",
+        "shopKeyword": "양고기"
+      },
+      {
+        "emoji": "🍄",
+        "food": "버섯 요리",
+        "why": "흙내가 흑연 향과 이어집니다",
+        "shopKeyword": "표고버섯"
+      }
+    ],
+    "pairingTip": "특별한 자리에 여는 술입니다.",
+    "avoidPairing": "담백한 요리는 완전히 눌립니다.",
+    "similar": [
+      "알마비바",
+      "에라주리즈 맥스 리제르바 카베르네 소비뇽",
+      "몬테스 알파 엠"
+    ],
+    "trivia": "'세냐'는 스페인어로 '신호'라는 뜻입니다. 칠레 와인의 새 시대를 알린다는 뜻을 담았습니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": [
+      "베를린 시음회 이야기는 칠레 와인을 설명할 때 빠지지 않습니다"
+    ]
+  }
+]
