@@ -44,7 +44,7 @@ export async function GET(request) {
     const saved = await db.collection("preferences").findOne({ owner });
     const answers = saved?.answers ? profileFromAnswers(saved.answers) : null;
 
-    const result = await recommendByTaste({ answers, limit, band });
+    const result = await recommendByTaste({ answers, limit, band, category });
     if (!result) {
       // 취향을 알 방법이 아직 없다 — 화면에서 문답으로 안내한다
       return NextResponse.json({ mode, items: [], needsProfile: true });
