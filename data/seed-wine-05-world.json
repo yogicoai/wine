@@ -1,0 +1,493 @@
+[
+  {
+    "category": "wine",
+    "name": "안티노리 키안티 클라시코 리제르바",
+    "searchKeyword": "안티노리 키안티 클라시코 리제르바",
+    "producer": "Antinori",
+    "type": "레드 와인 · 산지오베제",
+    "vintage": null,
+    "region": "토스카나 · 키안티 클라시코",
+    "country": "이탈리아",
+    "alcohol": "13.5%",
+    "liquidColor": "#6E1F2B",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "이탈리아 최대 명문 와이너리의 대표 제품으로 유통이 활발합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 68 },
+      { "axis": "당도", "value": 14 },
+      { "axis": "산도", "value": 74 },
+      { "axis": "탄닌", "value": 64 }
+    ],
+    "tastingNotes": "신 체리와 말린 허브, 가죽 향이 이어집니다. 산도가 높아 입안이 개운해지는데, 그래서 음식과 함께일 때 가장 좋습니다.",
+    "specs": [
+      { "label": "품종", "value": "산지오베제 중심" },
+      { "label": "등급", "value": "키안티 클라시코 DOCG 리제르바" },
+      { "label": "숙성", "value": "오크 24개월 이상" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2032",
+    "drinkUntil": "2042",
+    "history": [
+      { "year": "1385", "event": "안티노리 가문이 와인 조합에 가입" },
+      { "year": "1971", "event": "티냐넬로로 슈퍼 투스칸 시대를 염" },
+      { "year": "현재", "event": "26대째 가족 경영" }
+    ],
+    "story": "600년 넘게 같은 가문이 와인을 만들어 왔습니다. 유럽에서 가장 오래된 가족 기업 중 하나입니다.",
+    "winery": "키안티 클라시코 중심부에 밭을 두고 있습니다.",
+    "foodPairing": [
+      { "emoji": "🍝", "food": "토마토 파스타", "why": "산도끼리 맞물려 서로를 살립니다", "shopKeyword": "토마토 파스타소스" },
+      { "emoji": "🍕", "food": "마르게리타 피자", "why": "고전적인 조합입니다", "shopKeyword": "피자" },
+      { "emoji": "🥩", "food": "비스테카", "why": "산도가 기름진 살을 정리합니다", "shopKeyword": "티본 스테이크" }
+    ],
+    "pairingTip": "토마토가 들어간 음식이라면 대부분 잘 맞습니다.",
+    "avoidPairing": "단 소스는 산도를 더 날카롭게 만듭니다.",
+    "similar": ["반피 키안티 클라시코", "프레스코발디 니포짜노 키안티 루피나 리제르바", "안티노리 페폴리 키안티 클라시코"],
+    "trivia": "'클라시코'는 원래 키안티 지역만을 가리키는 표시입니다. 그냥 키안티보다 좁고 엄격합니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "30분 열어 두면 가죽 향이 올라옵니다.",
+    "aging": "5~10년이 가장 좋습니다.",
+    "tips": ["음식 없이 마시면 시게 느껴질 수 있습니다. 식사와 함께 드세요"]
+  },
+  {
+    "category": "wine",
+    "name": "피오 체사레 바롤로",
+    "searchKeyword": "피오 체사레 바롤로",
+    "producer": "Pio Cesare",
+    "type": "레드 와인 · 네비올로",
+    "vintage": null,
+    "region": "피에몬테 · 바롤로",
+    "country": "이탈리아",
+    "alcohol": "14%",
+    "liquidColor": "#7C2B30",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "바롤로 전통파를 대표하는 생산자입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 78 },
+      { "axis": "당도", "value": 13 },
+      { "axis": "산도", "value": 76 },
+      { "axis": "탄닌", "value": 80 }
+    ],
+    "tastingNotes": "마른 장미와 타르, 감초 향이 깊습니다. 색은 옅게 벽돌빛으로 바래는데 탄닌은 여전히 단단해, 겉과 속이 다른 술입니다.",
+    "specs": [
+      { "label": "품종", "value": "네비올로 100%" },
+      { "label": "등급", "value": "바롤로 DOCG" },
+      { "label": "숙성", "value": "대형 오크통 3년 이상" }
+    ],
+    "drinkFrom": "2030",
+    "drinkPeak": "2040",
+    "drinkUntil": "2055",
+    "history": [
+      { "year": "1881", "event": "피오 체사레 창업" },
+      { "year": "현재", "event": "알바 구시가에서 5대째 양조" }
+    ],
+    "story": "바롤로는 '왕의 와인이자 와인의 왕'으로 불립니다. 젊을 때는 거칠어서, 기다릴 줄 아는 사람에게만 진가를 보입니다.",
+    "winery": "도시 한가운데 자리한 오래된 셀러에서 지금도 양조합니다.",
+    "foodPairing": [
+      { "emoji": "🍄", "food": "트러플 리조또", "why": "타르 향과 흙내가 겹칩니다", "shopKeyword": "트러플 리조또" },
+      { "emoji": "🥩", "food": "브라사토 알 바롤로", "why": "같은 와인으로 조린 고전 요리입니다", "shopKeyword": "소고기 찜갈비" },
+      { "emoji": "🧀", "food": "파르미지아노", "why": "감칠맛이 탄닌을 눕힙니다", "shopKeyword": "파르미지아노 치즈" }
+    ],
+    "pairingTip": "진한 국물 요리와도 잘 맞습니다.",
+    "avoidPairing": "가벼운 음식으로는 이 탄닌을 감당하지 못합니다.",
+    "similar": ["가야 바르바레스코", "체레토 바롤로", "비에티 바롤로 카스틸리오네"],
+    "trivia": "네비올로는 안개(nebbia)에서 온 이름입니다. 늦가을 안개 속에서 수확합니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "두 시간쯤 열어 두어야 탄닌이 풀립니다.",
+    "aging": "10년은 지나야 제 맛이 납니다.",
+    "tips": ["부르고뉴 잔처럼 볼이 넓은 잔을 쓰세요"]
+  },
+  {
+    "category": "wine",
+    "name": "알레그리니 아마로네 델라 발폴리첼라",
+    "searchKeyword": "알레그리니 아마로네",
+    "producer": "Allegrini",
+    "type": "레드 와인 · 코르비나 블렌드",
+    "vintage": null,
+    "region": "베네토 · 아마로네",
+    "country": "이탈리아",
+    "alcohol": "15.5%",
+    "liquidColor": "#5A1622",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "아마로네 대표 생산자로 국내 유통이 안정적입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 88 },
+      { "axis": "당도", "value": 34 },
+      { "axis": "산도", "value": 58 },
+      { "axis": "탄닌", "value": 70 }
+    ],
+    "tastingNotes": "말린 자두와 건포도, 초콜릿 향이 진하게 밀려옵니다. 포도를 몇 달 말려 만들어 농도가 대단하고, 도수도 15%를 넘습니다.",
+    "specs": [
+      { "label": "품종", "value": "코르비나, 론디넬라 등" },
+      { "label": "양조", "value": "아파시멘토 — 포도를 3~4개월 건조" },
+      { "label": "숙성", "value": "오크 약 2년" }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2035",
+    "drinkUntil": "2048",
+    "history": [
+      { "year": "1854", "event": "알레그리니 가문 기록 등장" },
+      { "year": "1983", "event": "라 포야 등 단일 밭 와인 출시" }
+    ],
+    "story": "포도를 말려 수분을 날리면 당분과 향이 응축됩니다. 손이 많이 가고 양이 줄어드는 만큼 값이 올라갑니다.",
+    "winery": "발폴리첼라 지역의 현대화를 이끈 집안입니다.",
+    "foodPairing": [
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "농밀한 과실이 짠맛을 받습니다", "shopKeyword": "파르미지아노 치즈" },
+      { "emoji": "🥩", "food": "소갈비찜", "why": "달큰한 양념과 건포도 향이 맞습니다", "shopKeyword": "소갈비" },
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "초콜릿 향이 이어집니다", "shopKeyword": "다크초콜릿" }
+    ],
+    "pairingTip": "식후에 그 자체로 마셔도 좋은 몇 안 되는 레드입니다.",
+    "avoidPairing": "담백한 요리는 완전히 묻힙니다.",
+    "similar": ["마시 코스테라 아마로네", "제니 발폴리첼라 리파소", "테일러스 10년 토니 포트"],
+    "trivia": "'아마로네'는 쓰다(amaro)에서 왔습니다. 단맛이 남은 레초토와 구별하려는 이름입니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "한 시간 열어 두면 알코올이 가라앉습니다.",
+    "aging": "10년 이상 갑니다.",
+    "tips": ["도수가 높으니 잔을 적게 채우세요"]
+  },
+  {
+    "category": "wine",
+    "name": "산타 마르게리타 피노 그리지오",
+    "searchKeyword": "산타 마르게리타 피노그리지오",
+    "producer": "Santa Margherita",
+    "type": "화이트 와인 · 피노 그리지오",
+    "vintage": null,
+    "region": "알토 아디제",
+    "country": "이탈리아",
+    "alcohol": "12.5%",
+    "liquidColor": "#F0EBC4",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "피노 그리지오 세계화를 이끈 제품으로 국내 유통도 많습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 44 },
+      { "axis": "당도", "value": 20 },
+      { "axis": "산도", "value": 70 },
+      { "axis": "탄닌", "value": 4 }
+    ],
+    "tastingNotes": "청사과와 배, 흰 꽃 향이 산뜻합니다. 복잡하지 않고 깔끔해서 어떤 자리에도 무난하게 맞습니다.",
+    "specs": [
+      { "label": "품종", "value": "피노 그리지오 100%" },
+      { "label": "숙성", "value": "스테인리스" },
+      { "label": "특징", "value": "껍질을 바로 분리해 맑은 색을 얻음" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2027",
+    "drinkUntil": "2029",
+    "history": [
+      { "year": "1935", "event": "설립" },
+      { "year": "1961", "event": "껍질을 즉시 분리하는 방식으로 현대적 피노 그리지오를 만듦" }
+    ],
+    "story": "피노 그리지오는 원래 회색빛 껍질이라 오래 두면 색이 물듭니다. 이 집이 껍질을 바로 걷어 내는 방식을 정착시켰습니다.",
+    "winery": "이탈리아 북부의 대형 생산자입니다.",
+    "foodPairing": [
+      { "emoji": "🥗", "food": "샐러드", "why": "가벼워서 재료를 가리지 않습니다", "shopKeyword": "샐러드 채소" },
+      { "emoji": "🍤", "food": "해산물 파스타", "why": "산도가 짠맛을 받쳐 줍니다", "shopKeyword": "해물 파스타" },
+      { "emoji": "🧀", "food": "모짜렐라", "why": "담백한 맛끼리 어울립니다", "shopKeyword": "생모짜렐라" }
+    ],
+    "pairingTip": "치킨이나 튀김과도 무난합니다.",
+    "avoidPairing": "진한 소스 요리와는 존재감이 사라집니다.",
+    "similar": ["제니 루가나", "산타 크리스티나 토스카나", "오이스터 베이 소비뇽 블랑"],
+    "trivia": "프랑스에서는 같은 품종을 '피노 그리'라고 부르며, 훨씬 진하게 만듭니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "차갑게 드세요.",
+    "aging": "2~3년 안에 마시는 것이 좋습니다.",
+    "tips": ["무슨 와인을 살지 모르겠을 때 실패가 적은 선택입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "무가 리오하 리제르바",
+    "searchKeyword": "무가 리오하 리제르바",
+    "producer": "Bodegas Muga",
+    "type": "레드 와인 · 템프라니요",
+    "vintage": null,
+    "region": "리오하",
+    "country": "스페인",
+    "alcohol": "14%",
+    "liquidColor": "#6C1F2A",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "리오하 전통파를 대표하는 보데가입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 72 },
+      { "axis": "당도", "value": 16 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "탄닌", "value": 64 }
+    ],
+    "tastingNotes": "붉은 자두와 바닐라, 담뱃잎 향이 어우러집니다. 미국 오크에서 오래 쉰 덕에 코코넛 같은 달큰한 향이 감돕니다.",
+    "specs": [
+      { "label": "품종", "value": "템프라니요 중심" },
+      { "label": "등급", "value": "리오하 DOCa 리제르바" },
+      { "label": "숙성", "value": "오크 24개월 + 병 숙성 12개월 이상" }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2032",
+    "drinkUntil": "2042",
+    "history": [
+      { "year": "1932", "event": "무가 가문 창업" },
+      { "year": "현재", "event": "자체 통 제작소를 운영하는 몇 안 되는 보데가" }
+    ],
+    "story": "통을 직접 만들고 달걀 흰자로 정제합니다. 옛 방식을 고집하는 집이지만, 그 결과가 촌스럽지 않습니다.",
+    "winery": "하로 역 근처 '바리오 데 라 에스타시온'에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "이베리코 목살", "why": "바닐라 향이 돼지고기 단맛과 맞습니다", "shopKeyword": "이베리코 목살" },
+      { "emoji": "🥩", "food": "양갈비", "why": "탄닌이 기름을 정리합니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "만체고 치즈", "why": "같은 지방의 고전 조합입니다", "shopKeyword": "만체고 치즈" }
+    ],
+    "pairingTip": "삼겹살이나 목살 구이와 아주 잘 맞습니다.",
+    "avoidPairing": "해산물과는 어울리지 않습니다.",
+    "similar": ["라 리오하 알타 비냐 아르단사", "쿠네 리오하 리제르바", "마르께스 데 리스칼 리제르바"],
+    "trivia": "리오하는 숙성 기간에 따라 크리안사·리제르바·그란 리제르바로 나뉩니다. 라벨 뒤에 표시됩니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "30분 열어 두면 좋습니다.",
+    "aging": "10년 이상 갑니다.",
+    "tips": ["가격 대비 숙성감이 뛰어난 산지입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "펜폴즈 빈 389 카베르네 시라즈",
+    "searchKeyword": "펜폴즈 빈389",
+    "producer": "Penfolds",
+    "type": "레드 와인 · 카베르네 시라즈",
+    "vintage": null,
+    "region": "남호주",
+    "country": "호주",
+    "alcohol": "14.5%",
+    "liquidColor": "#5A1725",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "호주를 대표하는 와인 중 하나로 국내에서도 널리 유통됩니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 82 },
+      { "axis": "당도", "value": 20 },
+      { "axis": "산도", "value": 56 },
+      { "axis": "탄닌", "value": 72 }
+    ],
+    "tastingNotes": "블랙베리와 민트, 모카 향이 진합니다. 카베르네의 골격에 시라즈의 살집이 붙어 크고 균형이 좋습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽, 시라즈" },
+      { "label": "숙성", "value": "아메리칸 오크 약 12개월" },
+      { "label": "별명", "value": "'베이비 그랜지'" }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2034",
+    "drinkUntil": "2045",
+    "history": [
+      { "year": "1844", "event": "펜폴즈 설립" },
+      { "year": "1960", "event": "빈 389 첫 출시" }
+    ],
+    "story": "그랜지를 담았던 통을 이어서 쓴다고 해서 '베이비 그랜지'로 불립니다. 값은 훨씬 눅지만 성격은 닮았습니다.",
+    "winery": "호주 와인의 국제적 위상을 만든 회사입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "바비큐 립", "why": "달큰한 소스와 과실이 맞습니다", "shopKeyword": "바비큐 립" },
+      { "emoji": "🍖", "food": "양념 갈비", "why": "진한 양념을 받아 낼 힘이 있습니다", "shopKeyword": "양념갈비" },
+      { "emoji": "🧀", "food": "숙성 체다", "why": "짠맛이 과실을 밀어 올립니다", "shopKeyword": "체다치즈" }
+    ],
+    "pairingTip": "한식 불고기·갈비와 특히 잘 맞습니다.",
+    "avoidPairing": "섬세한 생선 요리와는 맞지 않습니다.",
+    "similar": ["펜폴즈 빈 28 칼림나 시라즈", "울프 블라스 옐로우 라벨 카베르네 소비뇽", "케이머스 카베르네 소비뇽"],
+    "trivia": "'빈(Bin)'은 창고 구획 번호에서 온 말입니다. 숫자마다 다른 와인입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한 시간 열어 두면 민트 향이 또렷해집니다.",
+    "aging": "10년 이상 두면 훨씬 부드러워집니다.",
+    "tips": ["호주 레드 입문으로 자주 권해집니다"]
+  },
+  {
+    "category": "wine",
+    "name": "알마비바",
+    "searchKeyword": "알마비바",
+    "producer": "Almaviva",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "푸엔테 알토",
+    "country": "칠레",
+    "alcohol": "14.5%",
+    "liquidColor": "#5C1826",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "칠레 최고급 와인으로 국내 인지도가 높습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 84 },
+      { "axis": "당도", "value": 18 },
+      { "axis": "산도", "value": 58 },
+      { "axis": "탄닌", "value": 76 }
+    ],
+    "tastingNotes": "블랙커런트와 삼나무, 코코아 향이 겹겹입니다. 칠레 특유의 잘 익은 과실에 보르도식 짜임새가 얹혀 있습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심, 카르메네르 포함" },
+      { "label": "숙성", "value": "프렌치 오크 약 18개월" },
+      { "label": "특징", "value": "프랑스·칠레 합작" }
+    ],
+    "drinkFrom": "2028",
+    "drinkPeak": "2036",
+    "drinkUntil": "2050",
+    "history": [
+      { "year": "1997", "event": "무통 로칠드와 콘차 이 토로가 합작" },
+      { "year": "1998", "event": "첫 빈티지 출시" }
+    ],
+    "story": "라벨의 무늬는 칠레 원주민 마푸체족의 북에서 따왔습니다. 프랑스 자본과 칠레 땅이 만난 자리에 원주민 상징을 얹은 셈입니다.",
+    "winery": "마이포 밸리 푸엔테 알토의 밭에서만 나옵니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "숯불 스테이크", "why": "탄닌이 육향을 받습니다", "shopKeyword": "채끝 스테이크" },
+      { "emoji": "🍖", "food": "양갈비", "why": "삼나무 향과 허브가 맞습니다", "shopKeyword": "양갈비" },
+      { "emoji": "🍄", "food": "구운 버섯", "why": "흙내가 이어집니다", "shopKeyword": "표고버섯" }
+    ],
+    "pairingTip": "선물용으로 많이 나가는 와인이라 격식 있는 자리에 잘 맞습니다.",
+    "avoidPairing": "해산물과는 맞지 않습니다.",
+    "similar": ["오퍼스 원", "몬테스 알파 엠", "샤또 딸보"],
+    "trivia": "이름은 모차르트 오페라 '피가로의 결혼' 속 알마비바 백작에서 왔습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한 시간 이상 열어 두세요.",
+    "aging": "10년 이상 두면 좋아집니다.",
+    "tips": ["칠레 와인의 상한선을 보여 주는 술입니다"]
+  },
+  {
+    "category": "wine",
+    "name": "카테나 사파타 말벡 아르헨티노",
+    "searchKeyword": "카테나 사파타 말벡",
+    "producer": "Catena Zapata",
+    "type": "레드 와인 · 말벡",
+    "vintage": null,
+    "region": "멘도사",
+    "country": "아르헨티나",
+    "alcohol": "14%",
+    "liquidColor": "#4E1424",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "아르헨티나 말벡을 세계에 알린 생산자입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 82 },
+      { "axis": "당도", "value": 22 },
+      { "axis": "산도", "value": 56 },
+      { "axis": "탄닌", "value": 70 }
+    ],
+    "tastingNotes": "검붉은 자두와 제비꽃, 코코아 향이 진합니다. 고도가 높은 밭에서 온 산도가 받쳐 주어 무거운데도 답답하지 않습니다.",
+    "specs": [
+      { "label": "품종", "value": "말벡 100%" },
+      { "label": "고도", "value": "해발 900~1,500m 밭 블렌드" },
+      { "label": "숙성", "value": "프렌치 오크 약 18개월" }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2034",
+    "drinkUntil": "2045",
+    "history": [
+      { "year": "1902", "event": "니콜라스 카테나가 멘도사에 정착" },
+      { "year": "1990년대", "event": "고지대 재배로 말벡의 수준을 끌어올림" }
+    ],
+    "story": "말벡은 원래 보르도 품종이었지만 프랑스에서는 밀려났습니다. 안데스 산기슭에서 제2의 고향을 찾은 셈입니다.",
+    "winery": "마야 피라미드를 닮은 와이너리 건물로도 유명합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "아사도(숯불구이)", "why": "아르헨티나의 고전 조합입니다", "shopKeyword": "소고기 구이용" },
+      { "emoji": "🍖", "food": "양념 돼지갈비", "why": "달큰한 양념과 과실이 맞습니다", "shopKeyword": "돼지갈비" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "탄닌을 눕혀 줍니다", "shopKeyword": "고다치즈" }
+    ],
+    "pairingTip": "숯불에 구운 고기라면 대부분 잘 맞습니다.",
+    "avoidPairing": "가벼운 채소 요리와는 어울리지 않습니다.",
+    "similar": ["카테나 말벡", "트라피체 메달라 말벡", "몬테스 알파 엠"],
+    "trivia": "말벡은 프랑스 카오르에서는 '검은 와인'이라 불릴 만큼 색이 짙습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한 시간 열어 두면 제비꽃 향이 살아납니다.",
+    "aging": "8~10년이 좋습니다.",
+    "tips": ["같은 집의 기본급 '카테나 말벡'도 가성비가 좋습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "닥터 루젠 리슬링 카비네트",
+    "searchKeyword": "닥터루젠 리슬링",
+    "producer": "Dr. Loosen",
+    "type": "화이트 와인 · 리슬링",
+    "vintage": null,
+    "region": "모젤",
+    "country": "독일",
+    "alcohol": "8.5%",
+    "liquidColor": "#F2EDBE",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "독일 리슬링 대표 생산자로 국내 유통이 활발합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 38 },
+      { "axis": "당도", "value": 52 },
+      { "axis": "산도", "value": 84 },
+      { "axis": "탄닌", "value": 3 }
+    ],
+    "tastingNotes": "복숭아와 라임, 젖은 슬레이트 향이 함께 옵니다. 달지만 산도가 워낙 높아 물리지 않고, 도수가 낮아 가볍게 넘어갑니다.",
+    "specs": [
+      { "label": "품종", "value": "리슬링 100%" },
+      { "label": "등급", "value": "카비네트(프레디카츠바인)" },
+      { "label": "토양", "value": "슬레이트 편암" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2030",
+    "drinkUntil": "2040",
+    "history": [
+      { "year": "1808", "event": "루젠 가문이 밭을 얻음" },
+      { "year": "1988", "event": "에른스트 루젠이 이어받아 국제적 명성을 얻음" }
+    ],
+    "story": "모젤 강가의 비탈은 경사가 60도에 이릅니다. 기계가 못 들어가 사람이 손으로 따야 하는 밭입니다.",
+    "winery": "200년 넘게 같은 밭을 지켜 온 집안입니다.",
+    "foodPairing": [
+      { "emoji": "🌶️", "food": "매운 닭갈비", "why": "단맛이 매운맛을 눌러 줍니다", "shopKeyword": "닭갈비" },
+      { "emoji": "🥟", "food": "만두", "why": "산도가 기름진 속을 정리합니다", "shopKeyword": "만두" },
+      { "emoji": "🍲", "food": "돼지고기 김치찌개", "why": "리슬링은 한식 매운맛과 잘 맞습니다", "shopKeyword": "김치찌개" }
+    ],
+    "pairingTip": "매운 한식에 곁들일 와인으로 가장 자주 권해집니다.",
+    "avoidPairing": "묵직한 붉은 고기와는 완전히 눌립니다.",
+    "similar": ["닥터 루젠 리슬링 트로켄", "트림바크 리슬링", "샤토 생 미셸 컬럼비아 밸리 리슬링"],
+    "trivia": "도수가 8.5% 정도라 낮술로도 부담이 적습니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "차갑게 드세요.",
+    "aging": "10년 이상 두면 꿀 향이 올라옵니다.",
+    "tips": ["단맛이 있는 와인이 처음이라면 여기서 시작하세요"]
+  },
+  {
+    "category": "wine",
+    "name": "실버 오크 알렉산더 밸리 카베르네 소비뇽",
+    "searchKeyword": "실버오크 알렉산더밸리",
+    "producer": "Silver Oak",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "캘리포니아 · 알렉산더 밸리",
+    "country": "미국",
+    "alcohol": "14%",
+    "liquidColor": "#5E1A27",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "미국에서 인지도가 매우 높은 카베르네입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 80 },
+      { "axis": "당도", "value": 24 },
+      { "axis": "산도", "value": 56 },
+      { "axis": "탄닌", "value": 68 }
+    ],
+    "tastingNotes": "체리와 바닐라, 코코넛 향이 두드러집니다. 아메리칸 오크를 오래 써서 달큰한 나무 향이 이 집의 인장처럼 남습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심" },
+      { "label": "숙성", "value": "아메리칸 오크 약 24개월" },
+      { "label": "특징", "value": "출시 전 병 숙성까지 마쳐 바로 마실 수 있음" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2031",
+    "drinkUntil": "2040",
+    "history": [
+      { "year": "1972", "event": "레이 던컨과 저스틴 마이어가 설립" },
+      { "year": "현재", "event": "자체 통 제작소에서 아메리칸 오크를 만듦" }
+    ],
+    "story": "미국 오크만 고집합니다. 프랑스 오크가 세련됐다는 통념에 맞선 선택이었고, 그 달큰한 향이 곧 이 집의 정체가 되었습니다.",
+    "winery": "나파와 알렉산더 밸리 두 곳에서 각각 카베르네를 만듭니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "립아이 스테이크", "why": "달큰한 오크가 육즙과 맞습니다", "shopKeyword": "립아이" },
+      { "emoji": "🍔", "food": "치즈버거", "why": "부담 없이 어울립니다", "shopKeyword": "수제버거" },
+      { "emoji": "🍫", "food": "초콜릿 디저트", "why": "바닐라 향이 이어집니다", "shopKeyword": "초콜릿 케이크" }
+    ],
+    "pairingTip": "출시 시점에 이미 마시기 좋게 나옵니다. 기다릴 필요가 없습니다.",
+    "avoidPairing": "산뜻한 해산물과는 맞지 않습니다.",
+    "similar": ["케이머스 카베르네 소비뇽", "덕혼 메를로", "로버트 몬다비 프라이빗 셀렉션 카베르네 소비뇽"],
+    "trivia": "빈 병을 가져가면 무료로 채워 준다는 전통이 있었을 만큼 팬층이 두껍습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "30분이면 충분합니다.",
+    "aging": "지금 마셔도 좋고 10년을 두어도 좋습니다.",
+    "tips": ["오크 향을 좋아한다면 취향에 맞을 확률이 높습니다"]
+  }
+]
