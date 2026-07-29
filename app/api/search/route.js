@@ -12,6 +12,12 @@ export async function GET(request) {
 
   if (q.trim().length < 1) return NextResponse.json({ items: [], q });
 
-  const items = await searchCatalog(q, { limit: 20, category });
-  return NextResponse.json({ q, items });
+  try {
+    const items = await searchCatalog(q, { limit: 20, category });
+    return NextResponse.json({ q, items });
+  } catch (err) {
+    // DB가 끊겼을 때 화면이 "결과 없음"으로 보이면 안 된다 — 없는 것과 못 찾은 것은 다르다
+    console.error("[search]", err.message);
+    return NextResponse.json({ q, items: [], error: true }, { status: 503 });
+  }
 }

@@ -62,6 +62,7 @@ export default function DiscoverScreen({ onOpen, onToast }) {
   const [q, setQ] = useState("");
   const [results, setResults] = useState(null);
   const [searching, setSearching] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   const [quiz, setQuiz] = useState(false);
   const [summary, setSummary] = useState(null);
@@ -111,9 +112,12 @@ export default function DiscoverScreen({ onOpen, onToast }) {
     const timer = setTimeout(async () => {
       try {
         const d = await (await fetch(`/api/search?q=${encodeURIComponent(term)}`)).json();
-        setResults(d.items || []);
+        // 없는 것과 못 찾은 것은 다르다 — 서버가 답을 못 주면 그렇다고 말한다
+        setResults(d.error ? null : d.items || []);
+        setFailed(!!d.error);
       } catch {
-        setResults([]);
+        setResults(null);
+        setFailed(true);
       } finally {
         setSearching(false);
       }
@@ -133,15 +137,20 @@ export default function DiscoverScreen({ onOpen, onToast }) {
           placeholder="와인 이름 · 생산자 · 산지 (예: 샤또, 칠레, 샤르도네)"
           onChange={(e) => setQ(e.target.value)}
         />
-        {results !== null && (
+        {(results !== null || failed) && (
           <div className="disc-list">
             {searching && <div className="shop-note">찾는 중…</div>}
-            {!searching && !results.length && (
+            {!searching && failed && (
+              <div className="shop-note err">
+                지금은 찾을 수 없습니다. 연결을 확인하고 잠시 후 다시 시도해 주세요.
+              </div>
+            )}
+            {!searching && !failed && !results?.length && (
               <div className="shop-note">
                 DB에 없는 술입니다. 라벨을 촬영하면 분석해 드리고, 그 뒤로는 검색에도 나옵니다.
               </div>
             )}
-            {results.map((it) => (
+            {(results || []).map((it) => (
               <WineRow key={it.key} item={it} onOpen={onOpen} />
             ))}
           </div>

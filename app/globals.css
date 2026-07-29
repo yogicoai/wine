@@ -1018,6 +1018,52 @@ img, video, canvas { display: block; max-width: 100%; }
   font-weight: 400;
 }
 
+/* 연결이 끊겼을 때 — 버튼이 안 먹는 게 아니라 왜 안 되는지 알려야 한다 */
+.offline-bar {
+  margin: 0 0 14px; padding: 10px 14px; text-align: center;
+  border: 1px solid var(--bad); border-radius: var(--radius);
+  background: rgba(180, 89, 89, 0.12); color: var(--bad);
+  font-size: 12px; font-family: var(--font-s); line-height: 1.6;
+  animation: rise 0.3s;
+}
+.shop-note.err { color: var(--bad); }
+
+/* 처음 오는 사람 안내 — 첫 화면 아래에 한 번만 */
+.hint {
+  margin-top: 22px; padding: 16px 16px 12px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(23, 18, 13, 0.9), rgba(15, 12, 9, 0.8));
+  animation: rise 0.4s cubic-bezier(0.16, 0.8, 0.24, 1);
+}
+.hint-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.hint-head b {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold);
+  font-family: var(--font-d); font-weight: 600;
+}
+.hint-x { background: none; border: none; color: var(--ink-dim); padding: 4px; }
+.hint-x:hover { color: var(--ink); }
+.hint-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.hint-list li { display: flex; gap: 12px; align-items: flex-start; }
+.hint-icon {
+  flex: none; width: 32px; height: 32px; display: grid; place-items: center;
+  border: 1px solid var(--line-soft); border-radius: 50%; color: var(--gold);
+}
+.hint-list b {
+  display: block; font-size: 13px; color: var(--ink); font-family: var(--font-s); font-weight: 500;
+}
+.hint-list em {
+  display: block; font-style: normal; font-size: 11.5px; color: var(--ink-dim);
+  margin-top: 2px; line-height: 1.6;
+}
+.hint-go {
+  width: 100%; margin-top: 14px; padding: 11px;
+  background: none; border: none; border-top: 1px solid var(--line-soft);
+  color: var(--gold); font-family: var(--font-s); font-size: 12.5px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.hint-go em { font-style: normal; }
+.hint-go:hover { color: var(--gold-hi); }
+
 /* 라벨 / 바코드 전환 */
 .mode-switch {
   display: flex; gap: 4px; margin: 0 auto 12px; width: fit-content;

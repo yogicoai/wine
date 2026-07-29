@@ -8,11 +8,26 @@ import AccountDrawer from "@/components/AccountDrawer";
 import { BrandMark } from "@/components/Brand";
 import useActiveTimers from "@/components/useActiveTimer";
 import TimerBubble from "@/components/TimerBubble";
+import FirstHint from "@/components/FirstHint";
+import OfflineBanner from "@/components/OfflineBanner";
 import CellarScreen from "@/components/CellarScreen";
 import WineListScreen from "@/components/WineListScreen";
 import DiscoverScreen from "@/components/DiscoverScreen";
 import Icon from "@/components/Icon";
 import { downscale, stripPrefix } from "@/lib/imageClient";
+
+// 오류 문구는 원인을 짚어야 다음 행동이 정해진다.
+// "오류가 발생했습니다"만 보면 다시 눌러야 할지 기다려야 할지 알 수 없다.
+function offlineAware(err, fallback) {
+  if (typeof navigator !== "undefined" && !navigator.onLine) {
+    return "인터넷 연결이 끊겼습니다. 연결된 뒤 다시 시도해 주세요.";
+  }
+  // fetch 자체가 실패하면 브라우저는 TypeError 를 던진다 (서버가 죽었거나 응답이 없음)
+  if (err instanceof TypeError) {
+    return "서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.";
+  }
+  return err?.message || fallback;
+}
 
 export default function Home() {
   const [screen, setScreen] = useState("capture"); // capture | loading | result | cellar | winelist
@@ -128,7 +143,7 @@ export default function Home() {
       if (navigator.vibrate) navigator.vibrate([20, 40, 20]);
     } catch (err) {
       setScreen("capture");
-      showToast(err.message || "분석 중 오류가 발생했습니다.", true);
+      showToast(offlineAware(err, "분석 중 오류가 발생했습니다."), true);
     }
   }
 
@@ -199,7 +214,7 @@ export default function Home() {
         showToast("인식은 했지만 아직 DB에 없는 술들입니다. 개별 스캔으로 채워집니다.");
     } catch (err) {
       setScreen("capture");
-      showToast(err.message || "리스트를 읽지 못했습니다.", true);
+      showToast(offlineAware(err, "리스트를 읽지 못했습니다."), true);
     }
   }
 
@@ -249,7 +264,7 @@ export default function Home() {
       }
     } catch (err) {
       setScreen("result");
-      showToast(err.message || "분석 중 오류가 발생했습니다.", true);
+      showToast(offlineAware(err, "분석 중 오류가 발생했습니다."), true);
     }
   }
 
@@ -299,6 +314,9 @@ export default function Home() {
 
   return (
     <main className="app">
+      {/* 끊기면 버튼이 안 먹는 게 아니라 왜 안 되는지 보여야 한다 */}
+      <OfflineBanner />
+
       <header className="hdr">
         {/* 로고는 어디서든 처음 화면으로 돌아가는 길이다 (촬영 아이콘을 따로 두지 않는 이유) */}
         <button className="hdr-home" onClick={rescan} aria-label="처음 화면으로">
@@ -349,7 +367,11 @@ export default function Home() {
       </header>
 
       {screen === "capture" && (
-        <CaptureScreen onCapture={analyze} onBarcode={scanBarcode} onWineList={scanWineList} />
+        <>
+          <CaptureScreen onCapture={analyze} onBarcode={scanBarcode} onWineList={scanWineList} />
+          {/* 처음 온 사람에게만 한 번 — 닫으면 다시 나오지 않는다 */}
+          <FirstHint onOpenDiscover={() => setScreen("discover")} />
+        </>
       )}
       {screen === "loading" && <LoadingScreen thumb={thumb} />}
       {screen === "winelist" && (
