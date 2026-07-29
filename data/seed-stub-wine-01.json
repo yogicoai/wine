@@ -450,34 +450,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "킴 크로포드 소비뇽 블랑",
-    "producer": "Kim Crawford",
-    "country": "뉴질랜드",
-    "region": "말보로",
-    "type": "화이트 와인 · 소비뇽 블랑",
-    "priceBand": 2,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 44
-      },
-      {
-        "axis": "당도",
-        "value": 26
-      },
-      {
-        "axis": "산도",
-        "value": 78
-      },
-      {
-        "axis": "탄닌",
-        "value": 5
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "그라함스 식스 그레입스 루비 포트",
     "producer": "Graham's",
     "country": "포르투갈",

@@ -1,0 +1,867 @@
+[
+  {
+    "category": "wine",
+    "name": "샤또 퐁트네 사크",
+    "searchKeyword": "샤또 퐁트네 사크",
+    "producer": "Château Fontenil",
+    "type": "레드 와인 · 메를로",
+    "vintage": null,
+    "region": "보르도 · 프롱삭",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#591926",
+    "confidence": 83,
+    "knowledge": "medium",
+    "basis": "보르도 우안 프롱삭 지역의 메를로 중심 와인입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 72
+      },
+      {
+        "axis": "당도",
+        "value": 17
+      },
+      {
+        "axis": "산도",
+        "value": 60
+      },
+      {
+        "axis": "탄닌",
+        "value": 62
+      }
+    ],
+    "tastingNotes": "잘 익은 자두와 코코아, 옅은 흙내가 이어집니다. 프롱삭은 포므롤 바로 옆인데 값은 훨씬 눅어, 우안 보르도를 부담 없이 맛보기 좋습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "메를로 중심"
+      },
+      {
+        "label": "등급",
+        "value": "프롱삭 AOC"
+      },
+      {
+        "label": "숙성",
+        "value": "오크 약 12개월"
+      }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2031",
+    "drinkUntil": "2038",
+    "history": [
+      {
+        "year": "현재",
+        "event": "보르도 우안 프롱삭의 대표적인 가성비 산지"
+      }
+    ],
+    "story": "프롱삭은 18세기까지 보르도에서 가장 이름난 지역이었습니다. 지금은 오히려 알려지지 않아 값이 눅습니다.",
+    "winery": "도르도뉴 강 북쪽 프롱삭 언덕에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "스테이크",
+        "why": "부드러운 탄닌이 살결과 맞습니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "돼지 목살 구이",
+        "why": "과실 단맛이 어울립니다",
+        "shopKeyword": "돼지 목살"
+      },
+      {
+        "emoji": "🍄",
+        "food": "버섯 요리",
+        "why": "흙내끼리 이어집니다",
+        "shopKeyword": "표고버섯"
+      }
+    ],
+    "pairingTip": "떫은맛이 부담스러운 분에게 좌안보다 편합니다.",
+    "avoidPairing": "담백한 생선은 눌립니다.",
+    "similar": [
+      "샤또 클리네",
+      "샤또 도르비에",
+      "샤또 시랑"
+    ],
+    "trivia": "보르도는 강을 기준으로 좌안(카베르네)과 우안(메를로)으로 나뉩니다.",
+    "servingTemp": "16~17℃",
+    "servingNote": "한 시간 열어 두면 좋습니다.",
+    "aging": "8~10년이 좋습니다.",
+    "tips": [
+      "유명 마을이 아니어도 좋은 보르도는 많습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "기갈 코트 로티 브륀 에 블롱드",
+    "searchKeyword": "기갈 코트 로티",
+    "producer": "E. Guigal",
+    "type": "레드 와인 · 시라",
+    "vintage": null,
+    "region": "론 · 코트 로티",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#511723",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "북부 론 최상급 시라로 자료가 매우 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 80
+      },
+      {
+        "axis": "당도",
+        "value": 15
+      },
+      {
+        "axis": "산도",
+        "value": 66
+      },
+      {
+        "axis": "탄닌",
+        "value": 78
+      }
+    ],
+    "tastingNotes": "블랙베리와 제비꽃, 베이컨 훈연 향이 겹겹이 쌓입니다. 코트 로티는 시라에 비오니에 화이트 품종을 조금 섞는데, 그 덕분에 향이 유난히 화려해집니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "시라 중심(비오니에 소량)"
+      },
+      {
+        "label": "등급",
+        "value": "코트 로티 AOC"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 36개월"
+      }
+    ],
+    "drinkFrom": "2031",
+    "drinkPeak": "2040",
+    "drinkUntil": "2055",
+    "history": [
+      {
+        "year": "1946",
+        "event": "에티엔 기갈이 암퓌에서 설립"
+      },
+      {
+        "year": "현재",
+        "event": "북부 론을 대표하는 이름"
+      }
+    ],
+    "story": "'브륀 에 블롱드'는 갈색 언덕과 금색 언덕이라는 뜻입니다. 흙 색깔이 다른 두 비탈의 포도를 섞습니다.",
+    "winery": "론 강가 암퓌 마을에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "후추 스테이크",
+        "why": "훈연·후추 향이 겹칩니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양갈비",
+        "why": "허브 향이 어울립니다",
+        "shopKeyword": "양갈비"
+      },
+      {
+        "emoji": "🦆",
+        "food": "오리 요리",
+        "why": "과실이 기름진 살을 받칩니다",
+        "shopKeyword": "오리고기"
+      }
+    ],
+    "pairingTip": "숯불 고기와 특히 잘 맞습니다.",
+    "avoidPairing": "가벼운 요리와는 균형이 맞지 않습니다.",
+    "similar": [
+      "샤푸티에 크로즈 에르미타주 레 뫼시니에",
+      "펜폴즈 그랜지",
+      "샤또 라 네르트 샤또네프 뒤 파프"
+    ],
+    "trivia": "코트 로티는 '구워진 비탈'이라는 뜻입니다. 남향 급경사라 볕이 강합니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": [
+      "시라의 정점을 알고 싶다면 북부 론 코트 로티입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "도멘 조베르 제르베 크로즈 에르미타주 블랑",
+    "searchKeyword": "크로즈 에르미타주 블랑",
+    "producer": "Domaine Combier",
+    "type": "화이트 와인 · 마르산 · 루산",
+    "vintage": null,
+    "region": "론 · 크로즈 에르미타주",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#F0E6AC",
+    "confidence": 82,
+    "knowledge": "medium",
+    "basis": "북부 론의 화이트 품종으로 국내 유통이 일부 있습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 64
+      },
+      {
+        "axis": "당도",
+        "value": 16
+      },
+      {
+        "axis": "산도",
+        "value": 60
+      },
+      {
+        "axis": "탄닌",
+        "value": 5
+      }
+    ],
+    "tastingNotes": "노란 복숭아와 아몬드, 아카시아 꿀 향이 도톰하게 이어집니다. 산도가 높지 않고 살집이 있어, 샤르도네와는 또 다른 무게감을 가진 화이트입니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "마르산, 루산"
+      },
+      {
+        "label": "등급",
+        "value": "크로즈 에르미타주 AOC"
+      },
+      {
+        "label": "숙성",
+        "value": "스테인리스 + 일부 오크"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2028",
+    "drinkUntil": "2032",
+    "history": [
+      {
+        "year": "현재",
+        "event": "북부 론 화이트는 전체 생산의 아주 작은 몫"
+      }
+    ],
+    "story": "북부 론은 레드로 유명하지만 화이트도 만듭니다. 양이 적어 국내에서는 보기 어렵습니다.",
+    "winery": "론 강 동쪽 평지에 밭을 두고 있습니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "로스트 치킨",
+        "why": "살집이 있어 눌리지 않습니다",
+        "shopKeyword": "닭고기"
+      },
+      {
+        "emoji": "🐟",
+        "food": "기름진 생선",
+        "why": "무게가 맞습니다",
+        "shopKeyword": "연어"
+      },
+      {
+        "emoji": "🧀",
+        "food": "부드러운 치즈",
+        "why": "고소한 향이 이어집니다",
+        "shopKeyword": "브리치즈"
+      }
+    ],
+    "pairingTip": "가벼운 화이트가 밋밋했다면 이쪽을 드셔 보세요.",
+    "avoidPairing": "산도가 낮아 아주 기름진 튀김에는 약합니다.",
+    "similar": [
+      "루이 자도 뿌이 퓌세",
+      "몬테스 알파 샤르도네",
+      "도멘 위에 부브레"
+    ],
+    "trivia": "에르미타주 블랑은 100년을 견디기도 하는 드문 화이트입니다.",
+    "servingTemp": "10~12℃",
+    "servingNote": "너무 차게 하면 향이 닫힙니다.",
+    "aging": "5~8년이 좋습니다.",
+    "tips": [
+      "화이트도 바디가 두꺼운 종류가 있습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "루이 자도 보졸레 빌라주",
+    "searchKeyword": "루이 자도 보졸레 빌라주",
+    "producer": "Maison Louis Jadot",
+    "type": "레드 와인 · 가메",
+    "vintage": null,
+    "region": "보졸레",
+    "country": "프랑스",
+    "alcohol": "12.5%",
+    "liquidColor": "#A03B49",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 보졸레 빌라주입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 40
+      },
+      {
+        "axis": "당도",
+        "value": 18
+      },
+      {
+        "axis": "산도",
+        "value": 72
+      },
+      {
+        "axis": "탄닌",
+        "value": 28
+      }
+    ],
+    "tastingNotes": "딸기와 붉은 체리, 바나나 같은 발효 향이 가볍게 올라옵니다. 탄닌이 거의 없어 레드가 처음인 사람도 부담 없고, 서늘하게 마시면 더 산뜻합니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "가메 100%"
+      },
+      {
+        "label": "등급",
+        "value": "보졸레 빌라주 AOC"
+      },
+      {
+        "label": "양조",
+        "value": "탄산 침용"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2028",
+    "history": [
+      {
+        "year": "1859",
+        "event": "루이 자도 설립"
+      },
+      {
+        "year": "현재",
+        "event": "부르고뉴·보졸레 전역에 밭 보유"
+      }
+    ],
+    "story": "탄산 침용은 포도를 으깨지 않고 통째로 넣어 발효시키는 방식입니다. 그래서 향이 더 화사하고 떫은맛이 적습니다.",
+    "winery": "부르고뉴 본에 본거지를 둔 네고시앙입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "닭요리",
+        "why": "가벼운 탄닌이 흰살과 맞습니다",
+        "shopKeyword": "닭고기"
+      },
+      {
+        "emoji": "🥓",
+        "food": "베이컨·햄",
+        "why": "산도가 짠맛을 받습니다",
+        "shopKeyword": "베이컨"
+      },
+      {
+        "emoji": "🍕",
+        "food": "피자",
+        "why": "부담 없이 어울립니다",
+        "shopKeyword": "피자"
+      }
+    ],
+    "pairingTip": "냉장고에 20분 넣었다 드시면 좋습니다.",
+    "avoidPairing": "진한 스테이크에는 눌립니다.",
+    "similar": [
+      "조르주 뒤뵈프 플뢰리",
+      "도멘 파블레 부르고뉴 피노 누아",
+      "본템피 몬테풀치아노 다브루초"
+    ],
+    "trivia": "'보졸레 누보'는 그해 딴 포도로 두 달 만에 내놓는 술로, 11월 셋째 목요일에 풀립니다.",
+    "servingTemp": "13~15℃",
+    "servingNote": "살짝 서늘하게 드세요.",
+    "aging": "1~2년 안에 마시는 것이 좋습니다.",
+    "tips": [
+      "레드가 떫어서 부담스러웠다면 여기서 시작해 보세요"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "도멘 파블레 부르고뉴 피노 누아",
+    "searchKeyword": "부르고뉴 피노 누아",
+    "producer": "Domaine Faiveley",
+    "type": "레드 와인 · 피노 누아",
+    "vintage": null,
+    "region": "부르고뉴",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#8E3241",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 부르고뉴 지역급 레드입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 50
+      },
+      {
+        "axis": "당도",
+        "value": 15
+      },
+      {
+        "axis": "산도",
+        "value": 74
+      },
+      {
+        "axis": "탄닌",
+        "value": 42
+      }
+    ],
+    "tastingNotes": "붉은 체리와 장미, 옅은 흙내가 이어집니다. 색이 옅고 탄닌이 약해 가볍게 느껴지지만, 산도가 살아 있어 음식과 잘 맞습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아 100%"
+      },
+      {
+        "label": "등급",
+        "value": "부르고뉴 AOC(지역급)"
+      },
+      {
+        "label": "숙성",
+        "value": "오크 약 10개월"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2028",
+    "drinkUntil": "2032",
+    "history": [
+      {
+        "year": "1825",
+        "event": "파블레 가문이 뉘생조르주에서 시작"
+      },
+      {
+        "year": "현재",
+        "event": "7대째 가족이 운영"
+      }
+    ],
+    "story": "부르고뉴 피노는 값이 크게 벌어집니다. 지역급으로 이 품종의 성격부터 익히는 것이 좋은 순서입니다.",
+    "winery": "코트 드 뉘의 뉘생조르주에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "닭요리",
+        "why": "가벼운 탄닌이 흰살과 맞습니다",
+        "shopKeyword": "닭고기"
+      },
+      {
+        "emoji": "🐟",
+        "food": "연어",
+        "why": "붉은 과실이 기름진 살을 받칩니다",
+        "shopKeyword": "생연어"
+      },
+      {
+        "emoji": "🍄",
+        "food": "버섯 요리",
+        "why": "흙내끼리 이어집니다",
+        "shopKeyword": "표고버섯"
+      }
+    ],
+    "pairingTip": "탄닌이 약해 음식을 가리지 않습니다.",
+    "avoidPairing": "아주 진한 소스는 술을 덮습니다.",
+    "similar": [
+      "본 클라이맷 피노 누아",
+      "루이 자도 보졸레 빌라주",
+      "플라네타 에트나 로쏘"
+    ],
+    "trivia": "부르고뉴 레드는 거의 전부 피노 누아 한 품종으로만 만듭니다.",
+    "servingTemp": "14~16℃",
+    "servingNote": "살짝 서늘하게 드세요.",
+    "aging": "3~5년이 좋습니다.",
+    "tips": [
+      "부르고뉴는 지역급부터 시작해 위로 올라가는 것이 좋습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "샤또 쿠탱 소테른",
+    "searchKeyword": "샤또 쿠탱 소테른",
+    "producer": "Château Coutet",
+    "type": "디저트 와인 · 세미용 블렌드",
+    "vintage": null,
+    "region": "보르도 · 바르삭",
+    "country": "프랑스",
+    "alcohol": "13.5%",
+    "liquidColor": "#E8B84C",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "1855 소테른 1등급으로 자료가 충분합니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 76
+      },
+      {
+        "axis": "당도",
+        "value": 88
+      },
+      {
+        "axis": "산도",
+        "value": 78
+      },
+      {
+        "axis": "탄닌",
+        "value": 4
+      }
+    ],
+    "tastingNotes": "살구 잼과 꿀, 사프란 향이 진하게 이어집니다. 곰팡이가 껴 쪼그라든 포도로 만들어 당이 아주 높은데, 산도가 함께 높아 무겁게 남지 않습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "세미용, 소비뇽 블랑"
+      },
+      {
+        "label": "등급",
+        "value": "1855 소테른 프리미에 크뤼"
+      },
+      {
+        "label": "방식",
+        "value": "귀부(보트리티스) 포도"
+      }
+    ],
+    "drinkFrom": "2027",
+    "drinkPeak": "2038",
+    "drinkUntil": "2060",
+    "history": [
+      {
+        "year": "1300년대",
+        "event": "영국 지배기에 요새로 지어짐"
+      },
+      {
+        "year": "1855",
+        "event": "바르삭 지역 1등급으로 지정"
+      }
+    ],
+    "story": "'귀한 곰팡이'가 포도에 껴 수분을 빨아들이면 당과 향이 농축됩니다. 병든 포도로 만든 최고급 술입니다.",
+    "winery": "바르삭 마을에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🧀",
+        "food": "푸아그라·블루치즈",
+        "why": "소테른의 정석 짝입니다",
+        "shopKeyword": "고르곤졸라"
+      },
+      {
+        "emoji": "🥧",
+        "food": "타르트·과일 디저트",
+        "why": "단맛끼리 맞물립니다",
+        "shopKeyword": "타르트"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "매운 아시아 음식",
+        "why": "단맛이 매운맛을 눕힙니다",
+        "shopKeyword": "카레"
+      }
+    ],
+    "pairingTip": "식후에 작은 잔으로 드세요.",
+    "avoidPairing": "짜지 않은 담백한 음식과는 지루해집니다.",
+    "similar": [
+      "샤또 디켐",
+      "닥터 루젠 리슬링 카비네트",
+      "그라함스 파인 루비 포트"
+    ],
+    "trivia": "귀부 포도는 나무 한 그루에서 잔 한 잔 분량밖에 안 나오기도 합니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "차갑게, 작은 잔에 드세요.",
+    "aging": "30년 이상 갑니다.",
+    "tips": [
+      "딴 뒤 냉장고에서 일주일 넘게 마실 수 있습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "케이머스 나파 밸리 카베르네 소비뇽",
+    "searchKeyword": "케이머스 카베르네",
+    "producer": "Caymus Vineyards",
+    "type": "레드 와인 · 카베르네 소비뇽",
+    "vintage": null,
+    "region": "나파 밸리",
+    "country": "미국",
+    "alcohol": "14.8%",
+    "liquidColor": "#4E1421",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "국내 유통이 매우 활발한 나파 카베르네입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 88
+      },
+      {
+        "axis": "당도",
+        "value": 28
+      },
+      {
+        "axis": "산도",
+        "value": 54
+      },
+      {
+        "axis": "탄닌",
+        "value": 72
+      }
+    ],
+    "tastingNotes": "잘 익은 블랙체리와 바닐라, 모카 향이 아주 진하게 이어집니다. 나파 카베르네 특유의 달큰하고 두툼한 결이 분명해, 보르도와는 첫 모금부터 다릅니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "카베르네 소비뇽 중심"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치·아메리칸 오크 약 18개월"
+      },
+      {
+        "label": "지역",
+        "value": "나파 밸리"
+      }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2032",
+    "drinkUntil": "2042",
+    "history": [
+      {
+        "year": "1972",
+        "event": "왜그너 가족이 러더퍼드에 설립"
+      },
+      {
+        "year": "현재",
+        "event": "미국에서 가장 잘 팔리는 고급 카베르네 중 하나"
+      }
+    ],
+    "story": "포도를 늦게까지 매달아 두는 것으로 유명합니다. 그래서 당이 높고 알코올도 높습니다.",
+    "winery": "나파 러더퍼드에 자리한 가족 와이너리입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "립아이 스테이크",
+        "why": "무게가 서로 맞습니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양념 갈비",
+        "why": "달큰한 결이 양념과 맞물립니다",
+        "shopKeyword": "소갈비"
+      },
+      {
+        "emoji": "🍫",
+        "food": "다크 초콜릿",
+        "why": "모카 향이 이어집니다",
+        "shopKeyword": "다크초콜릿"
+      }
+    ],
+    "pairingTip": "달큰한 한식 양념 고기와 잘 맞습니다.",
+    "avoidPairing": "담백한 요리는 완전히 눌립니다.",
+    "similar": [
+      "덕혼 데코이 메를로",
+      "에라주리즈 맥스 리제르바 카베르네 소비뇽",
+      "펜폴즈 그랜지"
+    ],
+    "trivia": "알코올이 15%에 가까워, 같은 잔이라도 취기가 빨리 옵니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "한 시간 열어 두면 좋습니다.",
+    "aging": "10~15년이 좋습니다.",
+    "tips": [
+      "보르도가 밋밋하게 느껴진다면 나파 카베르네가 맞을 수 있습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "킴 크로포드 소비뇽 블랑",
+    "searchKeyword": "킴 크로포드 소비뇽 블랑",
+    "producer": "Kim Crawford",
+    "type": "화이트 와인 · 소비뇽 블랑",
+    "vintage": null,
+    "region": "말버러",
+    "country": "뉴질랜드",
+    "alcohol": "12.5%",
+    "liquidColor": "#F0EEC6",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 뉴질랜드 소비뇽 블랑입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 44
+      },
+      {
+        "axis": "당도",
+        "value": 20
+      },
+      {
+        "axis": "산도",
+        "value": 80
+      },
+      {
+        "axis": "탄닌",
+        "value": 4
+      }
+    ],
+    "tastingNotes": "패션프루트와 구아바, 라임 향이 도드라집니다. 같은 말버러 소비뇽 중에서도 과실 쪽이 특히 진해, 향이 화려한 화이트를 좋아하는 사람에게 잘 맞습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "소비뇽 블랑 100%"
+      },
+      {
+        "label": "지역",
+        "value": "말버러"
+      },
+      {
+        "label": "마개",
+        "value": "스크루캡"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2028",
+    "history": [
+      {
+        "year": "1996",
+        "event": "킴 크로포드 부부가 설립"
+      },
+      {
+        "year": "2003",
+        "event": "빈센 컨스텔레이션에 매각"
+      }
+    ],
+    "story": "밭을 소유하지 않고 좋은 농가에서 포도를 사는 방식으로 시작했습니다. 뉴질랜드에서는 흔한 모델입니다.",
+    "winery": "말버러 와이라우 밸리 포도를 씁니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦪",
+        "food": "굴·조개",
+        "why": "산도가 바다 향을 세워 줍니다",
+        "shopKeyword": "생굴"
+      },
+      {
+        "emoji": "🥗",
+        "food": "샐러드",
+        "why": "풀 향끼리 이어집니다",
+        "shopKeyword": "루꼴라"
+      },
+      {
+        "emoji": "🍤",
+        "food": "새우 요리",
+        "why": "산도가 단맛 나는 살을 조여 줍니다",
+        "shopKeyword": "생새우"
+      }
+    ],
+    "pairingTip": "회무침이나 새콤한 한식과도 잘 맞습니다.",
+    "avoidPairing": "붉은 고기와는 어울리지 않습니다.",
+    "similar": [
+      "빌라 마리아 소비뇽 블랑",
+      "클라우디 베이 소비뇽 블랑",
+      "오이스터 베이 소비뇽 블랑"
+    ],
+    "trivia": "말버러는 뉴질랜드 와인 생산의 3분의 2를 차지합니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "차갑게 드세요.",
+    "aging": "1~2년 안에 마시는 것이 좋습니다.",
+    "tips": [
+      "뉴질랜드 소비뇽 블랑은 같은 지역이라도 집마다 과실 향의 세기가 다릅니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "토브렉 우드커터스 쉬라즈",
+    "searchKeyword": "토브렉 우드커터스 쉬라즈",
+    "producer": "Torbreck",
+    "type": "레드 와인 · 쉬라즈",
+    "vintage": null,
+    "region": "바로사 밸리",
+    "country": "호주",
+    "alcohol": "14.5%",
+    "liquidColor": "#4F1520",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "국내 유통이 있는 바로사 쉬라즈입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 82
+      },
+      {
+        "axis": "당도",
+        "value": 24
+      },
+      {
+        "axis": "산도",
+        "value": 56
+      },
+      {
+        "axis": "탄닌",
+        "value": 68
+      }
+    ],
+    "tastingNotes": "검은 자두와 감초, 밀크 초콜릿 향이 진하게 이어집니다. 바로사 쉬라즈답게 과실이 농익고 탄닌이 둥글어, 열자마자 마셔도 편합니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "쉬라즈 100%"
+      },
+      {
+        "label": "숙성",
+        "value": "오크 약 12개월"
+      },
+      {
+        "label": "지역",
+        "value": "바로사 밸리"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2030",
+    "drinkUntil": "2036",
+    "history": [
+      {
+        "year": "1994",
+        "event": "데이비드 파월이 설립"
+      },
+      {
+        "year": "현재",
+        "event": "바로사 고목 쉬라즈로 명성"
+      }
+    ],
+    "story": "이름은 창업자가 스코틀랜드에서 나무 베는 일을 하던 시절에서 왔습니다. 그 시절 이름을 대중 라인에 붙였습니다.",
+    "winery": "남호주 바로사 밸리에 자리합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "숯불 소고기",
+        "why": "무게가 서로 맞습니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양념 갈비",
+        "why": "과실 단맛이 양념과 맞물립니다",
+        "shopKeyword": "소갈비"
+      },
+      {
+        "emoji": "🍔",
+        "food": "햄버거",
+        "why": "부담 없이 어울립니다",
+        "shopKeyword": "소고기 다짐육"
+      }
+    ],
+    "pairingTip": "한국식 양념 고기와 특히 잘 맞습니다.",
+    "avoidPairing": "담백한 요리는 눌립니다.",
+    "similar": [
+      "펜폴즈 그랜지",
+      "헨쉬케 힐 오브 그레이스",
+      "케이머스 나파 밸리 카베르네 소비뇽"
+    ],
+    "trivia": "바로사에는 150년 넘은 쉬라즈 나무가 아직 열매를 맺습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "30분~1시간 열어 두면 좋습니다.",
+    "aging": "8~10년이 좋습니다.",
+    "tips": [
+      "진하고 달큰한 레드를 좋아한다면 바로사 쉬라즈가 맞습니다"
+    ]
+  }
+]
