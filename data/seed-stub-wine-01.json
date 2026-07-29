@@ -114,34 +114,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "샤또 무통 카데 블랑",
-    "producer": "Baron Philippe de Rothschild",
-    "country": "프랑스",
-    "region": "보르도",
-    "type": "화이트 와인 · 소비뇽 블랑 블렌드",
-    "priceBand": 1,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 45
-      },
-      {
-        "axis": "당도",
-        "value": 18
-      },
-      {
-        "axis": "산도",
-        "value": 68
-      },
-      {
-        "axis": "탄닌",
-        "value": 5
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "샤또 도르비에 크뤼 부르주아",
     "producer": "Château d'Arvier",
     "country": "프랑스",
@@ -198,62 +170,6 @@
   {
     "tier": "stub",
     "category": "wine",
-    "name": "샤또 캉트메를",
-    "producer": "Château Cantemerle",
-    "country": "프랑스",
-    "region": "보르도 · 오메독",
-    "type": "레드 와인 · 카베르네 블렌드",
-    "priceBand": 3,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 72
-      },
-      {
-        "axis": "당도",
-        "value": 15
-      },
-      {
-        "axis": "산도",
-        "value": 62
-      },
-      {
-        "axis": "탄닌",
-        "value": 66
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "니콜라 푀야트 브뤼 리저브",
-    "producer": "Nicolas Feuillatte",
-    "country": "프랑스",
-    "region": "샹파뉴",
-    "type": "스파클링 와인 · 샴페인",
-    "priceBand": 3,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 52
-      },
-      {
-        "axis": "당도",
-        "value": 30
-      },
-      {
-        "axis": "산도",
-        "value": 72
-      },
-      {
-        "axis": "탄닌",
-        "value": 4
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
     "name": "프레시넷 코르돈 네그로",
     "producer": "Freixenet",
     "country": "스페인",
@@ -272,34 +188,6 @@
       {
         "axis": "산도",
         "value": 66
-      },
-      {
-        "axis": "탄닌",
-        "value": 3
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "미오네토 프로세코 브뤼",
-    "producer": "Mionetto",
-    "country": "이탈리아",
-    "region": "베네토 · 프로세코",
-    "type": "스파클링 와인 · 프로세코",
-    "priceBand": 2,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 38
-      },
-      {
-        "axis": "당도",
-        "value": 40
-      },
-      {
-        "axis": "산도",
-        "value": 64
       },
       {
         "axis": "탄닌",
@@ -920,34 +808,6 @@
       {
         "axis": "탄닌",
         "value": 58
-      }
-    ]
-  },
-  {
-    "tier": "stub",
-    "category": "wine",
-    "name": "카테나 말벡",
-    "producer": "Catena",
-    "country": "아르헨티나",
-    "region": "멘도사",
-    "type": "레드 와인 · 말벡",
-    "priceBand": 2,
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 74
-      },
-      {
-        "axis": "당도",
-        "value": 24
-      },
-      {
-        "axis": "산도",
-        "value": 54
-      },
-      {
-        "axis": "탄닌",
-        "value": 60
       }
     ]
   },

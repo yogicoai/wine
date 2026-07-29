@@ -1,0 +1,782 @@
+[
+  {
+    "category": "wine",
+    "name": "펜폴즈 그랜지",
+    "searchKeyword": "펜폴즈 그랜지",
+    "producer": "Penfolds",
+    "type": "레드 와인 · 쉬라즈",
+    "vintage": null,
+    "region": "남호주",
+    "country": "호주",
+    "alcohol": "14.5%",
+    "liquidColor": "#4E1520",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "호주를 대표하는 아이콘 와인으로 자료가 매우 많습니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 94
+      },
+      {
+        "axis": "당도",
+        "value": 20
+      },
+      {
+        "axis": "산도",
+        "value": 60
+      },
+      {
+        "axis": "탄닌",
+        "value": 86
+      }
+    ],
+    "tastingNotes": "검은 과실과 모카, 감초, 진한 오크 향이 겹겹이 쌓입니다. 호주 와인 하면 떠오르는 힘과 농밀함의 정점으로, 어릴 때는 벽 같지만 20년을 넘기면 놀랍도록 부드러워집니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "쉬라즈 중심(카베르네 소량)"
+      },
+      {
+        "label": "숙성",
+        "value": "미국산 오크 신통 약 18개월"
+      },
+      {
+        "label": "특징",
+        "value": "여러 지역 포도를 섞는 멀티 리전 블렌딩"
+      }
+    ],
+    "drinkFrom": "2035",
+    "drinkPeak": "2045",
+    "drinkUntil": "2065",
+    "history": [
+      {
+        "year": "1951",
+        "event": "맥스 슈베르트가 첫 빈티지를 몰래 만듦"
+      },
+      {
+        "year": "1957",
+        "event": "회사가 생산 중단 지시, 그래도 몰래 계속 만듦"
+      },
+      {
+        "year": "1960",
+        "event": "숙성된 술이 호평받자 회사가 공식 승인"
+      }
+    ],
+    "story": "만드는 사람이 회사 지시를 어기고 몰래 이어 간 술입니다. 몇 해 뒤 숨겨 두었던 병을 열어 보인 뒤에야 회사가 인정했습니다.",
+    "winery": "1844년 설립된 호주 최대 와이너리 중 하나입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "숯불 소고기",
+        "why": "강한 탄닌에 맞설 무게가 필요합니다",
+        "shopKeyword": "한우 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양갈비",
+        "why": "향신료 향이 겹칩니다",
+        "shopKeyword": "양갈비"
+      },
+      {
+        "emoji": "🧀",
+        "food": "숙성 하드치즈",
+        "why": "짠맛이 탄닌을 눕힙니다",
+        "shopKeyword": "파르미지아노"
+      }
+    ],
+    "pairingTip": "가벼운 음식과 열면 술만 남습니다.",
+    "avoidPairing": "해산물, 담백한 요리와는 맞지 않습니다.",
+    "similar": [
+      "펜폴즈 빈 707",
+      "헨쉬케 힐 오브 그레이스",
+      "샤푸티에 에르미타주"
+    ],
+    "trivia": "호주 정부가 '움직이는 국가유산'으로 지정한 유일한 와인입니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "어릴 때는 두세 시간 디캔팅이 필요합니다.",
+    "aging": "30년 이상 갑니다.",
+    "tips": [
+      "최소 15년은 두고 여는 술입니다. 어릴 때 열면 힘만 느껴집니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "헨쉬케 힐 오브 그레이스",
+    "searchKeyword": "헨쉬케 힐 오브 그레이스",
+    "producer": "Henschke",
+    "type": "레드 와인 · 쉬라즈",
+    "vintage": null,
+    "region": "에덴 밸리",
+    "country": "호주",
+    "alcohol": "14.5%",
+    "liquidColor": "#511621",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "호주 최상급 단일 밭 쉬라즈로 자료가 충분합니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 90
+      },
+      {
+        "axis": "당도",
+        "value": 18
+      },
+      {
+        "axis": "산도",
+        "value": 64
+      },
+      {
+        "axis": "탄닌",
+        "value": 82
+      }
+    ],
+    "tastingNotes": "블랙베리와 제비꽃, 검은 후추가 층층이 겹칩니다. 그랜지가 힘이라면 이쪽은 결이 고운 우아함 쪽으로, 같은 쉬라즈로도 이렇게 다를 수 있다는 것을 보여 줍니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "쉬라즈 100%"
+      },
+      {
+        "label": "밭",
+        "value": "단일 밭 힐 오브 그레이스"
+      },
+      {
+        "label": "수령",
+        "value": "1860년대 심은 고목 포함"
+      }
+    ],
+    "drinkFrom": "2033",
+    "drinkPeak": "2043",
+    "drinkUntil": "2060",
+    "history": [
+      {
+        "year": "1860년대",
+        "event": "독일계 이민자가 포도나무를 심음"
+      },
+      {
+        "year": "1958",
+        "event": "첫 단일 밭 병입"
+      }
+    ],
+    "story": "밭 이름은 근처 언덕과 독일 고향 마을 이름에서 왔습니다. 160년 넘은 나무들이 아직 열매를 맺습니다.",
+    "winery": "6대째 가족이 운영하는 에덴 밸리 와이너리입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "숙성 소고기",
+        "why": "고운 탄닌이 감칠맛을 받습니다",
+        "shopKeyword": "드라이에이징 스테이크"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양고기 로스트",
+        "why": "제비꽃 향이 허브와 어울립니다",
+        "shopKeyword": "양고기"
+      },
+      {
+        "emoji": "🍄",
+        "food": "버섯 요리",
+        "why": "흙내가 서로 맞물립니다",
+        "shopKeyword": "표고버섯"
+      }
+    ],
+    "pairingTip": "특별한 날 천천히 여는 술입니다.",
+    "avoidPairing": "매운 양념은 탄닌을 거칠게 만듭니다.",
+    "similar": [
+      "펜폴즈 그랜지",
+      "토브렉 런릭",
+      "샤푸티에 에르미타주"
+    ],
+    "trivia": "필록세라가 닿지 않은 호주 밭이라 접붙이지 않은 원래 뿌리로 자랍니다.",
+    "servingTemp": "17~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "25년 이상 갑니다.",
+    "tips": [
+      "호주 쉬라즈가 힘만 있는 게 아니라는 걸 보여 주는 술입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "클라우디 베이 펠로러스",
+    "searchKeyword": "클라우디 베이 펠로러스",
+    "producer": "Cloudy Bay",
+    "type": "스파클링 와인 · 전통 방식",
+    "vintage": null,
+    "region": "말버러",
+    "country": "뉴질랜드",
+    "alcohol": "12.5%",
+    "liquidColor": "#F0E7B4",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "국내 유통되는 뉴질랜드 전통 방식 스파클링입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 52
+      },
+      {
+        "axis": "당도",
+        "value": 22
+      },
+      {
+        "axis": "산도",
+        "value": 80
+      },
+      {
+        "axis": "탄닌",
+        "value": 5
+      }
+    ],
+    "tastingNotes": "구운 빵과 아몬드, 노란 사과 향이 이어집니다. 샴페인과 같은 방식으로 만들어 기포가 곱고 여운이 길며, 값은 훨씬 눅습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "샤르도네, 피노 누아"
+      },
+      {
+        "label": "방식",
+        "value": "병 내 2차 발효(전통 방식)"
+      },
+      {
+        "label": "숙성",
+        "value": "효모와 함께 약 3년"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2028",
+    "drinkUntil": "2032",
+    "history": [
+      {
+        "year": "1987",
+        "event": "첫 빈티지 출시"
+      },
+      {
+        "year": "현재",
+        "event": "뉴질랜드 스파클링의 기준으로 꼽힘"
+      }
+    ],
+    "story": "이름은 1800년대 뉴질랜드 해협에서 배를 안내했다는 돌고래 '펠로러스 잭'에서 왔습니다.",
+    "winery": "클라우디 베이의 스파클링 라인입니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦪",
+        "food": "굴",
+        "why": "기포가 짠맛을 씻어 줍니다",
+        "shopKeyword": "생굴"
+      },
+      {
+        "emoji": "🍤",
+        "food": "튀김",
+        "why": "기름을 정리합니다",
+        "shopKeyword": "새우튀김"
+      },
+      {
+        "emoji": "🧀",
+        "food": "부드러운 치즈",
+        "why": "산도가 기름진 맛을 받습니다",
+        "shopKeyword": "브리치즈"
+      }
+    ],
+    "pairingTip": "치킨과 아주 잘 맞습니다.",
+    "avoidPairing": "진한 고기 요리와는 존재감이 약합니다.",
+    "similar": [
+      "프레시넷 코르돈 네그로",
+      "니콜라 푀야트 브뤼 리저브",
+      "빌라 산디 프로세코"
+    ],
+    "trivia": "전통 방식 스파클링은 병 안에서 두 번째 발효를 일으켜 기포를 만듭니다.",
+    "servingTemp": "6~8℃",
+    "servingNote": "차갑게, 디캔팅은 하지 마세요. 기포가 날아갑니다.",
+    "aging": "3~5년이 좋습니다.",
+    "tips": [
+      "샴페인 값이 부담될 때 좋은 대안입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "카테나 말벡",
+    "searchKeyword": "카테나 말벡",
+    "producer": "Bodega Catena Zapata",
+    "type": "레드 와인 · 말벡",
+    "vintage": null,
+    "region": "멘도사",
+    "country": "아르헨티나",
+    "alcohol": "13.5%",
+    "liquidColor": "#54182A",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "국내 유통이 매우 활발한 아르헨티나 말벡입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 74
+      },
+      {
+        "axis": "당도",
+        "value": 20
+      },
+      {
+        "axis": "산도",
+        "value": 62
+      },
+      {
+        "axis": "탄닌",
+        "value": 66
+      }
+    ],
+    "tastingNotes": "검붉은 자두와 제비꽃, 코코아 향이 진하게 이어집니다. 안데스 고지대에서 자란 포도라 색이 유난히 짙고 과실이 농밀하면서도 산도가 살아 있습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "말벡 100%"
+      },
+      {
+        "label": "고도",
+        "value": "해발 900~1,500m"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 12개월"
+      }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2031",
+    "drinkUntil": "2038",
+    "history": [
+      {
+        "year": "1902",
+        "event": "이탈리아 이민자 니콜라 카테나가 설립"
+      },
+      {
+        "year": "1990년대",
+        "event": "고지대 재배로 아르헨티나 말벡의 격을 끌어올림"
+      }
+    ],
+    "story": "말벡은 원래 프랑스 보르도 품종이었지만, 지금은 아르헨티나가 세계에서 가장 잘 만듭니다.",
+    "winery": "마야 피라미드를 닮은 건물로도 유명합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "숯불 소고기",
+        "why": "아르헨티나의 정석 조합입니다",
+        "shopKeyword": "소고기 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "양념 갈비",
+        "why": "과실 단맛이 양념과 맞물립니다",
+        "shopKeyword": "소갈비"
+      },
+      {
+        "emoji": "🌮",
+        "food": "고기 타코",
+        "why": "향신료와 어울립니다",
+        "shopKeyword": "또띠아"
+      }
+    ],
+    "pairingTip": "한국식 고기 구이 전반에 잘 맞습니다.",
+    "avoidPairing": "담백한 흰살 생선은 눌립니다.",
+    "similar": [
+      "트라피체 메달라",
+      "본템피 몬테풀치아노 다브루초",
+      "몬테스 알파 카베르네 소비뇽"
+    ],
+    "trivia": "아르헨티나는 4월 17일을 '세계 말벡의 날'로 정했습니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "30분~1시간 열어 두면 좋습니다.",
+    "aging": "5~8년이 좋습니다.",
+    "tips": [
+      "고기 구이에 맞출 레드를 값 부담 없이 찾는다면 말벡이 정답에 가깝습니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "그라함스 파인 루비 포트",
+    "searchKeyword": "그라함스 루비 포트",
+    "producer": "Graham's",
+    "type": "주정강화 와인 · 포트",
+    "vintage": null,
+    "region": "도루",
+    "country": "포르투갈",
+    "alcohol": "19%",
+    "liquidColor": "#48101E",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 루비 포트입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 82
+      },
+      {
+        "axis": "당도",
+        "value": 82
+      },
+      {
+        "axis": "산도",
+        "value": 50
+      },
+      {
+        "axis": "탄닌",
+        "value": 58
+      }
+    ],
+    "tastingNotes": "잘 익은 검은 과실과 초콜릿, 말린 무화과 향이 진하게 남습니다. 발효 도중에 브랜디를 넣어 단맛을 남긴 술이라, 한 잔이면 디저트를 대신할 만합니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "토우리가 나시오날 등 도루 토착 품종"
+      },
+      {
+        "label": "방식",
+        "value": "발효 중 주정 강화"
+      },
+      {
+        "label": "숙성",
+        "value": "오크 통 약 3년"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2027",
+    "drinkUntil": "2030",
+    "history": [
+      {
+        "year": "1820",
+        "event": "스코틀랜드 그라함 형제가 포르투에서 시작"
+      },
+      {
+        "year": "1970",
+        "event": "시밍턴 가문이 인수"
+      }
+    ],
+    "story": "18세기 영국이 프랑스와 싸우느라 프랑스 와인을 못 사자, 포르투갈에서 술을 들여왔습니다. 긴 항해에 상하지 않도록 브랜디를 넣은 것이 포트의 시작입니다.",
+    "winery": "도루 강 상류에 밭을 두고 포르투에서 숙성합니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍫",
+        "food": "다크 초콜릿",
+        "why": "단맛끼리 맞물립니다",
+        "shopKeyword": "다크초콜릿"
+      },
+      {
+        "emoji": "🧀",
+        "food": "블루치즈",
+        "why": "고전적인 짝입니다",
+        "shopKeyword": "고르곤졸라"
+      },
+      {
+        "emoji": "🥧",
+        "food": "견과 디저트",
+        "why": "말린 과실 향이 이어집니다",
+        "shopKeyword": "호두"
+      }
+    ],
+    "pairingTip": "식후에 작은 잔으로 조금만 드세요.",
+    "avoidPairing": "식사와 함께 마시면 다른 음식 맛이 묻힙니다.",
+    "similar": [
+      "샌드맨 포트",
+      "테일러스 LBV 포트",
+      "페드로 히메네스 셰리"
+    ],
+    "trivia": "루비 포트는 딴 뒤 냉장고에서 2~3주까지 마실 수 있습니다. 일반 와인보다 훨씬 오래 갑니다.",
+    "servingTemp": "14~16℃",
+    "servingNote": "살짝 서늘하게 드세요.",
+    "aging": "병 안에서 더 좋아지지는 않습니다. 사면 바로 드세요.",
+    "tips": [
+      "단맛이 강해 입문자에게는 식후주로만 권합니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "테라 노바 빈호 베르드",
+    "searchKeyword": "빈호 베르드",
+    "producer": "Vinho Verde DOC",
+    "type": "화이트 와인 · 블렌드",
+    "vintage": null,
+    "region": "미뉴",
+    "country": "포르투갈",
+    "alcohol": "9.5%",
+    "liquidColor": "#F0F2C6",
+    "confidence": 85,
+    "knowledge": "medium",
+    "basis": "국내 편의점·마트에서 쉽게 보이는 저알코올 화이트입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 30
+      },
+      {
+        "axis": "당도",
+        "value": 28
+      },
+      {
+        "axis": "산도",
+        "value": 82
+      },
+      {
+        "axis": "탄닌",
+        "value": 3
+      }
+    ],
+    "tastingNotes": "라임과 청사과 향에 아주 미세한 기포가 혀에 남습니다. 알코올이 낮고 값이 눅어, 더운 날 얼음 없이 시원하게 마시기 좋습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "로우레이루, 트라자두라 등"
+      },
+      {
+        "label": "등급",
+        "value": "빈호 베르드 DOC"
+      },
+      {
+        "label": "특징",
+        "value": "미세 기포"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2027",
+    "history": [
+      {
+        "year": "1908",
+        "event": "빈호 베르드 지역이 법으로 정해짐"
+      },
+      {
+        "year": "현재",
+        "event": "여름 와인으로 세계적으로 인기"
+      }
+    ],
+    "story": "'초록 와인'이라는 뜻이지만 색이 초록인 것은 아닙니다. 어릴 때 마신다는 뜻입니다.",
+    "winery": "포르투갈 북서부 미뉴 지방에서 만듭니다.",
+    "foodPairing": [
+      {
+        "emoji": "🦐",
+        "food": "해산물",
+        "why": "산도가 비린맛을 잡습니다",
+        "shopKeyword": "생새우"
+      },
+      {
+        "emoji": "🥗",
+        "food": "샐러드",
+        "why": "가벼워서 잘 맞습니다",
+        "shopKeyword": "샐러드 채소"
+      },
+      {
+        "emoji": "🍗",
+        "food": "치킨",
+        "why": "기포가 기름을 씻어 줍니다",
+        "shopKeyword": "치킨"
+      }
+    ],
+    "pairingTip": "가장 값싸게 시원한 화이트를 마시고 싶을 때 좋습니다.",
+    "avoidPairing": "진한 요리와는 존재감이 사라집니다.",
+    "similar": [
+      "알바리뇨 마르틴 코닥스",
+      "제니 루가나",
+      "산타 마르게리타 피노 그리지오"
+    ],
+    "trivia": "알코올이 9% 안팎이라 와인 중에서도 가장 가벼운 축입니다.",
+    "servingTemp": "6~8℃",
+    "servingNote": "아주 차갑게 드세요.",
+    "aging": "출시 후 1~2년 안에 마셔야 합니다.",
+    "tips": [
+      "와인이 처음이고 도수가 부담스럽다면 좋은 출발점입니다"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "본 클라이맷 피노 누아",
+    "searchKeyword": "본 클라이맷 피노 누아",
+    "producer": "Au Bon Climat",
+    "type": "레드 와인 · 피노 누아",
+    "vintage": null,
+    "region": "산타 바바라",
+    "country": "미국",
+    "alcohol": "13.5%",
+    "liquidColor": "#8C3040",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "캘리포니아 피노 누아의 대표 이름 중 하나입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 54
+      },
+      {
+        "axis": "당도",
+        "value": 16
+      },
+      {
+        "axis": "산도",
+        "value": 72
+      },
+      {
+        "axis": "탄닌",
+        "value": 40
+      }
+    ],
+    "tastingNotes": "붉은 체리와 장미, 옅은 흙내가 이어집니다. 캘리포니아 피노 중에서도 부르고뉴 쪽에 가까운 결이라, 과실만 앞세운 미국 피노와는 다른 인상을 줍니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "피노 누아 100%"
+      },
+      {
+        "label": "숙성",
+        "value": "프렌치 오크 약 12개월"
+      },
+      {
+        "label": "지역",
+        "value": "산타 바바라 카운티"
+      }
+    ],
+    "drinkFrom": "2026",
+    "drinkPeak": "2030",
+    "drinkUntil": "2036",
+    "history": [
+      {
+        "year": "1982",
+        "event": "짐 클렌데넌이 설립"
+      },
+      {
+        "year": "현재",
+        "event": "캘리포니아 피노의 기준점으로 평가"
+      }
+    ],
+    "story": "설립자는 부르고뉴에서 일하며 배운 방식을 캘리포니아에 그대로 옮겼습니다. 당시로서는 흔치 않은 선택이었습니다.",
+    "winery": "태평양에서 불어오는 찬 바람이 밭을 식혀 줍니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "닭요리",
+        "why": "가벼운 탄닌이 흰살과 맞습니다",
+        "shopKeyword": "닭고기"
+      },
+      {
+        "emoji": "🐟",
+        "food": "연어",
+        "why": "붉은 과실이 기름진 살을 받칩니다",
+        "shopKeyword": "생연어"
+      },
+      {
+        "emoji": "🍄",
+        "food": "버섯 요리",
+        "why": "흙내끼리 이어집니다",
+        "shopKeyword": "표고버섯"
+      }
+    ],
+    "pairingTip": "탄닌이 약해 음식을 가리지 않습니다.",
+    "avoidPairing": "아주 진한 소스는 술을 덮습니다.",
+    "similar": [
+      "도멘 파블레 부르고뉴 피노 누아",
+      "클라우디 베이 피노 누아",
+      "메오 카뮈제 부르고뉴"
+    ],
+    "trivia": "영화 '사이드웨이' 이후 캘리포니아 피노 값이 크게 올랐습니다.",
+    "servingTemp": "14~16℃",
+    "servingNote": "살짝 서늘하게 드세요. 레드지만 실온이면 무거워집니다.",
+    "aging": "8년 안팎이 좋습니다.",
+    "tips": [
+      "레드가 무겁게 느껴진다면 피노 누아부터 시작해 보세요"
+    ]
+  },
+  {
+    "category": "wine",
+    "name": "덕혼 데코이 메를로",
+    "searchKeyword": "덕혼 데코이 메를로",
+    "producer": "Duckhorn Vineyards",
+    "type": "레드 와인 · 메를로",
+    "vintage": null,
+    "region": "캘리포니아",
+    "country": "미국",
+    "alcohol": "14%",
+    "liquidColor": "#5E1B28",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "국내 유통이 활발한 캘리포니아 메를로입니다.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 68
+      },
+      {
+        "axis": "당도",
+        "value": 20
+      },
+      {
+        "axis": "산도",
+        "value": 58
+      },
+      {
+        "axis": "탄닌",
+        "value": 54
+      }
+    ],
+    "tastingNotes": "잘 익은 자두와 블랙체리, 모카 향이 부드럽게 이어집니다. 메를로답게 탄닌이 둥글어 열자마자 편하게 마실 수 있습니다.",
+    "specs": [
+      {
+        "label": "품종",
+        "value": "메를로 중심"
+      },
+      {
+        "label": "숙성",
+        "value": "오크 약 12개월"
+      },
+      {
+        "label": "지역",
+        "value": "캘리포니아"
+      }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2029",
+    "drinkUntil": "2034",
+    "history": [
+      {
+        "year": "1976",
+        "event": "덕혼 설립, 나파에서 메를로에 집중"
+      },
+      {
+        "year": "현재",
+        "event": "데코이는 접근하기 쉬운 대중 라인"
+      }
+    ],
+    "story": "덕혼은 남들이 카베르네만 볼 때 메를로에 집중해 이 품종의 격을 올린 곳입니다.",
+    "winery": "나파 밸리에 본거지를 두고 있습니다.",
+    "foodPairing": [
+      {
+        "emoji": "🍔",
+        "food": "햄버거",
+        "why": "부드러운 탄닌이 편하게 맞습니다",
+        "shopKeyword": "소고기 다짐육"
+      },
+      {
+        "emoji": "🍖",
+        "food": "돼지고기 구이",
+        "why": "과실 단맛이 어울립니다",
+        "shopKeyword": "돼지 목살"
+      },
+      {
+        "emoji": "🍕",
+        "food": "피자",
+        "why": "부담 없이 잘 맞습니다",
+        "shopKeyword": "피자"
+      }
+    ],
+    "pairingTip": "평일 저녁에 열기 좋은 무난한 레드입니다.",
+    "avoidPairing": "매운 음식과는 어색합니다.",
+    "similar": [
+      "케이머스 카베르네 소비뇽",
+      "몬테스 알파 메를로",
+      "샤또 도르비에 크뤼 부르주아"
+    ],
+    "trivia": "메를로는 영화 '사이드웨이'에서 혹평받은 뒤 미국 판매량이 크게 떨어졌습니다.",
+    "servingTemp": "16~17℃",
+    "servingNote": "바로 드셔도 됩니다.",
+    "aging": "5년 안팎이 좋습니다.",
+    "tips": [
+      "떫은맛이 부담스럽다면 메를로가 가장 편한 선택입니다"
+    ]
+  }
+]
