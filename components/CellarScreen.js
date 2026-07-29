@@ -57,6 +57,11 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
         onToast?.("판매처 API 키가 설정되지 않아 시세를 확인할 수 없습니다.", true);
         return;
       }
+      // 방금 돌렸으면 같은 값을 다시 긁을 뿐이다
+      if (d.cooldown) {
+        onToast?.(`방금 갱신했습니다. ${Math.ceil(d.cooldown / 60)}분 뒤에 다시 확인할 수 있습니다.`);
+        return;
+      }
       setDeals(d.deals || []);
       onReload?.();
       onToast?.(`${d.checked ?? 0}개 항목의 시세를 갱신했습니다.`);
@@ -207,6 +212,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
             {value.unpriced > 0
               ? `${value.unpriced}병은 아직 시세를 확인하지 못했습니다. 매일 자동으로 다시 확인하며, 지금 바로 채우려면 위 버튼을 누르세요.`
               : "판매처 최저가를 매일 확인해 반영합니다. 실제 거래가와는 다를 수 있습니다."}
+            {" "}판매처 조회는 무료라 갱신에 분석 비용이 들지 않습니다.
           </div>
         </div>
       )}
