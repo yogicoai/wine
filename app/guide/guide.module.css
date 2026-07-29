@@ -301,6 +301,53 @@
   line-height: 1.85;
 }
 
+/* ── 데이터 추가 이력 ── */
+.log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 46rem;
+  border-left: 1px solid var(--line-soft);
+}
+.logItem {
+  position: relative;
+  padding: 0 0 1.6rem 1.5rem;
+}
+.logItem:last-child { padding-bottom: 0; }
+/* 왼쪽 선 위에 점을 얹어 시간순으로 읽히게 한다 */
+.logItem::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 0.5rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.logHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+.logHead b { color: var(--ink); font-size: 0.95rem; font-weight: 700; }
+.logMeta {
+  color: var(--gold);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.logBody {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.75;
+  color: var(--ink-dim);
+}
+
 .footer {
   padding: 2.6rem 0 0;
   color: var(--ink-dim);

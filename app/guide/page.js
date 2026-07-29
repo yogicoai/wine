@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { BrandWord } from "@/components/Brand";
 import { catalogStats } from "@/lib/catalog";
 import s from "./guide.module.css";
@@ -14,7 +16,19 @@ export const metadata = {
 // 보유 종수는 계속 늘어나므로 실제 DB 값을 보여 준다 (한 시간에 한 번 갱신)
 export const revalidate = 3600;
 
+// 배치를 채울 때마다 data/changelog.json 맨 앞에 한 줄만 더하면 이 절이 갱신된다
+async function readChangelog() {
+  try {
+    const raw = await readFile(path.join(process.cwd(), "data", "changelog.json"), "utf-8");
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return []; // 파일이 없어도 페이지는 그대로 뜬다
+  }
+}
+
 export default async function GuidePage() {
+  const changelog = await readChangelog();
   const catalog = await catalogStats().catch(() => null);
   const owned = catalog?.total ? catalog.total.toLocaleString("ko-KR") : "4,000+";
   // 스토리·페어링까지 갖춘 항목 수. 전체 보유 수와 성격이 달라 나눠서 보여 준다.
@@ -883,6 +897,30 @@ export default async function GuidePage() {
       <section className={s.section}>
         <div className={s.num}>11</div>
         <div className={s.body}>
+          <h2 className={s.h2}>데이터가 늘어난 기록</h2>
+          <p className={s.sub}>
+            정식 분석을 채울 때마다 무엇이 들어갔는지 여기에 남깁니다. 이 목록만 봐도 카탈로그가
+            어떤 속도로, 어느 방향으로 두꺼워지고 있는지 알 수 있습니다.
+          </p>
+          <ol className={s.log}>
+            {changelog.map((c) => (
+              <li key={`${c.date}-${c.title}`} className={s.logItem}>
+                <div className={s.logHead}>
+                  <b>{c.title}</b>
+                  <span className={s.logMeta}>
+                    +{c.count}종 · 누적 {c.total.toLocaleString("ko-KR")}종
+                  </span>
+                </div>
+                <p className={s.logBody}>{c.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className={s.section}>
+        <div className={s.num}>12</div>
+        <div className={s.body}>
           <h2 className={s.h2}>자주 묻는 질문</h2>
           <dl className={s.faq}>
             <div className={s.qa}>
@@ -921,7 +959,7 @@ export default async function GuidePage() {
 
           <div className={s.footer}>
             <span>Bottle Lens — 기능 설명서</span>
-            <span>2026. 07. 27.</span>
+            <span>2026. 07. 29.</span>
           </div>
         </div>
       </section>
