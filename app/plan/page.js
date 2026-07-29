@@ -25,6 +25,7 @@ const COST_ROWS = [
 export default async function PlanPage() {
   const catalog = await catalogStats().catch(() => null);
   const owned = catalog?.total ? catalog.total.toLocaleString("ko-KR") : "4,000+";
+  const deep = catalog?.full ? catalog.full.toLocaleString("ko-KR") : "100+";
 
   return (
     <div className={s.wrap}>
@@ -116,6 +117,7 @@ export default async function PlanPage() {
                 <tr><td>가격 이력 · 특가 알림</td><td className={s.was}>완료 · 데이터 축적 중</td></tr>
                 <tr><td>집단 평점</td><td className={s.was}>구조만 · 표 0개</td></tr>
                 <tr><td><b>카탈로그 데이터</b></td><td className={s.now}><b>{owned}종 — 매일 자동 확장 중</b></td></tr>
+                <tr><td>└ 정식 분석</td><td className={s.was}>{deep}종 (스토리·페어링까지). 나머지는 이름·산지·품종·가격대</td></tr>
                 <tr><td><b>로그인 · 19세 인증</b></td><td className={s.was}><b>미착수 — 출시 선행 조건</b></td></tr>
               </tbody>
             </table>

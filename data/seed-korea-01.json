@@ -1,0 +1,493 @@
+[
+  {
+    "category": "traditional",
+    "name": "화요 41",
+    "searchKeyword": "화요 41도",
+    "producer": "광주요",
+    "type": "증류식 소주",
+    "vintage": null,
+    "region": "경기 여주",
+    "country": "한국",
+    "alcohol": "41%",
+    "liquidColor": "#F5F2E8",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "국내 프리미엄 증류주를 대표하는 제품입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 62 },
+      { "axis": "단맛", "value": 34 },
+      { "axis": "곡물향", "value": 72 },
+      { "axis": "부드러움", "value": 70 }
+    ],
+    "tastingNotes": "쌀에서 온 은은한 단내와 배·참외 같은 과일 향이 함께 옵니다. 41도인데도 목넘김이 매끄러워 도수를 잊게 만듭니다.",
+    "specs": [
+      { "label": "원료", "value": "국내산 쌀 100%" },
+      { "label": "증류", "value": "감압 증류" },
+      { "label": "도수", "value": "41%" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2035",
+    "history": [
+      { "year": "2005", "event": "도자기 회사 광주요가 출시" },
+      { "year": "현재", "event": "국내 증류식 소주 시장을 되살린 제품으로 평가" }
+    ],
+    "story": "도자기를 만들던 회사가 '그릇에 담을 술이 없다'며 만들었습니다. 술보다 그릇이 먼저였던 셈입니다.",
+    "winery": "여주의 증류소에서 국내산 쌀로만 빚습니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "한우 구이", "why": "깨끗한 목넘김이 기름을 정리합니다", "shopKeyword": "한우" },
+      { "emoji": "🐟", "food": "회", "why": "곡물 단내가 생선 맛을 덮지 않습니다", "shopKeyword": "모둠회" },
+      { "emoji": "🍲", "food": "전골", "why": "국물 요리와 무난하게 어울립니다", "shopKeyword": "전골" }
+    ],
+    "pairingTip": "차게 해서 작은 잔에 마시는 것이 정석입니다.",
+    "avoidPairing": "단 디저트와는 어울리지 않습니다.",
+    "similar": ["일품진로", "안동소주", "화요 25"],
+    "trivia": "숫자는 도수를 뜻합니다. 17·25·41·53이 있습니다.",
+    "servingTemp": "차갑게 또는 실온",
+    "servingNote": "냉동실에 20분 두었다 마시면 훨씬 부드럽습니다.",
+    "aging": "개봉 후에도 오래 갑니다.",
+    "tips": ["하이볼로 만들면 소주 특유의 향이 부드러워집니다"]
+  },
+  {
+    "category": "traditional",
+    "name": "안동소주",
+    "searchKeyword": "안동소주",
+    "producer": "안동소주",
+    "type": "증류식 소주",
+    "vintage": null,
+    "region": "경북 안동",
+    "country": "한국",
+    "alcohol": "45%",
+    "liquidColor": "#F6F3EA",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "경상북도 무형문화재로 지정된 전통 증류주입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 70 },
+      { "axis": "단맛", "value": 22 },
+      { "axis": "곡물향", "value": 84 },
+      { "axis": "부드러움", "value": 48 }
+    ],
+    "tastingNotes": "누룩과 쌀에서 온 구수한 향이 진합니다. 도수가 높아 처음엔 화하게 올라오지만, 뒤에 곡물의 단내가 길게 남습니다.",
+    "specs": [
+      { "label": "원료", "value": "쌀, 누룩" },
+      { "label": "증류", "value": "상압 증류(전통 소줏고리 방식 계승)" },
+      { "label": "도수", "value": "45% 내외" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2040",
+    "history": [
+      { "year": "고려시대", "event": "몽골에서 증류법이 전해지며 안동에 자리잡음" },
+      { "year": "1987", "event": "경상북도 무형문화재로 지정" }
+    ],
+    "story": "몽골군이 일본 원정을 준비하며 안동에 병참기지를 두었고, 그때 증류 기술이 남았다고 전해집니다.",
+    "winery": "안동 지역 여러 양조장에서 각자의 방식으로 빚습니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "안동찜닭", "why": "같은 고장의 음식입니다", "shopKeyword": "찜닭" },
+      { "emoji": "🐟", "food": "간고등어", "why": "짠맛이 곡물 단내를 끌어올립니다", "shopKeyword": "간고등어" },
+      { "emoji": "🥩", "food": "수육", "why": "높은 도수가 기름을 정리합니다", "shopKeyword": "수육용 돼지고기" }
+    ],
+    "pairingTip": "기름진 고기 요리와 특히 잘 맞습니다.",
+    "avoidPairing": "가벼운 샐러드로는 도수를 감당하지 못합니다.",
+    "similar": ["화요 41", "일품진로", "문배주"],
+    "trivia": "제조사마다 도수와 맛이 다릅니다. 같은 '안동소주'라도 한 가지가 아닙니다.",
+    "servingTemp": "실온 또는 차갑게",
+    "servingNote": "작은 잔에 조금씩. 물이나 얼음을 섞어도 좋습니다.",
+    "aging": "오래 두어도 변하지 않습니다.",
+    "tips": ["도수가 높으니 첫 잔은 천천히 드세요"]
+  },
+  {
+    "category": "traditional",
+    "name": "느린마을 막걸리",
+    "searchKeyword": "느린마을 막걸리",
+    "producer": "배상면주가",
+    "type": "생막걸리",
+    "vintage": null,
+    "region": "한국",
+    "country": "한국",
+    "alcohol": "6%",
+    "liquidColor": "#F0EAD8",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "국내 프리미엄 막걸리 시장을 연 대표 제품입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 48 },
+      { "axis": "단맛", "value": 40 },
+      { "axis": "곡물향", "value": 70 },
+      { "axis": "산미", "value": 52 }
+    ],
+    "tastingNotes": "쌀의 단내와 은은한 신맛이 함께 옵니다. 아스파탐 같은 감미료를 넣지 않아 뒷맛이 깔끔하고, 시간이 지날수록 신맛이 올라옵니다.",
+    "specs": [
+      { "label": "원료", "value": "국내산 쌀, 누룩, 물" },
+      { "label": "특징", "value": "무감미료 생막걸리" },
+      { "label": "도수", "value": "6%" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2025",
+    "history": [
+      { "year": "2011", "event": "배상면주가가 출시" },
+      { "year": "현재", "event": "직영 브루어리에서 갓 빚은 막걸리를 판매" }
+    ],
+    "story": "살아 있는 효모가 계속 발효하기 때문에 날짜에 따라 맛이 달라집니다. 사는 날마다 다른 술인 셈입니다.",
+    "winery": "배상면주가는 국내 전통주 현대화를 이끈 회사입니다.",
+    "foodPairing": [
+      { "emoji": "🥘", "food": "파전", "why": "고전 조합입니다. 기름을 산미가 정리합니다", "shopKeyword": "부침가루" },
+      { "emoji": "🍖", "food": "보쌈", "why": "단맛이 삶은 고기와 맞습니다", "shopKeyword": "보쌈용 삼겹살" },
+      { "emoji": "🌶️", "food": "골뱅이 무침", "why": "매콤함을 눌러 줍니다", "shopKeyword": "골뱅이" }
+    ],
+    "pairingTip": "차갑게 해서 흔들어 마십니다. 가라앉은 앙금이 맛의 절반입니다.",
+    "avoidPairing": "기름지지 않은 담백한 음식과는 심심합니다.",
+    "similar": ["지평 생막걸리", "복순도가 손막걸리", "서울장수 막걸리"],
+    "trivia": "생막걸리는 냉장 보관이 필수입니다. 상온에 두면 계속 발효해 병이 부풀 수 있습니다.",
+    "servingTemp": "5~10℃",
+    "servingNote": "위아래로 천천히 흔들어 앙금을 섞으세요. 세게 흔들면 넘칩니다.",
+    "aging": "숙성하는 술이 아닙니다. 사서 바로 드세요.",
+    "tips": ["유통기한이 짧습니다. 냉장고에 두고 며칠 안에 드세요"]
+  },
+  {
+    "category": "sake",
+    "name": "닷사이 45 준마이 다이긴조",
+    "searchKeyword": "닷사이 45",
+    "producer": "아사히주조",
+    "type": "준마이 다이긴조 사케",
+    "vintage": null,
+    "region": "야마구치",
+    "country": "일본",
+    "alcohol": "16%",
+    "liquidColor": "#F7F5EC",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "국내에서 가장 널리 알려진 프리미엄 사케입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 46 },
+      { "axis": "단맛", "value": 44 },
+      { "axis": "곡물향", "value": 40 },
+      { "axis": "산미", "value": 48 }
+    ],
+    "tastingNotes": "멜론과 배 같은 과일 향이 화사하게 올라옵니다. 쌀을 45%까지 깎아 잡미가 거의 없고, 물처럼 매끄럽게 넘어갑니다.",
+    "specs": [
+      { "label": "정미율", "value": "45%(쌀을 55% 깎아냄)" },
+      { "label": "쌀", "value": "야마다니시키" },
+      { "label": "도수", "value": "16%" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1948", "event": "아사히주조 창업" },
+      { "year": "1990년대", "event": "폐업 위기에서 다이긴조 전문으로 전환해 되살아남" }
+    ],
+    "story": "망하기 직전의 작은 양조장이 '가장 좋은 것만 만들겠다'며 방향을 틀었습니다. 지금은 일본 사케의 대표 수출품이 되었습니다.",
+    "winery": "산속 작은 마을의 양조장으로, 두이(장인) 없이 데이터로 빚는 것으로 유명합니다.",
+    "foodPairing": [
+      { "emoji": "🍣", "food": "초밥", "why": "깨끗한 맛이 생선을 살립니다", "shopKeyword": "초밥" },
+      { "emoji": "🦐", "food": "새우 요리", "why": "과일 향이 단맛 나는 살과 맞습니다", "shopKeyword": "생새우" },
+      { "emoji": "🧀", "food": "크림치즈", "why": "의외로 잘 어울리는 조합입니다", "shopKeyword": "크림치즈" }
+    ],
+    "pairingTip": "일식뿐 아니라 담백한 한식과도 잘 맞습니다.",
+    "avoidPairing": "맵고 진한 양념은 이 술의 섬세함을 지웁니다.",
+    "similar": ["쿠보타 만쥬", "핫카이산 준마이 다이긴조", "쥰마이 하쿠츠루"],
+    "trivia": "숫자는 정미율입니다. 23은 쌀을 77%나 깎아낸 최상급입니다.",
+    "servingTemp": "8~12℃",
+    "servingNote": "차갑게 드세요. 데우면 향이 날아갑니다.",
+    "aging": "숙성하는 술이 아닙니다. 개봉 후 일주일 안에 드세요.",
+    "tips": ["와인 잔에 따르면 향이 훨씬 잘 열립니다"]
+  },
+  {
+    "category": "brandy",
+    "name": "헤네시 VSOP",
+    "searchKeyword": "헤네시 VSOP",
+    "producer": "Hennessy",
+    "type": "꼬냑",
+    "vintage": null,
+    "region": "꼬냑",
+    "country": "프랑스",
+    "alcohol": "40%",
+    "liquidColor": "#B26A24",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "국내 유통이 가장 많은 꼬냑 중 하나입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 70 },
+      { "axis": "단맛", "value": 48 },
+      { "axis": "과일향", "value": 66 },
+      { "axis": "오크", "value": 62 }
+    ],
+    "tastingNotes": "말린 살구와 바닐라, 계피 향이 부드럽게 이어집니다. VS보다 오래 재워 각이 잡혀 있고, XO만큼 무겁지 않아 균형이 좋습니다.",
+    "specs": [
+      { "label": "등급", "value": "VSOP(최소 4년 이상 숙성)" },
+      { "label": "원료", "value": "포도(위니 블랑 중심)" },
+      { "label": "도수", "value": "40%" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2035",
+    "history": [
+      { "year": "1765", "event": "리처드 헤네시가 설립" },
+      { "year": "1817", "event": "영국 왕세자의 요청으로 VSOP 등급이 만들어짐" }
+    ],
+    "story": "꼬냑은 와인을 두 번 증류해 만듭니다. 포도로 시작하지만 결과는 전혀 다른 술이 됩니다.",
+    "winery": "꼬냑 지방 최대 생산자로, 여러 농가의 원액을 블렌딩합니다.",
+    "foodPairing": [
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "오크와 카카오가 맞물립니다", "shopKeyword": "다크초콜릿" },
+      { "emoji": "🌰", "food": "구운 견과", "why": "고소함이 이어집니다", "shopKeyword": "구운 아몬드" },
+      { "emoji": "🧀", "food": "블루치즈", "why": "짠맛이 단맛을 끌어올립니다", "shopKeyword": "블루치즈" }
+    ],
+    "pairingTip": "식후주로 마시는 것이 정석이지만, 하이볼로도 널리 마십니다.",
+    "avoidPairing": "매운 안주는 향을 덮습니다.",
+    "similar": ["레미마틴 VSOP", "마르텔 VSOP", "까뮤 VSOP"],
+    "trivia": "VS·VSOP·XO는 숙성 기간 등급입니다. 뒤로 갈수록 오래 재웁니다.",
+    "servingTemp": "실온",
+    "servingNote": "손으로 잔을 감싸 데우면 향이 열립니다.",
+    "aging": "병에서는 더 익지 않습니다.",
+    "tips": ["꼬냑 하이볼은 진저에일과 섞는 방식이 인기입니다"]
+  },
+  {
+    "category": "gin",
+    "name": "봄베이 사파이어",
+    "searchKeyword": "봄베이 사파이어",
+    "producer": "Bombay Sapphire",
+    "type": "런던 드라이 진",
+    "vintage": null,
+    "region": "영국",
+    "country": "영국",
+    "alcohol": "47%",
+    "liquidColor": "#EFF4F6",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "국내에서 가장 널리 유통되는 진 중 하나입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 48 },
+      { "axis": "단맛", "value": 14 },
+      { "axis": "주니퍼", "value": 66 },
+      { "axis": "시트러스", "value": 62 }
+    ],
+    "tastingNotes": "주니퍼베리와 레몬 껍질, 고수씨 향이 또렷합니다. 10가지 식물을 증기에 통과시켜 향을 입히는 방식이라 가볍고 산뜻합니다.",
+    "specs": [
+      { "label": "보태니컬", "value": "10종" },
+      { "label": "방식", "value": "베이퍼 인퓨전(증기 추출)" },
+      { "label": "도수", "value": "47%" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2035",
+    "history": [
+      { "year": "1761", "event": "원 레시피가 만들어짐" },
+      { "year": "1987", "event": "사파이어 출시" }
+    ],
+    "story": "파란 병은 인도에서 발견된 사파이어에서 따왔습니다. 진의 이름에 인도가 들어간 것은 식민지 시절 진토닉이 말라리아 예방약으로 쓰였기 때문입니다.",
+    "winery": "영국 햄프셔의 옛 제지공장을 개조한 증류소에서 만듭니다.",
+    "foodPairing": [
+      { "emoji": "🍋", "food": "레몬 곁들인 해산물", "why": "시트러스 향이 이어집니다", "shopKeyword": "새우" },
+      { "emoji": "🥒", "food": "오이", "why": "진토닉에 오이를 넣으면 훨씬 산뜻합니다", "shopKeyword": "오이" },
+      { "emoji": "🧀", "food": "염소 치즈", "why": "허브 향과 맞습니다", "shopKeyword": "고트치즈" }
+    ],
+    "pairingTip": "진토닉이 정석입니다. 토닉워터는 차갑게, 얼음은 가득.",
+    "avoidPairing": "니트로 마시기에는 향이 강합니다.",
+    "similar": ["탱커레이", "헨드릭스", "몽키 47"],
+    "trivia": "'런던 드라이'는 지역이 아니라 제조 방식을 뜻합니다. 런던에서 안 만들어도 됩니다.",
+    "servingTemp": "차갑게",
+    "servingNote": "진 1 : 토닉 3, 얼음 가득. 레몬 껍질을 비틀어 넣으세요.",
+    "aging": "숙성하지 않습니다.",
+    "tips": ["토닉워터의 품질이 진토닉 맛의 절반을 차지합니다"]
+  },
+  {
+    "category": "beer",
+    "name": "기네스 드래프트",
+    "searchKeyword": "기네스 드래프트",
+    "producer": "Guinness",
+    "type": "아이리시 스타우트",
+    "vintage": null,
+    "region": "더블린",
+    "country": "아일랜드",
+    "alcohol": "4.2%",
+    "liquidColor": "#1A0E08",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "세계에서 가장 유명한 흑맥주로 국내 유통도 활발합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 58 },
+      { "axis": "단맛", "value": 26 },
+      { "axis": "쓴맛", "value": 62 },
+      { "axis": "로스팅", "value": 82 }
+    ],
+    "tastingNotes": "볶은 보리에서 온 커피와 다크 초콜릿 향이 진합니다. 색은 검은데 도수는 4.2%로 낮고, 질소 거품 덕에 크림처럼 부드럽습니다.",
+    "specs": [
+      { "label": "종류", "value": "드라이 스타우트" },
+      { "label": "가스", "value": "질소 + 이산화탄소" },
+      { "label": "도수", "value": "4.2%" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2025",
+    "history": [
+      { "year": "1759", "event": "아서 기네스가 더블린 양조장을 9,000년 임차" },
+      { "year": "1959", "event": "질소 주입 방식을 개발해 지금의 질감을 완성" }
+    ],
+    "story": "창업자는 양조장을 9,000년 계약으로 빌렸습니다. 아직 8,700년 넘게 남았습니다.",
+    "winery": "더블린 세인트 제임스 게이트 양조장.",
+    "foodPairing": [
+      { "emoji": "🦪", "food": "굴", "why": "아일랜드의 고전 조합입니다", "shopKeyword": "생굴" },
+      { "emoji": "🥩", "food": "소고기 스튜", "why": "로스팅 향이 조린 고기와 맞습니다", "shopKeyword": "소고기 사태" },
+      { "emoji": "🧀", "food": "체다 치즈", "why": "짠맛이 쓴맛을 눕힙니다", "shopKeyword": "체다치즈" }
+    ],
+    "pairingTip": "생각보다 도수가 낮아 식사 내내 마시기 좋습니다.",
+    "avoidPairing": "섬세한 흰살 생선은 로스팅 향에 묻힙니다.",
+    "similar": ["머피스 아이리시 스타우트", "산미구엘 다크", "임페리얼 스타우트"],
+    "trivia": "캔 안의 작은 공(위젯)이 질소를 뿜어 생맥주 같은 거품을 만듭니다.",
+    "servingTemp": "6~8℃",
+    "servingNote": "잔을 45도로 기울여 3/4까지 따르고, 거품이 가라앉은 뒤 마저 채웁니다.",
+    "aging": "숙성하지 않습니다. 신선할 때 드세요.",
+    "tips": ["너무 차게 하면 로스팅 향이 사라집니다. 라거보다 덜 차갑게"]
+  },
+  {
+    "category": "wine",
+    "name": "핑구스",
+    "searchKeyword": "핑구스 와인",
+    "producer": "Dominio de Pingus",
+    "type": "레드 와인 · 템프라니요",
+    "vintage": null,
+    "region": "리베라 델 두에로",
+    "country": "스페인",
+    "alcohol": "14.5%",
+    "liquidColor": "#4C1220",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "스페인 최고가 와인 중 하나로 자료가 충분합니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 88 },
+      { "axis": "당도", "value": 16 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "탄닌", "value": 82 }
+    ],
+    "tastingNotes": "검은 과실과 감초, 흑연 향이 압도적으로 밀려옵니다. 100년 가까운 고목에서 나온 포도라 농도가 대단하고, 탄닌이 촘촘합니다.",
+    "specs": [
+      { "label": "품종", "value": "템프라니요 100%" },
+      { "label": "수령", "value": "60~100년 고목" },
+      { "label": "생산량", "value": "연간 수천 병 수준" }
+    ],
+    "drinkFrom": "2032",
+    "drinkPeak": "2042",
+    "drinkUntil": "2060",
+    "history": [
+      { "year": "1995", "event": "덴마크 출신 피터 시섹이 첫 빈티지 생산" },
+      { "year": "1997", "event": "첫 물량을 실은 배가 침몰해 값이 더 뛰는 일이 있었음" }
+    ],
+    "story": "첫 빈티지를 실은 배가 대서양에서 가라앉았습니다. 남은 병의 값이 그 뒤로 치솟았다는 이야기가 전해집니다.",
+    "winery": "유기농·비오디나미로 아주 적은 양만 만듭니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "숙성 소고기", "why": "강한 탄닌이 육향을 받습니다", "shopKeyword": "한우 등심" },
+      { "emoji": "🍖", "food": "새끼돼지 통구이", "why": "이 지방의 고전 조합입니다", "shopKeyword": "돼지 목살" },
+      { "emoji": "🧀", "food": "숙성 만체고", "why": "짠맛이 탄닌을 눕힙니다", "shopKeyword": "만체고 치즈" }
+    ],
+    "pairingTip": "아주 특별한 자리에 여는 술입니다.",
+    "avoidPairing": "가벼운 음식으로는 받쳐 주지 못합니다.",
+    "similar": ["베가 시실리아 우니코", "샤또 페트뤼스", "샤또 파비"],
+    "trivia": "'핑구스'는 만든 사람의 어린 시절 별명입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "두 시간 이상 열어 두세요.",
+    "aging": "15년 이상 두어야 제 모습이 나옵니다.",
+    "tips": ["어릴 때 열면 탄닌만 느껴집니다. 기다릴 자신이 없으면 다른 술이 낫습니다"]
+  },
+  {
+    "category": "wine",
+    "name": "리지 몬테 벨로",
+    "searchKeyword": "리지 몬테벨로",
+    "producer": "Ridge Vineyards",
+    "type": "레드 와인 · 카베르네 블렌드",
+    "vintage": null,
+    "region": "캘리포니아 · 산타 크루즈",
+    "country": "미국",
+    "alcohol": "13.5%",
+    "liquidColor": "#5A1826",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "파리의 심판에 출품됐던 미국 대표 카베르네입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 82 },
+      { "axis": "당도", "value": 16 },
+      { "axis": "산도", "value": 62 },
+      { "axis": "탄닌", "value": 76 }
+    ],
+    "tastingNotes": "블랙커런트와 삼나무, 민트 향이 단정하게 이어집니다. 나파보다 서늘한 산 위에서 자라 도수가 낮고 산도가 살아 있어, 미국 와인 중 가장 보르도에 가깝다는 평을 받습니다.",
+    "specs": [
+      { "label": "품종", "value": "카베르네 소비뇽 중심 보르도 블렌드" },
+      { "label": "숙성", "value": "아메리칸 오크" },
+      { "label": "밭", "value": "해발 700m 산타 크루즈 산맥" }
+    ],
+    "drinkFrom": "2030",
+    "drinkPeak": "2040",
+    "drinkUntil": "2055",
+    "history": [
+      { "year": "1885", "event": "몬테 벨로 밭에 처음 포도가 심어짐" },
+      { "year": "1976", "event": "파리의 심판에 출품" },
+      { "year": "2006", "event": "30년 뒤 재대결에서 1위를 차지" }
+    ],
+    "story": "1976년에는 5위였지만, 30년 뒤 같은 와인들로 다시 열린 시음회에서 1위를 했습니다. 오래 갈수록 진가가 드러난 셈입니다.",
+    "winery": "라벨에 성분과 양조 과정을 상세히 적는 것으로 유명합니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "안심 스테이크", "why": "절제된 구조가 부드러운 살과 맞습니다", "shopKeyword": "소고기 안심" },
+      { "emoji": "🍖", "food": "양갈비", "why": "민트 향이 허브와 이어집니다", "shopKeyword": "양갈비" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "탄닌을 눕혀 줍니다", "shopKeyword": "그뤼에르 치즈" }
+    ],
+    "pairingTip": "숙성이 필요한 와인이라 급하게 열지 마세요.",
+    "avoidPairing": "가벼운 요리와는 균형이 맞지 않습니다.",
+    "similar": ["오퍼스 원", "스택스 립 와인 셀라스 아르테미스", "샤또 딸보"],
+    "trivia": "라벨에 포도 비율과 알코올, 심지어 숙성 통 정보까지 적습니다. 미국에서 드문 일입니다.",
+    "servingTemp": "16~18℃",
+    "servingNote": "어릴 때는 두 시간쯤 열어 두세요.",
+    "aging": "20년 이상 갑니다.",
+    "tips": ["미국 와인인데 보르도처럼 마시는 것이 어울립니다"]
+  },
+  {
+    "category": "wine",
+    "name": "위스퍼링 엔젤 로제",
+    "searchKeyword": "위스퍼링엔젤 로제",
+    "producer": "Château d'Esclans",
+    "type": "로제 와인 · 그르나슈 블렌드",
+    "vintage": null,
+    "region": "프로방스",
+    "country": "프랑스",
+    "alcohol": "13%",
+    "liquidColor": "#F2C9C4",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "프로방스 로제 유행을 이끈 대표 제품입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 40 },
+      { "axis": "당도", "value": 18 },
+      { "axis": "산도", "value": 70 },
+      { "axis": "탄닌", "value": 8 }
+    ],
+    "tastingNotes": "딸기와 흰 복숭아, 감귤 껍질 향이 산뜻합니다. 색이 아주 옅은 연어빛인데, 프로방스 로제는 이 옅은 색이 곧 품질의 표시로 여겨집니다.",
+    "specs": [
+      { "label": "품종", "value": "그르나슈, 생소, 롤 등" },
+      { "label": "당도", "value": "드라이" },
+      { "label": "색", "value": "옅은 연어빛" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2027",
+    "history": [
+      { "year": "2006", "event": "사샤 리신이 샤또 데스클랑 인수" },
+      { "year": "2010년대", "event": "프로방스 로제를 세계적 유행으로 만듦" }
+    ],
+    "story": "로제는 오랫동안 '가벼운 술'로 낮게 보였습니다. 이 와인이 값과 격을 함께 올리면서 인식이 바뀌었습니다.",
+    "winery": "프로방스 코트 드 프로방스에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🥗", "food": "샐러드", "why": "가벼워서 재료를 가리지 않습니다", "shopKeyword": "샐러드 채소" },
+      { "emoji": "🍤", "food": "새우 요리", "why": "산도가 단맛 나는 살을 조여 줍니다", "shopKeyword": "생새우" },
+      { "emoji": "🍉", "food": "수박·멜론", "why": "여름 과일과 잘 맞습니다", "shopKeyword": "수박" }
+    ],
+    "pairingTip": "더운 날 낮술로 가장 잘 어울리는 와인입니다.",
+    "avoidPairing": "묵직한 고기 요리와는 존재감이 사라집니다.",
+    "similar": ["샤또 미네티 코트 드 프로방스 로제", "샤또 무통 카데 로제", "라 마르카 프로세코"],
+    "trivia": "로제는 껍질을 잠깐만 담갔다 빼서 색을 얻습니다. 담그는 시간이 곧 색입니다.",
+    "servingTemp": "8~10℃",
+    "servingNote": "차갑게 드세요.",
+    "aging": "그해 것을 마시는 술입니다. 오래 두지 마세요.",
+    "tips": ["로제는 빈티지가 최근일수록 좋습니다"]
+  }
+]

@@ -17,8 +17,8 @@ export const revalidate = 3600;
 export default async function GuidePage() {
   const catalog = await catalogStats().catch(() => null);
   const owned = catalog?.total ? catalog.total.toLocaleString("ko-KR") : "4,000+";
-  // "자동 판별 주종"도 부풀리지 않고 실제 데이터를 보유한 주종 수를 쓴다
-  const cats = catalog?.byCategory?.filter((c) => c.category && c.count > 0).length || 11;
+  // 스토리·페어링까지 갖춘 항목 수. 전체 보유 수와 성격이 달라 나눠서 보여 준다.
+  const deep = catalog?.full ? catalog.full.toLocaleString("ko-KR") : "100+";
 
   return (
     <div className={s.wrap}>
@@ -45,7 +45,7 @@ export default async function GuidePage() {
         </p>
         <div className={s.stats}>
           <div className={s.stat}><b>{owned}종</b><span>보유 술 데이터</span></div>
-          <div className={s.stat}><b>{cats}개</b><span>데이터 보유 주종</span></div>
+          <div className={s.stat}><b>{deep}종</b><span>정식 분석 완료</span></div>
           <div className={s.stat}><b>30초</b><span>스캔당 분석 시간</span></div>
           <div className={s.stat}><b>0원</b><span>DB 적중 시 비용</span></div>
         </div>
@@ -299,6 +299,36 @@ export default async function GuidePage() {
               <b> 사용자가 찾았는데 없던 술</b>은 다음에 채울 목록으로 기록되며,
               <b> 누군가 라벨을 찍으면</b> 그 술이 정식 분석과 함께 들어옵니다. 셋 다 사람 손이 들지 않고,
               앞의 둘은 AI 비용도 들지 않습니다.
+            </p>
+          </div>
+          <div className={s.edge}>
+            <h3 className={s.h4}>데이터에 두 단계가 있다</h3>
+            <p className={s.p}>
+              {owned}종을 모두 같은 깊이로 갖고 있는 것은 아닙니다. 정직하게 나누면 이렇습니다.
+            </p>
+            <div className={s.scroll}>
+              <table className={s.table}>
+                <thead><tr><th>단계</th><th>보유</th><th>담긴 내용</th><th>쓰이는 곳</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><b>정식 분석</b></td>
+                    <td className={s.numCell}>{deep}종</td>
+                    <td className={s.was}>스토리 · 역사 · 페어링 · 서빙 · 음용 적기까지</td>
+                    <td className={s.now}>결과 화면 전체</td>
+                  </tr>
+                  <tr>
+                    <td>기본 정보</td>
+                    <td className={s.numCell}>나머지</td>
+                    <td className={s.was}>이름 · 생산자 · 산지 · 품종 · 가격대 · 맛 축</td>
+                    <td className={s.now}>검색 · 추천 · 리스트 대조</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className={s.p} style={{ marginTop: "0.9rem" }}>
+              기본 정보만 있는 술도 <b>찾고 고르는 데는 충분합니다.</b> 그 술을 실제로 촬영하는 순간
+              정식 분석으로 올라가고, 그다음부터는 모두에게 그 깊이로 보입니다.
+              <b> 모르는 것을 지어내 채우지 않는 것</b>이 이 구분의 이유입니다.
             </p>
           </div>
           <div className={s.edge}>
