@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { catOf } from "@/lib/cats";
 import { servingPlan } from "@/lib/serving";
 import Flag from "./Flag";
-import useActiveTimer from "./useActiveTimer";
+import useActiveTimers from "./useActiveTimer";
 import { startTimer, clearTimer, progressOf, formatRemain } from "@/lib/timer";
 import Radar from "./Radar";
 import CatIcon from "./CatIcon";
@@ -313,13 +313,17 @@ function ServingTimer({ result }) {
   const [picked, setPicked] = useState(null); // 고른 항목 (아직 시작 전)
   // 진행 중인 타이머는 저장소에 있다 — 화면을 옮기거나 앱을 닫아도 이어진다.
   // 알림은 앱 최상단이 책임지므로 여기서는 보기만 한다(owner 아님).
-  const { timer, remain } = useActiveTimer();
+  const { timers } = useActiveTimers();
 
   // 준비 시간은 술마다 다르다. 이 술에 필요한 것만 만든다.
   const plan = servingPlan(result);
 
-  // 다른 술의 타이머가 돌고 있으면 이 화면에서는 진행 상황을 보여 주지 않는다
-  const mine = timer && timer.name === result.name;
+  // 이 술에서 돌고 있는 준비들. 칠링과 디캔팅을 같이 걸어 둘 수도 있다.
+  const running = timers.filter((t) => t.name === result.name);
+  const runningKinds = new Set(running.map((t) => `${t.kind}-${t.min}`));
+  const available = plan.presets.filter((p) => !runningKinds.has(`${p.kind}-${p.min}`));
+
+  if (!plan.presets.length) return null;
 
   function start() {
     if (!picked) return;
@@ -336,69 +340,62 @@ function ServingTimer({ result }) {
     setPicked(null);
   }
 
-  if (!mine) {
-    if (!plan.presets.length) return null;
-
-    return (
-      <div className="card">
-        <div className="card-title">마시기 전 준비</div>
-        <div
-          className="timer-presets"
-          style={{ gridTemplateColumns: `repeat(${Math.min(3, plan.presets.length)}, 1fr)` }}
-        >
-          {plan.presets.map((p) => (
-            <button
-              className={`timer-btn ${picked?.min === p.min && picked?.kind === p.kind ? "on" : ""}`}
-              key={`${p.kind}-${p.min}`}
-              aria-pressed={picked?.min === p.min && picked?.kind === p.kind}
-              onClick={() =>
-                setPicked(picked?.min === p.min && picked?.kind === p.kind ? null : p)
-              }
-            >
-              <i className="timer-thumb">
-                <TimerVisual kind={p.kind} progress={0.45} mini />
-              </i>
-              <b>{p.label}</b>
-              <span>{p.min}분</span>
-              <em>{p.hint}</em>
-            </button>
-          ))}
-        </div>
-
-        <button className="btn primary timer-start" disabled={!picked} onClick={start}>
-          {picked ? `${picked.label} ${picked.min}분 시작` : "시간을 먼저 선택하세요"}
-        </button>
-
-        {/* 다른 술의 준비가 돌고 있으면 알려 준다 — 시작하면 그쪽이 지워지기 때문이다 */}
-        {timer && (
-          <div className="avoid-line">
-            지금 {timer.name} 의 {timer.label}이(가) 진행 중입니다. 새로 시작하면 그 타이머는 사라집니다.
-          </div>
-        )}
-        {plan.avoid && <div className="avoid-line">✕ {plan.avoid}</div>}
-        {plan.note && <div className="shop-note">{plan.note}</div>}
-        <div className="shop-note">
-          시작하면 다른 화면으로 옮겨도 이어지고, 끝나면 알림과 진동으로 알려드립니다.
-        </div>
-      </div>
-    );
-  }
-
-  const progress = progressOf(timer);
-
   return (
     <div className="card">
-      <div className="card-title">타이머</div>
-      <div className="timer-run">
-        <div className="timer-stage">
-          <TimerVisual kind={timer.kind} progress={progress} />
+      <div className="card-title">마시기 전 준비</div>
+
+      {/* 이미 돌고 있는 것들 */}
+      {running.map((t) => (
+        <div className="timer-run" key={t.id}>
+          <div className="timer-stage">
+            <TimerVisual kind={t.kind} progress={progressOf(t)} />
+          </div>
+          <div className="timer-label">{t.label} 진행 중</div>
+          <div className="timer-clock">{formatRemain(t.remain)}</div>
+          <div className="timer-bar">
+            <i style={{ width: `${progressOf(t) * 100}%` }} />
+          </div>
+          <button className="timer-cancel" onClick={() => clearTimer(t.id)}>중단</button>
         </div>
-        <div className="timer-label">{timer.label} 진행 중</div>
-        <div className="timer-clock">{formatRemain(remain)}</div>
-        <div className="timer-bar">
-          <i style={{ width: `${progress * 100}%` }} />
-        </div>
-        <button className="timer-cancel" onClick={clearTimer}>중단</button>
+      ))}
+
+      {/* 아직 시작하지 않은 것들 — 돌고 있는 것과 함께 걸 수 있다 */}
+      {available.length > 0 && (
+        <>
+          <div
+            className="timer-presets"
+            style={{ gridTemplateColumns: `repeat(${Math.min(3, available.length)}, 1fr)` }}
+          >
+            {available.map((p) => (
+              <button
+                className={`timer-btn ${picked?.min === p.min && picked?.kind === p.kind ? "on" : ""}`}
+                key={`${p.kind}-${p.min}`}
+                aria-pressed={picked?.min === p.min && picked?.kind === p.kind}
+                onClick={() =>
+                  setPicked(picked?.min === p.min && picked?.kind === p.kind ? null : p)
+                }
+              >
+                <i className="timer-thumb">
+                  <TimerVisual kind={p.kind} progress={0.45} mini />
+                </i>
+                <b>{p.label}</b>
+                <span>{p.min}분</span>
+                <em>{p.hint}</em>
+              </button>
+            ))}
+          </div>
+
+          <button className="btn primary timer-start" disabled={!picked} onClick={start}>
+            {picked ? `${picked.label} ${picked.min}분 시작` : "시간을 먼저 선택하세요"}
+          </button>
+        </>
+      )}
+
+      {plan.avoid && <div className="avoid-line">✕ {plan.avoid}</div>}
+      {plan.note && <div className="shop-note">{plan.note}</div>}
+      <div className="shop-note">
+        시작하면 다른 화면으로 옮겨도 이어지고, 끝나면 알림과 진동으로 알려드립니다.
+        여러 병을 동시에 준비해도 각각 따로 셉니다.
       </div>
     </div>
   );
@@ -573,6 +570,12 @@ export default function ResultScreen({
           <div className="card-title">플레이버 시그니처</div>
           <Radar profile={r.tasteProfile} />
           {r.tastingNotes && <p style={{ marginTop: 8 }}>{r.tastingNotes}</p>}
+          {/* 품종에서 짐작한 값은 그렇다고 밝힌다 — 실제로 마셔 본 결과처럼 보이면 안 된다 */}
+          {r.tasteEstimated && (
+            <div className="shop-note">
+              품종을 기준으로 짐작한 값입니다. 라벨을 촬영하면 이 술에 맞게 다시 분석합니다.
+            </div>
+          )}
         </div>
       )}
 

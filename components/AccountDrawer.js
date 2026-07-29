@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import TimerVisual from "./TimerVisual";
 import FontScale from "./FontScale";
-import useActiveTimer from "./useActiveTimer";
+import useActiveTimers from "./useActiveTimer";
 import { clearTimer, progressOf, formatRemain } from "@/lib/timer";
 
 // 내 정보 — 회원가입이 붙기 전의 레이아웃 초안.
@@ -12,10 +12,10 @@ import { clearTimer, progressOf, formatRemain } from "@/lib/timer";
 // 지금 보여 줄 수 있는 값(스캔 수·셀러·취향)은 실제 데이터로 채우고,
 // 로그인이 있어야 가능한 것은 준비 중으로 표시한다.
 // 이렇게 해 두면 인증만 붙이면 화면은 그대로 살아난다.
-export default function AccountDrawer({ open, onClose, onOpenCellar, onToast }) {
+export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine, onToast }) {
   const [stats, setStats] = useState(null);
   // 알림은 앱 최상단이 책임진다 — 여기서는 보기만 한다
-  const { timer, remain } = useActiveTimer();
+  const { timers } = useActiveTimers();
 
   useEffect(() => {
     if (!open) return;
@@ -78,24 +78,38 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onToast }) 
           정식 서비스에서는 본인인증을 연동할 예정입니다.
         </p>
 
-        {/* 진행 중인 준비 — 자리를 뜨는 시간이라 여기서 확인할 수 있어야 한다 */}
-        {timer && (
+        {/* 진행 중인 준비 — 자리를 뜨는 시간이라 여기서 확인할 수 있어야 한다.
+            여러 개를 동시에 둘 수 있으므로 전부 늘어놓는다. */}
+        {timers.length > 0 && (
           <>
             <div className="acct-section">진행 중</div>
-            <div className="acct-timer">
-              <div className="acct-timer-stage">
-                <TimerVisual kind={timer.kind} progress={progressOf(timer)} mini />
+            {timers.map((t) => (
+              <div className="acct-timer" key={t.id}>
+                <div className="acct-timer-stage">
+                  <TimerVisual kind={t.kind} progress={progressOf(t)} mini />
+                </div>
+                <div className="acct-timer-body">
+                  {/* 이름을 누르면 그 술로 간다 — 준비 중인 술이 궁금해지는 게 자연스럽다 */}
+                  <button
+                    className="acct-timer-name"
+                    onClick={() => {
+                      onClose?.();
+                      onOpenWine?.(t.name);
+                    }}
+                  >
+                    {t.name}
+                  </button>
+                  <span>{t.label} 진행 중</span>
+                  <i style={{ width: `${progressOf(t) * 100}%` }} />
+                </div>
+                <div className="acct-timer-right">
+                  <div className="acct-timer-clock">{formatRemain(t.remain)}</div>
+                  <button className="acct-timer-stop" onClick={() => clearTimer(t.id)}>
+                    중단
+                  </button>
+                </div>
               </div>
-              <div className="acct-timer-body">
-                <b>{timer.name}</b>
-                <span>{timer.label} 진행 중</span>
-                <i style={{ width: `${progressOf(timer) * 100}%` }} />
-              </div>
-              <div className="acct-timer-clock">{formatRemain(remain)}</div>
-            </div>
-            <button className="drawer-link as-btn" onClick={clearTimer}>
-              준비 중단 <em>×</em>
-            </button>
+            ))}
           </>
         )}
 

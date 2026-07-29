@@ -786,18 +786,37 @@ img, video, canvas { display: block; max-width: 100%; }
 }
 .acct-timer-stage { flex: none; width: 34px; height: 42px; }
 .acct-timer-body { flex: 1; min-width: 0; }
-.acct-timer-body b {
-  display: block; font-size: 13px; color: var(--ink); font-family: var(--font-s);
-  font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+/* 이름을 누르면 그 술로 간다 */
+.acct-timer-name {
+  display: block; width: 100%; text-align: left; background: none; border: none; padding: 0;
+  font-size: 13px; color: var(--ink); font-family: var(--font-s); font-weight: 500;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  text-decoration: underline; text-decoration-color: var(--line);
+  text-underline-offset: 3px; transition: color 0.2s, text-decoration-color 0.2s;
 }
-.acct-timer-body span { display: block; font-size: 11px; color: var(--gold); margin: 2px 0 6px; }
+.acct-timer-name:hover { color: var(--gold-hi); text-decoration-color: var(--gold); }
+.acct-timer-body span { display: block; font-size: 11px; color: var(--gold); margin: 3px 0 6px; }
 .acct-timer-body i {
   display: block; height: 2px; background: linear-gradient(90deg, var(--gold-lo), var(--gold));
   transition: width 1s linear;
 }
+.acct-timer-right { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
 .acct-timer-clock {
-  flex: none; font-family: var(--font-d); font-size: 19px; color: var(--gold-hi);
-  font-variant-numeric: tabular-nums;
+  font-family: var(--font-d); font-size: 19px; color: var(--gold-hi);
+  font-variant-numeric: tabular-nums; line-height: 1;
+}
+.acct-timer-stop {
+  background: none; border: none; padding: 0;
+  font-size: 10px; color: var(--ink-dim); letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--line-soft);
+}
+.acct-timer-stop:hover { color: var(--bad); border-color: var(--bad); }
+
+/* 여럿이 돌 때 — 나머지 수 */
+.tb-more {
+  flex: none; margin-left: 2px; padding: 2px 7px; border-radius: 999px;
+  background: var(--gold-soft); border: 1px solid var(--line);
+  font-size: 10px; color: var(--gold); font-variant-numeric: tabular-nums;
 }
 
 /* 글자 크기 고르기 */
