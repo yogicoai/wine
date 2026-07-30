@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { fileToDataUrl } from "@/lib/imageClient";
 import { scanLoop } from "@/lib/barcodeScan";
+import { BARCODE_SCAN } from "@/lib/features";
 import Icon from "./Icon";
 
 // 모드 이름만으로는 무엇을 찍어야 할지 알 수 없다.
@@ -168,17 +169,20 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
           >
             라벨 촬영
           </button>
-          <button
-            role="tab"
-            aria-selected={mode === "barcode"}
-            className={mode === "barcode" ? "on" : ""}
-            onClick={() => {
-              setMode("barcode");
-              if (!stream) startCamera();
-            }}
-          >
-            바코드
-          </button>
+          {/* 바코드는 대조표가 없어 지금 내보내지 않는다 (lib/features.js) */}
+          {BARCODE_SCAN && (
+            <button
+              role="tab"
+              aria-selected={mode === "barcode"}
+              className={mode === "barcode" ? "on" : ""}
+              onClick={() => {
+                setMode("barcode");
+                if (!stream) startCamera();
+              }}
+            >
+              바코드
+            </button>
+          )}
           {onWineList && (
             <button
               role="tab"

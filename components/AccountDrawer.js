@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import TimerVisual from "./TimerVisual";
 import FontScale from "./FontScale";
+import { FONT_SCALE } from "@/lib/features";
 import useActiveTimers from "./useActiveTimer";
 import { clearTimer, progressOf, formatRemain } from "@/lib/timer";
 
@@ -135,9 +136,13 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine,
           </div>
         </div>
 
-        {/* 화면 설정 */}
-        <div className="acct-section">화면</div>
-        <FontScale />
+        {/* 화면 설정 — 글자 크기는 레이아웃이 깨져 지금은 내보내지 않는다 (lib/features.js) */}
+        {FONT_SCALE && (
+          <>
+            <div className="acct-section">화면</div>
+            <FontScale />
+          </>
+        )}
 
         {/* 이후 로그인이 붙으면 살아나는 자리 */}
         <div className="acct-section">계정</div>

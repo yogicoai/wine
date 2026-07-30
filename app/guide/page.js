@@ -131,14 +131,10 @@ export default async function GuidePage() {
               <span className={s.tag}>Screen 1</span>
               <h3 className={s.h4}>촬영</h3>
               <p className={s.p}>
-                화면 위쪽에서 <b>라벨 촬영 · 바코드 · 와인 리스트</b> 세 가지 방식 중 하나를 고릅니다.
+                화면 위쪽에서 <b>라벨 촬영 · 와인 리스트</b> 두 가지 방식 중 하나를 고릅니다.
               </p>
               <ul className={s.list}>
                 <li><b>라벨 촬영</b> — 기본. 병 앞면 라벨을 찍습니다</li>
-                <li>
-                  <b>바코드</b> — 병 뒷면 바코드를 비추면 셔터를 누를 필요 없이 자동으로 인식합니다.
-                  AI를 부르지 않으므로 <b>비용이 들지 않습니다</b>
-                </li>
                 <li>
                   <b>와인 리스트</b> — 식당 메뉴판을 통째로 찍으면 적힌 술을 모두 뽑아
                   <b> 가성비 순으로 정렬</b>해 드립니다
@@ -290,10 +286,6 @@ export default async function GuidePage() {
                 </li>
                 <li><b>활동</b> — 스캔 수 · 보유 병 · 마신 술 · 노트 수</li>
                 <li><b>취향</b> — 지금 어떤 스타일로 설정되어 있는지</li>
-                <li>
-                  <b>글자 크기</b> — 작게 / 기본 / 크게 / 아주 크게. 글자만이 아니라 여백과 버튼도
-                  같은 비율로 커집니다
-                </li>
                 <li><b>계정</b> — 로그인 · 만 19세 인증 자리 (준비 중)</li>
               </ul>
             </div>
@@ -510,7 +502,7 @@ export default async function GuidePage() {
                   <td className={`${s.numCell} ${s.priceLo}`}>약 3원</td>
                 </tr>
                 <tr>
-                  <td>바코드 · 이름 검색 · 추천</td>
+                  <td>이름 검색 · 추천</td>
                   <td className={s.numCell}>–</td>
                   <td className={s.numCell}>–</td>
                   <td className={s.numCell}>즉시</td>
@@ -590,7 +582,7 @@ export default async function GuidePage() {
               <tbody>
                 <tr><td>카탈로그에 있음<br /><span className={s.faint}>사진 스캔</span></td><td className={s.was}>라벨 판독만</td><td className={`${s.numCell} ${s.priceLo}`}>약 3원</td></tr>
                 <tr><td>카탈로그에 있음<br /><span className={s.faint}>이름 검색</span></td><td className={s.was}>없음</td><td className={`${s.numCell} ${s.priceLo}`}>0원</td></tr>
-                <tr><td>카탈로그에 있음<br /><span className={s.faint}>바코드</span></td><td className={s.was}>없음</td><td className={`${s.numCell} ${s.priceLo}`}>0원</td></tr>
+                <tr><td>카탈로그에 있음<br /><span className={s.faint}>추천 · 리스트 대조</span></td><td className={s.was}>없음</td><td className={`${s.numCell} ${s.priceLo}`}>0원</td></tr>
                 <tr><td>카탈로그에 없음</td><td className={s.was}>판독 + 본분석</td><td className={`${s.numCell} ${s.priceHi}`}>약 66원</td></tr>
               </tbody>
             </table>
@@ -799,10 +791,42 @@ export default async function GuidePage() {
           <p className={s.p} style={{ marginBottom: "1.6rem" }}>
             앞서 제안드렸던 <b>결과 캐싱</b>(같은 술 재스캔 시 AI 호출 없이 즉시 응답),
             <b> 공유 카드</b>, <b>이미지 저장소 이전</b>(Cafe24 호스팅), <b>모바일 앱화</b>는 반영을 마쳤습니다.
-            여기에 <b>가격 이력 · 셀러 가치 평가 · 바코드 스캔 · 사용자 평점 · 음용 적기 알림 ·
+            여기에 <b>가격 이력 · 셀러 가치 평가 · 사용자 평점 · 음용 적기 알림 ·
             와인 리스트 스캔 · 맞춤 추천 · 이름 검색</b>이 더해졌으며, 와인 리스트 스캔을 뺀
             나머지는 모두 <b>추가 AI 비용 없이</b> 동작합니다.
           </p>
+
+          <h3 className={s.h4}>만들었지만 지금은 끈 기능</h3>
+          <p className={s.p} style={{ marginBottom: "1.6rem" }}>
+            코드는 그대로 있고 화면에서만 감췄습니다. 조건이 갖춰지면 설정값 하나로 되살아납니다.
+            <b> 반쯤 되는 기능을 내보내는 것보다 없는 편이 낫다</b>고 판단한 두 가지입니다.
+          </p>
+          <div className={s.prio} style={{ marginBottom: "1.6rem" }}>
+            <div className={s.item}>
+              <h3 className={s.h4}>바코드 스캔</h3>
+              <span className={s.flag}>대조표 필요</span>
+              <p className={s.p}>
+                바코드는 상품마다 고유해서 <b>와인마다 번호가 다릅니다.</b> 공용 번호가 아니므로
+                “번호 → 와인” 대조표가 있어야 하는데, 공개된 것이 없습니다. 판매처 검색으로
+                대신해 보려 했지만 <b>네이버 쇼핑은 바코드 번호로 상품을 찾아 주지 않습니다</b>
+                — 와인은 물론 칠성사이다·초코파이 같은 일반 상품도 결과가 0건입니다.
+                번호를 읽어 내는 것 자체는 정상 동작하므로, 대조표만 생기면 바로 켤 수 있습니다.
+                켜는 길은 둘입니다. 상용 바코드 DB를 붙이거나, 라벨 분석 때 번호를 함께 모아
+                스스로 쌓는 것입니다(후자는 이미 그렇게 짜여 있고, 지금 1건이 쌓였습니다).
+              </p>
+            </div>
+            <div className={s.item}>
+              <h3 className={s.h4}>글자 크기 조절</h3>
+              <span className={s.flag}>레이아웃 재작업 필요</span>
+              <p className={s.p}>
+                이 앱의 치수가 픽셀로 짜여 있어 글자만 키우면 칸이 따라오지 않습니다. 그래서 화면
+                전체 배율을 키우는 방식을 썼는데, 그 방식은 <b>화면에 고정된 요소와 화면 크기 기준
+                값들을 함께 어긋나게 만듭니다.</b> 크게로 올리면 배경과 서랍 덮개가 화면을 덜 덮고
+                아래 고정 버튼이 밀립니다. 제대로 고치려면 스타일의 픽셀 치수를 상대 단위로 바꿔야
+                하는데 손볼 규칙이 많아, 따로 시간을 들여 진행하겠습니다.
+              </p>
+            </div>
+          </div>
 
           <div className={s.prio}>
             <div className={s.item}>
@@ -948,7 +972,7 @@ export default async function GuidePage() {
               <dt>같은 술을 여러 번 찍으면 비용이 계속 나가나요?</dt>
               <dd>
                 아닙니다. 한 번 분석한 술은 데이터베이스에 남아 다음부터는 거기서 꺼내 씁니다.
-                바코드로 찍거나 이름으로 찾으면 아예 0원입니다.
+                이름으로 찾으면 아예 0원입니다.
               </dd>
             </div>
             <div className={s.qa}>

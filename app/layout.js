@@ -1,4 +1,5 @@
 import { Cormorant_Garamond, Noto_Serif_KR, Noto_Sans_KR } from "next/font/google";
+import { FONT_SCALE } from "@/lib/features";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -43,11 +44,16 @@ export const viewport = {
 // 저장해 둔 글자 크기를 첫 그림 전에 적용한다.
 // 리액트가 붙은 뒤에 적용하면 기본 크기로 한 번 그려졌다가 튄다.
 // 이 시점에는 body 가 아직 없으므로 html 의 CSS 변수로 넘긴다 (globals.css 가 받아 쓴다)
-const APPLY_SCALE = `try{
+//
+// 지금은 기능을 내보내지 않으므로(lib/features.js) 배율을 적용하지 않는다.
+// 전에 쓰던 사람의 기기에는 값이 남아 있어 그대로 두면 화면이 어긋난 채 뜬다.
+const APPLY_SCALE = FONT_SCALE
+  ? `try{
   var k=localStorage.getItem('bottlelens.fontScale');
   var v={s:0.92,m:1,l:1.12,xl:1.24}[k];
   if(v)document.documentElement.style.setProperty('--ui-zoom',v);
-}catch(e){}`;
+}catch(e){}`
+  : `try{localStorage.removeItem('bottlelens.fontScale')}catch(e){}`;
 
 export default function RootLayout({ children }) {
   return (

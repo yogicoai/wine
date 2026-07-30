@@ -24,9 +24,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body { background: var(--bg); color: var(--ink); font-family: var(--font-b); min-height: 100%; }
-/* 글자 크기 설정 — 치수가 px 로 짜여 있어 글자만 키우면 칸이 따라오지 않는다.
-   화면 전체를 함께 키워 글자·여백·누를 자리가 같은 비율로 커지게 한다. */
-body { zoom: var(--ui-zoom, 1); }
+/* 글자 크기 설정은 지금 내보내지 않는다 (lib/features.js 의 FONT_SCALE).
+   zoom 은 position:fixed 와 vw/vh, env(safe-area-inset-*) 를 함께 어긋나게 만든다.
+   기능을 되살릴 때는 px 치수를 rem 으로 바꾸고 html 의 font-size 를 조절하는 쪽이 맞다.
+   그때까지는 전에 저장된 값이 남아 있어도 배율이 1로 고정되게 둔다. */
+body { zoom: 1; }
 
 body {
   background-image:

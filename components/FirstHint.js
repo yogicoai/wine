@@ -12,7 +12,8 @@ import Icon from "./Icon";
 const KEY = "bottlelens.hintSeen";
 
 const ITEMS = [
-  { icon: "camera", title: "찍어서 알아보기", body: "라벨·바코드·식당 메뉴판까지" },
+  // 바코드는 지금 내보내지 않으므로 문구에서도 뺀다 (lib/features.js)
+  { icon: "camera", title: "찍어서 알아보기", body: "술병 라벨과 식당 와인 리스트까지" },
   { icon: "search", title: "찾기 · 추천", body: "이름으로 찾거나, O·X 여덟 문항으로 취향 추천" },
   { icon: "glass", title: "나의 셀러", body: "보유·위시 관리, 값이 내리면 알림" },
 ];
