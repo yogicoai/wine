@@ -1,0 +1,492 @@
+[
+  {
+    "category": "sake",
+    "name": "아라마사 로쿠 준마이",
+    "searchKeyword": "아라마사 로쿠",
+    "producer": "아라마사주조(新政酒造)",
+    "type": "준마이 사케",
+    "vintage": null,
+    "region": "아키타",
+    "country": "일본",
+    "alcohol": "14%",
+    "liquidColor": "#F6F5EC",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "협회 6호 효모의 고향으로, 구하기 어려운 사케입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 42 },
+      { "axis": "감칠맛", "value": 48 },
+      { "axis": "산도", "value": 70 },
+      { "axis": "당도", "value": 42 }
+    ],
+    "tastingNotes": "백포도와 요구르트 같은 산미가 앞에 서고 단맛이 뒤를 받칩니다. 옛 방식과 높은 산도를 함께 택한 술이라, 사케를 처음 마시는 사람에게는 낯설고 애호가에게는 반가운 결입니다.",
+    "specs": [
+      { "label": "효모", "value": "협회 6호(이 양조장에서 발견)" },
+      { "label": "양조", "value": "기모토 · 목통 발효" },
+      { "label": "쌀", "value": "아키타산 100%" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2027",
+    "history": [
+      { "year": "1852", "event": "아키타에서 창업" },
+      { "year": "1930", "event": "이곳 효모가 협회 6호로 등록 — 지금도 쓰이는 가장 오래된 협회 효모" }
+    ],
+    "story": "지금 쓰이는 협회 효모 중 가장 오래된 6호가 이 양조장에서 나왔습니다. 그런데 정작 이 집은 6호만 고집합니다.",
+    "winery": "아키타시 한복판, 목통을 되살려 쓰는 양조장입니다.",
+    "foodPairing": [
+      { "emoji": "🧀", "food": "치즈", "why": "산미가 유제품과 맞물립니다", "shopKeyword": "크림치즈" },
+      { "emoji": "🦪", "food": "굴·조개", "why": "높은 산미가 바다 향을 세워 줍니다", "shopKeyword": "생굴" },
+      { "emoji": "🥗", "food": "샐러드", "why": "화이트 와인처럼 씁니다", "shopKeyword": "샐러드 채소" }
+    ],
+    "pairingTip": "와인 잔에 마시면 성격이 분명해집니다.",
+    "avoidPairing": "데우면 산미만 도드라집니다.",
+    "similar": ["센킨 무쿠 준마이 다이긴조", "카모시비토 쿠헤이지 에어리 우드사이드", "아카부 준마이 다이긴조"],
+    "trivia": "협회 효모는 6·7·9호가 주력인데, 번호가 작을수록 오래된 것입니다. 6호는 향이 조용하고 산미가 붙습니다.",
+    "servingTemp": "8~12℃",
+    "servingNote": "차갑게, 와인 잔에 드세요.",
+    "aging": "1~2년까지는 결이 더 열립니다.",
+    "tips": ["산도 높은 사케는 화이트 와인 자리에 그대로 놓을 수 있습니다"]
+  },
+  {
+    "category": "sake",
+    "name": "히로키 준마이긴조",
+    "searchKeyword": "히로키 준마이긴조",
+    "producer": "히로키주조점(廣木酒造本店)",
+    "type": "준마이 긴조 사케",
+    "vintage": null,
+    "region": "후쿠시마 · 아이즈",
+    "country": "일본",
+    "alcohol": "16%",
+    "liquidColor": "#F7F5EC",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "구하기 어려운 사케로 이름난 후쿠시마 양조장입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 48 },
+      { "axis": "감칠맛", "value": 54 },
+      { "axis": "산도", "value": 50 },
+      { "axis": "당도", "value": 38 }
+    ],
+    "tastingNotes": "쌀의 단맛과 감칠맛이 겹겹이 쌓이고 뒷맛이 길게 이어집니다. 향으로 앞서지 않고 맛으로 버티는 쪽이라, 마시는 내내 인상이 흐트러지지 않습니다.",
+    "specs": [
+      { "label": "정미율", "value": "55%" },
+      { "label": "분류", "value": "준마이 긴조" },
+      { "label": "생산량", "value": "소량 · 배정 판매" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1834", "event": "후쿠시마 아이즈에서 창업" },
+      { "year": "1990년대", "event": "9대 당주가 문을 닫기 직전 방향을 바꿔 되살림" }
+    ],
+    "story": "폐업 직전까지 갔던 작은 양조장을 9대가 이어받아 되살렸습니다. 대량으로 팔던 술을 접고 소량만 정성껏 빚는 쪽으로 돌린 것이 계기였습니다.",
+    "winery": "후쿠시마 아이즈사카시타의 작은 양조장입니다.",
+    "foodPairing": [
+      { "emoji": "🍣", "food": "초밥·회", "why": "감칠맛이 재료의 단맛을 밀어 올립니다", "shopKeyword": "초밥" },
+      { "emoji": "🍲", "food": "전골", "why": "긴 여운이 국물과 맞물립니다", "shopKeyword": "전골" },
+      { "emoji": "🍖", "food": "돼지고기 구이", "why": "감칠맛이 기름을 받습니다", "shopKeyword": "돼지 목살" }
+    ],
+    "pairingTip": "식사 내내 곁에 두기 좋은 사케입니다.",
+    "avoidPairing": "아주 매운 양념은 결을 덮습니다.",
+    "similar": ["샤라쿠 준마이슈", "아마노토 준마이 다이긴조", "마스미 산카 준마이 다이긴조"],
+    "trivia": "후쿠시마는 전국 신주 품평회 금상 수를 여러 해 1위로 지킨 현입니다.",
+    "servingTemp": "8~14℃",
+    "servingNote": "차갑게, 또는 살짝 서늘하게 드세요.",
+    "aging": "제조일에서 반년 안에 마시는 것이 좋습니다.",
+    "tips": ["구하기 어려운 사케는 정가에 파는 가게를 찾는 것이 요령입니다"]
+  },
+  {
+    "category": "sake",
+    "name": "니혼사케 호우라이센 웃",
+    "searchKeyword": "호우라이센 준마이 다이긴조",
+    "producer": "세키야양조장(関谷醸造)",
+    "type": "준마이 다이긴조 사케",
+    "vintage": null,
+    "region": "아이치",
+    "country": "일본",
+    "alcohol": "16%",
+    "liquidColor": "#F7F5EA",
+    "confidence": 84,
+    "knowledge": "medium",
+    "basis": "국내 사케 전문점에서 볼 수 있는 아이치 사케입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 44 },
+      { "axis": "감칠맛", "value": 46 },
+      { "axis": "산도", "value": 48 },
+      { "axis": "당도", "value": 42 }
+    ],
+    "tastingNotes": "멜론과 흰 꽃 향이 화사하게 오르고 단맛이 또렷하게 남습니다. 향을 앞세운 다이긴조 중에서도 접근하기 쉬운 쪽이라, 사케 입문자에게 자주 권해집니다.",
+    "specs": [
+      { "label": "정미율", "value": "45%" },
+      { "label": "분류", "value": "준마이 다이긴조" },
+      { "label": "쌀", "value": "야마다니시키" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1864", "event": "아이치 시타라에서 창업" },
+      { "year": "현재", "event": "산속 작은 마을에서 소량 생산" }
+    ],
+    "story": "아이치 산속 인구 몇천 명 마을의 양조장입니다. 지역 쌀과 물로만 빚어 마을 이름을 알린 사례입니다.",
+    "winery": "아이치 시타라, 산으로 둘러싸인 마을에 있습니다.",
+    "foodPairing": [
+      { "emoji": "🍣", "food": "초밥·회", "why": "화사한 향이 재료를 살립니다", "shopKeyword": "초밥" },
+      { "emoji": "🦐", "food": "새우·게", "why": "단맛끼리 맞물립니다", "shopKeyword": "생새우" },
+      { "emoji": "🧀", "food": "크림치즈", "why": "과일 향이 유제품과 어울립니다", "shopKeyword": "크림치즈" }
+    ],
+    "pairingTip": "사케가 처음이라면 향이 화사한 쪽부터 드셔 보세요.",
+    "avoidPairing": "맵고 진한 양념은 향을 덮습니다.",
+    "similar": ["아카부 준마이 다이긴조", "고쿠류 준마이 다이긴조", "미이노고토부키 준마이 다이긴조"],
+    "trivia": "요즘은 작은 마을 양조장이 지역 쌀을 내세워 이름을 알리는 일이 늘고 있습니다.",
+    "servingTemp": "8~12℃",
+    "servingNote": "차갑게 드세요.",
+    "aging": "제조일에서 반년 안에 마시는 것이 좋습니다.",
+    "tips": ["향이 화사한 다이긴조는 사케의 첫인상을 바꿔 놓습니다"]
+  },
+  {
+    "category": "sake",
+    "name": "쿠로류 이시다야",
+    "searchKeyword": "쿠로류 이시다야",
+    "producer": "고쿠류주조(黒龍酒造)",
+    "type": "다이긴조 사케",
+    "vintage": null,
+    "region": "후쿠이",
+    "country": "일본",
+    "alcohol": "15.5%",
+    "liquidColor": "#F7F5EA",
+    "confidence": 85,
+    "knowledge": "rich",
+    "basis": "고쿠류의 상위 라인으로 국내에서도 찾는 사람이 많습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 48 },
+      { "axis": "감칠맛", "value": 50 },
+      { "axis": "산도", "value": 44 },
+      { "axis": "당도", "value": 36 }
+    ],
+    "tastingNotes": "흰 꽃과 배 향이 곱게 퍼지고 여운이 아주 길게 남습니다. 낮은 온도에서 오래 재워 결을 다듬은 술이라, 같은 집 기본 라인보다 한층 정갈합니다.",
+    "specs": [
+      { "label": "정미율", "value": "40%" },
+      { "label": "숙성", "value": "저온 장기 숙성" },
+      { "label": "분류", "value": "다이긴조" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1804", "event": "후쿠이 에이헤이지에서 창업" },
+      { "year": "1975", "event": "일본 최초로 다이긴조를 상품화" }
+    ],
+    "story": "이름은 이 술을 처음 팔았던 옛 주류상의 상호에서 왔습니다. 양조장과 상인의 인연을 술 이름에 남긴 것입니다.",
+    "winery": "후쿠이 에이헤이지, 선종 사찰로 이름난 고장에 있습니다.",
+    "foodPairing": [
+      { "emoji": "🍣", "food": "흰살 생선회", "why": "섬세한 향이 담백한 살과 맞습니다", "shopKeyword": "광어회" },
+      { "emoji": "🦐", "food": "새우·게", "why": "단맛 나는 살과 향이 어울립니다", "shopKeyword": "생새우" },
+      { "emoji": "🍲", "food": "맑은 국물", "why": "긴 여운이 국물과 이어집니다", "shopKeyword": "어묵탕" }
+    ],
+    "pairingTip": "특별한 자리에 여는 사케입니다.",
+    "avoidPairing": "매운 양념은 섬세함을 지웁니다.",
+    "similar": ["고쿠류 준마이 다이긴조", "이소지만 준마이 다이긴조", "쿠보타 만쥬"],
+    "trivia": "'다이긴조'와 '준마이 다이긴조'는 양조 알코올을 넣었는지로 갈립니다. 넣은 쪽이 향이 더 또렷해지기도 합니다.",
+    "servingTemp": "8~12℃",
+    "servingNote": "차갑게, 와인 잔에 드시면 향이 살아납니다.",
+    "aging": "제조일에서 반년 안에 마시는 것이 좋습니다.",
+    "tips": ["'준마이'가 붙지 않은 다이긴조도 좋은 술입니다. 방식이 다를 뿐입니다"]
+  },
+  {
+    "category": "sake",
+    "name": "니혼사케 텐구마이 야마하이 준마이",
+    "searchKeyword": "텐구마이 야마하이 준마이",
+    "producer": "쇼우주조(車多酒造)",
+    "type": "준마이 사케",
+    "vintage": null,
+    "region": "이시카와",
+    "country": "일본",
+    "alcohol": "16%",
+    "liquidColor": "#F5F2E2",
+    "confidence": 86,
+    "knowledge": "rich",
+    "basis": "야마하이 방식을 대표하는 사케입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 58 },
+      { "axis": "감칠맛", "value": 66 },
+      { "axis": "산도", "value": 60 },
+      { "axis": "당도", "value": 32 }
+    ],
+    "tastingNotes": "쌀의 구수함에 견과와 젖산 같은 신맛이 겹칩니다. 야마하이 특유의 굵은 감칠맛이 분명해, 요즘의 맑고 화사한 사케와는 정반대편에 서 있습니다.",
+    "specs": [
+      { "label": "양조", "value": "야마하이(젖산균을 자연히 불러들임)" },
+      { "label": "정미율", "value": "60%" },
+      { "label": "분류", "value": "준마이" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2028",
+    "history": [
+      { "year": "1823", "event": "이시카와 하쿠산에서 창업" },
+      { "year": "1970년대", "event": "야마하이 준마이를 앞세워 전국에 알려짐" }
+    ],
+    "story": "'야마하이'는 젖산을 넣지 않고 공기 중의 젖산균을 불러들이는 옛 방식입니다. 시간이 오래 걸리고 실패도 잦지만 맛이 깊어집니다.",
+    "winery": "이시카와 하쿠산, 눈 많은 산기슭에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "돼지고기 조림", "why": "굵은 감칠맛이 기름을 받습니다", "shopKeyword": "돼지 삼겹살" },
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "젖산 향이 서로 맞물립니다", "shopKeyword": "체다치즈" },
+      { "emoji": "🍄", "food": "버섯 요리", "why": "흙내와 구수함이 이어집니다", "shopKeyword": "표고버섯" }
+    ],
+    "pairingTip": "데워 마시면 감칠맛이 크게 살아납니다.",
+    "avoidPairing": "담백한 흰살 회는 이 술에 눌립니다.",
+    "similar": ["타케츠루 준마이", "니혼사케 카모이즈미 슈신 준마이긴조", "샤라쿠 준마이슈"],
+    "trivia": "야마하이와 기모토는 같은 뿌리입니다. 기모토에서 쌀 갈기 공정을 뺀 것이 야마하이입니다.",
+    "servingTemp": "12~16℃ 또는 45~50℃",
+    "servingNote": "데워 마시기 좋은 술입니다.",
+    "aging": "1~3년 두면 결이 더 부드러워집니다.",
+    "tips": ["라벨에 '야마하이'나 '기모토'가 있으면 감칠맛이 굵은 술입니다"]
+  },
+  {
+    "category": "sake",
+    "name": "닷사이 23 준마이 다이긴조",
+    "searchKeyword": "닷사이 23",
+    "producer": "아사히주조(旭酒造)",
+    "type": "준마이 다이긴조 사케",
+    "vintage": null,
+    "region": "야마구치",
+    "country": "일본",
+    "alcohol": "16%",
+    "liquidColor": "#F8F6EE",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "닷사이 라인의 최상급으로 국내에서도 널리 알려져 있습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 42 },
+      { "axis": "감칠맛", "value": 44 },
+      { "axis": "산도", "value": 44 },
+      { "axis": "당도", "value": 40 }
+    ],
+    "tastingNotes": "멜론과 흰 복숭아 향이 아주 곱게 피어오르고 목넘김이 물처럼 매끄럽습니다. 쌀을 23%까지 깎아 잡미가 거의 남지 않아, 사케가 어디까지 맑아질 수 있는지를 보여 줍니다.",
+    "specs": [
+      { "label": "정미율", "value": "23%(쌀을 77% 깎아냄)" },
+      { "label": "쌀", "value": "야마다니시키" },
+      { "label": "분류", "value": "준마이 다이긴조" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1948", "event": "아사히주조 창업" },
+      { "year": "1990년대", "event": "폐업 위기에서 다이긴조 전문으로 전환" }
+    ],
+    "story": "쌀을 77%나 깎아 내면 쓸 수 있는 것은 알의 한가운데뿐입니다. 그만큼 쌀이 많이 들고 값도 올라갑니다.",
+    "winery": "야마구치 산속 마을의 양조장으로, 사계절 내내 술을 빚습니다.",
+    "foodPairing": [
+      { "emoji": "🍣", "food": "초밥·회", "why": "맑은 맛이 재료를 그대로 살립니다", "shopKeyword": "초밥" },
+      { "emoji": "🦞", "food": "랍스터·게", "why": "섬세한 향이 단맛 나는 살과 맞습니다", "shopKeyword": "랍스터" },
+      { "emoji": "🧀", "food": "크림치즈", "why": "과일 향이 유제품과 어울립니다", "shopKeyword": "크림치즈" }
+    ],
+    "pairingTip": "와인 잔에 마시면 향이 제대로 열립니다.",
+    "avoidPairing": "맵고 진한 양념은 이 술의 섬세함을 지웁니다.",
+    "similar": ["아사히슈조 닷사이 39", "닷사이 45 준마이 다이긴조", "쿠로류 이시다야"],
+    "trivia": "정미율 23%는 상업 사케에서 가장 많이 깎는 축입니다. 더 깎으면 알이 부서져 버립니다.",
+    "servingTemp": "8~12℃",
+    "servingNote": "차갑게, 와인 잔에 드시면 향이 살아납니다.",
+    "aging": "제조일에서 반년 안에 마시는 것이 좋습니다.",
+    "tips": ["정미율 숫자가 작을수록 많이 깎은 것이고, 값도 그만큼 올라갑니다"]
+  },
+  {
+    "category": "sake",
+    "name": "니혼사케 오제노유키도케 준마이 다이긴조",
+    "searchKeyword": "오제노유키도케",
+    "producer": "류진주조(龍神酒造)",
+    "type": "준마이 다이긴조 사케",
+    "vintage": null,
+    "region": "군마",
+    "country": "일본",
+    "alcohol": "16%",
+    "liquidColor": "#F7F5EC",
+    "confidence": 84,
+    "knowledge": "medium",
+    "basis": "국내 사케 전문점에서 볼 수 있는 군마 사케입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 44 },
+      { "axis": "감칠맛", "value": 48 },
+      { "axis": "산도", "value": 50 },
+      { "axis": "당도", "value": 42 }
+    ],
+    "tastingNotes": "청사과와 배 향이 산뜻하고 단맛과 산미가 나란히 섭니다. 이름처럼 눈 녹은 물을 떠올리게 하는 결로, 여름에 차게 마시기에 좋습니다.",
+    "specs": [
+      { "label": "정미율", "value": "50%" },
+      { "label": "분류", "value": "준마이 다이긴조" },
+      { "label": "물", "value": "오제 습원의 복류수" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1804", "event": "군마 다테바야시에서 창업" },
+      { "year": "현재", "event": "군마를 대표하는 양조장 중 하나" }
+    ],
+    "story": "'오제노유키도케'는 오제 습원의 눈 녹음이라는 뜻입니다. 그 물이 스민 지하수로 술을 빚습니다.",
+    "winery": "군마 다테바야시, 관동 평야 북쪽에 자리합니다.",
+    "foodPairing": [
+      { "emoji": "🍣", "food": "초밥·회", "why": "산미가 비린맛을 잡습니다", "shopKeyword": "초밥" },
+      { "emoji": "🥗", "food": "샐러드·나물", "why": "가벼운 결과 무게가 맞습니다", "shopKeyword": "샐러드 채소" },
+      { "emoji": "🍤", "food": "튀김", "why": "산미가 기름을 정리합니다", "shopKeyword": "새우튀김" }
+    ],
+    "pairingTip": "여름에 차게 해서 드시면 좋습니다.",
+    "avoidPairing": "진한 양념은 산뜻함을 덮습니다.",
+    "similar": ["미즈바쇼 준마이 다이긴조", "산토쿠 하쿠라쿠세이 준마이긴조", "시치켄 준마이 후린비잔"],
+    "trivia": "군마는 관동에서 드물게 사케 양조장이 여럿 남아 있는 현입니다.",
+    "servingTemp": "6~10℃",
+    "servingNote": "차갑게 드세요.",
+    "aging": "제조일에서 반년 안에 마시는 것이 좋습니다.",
+    "tips": ["여름 사케는 평소보다 조금 더 차게 마셔도 좋습니다"]
+  },
+  {
+    "category": "sake",
+    "name": "니혼사케 스이게이 도쿠베츠 준마이",
+    "searchKeyword": "스이게이 도쿠베츠 준마이",
+    "producer": "스이게이주조장(酔鯨酒造)",
+    "type": "특별 준마이 사케",
+    "vintage": null,
+    "region": "고치",
+    "country": "일본",
+    "alcohol": "15%",
+    "liquidColor": "#F6F5EA",
+    "confidence": 85,
+    "knowledge": "rich",
+    "basis": "고치를 대표하는 드라이 사케입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 46 },
+      { "axis": "감칠맛", "value": 48 },
+      { "axis": "산도", "value": 58 },
+      { "axis": "당도", "value": 24 }
+    ],
+    "tastingNotes": "쌀 향이 담백하고 산미가 또렷하며 뒷맛이 바짝 마릅니다. 회를 많이 먹는 고장의 술답게, 기름지고 비린 것을 씻어 내는 데 초점이 맞춰져 있습니다.",
+    "specs": [
+      { "label": "정미율", "value": "55%" },
+      { "label": "분류", "value": "특별 준마이 · 카라쿠치" },
+      { "label": "산도", "value": "높음" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1872", "event": "고치에서 창업" },
+      { "year": "현재", "event": "고치식 드라이 사케의 대표" }
+    ],
+    "story": "'스이게이'는 취한 고래라는 뜻입니다. 술을 고래처럼 마신다던 옛 고치 번주의 별명에서 왔습니다.",
+    "winery": "고치, 태평양에 면한 어항 고장에 있습니다.",
+    "foodPairing": [
+      { "emoji": "🍣", "food": "회·초밥", "why": "산미와 드라이함이 비린맛을 잡습니다", "shopKeyword": "초밥" },
+      { "emoji": "🐟", "food": "생선구이", "why": "기름을 씻어 줍니다", "shopKeyword": "고등어" },
+      { "emoji": "🍤", "food": "튀김", "why": "뒷맛이 마르게 끊겨 입이 개운합니다", "shopKeyword": "새우튀김" }
+    ],
+    "pairingTip": "회와 함께 마실 사케를 찾는다면 이쪽입니다.",
+    "avoidPairing": "단 디저트와는 맞지 않습니다.",
+    "similar": ["텐타카 카라쿠치 특별 준마이", "호오비덴 츠루기 카라쿠치 준마이", "쿠보타 센주"],
+    "trivia": "고치는 일본에서 술을 가장 많이 마시는 고장으로 꼽힙니다. 그래서 술도 물리지 않게 만듭니다.",
+    "servingTemp": "8~14℃ 또는 40~45℃",
+    "servingNote": "차게도 데워서도 좋습니다.",
+    "aging": "제조일에서 1년 안에 마시는 것이 좋습니다.",
+    "tips": ["회를 자주 드신다면 산도 높은 카라쿠치를 곁에 두세요"]
+  },
+  {
+    "category": "sake",
+    "name": "니혼사케 하쿠시카 특선 혼조조",
+    "searchKeyword": "하쿠시카 혼조조",
+    "producer": "타츠우마혼케주조(辰馬本家酒造)",
+    "type": "본양조 사케",
+    "vintage": null,
+    "region": "효고 · 나다",
+    "country": "일본",
+    "alcohol": "15%",
+    "liquidColor": "#F6F5EC",
+    "confidence": 85,
+    "knowledge": "rich",
+    "basis": "국내 마트에서 흔히 보이는 나다 사케입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 48 },
+      { "axis": "감칠맛", "value": 44 },
+      { "axis": "산도", "value": 48 },
+      { "axis": "당도", "value": 28 }
+    ],
+    "tastingNotes": "쌀 향이 담백하고 뒷맛이 단정하게 끊깁니다. 값이 눅고 데워 마셨을 때 결이 살아나, 집에서 편하게 두고 마시기 좋습니다.",
+    "specs": [
+      { "label": "정미율", "value": "70%" },
+      { "label": "분류", "value": "본양조" },
+      { "label": "물", "value": "나다의 미야미즈" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1662", "event": "효고 니시노미야에서 창업" },
+      { "year": "1840", "event": "이 고장에서 미야미즈가 발견됨" }
+    ],
+    "story": "나다 술의 성격을 만드는 '미야미즈'가 이 회사 사람에 의해 발견됐다고 전해집니다. 물이 다르면 술이 달라진다는 것을 알아본 것입니다.",
+    "winery": "효고 니시노미야, 미야미즈가 솟는 자리에 있습니다.",
+    "foodPairing": [
+      { "emoji": "🍢", "food": "오뎅·어묵탕", "why": "담백한 맛이 국물과 이어집니다", "shopKeyword": "어묵" },
+      { "emoji": "🍖", "food": "닭꼬치", "why": "숯불 향과 잘 맞습니다", "shopKeyword": "닭꼬치" },
+      { "emoji": "🥟", "food": "만두", "why": "기름을 정리합니다", "shopKeyword": "만두" }
+    ],
+    "pairingTip": "데워 마시기 좋은 값 부담 없는 사케입니다.",
+    "avoidPairing": "섬세한 향을 기대하면 실망할 수 있습니다.",
+    "similar": ["쿠보타 센주", "이치노쿠라 무칸사 본조조", "니혼사케 사와노츠루 준마이 야마다니시키"],
+    "trivia": "'본양조'는 양조 알코올을 조금 넣은 술입니다. 값이 눅고 데웠을 때 결이 잘 열립니다.",
+    "servingTemp": "40~45℃ 또는 상온",
+    "servingNote": "데워 드시면 좋습니다.",
+    "aging": "제조일에서 1년 안에 마시는 것이 좋습니다.",
+    "tips": ["데워 마실 사케는 비싼 다이긴조보다 본양조가 낫습니다"]
+  },
+  {
+    "category": "sake",
+    "name": "니혼사케 사쿠라마사무네 야에자쿠라 준마이",
+    "searchKeyword": "사쿠라마사무네 준마이",
+    "producer": "사쿠라마사무네(櫻正宗)",
+    "type": "준마이 사케",
+    "vintage": null,
+    "region": "효고 · 나다",
+    "country": "일본",
+    "alcohol": "15%",
+    "liquidColor": "#F6F4E8",
+    "confidence": 84,
+    "knowledge": "rich",
+    "basis": "협회 1호 효모의 고향으로 이름난 양조장입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 50 },
+      { "axis": "감칠맛", "value": 52 },
+      { "axis": "산도", "value": 48 },
+      { "axis": "당도", "value": 32 }
+    ],
+    "tastingNotes": "쌀의 구수함이 단정하게 깔리고 뒷맛이 짧게 끊깁니다. 화려함을 좇지 않는 옛 나다 사케의 결이라, 음식 곁에 두기 좋습니다.",
+    "specs": [
+      { "label": "정미율", "value": "70%" },
+      { "label": "효모", "value": "협회 1호(이 양조장에서 발견)" },
+      { "label": "분류", "value": "준마이" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1625", "event": "효고 나다에서 창업" },
+      { "year": "1906", "event": "이곳 효모가 협회 1호로 등록됨" }
+    ],
+    "story": "협회 효모의 첫 번호가 이 양조장에서 나왔습니다. '마사무네'라는 이름을 처음 쓴 곳이기도 해, 지금 수많은 사케가 이 이름을 따라 씁니다.",
+    "winery": "고베 나다, 400년 된 양조장입니다.",
+    "foodPairing": [
+      { "emoji": "🍢", "food": "오뎅·어묵탕", "why": "담백한 맛이 국물과 이어집니다", "shopKeyword": "어묵" },
+      { "emoji": "🍖", "food": "돼지고기 구이", "why": "구수함이 기름을 받습니다", "shopKeyword": "돼지 목살" },
+      { "emoji": "🍣", "food": "초밥", "why": "짧은 뒷맛이 재료를 살립니다", "shopKeyword": "초밥" }
+    ],
+    "pairingTip": "데워 마시면 구수함이 살아납니다.",
+    "avoidPairing": "화려한 향을 기대하면 맞지 않습니다.",
+    "similar": ["니혼사케 하쿠시카 특선 혼조조", "니혼사케 사와노츠루 준마이 야마다니시키", "이치노쿠라 무칸사 본조조"],
+    "trivia": "사케 이름에 '마사무네'가 유난히 많은 것은 이 양조장 이름을 따라 붙인 것들입니다.",
+    "servingTemp": "12~16℃ 또는 40~45℃",
+    "servingNote": "살짝 서늘하게, 또는 데워서 드세요.",
+    "aging": "제조일에서 1년 안에 마시는 것이 좋습니다.",
+    "tips": ["'마사무네'가 붙은 사케가 많은 데는 이런 내력이 있습니다"]
+  }
+]
