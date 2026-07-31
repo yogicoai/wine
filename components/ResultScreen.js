@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { catOf } from "@/lib/cats";
 import { servingPlan } from "@/lib/serving";
+import { glasswareFor } from "@/lib/glassware";
 import Flag from "./Flag";
 import useActiveTimers from "./useActiveTimer";
 import { startTimer, clearTimer, progressOf, formatRemain } from "@/lib/timer";
@@ -161,6 +162,42 @@ function usePairingProducts(pairs) {
     total: found.reduce((sum, it) => sum + (it.price || 0), 0),
     count: found.length,
   };
+}
+
+// 무슨 잔에 마실 것인가 — 술을 산 뒤에야 궁금해지는데 물어볼 데가 마땅치 않다.
+// 잔 이름만 알려 주면 소용이 없으므로, 모양과 이유를 함께 적고 살 수 있는 곳까지 잇는다.
+function GlasswareCard({ result }) {
+  const { glasses, tip } = glasswareFor(result);
+  if (!glasses.length) return null;
+
+  return (
+    <div className="card">
+      <div className="card-title">어떤 잔에</div>
+      <div className="pair-list">
+        {glasses.map((g) => (
+          <div className="pair" key={g.key}>
+            <div className="emo">🥂</div>
+            <div className="pair-body">
+              <b>{g.name}</b>
+              <span>
+                {g.shape} — {g.why}
+              </span>
+              {/* 잔은 상품 조회를 걸지 않는다 — 결과 화면마다 호출이 늘 이유가 없다 */}
+              <a
+                className="glass-buy"
+                href={`https://www.coupang.com/np/search?q=${encodeURIComponent(g.shopKeyword)}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {g.shopKeyword} 찾아보기
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+      {tip && <div className="tip-line">✦ {tip}</div>}
+    </div>
+  );
 }
 
 function PairingCard({ pairs, tip, avoid }) {
@@ -651,6 +688,9 @@ export default function ResultScreen({
           {r.servingNote && <p style={{ marginTop: 10 }}>{r.servingNote}</p>}
         </div>
       )}
+
+      {/* 잔 — 술 정보에서 규칙으로 고르므로 분석 비용이 들지 않는다 */}
+      <GlasswareCard result={r} />
 
       {/* 서빙 타이머 */}
       <ServingTimer result={r} />
