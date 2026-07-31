@@ -19,26 +19,39 @@ const SOFTEN = [
   [/떼/g, "테"], [/꼬/g, "코"], [/까/g, "카"], [/뽀/g, "포"],
   [/삐/g, "피"], [/똘/g, "톨"], [/씨/g, "시"], [/쌩/g, "생"],
   [/쉐/g, "셰"], [/뀌/g, "퀴"], [/뤼/g, "루"], [/쏘/g, "소"],
+  // 일본 술은 여기가 갈린다. 다이긴죠/다이긴조가 서로 못 만나면
+  // 사케는 같은 술이 두 칸을 차지한 채 영영 합쳐지지 않는다.
+  [/죠/g, "조"], [/쥰/g, "준"], [/쯔/g, "츠"], [/쵸/g, "초"],
+  [/챠/g, "차"], [/쨔/g, "자"], [/쿄/g, "교"], [/뉴/g, "누"],
+  [/베이/g, "베에"],   // 하치베이 = 하치베에 (八兵衛)
 ];
 
-function soften(s) {
-  let x = String(s || "").toLowerCase();
+// 낱말 하나가 통째로 갈리는 경우 — 뜻이 같은 표기를 한쪽으로 맞춘다
+const SYNONYM = [
+  [/니혼사케\s*/g, ""],   // 판매처가 붙이는 머리말이지 술 이름이 아니다
+  [/도쿠베츠/g, "특별"],
+  [/카라구치/g, "카라쿠치"],
+  [/(준마이|다이긴조|긴조|혼조조)\s*슈/g, "$1"],  // "준마이 슈" 는 "준마이" 다
+];
+
+function normalizeName(raw) {
+  let x = splitName(raw).name.toLowerCase();
   for (const [re, to] of SOFTEN) x = x.replace(re, to);
+  for (const [re, to] of SYNONYM) x = x.replace(re, to);
   return x;
 }
 
 function squash(raw) {
-  return soften(splitName(raw).name.replace(/[^가-힣a-z0-9]/gi, ""));
+  return normalizeName(raw).replace(/[^가-힣a-z0-9]/gi, "");
 }
 
 // "노턴 리제르바 말벡"과 "노턴 말벡 리제르바"는 같은 술이다.
 // 낱말을 가나다순으로 세워 비교하면 어순이 뒤바뀐 것도 한 칸에 모인다.
 // 낱말이 하나뿐이면 짧은 이름끼리 엉뚱하게 묶일 수 있어 두 개 이상일 때만 쓴다.
 function squashSorted(raw) {
-  const words = splitName(raw)
-    .name.split(/[^가-힣a-z0-9]+/i)
-    .filter(Boolean)
-    .map(soften);
+  const words = normalizeName(raw)
+    .split(/[^가-힣a-z0-9]+/i)
+    .filter(Boolean);
   if (words.length < 2) return null;
   return words.sort().join("");
 }
