@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Noto_Serif_KR, Noto_Sans_KR } from "next/font/google";
 import { FONT_SCALE } from "@/lib/features";
+import { APP } from "@/lib/appProfile";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -18,17 +19,24 @@ const sansKr = Noto_Sans_KR({
   variable: "--font-sans-kr",
 });
 
+// 이름·설명은 앱 프로필에서 온다 — 와인·사케·맥주·전통술이 같은 소스를 쓴다
+const TITLE = APP.name === APP.nameEn ? APP.name : `${APP.name} — ${APP.nameEn}`;
+const DESC =
+  APP.locale === "en"
+    ? "Photograph any bottle. Get the story, the taste, the pairing, and where to buy."
+    : `${APP.tagline}. 라벨을 찍으면 주종·가격·히스토리·페어링까지 읽어드립니다.`;
+
 export const metadata = {
-  title: "보틀 렌즈 — Bottle Lens",
-  description: "술 라벨을 찍으면 주종·가격·히스토리·페어링까지, AI 소믈리에가 읽어드립니다.",
-  applicationName: "보틀 렌즈",
+  title: TITLE,
+  description: DESC,
+  applicationName: APP.name,
   manifest: "/manifest.json",
-  appleWebApp: { capable: true, title: "보틀 렌즈", statusBarStyle: "black-translucent" },
+  appleWebApp: { capable: true, title: APP.name, statusBarStyle: "black-translucent" },
   openGraph: {
-    title: "보틀 렌즈 — Bottle Lens",
-    description: "술 라벨을 찍으면 주종·가격·히스토리·페어링까지, AI 소믈리에가 읽어드립니다.",
+    title: TITLE,
+    description: DESC,
     type: "website",
-    locale: "ko_KR",
+    locale: APP.locale === "en" ? "en_US" : "ko_KR",
   },
   // 시연 단계에서는 검색엔진에 노출되지 않도록 (정식 출시 때 제거)
   robots: { index: false, follow: false },
@@ -49,7 +57,7 @@ export const viewport = {
 // 전에 쓰던 사람의 기기에는 값이 남아 있어 그대로 두면 화면이 어긋난 채 뜬다.
 const APPLY_SCALE = FONT_SCALE
   ? `try{
-  var k=localStorage.getItem('bottlelens.fontScale');
+  var k=localStorage.getItem("bottlelens.fontScale");
   var v={s:0.92,m:1,l:1.12,xl:1.24}[k];
   if(v)document.documentElement.style.setProperty('--ui-zoom',v);
 }catch(e){}`
@@ -57,7 +65,7 @@ const APPLY_SCALE = FONT_SCALE
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko">
+    <html lang={APP.locale}>
       <head>
         {/* Pretendard — 한글 UI 가독성이 좋고, 쓰이는 글자만 내려받는 방식이라 가볍다 */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />

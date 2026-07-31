@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getDb } from "@/lib/mongodb";
 import { profileFromAnswers } from "@/lib/taste";
 import { recommendByTaste, recommendForBeginner, recommendByBand } from "@/lib/recommend";
+import { DEFAULT_CATEGORY } from "@/lib/appProfile";
 
 export const runtime = "nodejs";
 
@@ -18,7 +19,7 @@ export async function GET(request) {
   if (!db) return NextResponse.json({ noDb: true, items: [] });
 
   try {
-    const category = params.get("category") || "wine";
+    const category = params.get("category") || DEFAULT_CATEGORY;
     // 가격대는 성격(맞춤·입문자·둘러보기)과 별개로 걸 수 있다.
     // "입문자용인데 5만원 이하" 같은 조합이 실제로 가장 많이 나오는 질문이다.
     const band = Number(params.get("band")) || null;
