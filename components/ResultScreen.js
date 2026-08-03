@@ -47,6 +47,10 @@ function useShopItems(name, keyword) {
               sampled: d.sampled || d.items.length,
             });
           }
+          // 가격은 못 가져와도 살 곳은 안다 — 다른 후보를 더 볼 것 없이 링크로 끝낸다
+          if (d.retired) {
+            return setState({ loading: false, items: [], noApi: false, searchUrl: d.searchUrl });
+          }
         } catch {
           /* 다음 후보 시도 */
         }
@@ -123,10 +127,23 @@ function PurchaseCard({ shop }) {
           {t("네이버쇼핑 API 키(NAVER_CLIENT_ID/SECRET)를 설정하면 실제 제품 이미지와 최저가가 여기 표시됩니다.")}
         </div>
       )}
+      {/* 판매처 목록이 없을 때 "아래 목록은…"이라고 적으면 가리킬 목록이 없다.
+          가격을 못 가져오는 상황에서도 살 곳은 알려 줄 수 있으므로 링크는 남긴다. */}
+      {!state.loading && !state.items?.length && !state.noApi && (
+        <div className="shop-note">
+          {t("지금은 판매처 가격을 자동으로 가져올 수 없습니다. 아래에서 바로 찾아보실 수 있습니다.")}
+        </div>
+      )}
       <div className="shop-note">
-        {t("아래 목록은 가격순이 아니라, 로그인 없이 바로 구매 가능한 판매처를 앞세운 순서입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다. 가격은 판매처 사정에 따라 달라질 수 있습니다.")}
-        {" · "}
-        <a className="shop-more" href={naverLink} target="_blank" rel="noreferrer">{t("네이버쇼핑에서 더 보기")}</a>
+        {state.items?.length > 0 && (
+          <>
+            {t("아래 목록은 가격순이 아니라, 로그인 없이 바로 구매 가능한 판매처를 앞세운 순서입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다. 가격은 판매처 사정에 따라 달라질 수 있습니다.")}
+            {" · "}
+          </>
+        )}
+        <a className="shop-more" href={naverLink} target="_blank" rel="noreferrer">
+          {state.items?.length > 0 ? t("네이버쇼핑에서 더 보기") : t("네이버쇼핑에서 찾기")}
+        </a>
         {" · "}
         <a className="shop-more" href={wsLink} target="_blank" rel="noreferrer">Wine-Searcher</a>
       </div>

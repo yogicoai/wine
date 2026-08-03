@@ -1,5 +1,12 @@
 import { NextResponse } from "next/server";
-import { searchShop, pickRepresentative, priceReference, hasNaverKeys } from "@/lib/naver";
+import {
+  searchShop,
+  pickRepresentative,
+  priceReference,
+  hasNaverKeys,
+  isShopRetired,
+  shopSearchUrl,
+} from "@/lib/naver";
 
 export const runtime = "nodejs";
 
@@ -28,6 +35,16 @@ export async function GET(request) {
     }
 
     const items = (await searchShop(queries[0], type)) || [];
+
+    // 값을 못 가져왔더라도 살 곳까지 끊지는 않는다. 검색 주소는 API가 아니라
+    // 그냥 링크라, 가격만 빠지고 구매 경로는 그대로 남는다.
+    if (!items.length && isShopRetired()) {
+      return NextResponse.json({
+        items: [],
+        retired: true,
+        searchUrl: shopSearchUrl(queries[0]),
+      });
+    }
 
     // 기준 최저가는 표시하는 4개가 아니라 검색 결과 전체로 계산한다.
     // 셀러 가치·가격 이력·특가 알림도 같은 계산을 쓰므로 화면끼리 숫자가 어긋나지 않는다.
