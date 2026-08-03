@@ -266,6 +266,11 @@ img, video, canvas { display: block; max-width: 100%; }
   text-align: center; color: var(--ink-dim); font-size: 11px; margin-top: 20px;
   letter-spacing: 0.18em; text-transform: uppercase;
 }
+/* 올릴 수 없는 사진을 골랐을 때 — 안내가 아니라 거절이므로 글자를 키우고 색을 준다 */
+.drop-hint.is-error {
+  color: var(--seal); font-size: 12.5px; letter-spacing: 0.02em;
+  text-transform: none; margin-top: 14px;
+}
 .dragover .cam-frame { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft), 0 30px 60px -30px rgba(0,0,0,0.8); }
 
 /* ── 로딩 ── */

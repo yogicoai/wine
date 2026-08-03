@@ -112,6 +112,15 @@ export async function POST(request) {
   } catch (err) {
     const status = err?.status;
     let message = "분석 중 오류가 발생했습니다.";
+    // 앨범에서 아무 사진이나 고를 수 있게 되면서, 분석기가 거절하는 사진도 들어온다.
+    // 이때 "오류"라고만 하면 사용자는 앱이 고장 난 줄 알고 같은 사진을 계속 올린다.
+    // 사진 문제임을 분명히 알려 다른 사진을 고르게 한다.
+    if (status === 400 && /image|이미지|invalid|unsupported/i.test(err?.message || "")) {
+      return NextResponse.json(
+        { error: "이 사진은 분석할 수 없습니다. 술병 라벨이 잘 보이는 사진으로 다시 시도해 주세요." },
+        { status: 400 }
+      );
+    }
     if (status === 401) message = "API 키가 올바르지 않습니다. .env.local 의 ANTHROPIC_API_KEY 를 확인하세요.";
     else if (status === 429) message = "요청 한도를 초과했습니다. 잠시 후 다시 시도하세요.";
     else if (status === 529 || status >= 500) message = "Anthropic 서버가 혼잡합니다. 잠시 후 다시 시도하세요.";

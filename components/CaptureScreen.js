@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { fileToDataUrl } from "@/lib/imageClient";
+import { readImageFile } from "@/lib/imageClient";
 import { scanLoop } from "@/lib/barcodeScan";
 import { BARCODE_SCAN } from "@/lib/features";
 import { t } from "@/lib/i18n";
@@ -27,6 +27,7 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
   const [starting, setStarting] = useState(false);
   const [camError, setCamError] = useState(null);
   const [dragging, setDragging] = useState(false);
+  const [fileError, setFileError] = useState(null);
   const [mode, setMode] = useState("label"); // label | barcode | list
   const [scanState, setScanState] = useState(null); // loading | scanning | error
   const [zoom, setZoom] = useState(1);
@@ -194,8 +195,14 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
   }
 
   async function handleFile(file) {
-    if (!file || !file.type.startsWith("image/")) return;
-    deliver(await fileToDataUrl(file));
+    setFileError(null);
+    const read = await readImageFile(file);
+    if (!read.ok) {
+      // 조용히 무시하면 사용자는 앱이 멈춘 줄 안다. 왜 안 되는지 적어 준다.
+      setFileError(read.reason);
+      return;
+    }
+    deliver(read.dataUrl);
   }
 
   // 클립보드 붙여넣기
@@ -399,6 +406,12 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
         <div style={{ width: 52 }} />
       </div>
 
+      {fileError && (
+        <p className="drop-hint is-error" role="alert">
+          {t(fileError)}
+        </p>
+      )}
+
       <p className="drop-hint">
         {!live
           ? t("셔터를 누르면 카메라가 켜집니다")
@@ -412,8 +425,7 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
       <input
         ref={fileRef}
         type="file"
-        accept="image/*"
-        capture="environment"
+        accept="image/jpeg,image/png,image/webp,image/heic,image/heif"
         hidden
         onChange={(e) => {
           handleFile(e.target.files?.[0]);

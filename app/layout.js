@@ -1,4 +1,11 @@
-import { Cormorant_Garamond, Noto_Serif_KR, Noto_Sans_KR, Noto_Serif_JP } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Noto_Serif_KR,
+  Noto_Sans_KR,
+  Noto_Serif_JP,
+  Noto_Sans_JP,
+  Inter,
+} from "next/font/google";
 import { FONT_SCALE } from "@/lib/features";
 import { APP, themeCss } from "@/lib/appProfile";
 import "./globals.css";
@@ -25,6 +32,20 @@ const serifJp = Noto_Serif_JP({
   variable: "--font-serif-jp",
 });
 
+// 본문(메뉴·버튼·안내문)용 — 화면 언어를 따라간다.
+// Pretendard 는 한글이 또렷한 대신 일본어 글자를 갖고 있지 않고, 라틴 자간도
+// 영어 전용 서체만 못하다. 언어가 바뀌면 본문 서체도 함께 바뀌어야 한다.
+const sansJp = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-sans-jp",
+});
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans-latin",
+});
+
 // 앱이 고른 서체 세트를 --font-display 자리에 앉힌다
 const FONT_SETS = {
   "latin-serif": cormorant.variable,
@@ -33,6 +54,16 @@ const FONT_SETS = {
 const displayFont = FONT_SETS[APP.theme.fontSet] || cormorant.variable;
 // 제목 글꼴 이름도 세트에 따라 갈아끼운다 (globals.css 의 --font-d 가 이걸 쓴다)
 const DISPLAY_VAR = APP.theme.fontSet === "jp-serif" ? "--font-serif-jp" : "--font-display";
+
+// 언어별 본문 서체 — 그 언어를 위해 만들어진 것을 앞에 세우고, 나머지는 뒤로 돌린다.
+// 앞의 것이 그 글자를 갖고 있지 않으면 브라우저가 다음으로 넘어가므로,
+// 한국어 화면에 섞인 일본어(사케 이름)도 빈 네모가 되지 않는다.
+const BODY_FONTS = {
+  ko: `Pretendard Variable, Pretendard, var(--font-sans-kr), var(--font-sans-jp), var(--font-sans-latin), sans-serif`,
+  en: `var(--font-sans-latin), Pretendard Variable, var(--font-sans-kr), sans-serif`,
+  ja: `var(--font-sans-jp), Pretendard Variable, var(--font-sans-kr), sans-serif`,
+};
+const BODY_FONT = BODY_FONTS[APP.locale] || BODY_FONTS.ko;
 
 // 이름·설명은 앱 프로필에서 온다 — 와인·사케·맥주·전통술이 같은 소스를 쓴다
 const TITLE = APP.name === APP.nameEn ? APP.name : `${APP.name} — ${APP.nameEn}`;
@@ -89,7 +120,7 @@ export default function RootLayout({ children }) {
         {/* 앱별 색·서체 — globals.css 의 기본값(와인 앱)을 이 앱의 것으로 덮는다 */}
         <style
           dangerouslySetInnerHTML={{
-            __html: `${themeCss()}:root{--font-d:var(${DISPLAY_VAR}),var(--font-serif-kr),serif;}`,
+            __html: `${themeCss()}:root{--font-d:var(${DISPLAY_VAR}),var(--font-serif-kr),serif;--font-b:${BODY_FONT};}`,
           }}
         />
         {/* Pretendard — 한글 UI 가독성이 좋고, 쓰이는 글자만 내려받는 방식이라 가볍다 */}
@@ -100,7 +131,9 @@ export default function RootLayout({ children }) {
         />
         <script dangerouslySetInnerHTML={{ __html: APPLY_SCALE }} />
       </head>
-      <body className={`${displayFont} ${serifKr.variable} ${sansKr.variable}`}>
+      <body
+        className={`${displayFont} ${serifKr.variable} ${sansKr.variable} ${sansJp.variable} ${inter.variable}`}
+      >
         {/* 전통 문양 층 — 앱이 문양을 정했을 때만 보인다 (없으면 투명) */}
         {APP.theme.pattern && <div className="pattern-layer" aria-hidden="true" />}
         {children}
