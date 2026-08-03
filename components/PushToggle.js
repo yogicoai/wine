@@ -36,11 +36,7 @@ export default function PushToggle({ onToast }) {
         if (alive) setState({ ready: true, enabled: false, subscribed: false });
       }
     })();
-    // 특가 알림은 값을 매일 확인할 수 있어야 성립한다.
-  // 지금은 그 창구가 없어 알림이 영영 오지 않는다 — 켜 두면 사용자를 기다리게 한다.
-  if (!LIVE_PRICE) return null;
-
-  return () => {
+    return () => {
       alive = false;
     };
   }, []);
@@ -95,6 +91,10 @@ export default function PushToggle({ onToast }) {
     }
   }
 
+  // 특가 알림은 값을 매일 확인할 수 있어야 성립한다.
+  // 지금은 그 창구가 없어 알림이 영영 오지 않는다 — 켜 두면 사용자를 기다리게 한다.
+  // (훅을 모두 부른 뒤에 걸러야 한다. 훅 위에 두면 렌더마다 훅 수가 달라진다)
+  if (!LIVE_PRICE) return null;
   if (!state.ready || !state.enabled) return null;
 
   return (
