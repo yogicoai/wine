@@ -6,6 +6,7 @@ import {
   Noto_Sans_JP,
   Inter,
 } from "next/font/google";
+import { cookies } from "next/headers";
 import { FONT_SCALE } from "@/lib/features";
 import { APP, themeCss } from "@/lib/appProfile";
 import "./globals.css";
@@ -63,7 +64,9 @@ const BODY_FONTS = {
   en: `var(--font-sans-latin), Pretendard Variable, var(--font-sans-kr), sans-serif`,
   ja: `var(--font-sans-jp), Pretendard Variable, var(--font-sans-kr), sans-serif`,
 };
-const BODY_FONT = BODY_FONTS[APP.locale] || BODY_FONTS.ko;
+function bodyFontFor(locale) {
+  return BODY_FONTS[locale] || BODY_FONTS.ko;
+}
 
 // 이름·설명은 앱 프로필에서 온다 — 와인·사케·맥주·전통술이 같은 소스를 쓴다
 const TITLE = APP.name === APP.nameEn ? APP.name : `${APP.name} — ${APP.nameEn}`;
@@ -113,14 +116,19 @@ const APPLY_SCALE = FONT_SCALE
 }catch(e){}`
   : `try{localStorage.removeItem('${APP.storageKey}.fontScale')}catch(e){}`;
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  // 화면 언어는 쿠키가 정한다. 서버가 여기서 읽어 처음부터 그 언어로 그려야
+  // 브라우저가 하이드레이션할 때 어긋나지 않는다 (언어 변경은 새로고침을 동반한다).
+  const picked = (await cookies()).get("bl_locale")?.value;
+  const uiLocale = picked === "ko" || picked === "en" || picked === "ja" ? picked : APP.locale;
+
   return (
-    <html lang={APP.locale}>
+    <html lang={uiLocale}>
       <head>
         {/* 앱별 색·서체 — globals.css 의 기본값(와인 앱)을 이 앱의 것으로 덮는다 */}
         <style
           dangerouslySetInnerHTML={{
-            __html: `${themeCss()}:root{--font-d:var(${DISPLAY_VAR}),var(--font-serif-kr),serif;--font-b:${BODY_FONT};}`,
+            __html: `${themeCss()}:root{--font-d:var(${DISPLAY_VAR}),var(--font-serif-kr),serif;--font-b:${bodyFontFor(uiLocale)};}`,
           }}
         />
         {/* Pretendard — 한글 UI 가독성이 좋고, 쓰이는 글자만 내려받는 방식이라 가볍다 */}

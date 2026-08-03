@@ -27,16 +27,21 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine,
   }, []);
 
   function pickLang(key) {
+    if (key === lang) return;
     setContentLocale(key);
     setLang(key);
     // 안내는 고른 언어로 — 그 언어를 읽는 사람에게 하는 말이다
     onToast?.(
       key === "ko"
-        ? "이제 여는 술 정보부터 한국어로 보여드립니다."
+        ? "한국어로 바꿉니다."
         : key === "en"
-          ? "Drink info will now appear in English."
-          : "これから開くお酒の情報は日本語で表示されます。"
+          ? "Switching to English."
+          : "日本語に切り替えます。"
     );
+    // 화면 글자까지 바꾸려면 서버가 처음부터 그 언어로 그려야 한다.
+    // 지금 화면만 갈아 끼우면 서버가 그린 것과 어긋나 화면이 깨진다.
+    // 토스트를 잠깐 보여 준 뒤 새로고침한다 — 언어는 자주 바꾸는 설정이 아니다.
+    setTimeout(() => window.location.reload(), 450);
   }
 
   useEffect(() => {
@@ -82,8 +87,8 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine,
 
         {/* 술 정보 언어 — 번역층(i18n.en/ja)이 준비된 술은 고른 언어로 나온다.
             선택은 쿠키라 서버의 카탈로그 조회까지 전달된다 (lib/locale.js) */}
-        <div className="acct-section">{t("술 정보 언어")}</div>
-        <div className="acct-lang" role="group" aria-label={t("술 정보 언어")}>
+        <div className="acct-section">{t("언어")}</div>
+        <div className="acct-lang" role="group" aria-label={t("언어")}>
           {LOCALES.map((l) => (
             <button
               key={l.key}
@@ -96,7 +101,7 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine,
           ))}
         </div>
         <p className="drawer-note" style={{ marginTop: 6 }}>
-          {t("번역이 준비된 술부터 적용됩니다. 준비되지 않은 항목은 한국어로 나옵니다.")}
+          {t("화면과 술 정보에 함께 적용됩니다. 번역이 준비되지 않은 술은 한국어로 나옵니다.")}
         </p>
 
         {/* 로그인 전 — 자리만 잡아 둔다 */}

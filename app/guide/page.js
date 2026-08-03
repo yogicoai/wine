@@ -5,8 +5,9 @@
 // 앱별 고유 카드(GUIDE)를 얹는 구조로 만든다. 공통 문구는 t()를 거쳐 앱 어휘를 따른다.
 // (예전 이 자리의 내부 기능 설명서는 docs/archive/ 에 보관)
 import Link from "next/link";
-import { APP, BRAND_NAME, BRAND_MOTTO } from "@/lib/appProfile";
-import { t } from "@/lib/i18n";
+import { APP } from "@/lib/appProfile";
+import { tFor } from "@/lib/i18n";
+import { cookies } from "next/headers";
 import { catalogStats } from "@/lib/catalog";
 
 export const metadata = { title: `이용 안내 — ${APP.name}` };
@@ -76,6 +77,12 @@ const GUIDE = {
 };
 
 export default async function GuidePage() {
+  // 서버에서 그리는 화면이라 쿠키를 직접 읽는다.
+  // 클라이언트 쪽 t() 는 브라우저의 쿠키를 보지만, 여기는 그 쿠키가 없다.
+  const picked = (await cookies()).get("bl_locale")?.value;
+  const locale = picked === "ko" || picked === "en" || picked === "ja" ? picked : APP.locale;
+  const t = tFor(locale);
+
   const g = GUIDE[APP.key] || GUIDE.wine;
   const stats = await catalogStats().catch(() => null);
   const full = stats?.full ?? null;
@@ -86,9 +93,9 @@ export default async function GuidePage() {
         <Link className="hdr-home" href="/">
           <span className="hdr-lockup">
             <span className="hdr-logo">
-              {BRAND_NAME.split(" ")[0]} <em>{BRAND_NAME.split(" ").slice(1).join(" ")}</em>
+              {APP.nameEn.split(" ")[0]} <em>{APP.nameEn.split(" ").slice(1).join(" ")}</em>
             </span>
-            <span className="hdr-sub">{BRAND_MOTTO}</span>
+            <span className="hdr-sub">{APP.motto}</span>
           </span>
         </Link>
       </header>
