@@ -1,6 +1,48 @@
 // UI 아이콘 — 이모지는 OS·폰트에 따라 엉뚱한 글리프로 렌더링되므로 인라인 SVG로 그린다.
 // 모두 24×24 좌표계, currentColor를 따르므로 CSS 색상만 지정하면 된다.
 
+import { APP } from "@/lib/appProfile";
+
+// "잔" 아이콘은 앱마다 담는 그릇이 다르다 — 사케 앱 탭에 와인잔이 떠 있으면
+// 색을 아무리 맞춰도 남의 앱처럼 보인다. name="glass" 는 이 표에서 먼저 찾는다.
+const VESSELS = {
+  // 도쿠리 — 좁은 목에서 둥근 몸통으로
+  sake: (
+    <>
+      <path d="M9.9 3.5h4.2" />
+      <path d="M10.4 3.5c.2 1.7-.2 2.8-1.3 4A6 6 0 1 0 14.9 7.5c-1.1-1.2-1.5-2.3-1.3-4" />
+    </>
+  ),
+  // 파인트 잔 + 거품선
+  beer: (
+    <>
+      <path d="M8.3 4.5h7.4l-.7 14.6a1.7 1.7 0 0 1-1.7 1.4h-2.6a1.7 1.7 0 0 1-1.7-1.4L8.3 4.5Z" />
+      <path d="M8.6 8.3h6.8" />
+    </>
+  ),
+  // 록 글라스 + 술 면
+  whisky: (
+    <>
+      <path d="M6.5 4.5h11l-.7 13.7a2 2 0 0 1-2 1.9H9.2a2 2 0 0 1-2-1.9L6.5 4.5Z" />
+      <path d="M7.3 12.5h9.4" />
+    </>
+  ),
+  // 쿠프 잔
+  spirits: (
+    <>
+      <path d="M5.8 4.5h12.4c0 3.5-2.8 6.1-6.2 6.1S5.8 8 5.8 4.5Z" />
+      <path d="M12 10.6v6.4M8.8 20.5h6.4" />
+    </>
+  ),
+  // 달항아리
+  tradition: (
+    <>
+      <path d="M9.9 3.8h4.2" />
+      <path d="M10.3 3.8c0 .9-.5 1.6-1.4 2.2a6.7 6.7 0 1 0 6.2 0c-.9-.6-1.4-1.3-1.4-2.2" />
+    </>
+  ),
+};
+
 const PATHS = {
   camera: (
     <>
@@ -57,7 +99,7 @@ const PATHS = {
 };
 
 export default function Icon({ name, size = 20, stroke = 1.6, className }) {
-  const path = PATHS[name];
+  const path = name === "glass" ? VESSELS[APP.key] || PATHS.glass : PATHS[name];
   if (!path) return null;
   return (
     <svg
