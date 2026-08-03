@@ -1,0 +1,590 @@
+[
+  {
+    "category": "beer",
+    "name": "풀러스 런던 프라이드 ESB",
+    "searchKeyword": "Fuller's ESB",
+    "producer": "풀러스(Fuller's)",
+    "type": "엑스트라 스페셜 비터",
+    "vintage": null,
+    "region": "런던",
+    "country": "영국",
+    "alcohol": "5.9%",
+    "liquidColor": "#A64A1E",
+    "confidence": 86,
+    "knowledge": "rich",
+    "basis": "ESB라는 분류 자체가 이 맥주에서 나왔습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 62 },
+      { "axis": "쓴맛", "value": 58 },
+      { "axis": "홉향", "value": 48 },
+      { "axis": "몰트", "value": 70 }
+    ],
+    "tastingNotes": "토피와 마멀레이드 같은 단맛이 두툼하게 깔리고 뒤에서 흙내 나는 홉이 받칩니다. 차갑게 마시면 이 맛이 닫히므로 서늘한 정도가 맞습니다.",
+    "specs": [
+      { "label": "스타일", "value": "ESB (엑스트라 스페셜 비터)" },
+      { "label": "IBU", "value": "약 35" },
+      { "label": "홉", "value": "타깃·챌린저·노스다운" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1845", "event": "런던 치즈윅에서 풀러 스미스 앤 터너 설립" },
+      { "year": "1971", "event": "ESB 출시 — 이 이름이 곧 스타일 이름이 됨" }
+    ],
+    "story": "영국식 비터를 가장 진하게 밀어붙인 술입니다. 이 맥주가 성공하면서 'ESB'가 아예 하나의 스타일 이름이 되었습니다.",
+    "winery": "런던 서쪽 치즈윅, 템스강 옆 자리에서 계속 빚어 왔습니다.",
+    "foodPairing": [
+      { "emoji": "🥧", "food": "미트파이", "why": "몰트의 단맛이 고기 육즙과 맞물립니다", "shopKeyword": "냉동 미트파이" },
+      { "emoji": "🧀", "food": "체다 치즈", "why": "짠맛이 쓴맛을 눌러 균형이 섭니다", "shopKeyword": "숙성 체다치즈" },
+      { "emoji": "🍖", "food": "로스트비프", "why": "구운 향끼리 이어집니다", "shopKeyword": "소고기 등심" }
+    ],
+    "pairingTip": "냉장고에서 꺼내 5분 두었다가 마시면 향이 열립니다.",
+    "avoidPairing": "매운 양념은 몰트의 단맛과 부딪힙니다.",
+    "similar": ["런던 프라이드", "뉴캐슬 브라운 에일", "브루클린 라거"],
+    "trivia": "영국 펍에서 파는 '비터'는 쓴맛이 강해서가 아니라, 홉을 넣지 않던 옛 에일과 구분하려고 붙은 이름입니다.",
+    "servingTemp": "10~13℃",
+    "servingNote": "너무 차게 마시면 몰트 향이 사라집니다.",
+    "aging": "신선할 때 마시는 술입니다.",
+    "tips": ["영국 에일은 한국 사람들이 흔히 마시는 온도보다 따뜻하게 마십니다"]
+  },
+  {
+    "category": "beer",
+    "name": "사무엘 스미스 오트밀 스타우트",
+    "searchKeyword": "Samuel Smith Oatmeal Stout",
+    "producer": "사무엘 스미스(Samuel Smith)",
+    "type": "오트밀 스타우트",
+    "vintage": null,
+    "region": "요크셔 태드캐스터",
+    "country": "영국",
+    "alcohol": "5%",
+    "liquidColor": "#241109",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "오트밀 스타우트를 되살린 것으로 널리 알려진 제품입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 68 },
+      { "axis": "쓴맛", "value": 45 },
+      { "axis": "홉향", "value": 22 },
+      { "axis": "몰트", "value": 82 }
+    ],
+    "tastingNotes": "커피와 다크초콜릿 향이 앞에 서고 귀리에서 오는 미끄러운 질감이 입에 남습니다. 흑맥주치고 무겁지 않아 한 병을 편하게 비웁니다.",
+    "specs": [
+      { "label": "스타일", "value": "오트밀 스타우트" },
+      { "label": "IBU", "value": "약 32" },
+      { "label": "발효", "value": "돌로 만든 개방형 발효조" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1758", "event": "요크셔 태드캐스터에서 창업 — 잉글랜드에서 가장 오래된 양조장 중 하나" },
+      { "year": "1980년대", "event": "잊혔던 오트밀 스타우트를 되살려 미국에 소개" }
+    ],
+    "story": "귀리를 넣어 빚습니다. 귀리의 지방과 단백질이 거품을 곱게 세우고 혀에 미끄러운 감촉을 남깁니다. 한때 사라졌던 스타일을 이 집이 되살렸습니다.",
+    "winery": "요크셔 태드캐스터, 1758년부터 같은 우물물을 씁니다.",
+    "foodPairing": [
+      { "emoji": "🦪", "food": "굴", "why": "스타우트와 굴은 영국의 오랜 짝입니다", "shopKeyword": "생굴" },
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "볶은 몰트 향이 그대로 이어집니다", "shopKeyword": "다크초콜릿 70%" },
+      { "emoji": "🍰", "food": "치즈케이크", "why": "미끄러운 질감끼리 겹칩니다", "shopKeyword": "치즈케이크" }
+    ],
+    "pairingTip": "디저트와 함께 두면 흑맥주가 커피 자리를 대신합니다.",
+    "avoidPairing": "산미가 강한 샐러드는 볶은 향과 어긋납니다.",
+    "similar": ["기네스 드래프트", "맥파이 포터", "파운더스 포터"],
+    "trivia": "이 양조장은 지금도 말이 끄는 수레로 지역 펍에 맥주를 배달합니다.",
+    "servingTemp": "10~13℃",
+    "servingNote": "잔에 부어 거품을 세우면 질감이 살아납니다.",
+    "aging": "두는 술이 아닙니다.",
+    "tips": ["흑맥주가 무겁다고 느끼셨다면 오트밀 스타우트부터 보세요"]
+  },
+  {
+    "category": "beer",
+    "name": "스미딕스 아이리시 레드 에일",
+    "searchKeyword": "Smithwick's Red Ale",
+    "producer": "스미딕스(Smithwick's)",
+    "type": "아이리시 레드 에일",
+    "vintage": null,
+    "region": "킬케니",
+    "country": "아일랜드",
+    "alcohol": "4.5%",
+    "liquidColor": "#8C2E12",
+    "confidence": 84,
+    "knowledge": "rich",
+    "basis": "아일랜드 레드 에일을 대표하는 오래된 상표입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 48 },
+      { "axis": "쓴맛", "value": 35 },
+      { "axis": "홉향", "value": 28 },
+      { "axis": "몰트", "value": 64 }
+    ],
+    "tastingNotes": "캐러멜 몰트의 단맛이 앞서고 끝이 짧게 떨어집니다. 흑맥주만큼 진하지 않아 기네스가 부담스러운 자리에 놓기 좋습니다.",
+    "specs": [
+      { "label": "스타일", "value": "아이리시 레드 에일" },
+      { "label": "IBU", "value": "약 20" },
+      { "label": "색", "value": "구운 보리에서 오는 붉은빛" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1710", "event": "킬케니 성 프란치스코 수도원 터에서 양조 시작" },
+      { "year": "현재", "event": "아일랜드에서 가장 많이 팔리는 에일" }
+    ],
+    "story": "수도원 터에 세운 양조장에서 300년 넘게 이어졌습니다. 붉은빛은 색소가 아니라 살짝 구운 보리에서 나옵니다.",
+    "winery": "아일랜드 킬케니, 노어강 옆 옛 수도원 자리입니다.",
+    "foodPairing": [
+      { "emoji": "🥩", "food": "비프 스튜", "why": "캐러멜 단맛이 고기 국물과 이어집니다", "shopKeyword": "소고기 사태" },
+      { "emoji": "🍟", "food": "피시앤칩스", "why": "가벼운 몸이 튀김 기름을 씻습니다", "shopKeyword": "냉동 감자튀김" },
+      { "emoji": "🧀", "food": "체다 치즈", "why": "짠맛과 단맛이 서로를 세웁니다", "shopKeyword": "체다치즈" }
+    ],
+    "pairingTip": "기네스와 반씩 섞어 마시는 방식이 아일랜드에 있습니다.",
+    "avoidPairing": "향이 강한 훈제 음식에는 묻힙니다.",
+    "similar": ["기네스 드래프트", "뉴캐슬 브라운 에일", "레페 블론드"],
+    "trivia": "기네스와 같은 회사 소유지만 양조장은 따로였고, 지금은 더블린에서 함께 빚습니다.",
+    "servingTemp": "6~9℃",
+    "servingNote": "너무 차게 하면 캐러멜 향이 닫힙니다.",
+    "aging": "신선할 때 마십니다.",
+    "tips": ["색이 붉다고 달지는 않습니다 — 드라이한 편입니다"]
+  },
+  {
+    "category": "beer",
+    "name": "린데만스 크릭",
+    "searchKeyword": "Lindemans Kriek",
+    "producer": "린데만스(Lindemans)",
+    "type": "람빅 · 크릭",
+    "vintage": null,
+    "region": "플랑드르 브라반트",
+    "country": "벨기에",
+    "alcohol": "3.5%",
+    "liquidColor": "#8E1230",
+    "confidence": 85,
+    "knowledge": "rich",
+    "basis": "체리 람빅을 대표하는 상표입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 34 },
+      { "axis": "쓴맛", "value": 10 },
+      { "axis": "홉향", "value": 8 },
+      { "axis": "몰트", "value": 26 }
+    ],
+    "tastingNotes": "체리의 새콤달콤함이 앞을 다 채우고 람빅 특유의 시큼한 뒷맛이 따라옵니다. 맥주라기보다 발포 과실주에 가깝게 마시게 됩니다.",
+    "specs": [
+      { "label": "스타일", "value": "람빅 · 크릭(체리)" },
+      { "label": "발효", "value": "야생 효모 자연 발효" },
+      { "label": "부재료", "value": "체리" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2028",
+    "history": [
+      { "year": "1822", "event": "농가 양조장으로 시작" },
+      { "year": "현재", "event": "람빅을 세계에 알린 대표 상표" }
+    ],
+    "story": "효모를 넣지 않습니다. 브뤼셀 서남쪽 계곡의 공기에 떠다니는 야생 효모가 알아서 발효시킵니다. 그 지역이 아니면 같은 맛이 나오지 않습니다.",
+    "winery": "브뤼셀 남서쪽 파요텐란트, 젠네 계곡 지대에 있습니다.",
+    "foodPairing": [
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "체리와 초콜릿은 오래된 짝입니다", "shopKeyword": "다크초콜릿" },
+      { "emoji": "🧀", "food": "블루치즈", "why": "산미가 곰팡이 향을 씻어 냅니다", "shopKeyword": "고르곤졸라" },
+      { "emoji": "🍨", "food": "바닐라 아이스크림", "why": "부어서 디저트로 만들 수 있습니다", "shopKeyword": "바닐라 아이스크림" }
+    ],
+    "pairingTip": "맥주를 못 마시는 사람에게 권하기 가장 쉬운 축입니다.",
+    "avoidPairing": "짠 튀김과는 단맛이 겉돕니다.",
+    "similar": ["듀체스 드 부르고뉴", "델리리움 트레멘스", "블루문"],
+    "trivia": "람빅은 젠네 계곡의 야생 효모로만 발효합니다. 다른 곳에서 같은 방식으로 빚어도 람빅이라 부르지 못합니다.",
+    "servingTemp": "4~7℃",
+    "servingNote": "차게 해서 플루트 잔에 따르면 색과 거품이 살아납니다.",
+    "aging": "몇 년 두면 단맛이 빠지고 산미가 또렷해집니다.",
+    "tips": ["처음이라면 크릭(체리)이나 프람브와즈(라즈베리)가 편합니다"]
+  },
+  {
+    "category": "beer",
+    "name": "세인트 베르나르두스 아브트 12",
+    "searchKeyword": "St. Bernardus Abt 12",
+    "producer": "세인트 베르나르두스(St. Bernardus)",
+    "type": "쿼드루펠 · 애비 에일",
+    "vintage": null,
+    "region": "서플랑드르 와토우",
+    "country": "벨기에",
+    "alcohol": "10%",
+    "liquidColor": "#4A2110",
+    "confidence": 86,
+    "knowledge": "rich",
+    "basis": "벨기에 강한 다크 에일의 기준으로 자주 꼽힙니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 82 },
+      { "axis": "쓴맛", "value": 30 },
+      { "axis": "홉향", "value": 20 },
+      { "axis": "몰트", "value": 88 }
+    ],
+    "tastingNotes": "건포도와 무화과, 흑설탕 향이 겹겹이 쌓이고 10도의 무게가 뒤를 누릅니다. 한 병을 천천히 나눠 마시는 술입니다.",
+    "specs": [
+      { "label": "스타일", "value": "쿼드루펠" },
+      { "label": "발효", "value": "병 안에서 2차 발효" },
+      { "label": "도수", "value": "10%" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2028",
+    "drinkUntil": "2033",
+    "history": [
+      { "year": "1946", "event": "베스트블레테렌 수도원의 위탁 양조를 맡아 시작" },
+      { "year": "1992", "event": "위탁 계약이 끝난 뒤 자체 상표로 계속 생산" }
+    ],
+    "story": "한때 세계 최고로 꼽히는 베스트블레테렌을 대신 빚던 곳입니다. 계약이 끝난 뒤에도 같은 효모로 계속 빚어, 구하기 어려운 그 맥주와 가장 가깝다는 말을 듣습니다.",
+    "winery": "벨기에 서플랑드르 와토우, 프랑스 국경에 가까운 마을입니다.",
+    "foodPairing": [
+      { "emoji": "🧀", "food": "숙성 치즈", "why": "단맛이 짠맛을 받아 냅니다", "shopKeyword": "고다 치즈" },
+      { "emoji": "🍖", "food": "돼지고기 조림", "why": "흑설탕 향이 간장 조림과 맞물립니다", "shopKeyword": "돼지 목살" },
+      { "emoji": "🍮", "food": "크렘 브륄레", "why": "캐러멜끼리 이어집니다", "shopKeyword": "크렘브륄레" }
+    ],
+    "pairingTip": "성배 모양 잔에 반만 따라 향이 모이게 합니다.",
+    "avoidPairing": "가벼운 흰살 생선은 이 술에 눌립니다.",
+    "similar": ["로슈포르 10", "웨스트말레 트리펠", "시메이 블루"],
+    "trivia": "병 안에서 다시 발효시키므로 몇 년 두면 맛이 바뀝니다. 벨기에 강한 에일은 오래 두고 마시는 몇 안 되는 맥주입니다.",
+    "servingTemp": "12~14℃",
+    "servingNote": "냉장고에서 꺼내 잠시 두었다가 마십니다.",
+    "aging": "5년까지는 두면 좋아집니다.",
+    "tips": ["10도짜리 맥주입니다 — 와인처럼 다루세요"]
+  },
+  {
+    "category": "beer",
+    "name": "슈나이더 바이세 탑07",
+    "searchKeyword": "Schneider Weisse Tap 7",
+    "producer": "슈나이더(Schneider Weisse)",
+    "type": "바이스비어",
+    "vintage": null,
+    "region": "바이에른 켈하임",
+    "country": "독일",
+    "alcohol": "5.4%",
+    "liquidColor": "#B9701F",
+    "confidence": 85,
+    "knowledge": "rich",
+    "basis": "밀맥주 양조를 이어 온 대표 양조장입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 58 },
+      { "axis": "쓴맛", "value": 22 },
+      { "axis": "홉향", "value": 20 },
+      { "axis": "몰트", "value": 70 }
+    ],
+    "tastingNotes": "바나나와 정향 향이 뚜렷하고 몰트가 다른 밀맥주보다 진합니다. 색이 짙은 만큼 맛도 묵직한 편입니다.",
+    "specs": [
+      { "label": "스타일", "value": "바이스비어(헤페바이젠)" },
+      { "label": "밀 비율", "value": "약 60%" },
+      { "label": "발효", "value": "병 안에서 2차 발효" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1872", "event": "바이에른 왕가로부터 밀맥주 양조권을 사들임" },
+      { "year": "현재", "event": "켈하임에서 밀맥주만 빚는 양조장" }
+    ],
+    "story": "바이에른에서 밀맥주는 오랫동안 왕가만 빚을 수 있었습니다. 1872년 그 권리를 민간이 처음 사들인 것이 이 집입니다.",
+    "winery": "바이에른 켈하임, 도나우강과 알트뮐강이 만나는 곳입니다.",
+    "foodPairing": [
+      { "emoji": "🥨", "food": "프레첼", "why": "짠맛이 밀의 단맛을 세웁니다", "shopKeyword": "프레첼" },
+      { "emoji": "🌭", "food": "흰 소시지", "why": "바이에른에서 아침으로 함께 먹습니다", "shopKeyword": "바이스부어스트" },
+      { "emoji": "🧀", "food": "카망베르", "why": "부드러운 질감끼리 이어집니다", "shopKeyword": "카망베르 치즈" }
+    ],
+    "pairingTip": "병을 눕혀 굴린 뒤 마지막에 효모를 따르면 맛이 두꺼워집니다.",
+    "avoidPairing": "홉이 강한 안주와는 향이 부딪힙니다.",
+    "similar": ["바이엔슈테판 헤페바이스비어", "에딩거 바이스비어", "파울라너 헤페 바이스비어"],
+    "trivia": "밀맥주의 바나나 향은 향료가 아니라 효모가 만드는 것입니다. 발효 온도를 조금만 올려도 이 향이 강해집니다.",
+    "servingTemp": "7~9℃",
+    "servingNote": "긴 바이젠 잔에 천천히 따르고 거품을 남깁니다.",
+    "aging": "신선할 때 마십니다.",
+    "tips": ["밀맥주는 잔에 효모를 남기지 말고 마지막까지 따르세요"]
+  },
+  {
+    "category": "beer",
+    "name": "비트버거 프리미엄 필스",
+    "searchKeyword": "Bitburger Premium Pils",
+    "producer": "비트버거(Bitburger)",
+    "type": "저먼 필스너",
+    "vintage": null,
+    "region": "라인란트팔츠 비트부르크",
+    "country": "독일",
+    "alcohol": "4.8%",
+    "liquidColor": "#EBC24A",
+    "confidence": 85,
+    "knowledge": "rich",
+    "basis": "독일 생맥주 판매량 상위의 필스너입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 38 },
+      { "axis": "쓴맛", "value": 55 },
+      { "axis": "홉향", "value": 48 },
+      { "axis": "몰트", "value": 38 }
+    ],
+    "tastingNotes": "홉의 쌉싸름함이 곧게 서고 뒤가 마릅니다. 단맛을 거의 남기지 않아 계속 마시게 되는 쪽입니다.",
+    "specs": [
+      { "label": "스타일", "value": "저먼 필스너" },
+      { "label": "IBU", "value": "약 30" },
+      { "label": "홉", "value": "독일 아로마 홉" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1817", "event": "비트부르크에서 창업" },
+      { "year": "현재", "event": "독일 생맥주 시장 상위 상표" }
+    ],
+    "story": "체코 필스너보다 홉의 쓴맛을 앞세우고 몰트를 뒤로 물린 독일식입니다. 마시고 나서 입에 남는 것이 적어 식사 내내 곁에 두기 좋습니다.",
+    "winery": "라인란트팔츠 비트부르크, 아이펠 산지의 물을 씁니다.",
+    "foodPairing": [
+      { "emoji": "🌭", "food": "소시지", "why": "쓴맛이 기름을 잘라 냅니다", "shopKeyword": "브라트부어스트" },
+      { "emoji": "🍗", "food": "치킨", "why": "마른 뒷맛이 튀김을 씻습니다", "shopKeyword": "닭다리살" },
+      { "emoji": "🥗", "food": "감자 샐러드", "why": "담백한 재료와 무게가 맞습니다", "shopKeyword": "감자" }
+    ],
+    "pairingTip": "잔을 찬물로 헹궈 두면 거품이 곱게 섭니다.",
+    "avoidPairing": "단 디저트와는 쓴맛만 남습니다.",
+    "similar": ["크롬바커 필스", "필스너 우르켈", "벡스"],
+    "trivia": "독일에서 \"비트 비테(Bit bitte)\"는 그냥 \"비트버거 한 잔\"이라는 뜻으로 통합니다.",
+    "servingTemp": "5~7℃",
+    "servingNote": "차게 마시되 얼음처럼 차게 하지는 않습니다.",
+    "aging": "신선할 때 마십니다.",
+    "tips": ["필스너는 병입일이 최근일수록 좋습니다"]
+  },
+  {
+    "category": "beer",
+    "name": "아잉거 셀레브라토어",
+    "searchKeyword": "Ayinger Celebrator",
+    "producer": "아잉거(Ayinger)",
+    "type": "도펠보크",
+    "vintage": null,
+    "region": "바이에른 아잉",
+    "country": "독일",
+    "alcohol": "6.7%",
+    "liquidColor": "#331508",
+    "confidence": 85,
+    "knowledge": "rich",
+    "basis": "도펠보크를 대표하는 제품으로 널리 꼽힙니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 76 },
+      { "axis": "쓴맛", "value": 28 },
+      { "axis": "홉향", "value": 18 },
+      { "axis": "몰트", "value": 90 }
+    ],
+    "tastingNotes": "볶은 몰트와 초콜릿, 말린 자두 향이 진하게 깔립니다. 흑맥주처럼 보이지만 라거라 뒷맛이 의외로 깔끔합니다.",
+    "specs": [
+      { "label": "스타일", "value": "도펠보크" },
+      { "label": "발효", "value": "하면발효(라거)" },
+      { "label": "숙성", "value": "저온 장기 숙성" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2026",
+    "drinkUntil": "2028",
+    "history": [
+      { "year": "1878", "event": "뮌헨 남동쪽 아잉 마을에서 창업" },
+      { "year": "현재", "event": "국제 대회에서 도펠보크 부문 수상을 거듭" }
+    ],
+    "story": "도펠보크는 원래 수도사들이 사순절 금식 기간에 마시던 '액체 빵'입니다. 곡기를 끊은 동안 이것으로 버텼습니다.",
+    "winery": "바이에른 아잉, 뮌헨에서 남동쪽으로 25킬로미터 떨어진 마을입니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "족발", "why": "진한 몰트가 기름진 살코기를 받습니다", "shopKeyword": "족발" },
+      { "emoji": "🧀", "food": "블루치즈", "why": "단맛과 짠맛이 서로를 세웁니다", "shopKeyword": "고르곤졸라" },
+      { "emoji": "🍫", "food": "다크 초콜릿", "why": "볶은 향이 그대로 이어집니다", "shopKeyword": "다크초콜릿" }
+    ],
+    "pairingTip": "식후에 한 잔으로 두면 디저트를 대신합니다.",
+    "avoidPairing": "가벼운 샐러드는 완전히 묻힙니다.",
+    "similar": ["로슈포르 10", "파운더스 포터", "코젤 다크"],
+    "trivia": "도펠보크 이름은 대개 '-ator'로 끝납니다. 원조인 파울라너의 살바토어를 따라 하는 관습입니다.",
+    "servingTemp": "8~11℃",
+    "servingNote": "성배 모양 잔에 따르면 향이 모입니다.",
+    "aging": "1~2년 두면 맛이 둥글어집니다.",
+    "tips": ["검은 라거는 흑맥주보다 뒷맛이 깔끔합니다"]
+  },
+  {
+    "category": "beer",
+    "name": "가펠 쾰쉬",
+    "searchKeyword": "Gaffel Kölsch",
+    "producer": "가펠(Gaffel)",
+    "type": "쾰쉬",
+    "vintage": null,
+    "region": "쾰른",
+    "country": "독일",
+    "alcohol": "4.8%",
+    "liquidColor": "#F0D060",
+    "confidence": 83,
+    "knowledge": "rich",
+    "basis": "쾰른 쾰쉬 협약에 속한 대표 양조장입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 34 },
+      { "axis": "쓴맛", "value": 38 },
+      { "axis": "홉향", "value": 36 },
+      { "axis": "몰트", "value": 36 }
+    ],
+    "tastingNotes": "가볍고 마르며 은은한 과일 향이 스칩니다. 에일 효모로 발효한 뒤 라거처럼 차게 숙성해, 두 성격이 반씩 섞여 있습니다.",
+    "specs": [
+      { "label": "스타일", "value": "쾰쉬" },
+      { "label": "발효", "value": "상면발효 후 저온 숙성" },
+      { "label": "원산지 보호", "value": "쾰른 지역만 사용 가능" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1908", "event": "쾰른에서 창업" },
+      { "year": "1986", "event": "쾰쉬 협약 — 쾰른에서 빚은 것만 쾰쉬라 부를 수 있게 됨" }
+    ],
+    "story": "쾰른에서만 쓸 수 있는 이름입니다. 협약으로 지역과 방식이 정해져 있어, 같은 방식으로 빚어도 다른 도시에서는 쾰쉬라 부르지 못합니다.",
+    "winery": "쾰른 시내, 대성당에서 걸어갈 수 있는 거리에 있습니다.",
+    "foodPairing": [
+      { "emoji": "🥔", "food": "감자전", "why": "가벼운 몸이 기름을 씻습니다", "shopKeyword": "감자" },
+      { "emoji": "🍗", "food": "닭꼬치", "why": "담백한 안주와 무게가 맞습니다", "shopKeyword": "닭꼬치" },
+      { "emoji": "🐟", "food": "생선구이", "why": "마른 뒷맛이 비린내를 눌러 줍니다", "shopKeyword": "고등어" }
+    ],
+    "pairingTip": "쾰른에서는 200ml 얇은 잔에 계속 채워 줍니다 — 작은 잔이 맞습니다.",
+    "avoidPairing": "진한 소스 요리에는 존재감이 약합니다.",
+    "similar": ["크롬바커 필스", "칼스버그", "하이네켄"],
+    "trivia": "쾰른 술집에서는 잔 받침에 선을 그어 몇 잔 마셨는지 셉니다. 그만 달라고 하려면 잔 위에 받침을 덮습니다.",
+    "servingTemp": "6~8℃",
+    "servingNote": "작은 잔에 조금씩, 계속 새로 따라 마십니다.",
+    "aging": "신선할 때 마십니다.",
+    "tips": ["에일인데 라거처럼 깔끔합니다 — 둘 사이가 궁금하면 여기부터"]
+  },
+  {
+    "category": "beer",
+    "name": "스타로프라멘 프리미엄 라거",
+    "searchKeyword": "Staropramen",
+    "producer": "스타로프라멘(Staropramen)",
+    "type": "체코 라거",
+    "vintage": null,
+    "region": "프라하",
+    "country": "체코",
+    "alcohol": "5%",
+    "liquidColor": "#E8B93F",
+    "confidence": 83,
+    "knowledge": "rich",
+    "basis": "프라하를 대표하는 라거로 국내 유통이 오래됐습니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 42 },
+      { "axis": "쓴맛", "value": 40 },
+      { "axis": "홉향", "value": 38 },
+      { "axis": "몰트", "value": 48 }
+    ],
+    "tastingNotes": "빵 같은 몰트 향이 먼저 오고 사츠 홉의 풀 향이 뒤를 받칩니다. 필스너 우르켈보다 부드럽고 단맛이 조금 더 있습니다.",
+    "specs": [
+      { "label": "스타일", "value": "체코 페일 라거" },
+      { "label": "홉", "value": "사츠(자테츠)" },
+      { "label": "IBU", "value": "약 25" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1869", "event": "프라하 스미호프 지구에서 창업" },
+      { "year": "현재", "event": "체코에서 두 번째로 큰 양조장" }
+    ],
+    "story": "이름은 '오래된 샘'이라는 뜻입니다. 프라하 시내 스미호프 지구에서 150년 넘게 같은 자리를 지켰습니다.",
+    "winery": "프라하 스미호프, 블타바강 서안에 있습니다.",
+    "foodPairing": [
+      { "emoji": "🍖", "food": "돼지고기 구이", "why": "체코에서 가장 흔한 짝입니다", "shopKeyword": "돼지 목살" },
+      { "emoji": "🥨", "food": "프레첼", "why": "짠맛이 홉의 쓴맛을 눌러 줍니다", "shopKeyword": "프레첼" },
+      { "emoji": "🍟", "food": "감자튀김", "why": "가벼운 몸이 기름을 씻습니다", "shopKeyword": "냉동 감자튀김" }
+    ],
+    "pairingTip": "거품을 두껍게 세워 마시는 것이 체코식입니다.",
+    "avoidPairing": "향신료가 센 요리에는 밀립니다.",
+    "similar": ["필스너 우르켈", "부데요비츠키 부드바르", "크롬바커 필스"],
+    "trivia": "체코의 1인당 맥주 소비량은 30년 넘게 세계 1위입니다.",
+    "servingTemp": "5~7℃",
+    "servingNote": "거품을 두껍게 남기면 향이 오래 갑니다.",
+    "aging": "신선할 때 마십니다.",
+    "tips": ["체코 라거는 거품을 걷어내지 않고 그대로 마십니다"]
+  },
+  {
+    "category": "beer",
+    "name": "하이네켄 0.0",
+    "searchKeyword": "Heineken 0.0",
+    "producer": "하이네켄(Heineken)",
+    "type": "논알코올 라거",
+    "vintage": null,
+    "region": "암스테르담",
+    "country": "네덜란드",
+    "alcohol": "0.0%",
+    "liquidColor": "#E9C24B",
+    "confidence": 86,
+    "knowledge": "rich",
+    "basis": "논알코올 맥주 가운데 국내 유통이 가장 넓은 편입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 26 },
+      { "axis": "쓴맛", "value": 28 },
+      { "axis": "홉향", "value": 30 },
+      { "axis": "몰트", "value": 34 }
+    ],
+    "tastingNotes": "하이네켄 특유의 풀 향과 은은한 단맛이 남아 있고 뒷맛이 짧습니다. 도수를 뺀 자리를 몰트 향으로 메운 쪽입니다.",
+    "specs": [
+      { "label": "스타일", "value": "논알코올 라거" },
+      { "label": "도수", "value": "0.0%" },
+      { "label": "제법", "value": "발효 후 알코올 제거" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1873", "event": "암스테르담에서 창업" },
+      { "year": "2017", "event": "0.0 출시" }
+    ],
+    "story": "일반 맥주와 똑같이 발효시킨 뒤 알코올만 걷어냅니다. 처음부터 도수를 낮게 빚는 방식보다 맥주 맛이 더 남습니다.",
+    "winery": "네덜란드 암스테르담, 1873년부터 이어진 양조장입니다.",
+    "foodPairing": [
+      { "emoji": "🍕", "food": "피자", "why": "도수와 무관하게 기름을 씻어 냅니다", "shopKeyword": "냉동 피자" },
+      { "emoji": "🍗", "food": "치킨", "why": "탄산이 튀김옷을 가볍게 합니다", "shopKeyword": "닭다리살" },
+      { "emoji": "🥗", "food": "샐러드", "why": "가벼운 식사와 무게가 맞습니다", "shopKeyword": "샐러드 채소" }
+    ],
+    "pairingTip": "운전하는 자리나 점심에 맥주 자리를 대신합니다.",
+    "avoidPairing": "진한 스튜에는 존재감이 약합니다.",
+    "similar": ["카스 0.0", "하이트 제로 0.00", "클라우드 클리어 제로"],
+    "trivia": "0.0이라 표기해도 극미량의 알코올은 남습니다. 완전한 0은 아니지만 법적으로 무알코올로 분류됩니다.",
+    "servingTemp": "3~5℃",
+    "servingNote": "일반 맥주보다 조금 더 차게 마시는 편이 낫습니다.",
+    "aging": "신선할 때 마십니다.",
+    "tips": ["논알코올은 유통기한이 짧은 편이라 날짜를 보세요"]
+  },
+  {
+    "category": "beer",
+    "name": "에르디거 알코올프라이",
+    "searchKeyword": "Erdinger Alkoholfrei",
+    "producer": "에르디거(Erdinger)",
+    "type": "논알코올 밀맥주",
+    "vintage": null,
+    "region": "바이에른 에르딩",
+    "country": "독일",
+    "alcohol": "0.5%",
+    "liquidColor": "#DFA94B",
+    "confidence": 83,
+    "knowledge": "rich",
+    "basis": "독일에서 스포츠 음료처럼 팔리는 논알코올 밀맥주입니다.",
+    "tasteProfile": [
+      { "axis": "바디", "value": 34 },
+      { "axis": "쓴맛", "value": 16 },
+      { "axis": "홉향", "value": 16 },
+      { "axis": "몰트", "value": 48 }
+    ],
+    "tastingNotes": "바나나와 곡물 향이 남아 있어 논알코올치고 맥주다운 편입니다. 단맛이 조금 있고 끝이 부드럽습니다.",
+    "specs": [
+      { "label": "스타일", "value": "논알코올 헤페바이젠" },
+      { "label": "도수", "value": "0.5% 미만" },
+      { "label": "특징", "value": "비타민 B군·전해질 함유 표기" }
+    ],
+    "drinkFrom": "2025",
+    "drinkPeak": "2025",
+    "drinkUntil": "2026",
+    "history": [
+      { "year": "1886", "event": "바이에른 에르딩에서 창업" },
+      { "year": "현재", "event": "세계 최대 밀맥주 전문 양조장" }
+    ],
+    "story": "독일에서는 운동 후 회복 음료로 마십니다. 전해질과 비타민이 들어 있어 마라톤 대회 결승선에서 나눠 주기도 합니다.",
+    "winery": "바이에른 에르딩, 뮌헨 북동쪽 소도시입니다.",
+    "foodPairing": [
+      { "emoji": "🥨", "food": "프레첼", "why": "밀맥주와 프레첼은 바이에른의 기본입니다", "shopKeyword": "프레첼" },
+      { "emoji": "🥗", "food": "닭가슴살 샐러드", "why": "운동 후 식사와 성격이 같습니다", "shopKeyword": "닭가슴살" },
+      { "emoji": "🍳", "food": "오믈렛", "why": "아침 식사에 맥주 자리를 대신합니다", "shopKeyword": "계란" }
+    ],
+    "pairingTip": "운동 직후 차갑게 마시는 쓰임이 본고장 방식입니다.",
+    "avoidPairing": "기름진 튀김에는 씻어 내는 힘이 모자랍니다.",
+    "similar": ["하이네켄 0.0", "파울라너 헤페 바이스비어", "에딩거 바이스비어"],
+    "trivia": "독일에서 알코올 0.5% 미만은 무알코올로 표기할 수 있습니다. 잘 익은 바나나에도 그 정도는 들어 있습니다.",
+    "servingTemp": "4~7℃",
+    "servingNote": "바이젠 잔에 따르면 향이 살아납니다.",
+    "aging": "신선할 때 마십니다.",
+    "tips": ["논알코올 중에서 맥주 맛이 가장 많이 남은 축입니다"]
+  }
+]
