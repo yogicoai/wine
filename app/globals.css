@@ -431,6 +431,14 @@ img, video, canvas { display: block; max-width: 100%; }
   border: 1px solid var(--line-soft);
   background: linear-gradient(168deg, var(--bg-2), var(--bg-3));
 }
+/* 사진이 없을 때 — 액체 색을 아주 옅게 깔아 술마다 다르게 보이게 한다.
+   같은 주종이 전부 같은 회색 엠블럼이면 목록이 비어 보인다. */
+.hero-visual.is-emblem::before {
+  content: ""; position: absolute; inset: 12%;
+  border-radius: 50%; background: var(--tint, var(--gold));
+  opacity: 0.13; filter: blur(26px);
+}
+.hero-visual.is-emblem .hero-emblem { position: relative; }
 .hero-shot { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
 
 /* 판매처 상품컷은 대개 흰 배경이라, 어두운 카드 위에서는 흰 상자처럼 보인다.
@@ -563,6 +571,9 @@ img, video, canvas { display: block; max-width: 100%; }
 }
 .pair-buy:hover { border-color: var(--gold); background: var(--gold-soft); }
 .pair-buy img { width: 34px; height: 34px; object-fit: contain; background: #fff; flex: none; }
+/* 상품 정보 없이 검색으로만 잇는 형태 — 사진 자리가 없으므로 왼쪽 여백을 줄인다 */
+.pair-buy.is-plain { padding-left: 2px; }
+.pair-buy.is-plain .pair-buy-name { color: var(--gold); }
 .pair-buy-name {
   font-size: 11.5px; color: var(--ink-dim); line-height: 1.4; min-width: 0;
   overflow: hidden; display: block;

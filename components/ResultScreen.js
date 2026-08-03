@@ -266,12 +266,8 @@ function PairingCard({ pairs, tip, avoid }) {
             <div className="pair-body">
               <b>{p.food}</b>
               <span>{p.why}</span>
-              {map && (
-                <PairingBuy
-                  item={map[p.shopKeyword || p.food]}
-                  keyword={p.shopKeyword || p.food}
-                />
-              )}
+              {/* 조회 결과를 기다리지 않는다 — 없으면 검색 링크로 바로 내려간다 */}
+              <PairingBuy item={map?.[p.shopKeyword || p.food]} keyword={p.shopKeyword || p.food} />
             </div>
           </div>
         ))}
@@ -289,11 +285,33 @@ function PairingCard({ pairs, tip, avoid }) {
 }
 
 function PairingBuy({ item, keyword }) {
-  if (!item) return null;
+  const term = keyword || item?.title;
+  if (!term) return null;
+
+  // 판매처 정보를 못 가져와도 살 곳까지 끊지는 않는다.
+  // 쇼핑 API가 내려간 뒤로 상품 정보가 없으면 링크를 통째로 지우고 있었다 —
+  // 안주를 권해 놓고 어디서 사는지는 말하지 않는 셈이었다.
+  // 검색 주소는 API가 아니라 그냥 링크라 키도 비용도 들지 않는다.
+  if (!item) {
+    return (
+      <a
+        className="pair-buy is-plain"
+        href={`https://www.coupang.com/np/search?q=${encodeURIComponent(term)}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span className="pair-buy-name">
+          {t("{n} 찾아보기", { n: term })}
+          <em>{t("쿠팡에서 검색")}</em>
+        </span>
+      </a>
+    );
+  }
+
   // 스마트스토어 링크는 브라우저에서 로그인을 요구 → 로그인 없이 열리는 검색으로 우회
   const href = item.direct
     ? item.link
-    : `https://www.coupang.com/np/search?q=${encodeURIComponent(keyword || item.title)}`;
+    : `https://www.coupang.com/np/search?q=${encodeURIComponent(term)}`;
   return (
     <a className="pair-buy" href={href} target="_blank" rel="noreferrer">
       {item.image && <img src={item.image} alt="" />}
@@ -514,8 +532,13 @@ function HeroVisual({ result, thumb, shop }) {
   }
 
   if (!shown) {
+    // 사진이 없을 때의 자리 — 같은 주종이면 엠블럼이 전부 같아서 목록이 밋밋해진다.
+    // 술마다 아는 액체 색을 입혀 최소한 서로 달라 보이게 한다.
     return (
-      <div className="hero-visual">
+      <div
+        className="hero-visual is-emblem"
+        style={result.liquidColor ? { "--tint": result.liquidColor } : undefined}
+      >
         <CatIcon category={result.category} size={124} className="hero-emblem" />
       </div>
     );
