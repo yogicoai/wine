@@ -1099,6 +1099,12 @@ img, video, canvas { display: block; max-width: 100%; }
 .wl-name { font-size: 14px; color: var(--ink); line-height: 1.5; font-family: var(--font-s); word-break: keep-all; }
 .wl-name em { font-style: normal; color: var(--gold); font-family: var(--font-d); }
 .wl-name .badge { margin-left: 6px; vertical-align: 2px; }
+/* 메뉴판에 인쇄된 원문 — 손님이 종이에서 그 줄을 찾을 때 쓴다.
+   옮긴 이름보다 작고 흐리게 둬서 주인공 자리를 뺏지 않는다. */
+.wl-original {
+  font-size: 11.5px; color: var(--ink-dim); opacity: 0.75;
+  margin-top: 2px; letter-spacing: 0.01em; word-break: break-word;
+}
 .wl-matched { margin-top: 3px; font-size: 11px; color: var(--gold); font-family: var(--font-s); }
 .wl-meta { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-top: 5px; font-size: 11.5px; }
 .wl-cat { display: inline-flex; opacity: 0.6; }

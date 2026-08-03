@@ -18,7 +18,7 @@ export async function POST(request) {
       return NextResponse.json({ error: "API 키가 설정되지 않았습니다." }, { status: 503 });
     }
 
-    const { readable, items, usage } = await readWineList(image);
+    const { readable, items, usage, currency, currencyKnown } = await readWineList(image);
     console.log(
       `[winelist] ${usage.model} | in ${usage.inputTokens} / out ${usage.outputTokens} | ${items.length}개 판독`
     );
@@ -27,7 +27,7 @@ export async function POST(request) {
       return NextResponse.json({ readable: false, items: [], usage });
     }
 
-    const enriched = await enrichWineList(items);
+    const enriched = await enrichWineList(items, { currency });
 
     // 못 찾은 항목을 기록한다 — 다음에 카탈로그에 넣을 목록이 여기서 나온다.
     // 기록 실패가 사용자 응답을 막을 이유는 없다.
@@ -42,6 +42,8 @@ export async function POST(request) {
 
     return NextResponse.json({
       readable: true,
+      currency,
+      currencyKnown,
       items: sortByValue(enriched),
       counts: {
         total: enriched.length,

@@ -8,6 +8,37 @@ import { catOf } from "@/lib/cats";
 
 // 메뉴가 ÷ 시중 최저가 = 배수. 와인은 통상 2~3배가 관행이다.
 // (표시 전용이라 이 파일에 둔다 — 서버 모듈을 import하면 DB 드라이버가 브라우저 번들로 딸려온다)
+// 메뉴에 적힌 통화 그대로 보여 준다. 환율로 바꿔 주면 친절해 보이지만,
+// 계산해 준 원화가 실제 결제액과 어긋나면 그게 더 나쁘다.
+const CURRENCY_MARK = {
+  KRW: null, // fmtWon 이 앱 언어에 맞게 처리한다
+  JPY: "¥",
+  USD: "$",
+  EUR: "€",
+  GBP: "£",
+  CNY: "¥",
+  TWD: "NT$",
+  HKD: "HK$",
+};
+
+const CURRENCY_NAME = {
+  JPY: "일본 엔",
+  USD: "미국 달러",
+  EUR: "유로",
+  GBP: "영국 파운드",
+  CNY: "중국 위안",
+  TWD: "대만 달러",
+  HKD: "홍콩 달러",
+};
+
+function fmtPrice(n, currency) {
+  const num = Number(n);
+  if (!Number.isFinite(num)) return String(n);
+  if (!currency || currency === "KRW") return fmtWon(num);
+  const mark = CURRENCY_MARK[currency] || "";
+  return `${mark}${num.toLocaleString("en-US")}`;
+}
+
 function markupLabel(markup) {
   if (!markup) return null;
   if (markup <= 1.6) return { text: "매우 좋은 값", tone: "gold" };
@@ -35,7 +66,7 @@ function reorder(items, key) {
 
 export default function WineListScreen({ data, onOpen, onRescan }) {
   const [sort, setSort] = useState("value");
-  const { items = [], counts, readable } = data || {};
+  const { items = [], counts, readable, currency = "KRW", currencyKnown } = data || {};
 
   if (!readable || !items.length) {
     return (
@@ -74,9 +105,19 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
             <span>{t("시세 비교")}</span>
           </div>
         </div>
-        <div className="shop-note">
-          {t("메뉴 가격을 온라인 최저가와 견주어 배수를 냅니다. 와인은 통상 시중가의 2~3배가 관행이라, 2배 아래면 값이 좋은 편입니다.")}
-        </div>
+        {/* 해외 메뉴판이면 배수를 낼 수 없다. 우리 시세는 국내 판매가라
+            엔·유로와는 나눌 수 없다. 없는 이유를 적어 두지 않으면 고장으로 보인다. */}
+        {currency !== "KRW" ? (
+          <div className="shop-note">
+            {t("{c} 메뉴로 읽었습니다. 국내 시세와 통화가 달라 배수는 내지 않고, 이름만 한국어로 옮겨 정리했습니다.", {
+              c: CURRENCY_NAME[currency] || currency,
+            })}
+          </div>
+        ) : (
+          <div className="shop-note">
+            {t("메뉴 가격을 온라인 최저가와 견주어 배수를 냅니다. 와인은 통상 시중가의 2~3배가 관행이라, 2배 아래면 값이 좋은 편입니다.")}
+          </div>
+        )}
       </div>
 
       <div className="cellar-tabs">
@@ -105,6 +146,9 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
                   {it.glass && <span className="badge">{t("잔")}</span>}
                 </div>
 
+                {/* 메뉴판에 인쇄된 그대로 — 손님이 그 줄을 다시 찾을 수 있어야 한다 */}
+                {it.original && <div className="wl-original" lang="auto">{it.original}</div>}
+
                 {/* 다른 표기로 이었으면 밝힌다 — 잘못 이었을 때 알아챌 수 있어야 한다 */}
                 {it.matchedName && <div className="wl-matched">{t("{name} 으로 인식", { name: it.matchedName })}</div>}
                 <div className="wl-meta">
@@ -131,7 +175,7 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
               </div>
 
               <div className="wl-right">
-                {it.price && <b>{fmtWon(it.price)}</b>}
+                {it.price && <b>{fmtPrice(it.price, currency)}</b>}
                 {mark && <span className={`badge tone-${mark.tone}`}>{t("{n}배", { n: it.markup })} · {t(mark.text)}</span>}
                 {it.known && (
                   <button className="mini-btn" onClick={() => onOpen?.(it)}>
