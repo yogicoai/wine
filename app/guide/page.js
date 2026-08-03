@@ -5,7 +5,7 @@
 // 앱별 고유 카드(GUIDE)를 얹는 구조로 만든다. 공통 문구는 t()를 거쳐 앱 어휘를 따른다.
 // (예전 이 자리의 내부 기능 설명서는 docs/archive/ 에 보관)
 import Link from "next/link";
-import { APP } from "@/lib/appProfile";
+import { APP, BRAND_NAME, BRAND_MOTTO } from "@/lib/appProfile";
 import { t } from "@/lib/i18n";
 import { catalogStats } from "@/lib/catalog";
 
@@ -86,9 +86,9 @@ export default async function GuidePage() {
         <Link className="hdr-home" href="/">
           <span className="hdr-lockup">
             <span className="hdr-logo">
-              {APP.nameEn.split(" ")[0]} <em>{APP.nameEn.split(" ").slice(1).join(" ")}</em>
+              {BRAND_NAME.split(" ")[0]} <em>{BRAND_NAME.split(" ").slice(1).join(" ")}</em>
             </span>
-            <span className="hdr-sub">{APP.motto}</span>
+            <span className="hdr-sub">{BRAND_MOTTO}</span>
           </span>
         </Link>
       </header>

@@ -15,7 +15,7 @@ import WineListScreen from "@/components/WineListScreen";
 import DiscoverScreen from "@/components/DiscoverScreen";
 import Icon from "@/components/Icon";
 import { downscale, stripPrefix } from "@/lib/imageClient";
-import { APP } from "@/lib/appProfile";
+import { APP, BRAND_NAME, BRAND_MOTTO } from "@/lib/appProfile";
 import { t } from "@/lib/i18n";
 
 // 오류 문구는 원인을 짚어야 다음 행동이 정해진다.
@@ -326,11 +326,11 @@ export default function Home() {
               심볼만 이미지로 쓰고 글자는 조판한다. 워드마크는 여백이 있는 곳에서 쓴다. */}
           <BrandMark size={38} />
           <span className="hdr-lockup">
-            {/* 워드마크는 앱 프로필의 영문명 — 첫 단어는 정체, 나머지는 이탤릭 */}
+            {/* 워드마크는 화면 언어의 이름 — 첫 단어는 정체, 나머지는 이탤릭 */}
             <span className="hdr-logo">
-              {APP.nameEn.split(" ")[0]} <em>{APP.nameEn.split(" ").slice(1).join(" ")}</em>
+              {BRAND_NAME.split(" ")[0]} <em>{BRAND_NAME.split(" ").slice(1).join(" ")}</em>
             </span>
-            <span className="hdr-sub">{APP.motto}</span>
+            <span className="hdr-sub">{BRAND_MOTTO}</span>
           </span>
           {/* 낙관 — 일본풍 앱의 서명. theme.seal 이 있을 때만 찍힌다 */}
           {APP.theme.seal && <span className="hdr-seal">{APP.theme.seal}</span>}
