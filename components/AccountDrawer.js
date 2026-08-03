@@ -8,6 +8,8 @@ import useActiveTimers from "./useActiveTimer";
 import { clearTimer, progressOf, formatRemain } from "@/lib/timer";
 import { t } from "@/lib/i18n";
 import { LOCALES, getContentLocale, setContentLocale } from "@/lib/locale";
+import { MULTILINGUAL } from "@/lib/features";
+import { APP } from "@/lib/appProfile";
 
 // 내 정보 — 회원가입이 붙기 전의 레이아웃 초안.
 //
@@ -28,6 +30,9 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine,
 
   function pickLang(key) {
     if (key === lang) return;
+    // 번역이 준비되지 않은 언어는 고를 수 없다 — 반쯤 번역된 화면이
+    // 아무것도 없는 것보다 나쁘다 (lib/features.js 에 이유를 적어 두었다)
+    if (!MULTILINGUAL && key !== APP.locale) return;
     setContentLocale(key);
     setLang(key);
     // 안내는 고른 언어로 — 그 언어를 읽는 사람에게 하는 말이다
@@ -89,19 +94,26 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine,
             선택은 쿠키라 서버의 카탈로그 조회까지 전달된다 (lib/locale.js) */}
         <div className="acct-section">{t("언어")}</div>
         <div className="acct-lang" role="group" aria-label={t("언어")}>
-          {LOCALES.map((l) => (
-            <button
-              key={l.key}
-              className={`lang-chip ${lang === l.key ? "on" : ""}`}
-              aria-pressed={lang === l.key}
-              onClick={() => pickLang(l.key)}
-            >
-              {l.label}
-            </button>
-          ))}
+          {LOCALES.map((l) => {
+            const ready = MULTILINGUAL || l.key === APP.locale;
+            return (
+              <button
+                key={l.key}
+                className={`lang-chip ${lang === l.key ? "on" : ""} ${ready ? "" : "is-soon"}`}
+                aria-pressed={lang === l.key}
+                disabled={!ready}
+                onClick={() => pickLang(l.key)}
+              >
+                {l.label}
+                {!ready && <i className="lang-soon">{t("준비 중")}</i>}
+              </button>
+            );
+          })}
         </div>
         <p className="drawer-note" style={{ marginTop: 6 }}>
-          {t("화면과 술 정보에 함께 적용됩니다. 번역이 준비되지 않은 술은 한국어로 나옵니다.")}
+          MULTILINGUAL
+            ? t("화면과 술 정보에 함께 적용됩니다. 번역이 준비되지 않은 술은 한국어로 나옵니다.")
+            : t("영어·일본어는 술 정보 번역을 준비하는 중입니다. 준비되면 여기서 고를 수 있습니다.")
         </p>
 
         {/* 로그인 전 — 자리만 잡아 둔다 */}

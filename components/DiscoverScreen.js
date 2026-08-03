@@ -4,7 +4,7 @@ import CatIcon from "./CatIcon";
 import TasteQuiz from "./TasteQuiz";
 import { PRICE_BANDS } from "@/lib/curation";
 import Flag from "./Flag";
-import { t } from "@/lib/i18n";
+import { t, uiLocale } from "@/lib/i18n";
 import { DEFAULT_CATEGORY } from "@/lib/appProfile";
 import { catOf } from "@/lib/cats";
 
@@ -37,6 +37,30 @@ function RowThumb({ item }) {
   );
 }
 
+// 추천 이유는 서버가 조각으로 준다 — 문장은 여기서 그 언어의 어법으로 짓는다.
+// 한국어는 받침에 따라 조사가 갈리므로("탄닌이", "바디가") 그 판단도 여기서 한다.
+function subjectParticle(word) {
+  const code = String(word).charCodeAt(String(word).length - 1) - 0xac00;
+  if (code < 0 || code > 11171) return "가";
+  return code % 28 ? "이" : "가";
+}
+
+const LEVEL_WORD = { low: "약한", mid: "적당한", high: "강한" };
+
+function reasonText(reason) {
+  if (!reason) return null;
+  // 입문자 추천은 고정 문장이라 그대로 열쇠가 된다
+  if (typeof reason === "string") return t(reason);
+  if (reason.kind !== "axis") return null;
+
+  const axis = t(reason.axis);
+  const level = t(LEVEL_WORD[reason.level] || LEVEL_WORD.mid);
+  const locale = uiLocale();
+  if (locale === "ja") return `${level}${axis}が好みに合います`;
+  if (locale === "en") return `A ${level.toLowerCase()} ${axis.toLowerCase()} matches your taste`;
+  return `${level} ${axis}${subjectParticle(axis)} 취향과 맞습니다`;
+}
+
 function WineRow({ item, onOpen }) {
   return (
     <button className="disc-row" onClick={() => onOpen?.(item)}>
@@ -50,7 +74,7 @@ function WineRow({ item, onOpen }) {
           <Flag country={item.country} width={15} />
           {[item.type, item.region || item.country].filter(Boolean).join(" · ")}
         </span>
-        {item.reason && <span className="disc-reason">{item.reason}</span>}
+        {reasonText(item.reason) && <span className="disc-reason">{reasonText(item.reason)}</span>}
       </span>
       <span className="disc-right">
         {item.match != null && <b>{item.match}</b>}

@@ -80,7 +80,11 @@ button { font-family: inherit; cursor: pointer; }
 img, video, canvas { display: block; max-width: 100%; }
 
 /* 아래 탭바 높이(+기기 안전영역)만큼 본문 끝을 비워 둔다 */
-.app { max-width: 560px; margin: 0 auto; padding: 22px 18px calc(96px + env(safe-area-inset-bottom)); position: relative; z-index: 2; }
+/* 아래 탭바는 화면에 고정돼 있어 본문 위에 얹힌다. 본문 여백이 탭바보다
+   짧으면 마지막 요소가 탭바에 잘린다 — 실제로 촬영 화면의 셔터가 잘렸다.
+   높이를 변수 하나로 두고 여백이 그것을 따라가게 해 두 값이 어긋나지 않게 한다. */
+:root { --tabbar-h: 66px; }
+.app { max-width: 560px; margin: 0 auto; padding: 22px 18px calc(var(--tabbar-h) + 26px + env(safe-area-inset-bottom, 0px)); position: relative; z-index: 2; }
 
 /* ── 아래 탭바 ──────────────────────────────────────────
    엄지가 닿는 자리에 길을 둔다. 유리판처럼 배경이 비쳐 보이되
@@ -853,6 +857,12 @@ img, video, canvas { display: block; max-width: 100%; }
 /* 술 정보 언어 — 한국어 / English / 日本語 */
 .acct-lang { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
   background: var(--line-soft); border: 1px solid var(--line-soft); }
+/* 아직 준비되지 않은 언어 — 고를 수 없다는 것이 보여야 한다 */
+.lang-chip.is-soon { opacity: 0.42; cursor: default; }
+.lang-soon {
+  display: block; font-style: normal; font-size: 9.5px;
+  letter-spacing: 0.06em; color: var(--ink-dim); margin-top: 2px;
+}
 .lang-chip {
   background: var(--bg-2); color: var(--ink-dim); border: 0; padding: 11px 4px;
   font-size: 13px; letter-spacing: 0.02em; cursor: pointer;
@@ -953,7 +963,8 @@ img, video, canvas { display: block; max-width: 100%; }
 /* 진행 중인 준비 — 떠 있는 버튼 */
 .timer-bubble {
   position: fixed; right: 16px; z-index: 30;
-  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  /* 탭바 위로 올린다 — 예전 값(18px)은 탭바(66px)에 완전히 가려졌다 */
+  bottom: calc(var(--tabbar-h) + 14px + env(safe-area-inset-bottom, 0px));
   display: flex; align-items: center; gap: 10px; padding: 9px 15px 9px 10px;
   border-radius: 999px; border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(28, 22, 15, 0.96), rgba(15, 12, 9, 0.96));
@@ -1342,7 +1353,7 @@ img, video, canvas { display: block; max-width: 100%; }
 /* 맨 위로 */
 .to-top {
   position: fixed; right: 18px; z-index: 30;
-  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  bottom: calc(var(--tabbar-h) + 14px + env(safe-area-inset-bottom, 0px));
   width: 44px; height: 44px; border-radius: 50%;
   background: rgba(23, 18, 13, 0.92); border: 1px solid var(--line);
   color: var(--gold); display: grid; place-items: center;
@@ -1353,12 +1364,13 @@ img, video, canvas { display: block; max-width: 100%; }
 .to-top:active, .to-top:hover { border-color: var(--gold); background: var(--bg-3); }
 /* 타이머 버튼과 같은 구석을 쓰므로, 타이머가 도는 동안에는 위로 비켜 준다 */
 body:has(.timer-bubble) .to-top {
-  bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  bottom: calc(var(--tabbar-h) + 70px + env(safe-area-inset-bottom, 0px));
 }
 
 /* 토스트 */
 .toast {
-  position: fixed; left: 50%; bottom: 30px; transform: translateX(-50%);
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: calc(var(--tabbar-h) + 22px + env(safe-area-inset-bottom, 0px));
   background: rgba(23, 18, 13, 0.95); border: 1px solid var(--line); color: var(--ink);
   padding: 13px 24px; font-size: 12.5px; z-index: 60; font-family: var(--font-s);
   max-width: 88vw; box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6); letter-spacing: 0.03em;
@@ -1567,8 +1579,9 @@ body:has(.timer-bubble) .to-top {
    사용자 대부분이 폰으로 접속한다. 좁은 화면에서 글자가 넘치거나
    브라우저 하단 바에 내용이 가리지 않도록 전반을 조정한다. */
 
-/* 하단 브라우저 바·홈 인디케이터에 콘텐츠가 가리지 않도록 */
-.app { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
+/* 하단 브라우저 바·홈 인디케이터에 콘텐츠가 가리지 않도록.
+   여기서 숫자를 따로 적으면 위의 탭바 높이와 어긋난다 — 변수를 그대로 쓴다. */
+.app { padding-bottom: calc(var(--tabbar-h) + 26px + env(safe-area-inset-bottom, 0px)); }
 
 /* 긴 한국어 단어가 화면을 밀어내지 않도록 */
 .hero-name, .card p, .list li, .hist-name, .shop-name, .pair b, .cellar-info,
@@ -1578,7 +1591,7 @@ body:has(.timer-bubble) .to-top {
 
 @media (max-width: 480px) {
   body { font-size: 14.5px; }
-  .app { padding: 18px 14px calc(76px + env(safe-area-inset-bottom, 0px)); }
+  .app { padding: 18px 14px calc(var(--tabbar-h) + 22px + env(safe-area-inset-bottom, 0px)); }
 
   /* 헤더 */
   .hdr { padding: 2px 0 18px; gap: 8px; }

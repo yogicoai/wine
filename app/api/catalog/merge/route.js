@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getDb } from "@/lib/mongodb";
 import { catalogKey, clearNameIndexCache } from "@/lib/catalog";
 import { splitName } from "@/lib/nameClean";
+import { isDroppableToken } from "@/lib/match";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -56,6 +57,25 @@ function squashSorted(raw) {
   return words.sort().join("");
 }
 
+// 등급어가 하나 더 붙으면서 어순까지 바뀐 경우 — 위의 두 열쇠가 다 어긋난다.
+//   "하쿠츠루 준마이 니고리 사유리"  vs  "하쿠츠루 사유리 니고리"
+// 그래서 수많은 술이 함께 쓰는 말(준마이·니고리·리제르바…)을 빼고 세운다.
+//
+// 남은 낱말이 하나뿐이면 쓰지 않는다. "쿠보타 준마이"와 "쿠보타 긴조"가
+// 둘 다 '쿠보타'만 남아 서로 다른 술이 한 칸에 모여 버린다.
+//
+// 느슨한 대조(findLooseMatch)를 여기에 쓰지 않는 이유 — 전수로 돌려 보니
+// "헤네시 VSOP"와 "헤네시 VS", "베가 시실리아 우니코"와 "발부에나"까지
+// 붙었다. 병합은 지우는 일이라 애매하면 하지 않는 편이 옳다.
+function squashStrong(raw) {
+  const words = normalizeName(raw)
+    .split(/[^가-힣a-z0-9]+/i)
+    // 숫자는 한 자리라도 남긴다 — "해창막걸리 9" 와 "6" 은 다른 술이다
+    .filter((w) => (w.length >= 2 || /^\d$/.test(w)) && !isDroppableToken(w));
+  if (words.length < 2) return null;
+  return words.sort().join("");
+}
+
 // 어느 쪽을 남길지.
 // 손으로 쓴 것(manual)을 가장 앞에 둔다 — 표기가 표준에 맞고 내용을 검토했다.
 // 그다음이 스캔본, 마지막이 수확 뼈대다.
@@ -84,7 +104,7 @@ async function findGroups(db) {
   // 붙여 쓴 형태로 한 번, 낱말을 세운 형태로 한 번 — 두 기준을 합쳐 묶는다
   const map = new Map();
   for (const d of rows) {
-    for (const k of [squash(d.name), squashSorted(d.name)]) {
+    for (const k of [squash(d.name), squashSorted(d.name), squashStrong(d.name)]) {
       if (!k) continue;
       const bucket = map.get(k) || map.set(k, new Map()).get(k);
       bucket.set(String(d._id), d);
@@ -101,6 +121,7 @@ async function findGroups(db) {
     const sorted = docs.sort((a, b) => richness(b) - richness(a));
     groups.push({ keep: sorted[0], drop: sorted.slice(1) });
   }
+
   return groups;
 }
 
