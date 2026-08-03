@@ -76,6 +76,10 @@ body::after {
 
 /* 터치 시 브라우저가 얹는 회색 사각형을 없앤다 — 금색 톤과 어울리지 않는다 */
 button, a { -webkit-tap-highlight-color: transparent; }
+/* 링크는 밑줄 대신 색과 아래선(.shop-more 등)으로 구분한다.
+   초기화가 없어 클래스에 text-decoration 을 적지 않은 링크(머리말 로고 등)에만
+   브라우저 기본 밑줄이 남아 있었다 — 한 화면에 두 방식이 섞여 보였다. */
+a { text-decoration: none; }
 button { font-family: inherit; cursor: pointer; }
 img, video, canvas { display: block; max-width: 100%; }
 
