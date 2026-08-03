@@ -126,6 +126,7 @@ export default function Home() {
         usedWeb: data.usedWeb,
         webFellBack: data.webFellBack,
         cached: data.cached,
+        partial: data.partial,
       });
       setScreen("result");
 
@@ -252,6 +253,7 @@ export default function Home() {
         usedWeb: data.usedWeb,
         webFellBack: data.webFellBack,
         cached: data.cached,
+        partial: data.partial,
         byName: true,
       });
       setScreen("result");

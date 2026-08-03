@@ -580,20 +580,39 @@ export default function ResultScreen({
   const shop = useShopItems(r?.found === false ? null : r?.name, r?.searchKeyword);
 
   if (!r || r.found === false) {
+    // 사진을 찍어서 실패한 것과 이름으로 찾다 실패한 것은 다른 상황이다.
+    // 검색 결과를 눌러 온 사람에게 "라벨 전체가 화면에 들어오게 찍으세요"라고
+    // 하면 무슨 말인지 알 수 없다 — 찍은 적이 없기 때문이다.
+    const byName = !!meta?.byName;
     return (
       <div className="result">
         <div className="notfound">
           {thumb && <img className="notfound-thumb" src={thumb} alt={t("촬영한 사진")} />}
-          <h2>{t("라벨을 읽지 못했습니다")}</h2>
-          <p>{r?.reason || t("술 라벨이 잘 보이도록 다시 촬영해 주세요.")}</p>
+          <h2>{byName ? t("아직 정보가 없는 술입니다") : t("라벨을 읽지 못했습니다")}</h2>
+          <p>
+            {byName
+              ? t("이름만으로는 어떤 제품인지 특정하지 못했습니다. 라벨을 찍으면 그 자리에서 분석해 드립니다.")
+              : r?.reason || t("술 라벨이 잘 보이도록 다시 촬영해 주세요.")}
+          </p>
           <ul className="notfound-tips">
-            <li>{t("라벨 전체가 화면 안에 들어오게 찍어주세요")}</li>
-            <li>{t("글자가 흐리면 조금 더 가까이서 찍어주세요")}</li>
-            <li>{t("빛 반사가 심하면 각도를 살짝 틀어보세요")}</li>
+            {byName ? (
+              <>
+                <li>{t("판매처가 붙인 별명은 이름만으로 알아보기 어렵습니다")}</li>
+                <li>{t("병 앞면 라벨을 찍으면 정확하게 읽습니다")}</li>
+              </>
+            ) : (
+              <>
+                <li>{t("라벨 전체가 화면 안에 들어오게 찍어주세요")}</li>
+                <li>{t("글자가 흐리면 조금 더 가까이서 찍어주세요")}</li>
+                <li>{t("빛 반사가 심하면 각도를 살짝 틀어보세요")}</li>
+              </>
+            )}
           </ul>
         </div>
         <div className="result-actions">
-          <button className="btn primary" onClick={onRescan}>{t("다시 스캔")}</button>
+          <button className="btn primary" onClick={onRescan}>
+            {byName ? t("라벨 찍기") : t("다시 스캔")}
+          </button>
         </div>
       </div>
     );
@@ -601,6 +620,10 @@ export default function ResultScreen({
 
   const cat = catOf(r.category);
   const glow = r.liquidColor || "#7a2434";
+
+  // 수확으로 들어온 뼈대 — 이름·주종·가격대·사진은 사실이지만 스토리가 없다.
+  // 빈 화면처럼 보이지 않게, 무엇이 없고 어떻게 채우는지 먼저 알린다.
+  const partial = !!meta?.partial;
 
   // ── 결과 화면의 조각들 ──────────────────────────────────
   // 무엇을 먼저 보여 줄지는 술마다 다르다. 와인은 빈티지와 음용 적기가 중요하고,
@@ -775,6 +798,11 @@ export default function ResultScreen({
           <Flag country={r.country} width={17} />
           {[r.producer, r.vintage, r.region, r.country, r.alcohol].filter(Boolean).join(" · ")}
         </div>
+        {partial && (
+          <div className="partial-note">
+            {t("이 술은 이름·주종·가격대만 확인된 상태입니다. 라벨을 찍으면 스토리와 페어링까지 채워집니다.")}
+          </div>
+        )}
         <div className="badges">
           <span className={`badge ${r.knowledge === "rich" ? "gold" : ""}`}>
             {r.knowledge === "rich" ? t("확실한 정보") : r.knowledge === "moderate" ? t("부분 확인") : t("일반 추정")}

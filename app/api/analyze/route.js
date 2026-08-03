@@ -90,6 +90,28 @@ export async function POST(request) {
       `[analyze] ${model} | in ${usage.inputTokens} / out ${usage.outputTokens} | 검색 ${usage.webSearches}회 | API ${usage.apiCalls}콜`
     );
 
+    // 이름으로 물었는데 AI가 못 알아본 경우 — 그래도 우리가 아는 것은 있다.
+    //
+    // 검색 결과에는 수확으로 들어온 뼈대도 섞여 나온다. 뼈대는 이름·주종·가격대·
+    // 사진까지 있지만 스토리가 없어 분석 대상에서 빠지고, 그래서 AI에게 다시 묻게
+    // 된다. 그런데 "준마이 북극곰의 눈물"처럼 판매처가 붙인 별명은 AI도 알 수 없다.
+    // 이때 빈손으로 돌려보내면 "라벨을 읽지 못했습니다"가 뜬다 — 사진을 찍은 적도
+    // 없는 사람에게 촬영 요령을 일러 주는 셈이다.
+    //
+    // 아는 만큼이라도 보여 준다. 실제로 팔리고 있는 술이고, 이름과 값은 사실이다.
+    if (name && result?.found === false) {
+      const stub = await lookupCatalog(name, null, { allowStub: true });
+      if (stub) {
+        return NextResponse.json({
+          demo: false,
+          cached: true,
+          partial: true, // 스토리는 아직 없다는 표시 — 화면이 이걸 보고 안내를 바꾼다
+          identifyUsage,
+          ...stub,
+        });
+      }
+    }
+
     // 다음 사람부터는 AI 호출 없이 응답되도록 적재
     await saveCatalog(result, { usedWeb, model, source: "scan" });
 
