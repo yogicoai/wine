@@ -15,16 +15,18 @@ import WineListScreen from "@/components/WineListScreen";
 import DiscoverScreen from "@/components/DiscoverScreen";
 import Icon from "@/components/Icon";
 import { downscale, stripPrefix } from "@/lib/imageClient";
+import { APP } from "@/lib/appProfile";
+import { t } from "@/lib/i18n";
 
 // 오류 문구는 원인을 짚어야 다음 행동이 정해진다.
 // "오류가 발생했습니다"만 보면 다시 눌러야 할지 기다려야 할지 알 수 없다.
 function offlineAware(err, fallback) {
   if (typeof navigator !== "undefined" && !navigator.onLine) {
-    return "인터넷 연결이 끊겼습니다. 연결된 뒤 다시 시도해 주세요.";
+    return t("인터넷 연결이 끊겼습니다. 연결된 뒤 다시 시도해 주세요.");
   }
   // fetch 자체가 실패하면 브라우저는 TypeError 를 던진다 (서버가 죽었거나 응답이 없음)
   if (err instanceof TypeError) {
-    return "서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.";
+    return t("서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.");
   }
   return err?.message || fallback;
 }
@@ -112,7 +114,7 @@ export default function Home() {
       });
       setPendingBarcode(null);
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "분석 실패");
+      if (!res.ok) throw new Error(data.error || t("분석 실패"));
 
       // 저장된 결과라 순식간에 왔으면, 연출이 한 바퀴는 돌게 잠시 붙잡는다
       const remain = MIN_SCAN_SHOW - (Date.now() - startedAt);
@@ -127,10 +129,10 @@ export default function Home() {
       });
       setScreen("result");
 
-      if (data.demo) showToast("데모 모드 — API 키를 설정하면 실제 인식이 동작합니다.");
-      else if (data.cached) showToast("이미 분석된 술이라 추가 비용 없이 보여드렸습니다.");
+      if (data.demo) showToast(t("데모 모드 — API 키를 설정하면 실제 인식이 동작합니다."));
+      else if (data.cached) showToast(t("이미 분석된 술이라 추가 비용 없이 보여드렸습니다."));
       else if (data.webDisabled)
-        showToast("이 계정은 웹 검색을 지원하지 않아 모델 지식으로 분석했습니다.");
+        showToast(t("이 계정은 웹 검색을 지원하지 않아 모델 지식으로 분석했습니다."));
 
       // 세션 저장 (found 여부와 무관하게 결과가 있으면 저장)
       if (data.result?.found !== false) {
@@ -143,7 +145,7 @@ export default function Home() {
       if (navigator.vibrate) navigator.vibrate([20, 40, 20]);
     } catch (err) {
       setScreen("capture");
-      showToast(offlineAware(err, "분석 중 오류가 발생했습니다."), true);
+      showToast(offlineAware(err, t("분석 중 오류가 발생했습니다.")), true);
     }
   }
 
@@ -162,8 +164,8 @@ export default function Home() {
           setScreen("capture");
           showToast(
             data.reason === "invalid"
-              ? "바코드를 정확히 읽지 못했습니다. 라벨을 촬영해 주세요."
-              : "아직 등록되지 않은 바코드입니다. 라벨을 촬영하면 다음부터 바로 찾아드립니다."
+              ? t("바코드를 정확히 읽지 못했습니다. 라벨을 촬영해 주세요.")
+              : t("아직 등록되지 않은 바코드입니다. 라벨을 촬영하면 다음부터 바로 찾아드립니다.")
           );
           return;
         }
@@ -174,7 +176,7 @@ export default function Home() {
         setScreen("result");
         window.scrollTo({ top: 0 });
         if (navigator.vibrate) navigator.vibrate([20, 40, 20]);
-        showToast("바코드로 찾았습니다 — 저장된 정보라 분석 비용이 들지 않았습니다.");
+        showToast(t("바코드로 찾았습니다 — 저장된 정보라 분석 비용이 들지 않았습니다."));
 
         fetch("/api/sessions", {
           method: "POST",
@@ -183,7 +185,7 @@ export default function Home() {
         }).then(loadSessions);
       } catch {
         setScreen("capture");
-        showToast("바코드를 조회하지 못했습니다.", true);
+        showToast(t("바코드를 조회하지 못했습니다."), true);
       }
     },
     [showToast, loadSessions]
@@ -203,18 +205,18 @@ export default function Home() {
         body: JSON.stringify({ image: stripPrefix(apiImage) }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "리스트를 읽지 못했습니다.");
+      if (!res.ok) throw new Error(data.error || t("리스트를 읽지 못했습니다."));
 
       setWineList(data);
       setScreen("winelist");
       window.scrollTo({ top: 0 });
 
-      if (!data.readable) showToast("리스트를 인식하지 못했습니다. 더 가까이 찍어보세요.", true);
+      if (!data.readable) showToast(t("리스트를 인식하지 못했습니다. 더 가까이 찍어보세요."), true);
       else if (!data.counts?.known)
-        showToast("인식은 했지만 아직 DB에 없는 술들입니다. 개별 스캔으로 채워집니다.");
+        showToast(t("인식은 했지만 아직 DB에 없는 술들입니다. 개별 스캔으로 채워집니다."));
     } catch (err) {
       setScreen("capture");
-      showToast(offlineAware(err, "리스트를 읽지 못했습니다."), true);
+      showToast(offlineAware(err, t("리스트를 읽지 못했습니다.")), true);
     }
   }
 
@@ -235,7 +237,7 @@ export default function Home() {
         body: JSON.stringify({ name, web }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "분석 실패");
+      if (!res.ok) throw new Error(data.error || t("분석 실패"));
 
       // 저장된 결과라 순식간에 왔으면, 연출이 한 바퀴는 돌게 잠시 붙잡는다 (비용 0원)
       const remain = MIN_SCAN_SHOW - (Date.now() - startedAt);
@@ -264,7 +266,7 @@ export default function Home() {
       }
     } catch (err) {
       setScreen("result");
-      showToast(offlineAware(err, "분석 중 오류가 발생했습니다."), true);
+      showToast(offlineAware(err, t("분석 중 오류가 발생했습니다.")), true);
     }
   }
 
@@ -279,7 +281,7 @@ export default function Home() {
       setMeta({ demo: data.session.demo, fromHistory: true });
       setScreen("result");
     } catch {
-      showToast("세션을 불러오지 못했습니다.", true);
+      showToast(t("세션을 불러오지 못했습니다."), true);
     }
   }
 
@@ -308,7 +310,7 @@ export default function Home() {
       setScreen("result");
       window.scrollTo({ top: 0 });
     } catch {
-      showToast("셀러 항목을 불러오지 못했습니다.", true);
+      showToast(t("셀러 항목을 불러오지 못했습니다."), true);
     }
   }
 
@@ -319,51 +321,20 @@ export default function Home() {
 
       <header className="hdr">
         {/* 로고는 어디서든 처음 화면으로 돌아가는 길이다 (촬영 아이콘을 따로 두지 않는 이유) */}
-        <button className="hdr-home" onClick={rescan} aria-label="처음 화면으로">
+        <button className="hdr-home" onClick={rescan} aria-label={t("처음 화면으로")}>
           {/* 워드마크 이미지는 두 줄로 쌓인 형태라 헤더 높이로 줄이면 글자가 뭉개진다.
               심볼만 이미지로 쓰고 글자는 조판한다. 워드마크는 여백이 있는 곳에서 쓴다. */}
           <BrandMark size={38} />
           <span className="hdr-lockup">
-            <span className="hdr-logo">Bottle <em>Lens</em></span>
-            <span className="hdr-sub">AI Sommelier for every bottle</span>
+            {/* 워드마크는 앱 프로필의 영문명 — 첫 단어는 정체, 나머지는 이탤릭 */}
+            <span className="hdr-logo">
+              {APP.nameEn.split(" ")[0]} <em>{APP.nameEn.split(" ").slice(1).join(" ")}</em>
+            </span>
+            <span className="hdr-sub">{APP.motto}</span>
           </span>
+          {/* 낙관 — 일본풍 앱의 서명. theme.seal 이 있을 때만 찍힌다 */}
+          {APP.theme.seal && <span className="hdr-seal">{APP.theme.seal}</span>}
         </button>
-        <div className="hdr-btns">
-          <button
-            className={`icon-btn ${screen === "discover" ? "on" : ""}`}
-            title="찾기 · 추천"
-            aria-label="찾기 · 추천"
-            onClick={() => setScreen(screen === "discover" ? "capture" : "discover")}
-          >
-            <Icon name="search" />
-          </button>
-          <button
-            className={`icon-btn ${screen === "cellar" ? "on" : ""}`}
-            title="나의 셀러"
-            aria-label="나의 셀러"
-            onClick={() => setScreen(screen === "cellar" ? "capture" : "cellar")}
-          >
-            <Icon name="glass" />
-          </button>
-          <button
-            className="icon-btn"
-            title="히스토리"
-            aria-label="히스토리"
-            onClick={() => setDrawer(true)}
-          >
-            <Icon name="archive" />
-          </button>
-          <button
-            className={`icon-btn ${activeTimers.length ? "has-dot" : ""}`}
-            title={activeTimers.length ? `준비 ${activeTimers.length}건 진행 중` : "내 정보"}
-            aria-label={
-              activeTimers.length ? `내 정보 · 준비 ${activeTimers.length}건 진행 중` : "내 정보"
-            }
-            onClick={() => setAccount(true)}
-          >
-            <Icon name="user" />
-          </button>
-        </div>
       </header>
 
       {screen === "capture" && (
@@ -424,6 +395,49 @@ export default function Home() {
 
       {/* 진행 중인 준비 — 어느 화면에 있든 떠 있고, 누르면 자세히 볼 수 있다 */}
       <TimerBubble onOpen={() => setAccount(true)} />
+
+      {/* 아래 탭 — 화면 위쪽 아이콘 줄을 대신한다.
+          한 손으로 쥔 폰에서 엄지가 닿는 곳은 위가 아니라 아래다.
+          어디에 무엇이 있는지도 글자로 보여 준다 (아이콘만으로는 알 수 없었다) */}
+      <nav className="tabbar" aria-label={t("주요 이동")}>
+        <button
+          className={`tab ${screen === "capture" || screen === "loading" ? "on" : ""}`}
+          onClick={rescan}
+        >
+          <Icon name="camera" />
+          <span>{t("스캔")}</span>
+        </button>
+        <button
+          className={`tab ${screen === "discover" ? "on" : ""}`}
+          onClick={() => setScreen("discover")}
+        >
+          <Icon name="search" />
+          <span>{t("찾기")}</span>
+        </button>
+        <button
+          className={`tab ${screen === "cellar" ? "on" : ""}`}
+          onClick={() => setScreen("cellar")}
+        >
+          <Icon name="glass" />
+          <span>{t("셀러")}</span>
+        </button>
+        <button className="tab" onClick={() => setDrawer(true)}>
+          <Icon name="archive" />
+          <span>{t("기록")}</span>
+        </button>
+        <button
+          className={`tab ${activeTimers.length ? "has-dot" : ""}`}
+          onClick={() => setAccount(true)}
+          aria-label={
+            activeTimers.length
+              ? t("내 정보 · 준비 {n}건 진행 중", { n: activeTimers.length })
+              : t("내 정보")
+          }
+        >
+          <Icon name="user" />
+          <span>{t("내 정보")}</span>
+        </button>
+      </nav>
 
       {toast && <div className={`toast ${toast.err ? "err" : ""}`}>{toast.text}</div>}
     </main>

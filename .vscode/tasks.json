@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "앱 띄우기 (고르기)",
+      "type": "shell",
+      "command": "npm run dev:${input:app}",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "앱 빌드 (고르기)",
+      "type": "shell",
+      "command": "npm run build:${input:app}",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "app",
+      "type": "pickString",
+      "description": "어느 앱을 띄울까요?",
+      "options": [
+        { "label": "🍷 와인 (보틀 렌즈) :5700", "value": "wine" },
+        { "label": "🍶 사케 렌즈 :5701", "value": "sake" },
+        { "label": "🍺 비어 렌즈 :5702", "value": "beer" },
+        { "label": "🏺 전통술 Korean Spirits Lens (영어) :5703", "value": "tradition" },
+        { "label": "🥃 위스키 렌즈 :5704", "value": "whisky" },
+        { "label": "🍸 스피리츠 렌즈 :5705", "value": "spirits" }
+      ],
+      "default": "wine"
+    }
+  ]
+}

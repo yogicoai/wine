@@ -1,0 +1,71 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "🍷 보틀 렌즈 (와인) :5700",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:wine"],
+      "serverReadyAction": { "pattern": "http://localhost:([0-9]+)", "uriFormat": "http://localhost:%s", "action": "openExternally" },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "🍶 사케 렌즈 :5701",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:sake"],
+      "serverReadyAction": { "pattern": "http://localhost:([0-9]+)", "uriFormat": "http://localhost:%s", "action": "openExternally" },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "🍺 비어 렌즈 :5702",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:beer"],
+      "serverReadyAction": { "pattern": "http://localhost:([0-9]+)", "uriFormat": "http://localhost:%s", "action": "openExternally" },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "🏺 Korean Spirits Lens (영어) :5703",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:tradition"],
+      "serverReadyAction": { "pattern": "http://localhost:([0-9]+)", "uriFormat": "http://localhost:%s", "action": "openExternally" },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "🥃 위스키 렌즈 :5704",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:whisky"],
+      "serverReadyAction": { "pattern": "http://localhost:([0-9]+)", "uriFormat": "http://localhost:%s", "action": "openExternally" },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "🍸 스피리츠 렌즈 :5705",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:spirits"],
+      "serverReadyAction": { "pattern": "http://localhost:([0-9]+)", "uriFormat": "http://localhost:%s", "action": "openExternally" },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

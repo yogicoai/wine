@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { t } from "@/lib/i18n";
 
 // 결과 화면은 카드가 많아 아래로 길다. 일정 이상 내려가면 맨 위로 가는 버튼을 띄운다.
 export default function ScrollTop() {
@@ -17,7 +18,7 @@ export default function ScrollTop() {
   return (
     <button
       className="to-top"
-      aria-label="맨 위로"
+      aria-label={t("맨 위로")}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

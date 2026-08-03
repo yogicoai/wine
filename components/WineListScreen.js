@@ -2,6 +2,9 @@
 import { useState } from "react";
 import CatIcon from "./CatIcon";
 import Flag from "./Flag";
+import { t, fmtWon } from "@/lib/i18n";
+import { DEFAULT_CATEGORY } from "@/lib/appProfile";
+import { catOf } from "@/lib/cats";
 
 // 메뉴가 ÷ 시중 최저가 = 배수. 와인은 통상 2~3배가 관행이다.
 // (표시 전용이라 이 파일에 둔다 — 서버 모듈을 import하면 DB 드라이버가 브라우저 번들로 딸려온다)
@@ -14,9 +17,9 @@ function markupLabel(markup) {
 }
 
 const SORTS = [
-  { key: "value", label: "가성비 순" },
-  { key: "rating", label: "평점 순" },
-  { key: "price", label: "가격 순" },
+  { key: "value", label: t("가성비 순") },
+  { key: "rating", label: t("평점 순") },
+  { key: "price", label: t("가격 순") },
 ];
 
 function reorder(items, key) {
@@ -38,14 +41,14 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
     return (
       <div className="notfound">
         <div className="big">📜</div>
-        <h2>리스트를 읽지 못했습니다</h2>
+        <h2>{t("리스트를 읽지 못했습니다")}</h2>
         <p>
-          글자가 잘 보이도록 정면에서, 조금 더 가까이 찍어보세요.
+          {t("글자가 잘 보이도록 정면에서, 조금 더 가까이 찍어보세요.")}
           <br />
-          조명이 어두우면 인식률이 크게 떨어집니다.
+          {t("조명이 어두우면 인식률이 크게 떨어집니다.")}
         </p>
         <button className="btn primary" onClick={onRescan} style={{ marginTop: 22 }}>
-          다시 촬영
+          {t("다시 촬영")}
         </button>
       </div>
     );
@@ -56,24 +59,23 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
   return (
     <div className="result">
       <div className="card">
-        <div className="card-title">와인 리스트</div>
+        <div className="card-title">{t("{cat} 리스트", { cat: t(catOf(DEFAULT_CATEGORY).label) })}</div>
         <div className="cellar-summary">
           <div>
             <b>{counts?.total ?? items.length}</b>
-            <span>인식 항목</span>
+            <span>{t("인식 항목")}</span>
           </div>
           <div>
             <b>{counts?.known ?? 0}</b>
-            <span>DB 보유</span>
+            <span>{t("DB 보유")}</span>
           </div>
           <div>
             <b>{counts?.priced ?? 0}</b>
-            <span>시세 비교</span>
+            <span>{t("시세 비교")}</span>
           </div>
         </div>
         <div className="shop-note">
-          메뉴 가격을 온라인 최저가와 견주어 배수를 냅니다. 와인은 통상 시중가의 2~3배가
-          관행이라, 2배 아래면 값이 좋은 편입니다.
+          {t("메뉴 가격을 온라인 최저가와 견주어 배수를 냅니다. 와인은 통상 시중가의 2~3배가 관행이라, 2배 아래면 값이 좋은 편입니다.")}
         </div>
       </div>
 
@@ -100,11 +102,11 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
                 <div className="wl-name">
                   {it.name}
                   {it.vintage && <em> {it.vintage}</em>}
-                  {it.glass && <span className="badge">잔</span>}
+                  {it.glass && <span className="badge">{t("잔")}</span>}
                 </div>
 
                 {/* 다른 표기로 이었으면 밝힌다 — 잘못 이었을 때 알아챌 수 있어야 한다 */}
-                {it.matchedName && <div className="wl-matched">{it.matchedName} 으로 인식</div>}
+                {it.matchedName && <div className="wl-matched">{t("{name} 으로 인식", { name: it.matchedName })}</div>}
                 <div className="wl-meta">
                   <Flag country={it.country} width={15} />
                   {it.category && (
@@ -118,22 +120,22 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
                       <i>({it.rating.count})</i>
                     </span>
                   ) : it.known ? (
-                    <span className="wl-dim">평점 없음</span>
+                    <span className="wl-dim">{t("평점 없음")}</span>
                   ) : (
-                    <span className="wl-dim">DB에 없음</span>
+                    <span className="wl-dim">{t("DB에 없음")}</span>
                   )}
                   {it.market && (
-                    <span className="wl-dim">시중 {it.market.toLocaleString("ko-KR")}원</span>
+                    <span className="wl-dim">{t("시중 {n}", { n: fmtWon(it.market) })}</span>
                   )}
                 </div>
               </div>
 
               <div className="wl-right">
-                {it.price && <b>{it.price.toLocaleString("ko-KR")}원</b>}
-                {mark && <span className={`badge tone-${mark.tone}`}>{it.markup}배 · {mark.text}</span>}
+                {it.price && <b>{fmtWon(it.price)}</b>}
+                {mark && <span className={`badge tone-${mark.tone}`}>{t("{n}배", { n: it.markup })} · {t(mark.text)}</span>}
                 {it.known && (
                   <button className="mini-btn" onClick={() => onOpen?.(it)}>
-                    자세히
+                    {t("자세히")}
                   </button>
                 )}
               </div>
@@ -144,7 +146,7 @@ export default function WineListScreen({ data, onOpen, onRescan }) {
 
       <div className="result-actions">
         <button className="btn primary" onClick={onRescan}>
-          다시 촬영
+          {t("다시 촬영")}
         </button>
       </div>
     </div>

@@ -1,11 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 import { catOf } from "@/lib/cats";
 import { servingPlan } from "@/lib/serving";
+import { bandOf } from "@/lib/curation";
 import { glasswareFor } from "@/lib/glassware";
+import { gearFor } from "@/lib/gear";
 import Flag from "./Flag";
 import useActiveTimers from "./useActiveTimer";
 import { startTimer, clearTimer, progressOf, formatRemain } from "@/lib/timer";
+import { t, fmtWon } from "@/lib/i18n";
+import { LAYOUT } from "@/lib/appProfile";
 import Radar from "./Radar";
 import CatIcon from "./CatIcon";
 import CellarActions from "./CellarActions";
@@ -68,9 +72,9 @@ function PurchaseCard({ shop }) {
 
   return (
     <div className="card">
-      <div className="card-title">구매 정보</div>
+      <div className="card-title">{t("구매 정보")}</div>
       {state.loading && (
-        <div className="shop-list" aria-label="판매처를 찾는 중">
+        <div className="shop-list" aria-label={t("판매처를 찾는 중")}>
           {[0, 1, 2].map((i) => (
             <div className="shop-item skel" key={i}>
               <span className="sk sk-img" />
@@ -89,10 +93,10 @@ function PurchaseCard({ shop }) {
       {!state.loading && state.reference && (
         <div className="shop-ref">
           <div>
-            <b>{state.reference.toLocaleString("ko-KR")}원</b>
-            <span>기준 최저가</span>
+            <b>{fmtWon(state.reference)}</b>
+            <span>{t("기준 최저가")}</span>
           </div>
-          <em>판매 중인 {state.sampled}건 기준 · 소용량·미끼 상품 제외</em>
+          <em>{t("판매 중인 {n}건 기준 · 소용량·미끼 상품 제외", { n: state.sampled })}</em>
         </div>
       )}
 
@@ -107,7 +111,7 @@ function PurchaseCard({ shop }) {
               </div>
               {it.price && (
                 <div className="shop-price">
-                  {it.price.toLocaleString("ko-KR")}원<small>판매가</small>
+                  {fmtWon(it.price)}<small>{t("판매가")}</small>
                 </div>
               )}
             </a>
@@ -116,14 +120,13 @@ function PurchaseCard({ shop }) {
       )}
       {!state.loading && !state.items?.length && state.noApi && (
         <div className="shop-note">
-          네이버쇼핑 API 키(NAVER_CLIENT_ID/SECRET)를 설정하면 실제 제품 이미지와 최저가가 여기 표시됩니다.
+          {t("네이버쇼핑 API 키(NAVER_CLIENT_ID/SECRET)를 설정하면 실제 제품 이미지와 최저가가 여기 표시됩니다.")}
         </div>
       )}
       <div className="shop-note">
-        아래 목록은 가격순이 아니라, 로그인 없이 바로 구매 가능한 판매처를 앞세운 순서입니다.
-        일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다. 가격은 판매처 사정에 따라 달라질 수 있습니다.
+        {t("아래 목록은 가격순이 아니라, 로그인 없이 바로 구매 가능한 판매처를 앞세운 순서입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다. 가격은 판매처 사정에 따라 달라질 수 있습니다.")}
         {" · "}
-        <a className="shop-more" href={naverLink} target="_blank" rel="noreferrer">네이버쇼핑에서 더 보기</a>
+        <a className="shop-more" href={naverLink} target="_blank" rel="noreferrer">{t("네이버쇼핑에서 더 보기")}</a>
         {" · "}
         <a className="shop-more" href={wsLink} target="_blank" rel="noreferrer">Wine-Searcher</a>
       </div>
@@ -172,15 +175,15 @@ function GlasswareCard({ result }) {
 
   return (
     <div className="card">
-      <div className="card-title">어떤 잔에</div>
+      <div className="card-title">{t("어떤 잔에")}</div>
       <div className="pair-list">
         {glasses.map((g) => (
           <div className="pair" key={g.key}>
             <div className="emo">🥂</div>
             <div className="pair-body">
-              <b>{g.name}</b>
+              <b>{t(g.name)}</b>
               <span>
-                {g.shape} — {g.why}
+                {t(g.shape)} — {t(g.why)}
               </span>
               {/* 잔은 상품 조회를 걸지 않는다 — 결과 화면마다 호출이 늘 이유가 없다 */}
               <a
@@ -189,13 +192,46 @@ function GlasswareCard({ result }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                {g.shopKeyword} 찾아보기
+                {t("{n} 찾아보기", { n: g.shopKeyword })}
               </a>
             </div>
           </div>
         ))}
       </div>
-      {tip && <div className="tip-line">✦ {tip}</div>}
+      {tip && <div className="tip-line">✦ {t(tip)}</div>}
+    </div>
+  );
+}
+
+// 잔 다음은 도구 — 디캔터·아이스볼·도쿠리처럼 술맛을 실제로 바꾸는 것만 권한다.
+// 규칙으로 고르므로(lib/gear.js) 분석 비용이 없고, 권할 게 없는 술은 카드 자체가 뜨지 않는다.
+function GearCard({ result }) {
+  const { items, tip } = gearFor(result);
+  if (!items.length) return null;
+
+  return (
+    <div className="card">
+      <div className="card-title">{t("곁들일 도구")}</div>
+      <div className="pair-list">
+        {items.map((g) => (
+          <div className="pair" key={g.key}>
+            <div className="emo">{g.emoji}</div>
+            <div className="pair-body">
+              <b>{t(g.name)}</b>
+              <span>{t(g.why)}</span>
+              <a
+                className="glass-buy"
+                href={`https://www.coupang.com/np/search?q=${encodeURIComponent(g.shopKeyword)}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("{n} 찾아보기", { n: g.shopKeyword })}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+      {tip && <div className="tip-line">✦ {t(tip)}</div>}
     </div>
   );
 }
@@ -205,7 +241,7 @@ function PairingCard({ pairs, tip, avoid }) {
 
   return (
     <div className="card">
-      <div className="card-title">푸드 페어링</div>
+      <div className="card-title">{t("푸드 페어링")}</div>
       <div className="pair-list">
         {pairs.map((p, i) => (
           <div className="pair" key={i}>
@@ -225,8 +261,8 @@ function PairingCard({ pairs, tip, avoid }) {
       </div>
       {count >= 2 && (
         <div className="pair-total">
-          <span>안주 {count}종 함께 담으면</span>
-          <b>{total.toLocaleString("ko-KR")}원</b>
+          <span>{t("안주 {n}종 함께 담으면", { n: count })}</span>
+          <b>{fmtWon(total)}</b>
         </div>
       )}
       {tip && <div className="tip-line">✦ {tip}</div>}
@@ -246,9 +282,9 @@ function PairingBuy({ item, keyword }) {
       {item.image && <img src={item.image} alt="" />}
       <span className="pair-buy-name">
         {item.title}
-        <em>{item.direct ? item.mall : "쿠팡에서 검색"}</em>
+        <em>{item.direct ? item.mall : t("쿠팡에서 검색")}</em>
       </span>
-      {item.price && <span className="pair-buy-price">{item.price.toLocaleString("ko-KR")}원</span>}
+      {item.price && <span className="pair-buy-price">{fmtWon(item.price)}</span>}
     </a>
   );
 }
@@ -262,7 +298,7 @@ function DrinkWindow({ from, peak, until }) {
   const pct = (y) => ((y - lo) / (hi - lo)) * 100;
   return (
     <div className="card">
-      <div className="card-title">음용 적기</div>
+      <div className="card-title">{t("음용 적기")}</div>
       <div className="window-bar">
         <div className="window-fill" style={{ left: `${pct(f)}%`, right: `${100 - pct(u)}%` }} />
         <div
@@ -270,11 +306,11 @@ function DrinkWindow({ from, peak, until }) {
             position: "absolute", top: -5, width: 3, height: 18, background: "#ece4d4",
             borderRadius: 2, left: `${pct(now)}%`,
           }}
-          title="올해"
+          title={t("올해")}
         />
       </div>
       <div className="window-years"><span>{f}</span><span>{u}</span></div>
-      {p && <div className="window-peak">피크 {p}년 무렵 · 흰 눈금 = 올해({now})</div>}
+      {p && <div className="window-peak">{t("피크 {p}년 무렵 · 흰 눈금 = 올해({y})", { p, y: now })}</div>}
     </div>
   );
 }
@@ -311,7 +347,7 @@ function SimilarCard({ names, category, currentName, onExplore }) {
 
   return (
     <div className="card">
-      <div className="card-title">이런 술도 좋아하실 거예요</div>
+      <div className="card-title">{t("이런 술도 좋아하실 거예요")}</div>
 
       {ready?.length > 0 && (
         <div className="chip-row">
@@ -338,8 +374,8 @@ function SimilarCard({ names, category, currentName, onExplore }) {
 
       <div className="shop-note">
         {ready?.length > 0
-          ? "금색 항목은 눌러서 바로 확인할 수 있습니다."
-          : "아직 상세 자료가 준비되지 않은 술입니다."}
+          ? t("금색 항목은 눌러서 바로 확인할 수 있습니다.")
+          : t("아직 상세 자료가 준비되지 않은 술입니다.")}
       </div>
     </div>
   );
@@ -362,37 +398,41 @@ function ServingTimer({ result }) {
 
   if (!plan.presets.length) return null;
 
+  // 고를 것이 하나뿐이면 이미 골라져 있는 것으로 본다 —
+  // "시간을 먼저 선택하세요"라는 요구를 사용자에게 떠넘길 이유가 없다.
+  const sel = picked ?? (available.length === 1 ? available[0] : null);
+
   function start() {
-    if (!picked) return;
+    if (!sel) return;
     if (typeof Notification !== "undefined" && Notification.permission === "default") {
       Notification.requestPermission();
     }
     startTimer({
       name: result.name,
-      kind: picked.kind,
-      label: picked.label,
-      min: picked.min,
-      doneText: picked.done,
+      kind: sel.kind,
+      label: sel.label,
+      min: sel.min,
+      doneText: sel.done,
     });
     setPicked(null);
   }
 
   return (
     <div className="card">
-      <div className="card-title">마시기 전 준비</div>
+      <div className="card-title">{t("마시기 전 준비")}</div>
 
       {/* 이미 돌고 있는 것들 */}
-      {running.map((t) => (
-        <div className="timer-run" key={t.id}>
+      {running.map((tm) => (
+        <div className="timer-run" key={tm.id}>
           <div className="timer-stage">
-            <TimerVisual kind={t.kind} progress={progressOf(t)} />
+            <TimerVisual kind={tm.kind} progress={progressOf(tm)} />
           </div>
-          <div className="timer-label">{t.label} 진행 중</div>
-          <div className="timer-clock">{formatRemain(t.remain)}</div>
+          <div className="timer-label">{t("{label} 진행 중", { label: t(tm.label) })}</div>
+          <div className="timer-clock">{formatRemain(tm.remain)}</div>
           <div className="timer-bar">
-            <i style={{ width: `${progressOf(t) * 100}%` }} />
+            <i style={{ width: `${progressOf(tm) * 100}%` }} />
           </div>
-          <button className="timer-cancel" onClick={() => clearTimer(t.id)}>중단</button>
+          <button className="timer-cancel" onClick={() => clearTimer(tm.id)}>{t("중단")}</button>
         </div>
       ))}
 
@@ -405,9 +445,9 @@ function ServingTimer({ result }) {
           >
             {available.map((p) => (
               <button
-                className={`timer-btn ${picked?.min === p.min && picked?.kind === p.kind ? "on" : ""}`}
+                className={`timer-btn ${sel?.min === p.min && sel?.kind === p.kind ? "on" : ""}`}
                 key={`${p.kind}-${p.min}`}
-                aria-pressed={picked?.min === p.min && picked?.kind === p.kind}
+                aria-pressed={sel?.min === p.min && sel?.kind === p.kind}
                 onClick={() =>
                   setPicked(picked?.min === p.min && picked?.kind === p.kind ? null : p)
                 }
@@ -415,25 +455,25 @@ function ServingTimer({ result }) {
                 <i className="timer-thumb">
                   <TimerVisual kind={p.kind} progress={0.45} mini />
                 </i>
-                <b>{p.label}</b>
-                <span>{p.min}분</span>
-                <em>{p.hint}</em>
+                <b>{t(p.label)}</b>
+                <span>{t("{n}분", { n: p.min })}</span>
+                <em>{t(p.hint)}</em>
               </button>
             ))}
           </div>
 
-          <button className="btn primary timer-start" disabled={!picked} onClick={start}>
-            {picked ? `${picked.label} ${picked.min}분 시작` : "시간을 먼저 선택하세요"}
+          <button className="btn primary timer-start" disabled={!sel} onClick={start}>
+            {sel
+              ? t("{label} {n}분 시작", { label: t(sel.label), n: sel.min })
+              : t("시간을 선택하세요")}
           </button>
         </>
       )}
 
-      {plan.avoid && <div className="avoid-line">✕ {plan.avoid}</div>}
-      {plan.note && <div className="shop-note">{plan.note}</div>}
-      <div className="shop-note">
-        시작하면 다른 화면으로 옮겨도 이어지고, 끝나면 알림과 진동으로 알려드립니다.
-        여러 병을 동시에 준비해도 각각 따로 셉니다.
-      </div>
+      {plan.avoid && <div className="avoid-line">✕ {t(plan.avoid)}</div>}
+      {plan.note && <div className="shop-note">{t(plan.note)}</div>}
+      {/* 긴 설명 대신 한 줄 — 자세한 동작은 써 보면 안다 */}
+      <div className="shop-note">{t("끝나면 알림으로 알려드립니다 · 화면을 옮겨도 이어집니다")}</div>
     </div>
   );
 }
@@ -475,11 +515,11 @@ function HeroVisual({ result, thumb, shop }) {
         />
         {/* 상품 사진을 쓰는 경우, 내가 찍은 사진은 구석에 작게 남긴다 */}
         {usingProduct && thumb && (
-          <img className="hero-mine" src={thumb} alt="내가 촬영한 사진" title="내가 촬영한 사진" />
+          <img className="hero-mine" src={thumb} alt={t("내가 촬영한 사진")} title={t("내가 촬영한 사진")} />
         )}
       </div>
       {/* 우리가 찍은 사진이 아니라는 것을 밝힌다 */}
-      {usingProduct && <div className="hero-credit">판매처 제공 이미지</div>}
+      {usingProduct && <div className="hero-credit">{t("판매처 제공 이미지")}</div>}
     </>
   );
 }
@@ -503,17 +543,17 @@ export default function ResultScreen({
     return (
       <div className="result">
         <div className="notfound">
-          {thumb && <img className="notfound-thumb" src={thumb} alt="촬영한 사진" />}
-          <h2>라벨을 읽지 못했습니다</h2>
-          <p>{r?.reason || "술 라벨이 잘 보이도록 다시 촬영해 주세요."}</p>
+          {thumb && <img className="notfound-thumb" src={thumb} alt={t("촬영한 사진")} />}
+          <h2>{t("라벨을 읽지 못했습니다")}</h2>
+          <p>{r?.reason || t("술 라벨이 잘 보이도록 다시 촬영해 주세요.")}</p>
           <ul className="notfound-tips">
-            <li>라벨 전체가 화면 안에 들어오게 찍어주세요</li>
-            <li>글자가 흐리면 조금 더 가까이서 찍어주세요</li>
-            <li>빛 반사가 심하면 각도를 살짝 틀어보세요</li>
+            <li>{t("라벨 전체가 화면 안에 들어오게 찍어주세요")}</li>
+            <li>{t("글자가 흐리면 조금 더 가까이서 찍어주세요")}</li>
+            <li>{t("빛 반사가 심하면 각도를 살짝 틀어보세요")}</li>
           </ul>
         </div>
         <div className="result-actions">
-          <button className="btn primary" onClick={onRescan}>다시 스캔</button>
+          <button className="btn primary" onClick={onRescan}>{t("다시 스캔")}</button>
         </div>
       </div>
     );
@@ -521,6 +561,158 @@ export default function ResultScreen({
 
   const cat = catOf(r.category);
   const glow = r.liquidColor || "#7a2434";
+
+  // ── 결과 화면의 조각들 ──────────────────────────────────
+  // 무엇을 먼저 보여 줄지는 술마다 다르다. 와인은 빈티지와 음용 적기가 중요하고,
+  // 사케·맥주는 온도와 잔이 먼저다. 그래서 순서를 앱(lib/apps/<키>.js)이 정한다.
+  const sections = {
+    confidence: (
+      <div className="card">
+        <div className="card-title">{t("인식 신뢰도")}</div>
+        <div className="meter-row">
+          <div className="meter"><i style={{ width: `${r.confidence ?? 0}%` }} /></div>
+          <div className="meter-val">{r.confidence ?? "–"}%</div>
+        </div>
+        {r.basis && <div className="basis">{r.basis}</div>}
+      </div>
+    ),
+    // 표가 쌓이기 전에는 스스로 나타나지 않는다
+    community: <CommunityRating name={r.name} vintage={r.vintage} />,
+    // 실시간 시세(priceRange)가 없어도 우리가 매긴 가격대(priceBand)로 보여 준다.
+    // 카탈로그에서 연 술도 "얼마쯤 하는 술인가"는 답해야 한다.
+    price: (() => {
+      const band = bandOf(r.priceTier || r.priceBand);
+      if (!r.priceRange && !band) return null;
+      const dots = r.priceTier || r.priceBand || band?.band;
+      return (
+        <div className="card">
+          <div className="card-title">{t("예상 가격")}</div>
+          <div className="price-line">
+            <div className="price-val">{r.priceRange || (band ? t(band.label) : t("정보 없음"))}</div>
+            {dots && (
+              <div className="tier">
+                {"●".repeat(dots)}{"○".repeat(Math.max(0, 5 - dots))}
+              </div>
+            )}
+          </div>
+          {(r.priceNote || band?.note) && (
+            <div className="price-note">{r.priceNote || t(band.note)}</div>
+          )}
+        </div>
+      );
+    })(),
+    cellar: (
+      <CellarActions result={r} thumb={thumb} onToast={onToast} onChanged={onCellarChanged} />
+    ),
+    buy: <PurchaseCard shop={shop} />,
+    vintage: <VintageCompare name={r.name} keyword={r.searchKeyword} currentVintage={r.vintage} />,
+    taste: Array.isArray(r.tasteProfile) && r.tasteProfile.length >= 3 && (
+      <div className="card">
+        <div className="card-title">{t("플레이버 시그니처")}</div>
+        <Radar profile={r.tasteProfile} />
+        {r.tastingNotes && <p style={{ marginTop: 8 }}>{r.tastingNotes}</p>}
+        {/* 품종에서 짐작한 값은 그렇다고 밝힌다 — 실제로 마셔 본 결과처럼 보이면 안 된다 */}
+        {r.tasteEstimated && (
+          <div className="shop-note">
+            {t("품종을 기준으로 짐작한 값입니다. 라벨을 촬영하면 이 술에 맞게 다시 분석합니다.")}
+          </div>
+        )}
+      </div>
+    ),
+    specs: Array.isArray(r.specs) && r.specs.length > 0 && (
+      <div className="card">
+        <div className="card-title">{t("제원")}</div>
+        <div className="spec-grid">
+          {r.specs.map((s, i) => (
+            <div className="spec" key={i}><b>{s.label}</b><span>{s.value}</span></div>
+          ))}
+          {r.ibu != null && <div className="spec"><b>IBU</b><span>{r.ibu}</span></div>}
+          {r.srm != null && <div className="spec"><b>SRM</b><span>{r.srm}</span></div>}
+        </div>
+      </div>
+    ),
+    window: <DrinkWindow from={r.drinkFrom} peak={r.drinkPeak} until={r.drinkUntil} />,
+    history: Array.isArray(r.history) && r.history.length > 0 && (
+      <div className="card">
+        <div className="card-title">{t("히스토리")}</div>
+        <div className="tl">
+          {r.history.map((h, i) => (
+            <div className="tl-item" key={i}>
+              <div className="tl-year">{h.year}</div>
+              <div className="tl-event">{h.event}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ),
+    story: (
+      <>
+        {r.story && (
+          <div className="card"><div className="card-title">{t("스토리")}</div><p>{r.story}</p></div>
+        )}
+        {r.winery && (
+          <div className="card"><div className="card-title">{t(cat.producerLabel)}</div><p>{r.winery}</p></div>
+        )}
+      </>
+    ),
+    pairing: Array.isArray(r.foodPairing) && r.foodPairing.length > 0 && (
+      <PairingCard pairs={r.foodPairing} tip={r.pairingTip} avoid={r.avoidPairing} wineName={r.name} />
+    ),
+    rating: Array.isArray(r.ratings) && r.ratings.length > 0 && (
+      <div className="card">
+        <div className="card-title">{t("평점")}</div>
+        <div className="rating-row">
+          {r.ratings.map((rt, i) => (
+            <div className="rating" key={i}><b>{rt.score}</b><span>{rt.source}</span></div>
+          ))}
+        </div>
+      </div>
+    ),
+    serving: (r.servingTemp || r.servingNote || r.aging) && (
+      <div className="card">
+        <div className="card-title">{t("서빙")}</div>
+        <div className="spec-grid">
+          {r.servingTemp && <div className="spec"><b>{t("음용 온도")}</b><span>{r.servingTemp}</span></div>}
+          {r.aging && <div className="spec"><b>{t("숙성")}</b><span>{r.aging}</span></div>}
+        </div>
+        {r.servingNote && <p style={{ marginTop: 10 }}>{r.servingNote}</p>}
+      </div>
+    ),
+    // 잔·도구 — 술 정보에서 규칙으로 고르므로 분석 비용이 들지 않는다
+    glass: <GlasswareCard result={r} />,
+    gear: <GearCard result={r} />,
+    prep: <ServingTimer result={r} />,
+    // 유사주 — 카탈로그에 있는 술만 눌러서 볼 수 있다 (새 분석 비용 없음)
+    similar: (
+      <SimilarCard names={r.similar} category={r.category} currentName={r.name} onExplore={onExplore} />
+    ),
+    trivia: r.trivia && (
+      <div className="card"><div className="card-title">{t("알고 마시면 더 맛있는 이야기")}</div><p>{r.trivia}</p></div>
+    ),
+    tips: Array.isArray(r.tips) && r.tips.length > 0 && (
+      <div className="card">
+        <div className="card-title">{t("음용 팁")}</div>
+        <ul className="tips-list">{r.tips.map((tip, i) => <li key={i}>{tip}</li>)}</ul>
+      </div>
+    ),
+    // 웹 검색은 기본 OFF(원가 7.5배) — 필요할 때만 사용자가 켠다
+    deep: onDeepSearch && !meta?.usedWeb && (
+      <div className="card">
+        <div className="card-title">{t("정보가 부족한가요?")}</div>
+        <p style={{ color: "var(--ink-dim)", fontSize: 13, marginBottom: 14 }}>
+          {t("웹에서 최신 시세·평점·수상 이력을 추가로 찾아 다시 분석합니다. 약 3분 걸립니다.")}
+        </p>
+        <button className="btn" style={{ width: "100%" }} onClick={() => onDeepSearch(r.name)}>
+          {t("최신 정보 더 찾기")}
+        </button>
+      </div>
+    ),
+  };
+
+  // 앱이 정한 순서가 곧 목록이다 — 적지 않은 조각은 그 앱에서 뜻이 없어 빼는 것이다.
+  // (사케에 "빈티지별 가격"은 넣지 않는다. 해마다 값이 갈리는 술이 아니다)
+  // 앱이 순서를 정하지 않았으면 전부 기본 순서로 보여 준다.
+  const order = LAYOUT.result?.length ? LAYOUT.result : Object.keys(sections);
 
   return (
     <div className="result">
@@ -534,7 +726,7 @@ export default function ResultScreen({
         <HeroVisual result={r} thumb={thumb} shop={shop} />
         <span className="hero-cat">
           <CatIcon category={r.category} size={22} />
-          {cat.label}
+          {t(cat.label)}
           {r.type ? ` · ${r.type}` : ""}
         </span>
         <h1 className="hero-name">{r.name}</h1>
@@ -545,192 +737,26 @@ export default function ResultScreen({
         </div>
         <div className="badges">
           <span className={`badge ${r.knowledge === "rich" ? "gold" : ""}`}>
-            {r.knowledge === "rich" ? "확실한 정보" : r.knowledge === "moderate" ? "부분 확인" : "일반 추정"}
+            {r.knowledge === "rich" ? t("확실한 정보") : r.knowledge === "moderate" ? t("부분 확인") : t("일반 추정")}
           </span>
-          {meta?.demo && <span className="badge">데모 모드</span>}
-          {meta?.cached && <span className="badge">저장된 정보</span>}
-          {meta?.usedWeb && <span className="badge gold">웹 검색 보강</span>}
-          {meta?.webFellBack && <span className="badge">지식 기반 분석</span>}
+          {meta?.demo && <span className="badge">{t("데모 모드")}</span>}
+          {meta?.cached && <span className="badge">{t("저장된 정보")}</span>}
+          {meta?.usedWeb && <span className="badge gold">{t("웹 검색 보강")}</span>}
+          {meta?.webFellBack && <span className="badge">{t("지식 기반 분석")}</span>}
         </div>
       </div>
 
-      {/* 신뢰도 */}
-      <div className="card">
-        <div className="card-title">인식 신뢰도</div>
-        <div className="meter-row">
-          <div className="meter"><i style={{ width: `${r.confidence ?? 0}%` }} /></div>
-          <div className="meter-val">{r.confidence ?? "–"}%</div>
-        </div>
-        {r.basis && <div className="basis">{r.basis}</div>}
-      </div>
-
-      {/* 사용자 평점 — 표가 쌓이기 전에는 나타나지 않는다 */}
-      <CommunityRating name={r.name} vintage={r.vintage} />
-
-      {/* 가격 */}
-      {(r.priceRange || r.priceTier) && (
-        <div className="card">
-          <div className="card-title">예상 가격</div>
-          <div className="price-line">
-            <div className="price-val">{r.priceRange || "정보 없음"}</div>
-            {r.priceTier && (
-              <div className="tier">
-                {"●".repeat(r.priceTier)}{"○".repeat(Math.max(0, 5 - r.priceTier))}
-              </div>
-            )}
-          </div>
-          {r.priceNote && <div className="price-note">{r.priceNote}</div>}
-        </div>
-      )}
-
-      {/* 나의 셀러 — 담기 / 위시 / 테이스팅 노트 */}
-      <CellarActions
-        result={r}
-        thumb={thumb}
-        onToast={onToast}
-        onChanged={onCellarChanged}
-      />
-
-      {/* 구매 정보 (네이버쇼핑 + 딥링크) */}
-      <PurchaseCard shop={shop} />
-
-      {/* 빈티지별 가격 비교 */}
-      <VintageCompare
-        name={r.name}
-        keyword={r.searchKeyword}
-        currentVintage={r.vintage}
-      />
-
-      {/* 플레이버 레이더 */}
-      {Array.isArray(r.tasteProfile) && r.tasteProfile.length >= 3 && (
-        <div className="card">
-          <div className="card-title">플레이버 시그니처</div>
-          <Radar profile={r.tasteProfile} />
-          {r.tastingNotes && <p style={{ marginTop: 8 }}>{r.tastingNotes}</p>}
-          {/* 품종에서 짐작한 값은 그렇다고 밝힌다 — 실제로 마셔 본 결과처럼 보이면 안 된다 */}
-          {r.tasteEstimated && (
-            <div className="shop-note">
-              품종을 기준으로 짐작한 값입니다. 라벨을 촬영하면 이 술에 맞게 다시 분석합니다.
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* 제원 */}
-      {Array.isArray(r.specs) && r.specs.length > 0 && (
-        <div className="card">
-          <div className="card-title">제원</div>
-          <div className="spec-grid">
-            {r.specs.map((s, i) => (
-              <div className="spec" key={i}><b>{s.label}</b><span>{s.value}</span></div>
-            ))}
-            {r.ibu != null && <div className="spec"><b>IBU</b><span>{r.ibu}</span></div>}
-            {r.srm != null && <div className="spec"><b>SRM</b><span>{r.srm}</span></div>}
-          </div>
-        </div>
-      )}
-
-      <DrinkWindow from={r.drinkFrom} peak={r.drinkPeak} until={r.drinkUntil} />
-
-      {/* 히스토리 */}
-      {Array.isArray(r.history) && r.history.length > 0 && (
-        <div className="card">
-          <div className="card-title">히스토리</div>
-          <div className="tl">
-            {r.history.map((h, i) => (
-              <div className="tl-item" key={i}>
-                <div className="tl-year">{h.year}</div>
-                <div className="tl-event">{h.event}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* 스토리 / 생산자 */}
-      {r.story && (
-        <div className="card"><div className="card-title">스토리</div><p>{r.story}</p></div>
-      )}
-      {r.winery && (
-        <div className="card"><div className="card-title">{cat.producerLabel}</div><p>{r.winery}</p></div>
-      )}
-
-      {/* 페어링 + 안주 구매 */}
-      {Array.isArray(r.foodPairing) && r.foodPairing.length > 0 && (
-        <PairingCard
-          pairs={r.foodPairing}
-          tip={r.pairingTip}
-          avoid={r.avoidPairing}
-          wineName={r.name}
-        />
-      )}
-
-      {/* 평점 */}
-      {Array.isArray(r.ratings) && r.ratings.length > 0 && (
-        <div className="card">
-          <div className="card-title">평점</div>
-          <div className="rating-row">
-            {r.ratings.map((rt, i) => (
-              <div className="rating" key={i}><b>{rt.score}</b><span>{rt.source}</span></div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* 서빙 */}
-      {(r.servingTemp || r.servingNote || r.aging) && (
-        <div className="card">
-          <div className="card-title">서빙</div>
-          <div className="spec-grid">
-            {r.servingTemp && <div className="spec"><b>음용 온도</b><span>{r.servingTemp}</span></div>}
-            {r.aging && <div className="spec"><b>숙성</b><span>{r.aging}</span></div>}
-          </div>
-          {r.servingNote && <p style={{ marginTop: 10 }}>{r.servingNote}</p>}
-        </div>
-      )}
-
-      {/* 잔 — 술 정보에서 규칙으로 고르므로 분석 비용이 들지 않는다 */}
-      <GlasswareCard result={r} />
-
-      {/* 서빙 타이머 */}
-      <ServingTimer result={r} />
-
-      {/* 유사주 — 카탈로그에 있는 술만 눌러서 볼 수 있다 (새 분석 비용 없음) */}
-      <SimilarCard
-        names={r.similar}
-        category={r.category}
-        currentName={r.name}
-        onExplore={onExplore}
-      />
-      {r.trivia && (
-        <div className="card"><div className="card-title">알고 마시면 더 맛있는 이야기</div><p>{r.trivia}</p></div>
-      )}
-      {Array.isArray(r.tips) && r.tips.length > 0 && (
-        <div className="card">
-          <div className="card-title">음용 팁</div>
-          <ul className="tips-list">{r.tips.map((t, i) => <li key={i}>{t}</li>)}</ul>
-        </div>
-      )}
-
-      {/* 웹 검색은 기본 OFF(원가 7.5배) — 필요할 때만 사용자가 켠다 */}
-      {onDeepSearch && !meta?.usedWeb && (
-        <div className="card">
-          <div className="card-title">정보가 부족한가요?</div>
-          <p style={{ color: "var(--ink-dim)", fontSize: 13, marginBottom: 14 }}>
-            웹에서 최신 시세·평점·수상 이력을 추가로 찾아 다시 분석합니다. 약 3분 걸립니다.
-          </p>
-          <button className="btn" style={{ width: "100%" }} onClick={() => onDeepSearch(r.name)}>
-            최신 정보 더 찾기
-          </button>
-        </div>
-      )}
+      {/* 조각들을 앱이 정한 순서대로 — 순서는 lib/apps/<키>.js 의 layout.result */}
+      {order.map((key) => (
+        <Fragment key={key}>{sections[key] || null}</Fragment>
+      ))}
 
       <div className="result-actions">
         {/* 공유 카드에는 판매처 이미지를 쓰지 않는다.
             우리가 만들어 배포하는 결과물이라, 남의 상품 사진과 그 위에 합성된
             타사 로고가 출처 없이 퍼지게 된다. 내가 찍은 사진이나 주종 엠블럼만 쓴다. */}
         <ShareCard result={r} thumb={thumb} onToast={onToast} />
-        <button className="btn primary" onClick={onRescan}>다른 술 스캔</button>
+        <button className="btn primary" onClick={onRescan}>{t("다른 술 스캔")}</button>
       </div>
 
       <ScrollTop />

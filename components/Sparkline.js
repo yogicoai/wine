@@ -1,4 +1,5 @@
 "use client";
+import { t, fmtWon } from "@/lib/i18n";
 
 // 가격 이력을 작은 선 그래프로 보여 준다.
 // 점이 하나뿐인 초기에는 아무것도 그리지 않고, 이력이 쌓이면 자연스럽게 나타난다.
@@ -29,12 +30,12 @@ export default function Sparkline({ trend, width = 132, height = 34 }) {
         <circle className="spark-dot" cx={lastX} cy={lastY} r="2.6" />
       </svg>
       <div className="spark-meta">
-        <b>{trend.last.toLocaleString("ko-KR")}원</b>
+        <b>{fmtWon(trend.last)}</b>
         <span>
           {isLowest
-            ? "관찰 이래 최저"
+            ? t("관찰 이래 최저")
             : diff === 0
-              ? "변동 없음"
+              ? t("변동 없음")
               : `${diff > 0 ? "▲" : "▼"} ${Math.abs(percent)}%`}
         </span>
       </div>

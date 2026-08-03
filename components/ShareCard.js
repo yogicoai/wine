@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { renderShareCard } from "@/lib/shareCard";
+import { t } from "@/lib/i18n";
 
 // 결과를 이미지 한 장으로 만들어 공유한다.
 // 휴대폰에서는 기본 공유 시트(카톡·인스타·메시지)가 열리고, PC에서는 파일로 저장된다.
@@ -20,10 +21,10 @@ export default function ShareCard({ result, thumb, onToast }) {
     setState({ url: null, blob: null, error: null });
     try {
       const blob = await renderShareCard(result, thumb);
-      if (!blob) throw new Error("이미지를 만들지 못했습니다.");
+      if (!blob) throw new Error(t("이미지를 만들지 못했습니다."));
       setState({ url: URL.createObjectURL(blob), blob, error: null });
     } catch {
-      setState({ url: null, blob: null, error: "이미지를 만들지 못했습니다." });
+      setState({ url: null, blob: null, error: t("이미지를 만들지 못했습니다.") });
     }
   }
 
@@ -53,7 +54,7 @@ export default function ShareCard({ result, thumb, onToast }) {
     a.href = state.url;
     a.download = filename();
     a.click();
-    onToast?.("이미지를 저장했습니다.");
+    onToast?.(t("이미지를 저장했습니다."));
   }
 
   const canShareFiles =
@@ -62,16 +63,16 @@ export default function ShareCard({ result, thumb, onToast }) {
   return (
     <>
       <button className="btn" onClick={build}>
-        이미지로 공유
+        {t("이미지로 공유")}
       </button>
 
       {open && (
         <>
           <div className="drawer-dim" onClick={() => setOpen(false)} />
-          <div className="share-modal" role="dialog" aria-label="공유 카드 미리보기">
+          <div className="share-modal" role="dialog" aria-label={t("공유 카드 미리보기")}>
             <div className="share-head">
-              <b>공유 카드</b>
-              <button className="share-x" aria-label="닫기" onClick={() => setOpen(false)}>
+              <b>{t("공유 카드")}</b>
+              <button className="share-x" aria-label={t("닫기")} onClick={() => setOpen(false)}>
                 ✕
               </button>
             </div>
@@ -80,22 +81,22 @@ export default function ShareCard({ result, thumb, onToast }) {
               {state.error ? (
                 <div className="share-msg err">{state.error}</div>
               ) : state.url ? (
-                <img src={state.url} alt={`${result.name} 공유 카드`} />
+                <img src={state.url} alt={t("{name} 공유 카드", { name: result.name })} />
               ) : (
-                <div className="share-msg">카드를 만드는 중…</div>
+                <div className="share-msg">{t("카드를 만드는 중…")}</div>
               )}
             </div>
 
             <div className="share-actions">
               <button className="btn" onClick={download} disabled={!state.url}>
-                저장
+                {t("저장")}
               </button>
               <button className="btn primary" onClick={share} disabled={!state.url}>
-                {canShareFiles ? "공유하기" : "이미지 내려받기"}
+                {canShareFiles ? t("공유하기") : t("이미지 내려받기")}
               </button>
             </div>
             <div className="shop-note" style={{ textAlign: "center" }}>
-              인스타그램 · 카카오톡에 그대로 올릴 수 있는 1080×1350 이미지입니다.
+              {t("인스타그램 · 카카오톡에 그대로 올릴 수 있는 1080×1350 이미지입니다.")}
             </div>
           </div>
         </>

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { readTimers, remainingOf, clearTimer, subscribeTimer } from "@/lib/timer";
+import { APP } from "@/lib/appProfile";
 
 /**
  * 진행 중인 준비 타이머들을 읽어 1초마다 갱신한다.
@@ -41,7 +42,7 @@ export default function useActiveTimers({ owner = false, onDone } = {}) {
     for (const t of done) {
       const text = `${t.label} 완료 — ${t.doneText}`;
       if (typeof Notification !== "undefined" && Notification.permission === "granted") {
-        new Notification("보틀 렌즈", { body: `${t.name}\n${text}`, tag: t.id });
+        new Notification(APP.name, { body: `${t.name}\n${text}`, tag: t.id });
       } else {
         onDone?.(`${t.name} · ${text}`);
       }

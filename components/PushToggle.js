@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { t } from "@/lib/i18n";
 
 // base64url(VAPID 공개키) → Uint8Array (브라우저 구독 API가 요구하는 형식)
 function urlBase64ToUint8Array(base64String) {
@@ -44,7 +45,7 @@ export default function PushToggle({ onToast }) {
     try {
       const permission = await Notification.requestPermission();
       if (permission !== "granted") {
-        onToast?.("알림 권한이 허용되지 않았습니다.", true);
+        onToast?.(t("알림 권한이 허용되지 않았습니다."), true);
         return;
       }
       const reg = await navigator.serviceWorker.ready;
@@ -59,9 +60,9 @@ export default function PushToggle({ onToast }) {
       });
       if (!res.ok) throw new Error();
       setState((s) => ({ ...s, subscribed: true }));
-      onToast?.("특가 알림을 켰습니다. 하루 한 번 가격을 확인합니다.");
+      onToast?.(t("특가 알림을 켰습니다. 하루 한 번 가격을 확인합니다."));
     } catch {
-      onToast?.("알림을 켜지 못했습니다.", true);
+      onToast?.(t("알림을 켜지 못했습니다."), true);
     } finally {
       setBusy(false);
     }
@@ -81,9 +82,9 @@ export default function PushToggle({ onToast }) {
         await sub.unsubscribe();
       }
       setState((s) => ({ ...s, subscribed: false }));
-      onToast?.("특가 알림을 껐습니다.");
+      onToast?.(t("특가 알림을 껐습니다."));
     } catch {
-      onToast?.("설정을 변경하지 못했습니다.", true);
+      onToast?.(t("설정을 변경하지 못했습니다."), true);
     } finally {
       setBusy(false);
     }
@@ -94,11 +95,11 @@ export default function PushToggle({ onToast }) {
   return (
     <div className="push-row">
       <div>
-        <b>특가 알림</b>
+        <b>{t("특가 알림")}</b>
         <span>
           {state.subscribed
-            ? "찜해 둔 술이 목표가에 닿거나 최저가를 경신하면 알려드립니다."
-            : "앱을 닫아 두어도 특가를 놓치지 않도록 알림을 보내드립니다."}
+            ? t("찜해 둔 술이 목표가에 닿거나 최저가를 경신하면 알려드립니다.")
+            : t("앱을 닫아 두어도 특가를 놓치지 않도록 알림을 보내드립니다.")}
         </span>
       </div>
       <button
@@ -106,7 +107,7 @@ export default function PushToggle({ onToast }) {
         onClick={state.subscribed ? unsubscribe : subscribe}
         disabled={busy}
       >
-        {busy ? "처리 중…" : state.subscribed ? "끄기" : "켜기"}
+        {busy ? t("처리 중…") : state.subscribed ? t("끄기") : t("켜기")}
       </button>
     </div>
   );

@@ -2,6 +2,7 @@
 import TimerVisual from "./TimerVisual";
 import useActiveTimers from "./useActiveTimer";
 import { progressOf, formatRemain } from "@/lib/timer";
+import { t } from "@/lib/i18n";
 
 // 진행 중인 준비를 떠 있는 버튼으로 보여 준다.
 //
@@ -23,9 +24,13 @@ export default function TimerBubble({ onOpen }) {
       className="timer-bubble"
       onClick={onOpen}
       aria-label={
-        `${soonest.name} ${soonest.label} 진행 중, ${formatRemain(soonest.remain)} 남음` +
-        (more ? ` 외 ${more}건` : "") +
-        ". 눌러서 자세히 보기"
+        t("{name} {label} 진행 중, {remain} 남음", {
+          name: soonest.name,
+          label: t(soonest.label),
+          remain: formatRemain(soonest.remain),
+        }) +
+        (more ? t(" 외 {n}건", { n: more }) : "") +
+        t(". 눌러서 자세히 보기")
       }
     >
       <span className="tb-stage">
@@ -33,7 +38,7 @@ export default function TimerBubble({ onOpen }) {
       </span>
       <span className="tb-text">
         <b>{formatRemain(soonest.remain)}</b>
-        <span>{soonest.label}</span>
+        <span>{t(soonest.label)}</span>
       </span>
       {more > 0 && <span className="tb-more">+{more}</span>}
     </button>

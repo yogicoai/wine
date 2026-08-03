@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Icon from "./Icon";
+import { APP } from "@/lib/appProfile";
+import { t } from "@/lib/i18n";
 
 // 처음 오는 사람에게 무엇을 할 수 있는지 알린다.
 //
@@ -9,7 +11,7 @@ import Icon from "./Icon";
 //
 // 여러 장짜리 안내로 길을 막지는 않는다. 첫 화면 아래에 한 번만 펼쳐 두고,
 // 닫으면 다시 나오지 않는다.
-const KEY = "bottlelens.hintSeen";
+const KEY = `${APP.storageKey}.hintSeen`;
 
 const ITEMS = [
   // 바코드는 지금 내보내지 않으므로 문구에서도 뺀다 (lib/features.js)
@@ -43,8 +45,8 @@ export default function FirstHint({ onOpenDiscover }) {
   return (
     <div className="hint">
       <div className="hint-head">
-        <b>이렇게 쓸 수 있습니다</b>
-        <button className="hint-x" onClick={close} aria-label="안내 닫기">
+        <b>{t("이렇게 쓸 수 있습니다")}</b>
+        <button className="hint-x" onClick={close} aria-label={t("안내 닫기")}>
           <Icon name="close" size={14} />
         </button>
       </div>
@@ -56,8 +58,8 @@ export default function FirstHint({ onOpenDiscover }) {
               <Icon name={it.icon} size={17} stroke={1.3} />
             </span>
             <span>
-              <b>{it.title}</b>
-              <em>{it.body}</em>
+              <b>{t(it.title)}</b>
+              <em>{t(it.body)}</em>
             </span>
           </li>
         ))}
@@ -70,7 +72,7 @@ export default function FirstHint({ onOpenDiscover }) {
           onOpenDiscover?.();
         }}
       >
-        와인 둘러보기부터 <em>›</em>
+        {t("와인 둘러보기부터")} <em>›</em>
       </button>
     </div>
   );

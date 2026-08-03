@@ -4,9 +4,13 @@
 // progress 0 → 1 에 따라 실제로 차오르고 서리가 끼도록 그린다.
 // (단순 애니메이션이 아니라 남은 시간과 연동되므로 진행 정도를 가늠할 수 있다)
 
-const GOLD = "#d4b278";
-const GOLD_DIM = "rgba(212,178,120,0.35)";
-const WINE = "#7a2434";
+import { THEME, APP } from "@/lib/appProfile";
+
+const GOLD = THEME.accent;
+const GOLD_DIM = THEME.accentDim;
+const WINE = THEME.wineish;
+// 사케 앱에서는 와인 잔이 아니라 도쿠리가 차가워진다 — 그릇부터 앱의 것이어야 한다
+const SAKE = APP.key === "sake";
 
 // 칠링 — 잔에 담긴 술이 차가워지며 표면에 서리가 앉는다
 function Chilling({ progress, mini }) {
@@ -23,19 +27,37 @@ function Chilling({ progress, mini }) {
     <svg viewBox="0 0 110 140" className="tv-svg" aria-hidden="true">
       <defs>
         <clipPath id="tv-bowl">
-          <path d="M30 28h50l-4 34a21 21 0 0 1-42 0Z" />
+          {SAKE ? (
+            <path d="M51 34c0 8-12 12-12 28a16 20 0 0 0 32 0c0-16-12-20-12-28Z" />
+          ) : (
+            <path d="M30 28h50l-4 34a21 21 0 0 1-42 0Z" />
+          )}
         </clipPath>
       </defs>
 
-      {/* 잔 */}
-      <path d="M30 28h50l-4 34a21 21 0 0 1-42 0Z" fill="none" stroke={GOLD} strokeWidth="2" />
-      <path d="M55 83v30M40 115h30" fill="none" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+      {/* 그릇 — 사케는 도쿠리, 그 밖은 잔 */}
+      {SAKE ? (
+        <>
+          <path
+            d="M51 34c0 8-12 12-12 28a16 20 0 0 0 32 0c0-16-12-20-12-28"
+            fill="none"
+            stroke={GOLD}
+            strokeWidth="2"
+          />
+          <path d="M48 34h14" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+        </>
+      ) : (
+        <>
+          <path d="M30 28h50l-4 34a21 21 0 0 1-42 0Z" fill="none" stroke={GOLD} strokeWidth="2" />
+          <path d="M55 83v30M40 115h30" fill="none" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+        </>
+      )}
 
       {/* 술 */}
       <g clipPath="url(#tv-bowl)">
-        <rect x="28" y="40" width="54" height="45" fill={WINE} opacity="0.75" />
+        <rect x="28" y={SAKE ? 48 : 40} width="54" height="45" fill={WINE} opacity="0.75" />
         {/* 표면 */}
-        <rect x="28" y="40" width="54" height="1.5" fill={GOLD} opacity="0.5" />
+        <rect x="28" y={SAKE ? 48 : 40} width="54" height="1.5" fill={GOLD} opacity="0.5" />
       </g>
 
       {/* 서리 */}
@@ -132,9 +154,67 @@ function Decanting({ progress, long, mini }) {
   );
 }
 
+// 칸(燗) — 도쿠리를 뜨거운 물에 앉혀 천천히 데운다
+function Warming({ progress, mini }) {
+  const temp = Math.round(18 + 27 * progress); // 18℃ → 45℃
+  const heat = 0.2 + progress * 0.6; // 김·물빛이 진행에 따라 짙어진다
+
+  return (
+    <svg viewBox="0 0 110 140" className="tv-svg" aria-hidden="true">
+      <defs>
+        <clipPath id="tv-bath">
+          <path d="M26 86h58l-5 22a10 10 0 0 1-10 8H41a10 10 0 0 1-10-8Z" />
+        </clipPath>
+      </defs>
+
+      {/* 김 — 데워질수록 또렷해진다 (디캔팅의 향 연출을 그대로 쓴다) */}
+      <g
+        className="tv-aroma"
+        stroke={GOLD_DIM}
+        strokeWidth="1.5"
+        fill="none"
+        strokeLinecap="round"
+        opacity={heat}
+      >
+        <path d="M48 34c-3-6 3-9 0-15" className="tv-a1" />
+        <path d="M55 30c-3-7 3-10 0-16" className="tv-a2" />
+        <path d="M62 34c-3-6 3-9 0-15" className="tv-a3" />
+      </g>
+
+      {/* 도쿠리 — 목이 좁고 몸이 부푼 술병 */}
+      <path
+        d="M51 38c0 7-10 10-10 24a14 17 0 0 0 28 0c0-14-10-17-10-24"
+        fill="none"
+        stroke={GOLD}
+        strokeWidth="2"
+      />
+      <path d="M48 38h14" stroke={GOLD} strokeWidth="2" strokeLinecap="round" />
+
+      {/* 중탕 그릇과 뜨거운 물 */}
+      <path
+        d="M26 86h58l-5 22a10 10 0 0 1-10 8H41a10 10 0 0 1-10-8Z"
+        fill="none"
+        stroke={GOLD}
+        strokeWidth="2"
+      />
+      <g clipPath="url(#tv-bath)">
+        <rect x="24" y="90" width="62" height="28" fill="#c96f4a" opacity={0.25 + progress * 0.35} />
+        <rect x="24" y="90" width="62" height="1.5" fill={GOLD} opacity="0.5" />
+      </g>
+
+      {!mini && (
+        <text x="55" y="20" textAnchor="middle" className="tv-temp">
+          {temp}℃
+        </text>
+      )}
+    </svg>
+  );
+}
+
 // mini: 버튼 안 미리보기 — 숫자 없이 그림만 보여준다
 export default function TimerVisual({ kind, progress = 0, mini = false }) {
   const p = Math.max(0, Math.min(1, progress));
   if (kind === "chill") return <Chilling progress={p} mini={mini} />;
+  if (kind === "warm") return <Warming progress={p} mini={mini} />;
   return <Decanting progress={p} long={kind === "long"} mini={mini} />;
 }

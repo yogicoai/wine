@@ -7,11 +7,12 @@ import Sparkline from "./Sparkline";
 import { catOf } from "@/lib/cats";
 import Flag from "./Flag";
 import { drinkWindowState, cellarValue, priceTrend, priceStats, targetSuggestions } from "@/lib/cellar";
+import { t, fmtWon } from "@/lib/i18n";
 
 const TABS = [
-  { key: "have", label: "보유" },
-  { key: "wish", label: "위시" },
-  { key: "drunk", label: "마신 술" },
+  { key: "have", label: t("보유") },
+  { key: "wish", label: t("위시") },
+  { key: "drunk", label: t("마신 술") },
 ];
 
 export default function CellarScreen({ data, onOpen, onReload, onToast }) {
@@ -54,19 +55,19 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
       });
       const d = await res.json();
       if (d.noApi) {
-        onToast?.("판매처 API 키가 설정되지 않아 시세를 확인할 수 없습니다.", true);
+        onToast?.(t("판매처 API 키가 설정되지 않아 시세를 확인할 수 없습니다."), true);
         return;
       }
       // 방금 돌렸으면 같은 값을 다시 긁을 뿐이다
       if (d.cooldown) {
-        onToast?.(`방금 갱신했습니다. ${Math.ceil(d.cooldown / 60)}분 뒤에 다시 확인할 수 있습니다.`);
+        onToast?.(t("방금 갱신했습니다. {n}분 뒤에 다시 확인할 수 있습니다.", { n: Math.ceil(d.cooldown / 60) }));
         return;
       }
       setDeals(d.deals || []);
       onReload?.();
-      onToast?.(`${d.checked ?? 0}개 항목의 시세를 갱신했습니다.`);
+      onToast?.(t("{n}개 항목의 시세를 갱신했습니다.", { n: d.checked ?? 0 }));
     } catch {
-      onToast?.("시세를 갱신하지 못했습니다.", true);
+      onToast?.(t("시세를 갱신하지 못했습니다."), true);
     } finally {
       setChecking(false);
     }
@@ -93,7 +94,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
     });
     const d = await res.json();
     if (d.saved) onReload?.();
-    else onToast?.("저장에 실패했습니다.", true);
+    else onToast?.(t("저장에 실패했습니다."), true);
   }
 
   async function remove(id) {
@@ -105,8 +106,8 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
     return (
       <div className="notfound">
         <div className="big">🗄️</div>
-        <h2>셀러를 쓸 수 없습니다</h2>
-        <p>MONGODB_URI가 설정되지 않았습니다. .env.local을 확인해 주세요.</p>
+        <h2>{t("셀러를 쓸 수 없습니다")}</h2>
+        <p>{t("MONGODB_URI가 설정되지 않았습니다. .env.local을 확인해 주세요.")}</p>
       </div>
     );
   }
@@ -118,7 +119,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
       {/* 특가 알림 */}
       {deals.length > 0 && (
         <div className="card deal-card">
-          <div className="card-title">특가 알림</div>
+          <div className="card-title">{t("특가 알림")}</div>
           {deals.map((d) => (
             <a
               key={d.id}
@@ -132,12 +133,12 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                 <b>{d.name}</b>
                 <span>
                   {d.reason === "target"
-                    ? `목표가 ${d.target?.toLocaleString("ko-KR")}원 도달`
-                    : `역대 최저가 대비 하락`}
+                    ? t("목표가 {n} 도달", { n: fmtWon(d.target) })
+                    : t("역대 최저가 대비 하락")}
                   {d.mall ? ` · ${d.mall}` : ""}
                 </span>
               </div>
-              <em>{d.price.toLocaleString("ko-KR")}원</em>
+              <em>{fmtWon(d.price)}</em>
             </a>
           ))}
         </div>
@@ -145,45 +146,45 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
 
       {/* 요약 */}
       <div className="card">
-        <div className="card-title">나의 셀러</div>
+        <div className="card-title">{t("나의 셀러")}</div>
         <div className="cellar-summary">
           <div>
             <b>{totalBottles}</b>
-            <span>보유 병</span>
+            <span>{t("보유 병")}</span>
           </div>
           <div>
             <b>{grouped.drunk.length}</b>
-            <span>마신 술</span>
+            <span>{t("마신 술")}</span>
           </div>
           <div>
             <b>{grouped.wish.length}</b>
-            <span>위시</span>
+            <span>{t("위시")}</span>
           </div>
         </div>
         {readyNow.length > 0 && (
           <div className="tip-line">
-            ✦ 지금 마시기 좋은 술이 {readyNow.length}병 있습니다 — {readyNow.map((r) => r.name).slice(0, 2).join(", ")}
-            {readyNow.length > 2 ? " 외" : ""}
+            {t("✦ 지금 마시기 좋은 술이 {n}병 있습니다 — ", { n: readyNow.length })}
+            {readyNow.map((r) => r.name).slice(0, 2).join(", ")}
+            {readyNow.length > 2 ? t(" 외") : ""}
           </div>
         )}
-        {checking && <div className="shop-note">최저가를 확인하는 중…</div>}
+        {checking && <div className="shop-note">{t("최저가를 확인하는 중…")}</div>}
         <PushToggle onToast={onToast} />
       </div>
 
       {/* 셀러 가치 */}
       {value && (
         <div className="card">
-          <div className="card-title">셀러 가치</div>
+          <div className="card-title">{t("셀러 가치")}</div>
 
           {value.priced ? (
             <>
               <div className="value-total">
                 <b>{value.total.toLocaleString("ko-KR")}</b>
-                <span>원</span>
+                <span>{t("원")}</span>
               </div>
               <div className="value-sub">
-                현재 최저가 기준 · {value.priced}병 평가 · 평균{" "}
-                {value.average.toLocaleString("ko-KR")}원
+                {t("현재 최저가 기준 · {n}병 평가 · 평균 {avg}", { n: value.priced, avg: fmtWon(value.average) })}
               </div>
             </>
           ) : (
@@ -192,27 +193,26 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                 <b>–</b>
               </div>
               <div className="value-sub">
-                보유 {value.bottles}병 · 아직 시세를 확인하지 않았습니다
+                {t("보유 {n}병 · 아직 시세를 확인하지 않았습니다", { n: value.bottles })}
               </div>
             </>
           )}
 
           {value.gain > 0 && (
             <div className="tip-line">
-              ✦ 관찰된 최고가 대비 {value.gain.toLocaleString("ko-KR")}원 낮은 값으로 채워진
-              셀러입니다
+              {t("✦ 관찰된 최고가 대비 {n} 낮은 값으로 채워진 셀러입니다", { n: fmtWon(value.gain) })}
             </div>
           )}
 
           <button className="btn value-refresh" onClick={refreshPrices} disabled={checking}>
-            {checking ? "확인하는 중…" : "시세 갱신"}
+            {checking ? t("확인하는 중…") : t("시세 갱신")}
           </button>
 
           <div className="shop-note">
             {value.unpriced > 0
-              ? `${value.unpriced}병은 아직 시세를 확인하지 못했습니다. 매일 자동으로 다시 확인하며, 지금 바로 채우려면 위 버튼을 누르세요.`
-              : "판매처 최저가를 매일 확인해 반영합니다. 실제 거래가와는 다를 수 있습니다."}
-            {" "}판매처 조회는 무료라 갱신에 분석 비용이 들지 않습니다.
+              ? t("{n}병은 아직 시세를 확인하지 못했습니다. 매일 자동으로 다시 확인하며, 지금 바로 채우려면 위 버튼을 누르세요.", { n: value.unpriced })
+              : t("판매처 최저가를 매일 확인해 반영합니다. 실제 거래가와는 다를 수 있습니다.")}
+            {" "}{t("판매처 조회는 무료라 갱신에 분석 비용이 들지 않습니다.")}
           </div>
         </div>
       )}
@@ -220,19 +220,19 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
       {/* 취향 프로필 */}
       {taste ? (
         <div className="card">
-          <div className="card-title">나의 취향</div>
+          <div className="card-title">{t("나의 취향")}</div>
           <Radar profile={taste.axes} />
           {taste.summary && <p style={{ textAlign: "center", marginTop: 6 }}>{taste.summary}</p>}
           <div className="shop-note" style={{ textAlign: "center" }}>
-            별점을 남긴 {taste.sampleSize}개 기록을 분석했습니다
-            {taste.topCategory ? ` · 가장 즐겨 마신 주종은 ${catOf(taste.topCategory).label}` : ""}
+            {t("별점을 남긴 {n}개 기록을 분석했습니다", { n: taste.sampleSize })}
+            {taste.topCategory ? t(" · 가장 즐겨 마신 주종은 {cat}", { cat: t(catOf(taste.topCategory).label) }) : ""}
           </div>
         </div>
       ) : (
         <div className="card">
-          <div className="card-title">나의 취향</div>
+          <div className="card-title">{t("나의 취향")}</div>
           <p style={{ color: "var(--ink-dim)", fontSize: 13.5 }}>
-            별점을 남긴 기록이 2개 이상 쌓이면, 선호하는 맛의 축을 분석해 보여드립니다.
+            {t("별점을 남긴 기록이 2개 이상 쌓이면, 선호하는 맛의 축을 분석해 보여드립니다.")}
           </p>
         </div>
       )}
@@ -255,14 +255,14 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
         <div className="empty-state">
           <img src={`/icons/cat/${tab === "wish" ? "sake" : tab === "drunk" ? "brandy" : "wine"}.png`} alt="" />
           <b>
-            {tab === "have" && "보유 중인 술이 없습니다"}
-            {tab === "wish" && "위시리스트가 비어 있습니다"}
-            {tab === "drunk" && "아직 기록한 술이 없습니다"}
+            {tab === "have" && t("보유 중인 술이 없습니다")}
+            {tab === "wish" && t("위시리스트가 비어 있습니다")}
+            {tab === "drunk" && t("아직 기록한 술이 없습니다")}
           </b>
           <span>
-            {tab === "have" && "스캔한 뒤 ‘보유 중’으로 담아보세요."}
-            {tab === "wish" && "담아두면 값이 내렸을 때 알려드립니다."}
-            {tab === "drunk" && "‘마셨어요’로 별점과 향을 남겨보세요."}
+            {tab === "have" && t("스캔한 뒤 ‘보유 중’으로 담아보세요.")}
+            {tab === "wish" && t("담아두면 값이 내렸을 때 알려드립니다.")}
+            {tab === "drunk" && t("‘마셨어요’로 별점과 향을 남겨보세요.")}
           </span>
         </div>
       )}
@@ -286,14 +286,18 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                 <div className="hist-name">{it.name}</div>
                 <div className="hist-meta">
                   <Flag country={it.country} width={15} />
-                  {[cat.label, it.vintage, it.region].filter(Boolean).join(" · ")}
+                  {[t(cat.label), it.vintage, it.region].filter(Boolean).join(" · ")}
                 </div>
                 <div className="cellar-badges">
-                  {win && <span className={`badge tone-${win.tone}`}>{win.label}</span>}
+                  {win && (
+                    <span className={`badge tone-${win.tone}`}>
+                      {win.key === "early" ? t("{n}년부터", { n: parseInt(win.label) }) : t(win.label)}
+                    </span>
+                  )}
                   {it.rating && <span className="badge gold">{"★".repeat(it.rating)}</span>}
-                  {it.notes?.length > 0 && <span className="badge">노트 {it.notes.length}</span>}
+                  {it.notes?.length > 0 && <span className="badge">{t("노트 {n}", { n: it.notes.length })}</span>}
                   {it.priceLast && (
-                    <span className="badge">최저 {it.priceLast.toLocaleString("ko-KR")}원</span>
+                    <span className="badge">{t("최저 {n}", { n: fmtWon(it.priceLast) })}</span>
                   )}
                 </div>
               </div>
@@ -303,7 +307,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
               {tab === "have" && (
                 <div className="stepper">
                   <button onClick={() => patch(it._id, { bottles: (it.bottles || 0) - 1 })}>−</button>
-                  <b>{it.bottles || 0}병</b>
+                  <b>{t("{n}병", { n: it.bottles || 0 })}</b>
                   <button onClick={() => patch(it._id, { bottles: (it.bottles || 0) + 1 })}>+</button>
                 </div>
               )}
@@ -314,7 +318,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                     <input
                       type="number"
                       value={targetInput}
-                      placeholder="목표가"
+                      placeholder={t("목표가")}
                       onChange={(e) => setTargetInput(e.target.value)}
                     />
                     <button
@@ -323,7 +327,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                         setEditing(null);
                       }}
                     >
-                      저장
+                      {t("저장")}
                     </button>
                   </div>
                   {/* 빈칸에 숫자를 넣으라고만 하면 얼마를 적어야 할지 알 수 없다.
@@ -336,8 +340,8 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                           className="target-hint"
                           onClick={() => setTargetInput(String(s.value))}
                         >
-                          {s.label}
-                          <em>{s.value.toLocaleString("ko-KR")}원</em>
+                          {t(s.label)}
+                          <em>{fmtWon(s.value)}</em>
                         </button>
                       ))}
                     </div>
@@ -352,12 +356,12 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                   }}
                 >
                   {it.priceTarget
-                    ? `목표 ${it.priceTarget.toLocaleString("ko-KR")}원`
-                    : "목표가 설정"}
+                    ? t("목표 {n}", { n: fmtWon(it.priceTarget) })
+                    : t("목표가 설정")}
                 </button>
               )}
 
-              <button className="mini-btn danger" onClick={() => remove(it._id)}>삭제</button>
+              <button className="mini-btn danger" onClick={() => remove(it._id)}>{t("삭제")}</button>
             </div>
 
             {/* 가격 — 지금 값만으로는 싼지 알 수 없으므로 6개월 최저·최고를 함께 둔다 */}
@@ -365,17 +369,17 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
               <div className="price-track">
                 <div className="price-facts">
                   <div className="pf now">
-                    <b>{stats.last.toLocaleString("ko-KR")}원</b>
-                    <span>지금 최저가</span>
+                    <b>{fmtWon(stats.last)}</b>
+                    <span>{t("지금 최저가")}</span>
                   </div>
                   <div className="pf">
-                    <b>{stats.low.toLocaleString("ko-KR")}원</b>
-                    <span>6개월 최저</span>
+                    <b>{fmtWon(stats.low)}</b>
+                    <span>{t("6개월 최저")}</span>
                   </div>
                   {stats.high && (
                     <div className="pf">
-                      <b>{stats.high.toLocaleString("ko-KR")}원</b>
-                      <span>6개월 최고</span>
+                      <b>{fmtWon(stats.high)}</b>
+                      <span>{t("6개월 최고")}</span>
                     </div>
                   )}
                 </div>
@@ -383,13 +387,13 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                 {stats.days > 0 && (
                   <div className="price-verdict">
                     {stats.isLowest
-                      ? `✦ 6개월 중 가장 쌉니다 · ${stats.days}일 관찰`
-                      : `6개월 최저보다 ${stats.overLow}% 높습니다 · ${stats.days}일 관찰`}
+                      ? t("✦ 6개월 중 가장 쌉니다 · {n}일 관찰", { n: stats.days })
+                      : t("6개월 최저보다 {p}% 높습니다 · {n}일 관찰", { p: stats.overLow, n: stats.days })}
                   </div>
                 )}
                 {stats.days === 0 && (
                   <div className="price-verdict dim">
-                    관찰을 막 시작했습니다. 내일부터 최저·최고가 쌓입니다.
+                    {t("관찰을 막 시작했습니다. 내일부터 최저·최고가 쌓입니다.")}
                   </div>
                 )}
 
@@ -397,13 +401,12 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                 {it.priceTarget && (
                   <div className="target-gap">
                     {stats.last <= it.priceTarget ? (
-                      <b className="hit">목표가 도달 · 지금이 살 때입니다</b>
+                      <b className="hit">{t("목표가 도달 · 지금이 살 때입니다")}</b>
                     ) : (
                       <>
                         <i style={{ width: `${Math.min(100, (it.priceTarget / stats.last) * 100)}%` }} />
                         <span>
-                          목표 {it.priceTarget.toLocaleString("ko-KR")}원까지{" "}
-                          {(stats.last - it.priceTarget).toLocaleString("ko-KR")}원
+                          {t("목표 {target}까지 {gap}", { target: fmtWon(it.priceTarget), gap: fmtWon(stats.last - it.priceTarget) })}
                         </span>
                       </>
                     )}
@@ -423,7 +426,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                       <span>{n.date}</span>
                       {n.rating && <b>{"★".repeat(n.rating)}</b>}
                     </div>
-                    {n.aroma?.length > 0 && <div className="note-aroma">{n.aroma.join(" · ")}</div>}
+                    {n.aroma?.length > 0 && <div className="note-aroma">{n.aroma.map((a) => t(a)).join(" · ")}</div>}
                     {n.text && <p>{n.text}</p>}
                   </div>
                 ))}

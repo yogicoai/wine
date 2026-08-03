@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { BrandEmblem } from "./Brand";
+import { t } from "@/lib/i18n";
 
 const STEPS = [
   "라벨을 읽는 중",
@@ -32,7 +33,7 @@ export default function LoadingScreen({ thumb }) {
       {/* 촬영한 라벨 위로 스캔 선이 지나간다 — 지금 이 사진을 읽고 있다는 신호 */}
       <div className="scan-frame">
         {thumb ? (
-          <img className="scan-img" src={thumb} alt="촬영한 라벨" />
+          <img className="scan-img" src={thumb} alt={t("촬영한 라벨")} />
         ) : (
           <div className="scan-empty">
             <BrandEmblem size={190} />
@@ -53,7 +54,7 @@ export default function LoadingScreen({ thumb }) {
             aria-current={idx === i ? "step" : undefined}
           >
             <i className="step-dot" />
-            {s}
+            {t(s)}
           </li>
         ))}
       </ol>

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { t } from "@/lib/i18n";
 
 // 주종별 향 태그 — 직접 타이핑 없이 탭으로 기록할 수 있게
 const AROMAS = {
@@ -26,19 +27,19 @@ export default function TastingNote({ category, onSave, onCancel, saving }) {
   return (
     <div className="note-form">
       <div className="note-row">
-        <label>마신 날</label>
+        <label>{t("마신 날")}</label>
         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
       </div>
 
       <div className="note-row">
-        <label>내 평점</label>
+        <label>{t("내 평점")}</label>
         <div className="stars">
           {[1, 2, 3, 4, 5].map((n) => (
             <button
               key={n}
               className={`star ${rating >= n ? "on" : ""}`}
               onClick={() => setRating(n === rating ? 0 : n)}
-              aria-label={`${n}점`}
+              aria-label={t("{n}점", { n })}
             >
               ★
             </button>
@@ -47,7 +48,7 @@ export default function TastingNote({ category, onSave, onCancel, saving }) {
       </div>
 
       <div className="note-block">
-        <label>내가 느낀 향·맛</label>
+        <label>{t("내가 느낀 향·맛")}</label>
         <div className="chip-row">
           {tags.map((a) => (
             <button
@@ -55,35 +56,35 @@ export default function TastingNote({ category, onSave, onCancel, saving }) {
               className={`chip chip-btn ${aroma.includes(a) ? "chip-on" : ""}`}
               onClick={() => toggle(a)}
             >
-              {a}
+              {t(a)}
             </button>
           ))}
         </div>
       </div>
 
       <div className="note-block">
-        <label>메모</label>
+        <label>{t("메모")}</label>
         <textarea
           rows={3}
           value={text}
-          placeholder="누구와, 어떤 자리에서, 어땠는지 남겨보세요."
+          placeholder={t("누구와, 어떤 자리에서, 어땠는지 남겨보세요.")}
           onChange={(e) => setText(e.target.value)}
         />
       </div>
 
       <label className="note-check">
         <input type="checkbox" checked={consumed} onChange={(e) => setConsumed(e.target.checked)} />
-        보유 재고에서 1병 차감
+        {t("보유 재고에서 1병 차감")}
       </label>
 
       <div className="result-actions">
-        <button className="btn" onClick={onCancel} disabled={saving}>취소</button>
+        <button className="btn" onClick={onCancel} disabled={saving}>{t("취소")}</button>
         <button
           className="btn primary"
           disabled={saving}
           onClick={() => onSave({ date, rating, aroma, text, consumed })}
         >
-          {saving ? "저장 중…" : "기록 저장"}
+          {saving ? t("저장 중…") : t("기록 저장")}
         </button>
       </div>
     </div>

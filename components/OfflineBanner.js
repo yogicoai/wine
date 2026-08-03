@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { t } from "@/lib/i18n";
 
 // 인터넷이 끊긴 것을 알린다.
 //
@@ -24,7 +25,7 @@ export default function OfflineBanner() {
 
   return (
     <div className="offline-bar" role="status">
-      인터넷 연결이 끊겼습니다 — 촬영·검색·가격 조회를 쓸 수 없습니다
+      {t("인터넷 연결이 끊겼습니다 — 촬영·검색·가격 조회를 쓸 수 없습니다")}
     </div>
   );
 }
