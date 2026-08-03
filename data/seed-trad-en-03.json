@@ -1,0 +1,1239 @@
+[
+  {
+    "category": "traditional",
+    "name": "Gyeongju Gyodong Beopju (경주 교동법주)",
+    "searchKeyword": "경주 교동법주",
+    "producer": "Gyeongju Choi Family Gyodong Beopju (경주 최씨 교동법주)",
+    "type": "Yakju / cheongju (clear rice wine)",
+    "region": "Gyodong, Gyeongju, North Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "16-18%",
+    "liquidColor": "#E8D9A0",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "Korea Heritage Service records (National Intangible Cultural Heritage No. 86-3, designated November 1, 1986) and producer information. Price band estimated from typical retail listings.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 50
+      },
+      {
+        "axis": "감칠맛",
+        "value": 62
+      },
+      {
+        "axis": "산도",
+        "value": 42
+      },
+      {
+        "axis": "당도",
+        "value": 50
+      }
+    ],
+    "tastingNotes": "A clear, pale-gold rice wine. Think of it as Korea's answer to fine sake, but rounder and more honeyed. It opens with steamed sweet rice and a gentle floral note, then finishes soft, with a whisper of tartness. Nothing shouts; everything lingers.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Korean glutinous rice"
+      },
+      {
+        "label": "Fermentation starter",
+        "value": "House-made wheat nuruk (a traditional cake of wild yeasts and molds that kick-starts fermentation)"
+      },
+      {
+        "label": "ABV",
+        "value": "16-18%"
+      },
+      {
+        "label": "Production time",
+        "value": "About 100 days of brewing and maturing"
+      }
+    ],
+    "history": [
+      {
+        "year": "Joseon era",
+        "event": "First brewed by Choe Guk-seon, an officer of the royal kitchen office (Saongwon) under King Sukjong (r. 1674-1720), who brought the court recipe home to Gyeongju."
+      },
+      {
+        "year": "1900s",
+        "event": "The recipe was kept alive by the women of the Gyeongju Choi household, brewed with water from the well in their courtyard."
+      },
+      {
+        "year": "1986",
+        "event": "Designated National Intangible Cultural Heritage No. 86-3 on November 1, 1986."
+      }
+    ],
+    "story": "Beopju means 'liquor brewed by the rules' - a precise, disciplined court-style recipe. It comes from the house of the Gyeongju Choi clan, Korea's most famous old-money family, admired for 12 generations of quiet wealth and generosity; one house rule said no one within a day's walk should go hungry. This was the wine they served honored guests. Drinking it is as close as you can get to tasting Joseon-dynasty hospitality.",
+    "winery": "The Choi family still brews in their historic hanok (traditional Korean house) compound in Gyodong, Gyeongju, next to the old Confucian school. Production is small and seasonal, done largely by hand by the designated heritage holders of the family.",
+    "foodPairing": [
+      {
+        "emoji": "🥞",
+        "food": "Assorted jeon (savory Korean pancakes)",
+        "why": "Mild, eggy pancakes let the wine's quiet rice sweetness shine - the classic ancestral-table match.",
+        "shopKeyword": "모둠전 밀키트"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Grilled yellow croaker (gulbi)",
+        "why": "A delicate, salty fish that mirrors the wine's clean umami without overpowering it.",
+        "shopKeyword": "굴비"
+      },
+      {
+        "emoji": "🍖",
+        "food": "Galbi-jjim (soy-braised short ribs)",
+        "why": "The wine's honeyed depth stands up to the sweet soy glaze the way it did at noble banquets.",
+        "shopKeyword": "갈비찜 밀키트"
+      }
+    ],
+    "pairingTip": "Treat it like a fine white wine at a Korean table: pair with subtle, savory dishes rather than fiery ones.",
+    "avoidPairing": "Very spicy stews and heavy chili sauces - capsaicin flattens its delicate floral notes.",
+    "similar": [
+      "Hansan Sogokju (한산소곡주)",
+      "Myeoncheon Dugyeonju (면천 두견주)",
+      "Solsongju (솔송주)"
+    ],
+    "trivia": "Korea's national heritage designation for liquor, No. 86, covers exactly three drinks: Munbaeju (86-1), Myeoncheon Dugyeonju (86-2) and Gyodong Beopju (86-3). Of the thousands of traditional Korean liquors, these are the only three individually honored as National Intangible Cultural Heritage.",
+    "servingTemp": "Chilled, 8-12°C",
+    "servingNote": "Serve in small ceramic or glass cups. Korean etiquette: pour for others, never your own glass first, and use both hands when pouring for or receiving from someone older.",
+    "aging": "Matured about 100 days before release. It is a living rice wine: keep it refrigerated, store upright, and drink within the printed date - it does not improve in your cupboard.",
+    "tips": [
+      "Sold at the family's Gyodong house in Gyeongju and through Korean online traditional-liquor shops - traditional liquor is legally sold online in Korea.",
+      "Check the bottling date and keep it cold; freshness matters for cheongju."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Hallasan Soju (한라산)",
+    "searchKeyword": "한라산 소주",
+    "producer": "Hallasan Co., Ltd. ((주)한라산)",
+    "type": "Diluted soju",
+    "region": "Hallim, Jeju Island",
+    "country": "South Korea",
+    "alcohol": "21% (Original) / 16% (Soonhan, lighter version)",
+    "liquidColor": "#F2F6F7",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "Company history from Korean encyclopedia and Jeju press (founded November 1950 as Honam Brewing; renamed Hallasan Co. in 1999; 2019 lineup refresh, with the lighter 17% version later replaced by the 16% Soonhan); product specs from producer materials and retail listings.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 32
+      },
+      {
+        "axis": "깔끔함",
+        "value": 82
+      },
+      {
+        "axis": "곡물향",
+        "value": 22
+      },
+      {
+        "axis": "당도",
+        "value": 32
+      }
+    ],
+    "tastingNotes": "Jeju's hometown soju. Crisp, dry and noticeably cleaner than mainland brands, with a cool mineral edge locals credit to Jeju's volcanic bedrock water. The 21% Original has an old-school kick and a warm finish; the lighter 16% version is softer and easier. Minimal sweetness - this is a food spirit, made to reset your palate between bites.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Neutral spirit cut with Jeju volcanic bedrock water"
+      },
+      {
+        "label": "ABV",
+        "value": "21% (Original) / 16% (Hallasan Soonhan, the lighter version)"
+      },
+      {
+        "label": "Bottle",
+        "value": "360ml, clear glass - a rarity in a sea of green soju bottles"
+      },
+      {
+        "label": "Style",
+        "value": "Diluted soju ('huiseok-sik') - the everyday green-bottle category, made by cutting neutral spirit with water"
+      }
+    ],
+    "history": [
+      {
+        "year": "1950",
+        "event": "Founded in Jeju City in November 1950 as Honam Brewing Company; the brewery later moved to Hallim on the island's west coast."
+      },
+      {
+        "year": "1993",
+        "event": "Launched the Hallasan Soju brand, named after the volcano that dominates the island."
+      },
+      {
+        "year": "1999",
+        "event": "Renamed the company Hallasan Co., Ltd. after its flagship product."
+      },
+      {
+        "year": "2019",
+        "event": "Refreshed the lineup, launching the lighter Hallasan 17 alongside the 21% flagship; the light version was later replaced by the 16% Hallasan Soonhan, while the flagship kept its 'Original' name."
+      }
+    ],
+    "story": "Every Korean region once had its own soju company, and Hallasan is Jeju's. On the island it is simply what you order: at a black-pork barbecue joint you say 'Hallasan one bottle' and no one asks which brand. Mainland sojus have crept down to around 16% over the years, but the 21% original keeps the stronger, drier style older Koreans grew up with. Drinking it on Jeju, with the actual Mt. Halla on the horizon, is a small rite of passage for visitors.",
+    "winery": "Hallasan Co. operates from Hallim on Jeju's west coast, drawing water filtered through the island's volcanic rock. It is one of Korea's last surviving independent regional soju makers, still family-run rather than conglomerate-owned.",
+    "foodPairing": [
+      {
+        "emoji": "🥓",
+        "food": "Jeju black pork barbecue",
+        "why": "The island's iconic pairing - the clean, dry soju slices through rich, smoky pork fat.",
+        "shopKeyword": "제주 흑돼지"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Hoe (Korean-style raw fish)",
+        "why": "Neutral and crisp, it cleanses the palate between delicate slices without masking them.",
+        "shopKeyword": "모둠회"
+      },
+      {
+        "emoji": "🍲",
+        "food": "Spicy seafood stew (haemul-tang)",
+        "why": "Soju's classic job: cooling your mouth and cutting the heat of a bubbling red broth.",
+        "shopKeyword": "해물탕 밀키트"
+      }
+    ],
+    "pairingTip": "Soju is a table spirit, not a sipping-alone drink - it is at its best alongside grilled meat or something spicy.",
+    "avoidPairing": "Desserts and sweet cocktails - unsweet, high-proof soju turns harsh next to sugar.",
+    "similar": [
+      "Chamisul (참이슬)",
+      "Chum Churum (처음처럼)",
+      "Good Day (좋은데이)"
+    ],
+    "trivia": "Nearly every Korean soju comes in an identical green bottle; Hallasan defiantly uses a clear one. Locals say the transparent glass stands for Jeju's clean water - and it makes the bottle instantly recognizable across a crowded restaurant.",
+    "servingTemp": "Cold, 4-8°C, straight from the fridge or an ice bucket",
+    "servingNote": "Drunk in small shot glasses. Pour for others and let them pour for you; receive with both hands from an elder, and turn slightly away when drinking with someone much senior. The first glass is usually drunk together.",
+    "aging": null,
+    "tips": [
+      "Try the 21% Original first for the true Jeju experience, then the lighter Soonhan if it bites too hard.",
+      "In Jeju restaurants just ask for 'Hallasan' - it is the default local order."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Kooksoondang Saeng Makgeolli (국순당 생막걸리)",
+    "searchKeyword": "국순당 생막걸리",
+    "producer": "Kooksoondang (국순당)",
+    "type": "Saeng (fresh, unpasteurized) makgeolli",
+    "region": "Hoengseong, Gangwon Province (brewery)",
+    "country": "South Korea",
+    "alcohol": "About 6% (label has varied slightly across renewals)",
+    "liquidColor": "#F4EFE4",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "Producer brand page (6% ABV, 750ml, 45-day refrigerated shelf life, patented fermentation-control technology with a sealed cap) plus Korean retail and press sources.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 48
+      },
+      {
+        "axis": "감칠맛",
+        "value": 60
+      },
+      {
+        "axis": "산도",
+        "value": 55
+      },
+      {
+        "axis": "당도",
+        "value": 52
+      }
+    ],
+    "tastingNotes": "Makgeolli is Korea's cloudy, gently fizzy rice wine - milky, lightly sweet and tangy, more like a drinkable rice yogurt than a beer. This one is the smooth, crowd-pleasing benchmark: soft carbonation from live yeast, mild banana-and-rice aroma, a clean lactic tang, and a rounded, gently sweet finish.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice"
+      },
+      {
+        "label": "ABV",
+        "value": "6% (current producer specification)"
+      },
+      {
+        "label": "Pasteurized",
+        "value": "No - live yeast, sold refrigerated"
+      },
+      {
+        "label": "Shelf life",
+        "value": "45 days refrigerated (current label)"
+      }
+    ],
+    "history": [
+      {
+        "year": "1992",
+        "event": "Kooksoondang launched Baekseju, the herbal rice wine whose success funded its mission of reviving Korean traditional brewing."
+      },
+      {
+        "year": "2009",
+        "event": "Entered the fresh-makgeolli market at the height of Korea's makgeolli boom, applying patented fermentation-control technology to make nationwide refrigerated distribution possible."
+      },
+      {
+        "year": "2010s",
+        "event": "Became one of the first fresh makgeolli brands exported to the US, helping introduce live makgeolli abroad."
+      }
+    ],
+    "story": "Fresh makgeolli is alive - yeast keeps working in the bottle - so for decades it could not travel far and every neighborhood drank only its local brew. Kooksoondang's patented fermentation-control brewing tames the live yeast enough that the bottle can be fully sealed and shipped cold nationwide: for the first time a truly fresh makgeolli could sit in any convenience store in the country. It is the bottle many Koreans grab with a sizzling pancake on a rainy evening.",
+    "winery": "Kooksoondang grew out of founder Bae Sang-myun's lifelong research into nuruk, Korea's traditional fermentation starter. The company sees itself as a revival project as much as a business, having restored dozens of lost historical liquor recipes in its 'bringing back our liquor' program.",
+    "foodPairing": [
+      {
+        "emoji": "🥞",
+        "food": "Pajeon (green-onion pancake)",
+        "why": "Korea's most beloved combo - crispy, oily pancake and cool tangy makgeolli, mandatory on rainy days.",
+        "shopKeyword": "파전 밀키트"
+      },
+      {
+        "emoji": "🥬",
+        "food": "Bossam (boiled pork wraps)",
+        "why": "The wine's acidity and fizz refresh your palate between rich, garlicky pork-and-kimchi wraps.",
+        "shopKeyword": "보쌈"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "Tteokbokki (spicy rice cakes)",
+        "why": "Milky sweetness is the perfect fire extinguisher for the chili-paste heat.",
+        "shopKeyword": "떡볶이 밀키트"
+      }
+    ],
+    "pairingTip": "When it rains in Korea, everyone craves pajeon and makgeolli - join the tradition at least once.",
+    "avoidPairing": "Delicate sashimi or subtle broths - makgeolli's tang and body steamroll fragile flavors.",
+    "similar": [
+      "Jipyeong Saeng Makgeolli (지평 생 쌀막걸리)",
+      "Seoul Jangsu Makgeolli (서울 장수 생막걸리)",
+      "Neurin Maeul Makgeolli (느린마을 막걸리)"
+    ],
+    "trivia": "The quiet hero is the brewing technology: Kooksoondang's fermentation control lets it seal the cap completely, while most live makgeolli needs a vented cap to release fermentation gas. Either way, treat any warmed or jostled bottle with respect - live makgeolli can gush like champagne if mishandled.",
+    "servingTemp": "Well chilled, 4-8°C",
+    "servingNote": "Traditionally poured into shallow bowls rather than glasses, and shared - you fill your companions' bowls, they fill yours. Swirl or gently invert the bottle first so the rice sediment mixes back in.",
+    "aging": "Unpasteurized and alive: keep it refrigerated at all times, gently invert (don't shake) before pouring to mix the sediment, and drink within about 1-2 weeks of purchase for the best fizz and freshness.",
+    "tips": [
+      "Check the bottling date - the younger, the fizzier and brighter.",
+      "Open slowly over a sink if the bottle has been jostled; live yeast means live bubbles."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Hansan Sogokju (한산소곡주)",
+    "searchKeyword": "한산소곡주",
+    "producer": "Hansan Sogokju - Master Woo Hee-yeol (한산소곡주 우희열 명인)",
+    "type": "Yakju / cheongju (sweet aged rice wine)",
+    "region": "Hansan, Seocheon, South Chungcheong Province",
+    "country": "South Korea",
+    "alcohol": "18%",
+    "liquidColor": "#D9A94F",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "Producer site, Korean press, and provincial heritage records (designated South Chungcheong Intangible Cultural Heritage No. 3 in 1979). Baekje-era origin is legend, not documented fact.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 55
+      },
+      {
+        "axis": "감칠맛",
+        "value": 65
+      },
+      {
+        "axis": "산도",
+        "value": 38
+      },
+      {
+        "axis": "당도",
+        "value": 60
+      }
+    ],
+    "tastingNotes": "Amber, dense and dangerously sweet. Honey, dried persimmon and cooked sticky rice on the nose; on the palate it is almost syrupy, with deep savory richness underneath and a long warm finish. The sugar completely hides the 18% alcohol - which is exactly how it earned its infamous nickname.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Glutinous rice"
+      },
+      {
+        "label": "Fermentation starter",
+        "value": "Traditional nuruk (wild yeast-and-mold cake)"
+      },
+      {
+        "label": "ABV",
+        "value": "18% (a 43% distilled version, Bul Sogokju, also exists)"
+      },
+      {
+        "label": "Production time",
+        "value": "About 100 days of low, slow fermentation through the cold months"
+      },
+      {
+        "label": "In the jar",
+        "value": "The old recipe adds wild chrysanthemum, soybeans and dried red chili to the brew"
+      }
+    ],
+    "history": [
+      {
+        "year": "Baekje era",
+        "event": "Legend traces it to court ladies of the fallen Baekje kingdom (before 660 AD), making it a candidate for Korea's oldest liquor - a story, not a record."
+      },
+      {
+        "year": "1979",
+        "event": "Designated South Chungcheong Province Intangible Cultural Heritage No. 3, with Kim Young-shin as the recognized holder."
+      },
+      {
+        "year": "1997",
+        "event": "Woo Hee-yeol inherited the heritage-holder title from her mother-in-law Kim Young-shin; she is also Korean Food Master No. 19."
+      }
+    ],
+    "story": "Koreans call this 'anjeunbaengi sul' - roughly, 'the wine that won't let you stand up.' The old story: a scholar walking to Seoul for the state exam stopped in Hansan for one cup, then another, and never made it to the test. Even thieves, the tale goes, sat down to taste it and were caught where they sat. It is brewed slowly through winter for a hundred days, which is why it is also nicknamed 'hundred-day wine.'",
+    "winery": "Master Woo Hee-yeol's brewery in Hansan continues a recipe passed down the family's women for generations. The wider Hansan area has dozens of licensed home-style sogokju makers, but hers is the designated heritage line.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "Bulgogi",
+        "why": "Sweet soy-marinated beef harmonizes with the wine's honeyed depth instead of fighting it.",
+        "shopKeyword": "불고기"
+      },
+      {
+        "emoji": "🦀",
+        "food": "Ganjang-gejang (soy-marinated raw crab)",
+        "why": "A salty, intensely savory delicacy that the wine's sweetness balances beautifully.",
+        "shopKeyword": "간장게장"
+      },
+      {
+        "emoji": "🍯",
+        "food": "Yakgwa (honey-ginger pastry)",
+        "why": "Korea's traditional fried honey cookie echoes the wine's own honeyed, spiced character.",
+        "shopKeyword": "약과"
+      }
+    ],
+    "pairingTip": "Its sweetness loves salt: pair with the saltiest, most savory things on the Korean table.",
+    "avoidPairing": "Sweet desserts of equal sugar - the wine and the dish cancel each other into cloying.",
+    "similar": [
+      "Gyodong Beopju (경주 교동법주)",
+      "Myeoncheon Dugyeonju (면천 두견주)",
+      "Solsongju (솔송주)"
+    ],
+    "trivia": "The name is usually explained as 'wine brewed with little nuruk' - a point of pride, since less starter means a cleaner, sweeter brew that demands more skill.",
+    "servingTemp": "Chilled, 8-12°C",
+    "servingNote": "Serve in small cups and sip - this is not a drink for shots. Pour for your elders first, with both hands. A small cold glass after dinner is the traditional way.",
+    "aging": "A brewed, living wine: keep refrigerated and upright, and drink within the printed date. It does not benefit from further aging at home.",
+    "tips": [
+      "Respect the nickname - the sweetness hides 18% alcohol, so pace yourself.",
+      "If you like it, hunt down Bul Sogokju, the fiery 43% distilled big brother."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Bohae Bokbunjaju (보해 복분자주)",
+    "searchKeyword": "보해 복분자주",
+    "producer": "Bohae Brewery (보해양조)",
+    "type": "Fruit wine (Korean black raspberry)",
+    "region": "Mokpo, South Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "15%",
+    "liquidColor": "#5C1A2E",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "Korean encyclopedia entry on Bohae Brewery and press records (launched 2004 at 15%; served at the 2005 APEC summit dinner). Price band from current retail.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 52
+      },
+      {
+        "axis": "감칠맛",
+        "value": 30
+      },
+      {
+        "axis": "산도",
+        "value": 52
+      },
+      {
+        "axis": "당도",
+        "value": 75
+      }
+    ],
+    "tastingNotes": "Deep ruby-purple and unapologetically sweet. Bokbunja is the Korean black raspberry, and this tastes like the berry itself: jammy blackberry and dark cherry, bright acidity keeping the sugar lively, and a smooth port-like warmth. If Korean traditional alcohol intimidates you, this is the friendliest possible door in.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Bokbunja (Korean black raspberry, Rubus coreanus)"
+      },
+      {
+        "label": "ABV",
+        "value": "15%"
+      },
+      {
+        "label": "Style",
+        "value": "Sweet fruit wine, closer to a light port than a dry red"
+      },
+      {
+        "label": "Launched",
+        "value": "2004"
+      }
+    ],
+    "history": [
+      {
+        "year": "1950",
+        "event": "Bohae Brewery founded in Mokpo by Im Gwang-haeng; it became the flagship liquor company of the Jeolla region."
+      },
+      {
+        "year": "2004",
+        "event": "Launched Bohae Bokbunjaju at 15%, turning a southern folk berry wine into a nationwide staple."
+      },
+      {
+        "year": "2005",
+        "event": "Served at the APEC summit dinner in Busan, introducing bokbunja wine to visiting heads of state."
+      }
+    ],
+    "story": "Bokbunja wine is Korea's celebration-and-stamina drink. The berry grows in the warm southwest, and its wine became the thing you order with grilled eel - both foods carry a wink-wink reputation for male vitality. You'll see it at family dinners, holiday tables and barbecue restaurants alike, often drunk by people who don't otherwise touch alcohol, because it simply tastes like dessert.",
+    "winery": "Bohae is South Jeolla's hometown liquor company, maker of the region's Ipsaeju soju and the plum wine Maechwisoon. Founded in the port city of Mokpo in 1950, it built its name on fruit wines from local harvests.",
+    "foodPairing": [
+      {
+        "emoji": "🍢",
+        "food": "Grilled eel (jangeo-gui)",
+        "why": "The canonical pairing - rich, smoky eel and sweet berry wine, both famed as stamina foods.",
+        "shopKeyword": "장어구이"
+      },
+      {
+        "emoji": "🥓",
+        "food": "Samgyeopsal (grilled pork belly)",
+        "why": "Sweet-tart fruit cuts pork fat the way a berry sauce does in Western cooking.",
+        "shopKeyword": "삼겹살"
+      },
+      {
+        "emoji": "🍫",
+        "food": "Dark chocolate",
+        "why": "Berry and cocoa is a classic; the wine drinks like an easy dessert port.",
+        "shopKeyword": "다크초콜릿"
+      }
+    ],
+    "pairingTip": "Think of it as Korea's port wine: serve with rich grilled things at dinner, or with dessert after.",
+    "avoidPairing": "Spicy soups and vinegary side dishes - heat and vinegar clash with the jammy sweetness.",
+    "similar": [
+      "Kooksoondang Myeongjak Bokbunja (국순당 명작 복분자)",
+      "Gochang Sunwoonsan Bokbunjaju (고창 선운산 복분자주)",
+      "Maechwisoon (매취순)"
+    ],
+    "trivia": "The name is a joke that stuck: 'bok-bun-ja' can be read as 'the berry that overturns the chamber pot' - folk wisdom claiming the fruit makes a man's urine stream strong enough to flip the pot. Koreans will gleefully tell you this at the table.",
+    "servingTemp": "Chilled, 6-10°C",
+    "servingNote": "Poured in small glasses like a dessert wine. Same table manners as soju: pour for others, both hands for elders. Also lovely over ice.",
+    "aging": "No aging needed - it is bottled ready to drink. Keep sealed bottles away from heat and light; refrigerate after opening and finish within a few weeks.",
+    "tips": [
+      "At a barbecue restaurant, order it alongside soju drinkers - it holds its own with grilled meat.",
+      "Try it as a spritz: half bokbunja, half sparkling water, lots of ice."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Palpal Makgeolli (팔팔 막걸리)",
+    "searchKeyword": "팔팔막걸리",
+    "producer": "Palpal Brewery (팔팔양조장)",
+    "type": "Saeng (fresh, unpasteurized) makgeolli",
+    "region": "Gimpo, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "6%",
+    "liquidColor": "#F5F1E6",
+    "confidence": 84,
+    "knowledge": "basic",
+    "basis": "Korean press features and retail listings (licensed January 2021, first sold March 2021, 6% ABV, special-grade Gimpo Geumssal rice, no added sweetener; Hard Portion undiluted version at 14.3%). Young brewery, so documentation is thinner than for heritage brands.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 55
+      },
+      {
+        "axis": "감칠맛",
+        "value": 68
+      },
+      {
+        "axis": "산도",
+        "value": 62
+      },
+      {
+        "axis": "당도",
+        "value": 45
+      }
+    ],
+    "tastingNotes": "A new-wave craft take on makgeolli - Korea's cloudy, milky rice brew - with no added sweetener: all the flavor is coaxed from rice. Creamy but fresh, with the natural sweetness of good cooked rice, lively acidity like a mild yogurt, and a clean, dry-ish finish that older commercial makgeollis rarely manage. You can genuinely taste that the rice matters here.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "100% Gimpo Geumssal rice, special grade - the same prized rice locals buy for their dinner table"
+      },
+      {
+        "label": "ABV",
+        "value": "6%"
+      },
+      {
+        "label": "Sweetener",
+        "value": "None added"
+      },
+      {
+        "label": "Pasteurized",
+        "value": "No - live, refrigerated"
+      }
+    ],
+    "history": [
+      {
+        "year": "2021",
+        "event": "Palpal Brewery received its license in January and sold its first bottles in March, part of the young craft-brewing wave revitalizing makgeolli."
+      },
+      {
+        "year": "2020s",
+        "event": "Expanded with Hard Portion (14.3%), an undiluted 'wonju' (base-brew) version of the same makgeolli, sold at craft bottle shops."
+      }
+    ],
+    "story": "Makgeolli was long treated as the cheapest drink in Korea, sweetened with aspartame and sold for pocket change. A generation of young brewers is pushing back, and Palpal is one of the poster children: a small Gimpo brewery betting that if you use genuinely good local rice - and nothing else - people will pay a little more for makgeolli the way they do for craft beer. The name 'Palpal' is the number 88, a nod to the old saying that a bowl of rice takes eighty-eight acts of the farmer's labor - the Chinese character for rice (米) splits into the numerals for 88.",
+    "winery": "Palpal Brewery is a small agricultural company in Gimpo, just west of Seoul, milling special-grade Gimpo Geumssal rice for every batch. It has become a fixture of Seoul's traditional-liquor bottle shops and young sul (Korean alcohol) scene.",
+    "foodPairing": [
+      {
+        "emoji": "🥔",
+        "food": "Gamja-jeon (potato pancake)",
+        "why": "Crispy, mild and buttery - a canvas that shows off the makgeolli's pure rice flavor.",
+        "shopKeyword": "감자전 밀키트"
+      },
+      {
+        "emoji": "🥘",
+        "food": "Jeyuk-bokkeum (spicy stir-fried pork)",
+        "why": "Its clean acidity and gentle body cool the heat of Korean chili paste without turning cloying.",
+        "shopKeyword": "제육볶음 밀키트"
+      },
+      {
+        "emoji": "🥟",
+        "food": "Dubu-kimchi (warm tofu with stir-fried kimchi)",
+        "why": "The classic makgeolli anju (drinking snack) - tangy kimchi and soft tofu mirror the drink's own tang and creaminess.",
+        "shopKeyword": "두부김치"
+      }
+    ],
+    "pairingTip": "Drier than mainstream makgeolli, so it pairs wider - even fried chicken or cheese works.",
+    "avoidPairing": "Very sweet or heavily sauced dishes bury its subtle, no-sweetener rice character.",
+    "similar": [
+      "Naru Saeng Makgeolli (나루 생 막걸리)",
+      "Boksoondoga Son-Makgeolli (복순도가 손막걸리)",
+      "Haechang Makgeolli (해창 막걸리)"
+    ],
+    "trivia": "The '88' of the name runs deep: the founders were themselves born in 1988, and in Korean 'palpal-hada' happens to mean lively and full of energy - a happy accident for a drink that bubbles with live yeast.",
+    "servingTemp": "Well chilled, 4-8°C",
+    "servingNote": "Pour into cups or small bowls and share - filling each other's cups is the Korean way. Gently roll or invert the bottle first to wake up the rice sediment.",
+    "aging": "Unpasteurized and alive: refrigerate always, gently invert (never shake) before pouring to blend the sediment, and drink within about 1-2 weeks of purchase while the fizz is bright.",
+    "tips": [
+      "Find it at Seoul bottle shops or Korean online traditional-liquor malls - traditional liquor ships legally online in Korea.",
+      "Pour the clear top layer first, then mix - two textures from one bottle."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Gamhongro (감홍로)",
+    "searchKeyword": "감홍로",
+    "producer": "Gamhongro - Master Lee Ki-sook (감홍로 이기숙 명인)",
+    "type": "Traditional liqueur (botanical-infused distilled spirit)",
+    "region": "Paju, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "40%",
+    "liquidColor": "#B0432E",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "Producer materials and Korean press; Lee Ki-sook's Food Master No. 43 designation and the seven botanicals are well documented. The 'three great liquors of Joseon' framing comes from historian Choi Nam-seon's writings.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 62
+      },
+      {
+        "axis": "감칠맛",
+        "value": 32
+      },
+      {
+        "axis": "산도",
+        "value": 24
+      },
+      {
+        "axis": "당도",
+        "value": 65
+      }
+    ],
+    "tastingNotes": "'Sweet red dew' - that is literally what the name means. Amber-red in the glass, it smells like a Korean apothecary in the best way: cinnamon, ginger and clove over dried longan fruit, with licorice roundness beneath. At 40% it is warming and intense, yet the natural sweetness makes each small sip feel plush rather than harsh. One of the most aromatic spirits Korea makes.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice and millet, distilled twice"
+      },
+      {
+        "label": "ABV",
+        "value": "40%"
+      },
+      {
+        "label": "Botanicals",
+        "value": "Seven: longan fruit, gromwell root (jicho), ginger, cinnamon, clove, tangerine peel, licorice"
+      },
+      {
+        "label": "Color",
+        "value": "Natural - the red comes from gromwell root, the sweetness from longan"
+      }
+    ],
+    "history": [
+      {
+        "year": "Joseon era",
+        "event": "Celebrated as a famous Pyongyang spirit; it appears in the classic tales Chunhyangjeon and Byeoljubujeon, and historian Choi Nam-seon named it among the three great liquors of Joseon."
+      },
+      {
+        "year": "1950s",
+        "event": "The recipe came south with the family of master distiller Lee Kyung-chan, who fled Pyongyang around the Korean War."
+      },
+      {
+        "year": "2010s",
+        "event": "His daughter Lee Ki-sook was designated Korean Food Master No. 43 for Gamhongro, distilling it in Paju."
+      }
+    ],
+    "story": "In Byeoljubujeon, Korea's beloved rabbit-and-turtle fable, the turtle lures the rabbit down to the Dragon King's underwater palace with one promise: there will be gamhongro. That is the cultural weight this drink carries - it was shorthand for 'the finest thing you could possibly taste.' Originally a Pyongyang specialty, its recipe survived war and division in one family's hands, and today it is made by the daughter of that family in Paju, within sight of the North it came from.",
+    "winery": "Master Lee Ki-sook's small Paju distillery continues a four-generation family line. Her father, Lee Kyung-chan, was the first designated holder of Munbaeju, another famous northern spirit - making this family the great custodians of Pyongyang's distilling tradition in the South.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "Jokbal (braised pig's trotters)",
+        "why": "Korean chefs pair gamhongro with rich braised pork - its cinnamon-clove warmth mirrors the braising spices.",
+        "shopKeyword": "족발"
+      },
+      {
+        "emoji": "🍯",
+        "food": "Yakgwa (honey-ginger pastry)",
+        "why": "The pastry's honey, ginger and cinnamon are practically the drink's flavor profile in food form.",
+        "shopKeyword": "약과"
+      },
+      {
+        "emoji": "🍫",
+        "food": "Dark chocolate",
+        "why": "Bitter cocoa against sweet spiced spirit works like chocolate with a good rum.",
+        "shopKeyword": "다크초콜릿"
+      }
+    ],
+    "pairingTip": "Treat it as an after-dinner spirit: tiny pours alongside something rich or a Korean sweet.",
+    "avoidPairing": "Light seafood and fresh salads - 40% of cinnamon and clove will flatten anything delicate.",
+    "similar": [
+      "Igangju (이강주)",
+      "Jukryeokgo (죽력고)",
+      "Munbaeju (문배주)"
+    ],
+    "trivia": "Choi Nam-seon's 'three great liquors of Joseon' - Gamhongro, Igangju (then Igango) and Jukryeokgo - all still exist, each kept alive by a single master's family. You can taste the entire historic trio today.",
+    "servingTemp": "Room temperature or lightly chilled, 15-18°C",
+    "servingNote": "Sip neat from a small stemmed or ceramic cup - never shots. When sharing, pour for the eldest first with both hands. A drop of water opens the aroma.",
+    "aging": "The distillate rests with its botanicals before bottling. Sealed bottles keep for years at room temperature away from light; many say the spice notes knit together further with time.",
+    "tips": [
+      "Start with a 400ml bottle before committing to the 700ml - 40% botanicals are a bold first date.",
+      "It makes a stunning Korean old fashioned - bartenders in Seoul use it exactly that way."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Won Soju Spirit (원소주 스피릿)",
+    "searchKeyword": "원소주 스피릿",
+    "producer": "Won Spirits (원스피리츠)",
+    "type": "Distilled soju",
+    "region": "Chungju, North Chungcheong Province",
+    "country": "South Korea",
+    "alcohol": "24%",
+    "liquidColor": "#F3F5F4",
+    "confidence": 95,
+    "knowledge": "rich",
+    "basis": "Korean press coverage of the February 2022 Won Soju launch and the July 12, 2022 GS25 release of Spirit (24%, 375ml, ₩12,900).",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 46
+      },
+      {
+        "axis": "감칠맛",
+        "value": 38
+      },
+      {
+        "axis": "산도",
+        "value": 22
+      },
+      {
+        "axis": "당도",
+        "value": 30
+      }
+    ],
+    "tastingNotes": "A real rice-distilled soju, not the neutral green-bottle kind. Clean and lightly creamy, with gentle steamed-rice sweetness, a faint fruity lift, and a smooth 24% warmth that goes down easier than the number suggests. Cold, it is crisp and quick; closer to room temperature, the rice aroma blooms. Made for drinkers raised on green bottles who are ready for the upgrade.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "100% Korean rice"
+      },
+      {
+        "label": "ABV",
+        "value": "24%"
+      },
+      {
+        "label": "Distillation",
+        "value": "Reduced-pressure (vacuum) distillation for a lighter, cleaner spirit"
+      },
+      {
+        "label": "Bottle",
+        "value": "375ml, launched at ₩12,900"
+      }
+    ],
+    "history": [
+      {
+        "year": "2022",
+        "event": "Rapper Jay Park's Won Spirits launched the original Won Soju in February; pop-up releases sold out in hours and made distilled soju a national trend."
+      },
+      {
+        "year": "2022",
+        "event": "Won Soju Spirit, the 24% everyday version, hit all 16,000+ GS25 convenience stores on July 12."
+      }
+    ],
+    "story": "Won Soju is the drink that made traditional Korean spirits cool for the under-40 crowd. Jay Park - Seattle-born K-pop and hip-hop star - launched it as a challenge to the idea that soju must be a ₩2,000 green bottle of diluted ethanol. The original sold out so fast it became a resale item; Spirit is the version made so everyone could actually buy one, at the convenience store on their corner. Whole aisles of craft distilled soju exist in Korea today partly because this bottle proved the demand.",
+    "winery": "Won Spirits distills in Wonju, Gangwon Province, using local rice - a deliberate nod to the wordplay between 'Won' and Wonju. The flagship Won Soju rests in traditional onggi clay pots; Spirit streamlines the process into a lighter, more affordable expression.",
+    "foodPairing": [
+      {
+        "emoji": "🥓",
+        "food": "Samgyeopsal (grilled pork belly)",
+        "why": "Does everything green-bottle soju does at a Korean barbecue, but with actual rice flavor.",
+        "shopKeyword": "삼겹살"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Hoe (Korean raw fish platter)",
+        "why": "Clean rice spirit and fresh raw fish - the premium version of a fisherman's classic.",
+        "shopKeyword": "모둠회"
+      },
+      {
+        "emoji": "🥩",
+        "food": "Yukhoe (Korean beef tartare)",
+        "why": "Delicate raw beef with sesame oil loves a smooth, low-aroma rice spirit beside it.",
+        "shopKeyword": "육회"
+      }
+    ],
+    "pairingTip": "Use it anywhere you'd use soju at the table - it elevates the meal without changing the ritual.",
+    "avoidPairing": "Sugary mixers - they smother the subtle rice character you're paying extra for.",
+    "similar": [
+      "Hwayo 25 (화요 25)",
+      "Ilpum Jinro (일품진로)",
+      "Tokki Soju (토끼 소주)"
+    ],
+    "trivia": "The original flagship Won Soju qualifies legally as a 'regional specialty liquor' because it is distilled from local Wonju rice - which is why, unlike Chamisul or Chum Churum, it can be sold online in Korea. A legal quirk became its superpower; Spirit took the other route, into nationwide convenience stores.",
+    "servingTemp": "Chilled, 6-10°C - or near room temperature to bring out the rice aroma",
+    "servingNote": "Serve in soju shot glasses with the usual manners: pour for others first, receive from elders with both hands. Also excellent over a large ice cube.",
+    "aging": "No barrel or pot aging - Spirit is designed to be drunk fresh and young. Sealed bottles keep indefinitely; no cellar required.",
+    "tips": [
+      "Grab it at any GS25 convenience store - that exclusivity was the whole launch story.",
+      "Taste it side by side with a green-bottle soju once; you'll never confuse the two categories again."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Igangju (이강주)",
+    "searchKeyword": "전주 이강주",
+    "producer": "Jeonju Igangju - Master Jo Jeong-hyung (전주이강주 조정형 명인)",
+    "type": "Traditional liqueur (pear-and-ginger infused spirit)",
+    "region": "Jeonju, North Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "25%",
+    "liquidColor": "#EBD9A6",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "Producer materials and Korean press; ingredients, 25% ABV and the Choi Nam-seon 'three great liquors' reference are well documented. Provincial heritage designation year given per common records.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 55
+      },
+      {
+        "axis": "감칠맛",
+        "value": 34
+      },
+      {
+        "axis": "산도",
+        "value": 28
+      },
+      {
+        "axis": "당도",
+        "value": 62
+      }
+    ],
+    "tastingNotes": "Pale gold with a faint turmeric glow. The name spells the recipe: 'i' for pear, 'gang' for ginger. Juicy Korean pear sweetness arrives first, then fresh ginger warmth, a curl of cinnamon, and honey smoothing the 25% base into something almost gentle. It drinks like a soft, elegant cousin of a spiced pear brandy.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice-distilled soju"
+      },
+      {
+        "label": "Infusions",
+        "value": "Korean pear, ginger, turmeric (ulgeum), cinnamon, honey"
+      },
+      {
+        "label": "ABV",
+        "value": "25% (19% and 38% versions also made)"
+      },
+      {
+        "label": "Named after",
+        "value": "Its two stars - pear (i) and ginger (gang)"
+      }
+    ],
+    "history": [
+      {
+        "year": "Joseon era",
+        "event": "Known as Igango, a gentleman's liqueur of the Jeonju region; historian Choi Nam-seon later counted it among the three great liquors of Joseon."
+      },
+      {
+        "year": "1900s",
+        "event": "The tradition was nearly severed under Japanese colonial liquor laws, which banned home brewing."
+      },
+      {
+        "year": "1987",
+        "event": "Master Jo Jeong-hyung, from a Jeonju brewing family, revived the recipe; Igangju was designated North Jeolla Intangible Cultural Heritage No. 6 with him as holder."
+      }
+    ],
+    "story": "Jeonju is Korea's food capital - the city of bibimbap, hanok villages and long, generous dinners - and Igangju is its house pour. Choi Nam-seon ranked it with Gamhongro and Jukryeokgo as one of Joseon's three great liquors. Colonial-era laws that outlawed home brewing nearly killed it, but Jo Jeong-hyung, a professional brewer's son, spent years reconstructing the family art and gave the recipe back to the city. Turmeric, an old Jeonju-area specialty crop, is the quiet local signature in the glass.",
+    "winery": "The Jeonju Igangju distillery is run by Master Jo Jeong-hyung, a designated Korean Food Master, with his family carrying the craft into the next generation. Visitors to Jeonju can find it in traditional liquor shops all over the hanok (traditional house) village.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "Tteok-galbi (grilled short-rib patties)",
+        "why": "A Jeolla specialty - sweet charred beef meets the liqueur's pear-and-honey warmth.",
+        "shopKeyword": "떡갈비"
+      },
+      {
+        "emoji": "🥬",
+        "food": "Bossam (boiled pork wraps)",
+        "why": "Ginger and pear are pork's oldest friends in Korean cooking; here they arrive in the glass.",
+        "shopKeyword": "보쌈"
+      },
+      {
+        "emoji": "🍯",
+        "food": "Hangwa (traditional Korean sweets)",
+        "why": "Delicate rice-and-honey confections match its gentle spice for a graceful dessert course.",
+        "shopKeyword": "한과 선물세트"
+      }
+    ],
+    "pairingTip": "Wonderful as a slow after-dinner pour - or alongside rich pork dishes, where ginger does its classic work.",
+    "avoidPairing": "Heavily spicy-hot food; capsaicin tramples the pear's delicacy.",
+    "similar": [
+      "Gamhongro (감홍로)",
+      "Jukryeokgo (죽력고)",
+      "Hwayo 25 (화요 25)"
+    ],
+    "trivia": "Korean pears are the crisp, giant, water-sweet kind - closer to an apple-melon hybrid than a European pear. That juicy freshness, not French-pear perfume, is what you taste here.",
+    "servingTemp": "Room temperature or lightly chilled, 12-18°C",
+    "servingNote": "Small cups, slow sips. Pour for the eldest first with both hands. In winter, Koreans sometimes warm it slightly, which blooms the ginger.",
+    "aging": "Blended and rested before bottling; sealed bottles keep well for years at room temperature away from sunlight.",
+    "tips": [
+      "The 19% version is a friendlier entry point; the 38% is for spirit lovers.",
+      "Look for the round ceramic gift bottles - a favorite Korean present from Jeonju."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Jukryeokgo (죽력고)",
+    "searchKeyword": "죽력고",
+    "producer": "Taein Brewery - Master Song Myeong-seop (태인양조장 송명섭 명인)",
+    "type": "Traditional liqueur (bamboo-sap herbal spirit)",
+    "region": "Taein, Jeongeup, North Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "32%",
+    "liquidColor": "#D9C77A",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "Korean press and producer materials; the Jeon Bong-jun episode is recorded in Hwang Hyun's chronicle Maecheonyarok. Master designation year given as decade.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 58
+      },
+      {
+        "axis": "감칠맛",
+        "value": 28
+      },
+      {
+        "axis": "산도",
+        "value": 22
+      },
+      {
+        "axis": "당도",
+        "value": 56
+      }
+    ],
+    "tastingNotes": "One of Korea's rarest spirits. Pale gold with a green glint, it carries a flavor you will not meet anywhere else: fresh bamboo - grassy, faintly sweet, almost smoky - over warm ginger and clean rice spirit. At 32% it is potent but rounded, with a long herbal finish. Made almost entirely by one man's hands, in small batches, the slow way.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice-distilled spirit (the master grows his own rice)"
+      },
+      {
+        "label": "Key ingredient",
+        "value": "Jukryeok - bamboo sap, extracted by roasting green bamboo over low fire for about three days"
+      },
+      {
+        "label": "Other ingredients",
+        "value": "Ginger and traditional herbs, per the old medicinal recipe"
+      },
+      {
+        "label": "ABV",
+        "value": "32%"
+      }
+    ],
+    "history": [
+      {
+        "year": "Joseon era",
+        "event": "Brewed as a medicinal spirit - bamboo sap was prized in Korean herbal medicine - and named by Choi Nam-seon among the three great liquors of Joseon."
+      },
+      {
+        "year": "1894",
+        "event": "Hwang Hyun's chronicle Maecheonyarok records that Jeon Bong-jun, captured leader of the Donghak Peasant Revolution, drank jukryeokgo to recover from his torture wounds while being transported to Seoul."
+      },
+      {
+        "year": "2010s",
+        "event": "Song Myeong-seop, who inherited the recipe from his mother's line, was designated Korean Food Master No. 48 for Jukryeokgo; it is also listed as North Jeolla intangible heritage."
+      }
+    ],
+    "story": "This is the spirit that revived a revolutionary. In 1894, farmer-general Jeon Bong-jun led Korea's great peasant uprising; captured and beaten, he was given jukryeokgo on the road to Seoul and - the chronicle says - sat upright again. That reputation as 'the drink that restores you' comes from its heart: jukryeok, sap coaxed from green bamboo over three days of careful fire, an old medicine in its own right. Master Song Myeong-seop still makes it that way in Taein, growing the rice, tending the fire, refusing shortcuts. Cult-famous among Korean liquor lovers, it is a taste of pre-industrial Korea.",
+    "winery": "Taein Brewery is a modest workshop in Jeongeup where Song Myeong-seop does nearly everything himself - farming, malting, brewing, distilling. He is equally beloved for his no-sweetener Song Myeong-seop Makgeolli, a cult classic among purists.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "Hanwoo beef, simply grilled",
+        "why": "Premium Korean beef with only salt lets the bamboo aroma stay in the spotlight.",
+        "shopKeyword": "한우 등심"
+      },
+      {
+        "emoji": "🎋",
+        "food": "Bamboo-shoot dishes",
+        "why": "A poetic echo - tender bamboo shoots on the plate, bamboo essence in the glass.",
+        "shopKeyword": "죽순"
+      },
+      {
+        "emoji": "🥓",
+        "food": "Yukpo (Korean beef jerky)",
+        "why": "A traditional dry anju (drinking snack) whose savory chew suits slow, contemplative sips.",
+        "shopKeyword": "육포"
+      }
+    ],
+    "pairingTip": "Serve it the scholar's way: small cup, simple savory food, unhurried conversation.",
+    "avoidPairing": "Anything drowning in red-chili paste or sugar - the bamboo note is precious and easily lost.",
+    "similar": [
+      "Gamhongro (감홍로)",
+      "Igangju (이강주)",
+      "Munbaeju (문배주)"
+    ],
+    "trivia": "Making jukryeok is brutal: fresh bamboo sections are packed in an earthen kiln and roasted over low fire for some three days, yielding only a small amount of sap. It was a listed medicine in Korea's old pharmacopeias long before it flavored a spirit.",
+    "servingTemp": "Room temperature or lightly chilled, 15-18°C",
+    "servingNote": "Neat, in the smallest cup you own, poured for elders first with both hands. This is a bottle Koreans open for meaningful occasions, not for rounds.",
+    "aging": "Rested before bottling; sealed bottles keep for years at room temperature away from light. No further aging needed at home.",
+    "tips": [
+      "Buy through Korean online traditional-liquor shops or department-store liquor counters - production is tiny.",
+      "Sip it neat first; even one ice cube mutes the bamboo aroma."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Seoul Night (서울의밤)",
+    "searchKeyword": "서울의밤",
+    "producer": "The Han Brewery (더한주류)",
+    "type": "Plum liqueur (distilled maesil spirit)",
+    "region": "Eunpyeong-gu, Seoul",
+    "country": "South Korea",
+    "alcohol": "25%",
+    "liquidColor": "#E8E4C0",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "Producer product page and Korean press: launched 2018 at 25%, 375ml; yellow-ripe plums steeped about 100 days then twice distilled; ingredients include oligosaccharide and juniper berries. A 40% version with double the plum content followed in 2022.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 50
+      },
+      {
+        "axis": "감칠맛",
+        "value": 26
+      },
+      {
+        "axis": "산도",
+        "value": 34
+      },
+      {
+        "axis": "당도",
+        "value": 66
+      }
+    ],
+    "tastingNotes": "Korea's cocktail-bar darling. Maesil - the green plum Koreans turn into syrups and teas - is picked yellow-ripe, steeped about 100 days, then distilled twice into a spirit that smells like apricot blossom and ripe stone fruit. Sweet but not sticky, with bright plum tartness, a whisper of juniper, and a clean 25% finish. Dangerous in a highball.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "100% Korean yellow-ripe maesil (plum) distillate"
+      },
+      {
+        "label": "ABV",
+        "value": "25%"
+      },
+      {
+        "label": "Process",
+        "value": "Plums steeped ~100 days, then distilled twice"
+      },
+      {
+        "label": "Also inside",
+        "value": "Oligosaccharide, glucose, juniper berries"
+      },
+      {
+        "label": "Bottle",
+        "value": "375ml"
+      }
+    ],
+    "history": [
+      {
+        "year": "2018",
+        "event": "The Han Brewery launched Seoul Night, aiming to make a modern Korean spirit worthy of the capital's nightlife."
+      },
+      {
+        "year": "2022",
+        "event": "Added a 40% version with double the plum content for the cocktail crowd."
+      }
+    ],
+    "story": "Maesil is everywhere in Korean life - as syrup in home kitchens, as tea, as grandma's digestive remedy - but almost always humble. Seoul Night dresses it up for a night out: a proper distilled plum spirit in a moody bottle named for the city after dark. It rode Korea's craft-liquor and highball boom into cocktail bars and convenience-store shelves alike, and for many young Koreans it was the first 'traditional' liquor they ever ordered by choice.",
+    "winery": "The Han Brewery is a small modern distillery in Gimpo, just outside Seoul, focused on reinventing maesil as a serious spirit. Its lineup runs from this 25% flagship to a plum-doubled 40% version.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Korean fried chicken",
+        "why": "A Seoul Night highball with crispy chicken is the modern Seoul night, full stop - plum acidity cuts the fry.",
+        "shopKeyword": "치킨"
+      },
+      {
+        "emoji": "🥘",
+        "food": "Gopchang (grilled beef intestines)",
+        "why": "Late-night Seoul's richest dish meets bright plum tartness that resets your palate.",
+        "shopKeyword": "곱창"
+      },
+      {
+        "emoji": "🍣",
+        "food": "Salmon sashimi",
+        "why": "Fatty salmon and stone-fruit sweetness flatter each other like plum sauce on a fine fish.",
+        "shopKeyword": "연어회"
+      }
+    ],
+    "pairingTip": "The house serve: 1 part Seoul Night, 3 parts tonic or sparkling water, tall glass, mountain of ice.",
+    "avoidPairing": "Very sweet desserts - the drink already covers the sugar; together they turn syrupy.",
+    "similar": [
+      "Maechwisoon (매취순)",
+      "Seoljungmae (설중매)",
+      "Won Soju Spirit (원소주 스피릿)"
+    ],
+    "trivia": "Despite the name, Seoul Night is made in Gimpo, a neighboring city - the 'Seoul' is a mood, not an address. The stealth ingredient is juniper berry, which is why some drinkers swear it mixes like a soft Korean gin.",
+    "servingTemp": "Chilled, 8-12°C neat - or over ice in a highball",
+    "servingNote": "Serve neat in small glasses with standard Korean manners - pour for others first - or build highballs for the table. It is one of the few traditional-style bottles equally at home in a cocktail shaker.",
+    "aging": "No aging needed - the character comes from the 100-day plum steep before distillation. Sealed bottles keep well; refrigerate after opening for the brightest fruit.",
+    "tips": [
+      "Buy it online - as a regional specialty liquor it ships legally within Korea - or at larger marts.",
+      "Try the 40% version if you want a plum spirit that stands up in real cocktails."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Bekseju (백세주)",
+    "searchKeyword": "백세주",
+    "producer": "Kooksoondang (국순당)",
+    "type": "Herbal rice wine (yakju-style liqueur)",
+    "region": "Hoengseong, Gangwon Province",
+    "country": "South Korea",
+    "alcohol": "13%",
+    "liquidColor": "#E9C96B",
+    "confidence": 96,
+    "knowledge": "rich",
+    "basis": "Launch year (1992), 13% ABV, and the raw-rice fermentation method are verified from Kooksoondang's official Bekseju site and Korean news coverage (newsis); over 700 million bottles sold as of its 30th anniversary. Taste profile values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 52
+      },
+      {
+        "axis": "감칠맛",
+        "value": 38
+      },
+      {
+        "axis": "산도",
+        "value": 30
+      },
+      {
+        "axis": "당도",
+        "value": 58
+      }
+    ],
+    "tastingNotes": "Smells like a gentle herbal tea over sweet rice — ginseng, dried berries, a whisper of roots. On the palate it is smooth and honeyed, with a warm herbal finish that lingers. At 13% it sits between wine and sake in strength. Think of it as Korea's answer to an aromatized aperitif wine.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice, brewed with about a dozen botanicals including ginseng, goji berry, and omija (five-flavor berry)"
+      },
+      {
+        "label": "ABV",
+        "value": "13%"
+      },
+      {
+        "label": "Fermentation starter",
+        "value": "Nuruk (Korea's traditional fermentation cake), using Kooksoondang's raw-rice fermentation method"
+      },
+      {
+        "label": "Style",
+        "value": "Yakju — a clear, refined rice wine, here infused with medicinal herbs"
+      },
+      {
+        "label": "Pasteurized",
+        "value": "Yes — shelf-stable"
+      }
+    ],
+    "history": [
+      {
+        "year": "1992",
+        "event": "Kooksoondang launches Bekseju, building a national brand on a folk tale about longevity."
+      },
+      {
+        "year": "2000s",
+        "event": "The 'Osipseju' craze — restaurants mix Bekseju half-and-half with soju — makes it a fixture at Korean BBQ tables."
+      }
+    ],
+    "story": "Bekseju means 'hundred-years wine.' The label tells an old folk tale: a traveler sees a young man scolding a white-haired elder. The 'young man' turns out to be the elder's father — kept youthful by a goji-berry wine like this one. Kooksoondang, a company famous for reviving lost Korean brewing techniques, turned that legend into one of the country's best-known bottles. It's a yakju — a clear, filtered rice wine — steeped with ginseng and other herbs, so it drinks like a gently sweet, slightly medicinal white wine. For a generation of Koreans, this was the 'healthy' bottle you ordered when soju felt too harsh.",
+    "winery": "Kooksoondang is one of Korea's biggest traditional-alcohol makers, founded by the late brewing researcher Bae Sang-myeon, who spent his life restoring old Korean fermentation methods. The company also makes one of the country's most popular everyday makgeolli (cloudy rice wine) lines. Bekseju is brewed at its plant in Hoengseong, Gangwon Province.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Samgyetang (ginseng chicken soup)",
+        "why": "The wine's ginseng notes echo the soup's — a classic herbal double act.",
+        "shopKeyword": "삼계탕"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Grilled eel (jangeo-gui)",
+        "why": "Rich, oily eel loves the wine's honeyed sweetness and herbal bite.",
+        "shopKeyword": "장어구이"
+      },
+      {
+        "emoji": "🥘",
+        "food": "Dubu kimchi (tofu with stir-fried kimchi)",
+        "why": "Mild tofu and tangy kimchi sit perfectly between the wine's sweet and savory sides.",
+        "shopKeyword": "두부김치"
+      }
+    ],
+    "pairingTip": "Reach for Bekseju wherever you'd pour an off-dry white wine: grilled fish, chicken, hearty Korean soups. It flatters food more than it competes with it.",
+    "avoidPairing": "Very spicy stews make its sweetness taste cloying, and delicate raw fish gets steamrolled by the herbs.",
+    "similar": [
+      "Sansachun (산사춘)",
+      "Chung Ha (청하)",
+      "Seoljungmae (설중매)"
+    ],
+    "trivia": "Ask a Korean friend about 'Osipseju' — 'fifty-years wine.' It's Bekseju mixed 50/50 with soju, so called because it's half of a hundred. The mix became so popular that restaurants sell it as an unofficial menu item.",
+    "servingTemp": "Chilled, 8–12°C",
+    "servingNote": "Poured into small glasses and shared. Korean custom: pour for others, never just yourself, and receive a pour with both hands on your glass — especially from someone older.",
+    "aging": "Pasteurized and shelf-stable — no aging needed. Keep out of sunlight and refrigerate after opening; finish within a few weeks once open.",
+    "tips": [
+      "Great gateway bottle if plain soju tastes too harsh — it's softer, sweeter, and only 13%.",
+      "Try the famous 'Osipseju' mix: half Bekseju, half soju, in the same glass.",
+      "Available at almost every Korean BBQ restaurant and supermarket — one of the easiest traditional bottles to find."
+    ],
+    "vintage": null
+  }
+]

@@ -3,7 +3,7 @@
     "category": "whisky",
     "name": "라가불린 16년",
     "searchKeyword": "라가불린 16년",
-    "producer": "Lagavulin",
+    "producer": "라가불린 증류소 (디아지오)",
     "type": "싱글몰트 위스키 · 아일라",
     "vintage": null,
     "region": "아일라",
@@ -16,19 +16,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 82
-      },
-      {
-        "axis": "당도",
-        "value": 32
-      },
-      {
-        "axis": "셰리",
-        "value": 34
+        "value": 75
       },
       {
         "axis": "피트",
-        "value": 86
+        "value": 88
+      },
+      {
+        "axis": "과일향",
+        "value": 50
+      },
+      {
+        "axis": "스파이스",
+        "value": 45
       }
     ],
     "tastingNotes": "짙은 훈연과 젖은 흙, 말린 과일이 함께 옵니다. 같은 아일라라도 라프로익보다 둥글고 무게가 있어, 강하면서도 거칠지 않습니다.",
@@ -100,8 +100,8 @@
     "category": "whisky",
     "name": "하이랜드 파크 12년",
     "searchKeyword": "하이랜드파크 12년",
-    "producer": "Highland Park",
-    "type": "싱글몰트 위스키 · 아일랜드",
+    "producer": "에드링턴",
+    "type": "싱글몰트 스카치 위스키",
     "vintage": null,
     "region": "오크니 제도",
     "country": "스코틀랜드",
@@ -113,19 +113,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 66
-      },
-      {
-        "axis": "당도",
-        "value": 46
-      },
-      {
-        "axis": "셰리",
-        "value": 56
+        "value": 60
       },
       {
         "axis": "피트",
-        "value": 42
+        "value": 40
+      },
+      {
+        "axis": "과일향",
+        "value": 65
+      },
+      {
+        "axis": "스파이스",
+        "value": 40
       }
     ],
     "tastingNotes": "헤더 꽃꿀과 셰리의 건과일, 그 뒤에 은은한 훈연이 깔립니다. 단맛과 피트가 반반이라 어느 쪽에도 치우치지 않습니다.",
@@ -197,7 +197,7 @@
     "category": "whisky",
     "name": "글렌모렌지 오리지널 10년",
     "searchKeyword": "글렌모렌지 오리지널",
-    "producer": "Glenmorangie",
+    "producer": "글렌모렌지 (LVMH)",
     "type": "싱글몰트 위스키 · 하이랜드",
     "vintage": null,
     "region": "하이랜드",
@@ -210,19 +210,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 48
-      },
-      {
-        "axis": "당도",
-        "value": 54
-      },
-      {
-        "axis": "셰리",
-        "value": 16
+        "value": 40
       },
       {
         "axis": "피트",
-        "value": 4
+        "value": 3
+      },
+      {
+        "axis": "과일향",
+        "value": 65
+      },
+      {
+        "axis": "스파이스",
+        "value": 30
       }
     ],
     "tastingNotes": "귤과 복숭아, 바닐라 향이 밝게 퍼집니다. 스코틀랜드에서 가장 키가 큰 증류기를 써서 가볍고 꽃 같은 향이 살아남습니다.",
@@ -294,7 +294,7 @@
     "category": "whisky",
     "name": "제임슨",
     "searchKeyword": "제임슨 위스키",
-    "producer": "Jameson",
+    "producer": "미들턴 증류소 (페르노리카)",
     "type": "블렌디드 위스키 · 아이리시",
     "vintage": null,
     "region": "아일랜드",
@@ -307,19 +307,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 42
-      },
-      {
-        "axis": "당도",
-        "value": 50
-      },
-      {
-        "axis": "셰리",
-        "value": 24
+        "value": 35
       },
       {
         "axis": "피트",
-        "value": 3
+        "value": 2
+      },
+      {
+        "axis": "과일향",
+        "value": 50
+      },
+      {
+        "axis": "스파이스",
+        "value": 25
       }
     ],
     "tastingNotes": "바닐라와 배, 은은한 스파이스가 부드럽게 지나갑니다. 세 번 증류해 목넘김이 매끄럽고, 위스키 특유의 화한 느낌이 적습니다.",
@@ -404,19 +404,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 78
-      },
-      {
-        "axis": "당도",
-        "value": 52
-      },
-      {
-        "axis": "셰리",
-        "value": 6
+        "value": 70
       },
       {
         "axis": "피트",
         "value": 3
+      },
+      {
+        "axis": "과일향",
+        "value": 40
+      },
+      {
+        "axis": "스파이스",
+        "value": 72
       }
     ],
     "tastingNotes": "캐러멜과 바닐라 위로 호밀에서 온 매콤함이 확 올라옵니다. 50.5도라 힘이 세고, 칵테일에 넣어도 술 맛이 죽지 않습니다.",
@@ -439,8 +439,8 @@
     "drinkUntil": "2032",
     "history": [
       {
-        "year": "1855",
-        "event": "리피 형제가 증류 시작"
+        "year": "1869",
+        "event": "리피 가문이 켄터키 로렌스버그에서 증류 시작"
       },
       {
         "year": "1940",
@@ -485,301 +485,6 @@
     ]
   },
   {
-    "category": "traditional",
-    "name": "지평 생막걸리",
-    "searchKeyword": "지평 생막걸리",
-    "producer": "지평주조",
-    "type": "생막걸리",
-    "vintage": null,
-    "region": "경기 양평",
-    "country": "한국",
-    "alcohol": "5%",
-    "liquidColor": "#F2ECDC",
-    "confidence": 90,
-    "knowledge": "rich",
-    "basis": "전국 유통망을 갖춘 대표 막걸리입니다.",
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 40
-      },
-      {
-        "axis": "단맛",
-        "value": 42
-      },
-      {
-        "axis": "곡물향",
-        "value": 62
-      },
-      {
-        "axis": "산미",
-        "value": 44
-      }
-    ],
-    "tastingNotes": "탄산이 또렷하고 목넘김이 가볍습니다. 도수 5%로 낮아 부담이 적고, 단맛과 신맛이 균형을 이뤄 처음 마시는 사람도 쉽게 넘깁니다.",
-    "specs": [
-      {
-        "label": "원료",
-        "value": "쌀, 밀, 누룩"
-      },
-      {
-        "label": "도수",
-        "value": "5%"
-      },
-      {
-        "label": "특징",
-        "value": "1925년부터 이어 온 양조장"
-      }
-    ],
-    "drinkFrom": "2025",
-    "drinkPeak": "2025",
-    "drinkUntil": "2025",
-    "history": [
-      {
-        "year": "1925",
-        "event": "양평 지평리에 양조장 설립"
-      },
-      {
-        "year": "2010년대",
-        "event": "전국 유통으로 확대"
-      }
-    ],
-    "story": "한국전쟁 때 지평리 전투의 지휘소로 쓰였던 건물이 지금도 남아 있습니다. 등록문화재입니다.",
-    "winery": "100년 가까이 같은 자리에서 빚고 있습니다.",
-    "foodPairing": [
-      {
-        "emoji": "🥘",
-        "food": "김치전",
-        "why": "탄산이 기름을 씻어 냅니다",
-        "shopKeyword": "부침가루"
-      },
-      {
-        "emoji": "🍖",
-        "food": "제육볶음",
-        "why": "단맛이 매운맛을 눌러 줍니다",
-        "shopKeyword": "돼지 앞다리살"
-      },
-      {
-        "emoji": "🐙",
-        "food": "골뱅이 무침",
-        "why": "새콤함끼리 어울립니다",
-        "shopKeyword": "골뱅이"
-      }
-    ],
-    "pairingTip": "비 오는 날 전과 함께가 가장 흔한 조합입니다.",
-    "avoidPairing": "담백한 음식과는 심심합니다.",
-    "similar": [
-      "느린마을 막걸리",
-      "서울장수 막걸리",
-      "복순도가 손막걸리"
-    ],
-    "trivia": "생막걸리는 살균하지 않아 효모가 살아 있습니다. 그래서 냉장 보관이 필수입니다.",
-    "servingTemp": "5~10℃",
-    "servingNote": "위아래로 천천히 흔들어 앙금을 섞으세요.",
-    "aging": "숙성하지 않습니다. 사서 며칠 안에 드세요.",
-    "tips": [
-      "병을 세워 두면 앙금이 가라앉습니다. 흔들지 않으면 맛이 반쪽입니다"
-    ]
-  },
-  {
-    "category": "traditional",
-    "name": "복순도가 손막걸리",
-    "searchKeyword": "복순도가 손막걸리",
-    "producer": "복순도가",
-    "type": "생막걸리",
-    "vintage": null,
-    "region": "울산 울주",
-    "country": "한국",
-    "alcohol": "6.5%",
-    "liquidColor": "#F1EBDA",
-    "confidence": 89,
-    "knowledge": "rich",
-    "basis": "국내 프리미엄 막걸리를 대표하는 제품입니다.",
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 52
-      },
-      {
-        "axis": "단맛",
-        "value": 32
-      },
-      {
-        "axis": "곡물향",
-        "value": 66
-      },
-      {
-        "axis": "산미",
-        "value": 68
-      }
-    ],
-    "tastingNotes": "탄산이 유난히 강하고 신맛이 뚜렷합니다. 샴페인 같다는 말을 듣는 막걸리로, 단맛에 기대지 않아 뒷맛이 깨끗합니다.",
-    "specs": [
-      {
-        "label": "원료",
-        "value": "국내산 쌀, 누룩, 물"
-      },
-      {
-        "label": "특징",
-        "value": "자연 발효로 생기는 강한 탄산"
-      },
-      {
-        "label": "도수",
-        "value": "6.5%"
-      }
-    ],
-    "drinkFrom": "2025",
-    "drinkPeak": "2025",
-    "drinkUntil": "2025",
-    "history": [
-      {
-        "year": "2010",
-        "event": "울주에서 손막걸리 출시"
-      },
-      {
-        "year": "2012",
-        "event": "핵안보정상회의 만찬주로 선정"
-      }
-    ],
-    "story": "인위적으로 탄산을 넣지 않습니다. 병 안에서 계속 발효하며 생긴 기포라, 열 때 조심하지 않으면 넘칩니다.",
-    "winery": "가족이 운영하는 소규모 양조장입니다.",
-    "foodPairing": [
-      {
-        "emoji": "🦪",
-        "food": "굴",
-        "why": "강한 산미가 바다 맛을 씻어 냅니다",
-        "shopKeyword": "생굴"
-      },
-      {
-        "emoji": "🥘",
-        "food": "해물파전",
-        "why": "탄산이 기름을 정리합니다",
-        "shopKeyword": "해물"
-      },
-      {
-        "emoji": "🧀",
-        "food": "치즈",
-        "why": "의외로 잘 맞는 조합입니다",
-        "shopKeyword": "카망베르"
-      }
-    ],
-    "pairingTip": "샴페인처럼 식전주로 써도 어울립니다.",
-    "avoidPairing": "달콤한 안주는 신맛을 더 날카롭게 만듭니다.",
-    "similar": [
-      "느린마을 막걸리",
-      "지평 생막걸리",
-      "해창 막걸리"
-    ],
-    "trivia": "탄산이 워낙 강해 병을 천천히 여는 방법이 라벨에 적혀 있습니다.",
-    "servingTemp": "5~8℃",
-    "servingNote": "차갑게 한 뒤 뚜껑을 조금씩 열어 가스를 빼세요. 한 번에 열면 넘칩니다.",
-    "aging": "숙성하지 않습니다.",
-    "tips": [
-      "막걸리가 밍밍하다고 느꼈다면 이 술이 인상을 바꿔 줄 겁니다"
-    ]
-  },
-  {
-    "category": "traditional",
-    "name": "문배주",
-    "searchKeyword": "문배주",
-    "producer": "문배주양조원",
-    "type": "증류식 소주",
-    "vintage": null,
-    "region": "경기 김포",
-    "country": "한국",
-    "alcohol": "40%",
-    "liquidColor": "#F6F3E9",
-    "confidence": 88,
-    "knowledge": "rich",
-    "basis": "국가무형문화재로 지정된 전통 증류주입니다.",
-    "tasteProfile": [
-      {
-        "axis": "바디",
-        "value": 66
-      },
-      {
-        "axis": "단맛",
-        "value": 26
-      },
-      {
-        "axis": "곡물향",
-        "value": 80
-      },
-      {
-        "axis": "부드러움",
-        "value": 56
-      }
-    ],
-    "tastingNotes": "이름 그대로 돌배 같은 향이 납니다. 실제로 배는 넣지 않는데, 좁쌀과 수수로 빚어 생기는 향입니다.",
-    "specs": [
-      {
-        "label": "원료",
-        "value": "좁쌀, 수수, 누룩"
-      },
-      {
-        "label": "지정",
-        "value": "국가무형문화재 제86-1호"
-      },
-      {
-        "label": "도수",
-        "value": "40%"
-      }
-    ],
-    "drinkFrom": "2025",
-    "drinkPeak": "2025",
-    "drinkUntil": "2040",
-    "history": [
-      {
-        "year": "고려시대",
-        "event": "평안도 지역에서 빚기 시작한 것으로 전해짐"
-      },
-      {
-        "year": "1986",
-        "event": "국가무형문화재로 지정"
-      },
-      {
-        "year": "2000",
-        "event": "남북정상회담 만찬주로 사용"
-      }
-    ],
-    "story": "배를 한 톨도 넣지 않는데 배 향이 납니다. 곡물과 누룩이 만나 생기는 향이라, 이름이 재료가 아니라 결과에서 왔습니다.",
-    "winery": "평안도에서 내려온 가문이 김포에서 이어 오고 있습니다.",
-    "foodPairing": [
-      {
-        "emoji": "🥩",
-        "food": "불고기",
-        "why": "곡물 단내가 간장 양념과 맞습니다",
-        "shopKeyword": "불고기용 소고기"
-      },
-      {
-        "emoji": "🐟",
-        "food": "생선구이",
-        "why": "깨끗한 목넘김이 비린맛을 정리합니다",
-        "shopKeyword": "고등어"
-      },
-      {
-        "emoji": "🍲",
-        "food": "만둣국",
-        "why": "담백한 국물과 어울립니다",
-        "shopKeyword": "만두"
-      }
-    ],
-    "pairingTip": "차게 해서 작은 잔에 조금씩 드세요.",
-    "avoidPairing": "단 디저트와는 맞지 않습니다.",
-    "similar": [
-      "안동소주",
-      "화요 41",
-      "이강주"
-    ],
-    "trivia": "남북정상회담 만찬에 오른 술로 여러 번 소개됐습니다.",
-    "servingTemp": "차갑게 또는 실온",
-    "servingNote": "냉장고에 두었다가 작은 잔에 따르세요.",
-    "aging": "오래 두어도 변하지 않습니다.",
-    "tips": [
-      "선물용 전통주를 찾을 때 자주 언급됩니다"
-    ]
-  },
-  {
     "category": "sake",
     "name": "쿠보타 만쥬",
     "searchKeyword": "쿠보타 만쥬",
@@ -799,23 +504,23 @@
         "value": 50
       },
       {
-        "axis": "당도",
-        "value": 38
-      },
-      {
         "axis": "감칠맛",
         "value": 52
       },
       {
         "axis": "산도",
         "value": 42
+      },
+      {
+        "axis": "당도",
+        "value": 38
       }
     ],
     "tastingNotes": "잘 익은 과일 향이 은은하고 뒷맛이 깔끔합니다. 니가타 사케 특유의 '단레이카라구치' — 담백하고 드라이한 결이 잘 드러납니다.",
     "specs": [
       {
         "label": "정미율",
-        "value": "50% 내외"
+        "value": "누룩쌀 50% · 술쌀(掛米) 33%"
       },
       {
         "label": "쌀",

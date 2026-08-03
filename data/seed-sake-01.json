@@ -39,7 +39,7 @@
       },
       {
         "label": "분류",
-        "value": "특별본양조"
+        "value": "긴조"
       },
       {
         "label": "도수",
@@ -423,7 +423,7 @@
     "specs": [
       {
         "label": "정미율",
-        "value": "50% 안팎"
+        "value": "55%"
       },
       {
         "label": "분류",
@@ -489,7 +489,7 @@
     "name": "이치노쿠라 무칸사 본조조",
     "searchKeyword": "이치노쿠라 무칸사",
     "producer": "이치노쿠라(一ノ蔵)",
-    "type": "특별본양조 사케",
+    "type": "본양조(혼조조) 사케",
     "vintage": null,
     "region": "미야기",
     "country": "일본",
@@ -520,7 +520,7 @@
     "specs": [
       {
         "label": "정미율",
-        "value": "55%"
+        "value": "65%"
       },
       {
         "label": "쌀",

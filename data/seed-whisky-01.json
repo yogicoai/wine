@@ -16,19 +16,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 74
-      },
-      {
-        "axis": "당도",
-        "value": 46
-      },
-      {
-        "axis": "셰리",
-        "value": 82
+        "value": 70
       },
       {
         "axis": "피트",
         "value": 5
+      },
+      {
+        "axis": "과일향",
+        "value": 80
+      },
+      {
+        "axis": "스파이스",
+        "value": 45
       }
     ],
     "tastingNotes": "말린 자두와 건포도, 계피 향이 진하게 올라옵니다. 셰리 통에서만 숙성해 색이 붉고 단맛이 도드라지며, 끝에 오렌지 껍질 같은 쌉쌀함이 남습니다.",
@@ -113,19 +113,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 66
-      },
-      {
-        "axis": "당도",
-        "value": 54
-      },
-      {
-        "axis": "셰리",
-        "value": 58
+        "value": 60
       },
       {
         "axis": "피트",
         "value": 5
+      },
+      {
+        "axis": "과일향",
+        "value": 75
+      },
+      {
+        "axis": "스파이스",
+        "value": 40
       }
     ],
     "tastingNotes": "꿀과 바닐라가 앞서고 뒤에 셰리의 건포도 향이 따라옵니다. 두 종류의 통을 거쳐 부드러움과 깊이가 함께 있습니다.",
@@ -197,7 +197,7 @@
     "category": "whisky",
     "name": "라프로익 10년",
     "searchKeyword": "라프로익 10년",
-    "producer": "Laphroaig",
+    "producer": "라프로익 증류소 (산토리 글로벌 스피리츠)",
     "type": "싱글몰트 위스키 · 아일라",
     "vintage": null,
     "region": "아일라",
@@ -210,19 +210,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 72
-      },
-      {
-        "axis": "당도",
-        "value": 22
-      },
-      {
-        "axis": "셰리",
-        "value": 10
+        "value": 62
       },
       {
         "axis": "피트",
-        "value": 92
+        "value": 90
+      },
+      {
+        "axis": "과일향",
+        "value": 38
+      },
+      {
+        "axis": "스파이스",
+        "value": 42
       }
     ],
     "tastingNotes": "소독약과 바다 내음, 젖은 재 냄새가 먼저 옵니다. 호불호가 극단적으로 갈리지만, 좋아하는 사람은 이것 말고는 못 마신다고 합니다.",
@@ -307,19 +307,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 64
-      },
-      {
-        "axis": "당도",
-        "value": 46
-      },
-      {
-        "axis": "셰리",
-        "value": 48
+        "value": 60
       },
       {
         "axis": "피트",
-        "value": 8
+        "value": 10
+      },
+      {
+        "axis": "과일향",
+        "value": 72
+      },
+      {
+        "axis": "스파이스",
+        "value": 35
       }
     ],
     "tastingNotes": "복숭아와 꿀, 그리고 백단향 같은 은은한 향이 납니다. 일본 물참나무(미즈나라) 통에서 오는 향이 다른 위스키에는 없는 표정을 만듭니다.",
@@ -395,7 +395,7 @@
     "category": "whisky",
     "name": "조니워커 블루라벨",
     "searchKeyword": "조니워커 블루라벨",
-    "producer": "Johnnie Walker",
+    "producer": "디아지오",
     "type": "블렌디드 위스키 · 스카치",
     "vintage": null,
     "region": "스코틀랜드",
@@ -408,19 +408,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 70
-      },
-      {
-        "axis": "당도",
-        "value": 40
-      },
-      {
-        "axis": "셰리",
-        "value": 44
+        "value": 60
       },
       {
         "axis": "피트",
         "value": 30
+      },
+      {
+        "axis": "과일향",
+        "value": 62
+      },
+      {
+        "axis": "스파이스",
+        "value": 35
       }
     ],
     "tastingNotes": "말린 과일과 꿀, 옅은 훈연이 층층이 쌓입니다. 어느 하나가 튀지 않고 매끄럽게 이어지는 것이 이 술의 목표입니다.",
@@ -505,19 +505,19 @@
     "tasteProfile": [
       {
         "axis": "바디",
-        "value": 66
-      },
-      {
-        "axis": "당도",
-        "value": 62
-      },
-      {
-        "axis": "셰리",
-        "value": 8
+        "value": 55
       },
       {
         "axis": "피트",
-        "value": 3
+        "value": 2
+      },
+      {
+        "axis": "과일향",
+        "value": 48
+      },
+      {
+        "axis": "스파이스",
+        "value": 55
       }
     ],
     "tastingNotes": "캐러멜과 바닐라, 구운 옥수수 향이 달큰합니다. 호밀 대신 밀을 써서 버번치고 부드럽고 매운맛이 적습니다.",

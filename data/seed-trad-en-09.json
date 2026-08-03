@@ -1,0 +1,366 @@
+[
+  {
+    "category": "traditional",
+    "name": "Chung Ha (청하)",
+    "searchKeyword": "청하",
+    "producer": "Lotte Chilsung Beverage",
+    "type": "Cheongju (clear rice wine)",
+    "region": "Nationwide",
+    "country": "South Korea",
+    "alcohol": "13%",
+    "liquidColor": "#F5F2E8",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "Long-running mass-market cheongju; specs from Lotte Chilsung public product information.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 38
+      },
+      {
+        "axis": "감칠맛",
+        "value": 52
+      },
+      {
+        "axis": "산도",
+        "value": 40
+      },
+      {
+        "axis": "당도",
+        "value": 45
+      }
+    ],
+    "tastingNotes": "Korea's everyday clear rice wine — light, softly sweet, with a gentle savory depth that will remind you of a mild sake. Served cold, it is clean and easy, with none of soju's alcohol bite.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice, fermented and filtered clear"
+      },
+      {
+        "label": "Style",
+        "value": "Cheongju — Korea's clear rice wine, cousin to Japanese sake"
+      },
+      {
+        "label": "ABV",
+        "value": "13%"
+      }
+    ],
+    "history": [
+      {
+        "year": "1986",
+        "event": "Chung Ha launches and becomes the standard restaurant cheongju nationwide."
+      }
+    ],
+    "story": "Walk into any Korean raw-fish restaurant and the green-labeled bottle chilling next to the soju is Chung Ha. Cheongju is Korea's own clear rice wine tradition — the ancestor category that royal courts drank — and this is its approachable, modern mass-market face. For newcomers it is the gentlest possible introduction to Korean rice alcohol.",
+    "winery": "Lotte Chilsung Beverage, one of Korea's largest drinks companies, has produced Chung Ha since the 1980s.",
+    "foodPairing": [
+      {
+        "emoji": "🐟",
+        "food": "Hoe (Korean raw fish)",
+        "why": "The classic — clean rice wine and fresh raw fish is Korea's answer to sake and sashimi.",
+        "shopKeyword": "모둠회"
+      },
+      {
+        "emoji": "🍤",
+        "food": "Grilled shrimp",
+        "why": "Light sweetness complements the shellfish without covering it.",
+        "shopKeyword": "새우"
+      },
+      {
+        "emoji": "🥟",
+        "food": "Steamed dumplings",
+        "why": "Soft umami on umami — a comfortable, low-intensity match.",
+        "shopKeyword": "만두"
+      }
+    ],
+    "pairingTip": "Anywhere you would order sake, Chung Ha fits — especially raw fish and light seafood.",
+    "avoidPairing": "Heavy red-spice dishes like buldak overwhelm its delicate profile completely.",
+    "similar": [
+      "Baekhwa Subok (백화수복)",
+      "Gyeongju Beopju Choteukseon (경주법주 초특선)",
+      "Cheongmyeongju (청명주)"
+    ],
+    "trivia": "Many Koreans' first not-soju drink at a family dinner is Chung Ha — it is considered polite enough for drinking with grandparents.",
+    "servingTemp": "6-10℃, chilled",
+    "servingNote": "Served cold in small ceramic or glass cups; in restaurants it often arrives in an ice bucket. Pour for others first, as always.",
+    "aging": "Not for aging — drink fresh; refrigerate after opening and finish within a few days.",
+    "tips": [
+      "If you like it, graduate to craft yakju like Pungjeong Sagye — same family, deeper flavors",
+      "It also warms gently well in winter, sake-style"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Gapyeong Jat Makgeolli (가평 잣 생막걸리)",
+    "searchKeyword": "가평 잣막걸리",
+    "producer": "Woorisool",
+    "type": "Pine nut makgeolli",
+    "region": "Gapyeong, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "6%",
+    "liquidColor": "#F2EEE3",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "Woorisool's flagship regional product; Gapyeong's pine nut fame is well documented.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 60
+      },
+      {
+        "axis": "감칠맛",
+        "value": 65
+      },
+      {
+        "axis": "산도",
+        "value": 55
+      },
+      {
+        "axis": "당도",
+        "value": 55
+      }
+    ],
+    "tastingNotes": "A fresh, milky rice makgeolli enriched with pine nuts from Gapyeong, Korea's pine nut capital. The nuts add a subtle creamy richness and faint sweetness on top of the usual gentle fizz and yogurt-like tang. One of the most crowd-pleasing regional makgeollis.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice, nuruk (Korean fermentation starter), Gapyeong pine nuts"
+      },
+      {
+        "label": "Style",
+        "value": "Saeng (unpasteurized) makgeolli — live cultures"
+      },
+      {
+        "label": "ABV",
+        "value": "6%"
+      }
+    ],
+    "history": [
+      {
+        "year": "2000s",
+        "event": "Woorisool grows into one of Korea's largest makgeolli producers, building its identity on Gapyeong pine nuts."
+      }
+    ],
+    "story": "Gapyeong, a mountain county east of Seoul, is where Koreans go for pine-nut everything — and its makgeolli is the edible souvenir. Woorisool blends local pine nuts into a fresh rice brew, giving the rustic farmer's drink a nutty, almost dessert-like touch. It is a staple at the region's riverside chicken restaurants.",
+    "winery": "Woorisool, based in Gapyeong, is among Korea's biggest makgeolli breweries, exporting widely while keeping its pine-nut flagship rooted in local agriculture.",
+    "foodPairing": [
+      {
+        "emoji": "🥞",
+        "food": "Pajeon (scallion pancake)",
+        "why": "Makgeolli and pajeon on a rainy day is a national ritual — the fizz cuts the oil.",
+        "shopKeyword": "파전 밀키트"
+      },
+      {
+        "emoji": "🍗",
+        "food": "Dakgalbi (spicy stir-fried chicken)",
+        "why": "Creamy nuttiness soothes the gochujang heat — the classic Gapyeong combo.",
+        "shopKeyword": "닭갈비"
+      },
+      {
+        "emoji": "🌰",
+        "food": "Roasted chestnuts and nuts",
+        "why": "Nut on nut — it amplifies the drink's signature flavor.",
+        "shopKeyword": "군밤"
+      }
+    ],
+    "pairingTip": "Anything fried or spicy works; the drink behaves like a gentle, fizzy cream to cool things down.",
+    "avoidPairing": "Delicate raw fish — the milky body and tang smother it.",
+    "similar": [
+      "Jangsu Saeng Makgeolli (장수 생막걸리)",
+      "Jipyeong Saeng Makgeolli (지평 생막걸리)",
+      "Neurin Maeul Makgeolli (느린마을 막걸리)"
+    ],
+    "trivia": "Gapyeong supplies a large share of Korea's pine nuts, and locals insist the makgeolli tastes best within sight of the mountains that grew them.",
+    "servingTemp": "4-8℃, well chilled",
+    "servingNote": "Gently invert the bottle two or three times before opening to mix the settled rice sediment — never shake hard, it will fizz over. Drink from small bowls, not glasses, for the full experience.",
+    "aging": "Unpasteurized and alive: refrigerate always, drink within about two weeks of bottling, and expect the taste to get more sour and fizzy by the day.",
+    "tips": [
+      "The date on the cap is the bottling date — fresher is milder, older is tangier",
+      "Pour the last cloudy third in too; that sediment is where the flavor lives"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Nimome (니모메)",
+    "searchKeyword": "니모메",
+    "producer": "Jeju Saemju",
+    "type": "Tangerine-peel yakju",
+    "region": "Jeju Island",
+    "country": "South Korea",
+    "alcohol": "11%",
+    "liquidColor": "#F0E4C0",
+    "confidence": 86,
+    "knowledge": "rich",
+    "basis": "Jeju Saemju's flagship yakju; tangerine peel infusion and Jeju-dialect name are the brand's public identity.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 45
+      },
+      {
+        "axis": "감칠맛",
+        "value": 50
+      },
+      {
+        "axis": "산도",
+        "value": 45
+      },
+      {
+        "axis": "당도",
+        "value": 55
+      }
+    ],
+    "tastingNotes": "A refined rice wine from Jeju Island infused with dried tangerine peel from the island's famous orchards. Expect a softly sweet, faintly citrus-fragrant sip that finishes clean — like sunshine over a traditional yakju. Dangerously easy to drink.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice, nuruk (fermentation starter), Jeju tangerine peel"
+      },
+      {
+        "label": "Style",
+        "value": "Yakju — filtered traditional rice wine"
+      },
+      {
+        "label": "ABV",
+        "value": "11%"
+      }
+    ],
+    "history": [
+      {
+        "year": "2005",
+        "event": "Jeju Saemju is founded to modernize Jeju's brewing traditions."
+      }
+    ],
+    "story": "The name means 'in your heart' in Jeju dialect, and the drink is exactly that kind of souvenir: the island's beloved tangerines, folded into a traditional rice wine. It has become the bottle travelers bring back from Jeju when they want something more special than airport chocolate.",
+    "winery": "Jeju Saemju is a Jeju Island brewery known for weaving local ingredients — tangerine peel, Jeju water, island grains — into approachable traditional alcohol.",
+    "foodPairing": [
+      {
+        "emoji": "🐷",
+        "food": "Jeju black pork BBQ",
+        "why": "Citrus lift against rich grilled pork is the island's own pairing.",
+        "shopKeyword": "제주 흑돼지"
+      },
+      {
+        "emoji": "🍊",
+        "food": "Citrus desserts",
+        "why": "Tangerine on tangerine — it reads like a light dessert wine.",
+        "shopKeyword": "감귤젤리"
+      },
+      {
+        "emoji": "🥗",
+        "food": "Light salads and seafood",
+        "why": "The gentle sweetness complements rather than covers.",
+        "shopKeyword": "샐러드 믹스"
+      }
+    ],
+    "pairingTip": "Serve it chilled as an aperitif or with lighter food; it also makes a lovely low-proof nightcap.",
+    "avoidPairing": "Deep-fried, heavily sauced dishes bury the delicate citrus note.",
+    "similar": [
+      "Omegi Malgeun Sul (오메기 맑은술)",
+      "Bekseju (백세주)",
+      "Hansan Sogokju (한산소곡주)"
+    ],
+    "trivia": "Jeju has its own dialect that mainland Koreans struggle to understand — putting Nimome on the label was a deliberate act of island pride.",
+    "servingTemp": "6-10℃, chilled",
+    "servingNote": "Chill well and serve in small clear glasses to show off the pale gold color; a citrus-peel garnish is fair play.",
+    "aging": "Not for aging; keep refrigerated after opening and finish within a week or two.",
+    "tips": [
+      "A great gift bottle — light enough for people who do not usually drink traditional alcohol",
+      "Works in a spritz with sparkling water on summer evenings"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Sansachun (산사춘)",
+    "searchKeyword": "산사춘",
+    "producer": "Baesangmyun Juga",
+    "type": "Hawthorn-berry yakju",
+    "region": "Pocheon, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "13%",
+    "liquidColor": "#E9C070",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "Long-selling Baesangmyun Juga brand; hawthorn (sansa) base is its defining public trait.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 45
+      },
+      {
+        "axis": "감칠맛",
+        "value": 45
+      },
+      {
+        "axis": "산도",
+        "value": 50
+      },
+      {
+        "axis": "당도",
+        "value": 60
+      }
+    ],
+    "tastingNotes": "A honey-gold rice wine flavored with sansa — hawthorn berries — giving it a sweet-tart, faintly fruity character unlike anything in Western wine. Smooth and lightly warming, it drinks like a gentle berry mead with Korean roots.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice wine with hawthorn berry (sansa)"
+      },
+      {
+        "label": "Style",
+        "value": "Fruit-infused yakju"
+      },
+      {
+        "label": "ABV",
+        "value": "13%"
+      }
+    ],
+    "history": [
+      {
+        "year": "1997",
+        "event": "Baesangmyun Juga launches Sansachun, which becomes a fixture of Korean restaurant menus."
+      }
+    ],
+    "story": "Hawthorn berries have been used in Korean herbal tradition for centuries, prized for helping digestion — which is exactly how Sansachun is drunk: alongside rich, meaty dinners. Its poetic name means spring of the hawthorn, and for many Koreans it was the first traditional alcohol that felt approachable rather than old-fashioned.",
+    "winery": "Baesangmyun Juga is a family brewing house dedicated to reviving traditional Korean alcohol; the founding family also created the Neurin Maeul makgeolli brand.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "Galbi (marinated grilled ribs)",
+        "why": "Sweet-tart berry notes echo the soy-sugar marinade beautifully.",
+        "shopKeyword": "양념 소갈비"
+      },
+      {
+        "emoji": "🦆",
+        "food": "Roast duck",
+        "why": "Fruit wine and rich duck is a pairing that crosses every culture.",
+        "shopKeyword": "훈제오리"
+      },
+      {
+        "emoji": "🍜",
+        "food": "Japchae (glass noodles)",
+        "why": "Gentle sweetness matches the sesame-soy noodles.",
+        "shopKeyword": "잡채"
+      }
+    ],
+    "pairingTip": "Think of it where you would pour an off-dry rosé: grilled marinated meat, festive family tables.",
+    "avoidPairing": "Very sour dishes like naengmyeon with extra vinegar clash with its fruit acidity.",
+    "similar": [
+      "Bekseju (백세주)",
+      "Bohae Bokbunjaju (보해 복분자주)",
+      "Maesil Wonju (매실원주)"
+    ],
+    "trivia": "TV dramas of the 2000s made a glass of Sansachun shorthand for a warm family dinner scene.",
+    "servingTemp": "8-12℃, lightly chilled",
+    "servingNote": "Serve lightly chilled in small glasses; it is a mealtime wine, meant to be topped up for everyone through dinner.",
+    "aging": "Shelf-stable unopened; refrigerate after opening and enjoy within a few weeks.",
+    "tips": [
+      "A safe first bottle for guests who find soju too harsh and makgeolli too funky",
+      "Over ice with a squeeze of lemon it becomes an easy aperitif"
+    ],
+    "vintage": null
+  }
+]
