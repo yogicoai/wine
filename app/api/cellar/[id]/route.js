@@ -2,8 +2,12 @@ import { NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/mongodb";
 import { recordRating, removeRating } from "@/lib/ratings";
+import { ownScope } from "@/lib/appProfile";
 
 export const runtime = "nodejs";
+
+// 다른 앱의 셀러 항목은 건드리지 않는다 (id 를 알아도 마찬가지)
+const MINE = () => ownScope("category");
 
 async function collection() {
   const db = await getDb();
@@ -26,7 +30,7 @@ export async function GET(_request, { params }) {
   const _id = oid(id);
   if (!_id) return NextResponse.json({ error: "잘못된 ID" }, { status: 400 });
 
-  const item = await col.findOne({ _id });
+  const item = await col.findOne({ _id, ...MINE() });
   if (!item) return NextResponse.json({ error: "없음" }, { status: 404 });
   return NextResponse.json({ item: { ...item, _id: item._id.toString() } });
 }
@@ -60,14 +64,15 @@ export async function PATCH(request, { params }) {
     if (note.rating) set.rating = note.rating; // 최신 별점을 대표값으로 (취향 프로필 재료)
     // 마셨으면 재고 1병 차감, 0이 되면 '마신 술'로 이동
     if (body.note.consumed) {
-      const cur = await col.findOne({ _id }, { projection: { bottles: 1 } });
+      const cur = await col.findOne({ _id, ...MINE() }, { projection: { bottles: 1 } });
       const left = Math.max(0, (cur?.bottles || 0) - 1);
       set.bottles = left;
       if (!left) set.status = "drunk";
     }
   }
 
-  await col.updateOne({ _id }, ops);
+  const hit = await col.updateOne({ _id, ...MINE() }, ops);
+  if (!hit.matchedCount) return NextResponse.json({ error: "없음" }, { status: 404 });
   const updated = await col.findOne({ _id }, { projection: { result: 0 } });
 
   // 별점이 바뀌었으면 집단 평점에도 반영한다 (다른 사람의 결과 화면에 평균으로 나타난다)
@@ -82,7 +87,9 @@ export async function DELETE(_request, { params }) {
   if (!col) return NextResponse.json({ deleted: false, noDb: true });
   const _id = oid(id);
   if (!_id) return NextResponse.json({ error: "잘못된 ID" }, { status: 400 });
-  await col.deleteOne({ _id });
+  // 다른 앱의 항목은 지워지지 않는다 — 지운 척하지 않고 없다고 답한다
+  const r = await col.deleteOne({ _id, ...MINE() });
+  if (!r.deletedCount) return NextResponse.json({ deleted: false, error: "없음" }, { status: 404 });
   await removeRating(id); // 항목이 사라졌으면 표도 회수한다
   return NextResponse.json({ deleted: true });
 }
