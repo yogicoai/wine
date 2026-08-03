@@ -116,6 +116,32 @@ img, video, canvas { display: block; max-width: 100%; }
   .tabbar { max-width: 560px; margin: 0 auto; border-radius: 20px 20px 0 0; border: 1px solid var(--line-soft); border-bottom: 0; }
 }
 
+/* ── 촬영 중 ────────────────────────────────────────────
+   카메라를 켜면 그 순간부터 이 화면은 카메라다. 그런데 탭바가 계속 아래를
+   차지하고 있어 셔터가 66px 위로 밀려 있었다. 한 손으로 쥔 폰에서 엄지가
+   닿는 곳은 화면의 맨 아래인데, 그 자리를 이동 메뉴가 쓰고 있던 것이다.
+
+   그래서 촬영 중에는 탭바를 내리고 셔터를 그 자리로 보낸다. 카메라 앱이
+   다 그렇게 생겼고, 사용자는 이미 그 자리를 손끝으로 알고 있다.
+   나가는 길은 셔터 오른쪽의 닫기 버튼이다 (카메라를 끄면 탭바가 돌아온다). */
+body:has(.cap-live) .tabbar {
+  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.24s ease, opacity 0.2s ease;
+}
+body:has(.cap-live) .app {
+  padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+}
+/* 떠 있는 버튼들도 탭바 자리를 기준으로 잡혀 있으니 함께 내린다 */
+body:has(.cap-live) .to-top,
+body:has(.cap-live) .timer-bubble {
+  bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+}
+/* 화면을 더 쓴다 — 라벨이 크게 보일수록 판독이 잘 된다 */
+.cap-live .cam-frame { aspect-ratio: 3 / 4.4; }
+.cap-live .cap-actions { margin-top: 18px; }
+
 /* ── 헤더 ── */
 /* 로고는 금색 그라데이션을 벗고 잉크색으로 — 강조는 이름 뒷단어에만 남긴다 */
 .hdr { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 2px 0 22px; }

@@ -61,6 +61,12 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
     }
   }
 
+  // 켜는 길만 있고 끄는 길이 없었다. 촬영 모드에서 빠져나오려면 필요하다.
+  function stopCamera() {
+    stream?.getTracks().forEach((t) => t.stop());
+    setStream(null);
+  }
+
   // 화면을 벗어나면 카메라를 반드시 끈다 (표시등이 계속 켜져 있으면 불안하다)
   useEffect(() => {
     return () => stream?.getTracks().forEach((t) => t.stop());
@@ -222,7 +228,7 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
 
   return (
     <div
-      className={dragging ? "dragover" : ""}
+      className={`${dragging ? "dragover" : ""} ${live ? "cap-live" : ""}`.trim()}
       onDragOver={(e) => {
         e.preventDefault();
         setDragging(true);
@@ -403,7 +409,19 @@ export default function CaptureScreen({ onCapture, onBarcode, onWineList }) {
           }
           onClick={onShutter}
         />
-        <div style={{ width: 52 }} />
+        {/* 셔터 오른쪽은 빈칸이었다. 촬영 중에는 나가는 길을 여기 둔다 */}
+        {live ? (
+          <button
+            className="side-btn"
+            title={t("카메라 끄기")}
+            aria-label={t("카메라 끄기")}
+            onClick={stopCamera}
+          >
+            <Icon name="close" />
+          </button>
+        ) : (
+          <div style={{ width: 52 }} />
+        )}
       </div>
 
       {fileError && (
