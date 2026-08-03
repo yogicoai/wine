@@ -341,6 +341,14 @@ body:has(.cap-live) .timer-bubble {
 .scan-corner.br { bottom: 8px; right: 8px; border-left: none; border-top: none; }
 
 /* 진행 단계 — 지난 단계는 체크로 남는다 */
+/* 기다리는 동안의 한 줄 — 진행 표시가 주인공이므로 이쪽은 물러서 있는다 */
+.scan-tip {
+  margin: 22px auto 0; max-width: 300px; text-align: center;
+  font-size: 12.5px; line-height: 1.85; color: var(--ink-dim);
+  animation: tipIn 0.5s ease both;
+}
+.scan-tip i { display: block; color: var(--gold); opacity: 0.55; font-style: normal; margin-bottom: 5px; }
+@keyframes tipIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .loading-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 11px; }
 .loading-steps li {
   display: flex; align-items: center; gap: 11px;

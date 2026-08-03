@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { BrandEmblem } from "./Brand";
 import { t } from "@/lib/i18n";
+import { APP } from "@/lib/appProfile";
+import { tipsFor } from "@/lib/scanTips";
 
 const STEPS = [
   "라벨을 읽는 중",
@@ -11,8 +13,15 @@ const STEPS = [
   "인포그래픽을 그리는 중",
 ];
 
+// 팁은 기다림이 길어질 때만 띄운다.
+// DB 에 있는 술은 3초면 끝나는데, 그때 팁이 번쩍하고 사라지면 읽지도 못하고
+// 화면만 어수선해진다. 4초를 넘긴 사람에게만 보여 준다.
+const TIP_AFTER = 4000;
+const TIP_ROTATE = 8000;
+
 export default function LoadingScreen({ thumb }) {
   const [i, setI] = useState(0);
+  const [tip, setTip] = useState(null);
 
   useEffect(() => {
     // 앞 단계는 빠르게, 뒤로 갈수록 천천히.
@@ -26,6 +35,28 @@ export default function LoadingScreen({ thumb }) {
     };
     timer = setTimeout(tick, 1100);
     return () => clearTimeout(timer);
+  }, []);
+
+  // 순서를 섞는 일은 화면이 붙은 뒤에 한다 — 서버와 브라우저가 다른 것을
+  // 고르면 화면이 어긋난다.
+  useEffect(() => {
+    const pool = tipsFor(APP.key);
+    let n = Math.floor(Math.random() * pool.length);
+    let rotate;
+
+    const show = () => {
+      setTip(pool[n % pool.length]);
+      n += 1;
+    };
+    const first = setTimeout(() => {
+      show();
+      rotate = setInterval(show, TIP_ROTATE);
+    }, TIP_AFTER);
+
+    return () => {
+      clearTimeout(first);
+      clearInterval(rotate);
+    };
   }, []);
 
   return (
@@ -58,6 +89,14 @@ export default function LoadingScreen({ thumb }) {
           </li>
         ))}
       </ol>
+
+      {/* 기다림이 길어질 때만 — 진행 표시를 가리지 않게 아래에 조용히 둔다 */}
+      {tip && (
+        <p className="scan-tip" key={tip}>
+          <i>✦</i>
+          {t(tip)}
+        </p>
+      )}
     </div>
   );
 }
