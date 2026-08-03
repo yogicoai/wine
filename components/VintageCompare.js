@@ -1,15 +1,20 @@
 "use client";
 import { useEffect, useState } from "react";
 import { t, fmtWon } from "@/lib/i18n";
+import { LIVE_PRICE } from "@/lib/features";
 
 // 같은 술의 빈티지별 최저가 비교 — 애호가가 "어느 해를 살까" 판단할 때 쓰는 카드
 export default function VintageCompare({ name, keyword, currentVintage }) {
   const query = keyword || name;
   const [list, setList] = useState(null);
 
+  // 빈티지별 가격은 판매 중인 상품에서 뽑는다 — 그 목록이 없으면 낼 수 없다
+  const enabled = LIVE_PRICE;
+
   useEffect(() => {
     if (!query) return;
     let alive = true;
+    if (!enabled) return;
     fetch(`/api/vintages?q=${encodeURIComponent(query)}`)
       .then((r) => r.json())
       .then((d) => alive && setList(d.vintages || []))

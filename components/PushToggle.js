@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { t } from "@/lib/i18n";
+import { LIVE_PRICE } from "@/lib/features";
 
 // base64url(VAPID 공개키) → Uint8Array (브라우저 구독 API가 요구하는 형식)
 function urlBase64ToUint8Array(base64String) {
@@ -35,7 +36,11 @@ export default function PushToggle({ onToast }) {
         if (alive) setState({ ready: true, enabled: false, subscribed: false });
       }
     })();
-    return () => {
+    // 특가 알림은 값을 매일 확인할 수 있어야 성립한다.
+  // 지금은 그 창구가 없어 알림이 영영 오지 않는다 — 켜 두면 사용자를 기다리게 한다.
+  if (!LIVE_PRICE) return null;
+
+  return () => {
       alive = false;
     };
   }, []);

@@ -8,6 +8,7 @@ import { catOf } from "@/lib/cats";
 import Flag from "./Flag";
 import { drinkWindowState, cellarValue, priceTrend, priceStats, targetSuggestions } from "@/lib/cellar";
 import { t, fmtWon } from "@/lib/i18n";
+import { LIVE_PRICE } from "@/lib/features";
 
 const TABS = [
   { key: "have", label: t("보유") },
@@ -172,8 +173,9 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
         <PushToggle onToast={onToast} />
       </div>
 
-      {/* 셀러 가치 */}
-      {value && (
+      {/* 셀러 가치 — 실시간 시세가 있어야 성립한다 (lib/features.js 참고).
+          값을 못 가져오는 동안 "–" 만 띄워 두면 고장으로 보인다. */}
+      {LIVE_PRICE && value && (
         <div className="card">
           <div className="card-title">{t("셀러 가치")}</div>
 
@@ -348,24 +350,28 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
                   )}
                 </div>
               ) : (
-                <button
-                  className="mini-btn"
-                  onClick={() => {
-                    setEditing(it._id);
-                    setTargetInput(it.priceTarget || "");
-                  }}
-                >
-                  {it.priceTarget
-                    ? t("목표 {n}", { n: fmtWon(it.priceTarget) })
-                    : t("목표가 설정")}
-                </button>
+                /* 목표가는 값을 매일 확인할 수 있어야 뜻이 있다 (lib/features.js) */
+                LIVE_PRICE && (
+                  <button
+                    className="mini-btn"
+                    onClick={() => {
+                      setEditing(it._id);
+                      setTargetInput(it.priceTarget || "");
+                    }}
+                  >
+                    {it.priceTarget
+                      ? t("목표 {n}", { n: fmtWon(it.priceTarget) })
+                      : t("목표가 설정")}
+                  </button>
+                )
               )}
 
               <button className="mini-btn danger" onClick={() => remove(it._id)}>{t("삭제")}</button>
             </div>
 
-            {/* 가격 — 지금 값만으로는 싼지 알 수 없으므로 6개월 최저·최고를 함께 둔다 */}
-            {stats && (
+            {/* 가격 — 지금 값만으로는 싼지 알 수 없으므로 6개월 최저·최고를 함께 둔다.
+                시세를 받을 창구가 없으면 이 칸은 영영 비어 있으므로 통째로 감춘다. */}
+            {LIVE_PRICE && stats && (
               <div className="price-track">
                 <div className="price-facts">
                   <div className="pf now">

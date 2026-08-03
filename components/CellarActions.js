@@ -2,6 +2,7 @@
 import { useState } from "react";
 import TastingNote from "./TastingNote";
 import { t } from "@/lib/i18n";
+import { LIVE_PRICE } from "@/lib/features";
 
 // 결과 화면 → 셀러에 담기 / 위시리스트 / 마신 기록 남기기
 export default function CellarActions({ result, thumb, onToast, onChanged }) {
@@ -81,7 +82,7 @@ export default function CellarActions({ result, thumb, onToast, onChanged }) {
             <button className="cellar-btn" disabled={busy} onClick={() => add("wish")}>
               <b>☆</b>
               <span>{t("위시리스트")}</span>
-              <em>{t("특가 알림 받기")}</em>
+              <em>{LIVE_PRICE ? t("특가 알림 받기") : t("나중에 마실 술")}</em>
             </button>
             <button className="cellar-btn" disabled={busy} onClick={() => setNoteOpen(true)}>
               <b>✎</b>
@@ -91,7 +92,9 @@ export default function CellarActions({ result, thumb, onToast, onChanged }) {
           </div>
           {saved && (
             <div className="shop-note">
-              {t("셀러에 저장됨 · 상단 🍷 아이콘에서 확인하고 목표가를 설정할 수 있습니다.")}
+              {LIVE_PRICE
+                ? t("셀러에 저장됨 · 상단 🍷 아이콘에서 확인하고 목표가를 설정할 수 있습니다.")
+                : t("셀러에 저장됨 · 상단 🍷 아이콘에서 확인할 수 있습니다.")}
             </div>
           )}
         </>
