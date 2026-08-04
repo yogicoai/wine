@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getDb } from "@/lib/mongodb";
 import { catalogKey } from "@/lib/catalog";
+import { scopeQuery, inScope } from "@/lib/appProfile";
 
 export const runtime = "nodejs";
 
@@ -26,9 +27,13 @@ export async function GET(request) {
   const projection = { name: 1, category: 1, producer: 1, vintage: 1, key: 1 };
 
   // 1) 추천 이름이 카탈로그에 있는지 (빈티지 무시하고 이름 키로 대조)
+  //
+  // 이름만 맞으면 되는 것이 아니라 이 앱이 다루는 주종이어야 한다. AI가 사케를
+  // 설명하다 옆동네 술 이름을 꺼내는 일이 있는데, 그것이 카탈로그에 있으면
+  // 사케 렌즈의 "비슷한 술" 자리에 와인이 앉는다.
   const keys = names.map((n) => catalogKey(n, null));
   const found = keys.length
-    ? await col.find({ key: { $in: keys } }, { projection }).toArray()
+    ? await col.find({ key: { $in: keys }, category: scopeQuery() }, { projection }).toArray()
     : [];
   const matched = found
     .filter((d) => d.key !== excludeKey)
@@ -37,7 +42,8 @@ export async function GET(request) {
   // 2) 모자라면 같은 주종에서 채운다 (많이 조회된 것 우선)
   let fromCatalog = [];
   const shortfall = want - matched.length;
-  if (shortfall > 0 && category) {
+  // 주종을 콕 집어 왔더라도 앱 범위 밖이면 채우지 않는다
+  if (shortfall > 0 && category && inScope(category)) {
     const seen = new Set([excludeKey, ...matched.map((m) => catalogKey(m.name, null))]);
     const extra = await col
       .find({ category, key: { $nin: [...seen] } }, { projection })
