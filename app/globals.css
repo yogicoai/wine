@@ -487,7 +487,7 @@ body:has(.cap-live) .timer-bubble {
   /* 블렌드가 카드 배경까지 번지지 않도록 이 안에서만 섞이게 한다 */
   isolation: isolate;
   box-shadow:
-    0 26px 46px -22px rgba(0, 0, 0, 0.8),
+    0 26px 46px -22px rgba(0, 0, 0, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   padding: 16px;
 }
@@ -546,7 +546,7 @@ body:has(.cap-live) .timer-bubble {
 
 /* 신뢰도 미터 */
 .meter-row { display: flex; align-items: center; gap: 14px; }
-.meter { flex: 1; height: 5px; background: rgba(255, 255, 255, 0.08); border-radius: var(--pill); overflow: hidden; }
+.meter { flex: 1; height: 5px; background: var(--line); border-radius: var(--pill); overflow: hidden; }
 .meter > i {
   display: block; height: 100%;
   background: linear-gradient(90deg, var(--wine), var(--gold-lo), var(--gold));
@@ -647,7 +647,7 @@ body:has(.cap-live) .timer-bubble {
   padding: 14px 8px 12px; text-align: center; border-radius: var(--radius-sm);
   transition: background 0.2s, box-shadow 0.2s, transform 0.12s;
 }
-.timer-btn:hover { background: rgba(255, 255, 255, 0.1); }
+.timer-btn:hover { background: var(--surface-2); }
 .timer-btn:active { transform: scale(0.98); }
 /* 고른 항목 — 시작 전 선택 상태 */
 .timer-btn.on { background: var(--gold-soft); box-shadow: inset 0 0 0 1.5px var(--gold); }
@@ -698,7 +698,7 @@ body:has(.cap-live) .timer-bubble {
 }
 
 .timer-bar {
-  height: 4px; background: rgba(255, 255, 255, 0.08); border-radius: var(--pill);
+  height: 4px; background: var(--line); border-radius: var(--pill);
   margin: 0 auto 14px; max-width: 200px; overflow: hidden;
 }
 .timer-bar > i {
@@ -757,7 +757,7 @@ body:has(.cap-live) .timer-bubble {
   color: var(--ink); font-family: var(--font-b); letter-spacing: 0;
   transition: background 0.2s, color 0.2s;
 }
-.chip:hover { background: rgba(255, 255, 255, 0.11); color: var(--gold-hi); }
+.chip:hover { background: var(--surface-2); color: var(--gold-hi); }
 .tips-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .tips-list li {
   font-size: 13px; line-height: 1.75; padding-left: 20px; position: relative;
@@ -780,7 +780,7 @@ body:has(.cap-live) .timer-bubble {
   border-radius: var(--pill); transition: background 0.2s, color 0.2s, transform 0.12s;
   font-family: var(--font-b); font-weight: 600;
 }
-.btn:hover { background: rgba(255, 255, 255, 0.12); color: var(--ink); }
+.btn:hover { background: var(--surface-2); color: var(--ink); }
 .btn:active { transform: scale(0.985); }
 .btn.primary {
   background: var(--gold); color: #17120b; border-color: transparent; box-shadow: none;

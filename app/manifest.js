@@ -14,8 +14,9 @@ export default function manifest() {
     start_url: "/",
     display: "standalone",
     orientation: "portrait",
-    background_color: "#12100c",
-    theme_color: "#12100c",
+    // 앱마다 배경이 다르다 — 밝은 앱에서 검정으로 시작하면 열 때마다 한 번 깜빡인다
+    background_color: APP.theme.bg,
+    theme_color: APP.theme.bg,
     lang: APP.locale,
     // 홈 화면 아이콘도 앱마다 다르다 — 마크를 그 앱 배경색 판에 올린 것
     icons: [
