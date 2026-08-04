@@ -17,6 +17,7 @@ import TimerVisual from "./TimerVisual";
 import ScrollTop from "./ScrollTop";
 import ShareCard from "./ShareCard";
 import VintageCompare from "./VintageCompare";
+import NearbyPlaces from "./NearbyPlaces";
 import CommunityRating from "./CommunityRating";
 
 // 판매처 조회 — 히어로의 대표 이미지와 구매 정보 카드가 같은 결과를 쓴다.
@@ -668,6 +669,8 @@ export default function ResultScreen({
       <CellarActions result={r} thumb={thumb} onToast={onToast} onChanged={onCellarChanged} />
     ),
     buy: <PurchaseCard shop={shop} />,
+    // 온라인으로는 살 수 없는 술이라(전통주 제외) "근처에서 마실 곳"이 실질적인 답이다
+    nearby: <NearbyPlaces category={r.category} name={r.name} />,
     vintage: <VintageCompare name={r.name} keyword={r.searchKeyword} currentVintage={r.vintage} />,
     taste: Array.isArray(r.tasteProfile) && r.tasteProfile.length >= 3 && (
       <div className="card">
