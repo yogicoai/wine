@@ -76,13 +76,13 @@ export default function NearbyPlaces({ category, name }) {
           aria-label={t("지역")}
         />
         <button className="btn" type="submit" disabled={input.trim().length < 2}>
-          {t("찾기")}
+          {t("주변 찾기")}
         </button>
       </form>
 
       {!area && (
         <p className="shop-note">
-          {t("지역을 적으면 그 근처에서 이런 술을 다루는 가게를 찾아 드립니다.")}
+          {t("지역을 적으면 그 근처 와인바와 와인을 파는 곳을 찾아 드립니다.")}
         </p>
       )}
 
@@ -100,7 +100,7 @@ export default function NearbyPlaces({ category, name }) {
       )}
 
       {!loading && drink.length > 0 && (
-        <PlaceList label={t("마실 수 있는 곳")} places={drink} />
+        <PlaceList label={t(data?.terms?.drinkLabel || "근처 술집")} places={drink} />
       )}
       {!loading && buy.length > 0 && (
         <PlaceList label={t("가까운 주류 판매점")} places={buy} />
@@ -115,7 +115,7 @@ export default function NearbyPlaces({ category, name }) {
       {!loading && (drink.length > 0 || buy.length > 0) && (
         <div className="shop-note">
           {/* 재고를 아는 것처럼 보이면 안 된다. 우리가 아는 것은 가게의 분류뿐이다. */}
-          {t("가게 분류로 찾은 곳이라 이 술이 있는지는 가게에 확인해 주세요.")}
+          {t("가게 분류로 찾은 곳이라 이 와인이 있는지는 가게에 확인해 주세요.")}
         </div>
       )}
     </div>
