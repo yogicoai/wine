@@ -7,6 +7,7 @@ import {
   isShopRetired,
   shopSearchUrl,
   productUrlFromImage,
+  searchGoodsImage,
 } from "@/lib/naver";
 import { getDb } from "@/lib/mongodb";
 import { catalogKey } from "@/lib/catalog";
@@ -19,17 +20,33 @@ export const runtime = "nodejs";
 export async function GET(request) {
   const params = new URL(request.url).searchParams;
   const queries = params.getAll("q").filter(Boolean);
-  const type = params.get("type") === "food" ? "food" : "liquor";
+  // liquor 술 · food 안주 · goods 잔과 도구
+  const asked = params.get("type");
+  const type = asked === "food" || asked === "goods" ? asked : "liquor";
   if (!queries.length) return NextResponse.json({ error: "q 필요" }, { status: 400 });
   if (!hasNaverKeys()) return NextResponse.json({ items: null, results: null, noApi: true });
 
   try {
-    // 여러 키워드 → 키워드별 대표 상품 1개씩 (안주 추천용)
-    if (queries.length > 1) {
+    // 여러 키워드 → 키워드별 대표 상품 1개씩 (안주·잔·도구 추천용)
+    //
+    // 술과 달리 이쪽은 온라인 판매에 아무 제한이 없어 링크가 실제 구매로 이어진다.
+    // 쇼핑 검색 API가 내려가 값은 못 가져오지만, 사진은 이미지 검색으로 되살린다.
+    // 이름만 적힌 줄보다 사진이 붙은 줄이 훨씬 잘 읽힌다.
+    if (type !== "liquor" || queries.length > 1) {
       const results = await Promise.all(
         queries.map(async (q) => {
+          if (type === "food") {
+            try {
+              const item = pickRepresentative(await searchShop(q, type));
+              if (item) return { q, item };
+            } catch {
+              /* 쇼핑 API 가 죽어 있다 — 사진으로 넘어간다 */
+            }
+          }
           try {
-            return { q, item: pickRepresentative(await searchShop(q, type)) };
+            // 잔·도구는 "위스키 잔"처럼 술 이름을 달고 있어 술 거르기를 끈다
+            const shot = await searchGoodsImage(q, { avoidDrink: type === "food" });
+            return { q, item: shot ? { title: shot.title, image: shot.image } : null };
           } catch {
             return { q, item: null };
           }

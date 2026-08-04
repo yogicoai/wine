@@ -221,10 +221,48 @@ function usePairingProducts(pairs) {
   };
 }
 
+// 잔·도구 사진 한 벌.
+//
+// 예전에는 "결과 화면마다 호출이 늘 이유가 없다"며 걸지 않았다. 그때는 쇼핑
+// 검색 API 였고 값도 함께 받아 왔다. 지금은 이미지 검색이라 무료이고 일주일을
+// 묵혀 쓰므로, 이름만 적힌 줄에 사진을 붙이는 값어치가 호출 비용보다 크다.
+function useGoodsImages(keywords) {
+  const key = (keywords || []).join("|");
+  const [map, setMap] = useState(null);
+
+  useEffect(() => {
+    setMap(null);
+    if (!key) return;
+    let alive = true;
+    const qs = key.split("|").map((k) => `q=${encodeURIComponent(k)}`).join("&");
+    fetch(`/api/shop?type=goods&${qs}`)
+      .then((r) => r.json())
+      .then((d) => {
+        if (alive && d.results) setMap(Object.fromEntries(d.results.map((r) => [r.q, r.item])));
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [key]);
+
+  return map;
+}
+
+// 사진이 있으면 사진을, 없거나 죽었으면 원래 쓰던 그림글자를 보여 준다.
+function GoodsShot({ item, emoji }) {
+  const [dead, setDead] = useState(false);
+  if (!item?.image || dead) return <div className="emo">{emoji}</div>;
+  return (
+    <img className="goods-shot" src={item.image} alt="" loading="lazy" onError={() => setDead(true)} />
+  );
+}
+
 // 무슨 잔에 마실 것인가 — 술을 산 뒤에야 궁금해지는데 물어볼 데가 마땅치 않다.
 // 잔 이름만 알려 주면 소용이 없으므로, 모양과 이유를 함께 적고 살 수 있는 곳까지 잇는다.
 function GlasswareCard({ result }) {
   const { glasses, tip } = glasswareFor(result);
+  const shots = useGoodsImages((glasses || []).map((g) => g.shopKeyword).filter(Boolean));
   if (!glasses.length) return null;
 
   return (
@@ -233,13 +271,12 @@ function GlasswareCard({ result }) {
       <div className="pair-list">
         {glasses.map((g) => (
           <div className="pair" key={g.key}>
-            <div className="emo">🥂</div>
+            <GoodsShot item={shots?.[g.shopKeyword]} emoji="🥂" />
             <div className="pair-body">
               <b>{t(g.name)}</b>
               <span>
                 {t(g.shape)} — {t(g.why)}
               </span>
-              {/* 잔은 상품 조회를 걸지 않는다 — 결과 화면마다 호출이 늘 이유가 없다 */}
               <a
                 className="glass-buy"
                 href={`https://www.coupang.com/np/search?q=${encodeURIComponent(g.shopKeyword)}`}
@@ -261,6 +298,7 @@ function GlasswareCard({ result }) {
 // 규칙으로 고르므로(lib/gear.js) 분석 비용이 없고, 권할 게 없는 술은 카드 자체가 뜨지 않는다.
 function GearCard({ result }) {
   const { items, tip } = gearFor(result);
+  const shots = useGoodsImages((items || []).map((g) => g.shopKeyword).filter(Boolean));
   if (!items.length) return null;
 
   return (
@@ -269,7 +307,7 @@ function GearCard({ result }) {
       <div className="pair-list">
         {items.map((g) => (
           <div className="pair" key={g.key}>
-            <div className="emo">{g.emoji}</div>
+            <GoodsShot item={shots?.[g.shopKeyword]} emoji={g.emoji} />
             <div className="pair-body">
               <b>{t(g.name)}</b>
               <span>{t(g.why)}</span>
@@ -322,6 +360,7 @@ function PairingCard({ pairs, tip, avoid }) {
 }
 
 function PairingBuy({ item, keyword }) {
+  const [shotDead, setShotDead] = useState(false);
   const term = keyword || item?.title;
   if (!term) return null;
 
@@ -351,7 +390,10 @@ function PairingBuy({ item, keyword }) {
     : `https://www.coupang.com/np/search?q=${encodeURIComponent(term)}`;
   return (
     <a className="pair-buy" href={href} target="_blank" rel="noreferrer">
-      {item.image && <img src={item.image} alt="" />}
+      {/* 사진 주소는 남의 서버를 가리킨다. 죽으면 깨진 그림표 대신 아무것도 그리지 않는다 */}
+      {item.image && !shotDead && (
+        <img src={item.image} alt="" loading="lazy" onError={() => setShotDead(true)} />
+      )}
       <span className="pair-buy-name">
         {item.title}
         <em>{item.direct ? item.mall : t("쿠팡에서 검색")}</em>
