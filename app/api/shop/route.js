@@ -6,7 +6,11 @@ import {
   hasNaverKeys,
   isShopRetired,
   shopSearchUrl,
+  productUrlFromImage,
 } from "@/lib/naver";
+import { getDb } from "@/lib/mongodb";
+import { catalogKey } from "@/lib/catalog";
+import { ONLINE_SALE_OK, onlineShops } from "@/lib/onlineSale";
 
 export const runtime = "nodejs";
 
@@ -43,6 +47,7 @@ export async function GET(request) {
         items: [],
         retired: true,
         searchUrl: shopSearchUrl(queries[0]),
+        ...(await storedProduct(queries[0])),
       });
     }
 
@@ -58,5 +63,33 @@ export async function GET(request) {
   } catch (err) {
     console.error("[shop]", err.message);
     return NextResponse.json({ items: null, results: null, error: true });
+  }
+}
+
+/**
+ * 카탈로그에 담아 둔 것에서 구매에 쓸 만한 것을 꺼낸다.
+ *
+ * 쇼핑 검색 API가 없어 값은 못 가져오지만, 사진을 붙일 때 받아 둔 주소 안에
+ * 네이버쇼핑 카탈로그 번호가 남아 있다. 그 번호로 상품 페이지를 바로 열 수 있다.
+ *
+ * 온라인으로 살 수 있는지도 함께 알려 준다. 전통주만 통신판매가 허용되므로
+ * 그 술에만 "지금 주문할 수 있다"고 말할 수 있다.
+ */
+async function storedProduct(name) {
+  try {
+    const db = await getDb();
+    if (!db) return {};
+    const doc = await db
+      .collection("catalog")
+      .findOne({ key: catalogKey(name, null) }, { projection: { image: 1, category: 1 } });
+    if (!doc) return {};
+    const online = ONLINE_SALE_OK.has(doc.category);
+    return {
+      productUrl: productUrlFromImage(doc.image),
+      onlineSale: online,
+      ...(online ? { onlineShops: onlineShops(name) } : {}),
+    };
+  } catch {
+    return {};
   }
 }

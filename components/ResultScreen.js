@@ -50,7 +50,16 @@ function useShopItems(name, keyword) {
           }
           // 가격은 못 가져와도 살 곳은 안다 — 다른 후보를 더 볼 것 없이 링크로 끝낸다
           if (d.retired) {
-            return setState({ loading: false, items: [], noApi: false, searchUrl: d.searchUrl });
+            return setState({
+              loading: false,
+              items: [],
+              noApi: false,
+              searchUrl: d.searchUrl,
+              // 값은 못 가져와도 상품 페이지와 "온라인으로 살 수 있는가"는 안다
+              productUrl: d.productUrl || null,
+              onlineSale: !!d.onlineSale,
+              onlineShops: d.onlineShops || null,
+            });
           }
         } catch {
           /* 다음 후보 시도 */
@@ -135,6 +144,30 @@ function PurchaseCard({ shop }) {
           {t("지금은 판매처 가격을 자동으로 가져올 수 없습니다. 아래에서 바로 찾아보실 수 있습니다.")}
         </div>
       )}
+      {/* 전통주만 통신판매가 허용된다. 그 술에서만 "지금 주문할 수 있다"고 말할 수 있고,
+          나머지는 링크를 잘 걸어도 그 페이지에서 결제가 되지 않는다. */}
+      {!state.loading && state.onlineSale && state.onlineShops?.length > 0 && (
+        <>
+          <div className="online-ok">{t("이 술은 온라인으로 주문할 수 있습니다")}</div>
+          <div className="online-list">
+            {state.onlineShops.map((s2, i) => (
+              <a className="online-shop" key={i} href={s2.url} target="_blank" rel="noreferrer">
+                <b>{s2.name}</b>
+                <span>{s2.note}</span>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* 상품 페이지 주소는 사진에 남아 있던 카탈로그 번호로 만든 것이라 확인이 안 된다.
+          그래서 아래 검색 링크를 대신하지 않고 그 위에 함께 둔다 — 안 열려도 길이 남는다. */}
+      {!state.loading && state.productUrl && (
+        <a className="product-page" href={state.productUrl} target="_blank" rel="noreferrer">
+          {t("네이버쇼핑 상품 페이지 열기")}
+        </a>
+      )}
+
       <div className="shop-note">
         {state.items?.length > 0 && (
           <>
