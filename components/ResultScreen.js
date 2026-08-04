@@ -160,11 +160,14 @@ function PurchaseCard({ shop }) {
         </>
       )}
 
-      {/* 상품 페이지 주소는 사진에 남아 있던 카탈로그 번호로 만든 것이라 확인이 안 된다.
-          그래서 아래 검색 링크를 대신하지 않고 그 위에 함께 둔다 — 안 열려도 길이 남는다. */}
+      {/* 사진에 남아 있던 카탈로그 번호로 만든 정확한 상품 주소.
+          일반 주류는 온라인 판매가 막혀 있어 그 페이지가 결제가 아니라 정보 페이지다 —
+          공식 사진과 정확한 용량·도수가 있다. 전통주만 실제로 살 수 있다. */}
       {!state.loading && state.productUrl && (
         <a className="product-page" href={state.productUrl} target="_blank" rel="noreferrer">
-          {t("네이버쇼핑 상품 페이지 열기")}
+          {state.onlineSale
+            ? t("네이버쇼핑에서 이 제품 구매")
+            : t("네이버쇼핑에서 이 제품 정보 보기")}
         </a>
       )}
 
