@@ -99,9 +99,7 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover", // 아이폰 노치 영역까지 배경이 채워지도록
-  // 모바일 브라우저 상단바 색 — 앱마다 배경이 다르고, 밝은 앱도 있다.
-  // 검정으로 박아 두면 크림색 화면 위에 검은 띠가 얹힌다.
-  themeColor: APP.theme.bg,
+  themeColor: "#12100c", // 모바일 브라우저 상단바 색
 };
 
 // 저장해 둔 글자 크기를 첫 그림 전에 적용한다.
