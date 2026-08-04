@@ -558,10 +558,17 @@ function ServingTimer({ result }) {
 //
 // 상품 사진 → 촬영 사진 → 주종 엠블럼 순으로 내려간다.
 function HeroVisual({ result, thumb, shop }) {
-  const [failed, setFailed] = useState(false);
+  // 어느 사진이 죽었는지를 기억한다.
+  //
+  // 예전에는 "상품 사진이 실패했다"는 깃발 하나만 두고 내 사진으로 물러섰다.
+  // 그런데 내 사진 자리에 들어오는 것도 남의 서버에 있는 주소일 수 있고, 그것이
+  // 죽으면 물러설 곳이 없어 깨진 그림표가 그대로 남았다 — 전통술 앱에서
+  // 실제로 그랬다. 주소를 하나씩 지워 가며 마지막에는 엠블럼까지 물러선다.
+  const [dead, setDead] = useState([]);
   const product = shop.items?.find((it) => it.image)?.image || null;
-  const usingProduct = !!product && !failed;
-  const shown = usingProduct ? product : thumb;
+  const alive = [product, thumb].filter(Boolean).filter((src) => !dead.includes(src));
+  const shown = alive[0] || null;
+  const usingProduct = !!shown && shown === product;
 
   // 상품을 찾는 동안 자리를 비워 두면 화면이 튀므로 자리를 잡아 둔다
   if (shop.loading && !thumb) {
@@ -588,7 +595,7 @@ function HeroVisual({ result, thumb, shop }) {
           className="hero-shot"
           src={shown}
           alt={result.name}
-          onError={() => setFailed(true)}
+          onError={() => setDead((prev) => (prev.includes(shown) ? prev : [...prev, shown]))}
         />
         {/* 상품 사진을 쓰는 경우, 내가 찍은 사진은 구석에 작게 남긴다 */}
         {usingProduct && thumb && (

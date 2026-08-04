@@ -292,12 +292,25 @@ export default function Home() {
     loadSessions();
   }
 
+  /**
+   * 화면을 옮긴다.
+   *
+   * 서랍(기록·내 정보)은 화면 위에 덮여 뜬다. 그래서 화면만 바꾸면 뒤에서
+   * 바뀌고 서랍은 그대로 남는다 — 기록을 열어 둔 채 "찾기"를 눌러도 기록이
+   * 덮고 있어 무엇을 눌렀는지 알 수 없었다. 옮길 때는 반드시 함께 닫는다.
+   */
+  function go(next) {
+    setDrawer(false);
+    setAccount(false);
+    setScreen(next);
+  }
+
   function rescan() {
     setResult(null);
     setThumb(null);
     setMeta(null);
     setWineList(null);
-    setScreen("capture");
+    go("capture");
   }
 
   // 셀러 항목 열기 — 저장해둔 분석 결과 스냅샷을 그대로 복원
@@ -344,7 +357,7 @@ export default function Home() {
         <>
           <CaptureScreen onCapture={analyze} onBarcode={scanBarcode} onWineList={scanWineList} />
           {/* 처음 온 사람에게만 한 번 — 닫으면 다시 나오지 않는다 */}
-          <FirstHint onOpenDiscover={() => setScreen("discover")} />
+          <FirstHint onOpenDiscover={() => go("discover")} />
         </>
       )}
       {screen === "loading" && <LoadingScreen thumb={thumb} />}
@@ -391,13 +404,13 @@ export default function Home() {
       <AccountDrawer
         open={account}
         onClose={() => setAccount(false)}
-        onOpenCellar={() => setScreen("cellar")}
+        onOpenCellar={() => go("cellar")}
         onOpenWine={(name) => explore(name)}
         onToast={showToast}
       />
 
       {/* 진행 중인 준비 — 어느 화면에 있든 떠 있고, 누르면 자세히 볼 수 있다 */}
-      <TimerBubble onOpen={() => setAccount(true)} />
+      <TimerBubble onOpen={() => { setDrawer(false); setAccount(true); }} />
 
       {/* 아래 탭 — 화면 위쪽 아이콘 줄을 대신한다.
           한 손으로 쥔 폰에서 엄지가 닿는 곳은 위가 아니라 아래다.
@@ -412,25 +425,26 @@ export default function Home() {
         </button>
         <button
           className={`tab ${screen === "discover" ? "on" : ""}`}
-          onClick={() => setScreen("discover")}
+          onClick={() => go("discover")}
         >
           <Icon name="search" />
           <span>{t("찾기")}</span>
         </button>
         <button
           className={`tab ${screen === "cellar" ? "on" : ""}`}
-          onClick={() => setScreen("cellar")}
+          onClick={() => go("cellar")}
         >
           <Icon name="glass" />
           <span>{t("셀러")}</span>
         </button>
-        <button className="tab" onClick={() => setDrawer(true)}>
+        {/* 서랍 둘이 겹쳐 뜨면 안 된다 — 하나를 열 때 다른 하나를 닫는다 */}
+        <button className="tab" onClick={() => { setAccount(false); setDrawer(true); }}>
           <Icon name="archive" />
           <span>{t("기록")}</span>
         </button>
         <button
           className={`tab ${activeTimers.length ? "has-dot" : ""}`}
-          onClick={() => setAccount(true)}
+          onClick={() => { setDrawer(false); setAccount(true); }}
           aria-label={
             activeTimers.length
               ? t("내 정보 · 준비 {n}건 진행 중", { n: activeTimers.length })

@@ -2,8 +2,8 @@
 import { useEffect, useMemo, useState } from "react";
 import Radar from "./Radar";
 import PushToggle from "./PushToggle";
-import CatIcon from "./CatIcon";
 import Sparkline from "./Sparkline";
+import Thumb from "./Thumb";
 import { catOf } from "@/lib/cats";
 import Flag from "./Flag";
 import { drinkWindowState, cellarValue, priceTrend, priceStats, targetSuggestions } from "@/lib/cellar";
@@ -129,7 +129,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
               target="_blank"
               rel="noreferrer"
             >
-              {d.thumb && <img src={d.thumb} alt="" />}
+              <Thumb src={d.thumb} className="" fallback="none" />
               <div>
                 <b>{d.name}</b>
                 <span>
@@ -277,13 +277,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
         return (
           <div className="cellar-item" key={it._id}>
             <button className="cellar-main" onClick={() => onOpen?.(it._id)}>
-              {it.thumb ? (
-                <img className="hist-thumb" src={it.thumb} alt="" />
-              ) : (
-                <div className="hist-thumb">
-                  <CatIcon category={it.category} size={26} />
-                </div>
-              )}
+              <Thumb src={it.thumb} category={it.category} />
               <div className="cellar-info">
                 <div className="hist-name">{it.name}</div>
                 <div className="hist-meta">

@@ -1,7 +1,7 @@
 "use client";
 import { catOf } from "@/lib/cats";
 import Icon from "./Icon";
-import CatIcon from "./CatIcon";
+import Thumb from "./Thumb";
 import { t } from "@/lib/i18n";
 
 export default function HistoryDrawer({ open, sessions, noDb, onClose, onOpenSession, onDelete }) {
@@ -31,13 +31,7 @@ export default function HistoryDrawer({ open, sessions, noDb, onClose, onOpenSes
           const cat = catOf(s.result?.category);
           return (
             <button key={s._id} className="hist-item" onClick={() => onOpenSession(s._id)}>
-              {s.thumb ? (
-                <img className="hist-thumb" src={s.thumb} alt="" />
-              ) : (
-                <div className="hist-thumb">
-                  <CatIcon category={s.result?.category} size={26} />
-                </div>
-              )}
+              <Thumb src={s.thumb} category={s.result?.category} />
               <div>
                 <div className="hist-name">{s.result?.name || t("인식 실패")}</div>
                 <div className="hist-meta">
