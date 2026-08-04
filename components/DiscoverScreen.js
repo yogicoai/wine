@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import CatIcon from "./CatIcon";
+import TrendCard from "./TrendCard";
 import TasteQuiz from "./TasteQuiz";
 import { PRICE_BANDS } from "@/lib/curation";
 import Flag from "./Flag";
@@ -159,6 +160,9 @@ export default function DiscoverScreen({ onOpen, onToast }) {
 
   return (
     <div className="result">
+      {/* 요즘 많이 찾는 술 — 무엇을 찾을지 정하지 못한 사람에게 첫 실마리가 된다 */}
+      <TrendCard />
+
       {/* 검색 */}
       <div className="card">
         <div className="card-title">{t("이름으로 찾기")}</div>
