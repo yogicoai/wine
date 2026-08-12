@@ -3,6 +3,27 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
-    }
-  }
+    },
+    "target": "es2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": [
+    "app/**/*.js",
+    "components/**/*.js",
+    "lib/**/*.js",
+    "scripts/**/*.mjs",
+    "*.js",
+    "*.mjs"
+  ],
+  "exclude": ["node_modules", ".next", "out", "build", "public"]
 }
