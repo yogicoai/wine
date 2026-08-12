@@ -61,7 +61,10 @@ export default function NearbyPlaces({ category, name }) {
 
   const drink = data?.places?.drink || [];
   const buy = data?.places?.buy || [];
-  const empty = !loading && area && drink.length === 0 && buy.length === 0;
+  // 못 찾은 것과 못 물어본 것은 다르다. 키가 없어 부르지도 못했으면서
+  // "그 동네에는 없습니다"라고 하면 거짓말이 된다 — 실제로 그렇게 나갔다.
+  const cannotAsk = data?.reason === "키 없음";
+  const empty = !loading && area && !cannotAsk && drink.length === 0 && buy.length === 0;
 
   return (
     <div className="card">
@@ -109,6 +112,12 @@ export default function NearbyPlaces({ category, name }) {
       {empty && (
         <p className="shop-note">
           {t("{area} 근처에서는 찾지 못했습니다. 더 넓은 지역 이름으로 다시 찾아보세요.", { area })}
+        </p>
+      )}
+
+      {!loading && cannotAsk && (
+        <p className="shop-note err">
+          {t("지금은 주변 가게를 찾을 수 없습니다. 잠시 후 다시 시도해 주세요.")}
         </p>
       )}
 
