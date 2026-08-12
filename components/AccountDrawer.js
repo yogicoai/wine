@@ -8,6 +8,7 @@ import useActiveTimers from "./useActiveTimer";
 import { clearTimer, progressOf, formatRemain } from "@/lib/timer";
 import { t } from "@/lib/i18n";
 import { LOCALES, getContentLocale, setContentLocale } from "@/lib/locale";
+import { APP_LOCALES } from "@/lib/appProfile";
 import { MULTILINGUAL } from "@/lib/features";
 import { APP } from "@/lib/appProfile";
 
@@ -32,7 +33,7 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine,
     if (key === lang) return;
     // 번역이 준비되지 않은 언어는 고를 수 없다 — 반쯤 번역된 화면이
     // 아무것도 없는 것보다 나쁘다 (lib/features.js 에 이유를 적어 두었다)
-    if (!MULTILINGUAL && key !== APP.locale) return;
+    if (!MULTILINGUAL && !APP_LOCALES.includes(key)) return;
     setContentLocale(key);
     setLang(key);
     // 안내는 고른 언어로 — 그 언어를 읽는 사람에게 하는 말이다
@@ -95,7 +96,7 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine,
         <div className="acct-section">{t("언어")}</div>
         <div className="acct-lang" role="group" aria-label={t("언어")}>
           {LOCALES.map((l) => {
-            const ready = MULTILINGUAL || l.key === APP.locale;
+            const ready = MULTILINGUAL || APP_LOCALES.includes(l.key);
             return (
               <button
                 key={l.key}
