@@ -68,7 +68,9 @@ export default function NearbyPlaces({ category, name }) {
 
   return (
     <div className="card">
-      <div className="card-title">{t("근처에서 마실 수 있는 곳")}</div>
+      {/* "근처에서 마실 수 있는 곳"이라 적었더니 이 술을 거기서 마실 수 있다는 뜻으로
+          읽혔다. 우리가 아는 것은 가게의 분류뿐이라 그렇게 말할 수 없다. */}
+      <div className="card-title">{t("이런 술을 다루는 근처 가게")}</div>
 
       <form className="area-form" onSubmit={submit}>
         <input

@@ -255,11 +255,23 @@ function useGoodsImages(keywords) {
 }
 
 // 사진이 있으면 사진을, 없거나 죽었으면 원래 쓰던 그림글자를 보여 준다.
+//
+// 죽었다는 표시를 참·거짓이 아니라 "어느 주소가 죽었는지"로 들고 있는다.
+// 참·거짓으로 두면 사진이 새로 와도 죽은 채로 남고, 반대로 주소가 바뀌었는데
+// 표시가 남아 멀쩡한 사진을 안 그리는 일이 생긴다.
 function GoodsShot({ item, emoji }) {
-  const [dead, setDead] = useState(false);
-  if (!item?.image || dead) return <div className="emo">{emoji}</div>;
+  const src = item?.image || null;
+  const [dead, setDead] = useState(null);
+  if (!src || dead === src) return <div className="emo">{emoji}</div>;
   return (
-    <img className="goods-shot" src={item.image} alt="" loading="lazy" onError={() => setDead(true)} />
+    <img
+      key={src}
+      className="goods-shot"
+      src={src}
+      alt=""
+      loading="lazy"
+      onError={() => setDead(src)}
+    />
   );
 }
 
