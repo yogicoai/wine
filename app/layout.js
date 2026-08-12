@@ -106,15 +106,15 @@ export const viewport = {
 // 리액트가 붙은 뒤에 적용하면 기본 크기로 한 번 그려졌다가 튄다.
 // 이 시점에는 body 가 아직 없으므로 html 의 CSS 변수로 넘긴다 (globals.css 가 받아 쓴다)
 //
-// 지금은 기능을 내보내지 않으므로(lib/features.js) 배율을 적용하지 않는다.
-// 전에 쓰던 사람의 기기에는 값이 남아 있어 그대로 두면 화면이 어긋난 채 뜬다.
-const APPLY_SCALE = FONT_SCALE
-  ? `try{
+// 기능이 꺼져 있을 때(lib/features.js) 남은 값을 지우는 script 를 함께 내보내고
+// 있었는데, 그것 때문에 리액트 경고만 나고 하는 일은 없었다. 남은 값을 읽는 데가
+// 한 곳도 없다 — --ui-zoom 을 세우는 곳은 둘뿐이고 둘 다 이 기능 안이다.
+// 그래서 꺼져 있으면 아무것도 그리지 않는다.
+const APPLY_SCALE = `try{
   var k=localStorage.getItem("${APP.storageKey}.fontScale");
   var v={s:0.92,m:1,l:1.12,xl:1.24}[k];
   if(v)document.documentElement.style.setProperty('--ui-zoom',v);
-}catch(e){}`
-  : `try{localStorage.removeItem('${APP.storageKey}.fontScale')}catch(e){}`;
+}catch(e){}`;
 
 export default async function RootLayout({ children }) {
   // 화면 언어는 쿠키가 정한다. 서버가 여기서 읽어 처음부터 그 언어로 그려야
@@ -137,7 +137,11 @@ export default async function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
-        <script dangerouslySetInnerHTML={{ __html: APPLY_SCALE }} />
+        {/* 첫 그림 전에 배율을 적용해야 하므로 head 안의 날 script 여야 한다.
+            리액트는 이런 script 에 경고를 내지만(브라우저에서 다시 그릴 때는 실행되지
+            않는다는 안내다), 우리에게 필요한 것은 첫 그림 딱 한 번이라 맞는 자리다.
+            기능이 꺼져 있으면 아예 그리지 않는다 — 할 일이 없는 script 가 경고만 낸다. */}
+        {FONT_SCALE && <script dangerouslySetInnerHTML={{ __html: APPLY_SCALE }} />}
       </head>
       <body
         className={`${displayFont} ${serifKr.variable} ${sansKr.variable} ${sansJp.variable} ${inter.variable}`}
