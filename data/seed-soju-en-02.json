@@ -1,0 +1,827 @@
+[
+  {
+    "category": "soju",
+    "name": "Good Day Peach (좋은데이 복숭아)",
+    "searchKeyword": "좋은데이 복숭아",
+    "producer": "Muhak (무학)",
+    "type": "Peach-flavored soju (liqueur)",
+    "region": "Changwon, South Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "Around 12-13.5% (varies by release)",
+    "liquidColor": "#FAE7E0",
+    "confidence": 72,
+    "knowledge": "basic",
+    "basis": "Muhak's history and the 2015 launch of its fruit-flavored Good Day Color Series are documented in Korean industry press, but peach was not one of the three debut flavors (blueberry, pomegranate, yuja) and its own launch date, strength and current availability are not reliably recorded in public sources. Treat it as a line extension of uncertain vintage and check the label for the ABV. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 31
+      },
+      {
+        "axis": "깔끔함",
+        "value": 58
+      },
+      {
+        "axis": "곡물향",
+        "value": 16
+      },
+      {
+        "axis": "당도",
+        "value": 67
+      }
+    ],
+    "tastingNotes": "Soft white-peach sweetness with a little more lift than its Lotte rival — Muhak's low-proof house style keeps the body thin and the finish quick, so it tastes juicy rather than syrupy. Almost no alcohol shows on the nose. Cold, it drinks like a peach soda that happens to be alcoholic.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Low-proof diluted soju with peach flavoring and juice"
+      },
+      {
+        "label": "ABV",
+        "value": "Around 12-13.5% (varies by release)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur (flavored soju)"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "2006",
+        "event": "Good Day debuts at 16.9% and pushes the whole soju industry toward lower strengths."
+      },
+      {
+        "year": "2015",
+        "event": "Muhak launches its fruit-flavored Good Day Color Series as fruit soju sweeps the country."
+      },
+      {
+        "year": "2010s",
+        "event": "Stone-fruit and tropical extensions join the range alongside the original citrus and berry flavors."
+      }
+    ],
+    "story": "Peach is the flavor Korean summer is measured in — the white-fleshed baeksudo sold in padded boxes, the ice pops, the shaved-ice syrup. Muhak's version leans on that nostalgia and on the lightest base spirit in the business, so it is the fruit soju most likely to be described as 'dangerous' by the person on their fourth glass. It is a staple of student drinking, riverside picnics and the convenience-store fridge at eleven at night.",
+    "winery": "Muhak, based in Changwon, is the soju house of the Busan-Gyeongnam southeast and the company that made low-proof soju normal. Its flavored Good Day bottles carry the same soft, quick-finishing house character.",
+    "foodPairing": [
+      {
+        "emoji": "🌶️",
+        "food": "Tteokbokki (spicy rice cakes)",
+        "why": "Peach sugar is the fastest way to take the edge off gochujang heat.",
+        "shopKeyword": "떡볶이"
+      },
+      {
+        "emoji": "🍗",
+        "food": "Sweet soy-garlic chicken",
+        "why": "Fruit against sweet-savory glaze; the cold, thin body keeps it from doubling up on richness.",
+        "shopKeyword": "간장치킨"
+      },
+      {
+        "emoji": "🍦",
+        "food": "Convenience-store ice cream",
+        "why": "A very Korean late-night combination — peach soju and a cheap ice bar on a summer night.",
+        "shopKeyword": "아이스크림"
+      }
+    ],
+    "pairingTip": "Best treated as a picnic and street-food drink rather than a dinner-table one; serve it as cold as you can physically get it.",
+    "avoidPairing": "Raw fish, clear soups and anything you would describe as subtle — the peach flavoring flattens them all.",
+    "similar": [
+      "Soonhari Chum Churum Peach (순하리 처음처럼 복숭아)",
+      "Good Day Blueberry (좋은데이 블루베리)",
+      "Good Day Pomegranate (좋은데이 석류)"
+    ],
+    "trivia": "Korean convenience stores stock the peach and grapefruit versions side by side because they sell to the same person on different nights — one for spicy food, one for dessert.",
+    "servingTemp": "Ice cold, 0-4°C — colder is genuinely better",
+    "servingNote": "Standard soju glasses and standard etiquette: pour for others first, both hands with elders. Sipping is expected with fruit bottles, not shooting.",
+    "aging": "No aging. Refrigerate and finish an opened bottle the same day before it goes flat and cloying.",
+    "tips": [
+      "Chill it hard before opening — the colder it is, the less the sugar shows.",
+      "Half peach soju and half plain soju is the standard trick for a less sweet version."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Good Day Pineapple (좋은데이 파인애플)",
+    "searchKeyword": "좋은데이 파인애플",
+    "producer": "Muhak (무학)",
+    "type": "Pineapple-flavored soju (liqueur)",
+    "region": "Changwon, South Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "Around 12-13.5% (varies by release)",
+    "liquidColor": "#F8F0D6",
+    "confidence": 68,
+    "knowledge": "basic",
+    "basis": "Muhak's low-proof history and its 2015 entry into flavored soju with the Good Day Color Series are well documented. Pineapple belongs to the later tropical extensions rather than the debut trio, and its launch date, strength and current distribution are not reliably recorded in public sources — so no year is claimed, ABV is a range, and availability may be regional or discontinued. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 32
+      },
+      {
+        "axis": "깔끔함",
+        "value": 56
+      },
+      {
+        "axis": "곡물향",
+        "value": 16
+      },
+      {
+        "axis": "당도",
+        "value": 70
+      }
+    ],
+    "tastingNotes": "Tropical and openly sweet, with the tangy, slightly sharp note that canned pineapple has rather than the fresh fruit. There is a touch of acidity behind the sugar, which gives it more grip than the berry flavors, and the finish is short and sticky-sweet. Unmistakably a party bottle.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Low-proof diluted soju with pineapple flavoring and juice"
+      },
+      {
+        "label": "ABV",
+        "value": "Around 12-13.5% (varies by release)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur (flavored soju)"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "2006",
+        "event": "Good Day launches at 16.9% and starts Korea's low-proof soju movement."
+      },
+      {
+        "year": "2015",
+        "event": "Muhak enters the flavored-soju market with the fruit Good Day Color Series."
+      },
+      {
+        "year": "2010s",
+        "event": "Tropical flavors including pineapple join the line as brewers compete on novelty."
+      }
+    ],
+    "story": "After citrus and stone fruit, Korean brewers went tropical. Pineapple soju belongs to the second wave of the boom — the flavors launched to keep the shelf interesting rather than to convert skeptics. It found its home at outdoor drinking: Han River picnics, camping, beach tents on the southern coast where Muhak sells best. Nobody drinks it thoughtfully, and that is entirely the point.",
+    "winery": "Muhak of Changwon built its reputation on making soju gentler, and its flavored range takes that to the extreme — thin, cold and sweet, engineered for volume rather than contemplation.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "Sweet-and-sour pork (tangsuyuk)",
+        "why": "Pineapple is already in the sauce at most Korean-Chinese restaurants — this just moves it into the glass.",
+        "shopKeyword": "탕수육"
+      },
+      {
+        "emoji": "🍗",
+        "food": "Spicy fried chicken",
+        "why": "Tropical sugar smothers chili heat faster than beer.",
+        "shopKeyword": "양념치킨"
+      },
+      {
+        "emoji": "🥓",
+        "food": "Grilled pork skewers",
+        "why": "Pineapple and pork is a pairing that works in every cuisine that has tried it.",
+        "shopKeyword": "돼지꼬치"
+      }
+    ],
+    "pairingTip": "An outdoor bottle — best with grilled or fried food, ice, and no expectation of subtlety.",
+    "avoidPairing": "Raw fish, cheese and anything creamy; tropical acidity plus dairy is an unpleasant combination.",
+    "similar": [
+      "Good Day Blueberry (좋은데이 블루베리)",
+      "Good Day Yuja (좋은데이 유자)",
+      "Good Day Pomegranate (좋은데이 석류)"
+    ],
+    "trivia": "Fruit soju is one of Korea's quiet export successes — the tropical flavors in particular sell strongly across Southeast Asia, where they are drunk over ice like a ready-made cocktail.",
+    "servingTemp": "Ice cold, 0-4°C",
+    "servingNote": "Poured in small soju glasses like anything else on a Korean table. Pour for others, accept with both hands from elders, and sip — this is not a shooting bottle.",
+    "aging": "No aging. Chill hard, drink fresh, and finish an opened bottle the same day.",
+    "tips": [
+      "Pour it over crushed ice with a splash of soda for a passable tropical cooler.",
+      "It is the sweetest bottle in the range — one between two people is plenty."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Good Day Calamansi (좋은데이 칼라만시)",
+    "searchKeyword": "좋은데이 칼라만시",
+    "producer": "Muhak (무학)",
+    "type": "Calamansi-flavored soju (liqueur)",
+    "region": "Changwon, South Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "Around 12-13.5% (varies by release)",
+    "liquidColor": "#F2F4DC",
+    "confidence": 62,
+    "knowledge": "basic",
+    "basis": "Muhak's flavored Good Day range dates from the 2015 fruit-soju boom, and calamansi swept Korea as a health-drink flavor in the years just after — but this specific bottle is the least documented item in the range. Its launch year, strength and whether it is still in distribution could not be confirmed in public sources, so no year is claimed and everything below the producer level should be treated as provisional. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 26
+      },
+      {
+        "axis": "깔끔함",
+        "value": 68
+      },
+      {
+        "axis": "곡물향",
+        "value": 15
+      },
+      {
+        "axis": "당도",
+        "value": 52
+      }
+    ],
+    "tastingNotes": "The sourest bottle in the range. Calamansi — a small Philippine citrus somewhere between a lime and a mandarin — brings a sharp, green, almost limey attack, with the sweetness sitting behind it rather than in front. Very light-bodied, very clean, and the only fruit soju here that finishes properly tart.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Low-proof diluted soju with calamansi flavoring and juice"
+      },
+      {
+        "label": "ABV",
+        "value": "Around 12-13.5% (varies by release)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur (flavored soju)"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "2006",
+        "event": "Good Day launches at 16.9% and drives Korea's low-proof soju shift."
+      },
+      {
+        "year": "2015",
+        "event": "Muhak launches its fruit-flavored Good Day Color Series during the national fruit-soju boom."
+      },
+      {
+        "year": "2010s",
+        "event": "Calamansi becomes a popular health-drink flavor in Korea and crosses over into the flavored-soju market."
+      }
+    ],
+    "story": "Calamansi arrived in Korea as a diet drink — bottled juice sold on the promise of vitamin C and a flat stomach, imported by the container from the Philippines. Turning it into soju was a knowing joke, and it produced the least sugary fruit bottle on the shelf. If the peach and blueberry versions are for people who do not like alcohol, this one is for people who do not like sweetness, which makes it the most useful of the range at a dinner table.",
+    "winery": "Muhak, headquartered in Changwon, is the southeast's soju powerhouse. Its flavored line is deliberately light and low-proof, and calamansi is the flavor where that restraint pays off most clearly.",
+    "foodPairing": [
+      {
+        "emoji": "🍤",
+        "food": "Fried shrimp and seafood",
+        "why": "Sharp citrus over fried seafood — you would squeeze a wedge of this over the plate if you could.",
+        "shopKeyword": "새우튀김"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "Spicy chicken feet (dakbal)",
+        "why": "Fierce heat needs sour more than sweet; this is the bottle that survives the encounter.",
+        "shopKeyword": "닭발"
+      },
+      {
+        "emoji": "🥗",
+        "food": "Vietnamese-style rice paper rolls",
+        "why": "Its lime-like sourness sits naturally with Southeast Asian herbs and dipping sauces.",
+        "shopKeyword": "월남쌈"
+      }
+    ],
+    "pairingTip": "The one fruit soju that genuinely works right through a savory meal — use it wherever you would want a squeeze of lime.",
+    "avoidPairing": "Cream, cheese and desserts; the acidity fights all three.",
+    "similar": [
+      "Good Day Yuja (좋은데이 유자)",
+      "Good Day Pomegranate (좋은데이 석류)",
+      "Soonhari Chum Churum Yuja (순하리 처음처럼 유자)"
+    ],
+    "trivia": "Calamansi is not a Korean fruit at all — it is a Philippine kitchen staple that arrived in Korea through the health-drink aisle before it ever reached the liquor shelf.",
+    "servingTemp": "Ice cold, 0-4°C",
+    "servingNote": "Standard small soju glasses and standard manners: never pour your own, use both hands with anyone senior, and sip rather than shoot.",
+    "aging": "No aging. Citrus aroma fades quickly — refrigerate and finish an opened bottle the same day.",
+    "tips": [
+      "Add soda water and ice for something almost indistinguishable from a lime highball.",
+      "If you found the other fruit sojus too sweet, start here."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Siwon Blue Jamong (시원블루 자몽)",
+    "searchKeyword": "시원블루 자몽",
+    "producer": "Daesun Distilling Co. (대선주조)",
+    "type": "Grapefruit-flavored soju (liqueur)",
+    "region": "Busan",
+    "country": "South Korea",
+    "alcohol": "Around 12-13% (fruit-soju range; varies by release)",
+    "liquidColor": "#F7E1E1",
+    "confidence": 66,
+    "knowledge": "basic",
+    "basis": "Daesun Distilling, founded in Busan in 1930, is solid ground: it launched C1 — read 'ssi-won', a pun on siwon, meaning refreshing — in 1996, and the Siwon/C1 name has appeared on several sub-labels including low-proof 'Blue' versions. The grapefruit bottle belongs to the flavored-soju wave after 2015, but its launch date, exact naming and current availability could not be confirmed in public sources, so no year is claimed and the ABV is a range. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 27
+      },
+      {
+        "axis": "깔끔함",
+        "value": 65
+      },
+      {
+        "axis": "곡물향",
+        "value": 16
+      },
+      {
+        "axis": "당도",
+        "value": 56
+      }
+    ],
+    "tastingNotes": "Pink grapefruit over a very clean, very light base. Sharp citrus on the nose, moderate sweetness on the palate and a dry, faintly bitter finish that keeps it refreshing rather than sugary. Daesun's house style has always been about crispness, and it shows even under the fruit flavoring.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Diluted soju with grapefruit flavoring and juice"
+      },
+      {
+        "label": "ABV",
+        "value": "Around 12-13% (varies by release)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur (flavored soju)"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "1930",
+        "event": "Daesun Distilling is founded in Busan, making it one of Korea's oldest continuously operating soju companies."
+      },
+      {
+        "year": "1996",
+        "event": "Daesun launches C1, pronounced 'ssi-won', which dominates Busan for years."
+      },
+      {
+        "year": "2010s",
+        "event": "Following the national fruit-soju boom, Daesun adds flavored versions to its Siwon/C1 line."
+      }
+    ],
+    "story": "Busan is the one Korean city where the national brands genuinely struggle, because two local houses — Daesun and Muhak — split the market between them. Siwon means 'refreshing', the word Busan people use for cold soju, cold soup and cold sea air alike. The grapefruit version is the local answer to the flavored bottles pouring out of Seoul: same idea, but with the dry, crisp base that southern drinkers expect. Ordering it in a Busan pojangmacha marks you as someone who did their homework.",
+    "winery": "Daesun Distilling has brewed in Busan since 1930 and is one of the last major independent regional soju makers, running the Daesun and C1/Siwon brands. Its reputation rests on a notably clean, dry style suited to the city's seafood-heavy food culture.",
+    "foodPairing": [
+      {
+        "emoji": "🐟",
+        "food": "Hoe (Korean-style raw fish)",
+        "why": "Busan runs on raw fish, and grapefruit's bitterness is gentler over it than a sweeter fruit soju would be.",
+        "shopKeyword": "모둠회"
+      },
+      {
+        "emoji": "🍲",
+        "food": "Dwaeji gukbap (pork rice soup)",
+        "why": "The city's signature milky pork soup wants something sharp and cold alongside it.",
+        "shopKeyword": "돼지국밥 밀키트"
+      },
+      {
+        "emoji": "🦪",
+        "food": "Grilled clams and shellfish",
+        "why": "Beachfront shellfish tents and citrus soju is a summer ritual on the southern coast.",
+        "shopKeyword": "조개구이"
+      }
+    ],
+    "pairingTip": "Drink it the way Busan does — with seafood, outdoors, and colder than seems reasonable.",
+    "avoidPairing": "Rich desserts and cream sauces; the citrus bitterness turns sour against them.",
+    "similar": [
+      "C1 Soju (C1 소주)",
+      "Daesun Soju (대선)",
+      "Jamong-e Isul (자몽에이슬)"
+    ],
+    "trivia": "Regional soju loyalty in Korea is close to a sport. In Busan, asking for a Seoul brand at a neighborhood restaurant can genuinely get you a lecture — and sometimes a bottle of the local one anyway.",
+    "servingTemp": "Ice cold, 0-4°C",
+    "servingNote": "Small soju glasses, poured for others rather than yourself; take the bottle with both hands from anyone older. Fruit soju is sipped, not shot.",
+    "aging": "No aging. Keep it cold and finish an opened bottle the same day.",
+    "tips": [
+      "Ask for it by name in Busan rather than saying just 'soju' — the staff will know which local bottle you mean.",
+      "Half fruit soju, half plain Daesun makes the drier version most locals actually drink."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Yeosu Bambada (여수밤바다)",
+    "searchKeyword": "여수밤바다 소주",
+    "producer": "Bohae Brewery (보해양조)",
+    "type": "Diluted soju (regional edition)",
+    "region": "Mokpo, South Jeolla Province (Yeosu-themed regional edition)",
+    "country": "South Korea",
+    "alcohol": "Around 16-17% (varies by release)",
+    "liquidColor": "#EFF4F8",
+    "confidence": 68,
+    "knowledge": "basic",
+    "basis": "Two facts are solid: Bohae Brewery has operated from Mokpo since 1950 as South Jeolla's leading liquor house, and Busker Busker's 2012 song 'Yeosu Bam-bada' turned the phrase into national shorthand for the port city. The soju carrying that name is a Bohae regional release whose launch year, exact strength and current distribution are not consistently documented in public sources — so no launch year is claimed, ABV is a range, and you may only find it in the Jeolla region. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 25
+      },
+      {
+        "axis": "깔끔함",
+        "value": 82
+      },
+      {
+        "axis": "곡물향",
+        "value": 20
+      },
+      {
+        "axis": "당도",
+        "value": 38
+      }
+    ],
+    "tastingNotes": "A soft, low-proof southern soju built for long seafood dinners. Clean and slightly sweet up front, almost no grain character, and a short finish with very little heat — Jeolla brewers have always favored a gentler, rounder style than the mainland's sharper bottles. Easy to the point of being unremarkable, which at a seaside table is a compliment.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Neutral spirit diluted with water"
+      },
+      {
+        "label": "ABV",
+        "value": "Around 16-17% (varies by release)"
+      },
+      {
+        "label": "Style",
+        "value": "Huiseok-sik soju ('diluted soju') — the standard green-bottle category"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "1950",
+        "event": "Bohae Brewery is founded in Mokpo, South Jeolla Province, and grows into the region's dominant liquor house."
+      },
+      {
+        "year": "2012",
+        "event": "Busker Busker's song 'Yeosu Bam-bada' ('Yeosu Night Sea') becomes a nationwide hit and turns the port city into a tourist pilgrimage."
+      },
+      {
+        "year": "2010s",
+        "event": "Bohae releases a soju carrying the Yeosu Bambada name, tying its Jeolla identity to the song's fame."
+      }
+    ],
+    "story": "Few bottles in Korea are named after a pop song, but 'Yeosu Bam-bada' is not really a song any more — it is a place, a feeling, and a reason a generation of Koreans drove five hours to the south coast to look at harbor lights. Bohae, the Jeolla region's brewery, put the phrase on a soju, and the result is one of the most souvenir-friendly bottles in the country. Drink it in Yeosu, by the water, with grilled fish, and the marketing stops feeling like marketing.",
+    "winery": "Bohae Brewery has operated from Mokpo since 1950 and is South Jeolla's liquor institution, best known for the soju Ipsaeju and for fruit liqueurs like Maechwisoon plum liqueur and bokbunja black-raspberry wine. Its sojus follow the soft, slightly sweet southwestern style.",
+    "foodPairing": [
+      {
+        "emoji": "🐟",
+        "food": "Grilled mackerel or hairtail",
+        "why": "Clean, low-proof soju is the standard partner for oily grilled fish on the southern coast.",
+        "shopKeyword": "고등어구이"
+      },
+      {
+        "emoji": "🦐",
+        "food": "Yeosu-style grilled shellfish",
+        "why": "Seaside tents, charcoal and a cold bottle — the entire reason this soju exists.",
+        "shopKeyword": "조개구이"
+      },
+      {
+        "emoji": "🥩",
+        "food": "Bulgogi",
+        "why": "Its faint sweetness echoes the soy-and-pear marinade rather than fighting it.",
+        "shopKeyword": "불고기"
+      }
+    ],
+    "pairingTip": "A seafood soju above all — keep it with grilled or steamed fish and shellfish rather than heavy meat.",
+    "avoidPairing": "Sweet desserts and cocktails, and anything so richly spiced that a low-proof neutral spirit simply disappears.",
+    "similar": [
+      "Ipsaeju (잎새주)",
+      "Chamisul Fresh (참이슬 후레쉬)",
+      "Good Day (좋은데이)"
+    ],
+    "trivia": "The song came first: Busker Busker's 2012 hit sent so many visitors to Yeosu that the city built its tourism identity around the lyric. The soju is one of many local products that followed the crowd.",
+    "servingTemp": "Cold, 4-8°C",
+    "servingNote": "Standard soju service in small glasses. Pour for others and let them pour for you, hold the bottle with both hands when serving an elder, and turn your head slightly away when drinking in front of someone much senior.",
+    "aging": "Not aged and does not improve with keeping. Store cool and out of sunlight.",
+    "tips": [
+      "It makes an easy souvenir — the bottle art is the point as much as the liquid.",
+      "Mix it with beer for somaek if you want the standard Korean pub experience at a lower strength."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Bohae Soju (보해소주)",
+    "searchKeyword": "보해소주",
+    "producer": "Bohae Brewery (보해양조)",
+    "type": "Diluted soju (house label)",
+    "region": "Mokpo, South Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "Around 16-17% in recent releases (older bottlings were considerably stronger)",
+    "liquidColor": "#F2F5F3",
+    "confidence": 70,
+    "knowledge": "basic",
+    "basis": "Bohae Brewery's founding in Mokpo in 1950 and its position as South Jeolla's leading liquor house are well documented, as is its flagship soju Ipsaeju, launched in 2002. The house-name 'Bohae Soju' label predates Ipsaeju and its own launch history, current specification and distribution are not consistently recorded in public sources — so ABV is given as a range, no product-specific dates are claimed, and it may be hard to find outside the region. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 28
+      },
+      {
+        "axis": "깔끔함",
+        "value": 78
+      },
+      {
+        "axis": "곡물향",
+        "value": 24
+      },
+      {
+        "axis": "당도",
+        "value": 36
+      }
+    ],
+    "tastingNotes": "An old-school regional soju: a touch more grain character than the ultra-clean national brands, mild sweetness, and a plain, honest finish with a little warmth. Nothing here is engineered to charm you. It is the taste of a working-town drink, meant to be swallowed between mouthfuls of food rather than examined.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Neutral spirit diluted with water"
+      },
+      {
+        "label": "ABV",
+        "value": "Around 16-17% in recent releases"
+      },
+      {
+        "label": "Style",
+        "value": "Huiseok-sik soju ('diluted soju') — neutral spirit cut with water, the everyday Korean category"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "1950",
+        "event": "Bohae Brewery is founded in Mokpo, South Jeolla Province."
+      },
+      {
+        "year": "20th century",
+        "event": "Bohae becomes the dominant liquor maker of the Jeolla region, building its name on soju alongside plum and bokbunja liqueurs."
+      },
+      {
+        "year": "2002",
+        "event": "Ipsaeju launches at 22% and takes over as the house flagship, leaving the plain Bohae label as the older, quieter sibling."
+      }
+    ],
+    "story": "Before Korea's soju market consolidated around two Seoul giants, every province drank its own brand, and in the southwest that meant Bohae. The house-name bottle is the plainest expression of that history — no pop-song branding, no fruit flavoring, just the company's name on a green bottle in the region it has served since 1950. Jeolla is Korea's most celebrated food province, where even a cheap meal arrives with a dozen side dishes, and this soju was built to sit quietly in the middle of that table.",
+    "winery": "Bohae Brewery has been based in Mokpo since 1950 and is South Jeolla's liquor institution. Beyond soju it is famous nationally for Maechwisoon plum liqueur and bokbunja (Korean black raspberry) wine, which are among the country's best-known fruit spirits.",
+    "foodPairing": [
+      {
+        "emoji": "🐟",
+        "food": "Hongeo or grilled fish",
+        "why": "Jeolla's seafood traditions run strong, and a plain, clean soju is the region's standard accompaniment.",
+        "shopKeyword": "생선구이"
+      },
+      {
+        "emoji": "🍲",
+        "food": "Kimchi jjigae",
+        "why": "The everyday Korean pairing — sour, spicy stew and a cold shot glass.",
+        "shopKeyword": "김치찌개"
+      },
+      {
+        "emoji": "🥬",
+        "food": "Boiled pork with kimchi (bossam)",
+        "why": "Neutral soju scrubs pork fat off the palate between wraps.",
+        "shopKeyword": "보쌈"
+      }
+    ],
+    "pairingTip": "Order it with a proper Jeolla-style meal — the region's side-dish spreads are the reason a neutral soju exists in the first place.",
+    "avoidPairing": "Desserts, cocktails and anything sweet, which turn a dry grain spirit harsh.",
+    "similar": [
+      "Ipsaeju (잎새주)",
+      "Daesun Soju (대선)",
+      "C1 Soju (C1 소주)"
+    ],
+    "trivia": "Korean soju loyalty maps almost exactly onto provincial borders. Ask someone from Gwangju or Mokpo which soju is best and you will not hear a Seoul brand named.",
+    "servingTemp": "Cold, 4-8°C",
+    "servingNote": "Poured into small glasses and never for yourself. Serve elders with both hands on the bottle, receive with both hands, and turn slightly aside to drink if the company is much older than you.",
+    "aging": "Not aged and does not improve with keeping. Store cool, away from light, and finish an opened bottle within a day or two.",
+    "tips": [
+      "If you like it, try Ipsaeju — Bohae's better-known soju and the region's default order.",
+      "Mixed with beer as somaek it becomes far easier to drink through a long meal."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Bohae Gold (보해골드)",
+    "searchKeyword": "보해골드",
+    "producer": "Bohae Brewery (보해양조)",
+    "type": "Diluted soju (premium-positioned label)",
+    "region": "Mokpo, South Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "Varies by release — older 'gold' bottlings ran well above 20%, later ones in the 16-17% range",
+    "liquidColor": "#F5F4EC",
+    "confidence": 62,
+    "knowledge": "basic",
+    "basis": "Bohae Brewery's Mokpo history since 1950 and its regional standing are well documented, and 'Gold' step-up sojus were a common Korean format from the late 1980s onward. This particular label, however, is a legacy Bohae name whose launch year, current specification and whether it is still in distribution could not be confirmed in public sources — so no dates are claimed, the ABV is left open, and you may not find it outside the Jeolla region. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 30
+      },
+      {
+        "axis": "깔끔함",
+        "value": 76
+      },
+      {
+        "axis": "곡물향",
+        "value": 26
+      },
+      {
+        "axis": "당도",
+        "value": 34
+      }
+    ],
+    "tastingNotes": "A slightly fuller, rounder take on Bohae's house style — a shade more grain warmth and body than the plain bottle, with restrained sweetness and a longer, softer finish. Still recognizably an everyday diluted soju rather than a distilled premium spirit; the 'gold' is about positioning, not about barrel time.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Neutral spirit diluted with water"
+      },
+      {
+        "label": "ABV",
+        "value": "Varies by release; check the label"
+      },
+      {
+        "label": "Style",
+        "value": "Huiseok-sik soju ('diluted soju'), premium-positioned label"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "1950",
+        "event": "Bohae Brewery is founded in Mokpo and becomes South Jeolla's principal liquor maker."
+      },
+      {
+        "year": "20th century",
+        "event": "Bohae builds a national reputation for fruit liqueurs — Maechwisoon plum and bokbunja — alongside its regional soju range, including 'gold'-tier step-up bottles of the kind Korean brewers all carried."
+      },
+      {
+        "year": "2002",
+        "event": "Ipsaeju launches and becomes the house flagship, reshaping the rest of the soju lineup around it."
+      }
+    ],
+    "story": "Korean soju makers almost all keep a step-up bottle: same category, slightly better presentation, aimed at gift-giving and at customers who want to spend a little more without leaving the familiar. Bohae Gold is that bottle in the Jeolla lineup. It will not taste dramatically different from the standard green bottle to a first-time drinker, but on a table in Mokpo or Gwangju it signals that someone is treating the group — which in Korean drinking culture is most of the message.",
+    "winery": "Bohae Brewery, in Mokpo since 1950, is the southwest's liquor house. It is best known nationally for Maechwisoon plum liqueur and bokbunja wine, and regionally for the soju that Jeolla drinkers order by default.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "Grilled beef (so-galbi)",
+        "why": "A step-up soju belongs at a step-up meal; its slightly fuller body holds up to charcoal-grilled beef.",
+        "shopKeyword": "소갈비"
+      },
+      {
+        "emoji": "🐙",
+        "food": "Nakji bokkeum (spicy stir-fried octopus)",
+        "why": "A Jeolla specialty with real chili heat that a clean, cold soju is built to cool.",
+        "shopKeyword": "낙지볶음"
+      },
+      {
+        "emoji": "🍲",
+        "food": "Beef and radish soup",
+        "why": "Plain, savory broth and neutral soju is the most comfortable pairing in Korean home cooking.",
+        "shopKeyword": "소고기무국"
+      }
+    ],
+    "pairingTip": "Bring it to a meal where someone is being honored — the extra half-tier of packaging does more social work than flavor work.",
+    "avoidPairing": "Sweet food of any kind; a dry grain spirit and sugar make each other worse.",
+    "similar": [
+      "Ipsaeju (잎새주)",
+      "Bohae Soju (보해소주)",
+      "Chamisul Original (참이슬 오리지널)"
+    ],
+    "trivia": "'Gold' labels are a recurring habit across Korean drinks — the same word appears on premium tiers of beer, soju and even instant coffee, and it almost always means one price step up rather than a different production method.",
+    "servingTemp": "Cold, 4-8°C",
+    "servingNote": "Standard soju etiquette applies: fill other people's glasses before your own, hold the bottle with both hands for an elder, and accept a pour with both hands. The first round is drunk together.",
+    "aging": "Not aged and does not improve with keeping. Store cool and out of direct sunlight.",
+    "tips": [
+      "If you cannot find it, Ipsaeju is the Bohae bottle that is actually easy to track down nationwide.",
+      "Ask the restaurant which Bohae bottle they recommend — regional staff will steer you to the local favorite."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Chamisul Damgeumju (참이슬 담금주)",
+    "searchKeyword": "참이슬 담금주",
+    "producer": "HiteJinro (하이트진로)",
+    "type": "Damgeumju — high-proof infusion base spirit",
+    "region": "Nationwide brand (made at HiteJinro's soju plants in Icheon, Cheongju and Masan)",
+    "country": "South Korea",
+    "alcohol": "30% and 35% versions",
+    "liquidColor": "#F8F9F9",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "HiteJinro's damgeumju range is a long-standing, widely sold product line, commonly offered at 30% and 35% ABV in large PET bottles for home infusion; specifications come from producer and retail listings. Jinro's 1924 founding and Chamisul's status as Korea's best-selling soju are well documented. No launch date is claimed for the damgeumju bottle itself. Taste values are editorial estimates and describe the base spirit before infusion.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 45
+      },
+      {
+        "axis": "깔끔함",
+        "value": 88
+      },
+      {
+        "axis": "곡물향",
+        "value": 22
+      },
+      {
+        "axis": "당도",
+        "value": 8
+      }
+    ],
+    "tastingNotes": "On its own this is not really a drink — it is an ingredient. Neutral, hard and hot, with a scrubbed-clean character and almost no sweetness, designed so that whatever you put into it becomes the entire flavor. High strength is the point: it pulls aroma and color out of fruit and roots and then preserves them for months without spoiling.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "High-proof neutral spirit, unsweetened"
+      },
+      {
+        "label": "ABV",
+        "value": "30% and 35% versions"
+      },
+      {
+        "label": "Purpose",
+        "value": "Damgeumju — 'steeping liquor', bought to infuse fruit, roots or herbs at home"
+      },
+      {
+        "label": "Format",
+        "value": "Large PET bottles, commonly 1.8 L, sold for filling infusion jars"
+      }
+    ],
+    "history": [
+      {
+        "year": "1924",
+        "event": "Jinro is founded and goes on to become Korea's biggest soju maker."
+      },
+      {
+        "year": "1998",
+        "event": "Chamisul launches and grows into the country's best-selling soju brand, lending its name across the range."
+      },
+      {
+        "year": "Traditional",
+        "event": "Home infusion — steeping maesil plums, ginseng, schisandra berries or wild roots in strong spirit — is a long-standing Korean household practice, and dedicated high-proof damgeumju bottles exist to serve it."
+      }
+    ],
+    "story": "Every June, Korean markets fill with crates of hard green maesil plums and the supermarkets stack pallets of clear 1.8-liter bottles beside them. This is that bottle. Damgeumju means 'steeping liquor': you layer fruit and rock sugar in a glass jar, drown it in high-proof spirit, seal it and forget it in a dark cupboard for a hundred days. What comes out is maesilju, the plum liqueur half of Korea keeps at home. Ginseng, deodeok root, schisandra, quince and even wild herbs get the same treatment. It is the most domestic corner of Korean drinking — homemade, given away in old bottles, and drunk with visitors as proof of a household's patience.",
+    "winery": "HiteJinro is Korea's largest drinks company and the maker of Chamisul, the best-selling soju in the country. Alongside the familiar green bottles it produces high-proof neutral spirit specifically for home infusion, a category with no real Western equivalent outside of neutral grain spirit sold for liqueur-making.",
+    "foodPairing": [
+      {
+        "emoji": "🫒",
+        "food": "Maesil (Korean green plum)",
+        "why": "The classic infusion, not a pairing: plums plus rock sugar plus this spirit equals maesilju after about 100 days.",
+        "shopKeyword": "청매실"
+      },
+      {
+        "emoji": "🌿",
+        "food": "Fresh ginseng or deodeok root",
+        "why": "The other great Korean infusion — earthy roots steeped for months into a bitter, warming tonic.",
+        "shopKeyword": "수삼"
+      },
+      {
+        "emoji": "🍖",
+        "food": "Grilled meat, once the infusion is ready",
+        "why": "Finished homemade fruit liqueur is served in small glasses with rich grilled dishes, the way a digestif would be.",
+        "shopKeyword": "삼겹살"
+      }
+    ],
+    "pairingTip": "Do not drink this neat with dinner. Infuse it first, wait, and pair the finished liqueur instead.",
+    "avoidPairing": "Everything, as bought — at 30-35% and completely unsweetened it is punishing on its own and will bulldoze any dish.",
+    "similar": [
+      "Andong Soju (안동소주)",
+      "Hwayo 41 (화요 41)",
+      "Chamisul Original (참이슬 오리지널)"
+    ],
+    "trivia": "Rules of thumb passed around Korean households: use fruit that is dry and unblemished, roughly equal weight of fruit to sugar for maesil, and take the plums out after about 100 days or the liqueur turns bitter. The higher-strength 35% version is preferred for watery fruit, which dilutes the spirit as it steeps.",
+    "servingTemp": "Store the jar cool and dark while steeping; serve the finished liqueur chilled or over ice",
+    "servingNote": "Once your infusion is ready, it is served in small glasses like any Korean liqueur — poured for others first, received with both hands from an elder. Homemade maesilju is a common gift and a point of quiet household pride.",
+    "aging": "This is the one Korean spirit category built around waiting. Fruit infusions are usually opened after about 100 days; root and herb infusions are often left a year or more. Strain out the solids before long storage, keep the jar sealed, dark and cool, and label it with the date.",
+    "tips": [
+      "Sterilize the glass jar with boiling water and dry it completely — moisture and stray yeast are what spoil a batch.",
+      "Use 35% for juicy fruit like plums or citrus and 30% for dried roots and herbs.",
+      "Do not fill the jar to the brim; leave headroom so you can stir and top up as the fruit shrinks."
+    ],
+    "vintage": null
+  }
+]

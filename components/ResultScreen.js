@@ -3,6 +3,7 @@ import { useEffect, useState, Fragment } from "react";
 import { catOf } from "@/lib/cats";
 import { servingPlan } from "@/lib/serving";
 import { bandOf } from "@/lib/curation";
+import { priceLabel, globalLabel, priceAge, asOfLabel, priceTrust } from "@/lib/priceInfo";
 import { glasswareFor } from "@/lib/glassware";
 import { gearFor } from "@/lib/gear";
 import Flag from "./Flag";
@@ -110,7 +111,11 @@ function PurchaseCard({ shop }) {
             <b>{fmtWon(state.reference)}</b>
             <span>{t("기준 최저가")}</span>
           </div>
-          <em>{t("판매 중인 {n}건 기준 · 소용량·미끼 상품 제외", { n: state.sampled })}</em>
+          <em>
+            {state.source === "11st"
+              ? t("11번가 {n}건 기준 · 매장 픽업가가 섞여 있습니다", { n: state.sampled })
+              : t("판매 중인 {n}건 기준 · 소용량·미끼 상품 제외", { n: state.sampled })}
+          </em>
         </div>
       )}
 
@@ -134,7 +139,7 @@ function PurchaseCard({ shop }) {
       )}
       {!state.loading && !state.items?.length && state.noApi && (
         <div className="shop-note">
-          {t("네이버쇼핑 API 키(NAVER_CLIENT_ID/SECRET)를 설정하면 실제 제품 이미지와 최저가가 여기 표시됩니다.")}
+          {t("11번가 오픈 API 키(ELEVENST_KEY)를 설정하면 실제 판매가가 여기 표시됩니다. 네이버 쇼핑 검색 API는 2026년 7월에 종료됐습니다.")}
         </div>
       )}
       {/* 판매처 목록이 없을 때 "아래 목록은…"이라고 적으면 가리킬 목록이 없다.
@@ -505,10 +510,14 @@ function ServingTimer({ result }) {
   // 준비 시간은 술마다 다르다. 이 술에 필요한 것만 만든다.
   const plan = servingPlan(result);
 
-  // 이 술에서 돌고 있는 준비들. 칠링과 디캔팅을 같이 걸어 둘 수도 있다.
+  // 이 술에서 돌고 있는 준비들. 칠링과 데우기처럼 종류가 다르면 같이 걸어 둘 수 있다.
   const running = timers.filter((t) => t.name === result.name);
-  const runningKinds = new Set(running.map((t) => `${t.kind}-${t.min}`));
-  const available = plan.presets.filter((p) => !runningKinds.has(`${p.kind}-${p.min}`));
+  // 저장소는 (이름, 종류)로 하나만 갖는다(lib/timer.js). 그래서 같은 종류의 다른 시간을
+  // 함께 내보이면, 두 번째를 누르는 순간 앞엣것이 소리 없이 사라진다 —
+  // 보드카의 "냉장 30분"과 "냉동 2시간"이 그렇다. 둘은 함께 하는 준비가 아니라 갈래이므로,
+  // 하나가 돌고 있으면 같은 종류는 목록에서 내린다.
+  const runningKinds = new Set(running.map((t) => t.kind));
+  const available = plan.presets.filter((p) => !runningKinds.has(p.kind));
 
   if (!plan.presets.length) return null;
 
@@ -731,21 +740,59 @@ export default function ResultScreen({
     // 카탈로그에서 연 술도 "얼마쯤 하는 술인가"는 답해야 한다.
     price: (() => {
       const band = bandOf(r.priceTier || r.priceBand);
-      if (!r.priceRange && !band) return null;
+      const info = r.priceInfo;
+      const money = priceLabel(info);
+      if (!money && !r.priceRange && !band) return null;
       const dots = r.priceTier || r.priceBand || band?.band;
+      const abroad = globalLabel(info);
+      const age = priceAge(info);
+      const trust = priceTrust(info);
       return (
         <div className="card">
-          <div className="card-title">{t("예상 가격")}</div>
+          <div className="card-title">{t("시세")}</div>
           <div className="price-line">
-            <div className="price-val">{r.priceRange || (band ? t(band.label) : t("정보 없음"))}</div>
+            {/* 조사해 둔 시장가가 있으면 그것이 답이다. 없으면 대역으로 물러선다 */}
+            <div className="price-val">
+              {money || r.priceRange || (band ? t(band.label) : t("정보 없음"))}
+            </div>
             {dots && (
               <div className="tier">
                 {"●".repeat(dots)}{"○".repeat(Math.max(0, 5 - dots))}
               </div>
             )}
           </div>
+          {/* 무엇을 기준으로 한 값인지 밝힌다 — 밝히지 않은 숫자는 믿을 수 없는 숫자다 */}
+          {money && (info.volume || info.basis) && (
+            <div className="price-basis">
+              {[info.volume, info.basis && t(info.basis)].filter(Boolean).join(" · ")}
+            </div>
+          )}
+          {/* 해외가는 참고로만 — 관세·주세 때문에 국내가와 직접 비교되지 않는다 */}
+          {abroad && (
+            <div className="price-abroad">
+              <span>{t("해외 소매가")}</span>
+              <b>{abroad}</b>
+              <em>{t("관세·주세 전 · 참고용")}</em>
+            </div>
+          )}
           {(r.priceNote || band?.note) && (
             <div className="price-note">{r.priceNote || t(band.note)}</div>
+          )}
+          {/* 확신이 낮은 값은 낮다고 말한다. 국내에 정식 유통되지 않는 술은
+              판매처가 몇 곳뿐이라 정직하게 조사해도 폭이 넓게 나온다.
+              그것을 다른 값과 똑같이 보여 주면 사용자를 속이는 셈이다. */}
+          {money && trust === "rough" && (
+            <div className="price-rough">
+              {t("국내 정식 유통이 적어 폭넓게 잡은 추정치입니다")}
+            </div>
+          )}
+          {/* 시세는 늙는다. 오래된 값을 오늘 값인 척 보여 주지 않는다 */}
+          {money && age && (
+            <div className={`price-asof ${age}`}>
+              {age === "stale"
+                ? t("{d} · 오래된 값이라 지금과 다를 수 있습니다", { d: asOfLabel(info) })
+                : t("{d} · 판매처와 시기에 따라 달라집니다", { d: asOfLabel(info) })}
+            </div>
           )}
         </div>
       );

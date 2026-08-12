@@ -1,0 +1,575 @@
+[
+  {
+    "category": "traditional",
+    "name": "Myeongjak Bokbunja (명작 복분자)",
+    "searchKeyword": "명작 복분자",
+    "producer": "Kooksoondang Gochang Myeongju (국순당 고창명주)",
+    "type": "Bokbunja Wine",
+    "region": "Gochang, North Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "13%",
+    "liquidColor": "#430C28",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "The 13% ABV, the 375 mL format and a declared 56.16% fermented bokbunja extract made from domestic grade-one berries are consistent across the producer's product information and Korean retail listings. Kooksoondang's ownership of the Gochang Myeongju subsidiary is publicly stated, as is Bekseju's 1992 arrival on the market. Taste axes are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 58
+      },
+      {
+        "axis": "감칠맛",
+        "value": 34
+      },
+      {
+        "axis": "산도",
+        "value": 60
+      },
+      {
+        "axis": "당도",
+        "value": 64
+      }
+    ],
+    "tastingNotes": "A more polished, wine-like take on black raspberry: deep garnet-purple, with ripe bramble fruit, a hint of violet and a light savoury depth. Sweetness is present but restrained, and the finish is drier and longer than most supermarket bokbunja. This is the bottle to reach for if you found other bokbunja too jammy.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Domestic grade-one Gochang black raspberries"
+      },
+      {
+        "label": "Fruit content",
+        "value": "Declares 56.16% fermented bokbunja extract — among the highest in the category"
+      },
+      {
+        "label": "ABV",
+        "value": "13%"
+      },
+      {
+        "label": "Bottle",
+        "value": "375 mL is the standard format; larger sizes appear in gift sets"
+      }
+    ],
+    "history": [
+      {
+        "year": "1992",
+        "event": "Kooksoondang brings Bekseju to market, the ginseng-and-herb yakju that turned the company into a household name and funded its regional breweries."
+      }
+    ],
+    "story": "Gochang produces the majority of Korea's bokbunja, and every summer the county's berry harvest is a local event. Kooksoondang, one of the country's largest traditional-liquor makers, runs a dedicated fruit-wine arm there to catch the crop at peak ripeness, and the bottle's headline number is the berry share itself — more than half the liquid is declared as fermented bokbunja extract. Myeongjak means 'masterpiece,' a confident name that the Korean market has broadly accepted.",
+    "winery": "Kooksoondang Gochang Myeongju is the Gochang-based fruit-wine arm of Kooksoondang, the company behind Bekseju and one of the biggest names in Korean traditional drinks. Where the parent company works mainly with rice and nuruk — the wild-yeast wheat cake that starts Korean fermentation — this subsidiary works with the local berry crop instead.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "Galbi (grilled marinated short ribs)",
+        "why": "Sweet-savoury marinade and dark berry fruit reinforce each other beautifully.",
+        "shopKeyword": "양념갈비"
+      },
+      {
+        "emoji": "🧀",
+        "food": "Aged hard cheese",
+        "why": "Enough acidity and structure here to handle cheese, which few Korean drinks manage.",
+        "shopKeyword": "체다치즈"
+      },
+      {
+        "emoji": "🦆",
+        "food": "Smoked duck",
+        "why": "Smoke and berry is a classic combination; the wine's drier finish keeps it clean.",
+        "shopKeyword": "훈제오리"
+      }
+    ],
+    "pairingTip": "Pour it in a wine glass and serve it slightly cooler than a red wine — it flatters grilled meat all evening.",
+    "avoidPairing": "Clear seafood soups and mild tofu dishes disappear underneath it.",
+    "similar": [
+      "Bokbunjaeum (복분자음)",
+      "Seonunsan Bokbunjaju (선운산 복분자주)",
+      "Hongyeon Bokbunjaju (홍연 복분자주)"
+    ],
+    "trivia": "Bokbunja is not the same plant as the western raspberry: it is Rubus coreanus, a Korean black raspberry that ripens dark purple and is far more tannic and less perfumed than the fruit you know from a supermarket punnet.",
+    "servingTemp": "10-13°C, lightly chilled",
+    "servingNote": "Best in a wine glass, poured for others before yourself. Because it is 13%, Koreans treat it as a sit-down drink to sip through a meal rather than a toasting shot.",
+    "aging": "Drink within a year or two of purchase; it is made for freshness, not cellaring. Refrigerate once opened and finish within a week.",
+    "tips": [
+      "If you are buying a gift, this is the safest bokbunja to hand to someone who drinks wine",
+      "Decant nothing, just chill — the aroma is at its best cool, not cold"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Hongyeon Bokbunjaju (홍연 복분자주)",
+    "searchKeyword": "홍연 복분자주",
+    "producer": "Gochang Myeongsanpum Bokbunjaju (고창명산품복분자주)",
+    "type": "Bokbunja Wine",
+    "region": "Asan-myeon, Gochang, North Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "16.8%",
+    "liquidColor": "#3E0A24",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "The 16.8% strength and the 375 mL format appear consistently in Korean retail listings for the Hongyeon bottling. The producer is Gochang Myeongsanpum Bokbunjaju, based on Bokbunja-ro in Asan-myeon, Gochang; company material states it has produced bokbunja wine since 1995 and describes itself as the first to commercialise the drink nationally. Taste axes are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 68
+      },
+      {
+        "axis": "감칠맛",
+        "value": 36
+      },
+      {
+        "axis": "산도",
+        "value": 58
+      },
+      {
+        "axis": "당도",
+        "value": 62
+      }
+    ],
+    "tastingNotes": "The strongest and most concentrated of the everyday bokbunja wines — almost opaque, with dense black-fruit syrup, dried plum and a warming alcohol lift on the finish. At nearly 17% it has real weight, closer to a fortified dessert wine than to the light 12-13% supermarket bottlings, and the sweetness is balanced by a firm berry grip.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Gochang-grown black raspberries (bokbunja)"
+      },
+      {
+        "label": "Style",
+        "value": "Bokbunja wine at the strong end of the category"
+      },
+      {
+        "label": "ABV",
+        "value": "16.8%"
+      },
+      {
+        "label": "Bottle",
+        "value": "375 mL, sold singly and in gift sets"
+      }
+    ],
+    "history": [
+      {
+        "year": "1995",
+        "event": "Gochang Myeongsanpum begins commercial bokbunja wine production in Asan-myeon, Gochang, and describes itself as the first house to bring the regional drink to a national market."
+      }
+    ],
+    "story": "Before bokbunja wine was on every Korean supermarket shelf it was a Gochang farmhouse product, and this maker is one of the houses that pushed it into the mainstream. Hongyeon is its higher-strength bottling, with the berry flavour concentrated rather than lightened. In Gochang it is a standard souvenir — the gift-boxed versions are what visitors carry home from Seonunsa temple, a short drive from the berry fields.",
+    "winery": "Gochang Myeongsanpum Bokbunjaju is a specialist producer on Bokbunja-ro in Asan-myeon, Gochang, that has worked with black raspberries since 1995 and sells a range of bokbunja wines and gift bottles. It is a small regional house rather than a national brand, and its output tracks the local harvest.",
+    "foodPairing": [
+      {
+        "emoji": "🥓",
+        "food": "Bossam (boiled pork with kimchi)",
+        "why": "Rich pork and sharp kimchi need a drink with weight; this has it.",
+        "shopKeyword": "보쌈"
+      },
+      {
+        "emoji": "🍄",
+        "food": "Grilled mushrooms",
+        "why": "Earthy mushroom picks up the wine's darker, drier edge.",
+        "shopKeyword": "표고버섯"
+      },
+      {
+        "emoji": "🍮",
+        "food": "Dessert or after-dinner sweets",
+        "why": "At 16.8% and sweet, it doubles neatly as a dessert pour.",
+        "shopKeyword": "약과"
+      }
+    ],
+    "pairingTip": "Treat it as a strong dessert wine — small pours, near the end of the meal, or alongside heavy grilled meat.",
+    "avoidPairing": "Light salads, raw fish and steamed white fish are simply overwhelmed.",
+    "similar": [
+      "Bohae Bokbunjaju (보해 복분자주)",
+      "Myeongjak Bokbunja (명작 복분자)",
+      "Seonunsan Bokbunjaju (선운산 복분자주)"
+    ],
+    "trivia": "Bokbunja wine gained a reputation as a diplomatic gift and banquet pour in Korea, which is why so much of it is sold in ceramic bottles and lacquered boxes rather than plain glass.",
+    "servingTemp": "10-14°C, lightly chilled",
+    "servingNote": "Serve in small glasses; at this strength a full wine pour goes a long way. Koreans often drink it at the end of a barbecue meal rather than throughout.",
+    "aging": "Not for long keeping. Store upright and away from heat, refrigerate after opening and finish within a week or two.",
+    "tips": [
+      "If you have tried a 12% bokbunja and wanted more intensity, this is the next step",
+      "Over a single large ice cube it opens up and loses some of the alcohol heat"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Toktok Bokbunjaju (톡톡 복분자주)",
+    "searchKeyword": "톡톡 복분자주",
+    "producer": "Chamjuga (참주가)",
+    "type": "Sparkling Bokbunja Wine",
+    "region": "Sunchang, North Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "7%",
+    "liquidColor": "#A32048",
+    "confidence": 92,
+    "knowledge": "rich",
+    "basis": "The 7% ABV, the 750 mL bottle and Sunchang-grown black raspberries as the fruit source are consistent across Korean retail listings and the producer's own description of a light, carbonated fruit wine. The maker is the agricultural corporation Chamjuga, based in Sunchang-gun, North Jeolla, a brewery that traces some sixty years of makgeolli production and now lists around thirty-eight products. Taste axes are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 38
+      },
+      {
+        "axis": "감칠맛",
+        "value": 22
+      },
+      {
+        "axis": "산도",
+        "value": 62
+      },
+      {
+        "axis": "당도",
+        "value": 72
+      }
+    ],
+    "tastingNotes": "Vivid crimson-magenta, fizzing hard, and unapologetically fun. Fresh crushed raspberry and cranberry lead, the bubbles keep everything lively, and at 7% the alcohol is barely noticeable. Think Korean answer to a sweet sparkling rose — sweet, tart and easy, best drunk cold and quickly.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Black raspberries (bokbunja) grown in Sunchang"
+      },
+      {
+        "label": "Style",
+        "value": "Sparkling fruit wine — carbonated, sweet, low strength"
+      },
+      {
+        "label": "ABV",
+        "value": "7%"
+      },
+      {
+        "label": "Bottle",
+        "value": "750 mL, sized to share"
+      }
+    ],
+    "history": [
+      {
+        "year": "Present",
+        "event": "Made by Chamjuga in Sunchang, Jeollabuk-do — a county long known for fermentation — and sold nationwide in 750ml bottles."
+      }
+    ],
+    "story": "Sunchang is famous across Korea for gochujang, the fermented chilli paste, but it also grows black raspberries and has a long brewing tradition. Chamjuga is the county's playful voice: instead of a serious 16% berry wine it carbonates the fruit down to 7%, calls it toktok — the Korean word for a fizzy pop or a light tap — and sells it in a big share-it bottle. It is one of the easiest Korean traditional drinks for a newcomer to like on the first sip.",
+    "winery": "Chamjuga is an agricultural corporation in Sunchang, North Jeolla, whose core business is makgeolli — the house describes some sixty years of brewing behind its recipes and now lists around thirty-eight drinks, from pine makgeolli to rice dongdongju. The sparkling bottles turn up at picnics and outdoor markets more than at formal dinners.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Korean fried chicken",
+        "why": "Fizz and sweetness scrub away fried batter exactly the way beer does, with more fruit.",
+        "shopKeyword": "후라이드치킨"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "Tteokbokki (spicy rice cakes)",
+        "why": "Sweet berry and carbonation calm gochujang heat quickly.",
+        "shopKeyword": "떡볶이"
+      },
+      {
+        "emoji": "🍰",
+        "food": "Fruit tart or cheesecake",
+        "why": "Low alcohol and berry sweetness make it one of the few Korean bottles that works with cake.",
+        "shopKeyword": "치즈케이크"
+      }
+    ],
+    "pairingTip": "Serve it as you would a sweet sparkling wine — ice cold, in flutes or wine glasses, with snacks rather than a formal meal.",
+    "avoidPairing": "Aged or strongly fermented foods such as hongeo (fermented skate) or dense stews clash badly with the sweet fizz.",
+    "similar": [
+      "Ohee Sparkling Takju (오희)",
+      "Bokbunjaeum (복분자음)",
+      "Tok Ssoneun Albam Dongdong (톡쏘는 알밤동동)"
+    ],
+    "trivia": "Sunchang's other famous export is gochujang, and the county's fermentation village is a tourist stop — so a bottle of this and a tub of chilli paste is the standard Sunchang souvenir pair.",
+    "servingTemp": "4-8°C, ice cold",
+    "servingNote": "Open carefully over a sink: it is genuinely fizzy and can foam. Pour into wine glasses to share; nobody shoots this one.",
+    "aging": "Not for aging at all. Keep it cold, and once opened the carbonation fades within a day even with a stopper — finish it the same evening.",
+    "tips": [
+      "Great first bottle for someone who says they do not like Korean alcohol",
+      "Pour it over ice with a squeeze of lime for an instant summer cooler"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Wonmae (원매)",
+    "searchKeyword": "원매 매실주",
+    "producer": "Deohan Juryu (더한주류)",
+    "type": "Plum Liqueur",
+    "region": "Eunpyeong-gu, Seoul",
+    "country": "South Korea",
+    "alcohol": "15% (a 20% Premium and a 13% 375 mL version are also sold)",
+    "liquidColor": "#C79340",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "The producer is Deohan Juryu, a small liquor house at Jeungsan-ro 7-gil in Eunpyeong-gu, Seoul, and the same company behind the plum spirit Seoul Night. Retail and producer listings show a 15% 750 mL standard bottle, a 20% Premium 750 mL and a 13% 375 mL format, with a plum wine base, plum syrup, honey and enzyme-treated stevia declared on the label and fully ripened yellow plums described as the fruit. Taste axes are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 55
+      },
+      {
+        "axis": "감칠맛",
+        "value": 38
+      },
+      {
+        "axis": "산도",
+        "value": 62
+      },
+      {
+        "axis": "당도",
+        "value": 74
+      }
+    ],
+    "tastingNotes": "Amber-gold and thickly aromatic: ripe yellow plum, apricot skin, a honeyed roundness and the faint almond-kernel note that all maesil drinks carry. Sweet, certainly, but the acidity is sharp enough to keep it lively, and honey alongside the sugar gives the finish a softer, less candied edge than the big supermarket plum liqueurs.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Korean green plum (maesil) wine base with plum syrup and honey"
+      },
+      {
+        "label": "Fruit",
+        "value": "Plums left on the tree until fully ripe and yellow, rather than picked green"
+      },
+      {
+        "label": "ABV",
+        "value": "15% standard; 20% for the Premium bottling"
+      },
+      {
+        "label": "Bottle",
+        "value": "750 mL (a 375 mL version is bottled at 13%)"
+      }
+    ],
+    "history": [],
+    "story": "Maesil — the Korean green plum, the same fruit as Japanese ume — is a national obsession. Households still steep it in sugar every June to make maesil-cheong syrup, and the liqueur version is the drinkable cousin of that ritual. Wonmae comes from a small Seoul house that also makes Seoul Night, the plum distillate that became a modern craft favourite, and it takes the fruit more seriously than most: ripe yellow plums and honey rather than a wall of refined sugar.",
+    "winery": "Deohan Juryu is a small modern Korean liquor house in Eunpyeong-gu, Seoul, best known internationally for Seoul Night (서울의밤), a 25% spirit distilled from domestic yellow plums with a 40% version alongside it. Its plum range spans this liqueur, a Premium bottling at higher strength and smaller formats, all built on the idea of treating Korean green plum as a serious ingredient rather than a flavouring.",
+    "foodPairing": [
+      {
+        "emoji": "🍢",
+        "food": "Grilled skewers and yakitori-style bites",
+        "why": "Sweet plum against char and salt is one of the most reliable matches in Asian drinking.",
+        "shopKeyword": "닭꼬치"
+      },
+      {
+        "emoji": "🥟",
+        "food": "Fried dumplings",
+        "why": "Plum acidity cuts oil, and the sweetness plays the role a dipping sauce would.",
+        "shopKeyword": "군만두"
+      },
+      {
+        "emoji": "🍦",
+        "food": "Vanilla ice cream",
+        "why": "Pour a shot straight over it — the plum liqueur turns dessert into an affogato-style treat.",
+        "shopKeyword": "바닐라아이스크림"
+      }
+    ],
+    "pairingTip": "Long over ice with soda water and a lemon slice, it becomes a full-length aperitif rather than a sweet sipper.",
+    "avoidPairing": "Anything delicately savoury — clear broths, steamed fish, plain tofu — vanishes under the plum sweetness.",
+    "similar": [
+      "Maesil Wonju (매실원주)",
+      "Maechwisoon (매취순)",
+      "Seoljungmae (설중매)"
+    ],
+    "trivia": "Never eat raw green maesil: the unripe fruit carries a compound that breaks down into cyanide-related toxins, which is exactly why Koreans always cure it in sugar, salt or alcohol before it touches a table.",
+    "servingTemp": "6-10°C chilled, or over ice",
+    "servingNote": "Serve in a small tumbler over a big ice cube, or neat and cold in a stemmed glass. It also warms well in winter, gently, in a ceramic cup.",
+    "aging": "Not for cellaring, though the sugar makes it forgiving. Store cool and dark, refrigerate after opening and finish within a couple of months.",
+    "tips": [
+      "Half plum liqueur, half sparkling water over ice is the standard Korean summer serve",
+      "If 15% still tastes too sweet for you, the 20% Premium version reads noticeably drier"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Haneuldam Maesilju (하늘담 매실주)",
+    "searchKeyword": "하늘담 매실주",
+    "producer": "Suncheon Jujo (순천주조)",
+    "type": "Plum Wine",
+    "region": "Suncheon, South Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "16%",
+    "liquidColor": "#D9A441",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "Korean retail and press coverage give 16% ABV in a 500 mL bottle, made from Suncheon green plums, 100% domestic rice and local mineral bedrock water. The Haneuldam line was completed in 2017 under an agreement between the city of Suncheon and Suncheon Jujo and is sold as the city's official liquor; it was later chosen as the official toasting drink of the Suncheon Bay International Garden Expo. The brewery is described as having roughly eighty years of history, so no precise founding year is given here. Taste axes are editorial estimates for a rice-brewed plum wine.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 60
+      },
+      {
+        "axis": "감칠맛",
+        "value": 58
+      },
+      {
+        "axis": "산도",
+        "value": 64
+      },
+      {
+        "axis": "당도",
+        "value": 62
+      }
+    ],
+    "tastingNotes": "Unusual and worth seeking out: because rice is fermented into it rather than the plums simply being steeped in neutral spirit, there is a real grain warmth under the fruit. Golden amber, with ripe plum, dried apricot and a soft nutty rice note, then a bittersweet finish that is closer to a Korean yakju than to a fruit liqueur. Complex enough to sip slowly.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Suncheon green plums (cheongmaesil) with 100% Korean rice and local mineral bedrock water"
+      },
+      {
+        "label": "Style",
+        "value": "Plum wine in a yakju idiom — fermented, with grain character alongside the fruit"
+      },
+      {
+        "label": "ABV",
+        "value": "16%"
+      },
+      {
+        "label": "Bottle",
+        "value": "500 mL"
+      }
+    ],
+    "history": [
+      {
+        "year": "2017",
+        "event": "Suncheon Jujo completes the Haneuldam range under an agreement with the city of Suncheon, and it is designated the city's official liquor."
+      },
+      {
+        "year": "2023",
+        "event": "Haneuldam is chosen as the official toasting drink of the Suncheon Bay International Garden Expo."
+      }
+    ],
+    "story": "The Seomjin river valley around Suncheon and Gwangyang is Korea's plum country — every spring the hillsides turn white with maesil blossom and the whole region fills with visitors. Suncheon Jujo, a brewery with something like eighty years behind it, makes this as the city's own bottle: local plums, Korean rice, bedrock water, and a fermentation approach that gives the drink body instead of just sweetness. Haneuldam roughly means 'holding the sky,' a nod to Suncheon's famous wetland skies.",
+    "winery": "Suncheon Jujo is a long-running South Jeolla brewery whose main business has always been makgeolli for the local market. The Haneuldam line is its premium face — plum and rice drinks tied explicitly to Suncheon's agriculture, developed with the city itself and sold as its representative liquor.",
+    "foodPairing": [
+      {
+        "emoji": "🐖",
+        "food": "Suyuk or bossam (boiled pork)",
+        "why": "Plum acidity and rice body handle fatty boiled pork exactly as a good yakju does.",
+        "shopKeyword": "수육"
+      },
+      {
+        "emoji": "🦪",
+        "food": "Kkomak muchim (seasoned cockles)",
+        "why": "The Suncheon Bay coast's own specialty — local shellfish with the local bottle is the point.",
+        "shopKeyword": "꼬막"
+      },
+      {
+        "emoji": "🍠",
+        "food": "Grilled or steamed sweet potato",
+        "why": "Nutty grain notes meet caramelised starch; a humble, very Korean pairing.",
+        "shopKeyword": "군고구마"
+      }
+    ],
+    "pairingTip": "Try it warmed in a ceramic cup in cold weather — the rice character opens up and the plum turns to stewed fruit.",
+    "avoidPairing": "Heavily chilli-hot stews fight the fruit; the bitterness of the plum turns metallic against strong gochujang.",
+    "similar": [
+      "Maechwisoon (매취순)",
+      "Maesil Wonju (매실원주)",
+      "Wonmae (원매)"
+    ],
+    "trivia": "Maesil is picked in a narrow window around early June, and Korean supermarkets sell whole crates of the raw fruit alongside sugar sacks for exactly two or three weeks a year — the national plum-steeping season.",
+    "servingTemp": "8-12°C chilled, or gently warmed to about 40°C in winter",
+    "servingNote": "Best in a small ceramic cup, poured for others first with both hands. Ice is fine in summer; in winter Koreans warm the bottle in hot water and drink it like warmed yakju.",
+    "aging": "Drink within a year or so. Keep cool and out of sunlight; refrigerate after opening and finish within a few weeks.",
+    "tips": [
+      "Look for the grain note when you sip — that is what separates this from a steeped plum liqueur",
+      "If you like it, the wider yakju category is your next stop"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Jeongheonbae Insamju (정헌배 인삼주)",
+    "searchKeyword": "정헌배 인삼주",
+    "producer": "Jeongheonbae Insamjuga (정헌배인삼주가)",
+    "type": "Ginseng Liqueur",
+    "region": "Anseong, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "40%",
+    "liquidColor": "#F4EEDB",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "Korean coverage of the Anseong distillery gives 40% ABV for the flagship and describes the method — ginseng dried into red ginseng and powdered, fermented with rice, nuruk and water, then distilled and matured at least three years in traditional onggi earthenware jars. The house was set up by Jeong Heon-bae, professor emeritus of business administration at Chung-Ang University, who founded a research operation in 2006 and first released the liquor in 2008. Taste axes are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 72
+      },
+      {
+        "axis": "감칠맛",
+        "value": 66
+      },
+      {
+        "axis": "산도",
+        "value": 26
+      },
+      {
+        "axis": "당도",
+        "value": 24
+      }
+    ],
+    "tastingNotes": "Serious, dry and medicinal in the best sense. The nose is unmistakably red ginseng — earthy root, dried herbs, a faint sweetness — and the palate is clean and warming with a long bittersweet ginseng finish, rounded off by years in earthenware. Nothing like the sweet ginseng liquor poured free with samgyetang; this is a distilled spirit with genuine grip.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Korean ginseng dried into red ginseng and powdered, fermented with rice, nuruk (Korea's wild-yeast wheat starter) and water"
+      },
+      {
+        "label": "Method",
+        "value": "Fermented first, then distilled — not ginseng steeped in ready-made alcohol"
+      },
+      {
+        "label": "Maturation",
+        "value": "At least three years in traditional onggi earthenware jars"
+      },
+      {
+        "label": "ABV",
+        "value": "40%"
+      }
+    ],
+    "history": [
+      {
+        "year": "2006",
+        "event": "Jeong Heon-bae sets up a ginseng-liquor research operation in Anseong, Gyeonggi."
+      },
+      {
+        "year": "2008",
+        "event": "The distilled ginseng spirit is released for the first time after its initial maturation."
+      }
+    ],
+    "story": "Most insamju you meet in Korea is a shortcut: a ginseng root dropped into cheap spirit and left to steep, poured as a free extra at chicken-soup restaurants. Jeong Heon-bae, a business professor and one of the more outspoken campaigners for Korean traditional liquor, decided to do it the long way instead — fermenting powdered red ginseng with rice and nuruk, distilling the result, and letting it sleep in onggi jars for years before it is bottled. He built the operation in Anseong, south of Seoul, in a region long associated with ginseng cultivation.",
+    "winery": "Jeongheonbae Insamjuga is a small Anseong distillery founded by Jeong Heon-bae, professor emeritus of business administration at Chung-Ang University and often billed in Korea as the country's first doctorate holder in liquor studies. The house makes a distilled ginseng spirit alongside lower-strength ginseng drinks, and has drawn buyers from abroad who want a Korean spirit with a story attached.",
+    "foodPairing": [
+      {
+        "emoji": "🍲",
+        "food": "Samgyetang (ginseng chicken soup)",
+        "why": "Ginseng on ginseng — the traditional Korean pairing, and the restaurant custom this bottle elevates.",
+        "shopKeyword": "삼계탕"
+      },
+      {
+        "emoji": "🥩",
+        "food": "Hanwoo beef, grilled simply with salt",
+        "why": "A 40% spirit needs protein and fat; clean beef lets the ginseng aroma through.",
+        "shopKeyword": "한우 등심"
+      },
+      {
+        "emoji": "🌰",
+        "food": "Roasted chestnuts and dried jujube",
+        "why": "Nutty and lightly sweet snacks are the classic accompaniment to Korean distilled liquor.",
+        "shopKeyword": "대추"
+      }
+    ],
+    "pairingTip": "Sip it neat and small alongside rich, savoury food rather than mixing it — the ginseng aroma is the entire point.",
+    "avoidPairing": "Sweet desserts and fruit turn the ginseng bitterness harsh and soapy.",
+    "similar": [
+      "Geumsan Insamju (금산인삼주)",
+      "Songhwa Baekilju (송화백일주)",
+      "Munbaeju (문배주)"
+    ],
+    "trivia": "Ginseng grading in Korea is its own science: fresh susam, steamed and dried hongsam (red ginseng), and sun-dried baeksam all behave differently in alcohol, and red ginseng is chosen here because steaming makes its aroma compounds far more stable.",
+    "servingTemp": "Room temperature, or lightly chilled to 12-15°C",
+    "servingNote": "Small stemmed or ceramic cups, poured with both hands. At 40% it is a sipping spirit for the end of a meal, not a toasting shot — though Korean etiquette will still have people refilling your cup.",
+    "aging": "Already matured for years before bottling and stable once sealed. Store upright at room temperature away from light; an opened bottle keeps for months, though the aroma slowly fades.",
+    "tips": [
+      "Compare it side by side with the free insamju at a samgyetang restaurant — the difference explains the price",
+      "Do not chill it too hard; below about 10°C the ginseng aroma shuts down"
+    ],
+    "vintage": null
+  }
+]

@@ -214,7 +214,8 @@ export default async function PlanPage() {
                 <tr><td>DB 적중 (이름 · 검색)</td><td className={s.numCell}><b>0원</b></td><td>AI 호출 없음</td></tr>
                 <tr><td>바코드</td><td className={s.numCell}><b>0원</b></td><td>AI 호출 없음</td></tr>
                 <tr><td>와인 리스트 한 장</td><td className={s.numCell}>약 5원</td><td>항목 수와 무관하게 1회 호출</td></tr>
-                <tr><td>가격 · 이미지 조회</td><td className={s.numCell}><b>0원</b></td><td>네이버 API 무료 (일 25,000회)</td></tr>
+                <tr><td>시세 표시</td><td className={s.numCell}><b>0원</b></td><td>우리 데이터 (외부 호출 없음)</td></tr>
+                <tr><td>판매가 · 상품 사진</td><td className={s.numCell}><b>0원</b></td><td>11번가 오픈 API 무료</td></tr>
               </tbody>
             </table>
           </div>
@@ -463,7 +464,7 @@ export default async function PlanPage() {
               <tbody>
                 <tr>
                   <td>Vivino 쓰면 되지 않나</td>
-                  <td className={s.was}>Vivino는 한국 가격·판매처가 없고, 추천을 받으려면 여러 병을 마시고 평가해야 합니다. 우리는 네이버 최저가 연동, 문답 여덟 개로 첫날 추천, 안주까지 연결합니다</td>
+                  <td className={s.was}>Vivino는 한국 시세·판매처가 없고, 추천을 받으려면 여러 병을 마시고 평가해야 합니다. 우리는 국내 시세를 직접 조사해 갖고 있고, 문답 여덟 개로 첫날 추천하며, 안주까지 연결합니다</td>
                 </tr>
                 <tr>
                   <td>데이터가 계속 유지되나</td>

@@ -12,6 +12,7 @@ import {
 import { getDb } from "@/lib/mongodb";
 import { catalogKey } from "@/lib/catalog";
 import { ONLINE_SALE_OK, onlineShops } from "@/lib/onlineSale";
+import { searchElevenst, hasElevenstKey } from "@/lib/elevenst";
 
 export const runtime = "nodejs";
 
@@ -24,7 +25,10 @@ export async function GET(request) {
   const asked = params.get("type");
   const type = asked === "food" || asked === "goods" ? asked : "liquor";
   if (!queries.length) return NextResponse.json({ error: "q 필요" }, { status: 400 });
-  if (!hasNaverKeys()) return NextResponse.json({ items: null, results: null, noApi: true });
+  // 값을 줄 수 있는 문이 하나라도 있으면 연다 — 네이버 쇼핑이 닫힌 뒤 11번가가 그 자리다
+  if (!hasNaverKeys() && !hasElevenstKey()) {
+    return NextResponse.json({ items: null, results: null, noApi: true });
+  }
 
   try {
     // 여러 키워드 → 키워드별 대표 상품 1개씩 (안주·잔·도구 추천용)
@@ -55,7 +59,19 @@ export async function GET(request) {
       return NextResponse.json({ results });
     }
 
-    const items = (await searchShop(queries[0], type)) || [];
+    let items = (await searchShop(queries[0], type)) || [];
+
+    // 네이버 쇼핑이 닫혀 빈손이면 11번가에 물어본다.
+    // 값의 성격이 다르므로(대개 매장 픽업가) 화면이 구분할 수 있도록 source 를 달아 보낸다.
+    let source = items.length ? "naver" : null;
+    if (!items.length && hasElevenstKey()) {
+      try {
+        items = await searchElevenst(queries[0], type);
+        if (items.length) source = "11st";
+      } catch (e) {
+        console.error("[shop:11st]", e.message);
+      }
+    }
 
     // 값을 못 가져왔더라도 살 곳까지 끊지는 않는다. 검색 주소는 API가 아니라
     // 그냥 링크라, 가격만 빠지고 구매 경로는 그대로 남는다.
@@ -76,6 +92,7 @@ export async function GET(request) {
       items: items.slice(0, 4),
       reference: ref?.low || null,
       sampled: ref?.sampled || 0,
+      source,
     });
   } catch (err) {
     console.error("[shop]", err.message);

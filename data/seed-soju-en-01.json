@@ -1,0 +1,1222 @@
+[
+  {
+    "category": "soju",
+    "name": "Jamong Eseul (자몽에이슬)",
+    "searchKeyword": "자몽에이슬",
+    "producer": "HiteJinro (하이트진로)",
+    "type": "Fruit Soju",
+    "region": "Nationwide (Seoul-based brand)",
+    "country": "South Korea",
+    "alcohol": "13%",
+    "liquidColor": "#F7C9B6",
+    "confidence": 96,
+    "knowledge": "rich",
+    "basis": "Korean news coverage from the launch week gives 19 June 2015 as the release date, 13% ABV, a 360 mL bottle and a stated initial target of five million bottles a month; the product is built on the Chamisul soju base and is classified as a liqueur rather than soju under Korean liquor law. Taste axes follow diluted-soju norms with sweetness raised and grain lowered because this is a flavoured product.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 28
+      },
+      {
+        "axis": "깔끔함",
+        "value": 62
+      },
+      {
+        "axis": "곡물향",
+        "value": 12
+      },
+      {
+        "axis": "당도",
+        "value": 62
+      }
+    ],
+    "tastingNotes": "Pale blush pink, smelling of pink grapefruit soda with a candied peel edge. The sip is sweet-tart and soft, with a faint pithy bitterness on the finish that stops it from being pure syrup, and almost no alcohol burn at 13%. It drinks like a ready-made cocktail, which is precisely how it is meant to.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Chamisul diluted soju with grapefruit flavouring"
+      },
+      {
+        "label": "ABV",
+        "value": "13%"
+      },
+      {
+        "label": "Legal class",
+        "value": "Liqueur — adding fruit moves it out of Korea's soju tax category"
+      },
+      {
+        "label": "Bottle",
+        "value": "360 mL green soju bottle, same shape as the regular Chamisul"
+      }
+    ],
+    "history": [
+      {
+        "year": "2015",
+        "event": "HiteJinro launches Jamong Eseul on 19 June at 13%, answering Lotte's yuzu-flavoured Soonhari, with an initial sales target of five million bottles a month."
+      },
+      {
+        "year": "2015-2016",
+        "event": "The fruit soju boom peaks and then cools at home, while exports of the category keep climbing."
+      }
+    ],
+    "story": "In spring 2015 a citrus-flavoured soju from a rival was selling out nationwide, and Jinro — the biggest name in Korean soju — had months, not years, to respond. Jamong Eseul was that response: grapefruit, 13%, in the same green bottle everyone already knew, aimed at five million bottles a month from the start. It arrived at the exact moment Korean drinking culture was shifting away from harsh 20% shots, and it turned an entire generation of reluctant soju drinkers into willing ones. Overseas it is still one of the first Korean bottles people try.",
+    "winery": "HiteJinro is Korea's largest alcohol company, formed when the Jinro soju business and the Hite beer business came together. Its Chamisul soju is the best-selling spirit brand in the world by volume, and the Eseul fruit line is the flavoured extension of that brand, sold in dozens of export markets.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Korean fried chicken",
+        "why": "Sweet citrus against hot crisp batter is the modern update on Korea's chicken-and-beer ritual.",
+        "shopKeyword": "양념치킨"
+      },
+      {
+        "emoji": "🔥",
+        "food": "Buldak (fire chicken)",
+        "why": "Grapefruit sweetness and low strength put out capsaicin heat faster than beer.",
+        "shopKeyword": "불닭"
+      },
+      {
+        "emoji": "🥓",
+        "food": "Samgyeopsal (grilled pork belly)",
+        "why": "Citrus acidity cuts pork fat; a lighter alternative to the usual plain soju.",
+        "shopKeyword": "삼겹살"
+      }
+    ],
+    "pairingTip": "Keep it colder than you think necessary — warm grapefruit soju turns perfumey and cloying within minutes.",
+    "avoidPairing": "Sashimi, clear soups and subtle rice dishes are steamrollered by the citrus aroma.",
+    "similar": [
+      "Cheongpodo Eseul (청포도에이슬)",
+      "Soonhari Chum Churum Yuja (순하리 처음처럼 유자)",
+      "Saero Salgu (새로 살구)"
+    ],
+    "trivia": "Look closely at the label: legally this is not soju at all but a liqueur. Adding fruit reclassifies the drink under Korean liquor law, which is why the fine print differs from the bottle of Chamisul standing next to it.",
+    "servingTemp": "0-4°C, ice cold",
+    "servingNote": "Poured into the usual small soju glasses, and the same etiquette applies — pour for others before yourself, receive with both hands. Nobody expects you to shoot it, and sipping is completely normal.",
+    "aging": "Not for aging. Store cool and dark unopened; once opened, refrigerate and finish within a day or two before the aroma fades.",
+    "tips": [
+      "The sweetness hides real alcohol — count your glasses, it is still 13%",
+      "Top it with soda water over ice for an easy grapefruit highball"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Cheongpodo Eseul (청포도에이슬)",
+    "searchKeyword": "청포도에이슬",
+    "producer": "HiteJinro (하이트진로)",
+    "type": "Fruit Soju",
+    "region": "Nationwide (Seoul-based brand)",
+    "country": "South Korea",
+    "alcohol": "13%",
+    "liquidColor": "#EFF0D6",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "A 2016 launch at 13% ABV on the Chamisul base is reported in Korean coverage from the time, and later trade reporting puts 2018 exports at about two million bottles, more than ten times the previous year's figure. Taste axes follow diluted-soju norms adjusted for a flavoured product.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 26
+      },
+      {
+        "axis": "깔끔함",
+        "value": 68
+      },
+      {
+        "axis": "곡물향",
+        "value": 10
+      },
+      {
+        "axis": "당도",
+        "value": 58
+      }
+    ],
+    "tastingNotes": "The cleanest of the Eseul trio. Very pale green-gold, with green grape and muscat aromatics that read almost like a sweet white wine, then a crisp, slightly drier finish than the grapefruit version. Low bitterness, low burn, and a fresh grape sweetness that stops just short of confectionery.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Chamisul diluted soju with green grape flavouring"
+      },
+      {
+        "label": "ABV",
+        "value": "13%"
+      },
+      {
+        "label": "Legal class",
+        "value": "Liqueur — the fruit content takes it out of the soju category under Korean law"
+      },
+      {
+        "label": "Bottle",
+        "value": "360 mL"
+      }
+    ],
+    "history": [
+      {
+        "year": "2016",
+        "event": "HiteJinro launches Cheongpodo Eseul at 13%, following the grapefruit version of the year before."
+      },
+      {
+        "year": "2018",
+        "event": "Exports reach roughly two million bottles, more than ten times the previous year, making it the company's leading fruit liqueur abroad."
+      }
+    ],
+    "story": "Green grape — cheongpodo — is a flavour Koreans grew up with in sweets, drinks and ice pops, so it was an obvious second act after grapefruit. It turned out to travel better than anyone expected: while domestic fruit-soju sales cooled after the mid-2010s craze, this bottle became the one that carried the category abroad, showing up in Southeast Asian convenience stores, American Korean-barbecue restaurants and European Asian supermarkets. For many people outside Korea, this is their first Korean drink.",
+    "winery": "HiteJinro is Korea's largest alcohol company and the maker of Chamisul, the world's biggest-selling spirit brand by volume. The Eseul line applies fruit flavours to that soju base and is now built substantially around export demand.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Korean fried chicken",
+        "why": "Grape sweetness and clean acidity balance salty fried batter.",
+        "shopKeyword": "후라이드치킨"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "Tteokbokki (spicy rice cakes)",
+        "why": "Sweet grape is a fast, effective brake on gochujang heat.",
+        "shopKeyword": "떡볶이"
+      },
+      {
+        "emoji": "🧀",
+        "food": "Cheese sticks and creamy snacks",
+        "why": "Low alcohol and fruit aroma sit comfortably with salty, fatty bar snacks.",
+        "shopKeyword": "치즈스틱"
+      }
+    ],
+    "pairingTip": "Chill it hard and pour it in wine glasses if you are serving people who do not drink spirits — it reads as a light sweet white.",
+    "avoidPairing": "Raw fish and delicate broths lose all definition against the grape perfume.",
+    "similar": [
+      "Jamong Eseul (자몽에이슬)",
+      "Jadu Eseul (자두에이슬)",
+      "Soonhari Chum Churum Yuja (순하리 처음처럼 유자)"
+    ],
+    "trivia": "Green grape flavour in Korea is closely tied to shine muscat, the crisp seedless grape that became a luxury fruit gift in the 2010s — part of why this flavour reads as fresh and slightly upmarket to Korean drinkers.",
+    "servingTemp": "0-4°C, ice cold",
+    "servingNote": "Standard soju glasses and standard etiquette: pour for others first, both hands when receiving from someone older. It is equally at home poured over ice in a tumbler.",
+    "aging": "Not for aging. Keep unopened bottles cool and dark; once opened, refrigerate and drink within a day or two.",
+    "tips": [
+      "The driest and most food-friendly of the Eseul flavours — start here if you dislike sweet drinks",
+      "Half green grape soju, half sparkling water makes a very drinkable long serve"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Jadu Eseul (자두에이슬)",
+    "searchKeyword": "자두에이슬",
+    "producer": "HiteJinro (하이트진로)",
+    "type": "Fruit Soju",
+    "region": "Nationwide (Seoul-based brand)",
+    "country": "South Korea",
+    "alcohol": "13%",
+    "liquidColor": "#F2CBD1",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "Korean reporting describes a 13% plum-flavoured third entry in the Eseul line, released in January 2018 as an export-only product; it sold about 1.5 million bottles in its first eight months across roughly twenty markets in North America, China, Asia-Pacific and Europe, and was later brought back to the domestic market in response to Korean demand. Taste axes follow diluted-soju norms adjusted for a flavoured product.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 30
+      },
+      {
+        "axis": "깔끔함",
+        "value": 60
+      },
+      {
+        "axis": "곡물향",
+        "value": 10
+      },
+      {
+        "axis": "당도",
+        "value": 64
+      }
+    ],
+    "tastingNotes": "Soft rose-pink, with sweet red plum, a touch of plum skin tartness and a gentle floral lift. Rounder and jammier than the green grape version, closer in weight to the grapefruit, and finishing with just enough acidity to stay refreshing. At 13% the alcohol is well hidden.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Chamisul diluted soju with plum flavouring"
+      },
+      {
+        "label": "Fruit",
+        "value": "Jadu — the round red Asian plum, not maesil, the green plum used in Korean plum liqueurs"
+      },
+      {
+        "label": "ABV",
+        "value": "13%"
+      },
+      {
+        "label": "Bottle",
+        "value": "360 mL"
+      }
+    ],
+    "history": [
+      {
+        "year": "2018",
+        "event": "HiteJinro releases Jadu Eseul in January as an export-only fruit liqueur, the third flavour in the Eseul line."
+      },
+      {
+        "year": "2018",
+        "event": "About 1.5 million bottles sell in eight months across roughly twenty countries, and Korean demand pulls the bottle back onto the domestic market."
+      }
+    ],
+    "story": "By the time this flavour arrived, the domestic fruit-soju craze had already peaked and the real growth was abroad. So HiteJinro did something unusual: it built the plum version for export only and let overseas success argue it back home — a reverse launch. Jadu is the plump red summer plum Koreans eat by the bagful in July, quite distinct from the green maesil used in traditional plum liqueurs, and the flavour lands somewhere between peach and berry for palates meeting it for the first time.",
+    "winery": "HiteJinro is Korea's largest alcohol company, maker of Chamisul and the Eseul fruit line. Its fruit liqueurs are now sold in dozens of countries, and this flavour in particular was designed with export markets as the primary audience.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Yangnyeom chicken (sweet-spicy fried chicken)",
+        "why": "Sweet plum and sweet-hot glaze reinforce each other without a fight.",
+        "shopKeyword": "양념치킨"
+      },
+      {
+        "emoji": "🥩",
+        "food": "Spicy pork bulgogi",
+        "why": "Fruit sweetness tames chilli while the acidity handles the fat.",
+        "shopKeyword": "제육볶음"
+      },
+      {
+        "emoji": "🍧",
+        "food": "Bingsu (Korean shaved ice)",
+        "why": "One of the few soju-family drinks light and fruity enough to sit beside dessert.",
+        "shopKeyword": "빙수"
+      }
+    ],
+    "pairingTip": "Pour it over ice with a wedge of lime — the extra acidity balances the jammier plum sweetness.",
+    "avoidPairing": "Subtle seafood and clear soups; the plum aroma dominates anything quiet.",
+    "similar": [
+      "Jamong Eseul (자몽에이슬)",
+      "Cheongpodo Eseul (청포도에이슬)",
+      "Saero Salgu (새로 살구)"
+    ],
+    "trivia": "Korean has two entirely separate plum words that trip up visitors constantly: jadu is the sweet red eating plum, maesil is the hard green plum that is never eaten raw and goes into syrups and liqueurs. This bottle is the former; maesilju is the latter.",
+    "servingTemp": "0-4°C, ice cold",
+    "servingNote": "Same small glasses and same table manners as any soju — pour for others, receive with both hands. Sipping is expected rather than shooting.",
+    "aging": "Not for aging. Store cool and dark unopened, refrigerate after opening and finish within a day or two.",
+    "tips": [
+      "The sweetest of the three Eseul flavours — good for people who normally drink cocktails",
+      "Mix with cold green tea for a very easy, lower-sugar long drink"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Jinro Gold (진로골드)",
+    "searchKeyword": "진로골드",
+    "producer": "HiteJinro (하이트진로)",
+    "type": "Diluted Soju",
+    "region": "Nationwide (Seoul-based brand)",
+    "country": "South Korea",
+    "alcohol": "15.5%",
+    "liquidColor": "#F7F7F2",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "Korean news coverage of the March 2024 launch gives 15.5% ABV, a zero-sugar recipe using no fructose, the addition of a 100% rice distillate, and a sky-blue bottle with a rose-gold cap and emerald label released for the company's hundredth anniversary. The same reporting notes that the older 25% product previously called Jinro Gold was renamed Jinro 25. HiteJinro traces its founding to 3 October 1924. Taste axes follow the diluted-soju band with sweetness lowered for the zero-sugar recipe.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 30
+      },
+      {
+        "axis": "깔끔함",
+        "value": 82
+      },
+      {
+        "axis": "곡물향",
+        "value": 34
+      },
+      {
+        "axis": "당도",
+        "value": 22
+      }
+    ],
+    "tastingNotes": "Water-clear and deliberately quiet. The nose is faint — clean spirit with a whisper of steamed rice from the distillate blended in — and the palate is smooth, dry and short, with none of the sugary tail that older sojus carry. At 15.5% the burn is mild; this is soju engineered to disappear behind food and keep a long table going.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Neutral spirit diluted with water, blended with a 100% rice distillate for softness"
+      },
+      {
+        "label": "Sugar",
+        "value": "Zero sugar — no fructose added"
+      },
+      {
+        "label": "ABV",
+        "value": "15.5%"
+      },
+      {
+        "label": "Bottle",
+        "value": "360 mL, in a sky-blue bottle with a rose-gold cap and emerald label rather than the usual green glass"
+      }
+    ],
+    "history": [
+      {
+        "year": "1924",
+        "event": "Jinro is founded on 3 October, beginning what becomes Korea's best-known soju lineage."
+      },
+      {
+        "year": "2024",
+        "event": "HiteJinro launches Jinro Gold in March at 15.5% as a zero-sugar soju marking the company's centenary; the older 25% bottle that had carried the Gold name is renamed Jinro 25."
+      }
+    ],
+    "story": "Korean soju has been getting weaker for decades — from over 30% in the mid-twentieth century down through the twenties and now into the fifteens — and in the 2020s a zero-sugar arms race broke out on top of that. Jinro Gold is HiteJinro's entry in that fight, released for the company's hundredth birthday: no added fructose, a splash of real rice distillate to stop it tasting like watered spirit, and a sky-blue bottle designed to look like anything but a standard green soju. It is a snapshot of exactly where mainstream Korean drinking sits right now.",
+    "winery": "HiteJinro is Korea's largest alcohol company, built from the Jinro soju house founded in 1924 and the Hite brewing business. Its Chamisul brand is the world's best-selling spirit by volume, and the company runs several parallel soju brands aimed at different drinkers — Chamisul, Jinro Is Back, Jinro 25 and this one.",
+    "foodPairing": [
+      {
+        "emoji": "🥓",
+        "food": "Samgyeopsal (grilled pork belly)",
+        "why": "The soju-and-pork-belly table is the default Korean night out; clean soju resets the palate between bites.",
+        "shopKeyword": "삼겹살"
+      },
+      {
+        "emoji": "🍲",
+        "food": "Kimchi jjigae (kimchi stew)",
+        "why": "Sour, spicy stew and neutral cold soju is the most classic pairing in the country.",
+        "shopKeyword": "김치찌개"
+      },
+      {
+        "emoji": "🐙",
+        "food": "Nakji bokkeum (spicy stir-fried octopus)",
+        "why": "Dry, sugar-free soju cools chilli heat without adding sweetness on top.",
+        "shopKeyword": "낙지볶음"
+      }
+    ],
+    "pairingTip": "Serve it straight from the fridge with anything salty, spicy or fatty — it is a food drink first and a flavour experience second.",
+    "avoidPairing": "Desserts and delicate sweets have nothing to hold onto; the spirit just reads as alcohol.",
+    "similar": [
+      "Jinro Is Back (진로이즈백)",
+      "Chamisul Fresh (참이슬 후레쉬)",
+      "Saero (새로)"
+    ],
+    "trivia": "Two different products have carried the Jinro Gold name. When the 15.5% version launched in 2024, the existing 25% bottle was renamed Jinro 25 to clear the shelf space — so an older Korean drinker may picture something far stronger than what is in your hand.",
+    "servingTemp": "0-6°C, straight from the fridge",
+    "servingNote": "Small glasses, filled by someone else and never by yourself. Hold the bottle with two hands when pouring for anyone senior, and turn your head slightly away when you drink in front of them.",
+    "aging": "Not for aging. Store unopened at room temperature away from sunlight; once opened, cap it, refrigerate and finish within a day or two.",
+    "tips": [
+      "Somaek — a shot of soju dropped into a glass of lager — is the standard Korean move and works well at this strength",
+      "Lower strength means people drink more rounds, not less alcohol; pace yourself"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Chamnamutong Malgeun Iseul (참나무통 맑은이슬)",
+    "searchKeyword": "참나무통 맑은이슬",
+    "producer": "HiteJinro (하이트진로)",
+    "type": "Diluted Soju",
+    "region": "Nationwide (Seoul-based brand)",
+    "country": "South Korea",
+    "alcohol": "16%",
+    "liquidColor": "#F5EBD4",
+    "confidence": 94,
+    "knowledge": "rich",
+    "basis": "Korean trade and general press covering the 14 December 2017 launch give 16% ABV in a 300 mL bottle and describe the recipe as standard soju base blended with a rice-fermented distillate matured over three years in oak casks, with that aged component making up only about 1.1% of the finished liquid. The same reporting positions it as a quasi-premium revival of Chamnamutong Malgeun Soju, produced from 1996. Taste axes are editorial estimates reflecting the light oak influence.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 36
+      },
+      {
+        "axis": "깔끔함",
+        "value": 64
+      },
+      {
+        "axis": "곡물향",
+        "value": 44
+      },
+      {
+        "axis": "당도",
+        "value": 28
+      }
+    ],
+    "tastingNotes": "Faintly straw-tinted rather than colourless, which alone marks it out on a Korean table. The oak-aged distillate is only about one percent of the blend, so what you get is a whisper of vanilla and toasted grain over the usual clean soju body rather than anything whisky-like — but the finish is genuinely rounder and warmer than a standard bottle. A good bridge drink for people who normally reach for brown spirits.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Diluted soju blended with a rice distillate matured in oak casks for over three years"
+      },
+      {
+        "label": "Blend",
+        "value": "The oak-aged component is reported to make up only around 1.1% of the liquid"
+      },
+      {
+        "label": "ABV",
+        "value": "16%"
+      },
+      {
+        "label": "Bottle",
+        "value": "300 mL"
+      }
+    ],
+    "history": [
+      {
+        "year": "1996",
+        "event": "Jinro releases Chamnamutong Malgeun Soju, an oak-rested soju that develops a cult following before disappearing from shelves."
+      },
+      {
+        "year": "2017",
+        "event": "HiteJinro revives the idea on 14 December as Chamnamutong Malgeun Iseul at 16%, aimed at younger office workers as a quasi-premium soju."
+      }
+    ],
+    "story": "Chamnamu means oak, and this bottle is one of Korean drinking's great comeback stories. The 1990s original built a loyal following and then vanished, and for two decades people kept asking for it back. The revival splits the difference between mass-market soju and expensive distilled soju: almost all of the liquid is ordinary soju base, but the sliver of oak-aged rice distillate blended into it gives colour, vanilla sweetness and a softness that no plain green bottle has. It costs barely more than regular soju, which was the whole point.",
+    "winery": "HiteJinro is Korea's largest alcohol company, formed from the Jinro soju house and the Hite brewing business. Alongside its volume brands it maintains a small experimental shelf — the oak-rested Chamnamutong line and the properly distilled Ilpum Jinro — for drinkers who want something beyond neutral soju.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "Hanwoo beef, grilled",
+        "why": "Oak vanilla and beef fat is the same logic that puts whisky next to steak.",
+        "shopKeyword": "한우 등심"
+      },
+      {
+        "emoji": "🍖",
+        "food": "Grilled pork jowl (hangjeongsal)",
+        "why": "Rich, chewy pork stands up to the extra body the oak gives.",
+        "shopKeyword": "항정살"
+      },
+      {
+        "emoji": "🌰",
+        "food": "Roasted nuts and dried squid",
+        "why": "Simple bar snacks let the oak aroma stay in the foreground.",
+        "shopKeyword": "마른안주"
+      }
+    ],
+    "pairingTip": "Serve it slightly less cold than regular soju — around 8-10°C — so the vanilla and grain notes actually show.",
+    "avoidPairing": "Very sweet or citrus-heavy dishes flatten the oak character into something vaguely woody and dull.",
+    "similar": [
+      "Ilpum Jinro (일품진로)",
+      "Jinro Is Back (진로이즈백)",
+      "Won Soju (원소주)"
+    ],
+    "trivia": "Its colour once caused genuine confusion in Korea: soju is normally water-clear and colouring is tightly limited, so a tinted soju was strange enough in the 1990s that drinkers assumed something had gone wrong with the bottle.",
+    "servingTemp": "8-10°C, lightly chilled rather than ice cold",
+    "servingNote": "Standard soju glasses, standard etiquette — poured by someone else, received with both hands. Because it is smoother, it is often sipped rather than shot, and it holds up in a tumbler over one large ice cube.",
+    "aging": "The oak character comes from the distillate before bottling; the bottle itself does not improve. Store upright at room temperature, refrigerate once opened and finish within a week.",
+    "tips": [
+      "A useful stepping stone if you like whisky but want to drink what the table is drinking",
+      "Do not mix it into somaek — the oak notes are wasted under beer"
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Hallasan 17 (한라산 17)",
+    "searchKeyword": "한라산 17",
+    "producer": "Hallasan Co., Ltd. ((주)한라산)",
+    "type": "Diluted soju (low-proof edition)",
+    "region": "Hallim, Jeju Island",
+    "country": "South Korea",
+    "alcohol": "17%",
+    "liquidColor": "#EFF5F6",
+    "confidence": 84,
+    "knowledge": "rich",
+    "basis": "The company history is well documented: founded in Jeju in 1950 as Honam Brewing, the Hallasan brand launched in 1993, and the firm renamed itself Hallasan Co., Ltd. in 1999. Hallasan 17 came out of the 2019 lineup refresh as the lighter sibling to the 21% Original, and the light slot has since been taken over by the 16% Hallasan Soonhan — so a 17% bottle may or may not be the one on the shelf in front of you. Trust the number printed on the label. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 27
+      },
+      {
+        "axis": "깔끔함",
+        "value": 85
+      },
+      {
+        "axis": "곡물향",
+        "value": 19
+      },
+      {
+        "axis": "당도",
+        "value": 34
+      }
+    ],
+    "tastingNotes": "The gentler face of Jeju's hometown soju. Where the 21% Original hits with an old-school heat, the 17 is rounded off at the edges: cool and almost mineral on the nose, clean and slightly sweet through the middle, and short on the finish with only a soft warmth instead of a burn. It stays dry — this is not a fruit soju — but it is forgiving enough to drink glass after glass with food.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Neutral spirit cut with water drawn from Jeju's volcanic bedrock"
+      },
+      {
+        "label": "ABV",
+        "value": "17%"
+      },
+      {
+        "label": "Bottle",
+        "value": "360 mL clear glass — Hallasan's signature, in a country of green soju bottles"
+      },
+      {
+        "label": "Style",
+        "value": "Huiseok-sik soju ('diluted soju') — the everyday category made by cutting neutral spirit with water, as opposed to pot-distilled jeungryu soju"
+      }
+    ],
+    "history": [
+      {
+        "year": "1950",
+        "event": "Founded in Jeju City as Honam Brewing Company; the plant later moved to Hallim on the island's west coast."
+      },
+      {
+        "year": "1993",
+        "event": "The Hallasan Soju brand launches, named after the volcano at the center of the island."
+      },
+      {
+        "year": "1999",
+        "event": "The company renames itself Hallasan Co., Ltd. after its flagship product."
+      },
+      {
+        "year": "2019",
+        "event": "The lineup is refreshed: the 21% bottle is formalized as 'Original' and the lighter Hallasan 17 is added for drinkers who find 21% too strong. The light slot was later handed to the 16% Hallasan Soonhan."
+      }
+    ],
+    "story": "Korea's soju map is regional, and Jeju's flag is Hallasan. For decades the island's bottle was a stiff 21% — a strength the mainland abandoned years ago as brands drifted down toward 16%. Hallasan 17 exists because visitors kept asking for something they could actually finish. It is the same water, the same clear bottle, the same black-pork-restaurant ritual, just with the volume turned down a step. Order it on the island and you get the local experience without the hangover that older Jeju drinkers wear as a badge of honor.",
+    "winery": "Hallasan Co. operates from Hallim on Jeju's west coast, cutting its spirit with water filtered through the island's porous volcanic rock. It is one of the last independent regional soju makers left in Korea — not owned by a Seoul conglomerate — and on Jeju it holds the kind of market share national brands can only envy.",
+    "foodPairing": [
+      {
+        "emoji": "🥓",
+        "food": "Jeju black pork barbecue",
+        "why": "The island's signature pairing — clean, dry soju cuts straight through the fat of heukdwaeji grilled at the table.",
+        "shopKeyword": "제주 흑돼지"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Grilled hairtail (galchi-gui)",
+        "why": "Jeju's famous silver fish is oily and salty; the soju resets your palate between bites.",
+        "shopKeyword": "제주 갈치"
+      },
+      {
+        "emoji": "🍲",
+        "food": "Spicy seafood stew",
+        "why": "Soju's classic job at a Korean table: cooling the chili heat of a bubbling red broth.",
+        "shopKeyword": "해물탕 밀키트"
+      }
+    ],
+    "pairingTip": "Treat it as a table spirit, never a solo sipper — it is designed to be drunk in small glasses between mouthfuls of grilled meat or something spicy.",
+    "avoidPairing": "Desserts and sweet cocktails; an unsweetened, high-proof grain spirit turns thin and harsh the moment sugar arrives.",
+    "similar": [
+      "Hallasan Soju (한라산)",
+      "Good Day (좋은데이)",
+      "Daesun Soju (대선)"
+    ],
+    "trivia": "Almost every Korean soju ships in an identical green bottle, so brands are told apart by their labels. Hallasan uses clear glass instead — locals say it stands for the island's clean water, and it makes the bottle findable across a crowded, smoky barbecue room.",
+    "servingTemp": "Cold, 4-8°C — straight from the fridge or an ice bucket",
+    "servingNote": "Drunk in small shot glasses, never poured for yourself. Fill other people's glasses, let them fill yours, and receive with both hands from anyone older. The first glass is usually raised together with a shout of 'geonbae'.",
+    "aging": "Not aged and does not improve with keeping. Store cool and away from sunlight; once opened, recap and finish within a day or two.",
+    "tips": [
+      "If 17% still bites, ask for it with a splash of chilled barley tea or drink it alongside beer as somaek — a Korean bar staple.",
+      "On Jeju, just say 'Hallasan hana juseyo' — the staff will hand you the local bottle without asking which brand."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Soonhari Chum Churum Peach (순하리 처음처럼 복숭아)",
+    "searchKeyword": "순하리 복숭아",
+    "producer": "Lotte Chilsung Beverage, Liquor Division (롯데칠성음료 주류부문)",
+    "type": "Peach-flavored soju (liqueur)",
+    "region": "Gangneung, Gangwon Province (nationwide brand)",
+    "country": "South Korea",
+    "alcohol": "About 12% (the Soonhari line launched at 14% in 2015 and was later trimmed)",
+    "liquidColor": "#FBE9E2",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "The March 2015 launch of Soonhari Yuja at 14% and the fruit-soju boom that followed are heavily documented in Korean press; peach arrived in the same wave of flavor extensions later that year. Strengths across the line have since been trimmed (commonly 12%), so the figure is given as approximate. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 32
+      },
+      {
+        "axis": "깔끔함",
+        "value": 58
+      },
+      {
+        "axis": "곡물향",
+        "value": 18
+      },
+      {
+        "axis": "당도",
+        "value": 66
+      }
+    ],
+    "tastingNotes": "Pure white-peach candy on the nose — the same soft, powdery sweetness as Korean peach gummies. The sip is round and juicy, low in acid, with the alcohol almost completely hidden under the fruit. It finishes clean rather than syrupy, which is why a 360 mL bottle disappears faster than anyone plans.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Diluted soju with peach flavoring and a small percentage of fruit juice"
+      },
+      {
+        "label": "ABV",
+        "value": "About 12% (14% at the 2015 launch)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur — legally not plain soju, because of the added flavor and sugar"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL green bottle; PET and larger formats also sold"
+      }
+    ],
+    "history": [
+      {
+        "year": "2015",
+        "event": "Lotte Chilsung launches the Soonhari line in March with a yuja flavor at 14%; it sells roughly ten million bottles in about two months and starts a national craze."
+      },
+      {
+        "year": "2015",
+        "event": "Peach and apple follow within the year as Lotte extends the line and every rival rushes out its own fruit soju."
+      },
+      {
+        "year": "2010s-2020s",
+        "event": "Successive renewals lower the strength of the range and refresh the packaging as fruit soju settles in as a permanent category."
+      }
+    ],
+    "story": "Peach is the flavor that turned a 2015 fad into a fixture. Yuja proved fruit soju could sell; peach — bok-sunga, the fruit Koreans treat as the taste of summer — proved it could sell to everyone. It is the bottle a group orders when someone at the table has said 'I can't drink soju', and it is the reason a lot of foreigners' first soju memory is sweet rather than scorching. Purists roll their eyes. The sales figures do not care.",
+    "winery": "Lotte Chilsung's liquor division makes Chum Churum, Korea's number-two soju, at its Gangneung plant using famously soft alkaline water from the Taebaek mountains. Soonhari is its flavored spin-off and the product that created the modern fruit-soju market.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Korean fried chicken",
+        "why": "Sweet peach against hot, crunchy, salty chicken — the chimaek formula with soju standing in for beer.",
+        "shopKeyword": "양념치킨"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "Tteokbokki (spicy rice cakes)",
+        "why": "Sugar tames gochujang heat far better than beer does, and peach is the softest sweetener of the lot.",
+        "shopKeyword": "떡볶이"
+      },
+      {
+        "emoji": "🥓",
+        "food": "Samgyeopsal (grilled pork belly)",
+        "why": "Fruit soju is the standard order at pork-belly tables for anyone who wants the ritual without the burn.",
+        "shopKeyword": "삼겹살"
+      }
+    ],
+    "pairingTip": "Think of it as a spritz, not a spirit: serve it brutally cold with fried or spicy street food and it makes sense immediately.",
+    "avoidPairing": "Raw fish and clear soups — the peach perfume rolls straight over anything delicate.",
+    "similar": [
+      "Soonhari Chum Churum Yuja (순하리 처음처럼 유자)",
+      "Soonhari Chum Churum Apple (순하리 처음처럼 사과)",
+      "Jamong-e Isul (자몽에이슬)"
+    ],
+    "trivia": "When the Soonhari line first hit, convenience stores rationed bottles and people posted photos of empty shelves. The name plays on 'sunhada' — mild, gentle — which is exactly the promise: soju that doesn't fight back.",
+    "servingTemp": "Ice cold, 0-4°C",
+    "servingNote": "Same small glasses and same etiquette — pour for others first, both hands for elders — but nobody expects a shot. Sipping is completely acceptable, and it is excellent over ice or lengthened with soda water.",
+    "aging": "Not for keeping. Drink fresh and cold; once opened, refrigerate and finish the same day before the aroma flattens.",
+    "tips": [
+      "It tastes like juice but still carries real alcohol — the sugar hides it, so count your glasses.",
+      "Mix half peach and half plain Chum Churum if you want the aroma with less sweetness."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Good Day Pomegranate (좋은데이 석류)",
+    "searchKeyword": "좋은데이 석류",
+    "producer": "Muhak (무학)",
+    "type": "Pomegranate-flavored soju (liqueur)",
+    "region": "Changwon, South Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "About 13.5% (the Color Series strength; releases have varied roughly 12-14%)",
+    "liquidColor": "#F7DFE3",
+    "confidence": 86,
+    "knowledge": "rich",
+    "basis": "Muhak's company history and its 2006 launch of Good Day at 16.9% are well documented. The fruit-flavored Good Day Color Series launched in 2015 during the national fruit-soju boom, with pomegranate among the first flavors alongside blueberry and yuja. Individual flavor strengths have been revised since, so ABV is given with a range. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 30
+      },
+      {
+        "axis": "깔끔함",
+        "value": 60
+      },
+      {
+        "axis": "곡물향",
+        "value": 16
+      },
+      {
+        "axis": "당도",
+        "value": 62
+      }
+    ],
+    "tastingNotes": "The tartest of the Good Day fruit bottles. Pomegranate gives it a berry-red sweetness with a genuinely sour spine underneath, so it reads less like candy and more like a diluted cordial. Light body, quick finish, and just enough acidity to keep it drinkable through a long meal rather than cloying after two glasses.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Low-proof diluted soju with pomegranate flavoring and juice"
+      },
+      {
+        "label": "ABV",
+        "value": "About 13.5% (varies by release)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur (flavored soju)"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "1929",
+        "event": "Muhak traces its roots to a brewing house founded in the Gyeongnam region."
+      },
+      {
+        "year": "2006",
+        "event": "Good Day launches at 16.9%, radically low for the era, and pioneers Korea's low-proof soju trend."
+      },
+      {
+        "year": "2015",
+        "event": "Muhak launches the fruit-flavored Good Day Color Series as the national fruit-soju boom takes off, with pomegranate among the debut flavors."
+      }
+    ],
+    "story": "In Korea pomegranate — seokryu — is not a cocktail ingredient so much as a health drink; it is sold in pouches and marketed for skin and women's wellbeing. Putting it in soju was a wink at that: a bottle that looks and tastes like the wholesome juice your Korean aunt drinks, with 13-ish percent alcohol in it. It landed hardest in Busan and Gyeongnam, Muhak's home turf, where ordering the local brand is a matter of quiet regional pride.",
+    "winery": "Muhak, headquartered in Changwon, is the dominant soju maker of the Busan-Gyeongnam southeast and one of Korea's oldest liquor companies. Good Day is its flagship — the bottle that talked the whole industry into lowering its proof — and the Color Series is its flavored extension.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Sweet-and-spicy yangnyeom chicken",
+        "why": "Tart pomegranate cuts the sticky gochujang glaze the way a squeeze of lemon would.",
+        "shopKeyword": "양념치킨"
+      },
+      {
+        "emoji": "🧀",
+        "food": "Cheese-topped rice cakes (cheese tteokbokki)",
+        "why": "Acidity slices through melted cheese and chili at the same time.",
+        "shopKeyword": "치즈떡볶이"
+      },
+      {
+        "emoji": "🥗",
+        "food": "Cold jellyfish salad with mustard dressing",
+        "why": "Its sweet-sour profile echoes the vinegar-mustard sauce of Korean cold platters.",
+        "shopKeyword": "해파리냉채"
+      }
+    ],
+    "pairingTip": "Of all the sweet fruit sojus this is the one to bring to an oily, sauce-heavy table — the sourness does real work.",
+    "avoidPairing": "Delicate raw fish or a clear seafood broth, where the red-berry sweetness simply steamrolls the dish.",
+    "similar": [
+      "Good Day Blueberry (좋은데이 블루베리)",
+      "Good Day Yuja (좋은데이 유자)",
+      "Soonhari Chum Churum Yuja (순하리 처음처럼 유자)"
+    ],
+    "trivia": "The parent brand's name is a bilingual joke: 'day' sounds like '-dei', the friendly sentence ending of the Gyeongsang dialect, so 'Joeun-dei' reads to a local ear as simply 'It's good!'",
+    "servingTemp": "Ice cold, 0-4°C",
+    "servingNote": "Poured into standard soju glasses and drunk at the same rhythm as regular soju — fill your neighbor's glass, never your own. Nobody will judge you for sipping a fruit bottle.",
+    "aging": "No aging. Buy it cold, drink it cold, and finish an opened bottle the same evening.",
+    "tips": [
+      "Pour it over ice with sparkling water for an instant, low-effort highball.",
+      "Sweet fruit soju hides its alcohol well — pace yourself the way you would with the plain green bottle."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Good Day Blueberry (좋은데이 블루베리)",
+    "searchKeyword": "좋은데이 블루베리",
+    "producer": "Muhak (무학)",
+    "type": "Blueberry-flavored soju (liqueur)",
+    "region": "Changwon, South Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "About 13.5% (the Color Series strength; releases have varied roughly 12-14%)",
+    "liquidColor": "#E7E1F0",
+    "confidence": 86,
+    "knowledge": "rich",
+    "basis": "Muhak's history and the 2015 launch of the Good Day Color Series during Korea's fruit-soju boom are documented in Korean industry press, with blueberry among the debut flavors. Per-flavor strengths have been revised over the years, so ABV is given with a range. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 33
+      },
+      {
+        "axis": "깔끔함",
+        "value": 55
+      },
+      {
+        "axis": "곡물향",
+        "value": 16
+      },
+      {
+        "axis": "당도",
+        "value": 68
+      }
+    ],
+    "tastingNotes": "The sweetest and roundest of the Good Day fruit range. The nose is jammy, almost like blueberry yogurt, and the sip is soft and low in acid with a faintly grape-like depth. Very little alcohol shows through, and the finish is short and candied — this is dessert territory, and unapologetic about it.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Low-proof diluted soju with blueberry flavoring and juice"
+      },
+      {
+        "label": "ABV",
+        "value": "About 13.5% (varies by release)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur (flavored soju)"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "1929",
+        "event": "Muhak's roots go back to a brewing house in the Gyeongnam region."
+      },
+      {
+        "year": "2006",
+        "event": "Good Day launches at 16.9% and starts Korea's low-proof soju race."
+      },
+      {
+        "year": "2015",
+        "event": "The fruit-flavored Good Day Color Series arrives as fruit soju sweeps the country, with blueberry in the opening lineup."
+      }
+    ],
+    "story": "Blueberry was the odd one out in a fruit-soju market that ran on citrus. Korean drinkers had spent 2015 working through yuja, grapefruit and peach; a dark berry felt almost European by comparison, and it found its audience among people who wanted something closer to a sweet wine than a spirit. It is the bottle that ends up in the fridge at house parties and the one most likely to convert someone who insists they hate soju outright.",
+    "winery": "Muhak of Changwon is the southeast's soju giant and the company that persuaded Korea that soju could be gentle. Its Color Series applies the same logic — lower proof, softer edges — to fruit flavors.",
+    "foodPairing": [
+      {
+        "emoji": "🧀",
+        "food": "Cheese platter or cheese sticks",
+        "why": "Berry sweetness and salty melted cheese is the same logic as jam with cheese, in liquid form.",
+        "shopKeyword": "치즈스틱"
+      },
+      {
+        "emoji": "🍟",
+        "food": "Fries and fried snacks",
+        "why": "Sugar and salt bounce off each other; the cold berry rinses the oil away.",
+        "shopKeyword": "감자튀김"
+      },
+      {
+        "emoji": "🍰",
+        "food": "Plain cheesecake or cream cake",
+        "why": "One of the rare Korean bottles that genuinely works as a dessert drink.",
+        "shopKeyword": "치즈케이크"
+      }
+    ],
+    "pairingTip": "This is the fruit soju to keep for the end of the night — snacks and dessert rather than the main grilling.",
+    "avoidPairing": "Spicy stews and raw fish. The jammy sweetness clashes with chili heat and buries anything subtle.",
+    "similar": [
+      "Good Day Pomegranate (좋은데이 석류)",
+      "Good Day Yuja (좋은데이 유자)",
+      "Soonhari Chum Churum Peach (순하리 처음처럼 복숭아)"
+    ],
+    "trivia": "Convenience-store fridges in Korea often line the Color Series up by color, which is exactly what Muhak intended — the range was designed to be picked by the shade of the label as much as by the flavor name.",
+    "servingTemp": "Ice cold, 0-4°C",
+    "servingNote": "Served in the usual small soju glasses. The etiquette does not change with the flavor: pour for others, receive with both hands from anyone senior, and sip rather than shoot.",
+    "aging": "Not for aging. Refrigerate and finish an opened bottle the same day.",
+    "tips": [
+      "Pour it over ice and top with lemon-lime soda for something close to a berry cooler.",
+      "It goes down like juice — the sugar masks the alcohol completely, so keep count."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Soonhari Chum Churum Apple (순하리 처음처럼 사과)",
+    "searchKeyword": "순하리 사과",
+    "producer": "Lotte Chilsung Beverage, Liquor Division (롯데칠성음료 주류부문)",
+    "type": "Apple-flavored soju (liqueur)",
+    "region": "Gangneung, Gangwon Province (nationwide brand)",
+    "country": "South Korea",
+    "alcohol": "About 12% (the Soonhari line launched at 14% in 2015 and was later trimmed)",
+    "liquidColor": "#EEF2DF",
+    "confidence": 90,
+    "knowledge": "rich",
+    "basis": "The Soonhari line's March 2015 debut at 14% and its rapid flavor extensions, including apple, are well covered in Korean press. Strengths across the line have since been trimmed (commonly 12%), so the figure is approximate. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 30
+      },
+      {
+        "axis": "깔끔함",
+        "value": 60
+      },
+      {
+        "axis": "곡물향",
+        "value": 18
+      },
+      {
+        "axis": "당도",
+        "value": 64
+      }
+    ],
+    "tastingNotes": "Green-apple candy rather than orchard fruit: bright, slightly tart on the nose, then a crisp sweet sip with a clean, quick finish. It is the most refreshing of the Soonhari flavors and the least perfumed, which makes it the easiest to drink alongside food rather than instead of it.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Diluted soju with apple flavoring and a small percentage of juice"
+      },
+      {
+        "label": "ABV",
+        "value": "About 12% (14% at the 2015 launch)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur (flavored soju)"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle; PET formats also sold"
+      }
+    ],
+    "history": [
+      {
+        "year": "2015",
+        "event": "Soonhari launches in March with a yuja flavor at 14% and sells roughly ten million bottles in about two months."
+      },
+      {
+        "year": "2015",
+        "event": "Apple and peach join the line the same year as Lotte races to hold the category it created."
+      },
+      {
+        "year": "2010s-2020s",
+        "event": "The range is renewed repeatedly, with strengths trimmed and packaging refreshed as fruit soju becomes a permanent shelf fixture."
+      }
+    ],
+    "story": "Apple is Korea's most everyday fruit — the one stacked in boxes at markets and handed over as a holiday gift — so putting it in soju was the safest bet in the whole Soonhari range. It is also the flavor that ages best in a night: less perfume than yuja, less sugar than peach, so the fifth glass tastes much like the first. Among the fruit sojus, this is the one people order when they want the sweetness dialed back a notch but still do not want the burn.",
+    "winery": "Lotte Chilsung's liquor division brews Chum Churum at its Gangneung plant with soft alkaline mountain water and runs Soonhari as its flavored line — the range that opened the Korean soju table to people who had never been able to drink it.",
+    "foodPairing": [
+      {
+        "emoji": "🥓",
+        "food": "Samgyeopsal (grilled pork belly)",
+        "why": "Crisp apple against pork fat is a classic anywhere in the world; here it happens in a shot glass.",
+        "shopKeyword": "삼겹살"
+      },
+      {
+        "emoji": "🍗",
+        "food": "Fried chicken",
+        "why": "Tart-sweet and cold is exactly what hot fried batter wants next to it.",
+        "shopKeyword": "후라이드치킨"
+      },
+      {
+        "emoji": "🥟",
+        "food": "Fried dumplings",
+        "why": "Light sweetness lifts the doughy, savory filling without competing with it.",
+        "shopKeyword": "군만두"
+      }
+    ],
+    "pairingTip": "The most food-friendly Soonhari — its acidity keeps it useful right through a greasy meal instead of fading after the first course.",
+    "avoidPairing": "Sweet desserts, which flatten it completely, and delicate broths that the apple flavoring overpowers.",
+    "similar": [
+      "Soonhari Chum Churum Peach (순하리 처음처럼 복숭아)",
+      "Soonhari Chum Churum Yuja (순하리 처음처럼 유자)",
+      "Good Day Yuja (좋은데이 유자)"
+    ],
+    "trivia": "'Soonhari' plays on sunhada, meaning mild or gentle. The whole marketing pitch was an apology for what soju used to taste like — and it worked well enough that rivals copied the format within weeks.",
+    "servingTemp": "Ice cold, 0-4°C",
+    "servingNote": "Standard soju glasses and standard manners: fill other people's glasses before your own and take the bottle with both hands if someone older is pouring. Sipping is fine.",
+    "aging": "No aging. Keep it cold and finish an opened bottle the same evening.",
+    "tips": [
+      "Half apple soju, half plain Chum Churum makes a drier version that suits a barbecue table better.",
+      "Try it long over ice with soda water and a squeeze of lime."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Good Day Yuja (좋은데이 유자)",
+    "searchKeyword": "좋은데이 유자",
+    "producer": "Muhak (무학)",
+    "type": "Yuja-flavored soju (liqueur)",
+    "region": "Changwon, South Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "About 13.5% (the Color Series strength; releases have varied roughly 12-14%)",
+    "liquidColor": "#F7F1D9",
+    "confidence": 86,
+    "knowledge": "rich",
+    "basis": "Muhak's history and the 2015 arrival of the fruit-flavored Good Day Color Series are documented in Korean industry coverage, with yuja among the debut flavors of the range. Per-flavor ABVs have shifted across releases, so a range is given. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 28
+      },
+      {
+        "axis": "깔끔함",
+        "value": 63
+      },
+      {
+        "axis": "곡물향",
+        "value": 16
+      },
+      {
+        "axis": "당도",
+        "value": 60
+      }
+    ],
+    "tastingNotes": "Yuja — the knobbly Korean citrus you may know as yuzu — smells here exactly like yuja-cha, the honeyed citrus tea sold in every Korean supermarket. Bright peel aromatics, a honeyed sweet-tart sip, and a faint pleasant bitterness in the finish that keeps it from turning into syrup. The most 'Korean-tasting' of the fruit sojus.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Low-proof diluted soju with yuja flavoring and juice"
+      },
+      {
+        "label": "ABV",
+        "value": "About 13.5% (varies by release)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur (flavored soju)"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "1929",
+        "event": "Muhak's origins trace to a Gyeongnam brewing house."
+      },
+      {
+        "year": "2006",
+        "event": "Good Day launches at 16.9% and begins the low-proof soju era."
+      },
+      {
+        "year": "2015",
+        "event": "Muhak answers the fruit-soju boom with the Good Day Color Series; yuja is one of the debut flavors that carries the range."
+      }
+    ],
+    "story": "Yuja is the flavor that started Korea's whole fruit-soju era, and every major brewer had to have one. Muhak's version leans on the southeast's affection for citrus and on a fruit Koreans already associate with comfort — yuja tea is what you drink when you have a cold. Drinking it as alcohol feels a little transgressive to Korean grandmothers and completely natural to everyone under forty.",
+    "winery": "Muhak in Changwon is the soju house of Busan and Gyeongnam, famous for pushing the entire industry to lower strengths. Its Color Series carries that philosophy into flavored bottles.",
+    "foodPairing": [
+      {
+        "emoji": "🌶️",
+        "food": "Buldak or fire chicken",
+        "why": "Honeyed citrus is one of the few things that genuinely cools capsaicin heat.",
+        "shopKeyword": "불닭"
+      },
+      {
+        "emoji": "🍤",
+        "food": "Fried shrimp and seafood tempura",
+        "why": "Citrus over fried seafood is a universal law, and yuja is the local version of the lemon wedge.",
+        "shopKeyword": "새우튀김"
+      },
+      {
+        "emoji": "🥩",
+        "food": "Grilled pork skewers",
+        "why": "The peel bitterness scrubs charred fat off the palate between skewers.",
+        "shopKeyword": "돼지꼬치"
+      }
+    ],
+    "pairingTip": "Reach for this one at spicy tables — of all the fruit sojus, citrus does the most to put out a fire.",
+    "avoidPairing": "Sashimi-style raw fish and delicate steamed dishes; the citrus perfume dominates anything quiet.",
+    "similar": [
+      "Soonhari Chum Churum Yuja (순하리 처음처럼 유자)",
+      "Good Day Pomegranate (좋은데이 석류)",
+      "Good Day Blueberry (좋은데이 블루베리)"
+    ],
+    "trivia": "Yuja is one of Korea's proudest local crops, grown mostly along the southern coast around Goheung and Namhae — the same coastline where Good Day sells best, which is not a coincidence.",
+    "servingTemp": "Ice cold, 0-4°C",
+    "servingNote": "Small soju glasses, ordinary soju etiquette: pour for others, take the bottle with both hands from an elder, and feel free to sip instead of shooting.",
+    "aging": "No aging. The citrus aroma is the whole point and it fades fast — drink an opened bottle the same day.",
+    "tips": [
+      "Top it with hot water in winter for something close to spiked yuja tea.",
+      "A spoonful of real yuja marmalade stirred in makes an instant upgrade."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "soju",
+    "name": "Good Day Grapefruit (좋은데이 자몽)",
+    "searchKeyword": "좋은데이 자몽",
+    "producer": "Muhak (무학)",
+    "type": "Grapefruit-flavored soju (liqueur)",
+    "region": "Changwon, South Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "Around 12-13.5% (varies by release)",
+    "liquidColor": "#F8E2DD",
+    "confidence": 74,
+    "knowledge": "basic",
+    "basis": "Muhak's low-proof pioneering and the 2015 launch of its fruit-flavored Good Day range are well documented. Grapefruit was not one of the Color Series debut flavors (blueberry, pomegranate and yuja were) but was added as grapefruit became the boom's best-selling profile; the launch year and current specification of this particular bottle are not reliably recorded in public sources, so no year is claimed and ABV is given as a range. Taste values are editorial estimates.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 27
+      },
+      {
+        "axis": "깔끔함",
+        "value": 66
+      },
+      {
+        "axis": "곡물향",
+        "value": 15
+      },
+      {
+        "axis": "당도",
+        "value": 55
+      }
+    ],
+    "tastingNotes": "The driest and most grown-up of the fruit sojus. Pink grapefruit gives it a sharp citrus lift and, crucially, a bitter edge on the finish that stops the sugar from taking over. Light, clean, faintly sour — closer to a canned grapefruit highball than to candy, and the flavor most likely to convert someone who normally refuses sweet drinks.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Low-proof diluted soju with grapefruit flavoring and juice"
+      },
+      {
+        "label": "ABV",
+        "value": "Around 12-13.5% (varies by release)"
+      },
+      {
+        "label": "Classification",
+        "value": "Liqueur (flavored soju)"
+      },
+      {
+        "label": "Volume",
+        "value": "360 mL bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "2006",
+        "event": "Muhak launches Good Day at 16.9%, kicking off Korea's low-proof soju trend."
+      },
+      {
+        "year": "2015",
+        "event": "The fruit-soju boom sweeps Korea and Muhak launches its flavored Good Day Color Series."
+      },
+      {
+        "year": "2010s",
+        "event": "Grapefruit emerges as the category's most durable flavor nationwide, outlasting most of the novelty releases around it, and joins the Good Day range."
+      }
+    ],
+    "story": "Every brewer's fruit line has a grapefruit, and for good reason: it is the only flavor whose natural bitterness survives being mixed with a neutral spirit. That bitterness is why grapefruit soju stayed on shelves long after the 2015 mania cooled — it is the one you can drink with dinner rather than with dessert. In Busan and Gyeongnam, where Muhak's green bottle is the default order, this is the fruit version that gets bought alongside it rather than instead of it.",
+    "winery": "Muhak of Changwon dominates the southeastern soju market and effectively invented the modern low-proof category with the original Good Day. Its flavored line applies the same restraint — lower alcohol, less aggression — to fruit.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Korean fried chicken",
+        "why": "Citrus bitterness is the perfect scrub for fried batter and sweet glaze alike.",
+        "shopKeyword": "후라이드치킨"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "Spicy stir-fried squid (ojingeo bokkeum)",
+        "why": "Grapefruit's sourness cools the chili while its bitterness keeps up with the sauce.",
+        "shopKeyword": "오징어볶음"
+      },
+      {
+        "emoji": "🥗",
+        "food": "Cold cucumber and seafood salad",
+        "why": "Bright, low-sugar and citrusy — it behaves like a dressing in a glass.",
+        "shopKeyword": "해물냉채"
+      }
+    ],
+    "pairingTip": "Start the meal with this one and switch to the sweeter flavors later; it is the fruit soju that behaves most like a proper aperitif.",
+    "avoidPairing": "Creamy or dessert dishes, where the bitterness turns metallic against sugar and dairy.",
+    "similar": [
+      "Jamong-e Isul (자몽에이슬)",
+      "Good Day Yuja (좋은데이 유자)",
+      "Soonhari Chum Churum Yuja (순하리 처음처럼 유자)"
+    ],
+    "trivia": "Grapefruit soju is the flavor most often turned into a cocktail base in Korean bars — swap it for the vodka in a paloma and almost nobody notices.",
+    "servingTemp": "Ice cold, 0-4°C",
+    "servingNote": "Poured into standard soju glasses and drunk at a table, not alone. Pour for your neighbors, receive with both hands from anyone older, and sip freely — nobody shoots fruit soju.",
+    "aging": "No aging. Keep it refrigerated and finish an opened bottle the same day.",
+    "tips": [
+      "Half grapefruit soju, half soda over ice with a wedge of lime is a two-second cocktail.",
+      "Its lower sweetness means it hides alcohol less than the peach and berry versions — which is honestly a good thing."
+    ],
+    "vintage": null
+  }
+]

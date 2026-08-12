@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { t } from "@/lib/i18n";
-import { placeKind, mapLink, shortAddress } from "@/lib/places";
+import { placeKind, mapLink, shortAddress, linkLabel, menuSearchUrl } from "@/lib/places";
 
 // 근처에서 이 술을 마시거나 살 수 있는 곳.
 //
@@ -100,10 +100,10 @@ export default function NearbyPlaces({ category, name }) {
       )}
 
       {!loading && drink.length > 0 && (
-        <PlaceList label={t(data?.terms?.drinkLabel || "근처 술집")} places={drink} />
+        <PlaceList label={t(data?.terms?.drinkLabel || "근처 술집")} places={drink} area={area} />
       )}
       {!loading && buy.length > 0 && (
-        <PlaceList label={t("가까운 주류 판매점")} places={buy} />
+        <PlaceList label={t("가까운 주류 판매점")} places={buy} area={area} />
       )}
 
       {empty && (
@@ -122,19 +122,32 @@ export default function NearbyPlaces({ category, name }) {
   );
 }
 
-function PlaceList({ label, places }) {
+function PlaceList({ label, places, area }) {
   return (
     <>
       <div className="place-label">{label}</div>
       <div className="place-list">
         {places.map((p, i) => (
-          <a className="place-item" key={i} href={mapLink(p)} target="_blank" rel="noreferrer">
-            <div className="place-main">
-              <span className="place-name">{p.name}</span>
-              <span className="place-kind">{placeKind(p)}</span>
+          // 줄 전체를 <a> 로 감쌀 수 없다 — 안에 링크를 또 넣어야 하는데
+          // 링크 안의 링크는 브라우저가 받아 주지 않는다.
+          <div className="place-item" key={i}>
+            <a className="place-head" href={mapLink(p)} target="_blank" rel="noreferrer">
+              <div className="place-main">
+                <span className="place-name">{p.name}</span>
+                <span className="place-kind">{placeKind(p)}</span>
+              </div>
+              <span className="place-addr">{shortAddress(p.address)}</span>
+            </a>
+            <div className="place-links">
+              {/* 메뉴는 우리가 받아 올 수 없다. 대신 메뉴가 있는 곳으로 데려다준다. */}
+              {p.link && (
+                <a href={p.link} target="_blank" rel="noreferrer">{t(linkLabel(p.link))}</a>
+              )}
+              <a href={menuSearchUrl(p.name, area)} target="_blank" rel="noreferrer">
+                {t("메뉴 후기")}
+              </a>
             </div>
-            <span className="place-addr">{shortAddress(p.address)}</span>
-          </a>
+          </div>
         ))}
       </div>
     </>

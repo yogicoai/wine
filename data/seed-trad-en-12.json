@@ -1,0 +1,1268 @@
+[
+  {
+    "category": "traditional",
+    "name": "Chusa 40 (추사40)",
+    "searchKeyword": "추사40",
+    "producer": "Yesan Apple Wine (예산사과와인)",
+    "type": "Apple brandy — twice pot-distilled, three years in oak",
+    "region": "Yesan, South Chungcheong Province",
+    "country": "South Korea",
+    "alcohol": "40%",
+    "liquidColor": "#C08A3E",
+    "confidence": 93,
+    "knowledge": "rich",
+    "basis": "Producer's official materials and retail listings confirm the spec: Yesan apples fermented into wine, distilled twice in a copper pot still, then three years in oak; 40% ABV, 500ml and 200ml bottlings, around 31,900 KRW for 500ml. The winery opened in 2008, founded by orchardist Seo Jeong-hak with Canada-trained winemaker Jeong Je-min. No specific competition award is claimed here because none could be verified.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 66
+      },
+      {
+        "axis": "감칠맛",
+        "value": 30
+      },
+      {
+        "axis": "산도",
+        "value": 34
+      },
+      {
+        "axis": "당도",
+        "value": 28
+      }
+    ],
+    "tastingNotes": "Korea's answer to Calvados. Baked apple and dried apricot on the nose, followed by vanilla, chocolate and toasted oak from three years in barrel. The 40% alcohol is present but rounded, finishing long with cinnamon and apple-skin notes.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "40%"
+      },
+      {
+        "label": "Base Ingredient",
+        "value": "Yesan-grown apples, fermented into apple wine"
+      },
+      {
+        "label": "Distillation",
+        "value": "Twice in a copper pot still"
+      },
+      {
+        "label": "Maturation",
+        "value": "Three years in oak casks"
+      },
+      {
+        "label": "Volume",
+        "value": "500ml (a 200ml bottle is also made)"
+      }
+    ],
+    "history": [
+      {
+        "year": "2008",
+        "event": "Yesan Apple Wine opened in Yesan, South Chungcheong — a partnership between a career apple orchardist and a winemaker trained in Canada."
+      },
+      {
+        "year": "2010s",
+        "event": "The Chusa spirits line launched: local apple wine distilled twice and laid down in oak."
+      },
+      {
+        "year": "Today",
+        "event": "Chusa 40 is a fixture of Korean craft-liquor bottle shops and the reference point when Koreans talk about domestic apple brandy."
+      }
+    ],
+    "story": "Chusa is the pen name of Kim Jeong-hui, the celebrated Joseon-dynasty calligrapher born in Yesan, and the brandy borrows his name as a badge of local pride. Apples from Yesan's orchard country are fermented into wine, run twice through a copper pot still, and rested three years in oak — essentially the Calvados method transplanted to South Chungcheong. It is widely credited with proving that Korea can make a serious fruit brandy.",
+    "winery": "Yesan Apple Wine is a small orchard-based distillery in Yesan, one of Korea's best-known apple regions. Opened in 2008 by an orchardist who had farmed apples for four decades together with a Canada-trained winemaker, it makes apple wine and the oak-aged Chusa apple spirits from the same fruit.",
+    "foodPairing": [
+      {
+        "emoji": "🍫",
+        "food": "Dark chocolate",
+        "why": "Bitter cocoa plays off the brandy's baked-apple sweetness and oak spice.",
+        "shopKeyword": "다크초콜릿"
+      },
+      {
+        "emoji": "🥧",
+        "food": "Apple tart",
+        "why": "Echoes the spirit's core fruit while the alcohol cuts the buttery pastry.",
+        "shopKeyword": "애플파이"
+      },
+      {
+        "emoji": "🧀",
+        "food": "Aged cheese",
+        "why": "Salty, nutty cheese softens the 40% heat and lengthens the finish.",
+        "shopKeyword": "치즈"
+      }
+    ],
+    "pairingTip": "Treat it like Calvados or whisky: sip slowly after dinner alongside dessert or cheese rather than with a full meal.",
+    "avoidPairing": "Very spicy stews and heavily seasoned dishes — capsaicin amplifies the alcohol burn and buries the apple aromatics.",
+    "similar": [
+      "Mungyeong Baram (문경바람)",
+      "Goundal (고운달)",
+      "Munbaeju (문배주)"
+    ],
+    "trivia": "The name honors calligrapher Kim Jeong-hui ('Chusa'), Yesan's most famous son — so you are literally drinking a tribute to a 19th-century artist.",
+    "servingTemp": "18-20°C (room temperature)",
+    "servingNote": "Serve neat in a tulip or brandy glass; a single ice cube or a few drops of water opens up the apple aroma.",
+    "aging": "Three years in oak before bottling; the sealed bottle then keeps for years stored upright away from light.",
+    "tips": [
+      "Warm the glass in your hand for a minute before nosing — the apple notes bloom with gentle heat.",
+      "Try it as a highball with sparkling water if 40% neat feels intense.",
+      "The 200ml bottle makes an easy first try or a light souvenir."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Goundal (고운달)",
+    "searchKeyword": "고운달",
+    "producer": "Omynara (오미나라)",
+    "type": "Omija brandy — twice-distilled, long-matured",
+    "region": "Mungyeong, North Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "52% (a 43% oak edition is also bottled)",
+    "liquidColor": "#B5763A",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "Producer materials and retail listings: omija wine distilled twice and matured in European oak or white porcelain, 52% in both editions, 200ml and 500ml, roughly 180,000 KRW for 200ml and 360,000 KRW for 500ml. The Oak 52 edition was first released in 2016. Founder Lee Jong-ki's whisky-blending career is widely documented; the exact founding year of Omynara is not asserted here.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 72
+      },
+      {
+        "axis": "감칠맛",
+        "value": 32
+      },
+      {
+        "axis": "산도",
+        "value": 52
+      },
+      {
+        "axis": "당도",
+        "value": 26
+      }
+    ],
+    "tastingNotes": "An intensely aromatic brandy distilled from omija (five-flavor berry) wine. Rose, red berry and citrus peel lift out of the glass, and the palate cycles through the berry's famous five flavors — sweet, sour, salty, bitter, pungent — before a very long, warming 52% finish. The oak edition adds vanilla and spice; the porcelain-jar edition stays brighter and more floral.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "52% (a 43% oak version is also made)"
+      },
+      {
+        "label": "Base Ingredient",
+        "value": "Mungyeong omija (five-flavor berry)"
+      },
+      {
+        "label": "Method",
+        "value": "Omija wine, distilled twice, then matured for years"
+      },
+      {
+        "label": "Editions",
+        "value": "European oak cask / Korean white porcelain jar"
+      },
+      {
+        "label": "Volume",
+        "value": "200ml and 500ml"
+      }
+    ],
+    "history": [
+      {
+        "year": "1980s-2000s",
+        "event": "Lee Jong-ki spent decades as a master blender in Korea's whisky industry, working on the country's first generation of domestic whiskies."
+      },
+      {
+        "year": "2000s",
+        "event": "He founded Omynara in Mungyeong, the heart of Korean omija farming, to build a world-class spirit from the berry."
+      },
+      {
+        "year": "2016",
+        "event": "Goundal Oak 52 was released after long maturation trials and immediately became one of Korea's most expensive and most talked-about craft spirits."
+      }
+    ],
+    "story": "Goundal — 'beautiful moon' — is the life's work of Lee Jong-ki, a first-generation Korean whisky master blender who turned to the omija berry of Mungyeong. Because omija's five clashing flavors make it notoriously hard to ferment, the base wine alone takes time, and the distillate is then matured in European oak casks or white porcelain jars. It is routinely mentioned as the Korean spirit to hand a foreign dignitary.",
+    "winery": "Omynara is a craft distillery in Mungyeong, North Gyeongsang, built around the local omija berry. Founded by veteran whisky blender Lee Jong-ki, it makes the Goundal brandy alongside the sparkling omija wine OmyRose and other fruit-based drinks, and is one of Korea's most-cited premium producers.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "Hanwoo beef",
+        "why": "Rich marbled Korean beef stands up to the 52% intensity and berry acidity.",
+        "shopKeyword": "한우"
+      },
+      {
+        "emoji": "🍫",
+        "food": "Dark chocolate",
+        "why": "Cocoa bitterness mirrors omija's bitter facet and rounds the long finish.",
+        "shopKeyword": "다크초콜릿"
+      },
+      {
+        "emoji": "🍊",
+        "food": "Dried persimmon",
+        "why": "A classic Korean sweet whose honeyed chew flatters the berry aromatics.",
+        "shopKeyword": "곶감"
+      }
+    ],
+    "pairingTip": "This is a contemplative after-dinner pour — serve tiny measures neat, the way you would a fine cognac.",
+    "avoidPairing": "Delicate raw fish or lightly seasoned dishes — the powerful aroma and alcohol will steamroll them.",
+    "similar": [
+      "Chusa 40 (추사40)",
+      "OmyRose Gyeol (오미로제 결)",
+      "Hwayo 53 (화요 53)"
+    ],
+    "trivia": "Omija literally means 'five-flavor berry' — Koreans say you taste sweet, sour, salty, bitter and pungent in a single berry, and Goundal tries to bottle all five.",
+    "servingTemp": "18-20°C (room temperature, neat)",
+    "servingNote": "Use a small tulip glass and short pours; add a drop of water to unfold the rose-like aroma.",
+    "aging": "Matured for years in European oak casks or Korean white porcelain jars before bottling; keeps indefinitely sealed.",
+    "tips": [
+      "Decide between editions: oak for vanilla-spice depth, porcelain for pure floral omija character.",
+      "Sip in small amounts — at 52% a little goes a long way.",
+      "The 200ml bottle is the affordable way in; the 500ml is gift territory."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Pungjeong Sagye Dong (풍정사계 동)",
+    "searchKeyword": "풍정사계 동",
+    "producer": "Hwayang Brewery (화양양조장)",
+    "type": "Distilled soju — atmospheric pot distillation, aged in onggi",
+    "region": "Cheongju, North Chungcheong Province",
+    "country": "South Korea",
+    "alcohol": "42%",
+    "liquidColor": "#F4F2EA",
+    "confidence": 91,
+    "knowledge": "rich",
+    "basis": "Producer and retail sources agree on 42% ABV in a 375ml bottle, hyangongok nuruk made in-house from wheat and mung beans, atmospheric-pressure distillation and over a year of resting in onggi earthenware. The brewery's legal name is Hwayang Agricultural Corporation, Cheongju. The 2017 state-dinner service applies to the sister bottle Chun, not Dong.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 58
+      },
+      {
+        "axis": "감칠맛",
+        "value": 45
+      },
+      {
+        "axis": "산도",
+        "value": 22
+      },
+      {
+        "axis": "당도",
+        "value": 20
+      }
+    ],
+    "tastingNotes": "A pot-distilled rice soju of remarkable finesse. Steamed rice, pear and a faint floral-yeasty note from the house-made nuruk lead into a silky, dry palate. The 42% strength reads as clean rather than hot, closing with lingering toasted-grain sweetness.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "42%"
+      },
+      {
+        "label": "Volume",
+        "value": "375ml"
+      },
+      {
+        "label": "Base Ingredient",
+        "value": "Rice"
+      },
+      {
+        "label": "Fermentation Starter",
+        "value": "Hyangongok — a hand-made, court-style nuruk of wheat and mung beans, prepared at the brewery in early summer"
+      },
+      {
+        "label": "Method",
+        "value": "Atmospheric-pressure pot distillation, then over a year resting in onggi earthenware"
+      }
+    ],
+    "history": [
+      {
+        "year": "2010s",
+        "event": "Husband-and-wife brewers Lee Han-sang and Lee Hye-young revived hyangongok, a laborious court-style nuruk, at their small brewery in Pungjeong village, Cheongju."
+      },
+      {
+        "year": "2017",
+        "event": "Sister product Pungjeong Sagye Chun was served at the Blue House state banquet for the visiting U.S. president, catapulting the brand to fame."
+      },
+      {
+        "year": "2018",
+        "event": "Pungjeong Sagye Dong took a grand prize at Korea's national traditional-liquor awards."
+      }
+    ],
+    "story": "Pungjeong Sagye means 'four seasons of Pungjeong village,' a four-bottle series — Chun, Ha, Chu, Dong (spring, summer, autumn, winter). Dong, the winter bottle, is the distilled soju: the brewery's rice brew, fermented with hand-pressed hyangongok nuruk, is distilled at atmospheric pressure and then left to settle in earthenware jars for more than a year until it turns glassy-smooth. Everything is made in tiny batches by a two-person team, which is why allocations sell out fast.",
+    "winery": "Hwayang Brewery is a two-person artisan operation in Pungjeong village, Cheongju. It produces only the four seasonal Pungjeong Sagye drinks — all built on hand-made hyangongok nuruk — and is regarded by Korean sommeliers as one of the country's benchmark craft breweries.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "Yukhoe (beef tartare)",
+        "why": "The clean, dry spirit scrubs the palate between rich, silky bites.",
+        "shopKeyword": "육회"
+      },
+      {
+        "emoji": "🥓",
+        "food": "Grilled pork belly",
+        "why": "High-proof rice soju is Korea's classic answer to samgyeopsal fat.",
+        "shopKeyword": "삼겹살"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Grilled fish",
+        "why": "Subtle grain aromas complement, rather than cover, charred white fish.",
+        "shopKeyword": "생선구이"
+      }
+    ],
+    "pairingTip": "Pour small, lightly chilled shots alongside grilled meat or fish, Korean-style — it resets the palate like a fine grappa.",
+    "avoidPairing": "Sweet desserts — the bone-dry profile turns harsh next to sugar.",
+    "similar": [
+      "Hwayo 41 (화요 41)",
+      "Mir 40 (미르 40)",
+      "Pungjeong Sagye Chun (풍정사계 춘)"
+    ],
+    "trivia": "The 'four seasons' series covers Korea's whole traditional drinking spectrum — spring yakju, summer gwahaju, autumn takju, and this winter soju — all from one tiny nuruk-driven brewery.",
+    "servingTemp": "15-18°C, or lightly chilled",
+    "servingNote": "Drink neat from small soju cups; slight chilling tightens it, room temperature shows more grain aroma.",
+    "aging": "Rested over a year in onggi earthenware after distillation; the sealed bottle then keeps for years.",
+    "tips": [
+      "Compare it side by side with a green-bottle diluted soju to understand why traditional distilled soju costs more.",
+      "Let the pour sit a minute — the nuruk-derived floral note emerges as it breathes.",
+      "Buy the sibling Chun too: same brewery, same nuruk, opposite end of the season.",
+      "Small production means limited stock; buy when you see it."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Grand Coteau Cheongsu (그랑꼬또 청수)",
+    "searchKeyword": "그랑꼬또 청수",
+    "producer": "Grand Coteau — Green Farming Cooperative (그랑꼬또 · 그린영농조합법인)",
+    "type": "Dry white wine — Cheongsu, a Korean-bred white grape",
+    "region": "Daebudo Island, Ansan, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "12% (labels have run 11.5-12% depending on vintage)",
+    "liquidColor": "#EDE1AE",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "Winery and retail sources: the operating body is the Green Farming Cooperative on Daebudo, the winery was set up in 1996 and began producing wine in December 2000, and Cheongsu is a white grape bred by Korean state horticultural researchers. Listed ABV varies slightly between vintages (11.5-12%). Retail runs roughly 33,000-42,000 KRW for 750ml.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 38
+      },
+      {
+        "axis": "감칠맛",
+        "value": 28
+      },
+      {
+        "axis": "산도",
+        "value": 74
+      },
+      {
+        "axis": "당도",
+        "value": 30
+      }
+    ],
+    "tastingNotes": "A benchmark Korean white from the homegrown Cheongsu grape. Vivid aromas of white flowers, green apple, grapefruit and a muscat-like perfume, with brisk acidity and a light, clean body. Tastes like a cross between Sauvignon Blanc freshness and Muscat aromatics.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "12% (11.5-12% by vintage)"
+      },
+      {
+        "label": "Grape",
+        "value": "Cheongsu — a white variety bred in Korea"
+      },
+      {
+        "label": "Style",
+        "value": "Dry, aromatic white"
+      },
+      {
+        "label": "Volume",
+        "value": "750ml"
+      },
+      {
+        "label": "Vineyard",
+        "value": "Daebudo, a vineyard island in the Yellow Sea west of Ansan"
+      }
+    ],
+    "history": [
+      {
+        "year": "1990s",
+        "event": "Cheongsu, a white grape, was bred and released by Korean state horticultural researchers."
+      },
+      {
+        "year": "1996",
+        "event": "Grape-farming families on Daebudo island set up the Grand Coteau winery under the Green Farming Cooperative."
+      },
+      {
+        "year": "2000",
+        "event": "The winery began commercial wine production in December, and the Cheongsu white went on to become the reference bottle for Korean white wine."
+      }
+    ],
+    "story": "Daebudo is a vineyard island in the Yellow Sea, and Grand Coteau ('great slope') is its farmers' own winery. When growers discovered that the Korean-bred grape Cheongsu made strikingly aromatic dry wine, this bottle became the standard-bearer for the idea that Korea has a white grape to call its own. Sea breezes and sandy soil keep the fruit bright and the wine saline-fresh.",
+    "winery": "Grand Coteau is the winery of the Green Farming Cooperative, formed by grape-growing families on Daebudo island in Ansan, Gyeonggi. Vineyards and cellar sit side by side; alongside the Cheongsu white it makes reds and rosés from Campbell Early and runs tastings for visitors driving the west-coast route.",
+    "foodPairing": [
+      {
+        "emoji": "🍣",
+        "food": "Hoe (Korean raw fish)",
+        "why": "Racy acidity and clean fruit are tailor-made for delicate raw flatfish.",
+        "shopKeyword": "광어회"
+      },
+      {
+        "emoji": "🍜",
+        "food": "Clam kalguksu",
+        "why": "Daebudo's own bajirak clam noodle soup is the local, briny-sweet match.",
+        "shopKeyword": "바지락칼국수"
+      },
+      {
+        "emoji": "🦪",
+        "food": "Fresh oysters",
+        "why": "Citrus notes act like a squeeze of lemon over cold shellfish.",
+        "shopKeyword": "굴"
+      }
+    ],
+    "pairingTip": "Use it anywhere you'd pour Sauvignon Blanc — raw fish, shellfish, light fried food — and serve it properly cold.",
+    "avoidPairing": "Heavy red-meat stews and intensely spicy-sweet sauces, which crush its delicate aromatics.",
+    "similar": [
+      "Sinabro Cheongsu White (시나브로 청수 화이트)",
+      "Meoru de Seo (머루드서)",
+      "Gamgrin Persimmon Wine (감그린)"
+    ],
+    "trivia": "Cheongsu is a white grape bred in Korea by state horticultural researchers — it is the variety Korean winemakers point to when someone asks whether the country has a white grape of its own.",
+    "servingTemp": "8-10°C, well chilled",
+    "servingNote": "Chill hard, pour into a white-wine glass, and drink young — this wine is about freshness, not age.",
+    "aging": "Made to be drunk young and fresh; enjoy within a couple of years of the vintage.",
+    "tips": [
+      "A brilliant bottle for showing visitors that 'Korean wine' is a real category, not a novelty.",
+      "Pack it for a Daebudo or west-coast seafood trip — the local pairing is half the experience.",
+      "If you prefer softer wines, the winery also makes reds and rosés from Campbell Early."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Bulro Saeng Makgeolli (불로 생막걸리)",
+    "searchKeyword": "불로 생막걸리",
+    "producer": "Daegu Takju Hapdong Jejojang (대구탁주합동제조장)",
+    "type": "Fresh (unpasteurized) makgeolli",
+    "region": "Daegu",
+    "country": "South Korea",
+    "alcohol": "6%",
+    "liquidColor": "#F1EBDD",
+    "confidence": 89,
+    "knowledge": "rich",
+    "basis": "Label and local-history records: the joint brewery was formed on 18 May 1970 when 49 Daegu breweries merged, and Bulro is bottled at 6% in 750ml. The brand name traces to Bulro-dong in Daegu's Dong-gu district, whose name means 'not aging.'",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 50
+      },
+      {
+        "axis": "감칠맛",
+        "value": 56
+      },
+      {
+        "axis": "산도",
+        "value": 60
+      },
+      {
+        "axis": "당도",
+        "value": 48
+      }
+    ],
+    "tastingNotes": "Daegu's everyday pour. Milky rice, a gentle yogurt-like tang and light carbonation from live fermentation, with modest sweetness and a short, thirst-quenching finish. Unpretentious, fresh and built for drinking by the kettle-full with fried food.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "6%"
+      },
+      {
+        "label": "Base Ingredient",
+        "value": "Rice"
+      },
+      {
+        "label": "Style",
+        "value": "Unpasteurized fresh (saeng) makgeolli"
+      },
+      {
+        "label": "Format",
+        "value": "750ml plastic bottle"
+      }
+    ],
+    "history": [
+      {
+        "year": "1970",
+        "event": "On 18 May, 49 small Daegu breweries were consolidated into a single joint takju company under the era's government policy, creating Daegu Takju Hapdong Jejojang."
+      },
+      {
+        "year": "Since the 1970s",
+        "event": "Bulro has been the default fresh makgeolli of Daegu, distributed daily across the city."
+      }
+    ],
+    "story": "Bulro takes its name from Bulro-dong in Daegu's Dong-gu — the characters mean 'never aging,' a lucky name for a drink. Like many Korean city makgeollis, it comes from a hapdong (joint) brewery formed when dozens of neighborhood breweries were merged in 1970, and it still functions as Daegu's daily bread of drinks: cheap, fresh, delivered fast because live makgeolli doesn't travel far.",
+    "winery": "Daegu Takju Hapdong Jejojang is the joint brewery formed in 1970 from 49 of the city's small takju houses. It has supplied Daegu with fresh daily makgeolli under the Bulro name ever since, making it one of Korea's classic metropolitan makgeolli operations.",
+    "foodPairing": [
+      {
+        "emoji": "🥞",
+        "food": "Pajeon (green-onion pancake)",
+        "why": "The makgeolli-and-jeon combo is Korea's canonical rainy-day pairing.",
+        "shopKeyword": "파전"
+      },
+      {
+        "emoji": "🍲",
+        "food": "Dubu-kimchi",
+        "why": "Warm tofu and stir-fried kimchi love the drink's cooling, milky tang.",
+        "shopKeyword": "두부김치"
+      },
+      {
+        "emoji": "🍖",
+        "food": "Jokbal (braised pork trotters)",
+        "why": "Gentle sweetness and acidity cut through the rich, gelatinous pork.",
+        "shopKeyword": "족발"
+      }
+    ],
+    "pairingTip": "Order it the local way: a plastic bottle, metal bowls, and a hot plate of jeon on a rainy evening.",
+    "avoidPairing": "Fine desserts and delicate Western pastry — the rustic tang clashes with refined sweets.",
+    "similar": [
+      "Jangsu Saeng Makgeolli (장수 생막걸리)",
+      "Saengtak (생탁)",
+      "Geumjeong Sanseong Makgeolli (금정산성 막걸리)"
+    ],
+    "trivia": "'Bulro' means 'no aging.' It comes from Daegu's Bulro-dong, a neighborhood tied to a legend about the founder of the Goryeo dynasty — and locals happily joke that the makgeolli keeps you young too.",
+    "servingTemp": "4-8°C, well chilled",
+    "servingNote": "Gently invert the bottle a few times to mix the settled rice sediment before opening — open slowly, it may fizz.",
+    "aging": "None — this is unpasteurized fresh makgeolli. Keep refrigerated at all times and drink within about 10 days of bottling.",
+    "tips": [
+      "Check the bottling date on the cap; fresher is livelier and sweeter, older turns more sour.",
+      "Drink from small bowls rather than glasses for the full experience.",
+      "If you're in Daegu, this is the taste of the city — pair it with the local fried-food alleys."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Buja Takju (부자 탁주)",
+    "searchKeyword": "부자 탁주",
+    "producer": "Bae Hye-jeong Doga (배혜정도가)",
+    "type": "Premium takju — unfiltered rice brew, no artificial sweeteners",
+    "region": "Hwaseong, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "10%",
+    "liquidColor": "#EFE7D2",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "Producer and retail listings: 10% ABV in a 375ml bottle at around 4,900 KRW, brewed from 100% Gyeonggi rice with nuruk and no artificial sweeteners; the Buja line also includes a 16% bottling. The brewery was established in 1998 by Bae Hye-jeong, daughter of Kooksoondang founder Bae Sang-myeon, and holds a patent on liquid nuruk.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 68
+      },
+      {
+        "axis": "감칠맛",
+        "value": 70
+      },
+      {
+        "axis": "산도",
+        "value": 48
+      },
+      {
+        "axis": "당도",
+        "value": 52
+      }
+    ],
+    "tastingNotes": "A premium rice takju that drinks closer to a creamy rice liqueur than a cheap makgeolli. Dense, velvety body, steamed-rice sweetness, ripe melon and banana esters, and a savory depth from long fermentation. With no artificial sweetener to prop it up, the sweetness that is there comes from the grain, and the 10% strength gives a warm, rounded finish.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "10%"
+      },
+      {
+        "label": "Volume",
+        "value": "375ml"
+      },
+      {
+        "label": "Base Ingredient",
+        "value": "100% Gyeonggi-grown rice with nuruk; no artificial sweeteners"
+      },
+      {
+        "label": "Style",
+        "value": "Premium takju (unfiltered rice brew)"
+      },
+      {
+        "label": "Line",
+        "value": "A 16% Buja bottling is also made"
+      }
+    ],
+    "history": [
+      {
+        "year": "1998",
+        "event": "Bae Hye-jeong, daughter of Kooksoondang founder Bae Sang-myeon, established her own brewery in Gyeonggi Province."
+      },
+      {
+        "year": "2000s",
+        "event": "The Buja ('rich man') line launched, aimed at lifting everyday takju into a premium rice brew; the brewery also pioneered glass-bottled makgeolli in Korea."
+      }
+    ],
+    "story": "Takju is the broad category of cloudy, unfiltered rice brews — makgeolli is its everyday form — and Buja, meaning 'rich man,' is a takju that lives up to the name. Founder Bae Hye-jeong grew up in Korea's most famous brewing family before striking out on her own in Hwaseong in 1998. Brewed from 100% Gyeonggi rice at around double convenience-store makgeolli strength and with no artificial sweetener, it's the bottle to show someone that 'cloudy rice drink' can mean luxurious.",
+    "winery": "Bae Hye-jeong Doga is a premium brewery in Hwaseong, Gyeonggi, founded in 1998 by Bae Hye-jeong of Korea's best-known brewing family. It holds a manufacturing patent for liquid nuruk, is credited with Korea's first glass-bottled makgeolli, and makes the Buja line alongside Ugok Saengju and the cult Horangi Baekkop makgeolli.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "Bossam (boiled pork wraps)",
+        "why": "Creamy body and rice sweetness balance salty wraps and fermented shrimp sauce.",
+        "shopKeyword": "보쌈"
+      },
+      {
+        "emoji": "🥔",
+        "food": "Gamja-jeon (potato pancake)",
+        "why": "Crisp, starchy pancake mirrors the drink's rich rice texture.",
+        "shopKeyword": "감자전"
+      },
+      {
+        "emoji": "🍲",
+        "food": "Kimchi-jjim",
+        "why": "The takju's grain sweetness tames deep, sour braised kimchi.",
+        "shopKeyword": "김치찜"
+      }
+    ],
+    "pairingTip": "Serve it in small cups like a fine sake rather than gulping it — the higher strength rewards slow drinking with food.",
+    "avoidPairing": "Light salads and raw vegetables — the thick, rich body overwhelms them.",
+    "similar": [
+      "Ugok Saengju (우곡생주)",
+      "Horangi Baekkop Makgeolli (호랑이배꼽 막걸리)",
+      "Haechang Makgeolli 9 (해창 막걸리 9도)"
+    ],
+    "trivia": "The founder is the daughter of Kooksoondang's founder — making Buja part of Korea's most storied brewing family tree, on an independent branch.",
+    "servingTemp": "6-10°C, chilled",
+    "servingNote": "Roll the bottle gently to lift the sediment; pour into small cups and note how the texture coats the palate.",
+    "aging": "Not for aging — keep refrigerated and drink within the printed shelf life; flavor grows more tart over time.",
+    "tips": [
+      "At 10% ABV it's roughly double standard makgeolli — and the bottle is 375ml, not 750ml, so pace yourself.",
+      "Try the first pour without shaking (clear top layer), then shake and compare the full-bodied version.",
+      "No aspartame in the recipe: if you find cheap makgeolli cloyingly sweet, start here."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Yesan Golmok Makgeolli (예산 골목막걸리)",
+    "searchKeyword": "예산 골목막걸리",
+    "producer": "Golmok Yangjojang (골목양조장)",
+    "type": "Fresh (unpasteurized) makgeolli",
+    "region": "Yesan, South Chungcheong Province",
+    "country": "South Korea",
+    "alcohol": "6% (Original); a 12% Premium is also bottled",
+    "liquidColor": "#F2ECDF",
+    "confidence": 84,
+    "knowledge": "basic",
+    "basis": "Retail listings and reporting: Golmok Makgeolli Original is 6% in a 750ml bottle at roughly 2,600-3,700 KRW, with a 12% Premium alongside it. The brewery operates inside Yesan Traditional Market, which reopened in 2023 after a revitalization project led by Baek Jong-won's company. The recipe was developed by fermentation researcher Park Yu-deok with Baek Jong-won; the exact year of that collaboration is not asserted here.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 50
+      },
+      {
+        "axis": "감칠맛",
+        "value": 52
+      },
+      {
+        "axis": "산도",
+        "value": 55
+      },
+      {
+        "axis": "당도",
+        "value": 55
+      }
+    ],
+    "tastingNotes": "A friendly, freshly brewed market makgeolli: soft rice sweetness, mild yogurt tang, light fizz and an easy, clean finish built to go down well with market food. Approachable rather than funky — a good on-ramp to fresh makgeolli. The 12% Premium is a denser, richer, much stronger take on the same recipe.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "6% (Original) / 12% (Premium)"
+      },
+      {
+        "label": "Volume",
+        "value": "750ml"
+      },
+      {
+        "label": "Base Ingredient",
+        "value": "Rice"
+      },
+      {
+        "label": "Style",
+        "value": "Fresh (saeng) makgeolli brewed at a market brewery"
+      },
+      {
+        "label": "Where to Try",
+        "value": "Yesan Traditional Market, South Chungcheong"
+      }
+    ],
+    "history": [
+      {
+        "year": "2010s",
+        "event": "Fermentation researcher Park Yu-deok, who wrote his master's thesis on traditional Korean fermentation, developed the makgeolli in collaboration with food entrepreneur Baek Jong-won after appearing on his TV show."
+      },
+      {
+        "year": "2023",
+        "event": "Yesan Traditional Market reopened after a revitalization project led by Baek Jong-won's company, drawing nationwide crowds — with the Golmok brewery operating inside the market as one of its signature attractions."
+      }
+    ],
+    "story": "Golmok means 'alley,' and this makgeolli is brewed in the middle of Yesan's revived traditional market — the celebrated project associated with TV chef and entrepreneur Baek Jong-won, whose company remade the fading market into one of Korea's hottest food destinations. Drinking a cup here, standing among grill smoke and gukbap steam, is as much about the scene as the liquid.",
+    "winery": "Golmok Yangjojang is a working brewery inside Yesan Traditional Market, run by fermentation researcher Park Yu-deok. It bottles an Original and a stronger Premium makgeolli, sold both at the brewery and at the market's neighboring liquor shop.",
+    "foodPairing": [
+      {
+        "emoji": "🍲",
+        "food": "Gukbap (hot rice soup)",
+        "why": "Yesan market's signature soup and a cold cup of makgeolli are the house combo.",
+        "shopKeyword": "국밥"
+      },
+      {
+        "emoji": "🥞",
+        "food": "Assorted jeon",
+        "why": "Market-fried pancakes and fresh makgeolli are an eternal pairing.",
+        "shopKeyword": "모둠전"
+      },
+      {
+        "emoji": "🍗",
+        "food": "Fried chicken",
+        "why": "Light acidity and fizz scrub rich, crispy batter between bites.",
+        "shopKeyword": "치킨"
+      }
+    ],
+    "pairingTip": "Drink it where it's brewed — buy market snacks from the surrounding stalls and enjoy it at the communal tables.",
+    "avoidPairing": "Nothing dramatic, but skip strong Western desserts; this is a savory-food drink.",
+    "similar": [
+      "Deoksan Saeng Makgeolli (덕산 생막걸리)",
+      "Jangsu Saeng Makgeolli (장수 생막걸리)",
+      "Neurin Maeul Makgeolli (느린마을 막걸리)"
+    ],
+    "trivia": "The brewery is part of the Baek Jong-won-linked market makeover that turned quiet Yesan into a weekend pilgrimage — the makgeolli doubles as the project's souvenir.",
+    "servingTemp": "4-8°C, well chilled",
+    "servingNote": "Mix gently before pouring; best from an aluminum kettle into small bowls, market-style.",
+    "aging": "None — fresh unpasteurized makgeolli. Refrigerate and drink within days to about two weeks of bottling.",
+    "tips": [
+      "Check which bottle you're buying: the 6% Original is the session pour, the 12% Premium hits like a different drink.",
+      "Combine it with a day trip: Yesan market, then Sudeoksa temple or Yesan's apple orchards.",
+      "Freshness is everything — buy it cold at the source rather than carrying it far.",
+      "Weekends get crowded; go early for a seat at the market tables."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Mungyeong Omija Saeng Makgeolli (문경 오미자 생막걸리)",
+    "searchKeyword": "문경 오미자 생막걸리",
+    "producer": "Mungyeong Jujo (문경주조)",
+    "type": "Fruit-infused fresh (unpasteurized) makgeolli",
+    "region": "Mungyeong, North Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "6.5%",
+    "liquidColor": "#EEBCC2",
+    "confidence": 85,
+    "knowledge": "basic",
+    "basis": "Label and retail information: 6-6.5% ABV in 750ml, made with real Mungyeong omija (about 2.4% of the batch) and marketed as Korea's first fresh fruit makgeolli. The brewery sits in Dongro-myeon, inside Mungyeong's designated omija special zone. Founding dates for the brewery are not asserted here.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 46
+      },
+      {
+        "axis": "감칠맛",
+        "value": 45
+      },
+      {
+        "axis": "산도",
+        "value": 70
+      },
+      {
+        "axis": "당도",
+        "value": 55
+      }
+    ],
+    "tastingNotes": "A blush-pink makgeolli tinted by real local omija berries. Bright cranberry-like tartness rides over the creamy rice base, with berry perfume, gentle sweetness and a refreshing sour snap on the finish. One of the prettiest and most refreshing flavored makgeollis.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "6.5%"
+      },
+      {
+        "label": "Volume",
+        "value": "750ml"
+      },
+      {
+        "label": "Base Ingredients",
+        "value": "Rice and Mungyeong omija (five-flavor berry), roughly 2.4% fruit"
+      },
+      {
+        "label": "Style",
+        "value": "Fruit-infused fresh (saeng) makgeolli — billed as Korea's first"
+      },
+      {
+        "label": "Color",
+        "value": "Natural pink from the omija, no coloring"
+      }
+    ],
+    "history": [
+      {
+        "year": "20th century",
+        "event": "Mungyeong Jujo has long operated as a local brewery in Dongro-myeon, near the Mungyeong Saejae mountain pass."
+      },
+      {
+        "year": "2000s",
+        "event": "Mungyeong grew into Korea's leading omija-producing region — Dongro-myeon is a designated omija special zone — and the brewery folded the local berry into a fresh makgeolli."
+      }
+    ],
+    "story": "Mungyeong, a mountain town famed for the old Mungyeong Saejae pass, grows more omija than anywhere else in Korea. The local brewery steeps this 'five-flavor berry' into its fresh makgeolli, turning it naturally pink — no coloring needed. The berry's sweet-sour-bitter complexity gives the humble rice brew a wine-like lift that makes it a favorite gateway makgeolli.",
+    "winery": "Mungyeong Jujo is a small brewery in Dongro-myeon, Mungyeong, in the heart of Korea's omija country. It built its name on fresh fruit makgeolli made with the berries grown around it, and remains the reference maker of omija makgeolli.",
+    "foodPairing": [
+      {
+        "emoji": "🌶️",
+        "food": "Tteokbokki",
+        "why": "Tart berry acidity and light sweetness cool down spicy rice cakes.",
+        "shopKeyword": "떡볶이"
+      },
+      {
+        "emoji": "🥞",
+        "food": "Haemul-pajeon",
+        "why": "Seafood pancake's richness meets the pink makgeolli's bright, cleansing sourness.",
+        "shopKeyword": "해물파전"
+      },
+      {
+        "emoji": "🍓",
+        "food": "Fresh fruit platter",
+        "why": "Berry-on-berry harmony makes it a light dessert pairing.",
+        "shopKeyword": "과일"
+      }
+    ],
+    "pairingTip": "Serve it very cold in clear cups so guests can see the pink — it converts makgeolli skeptics on sight.",
+    "avoidPairing": "Deeply savory offal dishes and heavy stews, which fight the fruity tartness.",
+    "similar": [
+      "OmyRose Gyeol (오미로제 결)",
+      "Ohee Sparkling Takju (오희)",
+      "Udo Peanut Makgeolli (우도 땅콩막걸리)"
+    ],
+    "trivia": "The pink hue is pure omija — the same Mungyeong berry that Omynara distills into Goundal, one of Korea's priciest spirits, here doing duty in a bottle that costs less than a coffee.",
+    "servingTemp": "4-6°C, very cold",
+    "servingNote": "Invert gently to blend the rice sediment with the pink layer; open slowly over a sink if it has traveled.",
+    "aging": "None — unpasteurized fresh makgeolli. Keep refrigerated and drink within about 10 days to two weeks of bottling.",
+    "tips": [
+      "Photogenic and low-alcohol — ideal for a picnic or party centerpiece.",
+      "Taste before and after shaking: clear tart top, creamy blended body.",
+      "Pick it up if you visit Mungyeong Saejae — it rarely travels far from the region fresh."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Seonho Saeng Makgeolli (선호 생막걸리)",
+    "searchKeyword": "선호 생막걸리",
+    "producer": "Gimpo Geumssal Takju (김포금쌀탁주영농조합법인)",
+    "type": "Fresh (unpasteurized) makgeolli",
+    "region": "Gimpo, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "6%",
+    "liquidColor": "#F1EADB",
+    "confidence": 84,
+    "knowledge": "basic",
+    "basis": "Brewery site and retail/review sources: 6% ABV, 750ml, roughly 1,800 KRW, brewed from Gimpo geumssal rice with minimal added sweetness. The cooperative describes itself as a three-generation house with about 80 years of brewing tradition — that is the brewery's own claim and is repeated here as such.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 48
+      },
+      {
+        "axis": "감칠맛",
+        "value": 55
+      },
+      {
+        "axis": "산도",
+        "value": 58
+      },
+      {
+        "axis": "당도",
+        "value": 44
+      }
+    ],
+    "tastingNotes": "A no-frills regional fresh makgeolli from Gimpo's rice country. Round steamed-rice flavor with the plump character associated with Gimpo 'geumssal' (golden rice), balanced by soft lactic tang and light natural fizz. Notably restrained in sweetness and clean on the swallow — honest, local and best drunk very fresh.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "6%"
+      },
+      {
+        "label": "Volume",
+        "value": "750ml"
+      },
+      {
+        "label": "Base Ingredient",
+        "value": "Gimpo geumssal rice"
+      },
+      {
+        "label": "Style",
+        "value": "Unpasteurized fresh (saeng) makgeolli, lightly sweetened"
+      },
+      {
+        "label": "Distribution",
+        "value": "Mainly local, around Gimpo and western Gyeonggi"
+      }
+    ],
+    "history": [
+      {
+        "year": "20th century",
+        "event": "Gimpo's takju brewing carried on through the joint-brewery era that consolidated small town breweries across Korea; the cooperative describes its lineage as three generations and about 80 years."
+      },
+      {
+        "year": "Today",
+        "event": "The brewery builds its identity on Gimpo geumssal, the region's branded rice, as the base of its makgeolli."
+      }
+    ],
+    "story": "Gimpo, just west of Seoul at the mouth of the Han River, is old rice country — its 'geumssal' (golden rice) brand is a point of local pride, and this makgeolli is essentially that rice in drinkable form. Like most fresh regional makgeollis it lives within a short delivery radius of its brewery, which is exactly why finding it feels like a small discovery.",
+    "winery": "Gimpo Geumssal Takju is a farming cooperative brewery in Gimpo, Gyeonggi, that bottles Seonho fresh makgeolli from the region's branded geumssal rice. It presents itself as a three-generation family operation and sells mostly within its own delivery radius.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "Jeyuk-bokkeum (spicy pork)",
+        "why": "Milky sweetness cools the gochujang heat of stir-fried pork.",
+        "shopKeyword": "제육볶음"
+      },
+      {
+        "emoji": "🥞",
+        "food": "Kimchi-jeon",
+        "why": "Sour-savory pancake and tangy makgeolli reinforce each other.",
+        "shopKeyword": "김치전"
+      },
+      {
+        "emoji": "🌭",
+        "food": "Sundae (blood sausage)",
+        "why": "Earthy market sundae suits the drink's rustic rice depth.",
+        "shopKeyword": "순대"
+      }
+    ],
+    "pairingTip": "Treat it as table wine for everyday Korean home cooking — anything with rice, kimchi or pork works.",
+    "avoidPairing": "Delicate desserts and subtle raw dishes; this is a hearty, rustic pour.",
+    "similar": [
+      "Jangsu Saeng Makgeolli (장수 생막걸리)",
+      "Incheon Saeng Sosungju (인천 생 소성주)",
+      "Idong Saeng Makgeolli (이동 생막걸리)"
+    ],
+    "trivia": "'Geumssal' means 'golden rice' — Gimpo has branded the grain from its Han-river delta paddies for decades, and this makgeolli is its drinkable ambassador.",
+    "servingTemp": "4-8°C, well chilled",
+    "servingNote": "Shake gently to blend the sediment; pour into bowls and drink fresh.",
+    "aging": "None — fresh unpasteurized makgeolli. Refrigerate constantly and finish within about 10 days of the bottling date.",
+    "tips": [
+      "Check the date stamp — with small-brewery makgeolli, freshness decides everything.",
+      "Low on added sweetener, so it reads drier than convenience-store makgeolli; give it a bowl before judging.",
+      "Look for it in local marts around Gimpo rather than big Seoul chains."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Udo Peanut Makgeolli (우도 땅콩막걸리)",
+    "searchKeyword": "우도땅콩막걸리",
+    "producer": "Joeunsul Sejong (조은술세종)",
+    "type": "Peanut makgeolli (nationwide bottling is pasteurized)",
+    "region": "Cheongju, North Chungcheong Province (brewed with Jeju Udo peanuts)",
+    "country": "South Korea",
+    "alcohol": "6%",
+    "liquidColor": "#F0E7D4",
+    "confidence": 86,
+    "knowledge": "rich",
+    "basis": "Retail and brewery sources: the widely distributed bottle is made by Joeunsul Sejong — a brewery based in Cheongju, North Chungcheong, despite the 'Sejong' in its name — at 6% ABV in 750ml, and the nationwide version is listed as a pasteurized (salgyun) makgeolli. Island-made versions with different peanut ratios also exist on Udo itself.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 62
+      },
+      {
+        "axis": "감칠맛",
+        "value": 62
+      },
+      {
+        "axis": "산도",
+        "value": 42
+      },
+      {
+        "axis": "당도",
+        "value": 70
+      }
+    ],
+    "tastingNotes": "Korea's favorite dessert makgeolli. Creamy rice base laced with roasted peanut aroma, a milky nutty sweetness reminiscent of peanut ice cream, soft carbonation and just enough tang to keep it from feeling like a milkshake. Dangerously easy to drink.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "6%"
+      },
+      {
+        "label": "Volume",
+        "value": "750ml"
+      },
+      {
+        "label": "Base Ingredients",
+        "value": "Rice and peanuts from Udo (Jeju)"
+      },
+      {
+        "label": "Style",
+        "value": "Peanut makgeolli — the nationwide bottling is pasteurized for shelf life"
+      },
+      {
+        "label": "Availability",
+        "value": "Nationwide, including convenience stores"
+      }
+    ],
+    "history": [
+      {
+        "year": "20th century",
+        "event": "Udo, a small islet off Jeju, became famous for the small, aromatic peanuts grown in its sandy volcanic soil."
+      },
+      {
+        "year": "2010s",
+        "event": "Peanut makgeolli became Udo's signature tourist drink, and mainland-brewed versions carried it to shops nationwide."
+      },
+      {
+        "year": "2015",
+        "event": "Joeunsul Sejong was named a 'Visiting Brewery' by Korea's Ministry of Agriculture, Food and Rural Affairs, opening its Cheongju brewhouse to the public."
+      }
+    ],
+    "story": "Udo — 'Cow Island,' a tiny islet off Jeju's east coast — grows famously fragrant little peanuts, and blending them into makgeolli created one of the biggest hits in modern Korean drinking. The version you find in convenience-store fridges nationwide is brewed on the mainland by Joeunsul Sejong in Cheongju and pasteurized so it can travel, which is why a Jeju holiday flavor turns up in Seoul. For many foreigners it is the very first makgeolli they love.",
+    "winery": "Joeunsul Sejong is a brewery in Cheongju, North Chungcheong, that makes both fresh and pasteurized makgeolli and was designated a government 'Visiting Brewery' in 2015. Its Udo peanut makgeolli is among the most widely distributed flavored makgeollis in Korea.",
+    "foodPairing": [
+      {
+        "emoji": "🥓",
+        "food": "Jeju black pork BBQ",
+        "why": "Nutty sweetness plays beautifully against smoky, fatty grilled pork.",
+        "shopKeyword": "흑돼지"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Galchi-gui (grilled cutlassfish)",
+        "why": "Jeju's classic fish dish gets a creamy, gentle counterpoint.",
+        "shopKeyword": "갈치구이"
+      },
+      {
+        "emoji": "🥞",
+        "food": "Hotteok (sweet pancake)",
+        "why": "Nut-and-brown-sugar street food doubles down on the dessert character.",
+        "shopKeyword": "호떡"
+      }
+    ],
+    "pairingTip": "Serve it as the dessert course of a Korean BBQ night — cold, sweet and nutty after the grill.",
+    "avoidPairing": "Very sour or bitter dishes, which curdle its dessert-like balance.",
+    "similar": [
+      "Gapyeong Jat Makgeolli (가평 잣 생막걸리)",
+      "Gongju Albam Makgeolli (공주 알밤 막걸리)",
+      "Mungyeong Omija Saeng Makgeolli (문경 오미자 생막걸리)"
+    ],
+    "trivia": "Udo's peanuts are prized precisely because they're tiny — the sandy island soil concentrates their aroma, and islanders turned that quirk into a national drink trend.",
+    "servingTemp": "4-6°C, very cold",
+    "servingNote": "Shake well — the peanut and rice sediment carries most of the flavor — and open slowly.",
+    "aging": "The nationwide bottle is pasteurized, so it is far more forgiving than fresh makgeolli, but flavor still fades: chill it and drink within the printed shelf life.",
+    "tips": [
+      "The single most reliable crowd-pleaser for makgeolli first-timers.",
+      "Pour over ice on a hot day — it drinks like an adult peanut latte.",
+      "If you visit Udo itself, compare the island-made fresh versions with this nationwide bottling."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Jukhyang Saeng Makgeolli (죽향 생막걸리)",
+    "searchKeyword": "죽향 생막걸리",
+    "producer": "Jukhyang Doga (죽향도가)",
+    "type": "Fresh (unpasteurized) makgeolli",
+    "region": "Damyang, South Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "6%",
+    "liquidColor": "#F1EBDC",
+    "confidence": 82,
+    "knowledge": "basic",
+    "basis": "Retail and review sources: 6% ABV in 750ml from Jukhyang Doga in Damyang, described as brewed with locally grown rice and sweetened with honey rather than artificial sweetener. Detailed brewery records are thin, so history is stated conservatively.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 52
+      },
+      {
+        "axis": "감칠맛",
+        "value": 58
+      },
+      {
+        "axis": "산도",
+        "value": 55
+      },
+      {
+        "axis": "당도",
+        "value": 54
+      }
+    ],
+    "tastingNotes": "A fresh southern-province makgeolli in the classic Jeolla style: rounder and a touch more generous than Seoul brews. Creamy, almost milkshake-like texture, mild honeyed sweetness, clean lactic tang and a cool, bamboo-country freshness on the finish.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "6%"
+      },
+      {
+        "label": "Volume",
+        "value": "750ml"
+      },
+      {
+        "label": "Base Ingredient",
+        "value": "Rice grown in Damyang; honey used in place of artificial sweetener"
+      },
+      {
+        "label": "Style",
+        "value": "Unpasteurized fresh (saeng) makgeolli"
+      },
+      {
+        "label": "Home Region",
+        "value": "Damyang — Korea's bamboo capital"
+      }
+    ],
+    "history": [
+      {
+        "year": "20th century",
+        "event": "Damyang's local brewing carried on alongside the town's famous bamboo craft and pavilion gardens."
+      },
+      {
+        "year": "Today",
+        "event": "Jukhyang Doga brews fresh makgeolli under the town's 'bamboo fragrance' identity, leaning on local rice and honey."
+      }
+    ],
+    "story": "Jukhyang means 'bamboo fragrance' — the traditional nickname of Damyang, the southern town wrapped in bamboo forests and pavilion gardens. Its local doga (an old word for brewery) bottles the everyday fresh makgeolli that accompanies Damyang's food specialties, sweetened with honey rather than aspartame. Drink it after walking the Juknokwon bamboo forest and it tastes like the town smells: green, cool and clean.",
+    "winery": "Jukhyang Doga is a small brewery in Damyang, South Jeolla, named for the town's 'bamboo fragrance' nickname. It works with locally grown rice and honey and sells mostly within the region, where its makgeolli turns up on the tables of Damyang's tteok-galbi and noodle restaurants.",
+    "foodPairing": [
+      {
+        "emoji": "🍖",
+        "food": "Tteok-galbi",
+        "why": "Damyang's signature grilled minced-rib patties are the hometown pairing.",
+        "shopKeyword": "떡갈비"
+      },
+      {
+        "emoji": "🎋",
+        "food": "Daetongbap (bamboo rice)",
+        "why": "Rice steamed in bamboo tubes echoes the makgeolli's grain-and-green character.",
+        "shopKeyword": "대통밥"
+      },
+      {
+        "emoji": "🍜",
+        "food": "Guksu (noodle soup)",
+        "why": "Damyang's famous noodle street runs on cold noodles and cloudy rice brew.",
+        "shopKeyword": "국수"
+      }
+    ],
+    "pairingTip": "Build the full Damyang set: bamboo-forest walk, tteok-galbi lunch, and this makgeolli poured cold into bowls.",
+    "avoidPairing": "Rich chocolate desserts; keep it with savory, homestyle food.",
+    "similar": [
+      "Daedaepo Blue Makgeolli (대대포 블루 막걸리)",
+      "Haechang Makgeolli 6 (해창 막걸리 6도)",
+      "Jipyeong Saeng Makgeolli (지평 생막걸리)"
+    ],
+    "trivia": "Damyang is so identified with bamboo that even its makgeolli is named after the scent of the groves — 'juk' is bamboo, 'hyang' is fragrance.",
+    "servingTemp": "4-8°C, well chilled",
+    "servingNote": "Mix the sediment gently before pouring; serve in bowls alongside grilled food.",
+    "aging": "None — fresh unpasteurized makgeolli. Keep refrigerated and drink within about 10 days of bottling.",
+    "tips": [
+      "Hard to find outside South Jeolla — treat it as a travel-only bottle.",
+      "Pairs naturally with Damyang's tteok-galbi restaurants, many of which stock it.",
+      "Freshest early in its shelf life; the tang builds day by day."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Bokdanji (복단지)",
+    "searchKeyword": "복단지",
+    "producer": "Sool Awon (술아원)",
+    "type": "Bokbunja (Korean black raspberry) yakju — no added sugar",
+    "region": "Yeoju, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "14%",
+    "liquidColor": "#6E1F35",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "Producer and craft-liquor retail sources: Bokdanji is a fresh yakju brewed from rice, water, nuruk and whole bokbunja berries with no added sugar, 14% ABV in a 350ml bottle at roughly 17,800 KRW, refrigerated with a short shelf life. Sool Awon is an agricultural corporation in Yeoju working from historical Korean recipes; specific founding details are not asserted here.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 66
+      },
+      {
+        "axis": "감칠맛",
+        "value": 40
+      },
+      {
+        "axis": "산도",
+        "value": 58
+      },
+      {
+        "axis": "당도",
+        "value": 52
+      }
+    ],
+    "tastingNotes": "Deep ruby and genuinely wine-like in the glass. Black raspberry and dark berry perfume with none of the syrupy edge of supermarket bokbunja: the sweetness is the rice's own, the acidity is the fruit's, and the two lock together over a surprisingly weighty, savory rice-brew body. Long, dry-ish, faintly tannic finish.",
+    "specs": [
+      {
+        "label": "ABV",
+        "value": "14%"
+      },
+      {
+        "label": "Volume",
+        "value": "350ml"
+      },
+      {
+        "label": "Ingredients",
+        "value": "Rice, water, nuruk and whole bokbunja berries — no added sugar"
+      },
+      {
+        "label": "Style",
+        "value": "Fresh (unpasteurized) yakju"
+      },
+      {
+        "label": "Source Recipe",
+        "value": "Based on a method recorded in Suun Japbang, a 16th-century Korean household manual"
+      }
+    ],
+    "history": [
+      {
+        "year": "2010s",
+        "event": "Sool Awon was founded in Yeoju, Gyeonggi — a town long famous for tribute-grade rice — and drew attention for reviving Joseon-era brewing styles such as gwahaju."
+      },
+      {
+        "year": "Since then",
+        "event": "Bokdanji, its no-added-sugar bokbunja yakju, became the brewery's best-known bottle and a fixture of Korean craft-liquor shops."
+      }
+    ],
+    "story": "The name plays on bokbunja, the Korean black raspberry, and danji, the little earthenware jar families once kept precious brews in — so it reads at once as 'raspberry jar' and 'jar of fortune.' Sool Awon in Yeoju makes it the hard way, following a method from the 16th-century manual Suun Japbang: rice, water, nuruk and whole berries, fermented together with no sugar added. The result is closer to a serious red wine than to the sweet bokbunja liqueurs sold in supermarkets.",
+    "winery": "Sool Awon is a small craft brewery in Yeoju, Gyeonggi, known for rebuilding Korean drinks from historical texts — gwahaju and other Joseon-era styles among them. Everything is made in small batches from rice, water and nuruk, without added sugar or flavoring.",
+    "foodPairing": [
+      {
+        "emoji": "🥓",
+        "food": "Grilled pork belly",
+        "why": "Berry acidity slices through the fat exactly the way a red wine would.",
+        "shopKeyword": "삼겹살"
+      },
+      {
+        "emoji": "🍢",
+        "food": "Grilled eel (jangeo-gui)",
+        "why": "The classic Korean match for bokbunja: rich, sweet-glazed eel against tart berry.",
+        "shopKeyword": "장어구이"
+      },
+      {
+        "emoji": "🍫",
+        "food": "Dark chocolate",
+        "why": "Cocoa bitterness and raspberry are a dessert pairing that needs no explaining.",
+        "shopKeyword": "다크초콜릿"
+      }
+    ],
+    "pairingTip": "Pour it chilled into small wine glasses and treat it as a red — it holds up to grilled meat far better than its 14% suggests.",
+    "avoidPairing": "Delicate raw white fish and mild soups — the berry depth flattens them.",
+    "similar": [
+      "Bohae Bokbunjaju (보해 복분자주)",
+      "Seonunsan Bokbunjaju (선운산 복분자주)",
+      "Cheongmyeongju (청명주)"
+    ],
+    "trivia": "No sugar goes in at all — every bit of sweetness comes from the rice, which is why it tastes dry where most Korean bokbunja drinks taste like cordial.",
+    "servingTemp": "8-12°C, chilled",
+    "servingNote": "Serve in a small wine glass rather than a soju cup; the aroma is the point, and it needs headroom.",
+    "aging": "Not for aging — a fresh unpasteurized yakju. Keep it refrigerated below 10°C and finish within about a month of the bottling date.",
+    "tips": [
+      "Taste it beside a supermarket bokbunja liqueur to see what 'no added sugar' actually does.",
+      "Its wine-red color and 350ml format make it an easy gift for someone who drinks red wine.",
+      "Sool Awon's gwahaju and other historical bottles are worth trying if you like this one."
+    ],
+    "vintage": null
+  }
+]

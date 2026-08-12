@@ -1,0 +1,1202 @@
+[
+  {
+    "category": "traditional",
+    "name": "Soonhui Makgeolli (순희 막걸리)",
+    "searchKeyword": "순희 막걸리",
+    "producer": "Bohae Yangjo (보해양조)",
+    "type": "Pasteurized makgeolli — cloudy rice wine",
+    "region": "Mokpo, South Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "5% (6% on bottles made before the 2025 renewal)",
+    "liquidColor": "#F3EEE0",
+    "confidence": 84,
+    "knowledge": "basic",
+    "basis": "Bohae Yangjo, founded in Mokpo in 1950, is a well-documented company. Soonhui's 2025 relaunch — aspartame dropped, strength lowered from 6% to 5%, repositioned as a ready-to-drink bottle — was covered in the Korean drinks press; specs follow the current label.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 40
+      },
+      {
+        "axis": "감칠맛",
+        "value": 46
+      },
+      {
+        "axis": "산도",
+        "value": 45
+      },
+      {
+        "axis": "당도",
+        "value": 52
+      }
+    ],
+    "tastingNotes": "Makgeolli is Korea's cloudy, lightly fizzy rice wine — imagine gently sparkling rice milk with a yogurt-like tang. Soonhui plays it soft and friendly: mild sweetness up front, rounded rice flavor, easy acidity, and a clean finish. Being pasteurized rather than live, it is calmer and less gassy than saeng makgeolli — built for long meals rather than slow sipping.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "100% Korean-grown rice"
+      },
+      {
+        "label": "ABV",
+        "value": "5% since the 2025 renewal (earlier bottles were 6%)"
+      },
+      {
+        "label": "Pasteurized",
+        "value": "Yes — low-temperature pasteurized, so it keeps far longer than live makgeolli"
+      },
+      {
+        "label": "Sweetener",
+        "value": "No aspartame since the 2025 reformulation"
+      }
+    ],
+    "history": [
+      {
+        "year": "1950",
+        "event": "Bohae Yangjo is founded in Mokpo, growing into the South Jeolla region's flagship alcohol company."
+      },
+      {
+        "year": "2025",
+        "event": "After roughly fifteen years on shelves, Soonhui is overhauled: aspartame removed, strength cut from 6% to 5%, and the brand pitched as makgeolli reborn as a ready-to-drink bottle."
+      }
+    ],
+    "story": "'Soonhui' is a classic mid-20th-century Korean woman's name — the effect is like naming a drink 'Peggy' or 'Betty.' Bohae, a 70-plus-year-old company from the port city of Mokpo better known for regional soju and black-raspberry wine, uses that name to bottle pure nostalgia: the everyday makgeolli of Korea's past, dressed for today's convenience-store shelf. The 2025 remake stripped out the artificial sweetener and softened the strength, making it an easy, unintimidating introduction to the whole category.",
+    "winery": "Bohae Yangjo, founded in Mokpo in 1950, is the dominant drinks maker of the South Jeolla region — home of Ipsaeju soju and famous fruit liqueurs like bokbunja (black raspberry) wine — with makgeolli as a newer line in its portfolio.",
+    "foodPairing": [
+      {
+        "emoji": "🥞",
+        "food": "Kimchi-jeon (kimchi pancake)",
+        "why": "Crispy, oily pancake against tangy, fizzy rice wine is Korea's default makgeolli pairing — and its rainy-day ritual.",
+        "shopKeyword": "김치전"
+      },
+      {
+        "emoji": "🐷",
+        "food": "Jeyuk bokkeum (spicy stir-fried pork)",
+        "why": "The wine's soft sweetness cools the gochujang heat bite after bite.",
+        "shopKeyword": "제육볶음"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Hongeo samhap (fermented skate with pork and kimchi)",
+        "why": "The famous Jeolla triple — pungent skate, boiled pork, aged kimchi — is traditionally washed down with exactly this kind of makgeolli.",
+        "shopKeyword": "홍어삼합"
+      }
+    ],
+    "pairingTip": "Treat it like a session drink for the table: anything fried, spicy, or savory-fermented works, especially Jeolla-style dishes.",
+    "avoidPairing": "Chocolate and creamy desserts — the lactic tang of makgeolli turns muddy against them.",
+    "similar": [
+      "Jangsu Saeng Makgeolli (장수 생막걸리)",
+      "Jipyeong Saeng Makgeolli (지평 생막걸리)",
+      "Kooksoondang Saeng Makgeolli (국순당 생막걸리)"
+    ],
+    "trivia": "Korea's 'newtro' (new + retro) trend put grandma-era names, fonts, and labels on modern products — Soonhui is a textbook example. Most mass-market makgeolli is sweetened with aspartame, which is exactly what this brand made a point of removing. The cloudiness in the bottle is rice sediment and is supposed to be there: tilt and roll the bottle gently before opening, never shake it hard.",
+    "servingTemp": "Cold, 4-8°C, straight from the fridge",
+    "servingNote": "Gently invert the bottle a few times to wake the sediment, then pour into bowls or small cups. Pour for your companions first — someone will return the favor.",
+    "aging": "Pasteurized, so unlike live saeng makgeolli it keeps for months unopened and survives room temperature on the way home. Chill before drinking and finish within a day or two once opened.",
+    "tips": [
+      "Pasteurized makgeolli is quieter than live versions — less fizz, longer life, and no surprise overflow when you crack the cap.",
+      "At 5% it drinks like a light beer, but the rice sugars sneak up on you; makgeolli hangovers are famous in Korea."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Eunjagol Takbaegi (은자골 탁배기)",
+    "searchKeyword": "은자골 탁배기",
+    "producer": "Eunchuk Yangjojang (은척양조장)",
+    "type": "Old-style fresh (unpasteurized) makgeolli — takbaegi",
+    "region": "Sangju, North Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "5%",
+    "liquidColor": "#F1EBDA",
+    "confidence": 85,
+    "knowledge": "basic",
+    "basis": "A long-running village brewery in Sangju, now in its third generation, regularly covered in Korean media; the licence dates from 1963 though the family says brewing began before liberation in 1945. ABV and volume follow current product listings (5%, 750ml).",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 50
+      },
+      {
+        "axis": "감칠맛",
+        "value": 62
+      },
+      {
+        "axis": "산도",
+        "value": 58
+      },
+      {
+        "axis": "당도",
+        "value": 48
+      }
+    ],
+    "tastingNotes": "'Takbaegi' is Gyeongsang-dialect for makgeolli, and this tastes the way the word sounds: rustic and old-school. Fuller-flavored than convenience-store brands despite a gentle 5%, with a savory, almost broth-like rice depth (that is the umami of traditional nuruk fermentation), brisk natural acidity, and restrained sweetness. A drink that tastes of the countryside, in the best way.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice from the Sangju area, with the brewery's own house-made nuruk"
+      },
+      {
+        "label": "ABV",
+        "value": "5% (750ml bottle)"
+      },
+      {
+        "label": "Pasteurized",
+        "value": "No — live saeng makgeolli with active cultures"
+      },
+      {
+        "label": "Shelf life",
+        "value": "Short — keep refrigerated and drink within about 2 weeks"
+      }
+    ],
+    "history": [
+      {
+        "year": "Before 1945",
+        "event": "Brewing begins in Eunja-gol, in Sangju's Eunchuk township, during the late colonial period — the roots of today's brewery."
+      },
+      {
+        "year": "1963",
+        "event": "The brewery is formally licensed as Eunchuk Yangjojang, the registration date it still carries."
+      }
+    ],
+    "story": "Sangju has been called the 'town of three whites' — rice, silkworm cocoons, and dried persimmons — and good rice towns make good makgeolli. Eunchuk Yangjojang is one of those stubborn rural breweries that simply never stopped: a family operation that kept fermenting through the decades while Korea urbanized around it, passing unusually from the founder to his daughter-in-law and on to a third generation. Calling the drink 'takbaegi' instead of makgeolli is itself a statement — this is the farmer's bowl, dialect and all.",
+    "winery": "Eunchuk Yangjojang is a small family brewery in Eunja-gol village, Sangju, now run by its third generation after the founder's daughter-in-law took the reins — a rare line of succession in Korean brewing. It still uses century-old fermentation crocks and makes its own nuruk, brewing in small batches for its region.",
+    "foodPairing": [
+      {
+        "emoji": "🥬",
+        "food": "Baechu-jeon (Gyeongsang cabbage pancake)",
+        "why": "The region's humble specialty — sweet cabbage in thin batter — is the hometown match for a hometown brew.",
+        "shopKeyword": "배추전"
+      },
+      {
+        "emoji": "🍢",
+        "food": "Dotori-muk (acorn jelly salad)",
+        "why": "Nutty, wobbly acorn jelly with soy-chili dressing is classic Korean tavern food for cloudy rice wine.",
+        "shopKeyword": "도토리묵"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "Dubu kimchi (tofu with stir-fried kimchi)",
+        "why": "Warm tofu and sour-spicy kimchi meet the takbaegi's savory tang head-on — a textbook set.",
+        "shopKeyword": "두부김치"
+      }
+    ],
+    "pairingTip": "This is tavern makgeolli: order the jeon (pancake) section of the menu and you cannot go wrong.",
+    "avoidPairing": "Delicate sashimi — the rustic acidity and savory depth of takbaegi overwhelm subtle raw fish.",
+    "similar": [
+      "Geumjeong Sanseong Makgeolli (금정산성 막걸리)",
+      "Song Myung Sub Makgeolli (송명섭 막걸리)",
+      "Idong Saeng Makgeolli (이동 생막걸리)"
+    ],
+    "trivia": "Korean has many regional words for makgeolli — takbaegi, takju, nongju ('farmer's wine') — and hearing 'takbaegi' instantly places you in the Gyeongsang southeast. Sangju itself is more famous abroad for dried persimmons; locals will tell you the makgeolli deserves equal billing.",
+    "servingTemp": "Cold, 4-8°C",
+    "servingNote": "Roll the bottle gently to mix the sediment, then pour into bowls. In the countryside it is drunk from shallow bowls, often shared from a kettle — filling a neighbor's bowl before your own is basic manners.",
+    "aging": "Unpasteurized and alive: refrigerate at all times and drink within about two weeks. The flavor keeps evolving in the bottle — fresher is sweeter, older is more sour and fizzy.",
+    "tips": [
+      "Slight pressure when opening is normal for live makgeolli — crack the cap slowly over a sink the first time.",
+      "At 5% it is one of the gentler traditional brews, which makes it a good first taste of old-style country makgeolli."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Baedari Saeng Makgeolli (배다리 생막걸리)",
+    "searchKeyword": "배다리 생막걸리",
+    "producer": "Baedari Sul Doga (배다리술도가)",
+    "type": "Old-style fresh (unpasteurized) makgeolli",
+    "region": "Goyang, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "7%",
+    "liquidColor": "#F2ECDC",
+    "confidence": 88,
+    "knowledge": "rich",
+    "basis": "A century-old Goyang brewery — legally Goyang Takju, branded Baedari Sul Doga 1915 — whose family history, presidential association, and on-site makgeolli museum are widely reported in Korean media. ABV and volume follow the current label (7%, 750ml).",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 62
+      },
+      {
+        "axis": "감칠맛",
+        "value": 65
+      },
+      {
+        "axis": "산도",
+        "value": 52
+      },
+      {
+        "axis": "당도",
+        "value": 58
+      }
+    ],
+    "tastingNotes": "A throwback to how makgeolli tasted before it went thin and light: full-bodied, with a deep, genuinely sweet rice richness that comes from the grain rather than a sweetener, firm lactic tang underneath, and a long finish. At 7% it runs a notch above the usual 5-6% and shows it — this has the presence of a farmhouse wine rather than a soft drink.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Korean rice and local groundwater"
+      },
+      {
+        "label": "ABV",
+        "value": "7% (750ml) — a step up from the 5-6% norm"
+      },
+      {
+        "label": "Pasteurized",
+        "value": "No — live saeng makgeolli"
+      },
+      {
+        "label": "Shelf life",
+        "value": "Short — refrigerated, roughly 2 weeks"
+      }
+    ],
+    "history": [
+      {
+        "year": "1915",
+        "event": "The business starts in the Baedari area of Goyang, northwest of Seoul, later brewing as Neunggok Yangjojang — the origin the brand still carries in its name."
+      },
+      {
+        "year": "1970s",
+        "event": "The brewery becomes famous as the makgeolli reportedly favored at the Blue House during the Park Chung-hee years, a claim printed on its own packaging."
+      },
+      {
+        "year": "2000",
+        "event": "Bottles are reportedly served at the first inter-Korean summit, cementing the brand's status as Korea's ceremonial makgeolli."
+      }
+    ],
+    "story": "Every country has a 'what the president drank' bottle, and for Korean makgeolli it is Baedari. In the 1970s, when President Park Chung-hee wanted makgeolli — then still the working man's daily drink — this small Goyang brewery is the one whose name stuck to the story. The family, brewing here since 1915, still works the old way and runs a small makgeolli museum beside the brewery. 'Baedari' means 'boat bridge,' after the old pontoon crossings of the area.",
+    "winery": "Baedari Sul Doga, operating as Goyang Takju and branded 'Baedari Sul Doga 1915,' is a family brewery in Goyang just northwest of Seoul with more than a century of continuous brewing behind it. It keeps an old-style, stronger, richer makgeolli profile and runs a museum documenting a hundred years of Korean makgeolli culture.",
+    "foodPairing": [
+      {
+        "emoji": "🥞",
+        "food": "Bindaetteok (mung bean pancake)",
+        "why": "The crisp-edged, lard-fried market pancake is the time-machine pairing for an old-style makgeolli.",
+        "shopKeyword": "빈대떡"
+      },
+      {
+        "emoji": "🐖",
+        "food": "Jokbal (braised pig's trotters)",
+        "why": "Rich, collagen-heavy pork needs the extra body and firm acidity this bottle brings.",
+        "shopKeyword": "족발"
+      },
+      {
+        "emoji": "🍢",
+        "food": "Dotori-muk (acorn jelly)",
+        "why": "Old-school tavern food for an old-school brew — nutty jelly and tangy rice wine.",
+        "shopKeyword": "도토리묵"
+      }
+    ],
+    "pairingTip": "Its extra strength and richness let it stand up to the fattiest Korean pub food — think of it as the 'ale' of makgeolli.",
+    "avoidPairing": "Sweet fruit desserts and cakes — the wine already brings its own sweetness and turns cloying beside sugar.",
+    "similar": [
+      "Jipyeong Saeng Makgeolli (지평 생막걸리)",
+      "Song Myung Sub Makgeolli (송명섭 막걸리)",
+      "Haechang Makgeolli 9 (해창 막걸리 9도)"
+    ],
+    "trivia": "In the 1960s-70s, makgeolli was so central to rural life that it was nicknamed 'nongju' — farmer's wine — and often counted as part of a field worker's wages in kind. Baedari's presidential story dates from exactly that era, when makgeolli was at its historical peak of consumption.",
+    "servingTemp": "Cold, 4-8°C",
+    "servingNote": "Tilt and roll the bottle to mix the sediment before opening. Traditionally poured from a kettle into shallow bowls; fill your elders' bowls first, with both hands.",
+    "aging": "Unpasteurized and alive: keep refrigerated at all times and drink within about two weeks of the bottling date. The live cultures keep working, so expect more fizz and sourness as it ages.",
+    "tips": [
+      "If standard makgeolli feels too thin, this fuller 7% style is the natural upgrade.",
+      "Visit the brewery's makgeolli museum in Goyang if you want the full backstory — it is an easy trip from Seoul."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "C Makgeolli Signature Cuvee (씨막걸리 시그니처 뀌베)",
+    "searchKeyword": "씨막걸리 시그니처 뀌베",
+    "producer": "C Makgeolli (씨막걸리)",
+    "type": "Premium craft takju (unfiltered rice wine)",
+    "region": "Yangpyeong, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "12%",
+    "liquidColor": "#EDE2C4",
+    "confidence": 84,
+    "knowledge": "basic",
+    "basis": "A young craft brewery that opened in Seoul's Gaepo-dong in July 2020 and moved to Yangpyeong in 2022; coverage is mostly press and the brewery's own materials. ABV, volume and ingredients follow the current label (12%, 375ml), and small-batch releases vary.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 70
+      },
+      {
+        "axis": "감칠맛",
+        "value": 60
+      },
+      {
+        "axis": "산도",
+        "value": 65
+      },
+      {
+        "axis": "당도",
+        "value": 40
+      }
+    ],
+    "tastingNotes": "Takju is the broader family of cloudy rice wines that makgeolli belongs to, and this is takju in evening wear. Yangpyeong rice is fermented with pear juice, raisins and juniper berries, giving a creamy body threaded with something unexpectedly gin-like: piney juniper lift, bright acidity, a raisin-sweet undertone, and a dry, grown-up finish with no added sugar. Made to be tasted from a wine glass, not chugged from a bowl.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Yangpyeong rice, pear juice, juniper berries, raisins, nuruk (Korea's traditional fermentation starter) and yeast"
+      },
+      {
+        "label": "ABV",
+        "value": "12% (375ml) — small-batch releases can vary, so check the label"
+      },
+      {
+        "label": "Sweeteners",
+        "value": "None added — sweetness comes from fruit and fermentation alone"
+      },
+      {
+        "label": "Style",
+        "value": "Premium unfiltered takju aged in onggi earthenware, presented like wine"
+      }
+    ],
+    "history": [
+      {
+        "year": "2020",
+        "event": "C Makgeolli opens in Gaepo-dong, Seoul, as part of the new wave of craft breweries reinventing takju for wine drinkers."
+      },
+      {
+        "year": "2022",
+        "event": "The brewery relocates to Yangpyeong, east of Seoul, building its range around local rice and regional fruit."
+      }
+    ],
+    "story": "Calling a rice wine a 'cuvée' tells you everything about the ambition here. C Makgeolli belongs to the new generation of Korean brewers who treat takju the way natural-wine makers treat grapes: small batches, no aspartame (the sweetener that props up most cheap makgeolli), and ingredients picked like a chef's — pear, raisin, juniper. Started in a Seoul basement and now settled in the orchards and rice fields of Yangpyeong, it lands closer to a cloudy natural wine than to the green-bottle image most foreigners have of Korean drinking.",
+    "winery": "C Makgeolli is a small Yangpyeong craft brewery producing premium unfiltered rice wines in limited batches, known for building each release around a different local ingredient. Its bottles appear in Korean fine-dining pairings and specialist bottle shops rather than convenience stores.",
+    "foodPairing": [
+      {
+        "emoji": "🦆",
+        "food": "Hunje ori (smoked duck)",
+        "why": "Juniper is the classic partner for smoked and game meats — the same logic that puts it in gin.",
+        "shopKeyword": "훈제오리"
+      },
+      {
+        "emoji": "🦪",
+        "food": "Fresh oysters",
+        "why": "A dry, bright takju does what Champagne does here — cuts the brine and lifts the sweetness.",
+        "shopKeyword": "생굴"
+      },
+      {
+        "emoji": "🧀",
+        "food": "Soft ripened cheese",
+        "why": "Fermentation on fermentation: the wine's lactic notes and the cheese's creaminess echo each other.",
+        "shopKeyword": "치즈"
+      }
+    ],
+    "pairingTip": "Serve it in a white-wine glass at a dinner party and let guests guess what it is — it pairs where a dry Riesling or a natural wine would.",
+    "avoidPairing": "Heavily spicy-sweet dishes like yangnyeom chicken — sugar and capsaicin flatten its juniper aromatics.",
+    "similar": [
+      "Boksoondoga Son Makgeolli (복순도가 손막걸리)",
+      "Naru Saeng Makgeolli (나루 생막걸리)",
+      "Haechang Makgeolli 12 (해창 막걸리 12도)"
+    ],
+    "trivia": "Most mass-market makgeolli is sweetened with aspartame — a fact that surprises many foreigners. The entire premium takju movement, this bottle included, defines itself by leaving it out; here the job is done by pear juice and raisins instead.",
+    "servingTemp": "Chilled, 6-10°C, in a wine glass",
+    "servingNote": "Stand the bottle upright in the fridge, then gently roll it to reincorporate the sediment before pouring — or pour the clear top first and the thick lees second to taste two different drinks from one bottle.",
+    "aging": "A live, unpasteurized wine: keep refrigerated and drink within the period printed on the label. Flavor evolves noticeably even week to week — many fans deliberately taste the same batch young and older.",
+    "tips": [
+      "Open slowly — active cultures can build gentle pressure in the bottle.",
+      "At 12% in a 375ml bottle this is a sipping takju: small pours, wine pace, not the bottoms-up rhythm of a soju table."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Osan Makgeolli (오산막걸리)",
+    "searchKeyword": "오산막걸리",
+    "producer": "Osan Yangjo (오산양조)",
+    "type": "Fresh (unpasteurized) craft makgeolli",
+    "region": "Osan, Gyeonggi Province",
+    "country": "South Korea",
+    "alcohol": "6%",
+    "liquidColor": "#F4EFE1",
+    "confidence": 86,
+    "knowledge": "basic",
+    "basis": "A community-enterprise brewery founded in 2017 in Osan's old market district, using the city's Sema rice; founding year, ABV (6%, 500ml) and the no-sweetener claim come from the brewery's listings and press coverage.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 52
+      },
+      {
+        "axis": "감칠맛",
+        "value": 58
+      },
+      {
+        "axis": "산도",
+        "value": 55
+      },
+      {
+        "axis": "당도",
+        "value": 50
+      }
+    ],
+    "tastingNotes": "A balanced, freshly made city-craft makgeolli with no artificial sweetener: soft rice sweetness, a lively but polite tang, gentle natural carbonation, and a clean finish that keeps you reaching for market snacks. It sits neatly between rustic old-style brews and the sweetened mass-market bottles.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Sema rice, the local Osan variety named after the city's fortress legend"
+      },
+      {
+        "label": "ABV",
+        "value": "6% (500ml)"
+      },
+      {
+        "label": "Pasteurized",
+        "value": "No — live saeng makgeolli"
+      },
+      {
+        "label": "Sweeteners",
+        "value": "None added"
+      }
+    ],
+    "history": [
+      {
+        "year": "1593",
+        "event": "During the Imjin War, Gwon Yul's garrison at Doksan Fortress above Osan supposedly 'washes' its horses with white rice so the besiegers below believe the fortress has water to spare — the Semadae legend."
+      },
+      {
+        "year": "2017",
+        "event": "Osan Yangjo opens as a community enterprise in the city's traditional market area, bringing licensed brewing back to Osan after decades without a local makgeolli."
+      }
+    ],
+    "story": "Osan sits under Doksan Fortress, home to one of Korea's best siege legends: with water running out, the defending general had horses 'washed' with white rice on the ramparts so the Japanese besiegers below would think the fortress had water to spare. They gave up and left. The rice grown here is now branded Sema rice after that very hill — and it is the rice in this bottle. A city with a story that good deserved its own rice wine again, and Osan Yangjo, a small market-district brewery run as a community enterprise, made it happen in 2017.",
+    "winery": "Osan Yangjo is a small-batch community-enterprise brewery based in Osan's traditional market district, brewing with local Sema rice and running tastings and classes alongside production — part of the wave of local revivals that brought neighborhood makgeolli back to Korean small cities.",
+    "foodPairing": [
+      {
+        "emoji": "🍗",
+        "food": "Sijang tongdak (market-style whole fried chicken)",
+        "why": "Old-market fried chicken and fresh local makgeolli is the exact pairing this brewery was built around.",
+        "shopKeyword": "옛날통닭"
+      },
+      {
+        "emoji": "🌭",
+        "food": "Sundae (Korean blood sausage)",
+        "why": "Steamed market sundae's earthy richness loves a tangy, fizzy rice wine.",
+        "shopKeyword": "순대"
+      },
+      {
+        "emoji": "🥞",
+        "food": "Pajeon (green onion pancake)",
+        "why": "The eternal makgeolli companion — crispy, oily, and perfect against the wine's acidity.",
+        "shopKeyword": "파전"
+      }
+    ],
+    "pairingTip": "Drink it the way it is sold — alongside cheap, glorious Korean market food, ideally standing at a stall.",
+    "avoidPairing": "Fine-dining subtlety — this is a market wine; delicate courses get lost against its cheerful tang.",
+    "similar": [
+      "Jipyeong Saeng Makgeolli (지평 생막걸리)",
+      "Jangsu Saeng Makgeolli (장수 생막걸리)",
+      "Byeolsan Makgeolli (별산 막걸리)"
+    ],
+    "trivia": "The rice-washed-horses hill of the legend is called Semadae — 'horse-washing platform' — and still crowns Doksan Fortress above the city. Koreans love that the trick weapon was rice; the brewery closed the loop by brewing with the rice brand named after it.",
+    "servingTemp": "Cold, 4-8°C",
+    "servingNote": "Roll the bottle gently before opening to mix the sediment. Pour into bowls or cups for others first; market etiquette is casual but the both-hands pour still earns smiles.",
+    "aging": "Unpasteurized and alive: keep it refrigerated and drink within about two weeks of bottling. Expect the taste to shift from sweet toward sour and fizzy as the date gets older.",
+    "tips": [
+      "Fresh-batch bottles bought near the brewery taste noticeably rounder than ones that have traveled — date-check the cap.",
+      "The brewery also makes a stronger 8% bottling called Hayan Kkamagwi ('white crow') if you want more intensity."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Jeonggojip Yetnal Dongdongju (정고집 옛날 동동주)",
+    "searchKeyword": "정고집 옛날동동주",
+    "producer": "Namdo Takju (남도탁주)",
+    "type": "Dongdongju — unstrained rice wine with floating grains",
+    "region": "Naju, South Jeolla Province",
+    "country": "South Korea",
+    "alcohol": "6%",
+    "liquidColor": "#F3EDD9",
+    "confidence": 84,
+    "knowledge": "basic",
+    "basis": "Namdo Takju is confirmed as a takju brewery in Noan-myeon, Naju, brewing this dongdongju from Naju-plain rice by low-temperature fermentation; company documentation is otherwise thin, so the profile centers on the well-documented dongdongju style and label specs.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 50
+      },
+      {
+        "axis": "감칠맛",
+        "value": 55
+      },
+      {
+        "axis": "산도",
+        "value": 48
+      },
+      {
+        "axis": "당도",
+        "value": 65
+      }
+    ],
+    "tastingNotes": "Dongdongju is makgeolli's country cousin: brewed the same way but left less strained, so soft cooked-rice grains float on top — 'dongdong' is the Korean word for bobbing. Expect a sweeter, rounder, more rustic drink than standard makgeolli: gentle fizz, mild tang, plenty of rice-porridge comfort, and grains you chew as you drink.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice from the Naju plain, fermented cold in two stages"
+      },
+      {
+        "label": "ABV",
+        "value": "6%"
+      },
+      {
+        "label": "Style",
+        "value": "Dongdongju — coarsely strained, with whole rice grains floating in the wine"
+      },
+      {
+        "label": "Storage",
+        "value": "Keep refrigerated; drink fresh"
+      }
+    ],
+    "history": [
+      {
+        "year": "Joseon era",
+        "event": "Brewing manuals record 'buuiju' — 'floating ant wine,' so named because the bobbing rice grains looked like ants — the classical ancestor of dongdongju."
+      },
+      {
+        "year": "20th century",
+        "event": "Dongdongju survives as the tavern-and-countryside pour of southern Korea, ladled from communal bowls alongside pancakes and stews."
+      }
+    ],
+    "story": "Before glass bottles, dongdongju arrived at the table as a big brass bowl with a ladle, rice grains bobbing on the surface like snowflakes that forgot to sink. Old texts called it 'floating ant wine' — the grains looked like ants from across the table. 'Jeonggojip' reads roughly as 'the stubborn Jeong family's house,' the branding of a Naju producer promising old-fashioned, no-shortcuts country wine, and 'yetnal' simply means 'old days.' This bottle is nostalgia you can ladle, made from the rice of one of Korea's great grain plains.",
+    "winery": "Namdo Takju is a takju (cloudy rice wine) brewery in Noan-myeon, Naju, in Korea's southwestern Jeolla region — 'Namdo' means the southern provinces — using rice from the Naju plain and slow cold fermentation for traditional country styles like dongdongju.",
+    "foodPairing": [
+      {
+        "emoji": "🦑",
+        "food": "Haemul pajeon (seafood green-onion pancake)",
+        "why": "The dongdongju-and-pajeon set is the defining order at every traditional tavern in Korea.",
+        "shopKeyword": "해물파전"
+      },
+      {
+        "emoji": "🥔",
+        "food": "Gamja-jeon (potato pancake)",
+        "why": "Crispy-chewy potato and sweet rice wine — comfort squared.",
+        "shopKeyword": "감자전"
+      },
+      {
+        "emoji": "🌶️",
+        "food": "Dubu kimchi (tofu with stir-fried kimchi)",
+        "why": "The wine's sweetness soothes the kimchi's heat while the tofu keeps everything gentle.",
+        "shopKeyword": "두부김치"
+      }
+    ],
+    "pairingTip": "Order it at a rustic pancake house (jeon jip) and ladle it into bowls — the floating rice is part of the meal, not a flaw.",
+    "avoidPairing": "Western desserts and anything chocolate — the sweet-lactic profile clashes badly.",
+    "similar": [
+      "Geumjeong Sanseong Makgeolli (금정산성 막걸리)",
+      "Idong Saeng Makgeolli (이동 생막걸리)",
+      "Jipyeong Saeng Makgeolli (지평 생막걸리)"
+    ],
+    "trivia": "Many Korean folk villages and hiking-trail restaurants serve dongdongju in brass kettles with a gourd ladle. Foreigners often ask if the floating rice means the drink has gone bad — it is the whole point, and you are allowed to eat the grains.",
+    "servingTemp": "Cold, 4-8°C",
+    "servingNote": "Stir gently before serving so the grains distribute, then ladle or pour into shallow bowls. Communal-bowl service is traditional — keep your neighbor's bowl topped up.",
+    "aging": "Drink fresh and keep refrigerated — like all live rice wines it sours and fizzes with age. Finish soon after opening; check the date printed on the bottle.",
+    "tips": [
+      "Chew the floating grains — they carry a mild sweetness and are considered the treat of the bowl.",
+      "It drinks sweeter and easier than makgeolli, which makes overdoing it even easier; the 6% still counts."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Ilyeoppyeonju Takju (일엽편주 탁주)",
+    "searchKeyword": "일엽편주 탁주",
+    "producer": "Nongam Jongtaek (농암종택)",
+    "type": "Premium takju — head-house (jongga) family recipe",
+    "region": "Andong, North Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "12%",
+    "liquidColor": "#EFE8D5",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "Brewed by hand at the historic head house of the Nongam line in Andong; the family's history and the poet Yi Hyeon-bo are solidly documented, and the takju's 12% strength and rice-nuruk-water recipe are consistent across listings. Output is tiny and made to order, so availability varies.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 75
+      },
+      {
+        "axis": "감칠맛",
+        "value": 72
+      },
+      {
+        "axis": "산도",
+        "value": 45
+      },
+      {
+        "axis": "당도",
+        "value": 55
+      }
+    ],
+    "tastingNotes": "A dense, silky takju (cloudy rice wine) in the old aristocratic style: thick rice-cream texture, honeyed sweetness balanced by deep savory fermentation notes from traditional nuruk — Korea's wild fermentation starter cake — faint florals, and a long, warming finish at a wine-like 12%. Nothing here resembles convenience-store makgeolli; this is the ceremonial end of the takju family.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Glutinous and non-glutinous rice, nuruk, water — no additives or sweeteners"
+      },
+      {
+        "label": "ABV",
+        "value": "12% for the takju; a clear cheongju sibling is also made"
+      },
+      {
+        "label": "Style",
+        "value": "Gayangju — a noble family's house-brewed wine, made in tiny hand-worked batches"
+      },
+      {
+        "label": "Storage",
+        "value": "Keep refrigerated"
+      }
+    ],
+    "history": [
+      {
+        "year": "1467",
+        "event": "Yi Hyeon-bo, pen name Nongam, is born; the scholar-poet becomes famous for his Fisherman's Songs (Eobuga) celebrating life on the river."
+      },
+      {
+        "year": "1970s",
+        "event": "The Nongam head house is dismantled and moved when Andong Dam construction floods its original site on the Nakdong River."
+      },
+      {
+        "year": "2010s",
+        "event": "The family releases its house wine commercially as Ilyeoppyeonju, bringing a jongga recipe out of the ancestral kitchen."
+      }
+    ],
+    "story": "'Ilyeoppyeonju' means 'a single leaf of a boat' — the tiny skiff drifting on a wide river, the central image of Korean scholar-poetry. It is the perfect name for a wine from the head house of Nongam Yi Hyeon-bo, the 15th-century poet of the Fisherman's Songs. In Korea, a jongtaek is a clan's head house, where the eldest line keeps the ancestral rites — and the rice wine for those rites, brewed at home for centuries by the jongbu, the head woman of the household. This bottle is that private family wine, finally allowed out of the house.",
+    "winery": "Nongam Jongtaek is the head house of Nongam Yi Hyeon-bo's line, sitting on a serene bend of the Nakdong River near Andong. The family maintains the house, its ancestral rites, and a brewing tradition worked entirely by hand — which is why Ilyeoppyeonju exists only in very small quantities.",
+    "foodPairing": [
+      {
+        "emoji": "🐟",
+        "food": "Andong grilled salted mackerel",
+        "why": "The hometown fish — rich and salty — meets the wine's dense sweetness in a perfect regional match.",
+        "shopKeyword": "안동간고등어"
+      },
+      {
+        "emoji": "🍚",
+        "food": "Heotjesabap (Andong ritual-style rice and vegetables)",
+        "why": "The dish literally derived from ancestral-rite food belongs beside a wine brewed for the same table.",
+        "shopKeyword": "헛제사밥"
+      },
+      {
+        "emoji": "🐙",
+        "food": "Muneo sukhoe (sliced boiled octopus)",
+        "why": "An Andong banquet essential — the octopus's clean sweetness mirrors the wine's rice depth.",
+        "shopKeyword": "문어숙회"
+      }
+    ],
+    "pairingTip": "Serve it as Koreans serve ceremonial wine: small cups, rich traditional food, unhurried pace — it anchors a meal rather than accompanying snacks.",
+    "avoidPairing": "Very spicy-sweet street food — buldak or tteokbokki heat erases its layered fermentation character.",
+    "similar": [
+      "Boksoondoga Son Makgeolli (복순도가 손막걸리)",
+      "Haechang Makgeolli 12 (해창 막걸리 12도)",
+      "Song Myung Sub Makgeolli (송명섭 막걸리)"
+    ],
+    "trivia": "Andong's old families historically each kept a secret house wine — gayangju — judged silently by every guest at every rite. Korea's home-brewing tradition was nearly erased by 20th-century liquor laws, which is why surviving jongga recipes like this one are treated as living heritage.",
+    "servingTemp": "Chilled, 6-10°C",
+    "servingNote": "Gently roll the bottle to blend the settled rice cream, then pour into small ceramic cups with both hands, elders first — this is a wine with etiquette built in.",
+    "aging": "Keep refrigerated and drink within the labeled period; the profile deepens and dries slightly over weeks. Not a cellar wine — its age lives in the recipe, not the bottle.",
+    "tips": [
+      "Try the clear cheongju sibling side by side if you find it — same brew, two personalities.",
+      "At 12% it is roughly double convenience-store makgeolli strength; pour half-bowls."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Akyang Makgeolli (악양막걸리)",
+    "searchKeyword": "악양막걸리",
+    "producer": "Akyang Jujo (악양주조)",
+    "type": "Fresh (unpasteurized) makgeolli — rice wine",
+    "region": "Hadong, South Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "6% (an 8% version is also bottled)",
+    "liquidColor": "#F2EDDE",
+    "confidence": 83,
+    "knowledge": "basic",
+    "basis": "Akyang Jujo is confirmed as a three-generation brewery in Akyang-myeon, Hadong, with the standard 750ml bottle listed at 6%; company records are otherwise sparse, so producer details stay general and the profile leans on the well-documented character of the region.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 50
+      },
+      {
+        "axis": "감칠맛",
+        "value": 58
+      },
+      {
+        "axis": "산도",
+        "value": 56
+      },
+      {
+        "axis": "당도",
+        "value": 52
+      }
+    ],
+    "tastingNotes": "A country makgeolli from one of Korea's prettiest valleys: soft rice sweetness, brisk farmhouse tang, light natural fizz, and an easy, thirst-quenching finish. The style is honest and local — brewed for farmers, hikers, and the tea-house crowd of the Seomjin River valley.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice from the Akyang plain"
+      },
+      {
+        "label": "ABV",
+        "value": "6% in the standard 750ml bottle; the brewery also makes an 8% version"
+      },
+      {
+        "label": "Pasteurized",
+        "value": "No — live saeng makgeolli"
+      },
+      {
+        "label": "Shelf life",
+        "value": "Short — keep refrigerated, drink within about 2 weeks"
+      }
+    ],
+    "history": [
+      {
+        "year": "20th century",
+        "event": "Village breweries in Hadong's Akyang valley supply makgeolli to farmers working the Pyeongsari rice plain between Jirisan mountain and the Seomjin River."
+      },
+      {
+        "year": "1994",
+        "event": "Park Kyung-ni completes her 25-year epic novel 'Toji' (The Land), set on the Pyeongsari plain — turning Akyang into a literary pilgrimage site and its rice fields into the most famous in Korean fiction."
+      }
+    ],
+    "story": "Akyang is the valley where Korea imagines its rural soul: the Pyeongsari plain, backdrop of the great novel 'Toji,' spread between the Jirisan mountains and the Seomjin River, with wild green tea on the slopes and giant daebong persimmons in autumn. The local brewery — three generations of the same family — makes what you drink there after walking the fields to the Choi family house from the novel. Rice from the plain, water from the mountains, nothing clever, everything right.",
+    "winery": "Akyang Jujo is a small brewery in Akyang township, Hadong County, now in its third generation, brewing everyday makgeolli for a valley better known for tea fields, persimmons, and literature — a quiet operation serving its neighborhood the old way.",
+    "foodPairing": [
+      {
+        "emoji": "🥣",
+        "food": "Jaecheop-guk (Seomjin River clam soup)",
+        "why": "Hadong's signature dish — delicate river-clam broth — and the local makgeolli are natural table partners.",
+        "shopKeyword": "재첩국"
+      },
+      {
+        "emoji": "🥞",
+        "food": "Buchu-jeon (chive pancake)",
+        "why": "Southern-style chive pancake, crispy and green, is built for a tangy country brew.",
+        "shopKeyword": "부추전"
+      },
+      {
+        "emoji": "🥬",
+        "food": "Bossam (boiled pork wraps)",
+        "why": "The wine's acidity refreshes between rich, garlicky bites of pork in cabbage.",
+        "shopKeyword": "보쌈"
+      }
+    ],
+    "pairingTip": "If you visit, do it in order: hike, jaecheop-guk, one bowl of this — the valley designed the pairing for you.",
+    "avoidPairing": "Anything creamy or chocolatey — the lactic tang of fresh makgeolli fights dairy-sweet flavors.",
+    "similar": [
+      "Geumjeong Sanseong Makgeolli (금정산성 막걸리)",
+      "Jipyeong Saeng Makgeolli (지평 생막걸리)",
+      "Idong Saeng Makgeolli (이동 생막걸리)"
+    ],
+    "trivia": "Akyang's Pyeongsari plain features one of Korea's most photographed pairs of trees — the 'husband and wife pines' standing alone in the rice fields. Locals will tell you the view is best in late afternoon, ideally with a bowl of makgeolli in hand.",
+    "servingTemp": "Cold, 4-8°C",
+    "servingNote": "Roll the bottle gently to lift the sediment, pour into bowls, and drink outdoors if at all possible — this is scenery wine. Pour for others before yourself.",
+    "aging": "Unpasteurized and alive: refrigerate always and drink within about two weeks. Fresh bottles are rounder and sweeter; older ones turn sour and gassy.",
+    "tips": [
+      "Autumn is the valley's peak — persimmon season, golden fields, and the freshest post-harvest rice batches.",
+      "Look for it at local restaurants and markets around Hadong; distribution beyond the region is limited."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Yangji Baekju (양지백주)",
+    "searchKeyword": "양지백주",
+    "producer": "Yangyang Sul Gotgan (양양술곳간)",
+    "type": "Samyangju takju — triple-fermented cloudy rice wine",
+    "region": "Yangyang, Gangwon Province",
+    "country": "South Korea",
+    "alcohol": "15%",
+    "liquidColor": "#F1EBDC",
+    "confidence": 84,
+    "knowledge": "basic",
+    "basis": "A small craft brewery in Ganghyeon-myeon, Yangyang; public documentation is limited but product listings consistently give 15% in a 510ml bottle, made by three-stage samyangju fermentation with roughly 30 days of cold aging.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 72
+      },
+      {
+        "axis": "감칠맛",
+        "value": 70
+      },
+      {
+        "axis": "산도",
+        "value": 50
+      },
+      {
+        "axis": "당도",
+        "value": 55
+      }
+    ],
+    "tastingNotes": "'Baekju' means 'white brew' — an old, poetic way of saying cloudy rice wine. At 15% this is far heavier than everyday makgeolli: a thick, creamy texture, nutty toasted-rice depth, a faint melon-like sweetness, balanced acidity, and a long warm finish. Three separate fermentations build that concentration, and it drinks like a wine rather than a thirst-quencher.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Rice, nuruk, and clean water from the Seoraksan range"
+      },
+      {
+        "label": "ABV",
+        "value": "15% (510ml)"
+      },
+      {
+        "label": "Style",
+        "value": "Samyangju — three-stage fermentation with roughly 30 days of cold aging"
+      },
+      {
+        "label": "Storage",
+        "value": "Keep refrigerated; drink within the labeled window"
+      }
+    ],
+    "history": [
+      {
+        "year": "2020s",
+        "event": "Yangyang Sul Gotgan opens as a small craft brewery, part of the young wave of brewers settling Korea's east-coast surf county."
+      }
+    ],
+    "story": "Yangyang used to mean pine mushrooms, salmon, and the temple of Naksansa. Then surfers discovered its beaches, and Korea's sleepiest coastal county became its coolest. 'Sul gotgan' means 'liquor granary' — a name that plants this young brewery firmly in farmhouse tradition even as it serves a new crowd. Yangji Baekju is that old-meets-new Yangyang in a bottle: grandmother's cloudy rice wine, but brewed three times over to 15% and priced like a gift, for people who arrived by surfboard.",
+    "winery": "Yangyang Sul Gotgan is a small craft brewery in Ganghyeon-myeon, Yangyang County, on the East Sea coast, hand-brewing traditional-style rice wines with clean mountain water flowing off the Seoraksan range.",
+    "foodPairing": [
+      {
+        "emoji": "🍄",
+        "food": "Grilled pine mushrooms",
+        "why": "Yangyang's autumn treasure — piney, meaty songi mushrooms — finds an earthy echo in this nutty, concentrated brew.",
+        "shopKeyword": "송이버섯"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Mulhoe (spicy cold raw-fish soup)",
+        "why": "The east coast's icy, tangy fisherman's dish is refreshed by a rich, cold cloudy wine.",
+        "shopKeyword": "물회"
+      },
+      {
+        "emoji": "🥔",
+        "food": "Gamja-jeon (potato pancake)",
+        "why": "Gangwon Province's chewy potato pancake is the region's own answer to pajeon-and-makgeolli.",
+        "shopKeyword": "감자전"
+      }
+    ],
+    "pairingTip": "Follow the coast: raw fish, grilled shellfish, and mushroom dishes are what this wine grew up next to — but pour it in small glasses, not bowls.",
+    "avoidPairing": "Heavy tomato or cream pasta — the rice character disappears under Western sauces.",
+    "similar": [
+      "Haechang Makgeolli 12 (해창 막걸리 12도)",
+      "Boksoondoga Son Makgeolli (복순도가 손막걸리)",
+      "Naru Saeng Makgeolli (나루 생막걸리)"
+    ],
+    "trivia": "Yangyang's Jukdo Beach is the unofficial capital of Korean surfing, and its cafes now sit beside decades-old fish markets. A 'gotgan' was the storehouse where a farm kept its rice — naming a brewery after one promises that the rice comes first.",
+    "servingTemp": "Cold, 6-10°C",
+    "servingNote": "Roll the bottle gently to mix the sediment and pour into small cups or a wine glass. At this strength it is a sipping wine, not a bowl-and-refill drink.",
+    "aging": "A fresh craft brew: keep refrigerated and drink within the labeled window — small-batch takju changes quickly, growing more sour and effervescent with time.",
+    "tips": [
+      "At 15% this is roughly triple the strength of everyday makgeolli; treat one 510ml bottle as a bottle of wine.",
+      "Autumn visits line up with pine-mushroom season — the pairing of the year on this coast."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Sejong Daewang Eoju (세종대왕 어주)",
+    "searchKeyword": "세종대왕어주",
+    "producer": "Janghui Doga (장희도가)",
+    "type": "Yakju — refined clear rice wine",
+    "region": "Cheongju, North Chungcheong Province",
+    "country": "South Korea",
+    "alcohol": "15%",
+    "liquidColor": "#EFE1AE",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "King Sejong's 1444 stay at the Chojeong mineral springs is documented in the royal annals. The brewery — Janghui, based at Chojeong in Cheongju — recreates the historical Byeokhyangju recipe and won the presidential prize at the 2019 national traditional-liquor competition; specs follow the label (15%, 500ml).",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 48
+      },
+      {
+        "axis": "감칠맛",
+        "value": 65
+      },
+      {
+        "axis": "산도",
+        "value": 38
+      },
+      {
+        "axis": "당도",
+        "value": 45
+      }
+    ],
+    "tastingNotes": "Yakju is the refined, clear tier of Korean rice wine — the top layer drawn off a finished brew, historically the pour of scholars and kings. This one is elegant and composed: pale gold, aromas of steamed rice, pear, and light florals, gentle sweetness over deep savory umami, and a warm, clean 15% finish that rewards slow sipping from a stemmed glass.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Organic rice, nuruk (traditional fermentation starter), and Chojeong spring water"
+      },
+      {
+        "label": "ABV",
+        "value": "15% for the yakju (500ml); a cloudy takju sibling is also made"
+      },
+      {
+        "label": "Style",
+        "value": "Eoju (御酒) — 'the king's wine,' recreating the historical Byeokhyangju recipe"
+      },
+      {
+        "label": "Award",
+        "value": "Presidential prize at Korea's 2019 national traditional-liquor competition"
+      }
+    ],
+    "history": [
+      {
+        "year": "1444",
+        "event": "King Sejong the Great stays at the Chojeong mineral springs near Cheongju for months to treat an eye ailment — during the very years he was perfecting the Korean alphabet."
+      },
+      {
+        "year": "1446",
+        "event": "Sejong promulgates Hangul, the Korean script, securing his place as the most beloved king in Korean history."
+      },
+      {
+        "year": "2019",
+        "event": "Janghui Doga's Sejong Daewang Eoju takes the presidential prize at Korea's national traditional-liquor competition."
+      }
+    ],
+    "story": "'Eoju' means wine fit for the king's own table. The king in question is the king: Sejong the Great, inventor of the Korean alphabet, whose face is on the 10,000-won bill. In 1444 he decamped to the fizzy mineral springs of Chojeong, near Cheongju, to rest his failing eyes while refining Hangul. Janghui Doga brews in that same neighborhood, reconstructing Byeokhyangju — the wine the records say he favored — with organic rice and spring water. Its royal-styled bottles have become one of the modern standard-bearers for yakju, a category foreigners can think of as Korea's answer to fine sake, with its own deeper, nuttier accent.",
+    "winery": "Janghui Doga is a small brewery beside the Chojeong springs outside Cheongju, built around the Sejong story and the area's famous naturally carbonated mineral water. Its eoju line spans a clear yakju and a cloudy takju, both made without additives and both in distinctive royal-styled bottles.",
+    "foodPairing": [
+      {
+        "emoji": "🥩",
+        "food": "Neobiani (royal-style marinated grilled beef)",
+        "why": "The court's grilled beef, sweet-soy and smoky, is the historically correct partner for a king's wine.",
+        "shopKeyword": "너비아니"
+      },
+      {
+        "emoji": "🥞",
+        "food": "Modum-jeon (assorted savory pancakes)",
+        "why": "A platter of delicate jeon mirrors the wine's refined, layered profile without overpowering it.",
+        "shopKeyword": "모둠전"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Gulbi (dried yellow croaker, grilled)",
+        "why": "Prized salty-savory fish and clean yakju is a classic pairing of the Korean formal table.",
+        "shopKeyword": "굴비"
+      }
+    ],
+    "pairingTip": "Serve it where you would serve premium sake — chilled, in small glasses, with grilled fish or beef — and tell the Sejong story; it is the best dinner-party material in Korean drinks.",
+    "avoidPairing": "Fiery red stews — heavy gochugaru heat scorches the wine's refined aromatics.",
+    "similar": [
+      "Gyeongju Beopju Choteukseon (경주법주 초특선)",
+      "Chung Ha (청하)",
+      "Baekhwa Subok (백화수복)"
+    ],
+    "trivia": "Chojeong's naturally sparkling spring water has been celebrated for centuries — Koreans proudly rank it among the world's great mineral springs. And yes: the king who needed an eye cure was likely straining his eyes designing the alphabet you see on every Korean sign today.",
+    "servingTemp": "Chilled, 8-12°C, in a small wine or sake glass",
+    "servingNote": "A formal-occasion wine: pour with both hands, elders and guests first. It also warms gently sake-style in winter, though chilled shows its aromatics best.",
+    "aging": "Not a cellar wine — store cool and dark, drink within months of purchase, and refrigerate after opening, finishing within a week or so.",
+    "tips": [
+      "The royal-styled bottle makes it one of the best-looking Korean gifts under premium-whisky money.",
+      "Try yakju against sake side by side — the nuruk starter gives Korean wine a deeper, nuttier bass note."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Nokpaju (녹파주)",
+    "searchKeyword": "녹파주",
+    "producer": "Myeonggawon (명가원)",
+    "type": "Yakju — revived historical clear rice wine",
+    "region": "Hamyang, South Gyeongsang Province",
+    "country": "South Korea",
+    "alcohol": "15%",
+    "liquidColor": "#EDE8B6",
+    "confidence": 85,
+    "knowledge": "basic",
+    "basis": "Brewed at Myeonggawon in Jigok-myeon, Hamyang — the house behind Solsongju, run by a government-designated food master — and listed at 15% in a 375ml bottle, made from roughly two-thirds glutinous and one-third regular rice. The Nokpaju recipe's presence in the 15th-century text Sanga Yorok is separately documented.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 45
+      },
+      {
+        "axis": "감칠맛",
+        "value": 58
+      },
+      {
+        "axis": "산도",
+        "value": 45
+      },
+      {
+        "axis": "당도",
+        "value": 35
+      }
+    ],
+    "tastingNotes": "Nokpaju means 'green-wave wine' — named centuries ago for the pale, clear ripple of the wine in the cup. It is a yakju (refined clear rice wine) and a notably dry one: light-bodied and graceful, with a fresh grassy top note, almost no sweetness, a smooth umami undercurrent from nuruk fermentation, and a clean, simple tail. History you can actually taste, and gentler than its 15% suggests.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "About two-thirds glutinous rice and one-third regular rice, nuruk, water"
+      },
+      {
+        "label": "ABV",
+        "value": "15% (375ml)"
+      },
+      {
+        "label": "Style",
+        "value": "Historical yakju revived from old Korean brewing texts"
+      },
+      {
+        "label": "Storage",
+        "value": "Cool and dark; refrigerate after opening"
+      }
+    ],
+    "history": [
+      {
+        "year": "1450s",
+        "event": "The court physician Jeon Sunui compiles Sanga Yorok, Korea's oldest surviving food-and-brewing text — its pages include a recipe for Nokpaju."
+      },
+      {
+        "year": "Joseon era",
+        "event": "Later brewing manuals repeat and vary the Nokpaju recipe, attesting to its reputation among the clear wines of the scholar class."
+      },
+      {
+        "year": "2000s",
+        "event": "Traditional producers revive Nokpaju from the old texts as part of Korea's traditional-liquor restoration movement."
+      }
+    ],
+    "story": "Most of Korea's classical wines exist only as ink: recipes in centuries-old manuals, orphaned when 20th-century liquor laws crushed home brewing. Nokpaju is one of the lucky ones. Recorded in the 1450s by a royal physician who thought good wine was part of good health, the 'green-wave wine' was resurrected in Hamyang by the same household that brews the famous pine-shoot wine Solsongju. Drinking it is the closest thing Korea offers to tasting the 15th century — the era of King Sejong — from a living glass.",
+    "winery": "Myeonggawon sits in the Gaepyeong hanok village of Jigok-myeon, Hamyang, in the far south of Gyeongsang Province — the home of the Hadong Jeong clan's house wines and of Solsongju, brewed by a nationally designated food master. Nokpaju is its revival of a classical clear rice wine, made with rice, nuruk and water and no modern shortcuts.",
+    "foodPairing": [
+      {
+        "emoji": "🥞",
+        "food": "Modum-jeon (assorted savory pancakes)",
+        "why": "Delicate pan-fried fish and vegetable jeon match the wine's quiet, refined register.",
+        "shopKeyword": "모둠전"
+      },
+      {
+        "emoji": "🥓",
+        "food": "Pyeonyuk (pressed boiled pork slices)",
+        "why": "Cool, clean slices of pork are a scholar's-table dish that lets a subtle yakju lead.",
+        "shopKeyword": "편육"
+      },
+      {
+        "emoji": "🥗",
+        "food": "Namul (seasoned vegetable sides)",
+        "why": "Sesame-scented mountain vegetables and a dry rice wine make an understated, deeply Korean pairing.",
+        "shopKeyword": "나물"
+      }
+    ],
+    "pairingTip": "Keep the food quiet — steamed, boiled, and pan-fried dishes let this subtle revival wine tell its story.",
+    "avoidPairing": "Intense spicy-sweet dishes — modern gochujang firepower flattens a 15th-century flavor profile completely.",
+    "similar": [
+      "Cheongmyeongju (청명주)",
+      "Gyeongju Beopju Choteukseon (경주법주 초특선)",
+      "Chung Ha (청하)"
+    ],
+    "trivia": "Sanga Yorok, the text preserving this recipe, was written by a doctor — in Joseon Korea, wine sat on the border between food and medicine, and yakju literally contains the character 'yak' (약), meaning medicine. Hundreds of other wines in the same book still wait for someone to brew them again.",
+    "servingTemp": "Chilled, 8-12°C",
+    "servingNote": "Serve in small ceramic or glass cups, poured with both hands. It suits quiet, unhurried drinking — this is a contemplation wine, not a party pour.",
+    "aging": "Store cool and dark and drink within months; refrigerate after opening and finish within about a week. The aging that matters happened in the brewing, not the bottle.",
+    "tips": [
+      "Taste it after reading one line about Sanga Yorok — context turns this bottle from 'nice rice wine' into time travel.",
+      "Try it beside the same house's Solsongju to taste two very different faces of one brewing family."
+    ],
+    "vintage": null
+  },
+  {
+    "category": "traditional",
+    "name": "Yangchon Ureongissal Cheongju (양촌 우렁이쌀 청주)",
+    "searchKeyword": "양촌 우렁이쌀 청주",
+    "producer": "Yangchon Yangjojang (양촌양조장)",
+    "type": "Cheongju — clear rice wine",
+    "region": "Nonsan, South Chungcheong Province",
+    "country": "South Korea",
+    "alcohol": "14%",
+    "liquidColor": "#F2E7BC",
+    "confidence": 87,
+    "knowledge": "rich",
+    "basis": "Yangchon Yangjojang is one of Korea's oldest continuously operating breweries, founded in the 1920s and now in its third generation, with preserved heritage buildings. The cheongju is listed at 14% in a 500ml bottle, cold-fermented and aged about 60 days from pesticide-free snail-farmed rice.",
+    "tasteProfile": [
+      {
+        "axis": "바디",
+        "value": 42
+      },
+      {
+        "axis": "감칠맛",
+        "value": 68
+      },
+      {
+        "axis": "산도",
+        "value": 35
+      },
+      {
+        "axis": "당도",
+        "value": 42
+      }
+    ],
+    "tastingNotes": "Cheongju is the 'clear wine' skimmed from the top of a finished rice brew — Korea's cousin to sake, but typically deeper and more savory. This one is graceful: pale gold, aromas of steamed rice, chestnut, and subtle florals, restrained sweetness with no added sugar, and a long umami-rich finish that speaks of a century of practice and unusually clean rice.",
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Ureongi glutinous rice — pesticide-free Nonsan rice grown with apple snails weeding the paddies"
+      },
+      {
+        "label": "ABV",
+        "value": "14% (500ml)"
+      },
+      {
+        "label": "Style",
+        "value": "Cheongju — cold-fermented and aged about 60 days, then pasteurized for shelf stability"
+      },
+      {
+        "label": "Storage",
+        "value": "Cool and dark; refrigerate after opening"
+      }
+    ],
+    "history": [
+      {
+        "year": "1920s",
+        "event": "Yangchon Yangjojang is founded in Yangchon township, Nonsan — the family brewery still operates from the same neighborhood, with its old wooden brewery building preserved."
+      },
+      {
+        "year": "2000s",
+        "event": "Now in its third generation, the brewery adds premium lines built on eco-farmed local 'ureongi rice,' extending a century-old makgeolli house into clear cheongju."
+      }
+    ],
+    "story": "'Ureongissal' means 'snail rice' — and the snails are the farmers. In eco-friendly Korean paddies, apple snails are released to eat the weeds, replacing herbicides; the rice they guard commands a premium, and Yangchon Yangjojang, brewing in Nonsan since the 1920s, turns it into clear wine. This is one of Korea's oldest breweries doing the newest kind of farming — a hundred-year-old house whose most valuable recent hire is a mollusk.",
+    "winery": "Yangchon Yangjojang, founded in the 1920s in Nonsan and now run by its third generation, is among Korea's longest-running family breweries and holds the lion's share of its home city's makgeolli market. Its preserved old brewery buildings draw traditional-liquor tourists, and its premium line showcases eco-farmed rice from the surrounding paddies.",
+    "foodPairing": [
+      {
+        "emoji": "🥓",
+        "food": "Suyuk (boiled pork slices)",
+        "why": "Clean, warm pork and clear rice wine is the gentle, classic Chungcheong table pairing.",
+        "shopKeyword": "수육"
+      },
+      {
+        "emoji": "🦪",
+        "food": "Gul-jeon (oyster pancakes)",
+        "why": "Briny oysters in delicate egg batter meet the wine's umami depth beautifully.",
+        "shopKeyword": "굴전"
+      },
+      {
+        "emoji": "🐟",
+        "food": "Grilled fish",
+        "why": "Anywhere sake works, cheongju works — simple salt-grilled fish shows off its clean finish.",
+        "shopKeyword": "생선구이"
+      }
+    ],
+    "pairingTip": "Use it exactly as you would a good sake — chilled with seafood and mild dishes — and enjoy the extra savory depth Korean nuruk fermentation brings.",
+    "avoidPairing": "Heavy red-pepper stews — the delicate clear-wine profile drowns in serious spice.",
+    "similar": [
+      "Chung Ha (청하)",
+      "Baekhwa Subok (백화수복)",
+      "Gyeongju Beopju Choteukseon (경주법주 초특선)"
+    ],
+    "trivia": "Nonsan is better known abroad for two things: Korea's army boot camp and its famous strawberries. Locals would add a third — this brewery, where the walls are older than the country's modern borders and the rice is weeded by snails.",
+    "servingTemp": "Chilled, 6-10°C; also pleasant gently warmed in winter, sake-style",
+    "servingNote": "Serve in small cups, poured with both hands for elders and guests. Chilled shows its aroma; slight warming brings out rice sweetness on cold days.",
+    "aging": "Pasteurized, so an unopened bottle keeps for months — but it is not for aging. Store cool and dark, refrigerate after opening, and finish within about a week.",
+    "tips": [
+      "If you like this, seek out the same brewery's famous saeng makgeolli for the cloudy side of the house.",
+      "The snail-rice story makes this an easy conversation-starter gift for eco-minded friends."
+    ],
+    "vintage": null
+  }
+]
