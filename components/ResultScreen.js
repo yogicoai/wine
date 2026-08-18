@@ -805,7 +805,8 @@ export default function ResultScreen({
           {/* 해외가는 참고로만 — 관세·주세 때문에 국내가와 직접 비교되지 않는다 */}
           {abroad && (
             <div className="price-abroad">
-              <span>{t("해외 소매가")}</span>
+              {/* 사케는 일본이 본토다. "해외"라 부르면 어디인지 흐려진다 */}
+              <span>{info?.jpyLow || info?.jpyHigh ? t("일본 현지가") : t("해외 소매가")}</span>
               <b>{abroad}</b>
               <em>{t("관세·주세 전 · 참고용")}</em>
             </div>
