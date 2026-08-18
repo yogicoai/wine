@@ -1,6 +1,7 @@
 "use client";
 import { t } from "@/lib/i18n";
 import { FLAVOR_AXES } from "@/lib/sakenowa";
+import { rakutenSearchUrl } from "@/lib/rakuten";
 
 // 일본 현지의 맛 좌표와 인기 순위 (출처: さけのわ).
 //
@@ -45,6 +46,20 @@ export default function SakenowaCard({ info }) {
             <span className="sake-tag" key={i}>{t(tag)}</span>
           ))}
         </div>
+      )}
+
+      {/* 일본에서 찾아보는 길. 국내에 안 들어온 사케가 많고, 여행 중이라면
+          이쪽이 실제로 쓸모 있다. 사기를 권하는 것이 아니라 원어 이름으로
+          현지 값과 물건을 확인하게 해 주는 것이다 — 주류 직구는 통관이 따로다. */}
+      {info.brand && (
+        <a
+          className="product-page"
+          href={rakutenSearchUrl(info.brand)}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {t("일본에서 {n} 찾아보기", { n: info.brand })}
+        </a>
       )}
 
       <div className="shop-note">
