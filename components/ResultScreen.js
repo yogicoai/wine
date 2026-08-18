@@ -47,6 +47,8 @@ function useShopItems(name, keyword) {
               noApi: false,
               reference: d.reference || null,
               sampled: d.sampled || d.items.length,
+              // 값이 어디서 왔는지 — 화면이 기준을 밝힐 수 있어야 한다
+              source: d.source || null,
             });
           }
           // 가격은 못 가져와도 살 곳은 안다 — 다른 후보를 더 볼 것 없이 링크로 끝낸다
@@ -114,7 +116,9 @@ function PurchaseCard({ shop }) {
           <em>
             {state.source === "11st"
               ? t("11번가 {n}건 기준 · 매장 픽업가가 섞여 있습니다", { n: state.sampled })
-              : t("판매 중인 {n}건 기준 · 소용량·미끼 상품 제외", { n: state.sampled })}
+              : state.source === "danawa"
+                ? t("다나와 {n}건 기준 · 매장 픽업가가 섞여 있습니다", { n: state.sampled })
+                : t("판매 중인 {n}건 기준 · 소용량·미끼 상품 제외", { n: state.sampled })}
           </em>
         </div>
       )}
@@ -754,27 +758,45 @@ export default function ResultScreen({
       const band = bandOf(r.priceTier || r.priceBand);
       const info = r.priceInfo;
       const money = priceLabel(info);
-      if (!money && !r.priceRange && !band) return null;
+      // 지금 실제로 팔리는 값. 있으면 이것이 답이고, 추정 범위는 물러난다.
+      // "8~12만원 · 추정치"보다 "103,000원 · 지금 팔리는 값"이 언제나 낫다.
+      const live = !shop.loading && shop.reference ? shop.reference : null;
+      if (!live && !money && !r.priceRange && !band) return null;
       const dots = r.priceTier || r.priceBand || band?.band;
       const abroad = globalLabel(info);
       const age = priceAge(info);
       const trust = priceTrust(info);
       return (
         <div className="card">
-          <div className="card-title">{t("시세")}</div>
+          <div className="card-title">{live ? t("최저가") : t("시세")}</div>
           <div className="price-line">
-            {/* 조사해 둔 시장가가 있으면 그것이 답이다. 없으면 대역으로 물러선다 */}
+            {/* 실제 값 → 조사해 둔 시장가 → 대역 순으로 물러선다 */}
             <div className="price-val">
-              {money || r.priceRange || (band ? t(band.label) : t("정보 없음"))}
+              {live
+                ? fmtWon(live)
+                : money || r.priceRange || (band ? t(band.label) : t("정보 없음"))}
             </div>
-            {dots && (
+            {/* 실제 값에는 별점을 붙이지 않는다. 추정이 아니라 확인된 값이다 */}
+            {!live && dots && (
               <div className="tier">
                 {"●".repeat(dots)}{"○".repeat(Math.max(0, 5 - dots))}
               </div>
             )}
           </div>
           {/* 무엇을 기준으로 한 값인지 밝힌다 — 밝히지 않은 숫자는 믿을 수 없는 숫자다 */}
-          {money && (info.volume || info.basis) && (
+          {live && (
+            <div className="price-basis">
+              {t("판매 중인 {n}건 중 최저가 · 오늘 확인", { n: shop.sampled || 1 })}
+            </div>
+          )}
+          {/* 실제 값이 있어도 조사해 둔 범위를 함께 두면 "싼 편인가"를 가늠할 수 있다 */}
+          {live && money && (
+            <div className="price-basis">
+              {t("참고 시세 {m}", { m: money })}
+              {info.volume ? ` · ${info.volume}` : ""}
+            </div>
+          )}
+          {!live && money && (info.volume || info.basis) && (
             <div className="price-basis">
               {[info.volume, info.basis && t(info.basis)].filter(Boolean).join(" · ")}
             </div>
@@ -793,13 +815,13 @@ export default function ResultScreen({
           {/* 확신이 낮은 값은 낮다고 말한다. 국내에 정식 유통되지 않는 술은
               판매처가 몇 곳뿐이라 정직하게 조사해도 폭이 넓게 나온다.
               그것을 다른 값과 똑같이 보여 주면 사용자를 속이는 셈이다. */}
-          {money && trust === "rough" && (
+          {!live && money && trust === "rough" && (
             <div className="price-rough">
               {t("국내 정식 유통이 적어 폭넓게 잡은 추정치입니다")}
             </div>
           )}
           {/* 시세는 늙는다. 오래된 값을 오늘 값인 척 보여 주지 않는다 */}
-          {money && age && (
+          {!live && money && age && (
             <div className={`price-asof ${age}`}>
               {age === "stale"
                 ? t("{d} · 오래된 값이라 지금과 다를 수 있습니다", { d: asOfLabel(info) })

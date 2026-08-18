@@ -108,7 +108,20 @@ export async function GET(request) {
     // 기준 최저가는 표시하는 4개가 아니라 검색 결과 전체로 계산한다.
     // 셀러 가치·가격 이력·특가 알림도 같은 계산을 쓰므로 화면끼리 숫자가 어긋나지 않는다.
     // 여러 제품이 섞여 단언할 수 없는 경우에는 null이 오고, 화면에서 표시하지 않는다.
-    const ref = type === "liquor" ? priceReference(items) : null;
+    // 기준 최저가를 내는 방식이 출처마다 다르다.
+    //
+    // 네이버는 한 번에 스무 건씩 줬고 그 안에 다른 제품이 섞여 있었다. 그래서
+    // 세 건 이상이고 값이 네 배 안으로 모여 있을 때만 단언했다.
+    //
+    // 다나와는 우리가 이름·도수·묶음까지 맞춰 걸러 낸 뒤라 한두 건만 남는 것이
+    // 정상이다. 여기에 같은 잣대를 들이대면 멀쩡히 찾은 값을 버리게 된다 —
+    // 실제로 글렌피딕 18년이 그렇게 사라졌다.
+    const ref =
+      type !== "liquor"
+        ? null
+        : source === "danawa"
+          ? { low: items[0].price, sampled: items.length }
+          : priceReference(items);
     return NextResponse.json({
       items: items.slice(0, 4),
       reference: ref?.low || null,
@@ -149,14 +162,30 @@ async function storedProduct(name) {
   }
 }
 
-/** 이 이름이 어느 주종인가 — 가격을 어디서 물을지 정하는 데 쓴다. */
+/**
+ * 이 이름이 어느 주종인가 — 가격을 어디서 물을지 정하는 데 쓴다.
+ *
+ * 이름 열쇠 하나로만 찾으면 자주 빗나간다. 화면은 AI 가 준 국내 통용 표기를
+ * 먼저 넘기는데 그것이 카탈로그의 이름과 다를 수 있기 때문이다 —
+ * "믹터스 US*1 싱글배럴 라이"를 "믹터스 싱글배럴 라이"로 물으면 못 찾았다.
+ * 그래서 열쇠 → 검색어 → 이름 순으로 세 번 두드린다.
+ */
 async function categoryOf(name) {
   try {
     const db = await getDb();
     if (!db) return null;
-    const doc = await db
-      .collection("catalog")
-      .findOne({ key: catalogKey(name, null) }, { projection: { category: 1 } });
+    const col = db.collection("catalog");
+    const proj = { projection: { category: 1 } };
+
+    let doc = await col.findOne({ key: catalogKey(name, null) }, proj);
+    if (doc) return doc.category || null;
+
+    doc = await col.findOne({ searchKeyword: name }, proj);
+    if (doc) return doc.category || null;
+
+    // 정규식 특수문자를 그대로 넣으면 조회가 깨진다 (믹터스 US*1 의 * 가 그렇다)
+    const safe = String(name).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    doc = await col.findOne({ name: new RegExp(`^${safe}$`, "i") }, proj);
     return doc?.category || null;
   } catch {
     return null;
