@@ -12,6 +12,7 @@ import {
 import { getDb } from "@/lib/mongodb";
 import { catalogKey } from "@/lib/catalog";
 import { ONLINE_SALE_OK, onlineShops } from "@/lib/onlineSale";
+import { priceOf, hasPriceKey, priceReadyFor } from "@/lib/danawa";
 import { searchElevenst, hasElevenstKey } from "@/lib/elevenst";
 
 export const runtime = "nodejs";
@@ -73,6 +74,26 @@ export async function GET(request) {
       }
     }
 
+    // 그래도 빈손이면 다나와를 본다.
+    //
+    // 다나와는 주종을 크게 탄다 — 위스키만 쓸 만하고 나머지는 엉뚱한 값을 준다
+    // (lib/danawa.js 의 PRICE_READY 에 실측을 적어 두었다). 그래서 이 술이 어느
+    // 주종인지 먼저 보고 부른다. 값을 못 얻는 것보다 틀린 값이 나쁘다.
+    if (!items.length && hasPriceKey()) {
+      const cat = await categoryOf(queries[0]);
+      if (cat && priceReadyFor(cat)) {
+        try {
+          const found = await priceOf(queries[0], { category: cat });
+          if (found?.length) {
+            items = found;
+            source = "danawa";
+          }
+        } catch (e) {
+          console.error("[shop:danawa]", e.message);
+        }
+      }
+    }
+
     // 값을 못 가져왔더라도 살 곳까지 끊지는 않는다. 검색 주소는 API가 아니라
     // 그냥 링크라, 가격만 빠지고 구매 경로는 그대로 남는다.
     if (!items.length && isShopRetired()) {
@@ -125,5 +146,19 @@ async function storedProduct(name) {
     };
   } catch {
     return {};
+  }
+}
+
+/** 이 이름이 어느 주종인가 — 가격을 어디서 물을지 정하는 데 쓴다. */
+async function categoryOf(name) {
+  try {
+    const db = await getDb();
+    if (!db) return null;
+    const doc = await db
+      .collection("catalog")
+      .findOne({ key: catalogKey(name, null) }, { projection: { category: 1 } });
+    return doc?.category || null;
+  } catch {
+    return null;
   }
 }
