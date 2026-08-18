@@ -19,6 +19,7 @@ import ScrollTop from "./ScrollTop";
 import ShareCard from "./ShareCard";
 import VintageCompare from "./VintageCompare";
 import NearbyPlaces from "./NearbyPlaces";
+import SakenowaCard from "./SakenowaCard";
 import CommunityRating from "./CommunityRating";
 
 // 판매처 조회 — 히어로의 대표 이미지와 구매 정보 카드가 같은 결과를 쓴다.
@@ -831,6 +832,8 @@ export default function ResultScreen({
         </div>
       );
     })(),
+    // 일본 현지 평가 — 사케에만 있고, 맞춘 술에만 붙는다
+    sakenowa: <SakenowaCard info={r.sakenowa} />,
     cellar: (
       <CellarActions result={r} thumb={thumb} onToast={onToast} onChanged={onCellarChanged} />
     ),
