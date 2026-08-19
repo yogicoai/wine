@@ -13,6 +13,7 @@ import { getDb } from "@/lib/mongodb";
 import { catalogKey } from "@/lib/catalog";
 import { ONLINE_SALE_OK, onlineShops } from "@/lib/onlineSale";
 import { priceOf, hasPriceKey, priceReadyFor } from "@/lib/danawa";
+import { dailyshotFor } from "@/lib/dailyshot";
 import { searchElevenst, hasElevenstKey } from "@/lib/elevenst";
 
 export const runtime = "nodejs";
@@ -60,6 +61,37 @@ export async function GET(request) {
       return NextResponse.json({ results });
     }
 
+    // 이 술이 어느 주종인지 먼저 본다 — 어디에 물을지가 여기서 갈린다.
+    const cat = await categoryOf(queries[0]);
+
+    // 데일리샷이 첫 번째다.
+    //
+    // 미리 담아 둔 우리 색인을 읽으므로 남의 서버를 두드리지 않고, 크레딧도 들지
+    // 않으며, DB 조회라 즉시 끝난다. 게다가 이름·도수·용량을 맞춰 고른 한 건이라
+    // 검색 결과 스무 개에서 골라내는 것보다 정확하다. 파는 곳 수가 함께 오는 것도
+    // 여기뿐이다 — 880곳이 파는 값은 시세지만 한 곳뿐인 값은 그 가게 값이다.
+    const ds = cat ? await dailyshotFor(queries[0], { category: cat }) : null;
+    if (ds) {
+      return NextResponse.json({
+        items: [
+          {
+            title: ds.name,
+            link: ds.url,
+            image: ds.image,
+            mall: "데일리샷",
+            price: ds.low,
+          },
+        ],
+        reference: ds.low,
+        // 검색 건수가 아니라 "이 술을 파는 곳"의 수다. 화면이 그렇게 밝힌다.
+        sampled: ds.sellers,
+        source: "dailyshot",
+        high: ds.high,
+        volume: ds.volume,
+        ...(await storedProduct(queries[0])),
+      });
+    }
+
     let items = (await searchShop(queries[0], type)) || [];
 
     // 네이버 쇼핑이 닫혀 빈손이면 11번가에 물어본다.
@@ -80,7 +112,6 @@ export async function GET(request) {
     // (lib/danawa.js 의 PRICE_READY 에 실측을 적어 두었다). 그래서 이 술이 어느
     // 주종인지 먼저 보고 부른다. 값을 못 얻는 것보다 틀린 값이 나쁘다.
     if (!items.length && hasPriceKey()) {
-      const cat = await categoryOf(queries[0]);
       if (cat && priceReadyFor(cat)) {
         try {
           const found = await priceOf(queries[0], { category: cat });

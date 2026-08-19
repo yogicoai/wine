@@ -115,11 +115,18 @@ function PurchaseCard({ shop }) {
             <span>{t("기준 최저가")}</span>
           </div>
           <em>
-            {state.source === "11st"
-              ? t("11번가 {n}건 기준 · 매장 픽업가가 섞여 있습니다", { n: state.sampled })
-              : state.source === "danawa"
-                ? t("다나와 {n}건 기준 · 매장 픽업가가 섞여 있습니다", { n: state.sampled })
-                : t("판매 중인 {n}건 기준 · 소용량·미끼 상품 제외", { n: state.sampled })}
+            {/* 데일리샷은 세는 것이 다르다. 검색 결과 몇 건이 아니라 이 술을
+                실제로 파는 가게가 몇 곳이냐다. 백 곳이 파는 값은 시세지만 한
+                곳뿐인 값은 그 가게 값일 뿐이라, 그 숫자를 그대로 보여 준다. */}
+            {state.source === "dailyshot"
+              ? state.sampled > 1
+                ? t("전국 {n}곳 판매 중 최저가 · 매장 픽업가", { n: state.sampled })
+                : t("판매처 한 곳의 값입니다 · 매장 픽업가")
+              : state.source === "11st"
+                ? t("11번가 {n}건 기준 · 매장 픽업가가 섞여 있습니다", { n: state.sampled })
+                : state.source === "danawa"
+                  ? t("다나와 {n}건 기준 · 매장 픽업가가 섞여 있습니다", { n: state.sampled })
+                  : t("판매 중인 {n}건 기준 · 소용량·미끼 상품 제외", { n: state.sampled })}
           </em>
         </div>
       )}
@@ -787,7 +794,11 @@ export default function ResultScreen({
           {/* 무엇을 기준으로 한 값인지 밝힌다 — 밝히지 않은 숫자는 믿을 수 없는 숫자다 */}
           {live && (
             <div className="price-basis">
-              {t("판매 중인 {n}건 중 최저가 · 오늘 확인", { n: shop.sampled || 1 })}
+              {shop.source === "dailyshot"
+                ? shop.sampled > 1
+                  ? t("전국 {n}곳 중 최저가 · 오늘 확인", { n: shop.sampled })
+                  : t("판매처 한 곳의 값 · 오늘 확인")
+                : t("판매 중인 {n}건 중 최저가 · 오늘 확인", { n: shop.sampled || 1 })}
             </div>
           )}
           {/* 실제 값이 있어도 조사해 둔 범위를 함께 두면 "싼 편인가"를 가늠할 수 있다 */}
