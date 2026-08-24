@@ -573,6 +573,12 @@ body:has(.cap-live) .timer-bubble {
 }
 .price-abroad span { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-lo); }
 .price-abroad b { font-family: var(--font-d); font-size: 17px; font-weight: 500; color: var(--ink); }
+/* 원화 어림값 — 엔화 옆에 붙되 엔화보다 작게. 정확한 값은 엔화 쪽이고
+   이것은 "얼마쯤인지" 감을 잡으라고 두는 것이라, 같은 크기로 두면 안 된다. */
+.price-abroad b i {
+  font-style: normal; font-family: var(--font-b, inherit);
+  font-size: 12.5px; color: var(--ink-dim); margin-left: 7px;
+}
 .price-abroad em { font-style: normal; font-size: 11.5px; color: var(--ink-dim); }
 .price-rough {
   margin-top: 9px; font-size: 11.5px; color: var(--ink-dim);

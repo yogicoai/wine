@@ -5,7 +5,7 @@ import { servingPlan } from "@/lib/serving";
 import { bandOf } from "@/lib/curation";
 import { priceTrend } from "@/lib/cellar";
 import Sparkline from "./Sparkline";
-import { priceLabel, globalLabel, priceAge, asOfLabel, priceTrust } from "@/lib/priceInfo";
+import { priceLabel, globalLabel, jpyInWon, JPY_RATE_AS_OF, priceAge, asOfLabel, priceTrust } from "@/lib/priceInfo";
 import { glasswareFor } from "@/lib/glassware";
 import { gearFor } from "@/lib/gear";
 import Flag from "./Flag";
@@ -855,8 +855,17 @@ export default function ResultScreen({
             <div className="price-abroad">
               {/* 사케는 일본이 본토다. "해외"라 부르면 어디인지 흐려진다 */}
               <span>{info?.jpyLow || info?.jpyHigh ? t("일본 현지가") : t("해외 소매가")}</span>
-              <b>{abroad}</b>
-              <em>{t("관세·주세 전 · 참고용")}</em>
+              <b>
+                {abroad}
+                {/* 엔화만 적으면 계산을 보는 사람에게 떠넘긴다. 얼마쯤인지
+                    바로 보이게 원화를 나란히 둔다. */}
+                {jpyInWon(info) && <i>{jpyInWon(info)}</i>}
+              </b>
+              <em>
+                {jpyInWon(info)
+                  ? t("{d} 환율 기준 · 관세·주세 전", { d: JPY_RATE_AS_OF })
+                  : t("관세·주세 전 · 참고용")}
+              </em>
             </div>
           )}
           {/* priceNote 는 AI 가 스캔할 때 붙이는 추정치 설명이다 ("대략적인 소매가로,
