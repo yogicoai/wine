@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getDb } from "@/lib/mongodb";
-import { dailyshotFor, refreshIds } from "@/lib/dailyshot";
+import { dailyshotFor, refreshItems } from "@/lib/dailyshot";
 import { env } from "@/lib/env";
 
 export const runtime = "nodejs";
@@ -36,36 +36,38 @@ async function run(request) {
     .collection("cellar")
     .find(
       { status: { $in: ["have", "wish"] } },
-      { projection: { name: 1, searchKeyword: 1, category: 1, dsId: 1 } }
+      { projection: { name: 1, searchKeyword: 1, category: 1, dsId: 1, dsItemId: 1 } }
     )
     .limit(400)
     .toArray();
 
   // 담을 때 상품 번호를 적어 두지 않았을 수 있다. 그때는 색인에서 다시 찾는다 —
   // DB 조회라 값이 들지 않는다. 찾은 번호는 적어 두어 다음부터 건너뛴다.
-  const ids = [];
+  const rows = [];
   const learned = [];
   for (const doc of watched) {
-    if (doc.dsId) {
-      ids.push(doc.dsId);
+    if (doc.dsItemId) {
+      rows.push({ id: doc.dsId, itemId: doc.dsItemId });
       continue;
     }
     const hit = await dailyshotFor(doc.searchKeyword || doc.name, { category: doc.category });
-    if (hit?.id) {
-      ids.push(hit.id);
-      learned.push({ _id: doc._id, dsId: hit.id });
+    if (hit?.itemId) {
+      rows.push({ id: hit.id, itemId: hit.itemId });
+      learned.push({ _id: doc._id, dsId: hit.id, dsItemId: hit.itemId });
     }
   }
 
   if (learned.length) {
     await db.collection("cellar").bulkWrite(
-      learned.map((l) => ({ updateOne: { filter: { _id: l._id }, update: { $set: { dsId: l.dsId } } } })),
+      learned.map((l) => ({
+        updateOne: { filter: { _id: l._id }, update: { $set: { dsId: l.dsId, dsItemId: l.dsItemId } } },
+      })),
       { ordered: false }
     );
   }
 
-  const { updated, failed } = await refreshIds(ids);
-  return NextResponse.json({ watched: watched.length, matched: ids.length, updated, failed });
+  const { updated, failed } = await refreshItems(rows);
+  return NextResponse.json({ watched: watched.length, matched: rows.length, updated, failed });
 }
 
 export async function GET(request) {

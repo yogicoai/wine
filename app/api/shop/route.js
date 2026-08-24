@@ -13,7 +13,7 @@ import { getDb } from "@/lib/mongodb";
 import { catalogKey } from "@/lib/catalog";
 import { ONLINE_SALE_OK, onlineShops } from "@/lib/onlineSale";
 import { priceOf, hasPriceKey, priceReadyFor } from "@/lib/danawa";
-import { dailyshotFor, goodsFor } from "@/lib/dailyshot";
+import { dailyshotFor, goodsFor, livePrice } from "@/lib/dailyshot";
 import { searchElevenst, hasElevenstKey } from "@/lib/elevenst";
 
 export const runtime = "nodejs";
@@ -84,6 +84,16 @@ export async function GET(request) {
     // 여기뿐이다 — 880곳이 파는 값은 시세지만 한 곳뿐인 값은 그 가게 값이다.
     const ds = cat ? await dailyshotFor(queries[0], { category: cat }) : null;
     if (ds) {
+      // 이름은 색인에서 맞추고, 값은 판매처에 직접 묻는다.
+      //
+      // 색인에는 대표가만 있는 것이 많다. 목록 API 가 그것만 주기 때문이다.
+      // 대표가는 정가에 가까워 실제로 사는 값과 꽤 차이가 난다 — 라가불린 16년이
+      // 대표 142,000 원인데 매장 픽업 최저가는 91,506 원이었다.
+      //
+      // 그래서 사람이 그 술을 열어 볼 때 한 번 물어 채워 넣는다. 0.4 초쯤 걸리고,
+      // 채워 둔 값은 반나절 동안 다시 쓰므로 두 번째 사람부터는 기다림이 없다.
+      const live = await freshLow(ds);
+      const low = live?.low || ds.low || null;
       return NextResponse.json({
         items: [
           {
@@ -91,12 +101,12 @@ export async function GET(request) {
             link: ds.url,
             image: ds.image,
             mall: "데일리샷",
-            price: ds.low,
+            price: low,
           },
         ],
-        reference: ds.low,
+        reference: low,
         // 검색 건수가 아니라 "이 술을 파는 곳"의 수다. 화면이 그렇게 밝힌다.
-        sampled: ds.sellers,
+        sampled: live?.sellers ?? ds.sellers,
         source: "dailyshot",
         high: ds.high,
         volume: ds.volume,
@@ -175,6 +185,39 @@ export async function GET(request) {
     console.error("[shop]", err.message);
     return NextResponse.json({ items: null, results: null, error: true });
   }
+}
+
+// 최저가를 얼마나 오래 믿을 것인가. 반나절이면 값이 크게 흔들리지 않고,
+// 인기 있는 술이라도 하루 두 번이면 남의 서버에 부담이 안 된다.
+const LOW_TTL = 12 * 60 * 60 * 1000;
+
+/**
+ * 이 술의 지금 최저가 — 오래됐으면 판매처에 다시 묻고, 물은 값은 적어 둔다.
+ *
+ * 실패해도 조용히 넘어간다. 그때는 색인에 담긴 값을 쓰게 되고, 그것도 없으면
+ * 대표가가 나간다. 값을 못 보여 주는 것보다는 조금 오래된 값이 낫다.
+ */
+async function freshLow(ds) {
+  if (!ds?.itemId) return null;
+  const fresh = ds.lowAt && Date.now() - new Date(ds.lowAt).getTime() < LOW_TTL;
+  if (fresh) return { low: ds.low, sellers: ds.sellers };
+
+  const live = await livePrice(ds.itemId);
+  if (!live) return null;
+
+  try {
+    const db = await getDb();
+    await db?.collection("dailyshot").updateOne(
+      { itemId: ds.itemId },
+      {
+        $set: { low: live.low, sellers: live.sellers, lowAt: new Date() },
+        $push: { history: { $each: [{ at: new Date(), low: live.low }], $slice: -60 } },
+      }
+    );
+  } catch {
+    /* 적어 두지 못해도 이번 화면은 보여 줄 수 있다 */
+  }
+  return live;
 }
 
 /**
