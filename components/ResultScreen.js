@@ -54,6 +54,8 @@ function useShopItems(name, keyword) {
               source: d.source || null,
               // 값이 어떻게 움직였나. 점이 둘 이상 쌓이면 그래프가 나타난다.
               history: d.history || null,
+              // 판매처에 물어 확인한 값인가. 아니면 "최저가"라고 부르지 않는다.
+              verified: !!d.verified,
             });
           }
           // 가격은 못 가져와도 살 곳은 안다 — 다른 후보를 더 볼 것 없이 링크로 끝낸다
@@ -123,9 +125,11 @@ function PurchaseCard({ shop }) {
                 실제로 파는 가게가 몇 곳이냐다. 백 곳이 파는 값은 시세지만 한
                 곳뿐인 값은 그 가게 값일 뿐이라, 그 숫자를 그대로 보여 준다. */}
             {state.source === "dailyshot"
-              ? state.sampled > 1
-                ? t("전국 {n}곳 판매 중 최저가 · 매장 픽업가", { n: state.sampled })
-                : t("판매처 한 곳의 값입니다 · 매장 픽업가")
+              ? !state.verified || !state.sampled
+                ? t("데일리샷 판매가 · 매장과 시기에 따라 달라집니다")
+                : state.sampled > 1
+                  ? t("전국 {n}곳 판매 중 최저가 · 매장 픽업가", { n: state.sampled })
+                  : t("판매처 한 곳의 값입니다 · 매장 픽업가")
               : state.source === "11st"
                 ? t("11번가 {n}건 기준 · 매장 픽업가가 섞여 있습니다", { n: state.sampled })
                 : state.source === "danawa"
@@ -198,7 +202,9 @@ function PurchaseCard({ shop }) {
             가리킬 목록이 없다. 그 자리에는 그 값이 무엇인지를 적는다. */}
         {state.source === "dailyshot" && (
           <>
-            {t("전국 매장 판매가 중 가장 낮은 값입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다.")}
+            {state.verified
+              ? t("전국 매장 판매가 중 가장 낮은 값입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다.")
+              : t("데일리샷에 올라온 판매가입니다. 지금 파는 매장을 확인하지 못해 실제 구매가는 다를 수 있습니다.")}
             {" · "}
           </>
         )}
@@ -808,7 +814,12 @@ export default function ResultScreen({
       const trust = priceTrust(info);
       return (
         <div className="card">
-          <div className="card-title">{live ? t("최저가") : t("시세")}</div>
+          {/* 확인한 값만 "최저가"라고 부른다. 판매처에 못 물어본 값은 대표가라
+              정가에 가깝고, 그것을 최저가라고 하면 실제로 살 때 더 싼 곳을
+              놓치게 만든다. */}
+          <div className="card-title">
+            {live ? (shop.verified ? t("최저가") : t("판매가")) : t("시세")}
+          </div>
           <div className="price-line">
             {/* 실제 값 → 조사해 둔 시장가 → 대역 순으로 물러선다 */}
             <div className="price-val">
@@ -827,9 +838,11 @@ export default function ResultScreen({
           {live && (
             <div className="price-basis">
               {shop.source === "dailyshot"
-                ? shop.sampled > 1
-                  ? t("전국 {n}곳 중 최저가 · 오늘 확인", { n: shop.sampled })
-                  : t("판매처 한 곳의 값 · 오늘 확인")
+                ? !shop.verified || !shop.sampled
+                  ? t("데일리샷 판매가")
+                  : shop.sampled > 1
+                    ? t("전국 {n}곳 중 최저가 · 오늘 확인", { n: shop.sampled })
+                    : t("판매처 한 곳의 값 · 오늘 확인")
                 : t("판매 중인 {n}건 중 최저가 · 오늘 확인", { n: shop.sampled || 1 })}
             </div>
           )}

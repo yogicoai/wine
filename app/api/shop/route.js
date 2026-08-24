@@ -107,6 +107,8 @@ export async function GET(request) {
         reference: low,
         // 검색 건수가 아니라 "이 술을 파는 곳"의 수다. 화면이 그렇게 밝힌다.
         sampled: live?.sellers ?? ds.sellers,
+        // 판매처에 물어 확인한 값인지 — 화면이 "최저가"라고 부를지 결정한다
+        verified: !!live || ds.verified,
         source: "dailyshot",
         high: ds.high,
         volume: ds.volume,
