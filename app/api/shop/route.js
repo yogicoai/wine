@@ -110,6 +110,10 @@ export async function GET(request) {
         source: "dailyshot",
         high: ds.high,
         volume: ds.volume,
+        // 값의 움직임. 방금 새로 물어봤다면 그 점이 아직 색인에 안 실려 있으므로
+        // 여기서 오늘 자리에 얹는다 — 그래프의 끝이 화면의 숫자와 어긋나면
+        // 둘 중 무엇을 믿어야 할지 알 수 없다.
+        history: withToday(ds.history, low),
         ...(await storedProduct(queries[0])),
       });
     }
@@ -185,6 +189,17 @@ export async function GET(request) {
     console.error("[shop]", err.message);
     return NextResponse.json({ items: null, results: null, error: true });
   }
+}
+
+/** 이력의 끝을 지금 값으로 맞춘다 — 같은 날이면 갈아 끼우고, 새 날이면 붙인다 */
+function withToday(history, low) {
+  const points = Array.isArray(history) ? [...history] : [];
+  if (!low) return points;
+  const today = new Date().toISOString().slice(0, 10);
+  const last = points[points.length - 1];
+  if (last?.d === today) points[points.length - 1] = { d: today, p: Math.min(last.p, low) };
+  else points.push({ d: today, p: low });
+  return points;
 }
 
 // 최저가를 얼마나 오래 믿을 것인가. 반나절이면 값이 크게 흔들리지 않고,

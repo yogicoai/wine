@@ -3,6 +3,8 @@ import { useEffect, useState, Fragment } from "react";
 import { catOf } from "@/lib/cats";
 import { servingPlan } from "@/lib/serving";
 import { bandOf } from "@/lib/curation";
+import { priceTrend } from "@/lib/cellar";
+import Sparkline from "./Sparkline";
 import { priceLabel, globalLabel, priceAge, asOfLabel, priceTrust } from "@/lib/priceInfo";
 import { glasswareFor } from "@/lib/glassware";
 import { gearFor } from "@/lib/gear";
@@ -50,6 +52,8 @@ function useShopItems(name, keyword) {
               sampled: d.sampled || d.items.length,
               // 값이 어디서 왔는지 — 화면이 기준을 밝힐 수 있어야 한다
               source: d.source || null,
+              // 값이 어떻게 움직였나. 점이 둘 이상 쌓이면 그래프가 나타난다.
+              history: d.history || null,
             });
           }
           // 가격은 못 가져와도 살 곳은 안다 — 다른 후보를 더 볼 것 없이 링크로 끝낸다
@@ -829,6 +833,11 @@ export default function ResultScreen({
                 : t("판매 중인 {n}건 중 최저가 · 오늘 확인", { n: shop.sampled || 1 })}
             </div>
           )}
+          {/* 값이 어떻게 움직였나.
+              점이 하나뿐인 동안에는 priceTrend 가 null 을 주므로 아무것도 그리지
+              않는다. 이력은 사람이 열어 볼 때마다 하루 한 점씩 쌓이므로, 이 그래프는
+              쓰이면서 저절로 자란다. 없는 그래프 자리를 비워 두지 않는 편이 낫다. */}
+          {live && <Sparkline trend={priceTrend({ priceHistory: shop.history })} />}
           {/* 실제 값이 있어도 조사해 둔 범위를 함께 두면 "싼 편인가"를 가늠할 수 있다 */}
           {live && money && (
             <div className="price-basis">
