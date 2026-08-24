@@ -13,7 +13,7 @@ import { getDb } from "@/lib/mongodb";
 import { catalogKey } from "@/lib/catalog";
 import { ONLINE_SALE_OK, onlineShops } from "@/lib/onlineSale";
 import { priceOf, hasPriceKey, priceReadyFor } from "@/lib/danawa";
-import { dailyshotFor, goodsFor, livePrice } from "@/lib/dailyshot";
+import { dailyshotFor, goodsFor, livePrice, searchAndMatch } from "@/lib/dailyshot";
 import { searchElevenst, hasElevenstKey } from "@/lib/elevenst";
 
 export const runtime = "nodejs";
@@ -82,7 +82,16 @@ export async function GET(request) {
     // 않으며, DB 조회라 즉시 끝난다. 게다가 이름·도수·용량을 맞춰 고른 한 건이라
     // 검색 결과 스무 개에서 골라내는 것보다 정확하다. 파는 곳 수가 함께 오는 것도
     // 여기뿐이다 — 880곳이 파는 값은 시세지만 한 곳뿐인 값은 그 가게 값이다.
-    const ds = cat ? await dailyshotFor(queries[0], { category: cat }) : null;
+    // 담아 둔 색인에서 먼저 찾고, 없으면 데일리샷 검색에 물어본다.
+    //
+    // 색인은 목록 API 를 훑어 만든 것이라 품절·비노출 상품이 빠져 있다. 그런
+    // 것도 검색에는 걸린다. 다만 그쪽 검색은 매우 느슨해서 — "카시예로 델
+    // 디아블로"에 2,956건을 주고 첫 줄이 "러시안 잭 소비뇽 블랑"이다 —
+    // 결과를 후보로만 받고 판단은 우리 잣대로 한다.
+    const ds = cat
+      ? (await dailyshotFor(queries[0], { category: cat })) ||
+        (await searchAndMatch(queries[0], { category: cat }))
+      : null;
     if (ds) {
       // 이름은 색인에서 맞추고, 값은 판매처에 직접 묻는다.
       //
