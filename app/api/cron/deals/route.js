@@ -33,7 +33,10 @@ async function run(request) {
   }
 
   // ── 2) 특가
-  const { deals, checked, skipped } = await checkDeals({ max: 25, ignoreStale: true });
+  // 25 였던 것을 올렸다. 다나와는 한 건에 크레딧이 나가서 아껴 봐야 했는데,
+  // 데일리샷은 우리 색인을 읽는 것이라 값이 들지 않고 즉시 끝난다. 바깥으로
+  // 나가는 요청은 알림 직전 재확인뿐이고 그것은 알릴 것이 있을 때만 일어난다.
+  const { deals, checked, skipped } = await checkDeals({ max: 300, ignoreStale: true });
   if (skipped) {
     return NextResponse.json({ skipped, checked: 0, notified: 0, drink: drinkDue.length, drinkPush });
   }
