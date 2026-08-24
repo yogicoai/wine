@@ -20,3 +20,5 @@ val-tmp.cjs
 ds-crawl.log
 ds-dev.log
 ds-sake.log
+ds-*.txt
+ds-*-tmp.mjs
