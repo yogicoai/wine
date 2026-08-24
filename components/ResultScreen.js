@@ -189,7 +189,16 @@ function PurchaseCard({ shop }) {
       )}
 
       <div className="shop-note">
-        {state.items?.length > 0 && (
+        {/* 데일리샷은 이름·도수·용량을 맞춰 고른 한 건을 준다. 목록이 아니라
+            한 줄이므로 "아래 목록은 가격순이 아니라…앞세운 순서입니다"라고 하면
+            가리킬 목록이 없다. 그 자리에는 그 값이 무엇인지를 적는다. */}
+        {state.source === "dailyshot" && (
+          <>
+            {t("전국 매장 판매가 중 가장 낮은 값입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다.")}
+            {" · "}
+          </>
+        )}
+        {state.source !== "dailyshot" && state.items?.length > 0 && (
           <>
             {t("아래 목록은 가격순이 아니라, 로그인 없이 바로 구매 가능한 판매처를 앞세운 순서입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다. 가격은 판매처 사정에 따라 달라질 수 있습니다.")}
             {" · "}
@@ -287,6 +296,39 @@ function GoodsShot({ item, emoji }) {
   );
 }
 
+/**
+ * 잔·도구를 사러 가는 줄.
+ *
+ * 잔은 술이 아니라 온라인 판매에 아무 제한이 없다. 그래서 여기서는 링크가
+ * 곧 구매다. 파는 상품을 실제로 찾았으면 값과 이름을 보여 주고 그 상품으로
+ * 바로 보낸다 — "부르고뉴 와인잔 찾아보기"보다 "잘토 버건디 와인잔 59,000원"이
+ * 훨씬 명확하다.
+ *
+ * 다만 용품 색인이 105건뿐이라 대부분은 못 찾는다. 그럴 때 억지로 비슷한
+ * 것을 붙이면 부르고뉴 잔을 찾는 사람에게 샴페인 잔이 가므로, 못 찾으면
+ * 하던 대로 검색으로 보낸다.
+ */
+function GoodsBuy({ item, keyword }) {
+  if (item?.link && item?.price) {
+    return (
+      <a className="glass-buy has-price" href={item.link} target="_blank" rel="noreferrer">
+        <span className="goods-name">{item.title}</span>
+        <b>{fmtWon(item.price)}</b>
+      </a>
+    );
+  }
+  return (
+    <a
+      className="glass-buy"
+      href={`https://www.coupang.com/np/search?q=${encodeURIComponent(keyword)}`}
+      target="_blank"
+      rel="noreferrer"
+    >
+      {t("{n} 찾아보기", { n: keyword })}
+    </a>
+  );
+}
+
 // 무슨 잔에 마실 것인가 — 술을 산 뒤에야 궁금해지는데 물어볼 데가 마땅치 않다.
 // 잔 이름만 알려 주면 소용이 없으므로, 모양과 이유를 함께 적고 살 수 있는 곳까지 잇는다.
 function GlasswareCard({ result }) {
@@ -306,14 +348,7 @@ function GlasswareCard({ result }) {
               <span>
                 {t(g.shape)} — {t(g.why)}
               </span>
-              <a
-                className="glass-buy"
-                href={`https://www.coupang.com/np/search?q=${encodeURIComponent(g.shopKeyword)}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t("{n} 찾아보기", { n: g.shopKeyword })}
-              </a>
+              <GoodsBuy item={shots?.[g.shopKeyword]} keyword={g.shopKeyword} />
             </div>
           </div>
         ))}
@@ -340,14 +375,7 @@ function GearCard({ result }) {
             <div className="pair-body">
               <b>{t(g.name)}</b>
               <span>{t(g.why)}</span>
-              <a
-                className="glass-buy"
-                href={`https://www.coupang.com/np/search?q=${encodeURIComponent(g.shopKeyword)}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t("{n} 찾아보기", { n: g.shopKeyword })}
-              </a>
+              <GoodsBuy item={shots?.[g.shopKeyword]} keyword={g.shopKeyword} />
             </div>
           </div>
         ))}
@@ -822,8 +850,12 @@ export default function ResultScreen({
               <em>{t("관세·주세 전 · 참고용")}</em>
             </div>
           )}
-          {(r.priceNote || band?.note) && (
-            <div className="price-note">{r.priceNote || t(band.note)}</div>
+          {/* priceNote 는 AI 가 스캔할 때 붙이는 추정치 설명이다 ("대략적인 소매가로,
+              매장·시기에 따라 변동이 큽니다"). 확인된 값 바로 밑에 그 말이 붙으면
+              방금 보여 준 숫자를 스스로 깎는다. 값이 있으면 물러나야 한다.
+              band.note 는 "특별한 자리" 같은 자리값이라 그대로 둔다. */}
+          {((!live && r.priceNote) || band?.note) && (
+            <div className="price-note">{(!live && r.priceNote) || t(band.note)}</div>
           )}
           {/* 확신이 낮은 값은 낮다고 말한다. 국내에 정식 유통되지 않는 술은
               판매처가 몇 곳뿐이라 정직하게 조사해도 폭이 넓게 나온다.

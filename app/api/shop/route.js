@@ -13,7 +13,7 @@ import { getDb } from "@/lib/mongodb";
 import { catalogKey } from "@/lib/catalog";
 import { ONLINE_SALE_OK, onlineShops } from "@/lib/onlineSale";
 import { priceOf, hasPriceKey, priceReadyFor } from "@/lib/danawa";
-import { dailyshotFor } from "@/lib/dailyshot";
+import { dailyshotFor, goodsFor } from "@/lib/dailyshot";
 import { searchElevenst, hasElevenstKey } from "@/lib/elevenst";
 
 export const runtime = "nodejs";
@@ -47,6 +47,18 @@ export async function GET(request) {
               if (item) return { q, item };
             } catch {
               /* 쇼핑 API 가 죽어 있다 — 사진으로 넘어간다 */
+            }
+          }
+          // 잔과 도구는 술이 아니라 온라인 판매에 아무 제한이 없다. 그래서
+          // 링크가 곧 구매로 이어지는데, 지금까지는 쿠팡 검색 주소만 걸어
+          // 두었다 — 그것은 "찾아보세요"이지 "이것을 사세요"가 아니다.
+          // 데일리샷에 주류 용품이 105건 있어, 맞는 것이 있으면 값과 함께 준다.
+          if (type === "goods") {
+            try {
+              const g = await goodsFor(q);
+              if (g) return { q, item: { title: g.name, image: g.image, price: g.price, link: g.url, mall: "데일리샷" } };
+            } catch {
+              /* 용품 색인이 비어 있어도 사진까지 막을 것은 없다 */
             }
           }
           try {

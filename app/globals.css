@@ -627,6 +627,19 @@ body:has(.cap-live) .timer-bubble {
 }
 .glass-buy:hover { border-color: var(--gold); background: var(--gold-soft); color: var(--ink); }
 
+/* 파는 상품을 실제로 찾은 줄 — 값이 붙으므로 검색 링크보다 앞으로 나온다.
+   이름은 길면 줄이고 값은 오른쪽 끝에 붙여, 여러 줄이 나란히 놓여도 값이
+   한 줄로 읽히게 한다. */
+.glass-buy.has-price {
+  display: flex; align-items: baseline; gap: 10px; justify-content: space-between;
+  max-width: 320px; color: var(--ink); border-color: var(--line);
+}
+.glass-buy.has-price .goods-name {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  color: var(--ink-dim);
+}
+.glass-buy.has-price b { color: var(--gold); font-weight: 600; white-space: nowrap; }
+
 .pair-buy {
   display: flex; align-items: center; gap: 9px; margin-top: 10px;
   border: 1px solid var(--line-soft); padding: 7px 9px; text-decoration: none;
