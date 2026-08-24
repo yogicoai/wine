@@ -18,3 +18,4 @@ val-tmp.cjs
 
 # 수집기 진행 로그
 ds-crawl.log
+ds-dev.log
