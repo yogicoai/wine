@@ -56,6 +56,11 @@ function useShopItems(name, keyword) {
               history: d.history || null,
               // 판매처에 물어 확인한 값인가. 아니면 "최저가"라고 부르지 않는다.
               verified: !!d.verified,
+              // 그 값을 파는 매장. 링크를 눌러 상품 페이지를 열면 다른 값이
+              // 떠 있는 것이 보통이라 — 그쪽은 가까운 매장 값을 띄운다 —
+              // 어디 값인지 밝혀 두지 않으면 우리 숫자가 틀린 것처럼 보인다.
+              lowSeller: d.lowSeller || null,
+              lowRegion: d.lowRegion || null,
             });
           }
           // 가격은 못 가져와도 살 곳은 안다 — 다른 후보를 더 볼 것 없이 링크로 끝낸다
@@ -128,7 +133,12 @@ function PurchaseCard({ shop }) {
               ? !state.verified || !state.sampled
                 ? t("데일리샷 판매가 · 매장과 시기에 따라 달라집니다")
                 : state.sampled > 1
-                  ? t("전국 {n}곳 판매 중 최저가 · 매장 픽업가", { n: state.sampled })
+                  ? state.lowRegion
+                    ? t("전국 {n}곳 중 최저가 · {where} 매장 픽업가", {
+                        n: state.sampled,
+                        where: state.lowRegion,
+                      })
+                    : t("전국 {n}곳 판매 중 최저가 · 매장 픽업가", { n: state.sampled })
                   : t("판매처 한 곳의 값입니다 · 매장 픽업가")
               : state.source === "11st"
                 ? t("11번가 {n}건 기준 · 매장 픽업가가 섞여 있습니다", { n: state.sampled })
@@ -203,7 +213,12 @@ function PurchaseCard({ shop }) {
         {state.source === "dailyshot" && (
           <>
             {state.verified
-              ? t("전국 매장 판매가 중 가장 낮은 값입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다.")
+              ? state.lowSeller
+                ? t(
+                    "전국 매장 중 가장 싼 {where} {seller}의 값입니다. 링크를 열면 가까운 매장 값이 떠서 이 숫자와 다를 수 있습니다 — 매장을 바꿔 고르면 됩니다.",
+                    { where: state.lowRegion || "", seller: state.lowSeller }
+                  )
+                : t("전국 매장 판매가 중 가장 낮은 값입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다.")
               : t("데일리샷에 올라온 판매가입니다. 지금 파는 매장을 확인하지 못해 실제 구매가는 다를 수 있습니다.")}
             {" · "}
           </>

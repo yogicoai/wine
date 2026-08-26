@@ -116,6 +116,10 @@ export async function GET(request) {
         reference: low,
         // 검색 건수가 아니라 "이 술을 파는 곳"의 수다. 화면이 그렇게 밝힌다.
         sampled: live?.sellers ?? ds.sellers,
+        // 이 값을 파는 매장. 상품 페이지를 열면 다른 값이 떠 있는 것이 보통이라
+        // — 그쪽은 대표가나 가까운 매장 값을 띄운다 — 어디 값인지 밝혀 둔다.
+        lowSeller: live?.seller ?? ds.lowSeller ?? null,
+        lowRegion: live?.region ?? ds.lowRegion ?? null,
         // 판매처에 물어 확인한 값인지 — 화면이 "최저가"라고 부를지 결정한다
         verified: !!live || ds.verified,
         source: "dailyshot",
@@ -226,7 +230,8 @@ const LOW_TTL = 12 * 60 * 60 * 1000;
 async function freshLow(ds) {
   if (!ds?.itemId) return null;
   const fresh = ds.lowAt && Date.now() - new Date(ds.lowAt).getTime() < LOW_TTL;
-  if (fresh) return { low: ds.low, sellers: ds.sellers };
+  if (fresh)
+    return { low: ds.low, sellers: ds.sellers, seller: ds.lowSeller, region: ds.lowRegion };
 
   const live = await livePrice(ds.itemId);
   if (!live) return null;
@@ -236,7 +241,11 @@ async function freshLow(ds) {
     await db?.collection("dailyshot").updateOne(
       { itemId: ds.itemId },
       {
-        $set: { low: live.low, sellers: live.sellers, lowAt: new Date() },
+        $set: {
+          low: live.low, sellers: live.sellers, lowAt: new Date(),
+          lowSeller: live.seller || null, lowRegion: live.region || null,
+          lowSoldOut: !!live.soldOut,
+        },
         $push: { history: { $each: [{ at: new Date(), low: live.low }], $slice: -60 } },
       }
     );
