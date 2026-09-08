@@ -1,0 +1,684 @@
+[
+ {
+  "cat": "brandy",
+  "ours": "샌드리버 사강40 SECOND SESSION 40도 루비포트캐스크 포도브랜디",
+  "producer": null,
+  "band": 3,
+  "asked": "샌드리버 사강40 SECOND",
+  "cands": [
+   {
+    "name": "사마롤리 오렌지 리큐르 세컨드 에디션",
+    "won": 230000,
+    "vol": null
+   },
+   {
+    "name": "발베니 더 세컨드 레드 로즈 21년",
+    "won": 930000,
+    "vol": null
+   },
+   {
+    "name": "사강40 세컨드세션",
+    "won": 71100,
+    "vol": null
+   },
+   {
+    "name": "사강40 세컨드세션",
+    "won": 85000,
+    "vol": null
+   },
+   {
+    "name": "이가라시 준마이 긴죠 지카구미 Second",
+    "won": 72400,
+    "vol": null
+   },
+   {
+    "name": "사화 40%",
+    "won": 38200,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "샤토 드 브뢰이 피네 칼바도스",
+  "producer": "샤토 드 브뢰이",
+  "band": 2,
+  "asked": "샤토 드 브뢰이",
+  "cands": [
+   {
+    "name": "듀체스 드 부르고뉴 750ml",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "샤또 까망삭 2021",
+    "won": 44900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 마산 정종 2병 선물 세트",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "[기간 한정 특가] 샤또 데스클랑, 위스퍼링 엔젤",
+    "won": 26900,
+    "vol": null
+   },
+   {
+    "name": "하이네켄 캔 500ml 4캔 세트",
+    "won": 10000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "샤토미소 영동 포도 증류주",
+  "producer": "도란원",
+  "band": 2,
+  "asked": "샤토미소 영동 포도",
+  "cands": [
+   {
+    "name": "모엣 샹동 임페리얼",
+    "won": 61900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "킷도 준마이 다이긴죠",
+    "won": 29900,
+    "vol": null
+   },
+   {
+    "name": "모엣 샹동 임페리얼",
+    "won": 69900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 쿠플라트 황동 사케잔 2개 선물세트",
+    "won": 25000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 쿠플라트 황동 변온 소주잔 2개 선물세트 (난초+레드 꽃)",
+    "won": 25000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "섬진강바람 오크 24도 매실증류주 브랜디 섬진강의봄",
+  "producer": null,
+  "band": 1,
+  "asked": "섬진강바람 오크 매실증류주",
+  "cands": [
+   {
+    "name": "메이커스 마크",
+    "won": 38000,
+    "vol": null
+   },
+   {
+    "name": "맥캘란 12년 셰리 오크",
+    "won": 129900,
+    "vol": null
+   },
+   {
+    "name": "소그라페 실크 앤 스파이스",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "내외 오크 컬렉션: 더 퍼스트",
+    "won": 74000,
+    "vol": null
+   },
+   {
+    "name": "메이커스 마크",
+    "won": 45900,
+    "vol": null
+   },
+   {
+    "name": "라프로익 10년 셰리 오크 피니시 700ml",
+    "won": 107000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "세인트하우스 브랜디 블루라벨 40%",
+  "producer": null,
+  "band": 4,
+  "asked": "세인트하우스 브랜디 블루",
+  "cands": [
+   {
+    "name": "러시안 잭 소비뇽 블랑",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "러시안 잭 소비뇽 블랑",
+    "won": 29900,
+    "vol": null
+   },
+   {
+    "name": "파 로드 말보로 소비뇽 블랑",
+    "won": 16500,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블랙 700ml",
+    "won": 44000,
+    "vol": null
+   },
+   {
+    "name": "[한정수량 재입고] 봄바 소비뇽 블랑",
+    "won": 13900,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블루 750ml",
+    "won": 259000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "술픽 애플리즈 금과명주 40도 사과브랜디 하이볼",
+  "producer": null,
+  "band": 1,
+  "asked": "술픽 애플리즈 금과명주",
+  "cands": [
+   {
+    "name": "마운트 픽 센티넬 까베르네 소비뇽",
+    "won": 149000,
+    "vol": null
+   },
+   {
+    "name": "술샘 16%",
+    "won": 12000,
+    "vol": null
+   },
+   {
+    "name": "돈나푸가타 술 불카노 비앙코",
+    "won": 59000,
+    "vol": null
+   },
+   {
+    "name": "금과명주",
+    "won": 34400,
+    "vol": null
+   },
+   {
+    "name": "금과명주",
+    "won": 42000,
+    "vol": null
+   },
+   {
+    "name": "예산 애플리어 캔 500ml",
+    "won": 4500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "쉐프루이스 꼬냑 1",
+  "producer": null,
+  "band": 3,
+  "asked": "쉐프루이스 꼬냑 1",
+  "cands": [
+   {
+    "name": "와일드 터키 101 1L",
+    "won": 44900,
+    "vol": null
+   },
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 1L",
+    "won": 34900,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "진격의 거인 더 라이벌 Chapter 01 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "쉐프루이스 칼바도스 1",
+  "producer": null,
+  "band": 2,
+  "asked": "쉐프루이스 칼바도스 1",
+  "cands": [
+   {
+    "name": "와일드 터키 101 1L",
+    "won": 44900,
+    "vol": null
+   },
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 1L",
+    "won": 34900,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "진격의 거인 더 라이벌 Chapter 01 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "스티브매든 피펜 꼬냑 Cognac Pippen",
+  "producer": null,
+  "band": 4,
+  "asked": "스티브매든 피펜 꼬냑",
+  "cands": [
+   {
+    "name": "브레드 앤 버터 피노 누아",
+    "won": 29900,
+    "vol": null
+   },
+   {
+    "name": "프레시넷 꼬든 네그로 까바 브뤼",
+    "won": 18900,
+    "vol": null
+   },
+   {
+    "name": "굴레 바이 꼬스 데스뚜르넬 2014",
+    "won": 49900,
+    "vol": null
+   },
+   {
+    "name": "샴페인 제이 꽁떼 페레 에 피스 브뤼",
+    "won": 43900,
+    "vol": null
+   },
+   {
+    "name": "브레드 앤 버터 피노 누아",
+    "won": 32000,
+    "vol": null
+   },
+   {
+    "name": "코노 수르 20배럴 피노 누아",
+    "won": 49000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "시트러스 제주 감귤 브랜디 미상 25도",
+  "producer": null,
+  "band": 2,
+  "asked": "시트러스 제주 감귤",
+  "cands": [
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "김포 예주",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "경주 법주 초특선",
+    "won": 50000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 보리 소주",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 고구마 소주",
+    "won": 21900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "신례명주 50도 제주술 감귤 브랜디 시트러스",
+  "producer": null,
+  "band": 4,
+  "asked": "신례명주 제주술 감귤",
+  "cands": [
+   {
+    "name": "닷사이 준마이 다이긴죠 23 우드 케이스(감사)",
+    "won": 116900,
+    "vol": null
+   },
+   {
+    "name": "카보스 청귤 리큐르",
+    "won": 37000,
+    "vol": null
+   },
+   {
+    "name": "선비 진 제주 에디션 750ml",
+    "won": 33600,
+    "vol": null
+   },
+   {
+    "name": "정글 인 제주",
+    "won": 17000,
+    "vol": null
+   },
+   {
+    "name": "제주 펠롱 에일 1박스(24캔)",
+    "won": 64800,
+    "vol": null
+   },
+   {
+    "name": "오나이릭 우주술 선셋",
+    "won": 24600,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "아 드 푸시니 VS 퓨어 오가닉",
+  "producer": "아 드 푸시니",
+  "band": 3,
+  "asked": "아 드 푸시니",
+  "cands": [
+   {
+    "name": "아 드 푸시니 꼬냑 셀렉션",
+    "won": 95000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 슈페리어",
+    "won": 130000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 VS 퓨어오가닉",
+    "won": 99000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 VSOP 보르데리",
+    "won": 135000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 VSOP 페티티",
+    "won": 135000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 VSOP 그랜드",
+    "won": 135000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "아 드 푸시니 VSOP 퓨어 오가닉",
+  "producer": "아 드 푸시니",
+  "band": 3,
+  "asked": "아 드 푸시니",
+  "cands": [
+   {
+    "name": "아 드 푸시니 꼬냑 셀렉션",
+    "won": 95000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 슈페리어",
+    "won": 130000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 VS 퓨어오가닉",
+    "won": 99000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 VSOP 보르데리",
+    "won": 135000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 VSOP 페티티",
+    "won": 135000,
+    "vol": null
+   },
+   {
+    "name": "아 드 푸시니 꼬냑 VSOP 그랜드",
+    "won": 135000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "알도 Carnaby 꼬냑 Cognac Colby",
+  "producer": null,
+  "band": 4,
+  "asked": "알도 Carnaby 꼬냑",
+  "cands": [
+   {
+    "name": "프레시넷 꼬든 네그로 까바 브뤼",
+    "won": 18900,
+    "vol": null
+   },
+   {
+    "name": "굴레 바이 꼬스 데스뚜르넬 2014",
+    "won": 49900,
+    "vol": null
+   },
+   {
+    "name": "[9월 행사] 몬테스 알파 까베르네 소비뇽 2013",
+    "won": 35000,
+    "vol": null
+   },
+   {
+    "name": "루이 자도 샤블리",
+    "won": 45600,
+    "vol": null
+   },
+   {
+    "name": "몬테스 알파 까베르네 소비뇽",
+    "won": 41000,
+    "vol": null
+   },
+   {
+    "name": "몬테스 알파 까베르네 소비뇽",
+    "won": 34900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "애플리즈 금과명주",
+  "producer": "한국애플리즈",
+  "band": 2,
+  "asked": "애플리즈 금과명주",
+  "cands": [
+   {
+    "name": "금과명주",
+    "won": 34400,
+    "vol": null
+   },
+   {
+    "name": "금과명주",
+    "won": 42000,
+    "vol": null
+   },
+   {
+    "name": "예산 애플리어 캔 500ml",
+    "won": 4500,
+    "vol": null
+   },
+   {
+    "name": "금과명주 375ml",
+    "won": 19000,
+    "vol": null
+   },
+   {
+    "name": "금과명주 375ml",
+    "won": 19000,
+    "vol": null
+   },
+   {
+    "name": "금과명주 세트",
+    "won": 55000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "오매락퍽",
+  "producer": "배상면주가",
+  "band": 3,
+  "asked": "오매락퍽",
+  "cands": [
+   {
+    "name": "오매락퍽 세레머니주 40",
+    "won": 70000,
+    "vol": null
+   },
+   {
+    "name": "오매락 2종 선물 세트",
+    "won": 84600,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "오매락퍽 한국형 브랜디 세레머니주 40도",
+  "producer": null,
+  "band": 3,
+  "asked": "오매락퍽 한국형 브랜디",
+  "cands": [
+   {
+    "name": "디카이퍼 애프리콧 브랜디",
+    "won": 15900,
+    "vol": null
+   },
+   {
+    "name": "디카이퍼 애프리콧 브랜디",
+    "won": 22500,
+    "vol": null
+   },
+   {
+    "name": "브랜드 나파밸리 N95 까베르네 소비뇽",
+    "won": 259000,
+    "vol": null
+   },
+   {
+    "name": "타운 브랜치 7년 켄터키 싱글몰트 위스키",
+    "won": 95000,
+    "vol": null
+   },
+   {
+    "name": "오매락퍽 세레머니주 40",
+    "won": 70000,
+    "vol": null
+   },
+   {
+    "name": "우메슈 브랜디",
+    "won": 40000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "오크통에 잠긴 사과증류주 향기 칼바도스 향수 센트라이브러리",
+  "producer": null,
+  "band": 2,
+  "asked": "오크통에 잠긴 사과증류주",
+  "cands": [
+   {
+    "name": "천년의 잠 보리 소주",
+    "won": 85000,
+    "vol": null
+   },
+   {
+    "name": "제임슨 블랙 배럴 전용잔 패키지(오크통 하이볼잔, 오크통 샷 잔)",
+    "won": 62900,
+    "vol": null
+   },
+   {
+    "name": "비긴 19",
+    "won": 5900,
+    "vol": null
+   },
+   {
+    "name": "[1병 6900원 입니다] 비긴 19",
+    "won": 6900,
+    "vol": null
+   },
+   {
+    "name": "글렌 엘긴 12년",
+    "won": 78000,
+    "vol": null
+   },
+   {
+    "name": "글렌 엘긴 18년",
+    "won": 570000,
+    "vol": null
+   }
+  ]
+ }
+]

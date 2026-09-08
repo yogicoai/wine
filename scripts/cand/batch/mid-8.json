@@ -1,0 +1,669 @@
+[
+ {
+  "cat": "brandy",
+  "ours": "우먼 앤클라인 Elani - 꼬냑",
+  "producer": null,
+  "band": 4,
+  "asked": "우먼 앤클라인 Elani",
+  "cands": [
+   {
+    "name": "그란츠 트리플 우드 1L",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "우노 프리미티보 디 만두리아",
+    "won": 22900,
+    "vol": null
+   },
+   {
+    "name": "닷사이 준마이 다이긴죠 23 우드 케이스(닷사이)",
+    "won": 113900,
+    "vol": null
+   },
+   {
+    "name": "닷사이 준마이 다이긴죠 23 우드 케이스(감사)",
+    "won": 116900,
+    "vol": null
+   },
+   {
+    "name": "그란츠 트리플 우드 700ml",
+    "won": 16500,
+    "vol": null
+   },
+   {
+    "name": "그란츠 트리플 우드 1L",
+    "won": 19900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "웨스트콕 아이리쉬칼바도스캐스크 입",
+  "producer": null,
+  "band": 3,
+  "asked": "웨스트콕 아이리쉬칼바도스캐스크 입",
+  "cands": [
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   },
+   {
+    "name": "N-888 프리미엄",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 마산 정종 2병 선물 세트",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블루 말띠 에디션 스탬프 패키지 ver.2",
+    "won": 398000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "추사 40 오크 사과 브랜디 증류주",
+  "producer": null,
+  "band": 2,
+  "asked": "추사 40 오크",
+  "cands": [
+   {
+    "name": "[지금바로 픽업가능 금토는 24시간 운영중] 추사 40% 500ml",
+    "won": 67000,
+    "vol": null
+   },
+   {
+    "name": "추사 40% 500ml",
+    "won": 67000,
+    "vol": null
+   },
+   {
+    "name": "추사 40% 200ml 2병 세트",
+    "won": 60000,
+    "vol": null
+   },
+   {
+    "name": "[지금바로 픽업가능] 추사 40% 200ml",
+    "won": 30000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "쿠르부아지에 VSOP",
+  "producer": "쿠르부아지에",
+  "band": 3,
+  "asked": "쿠르부아지에 VSOP",
+  "cands": [
+   {
+    "name": "꾸브와제 VSOP 1L",
+    "won": 59899,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "쿠르부아지에 XO",
+  "producer": "쿠르부아지에",
+  "band": 4,
+  "asked": "쿠르부아지에 XO",
+  "cands": [
+   {
+    "name": "꾸브와제 XO",
+    "won": 310000,
+    "vol": null
+   },
+   {
+    "name": "꾸브와제 XO",
+    "won": 126711,
+    "vol": null
+   },
+   {
+    "name": "꾸브와제 XO 로얄",
+    "won": 196504,
+    "vol": null
+   },
+   {
+    "name": "꾸브와제 XO 1L",
+    "won": 176176,
+    "vol": null
+   },
+   {
+    "name": "[신형입니다] 꾸브와제 XO(구형)",
+    "won": 310000,
+    "vol": null
+   },
+   {
+    "name": "꾸브와제 XO 1L",
+    "won": 389000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "타미힐피거 리비 - 꼬냑",
+  "producer": null,
+  "band": 3,
+  "asked": "타미힐피거 리비 -",
+  "cands": [
+   {
+    "name": "콥케 파인 루비 포트",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "시바스 리갈 12년 500ml",
+    "won": 34000,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블랙 루비",
+    "won": 58900,
+    "vol": null
+   },
+   {
+    "name": "시바스 리갈 12년",
+    "won": 39900,
+    "vol": null
+   },
+   {
+    "name": "시바스 리갈 18년 700ml",
+    "won": 119000,
+    "vol": null
+   },
+   {
+    "name": "반피, 로사 리갈",
+    "won": 34900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "토레스 15",
+  "producer": "토레스",
+  "band": 3,
+  "asked": "토레스 15",
+  "cands": [
+   {
+    "name": "다이야메 900ml 25%",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "더 글렌그란트 15년 배치 스트렝스 말띠 에디션 전용잔 패키지(스템노징 글라스 2개)",
+    "won": 110000,
+    "vol": null
+   },
+   {
+    "name": "[9/9(수) 앵콜 종료] 닷사이 준마이 다이긴죠 45",
+    "won": 36900,
+    "vol": null
+   },
+   {
+    "name": "와일드 터키 101 1L",
+    "won": 44900,
+    "vol": null
+   },
+   {
+    "name": "조니워커 그린 15년 700ml 전용잔 세트",
+    "won": 78500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 고호 준마이 다이긴죠 이치비 35",
+    "won": 39500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "페르 마글루아르 VSOP",
+  "producer": "페르 마글루아르",
+  "band": 3,
+  "asked": "페르 마글루아르 VSOP",
+  "cands": [
+   {
+    "name": "헤네시 VSOP",
+    "won": 78000,
+    "vol": null
+   },
+   {
+    "name": "헤네시 VSOP",
+    "won": 88200,
+    "vol": null
+   },
+   {
+    "name": "헨리 무니에 VSOP",
+    "won": 59900,
+    "vol": null
+   },
+   {
+    "name": "처음처럼 새로 페트 200ml",
+    "won": 1300,
+    "vol": null
+   },
+   {
+    "name": "샴페인 제이 꽁떼 페레 에 피스 브뤼",
+    "won": 43900,
+    "vol": null
+   },
+   {
+    "name": "생 레미 VSOP",
+    "won": 28900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "폴 지로 VSOP",
+  "producer": "폴 지로",
+  "band": 3,
+  "asked": "폴 지로 VSOP",
+  "cands": [
+   {
+    "name": "구로 기리시마 900ml",
+    "won": 22500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 구로 기리시마 EX 900ml",
+    "won": 24300,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "피스코 카펠",
+  "producer": "카펠",
+  "band": 2,
+  "asked": "피스코 카펠",
+  "cands": [
+   {
+    "name": "지오그라피코, 보스코 델 그릴로 고베르노",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "카스 신선픽업 1박스(24캔)",
+    "won": 32900,
+    "vol": null
+   },
+   {
+    "name": "카스 신선픽업 패키지",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "카스 신선픽업 1박스(24캔)",
+    "won": 32900,
+    "vol": null
+   },
+   {
+    "name": "[제주 지역 픽업] 카스 신선픽업 패키지",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "라펠 카릴리사 모스카토 다스티 D.O.C.G",
+    "won": 13900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "하인 레어 VSOP",
+  "producer": "하인",
+  "band": 3,
+  "asked": "하인 레어 VSOP",
+  "cands": [
+   {
+    "name": "진격의 거인 더 파이널 컷 Chapter 02 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 레드",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "오차드 레인 말보로 소비뇽 블랑",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 레드",
+    "won": 17000,
+    "vol": null
+   },
+   {
+    "name": "테리토리오 레드",
+    "won": 13800,
+    "vol": null
+   },
+   {
+    "name": "테일러 셀렉트 리저브 포트 와인",
+    "won": 18900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "한국 애플리즈 금과 명주 40도 애플 브랜디",
+  "producer": null,
+  "band": 2,
+  "asked": "한국 애플리즈 금과",
+  "cands": [
+   {
+    "name": "[4개 9,000원] 한맥 엑스트라 크리미 생 330ml",
+    "won": 2550,
+    "vol": null
+   },
+   {
+    "name": "한맥 엑스트라 크리미 거품기 세트",
+    "won": 20200,
+    "vol": null
+   },
+   {
+    "name": "한맥 엑스트라 크리미 생 330ml 6캔 패키지(캔 핸들 포함)",
+    "won": 10300,
+    "vol": null
+   },
+   {
+    "name": "한산 소곡주 1.8L",
+    "won": 36900,
+    "vol": null
+   },
+   {
+    "name": "강산주조 한산 소곡주 16% 750ml",
+    "won": 16500,
+    "vol": null
+   },
+   {
+    "name": "소플리차 보드카 모과 리큐르",
+    "won": 20000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "한국애플리즈 애플리즈 금과명주 40도 750ml_ 애플브랜디",
+  "producer": null,
+  "band": 2,
+  "asked": "한국애플리즈 애플리즈 금과명주",
+  "cands": [
+   {
+    "name": "금과명주",
+    "won": 34400,
+    "vol": null
+   },
+   {
+    "name": "금과명주",
+    "won": 42000,
+    "vol": null
+   },
+   {
+    "name": "예산 애플리어 캔 500ml",
+    "won": 4500,
+    "vol": null
+   },
+   {
+    "name": "금과명주 375ml",
+    "won": 19000,
+    "vol": null
+   },
+   {
+    "name": "금과명주 375ml",
+    "won": 19000,
+    "vol": null
+   },
+   {
+    "name": "금과명주 세트",
+    "won": 45800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "헤네시 패러디",
+  "producer": null,
+  "band": 5,
+  "asked": "헤네시 패러디",
+  "cands": [
+   {
+    "name": "헤네시 VSOP",
+    "won": 78000,
+    "vol": null
+   },
+   {
+    "name": "헤네시 VSOP",
+    "won": 88200,
+    "vol": null
+   },
+   {
+    "name": "헤네시 XO",
+    "won": 339000,
+    "vol": null
+   },
+   {
+    "name": "헤네시 VSOP 미들 어텀 페스티벌 에디션 2026",
+    "won": 79900,
+    "vol": null
+   },
+   {
+    "name": "헤네시 XO",
+    "won": 328900,
+    "vol": null
+   },
+   {
+    "name": "헤네시 VSOP(구형)",
+    "won": 87000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "sake",
+  "ours": "겟케이칸 다이긴조",
+  "producer": "겟케이칸(月桂冠)",
+  "band": 2,
+  "asked": "겟케이칸 다이긴조",
+  "cands": [
+   {
+    "name": "닷사이 준마이 다이긴죠 39",
+    "won": 42800,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 닷사이 준마이 다이긴죠 23",
+    "won": 89900,
+    "vol": null
+   },
+   {
+    "name": "쿠보타 준마이 다이긴죠",
+    "won": 32900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 치타네노히구라 오토코야마 준마이 다이긴죠",
+    "won": 25700,
+    "vol": null
+   },
+   {
+    "name": "[9/9(수) 앵콜 종료] 닷사이 준마이 다이긴죠 45",
+    "won": 36900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 타테노카와 준마이 다이긴죠 세이류",
+    "won": 29900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "sake",
+  "ours": "겟케이칸 츠키",
+  "producer": "겟케이칸(月桂冠)",
+  "band": 1,
+  "asked": "겟케이칸 츠키",
+  "cands": [
+   {
+    "name": "와일드 터키 레어브리드",
+    "won": 75000,
+    "vol": null
+   },
+   {
+    "name": "와일드 터키 101 1L",
+    "won": 44900,
+    "vol": null
+   },
+   {
+    "name": "와일드 터키 101 750ml 전용잔 패키지(온더락 잔 2개)",
+    "won": 39900,
+    "vol": null
+   },
+   {
+    "name": "와일드 터키 101 750ml",
+    "won": 39800,
+    "vol": null
+   },
+   {
+    "name": "와일드 터키 101 8년 플라스크 패키지",
+    "won": 54800,
+    "vol": null
+   },
+   {
+    "name": "와일드 터키 101 750ml",
+    "won": 39900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "sake",
+  "ours": "고쿄 준마이긴조",
+  "producer": "사카이주조(酒井酒造)",
+  "band": 2,
+  "asked": "고쿄 준마이긴조",
+  "cands": [
+   {
+    "name": "[마감 D-1] 고호 준마이 다이긴죠 이치비 35",
+    "won": 39500,
+    "vol": null
+   },
+   {
+    "name": "고래 사케 720ml",
+    "won": 7900,
+    "vol": null
+   },
+   {
+    "name": "고래 사케 1.8L",
+    "won": 12900,
+    "vol": null
+   },
+   {
+    "name": "백년의 고독",
+    "won": 119000,
+    "vol": null
+   },
+   {
+    "name": "헤븐사케 LABEL AZUL 준마이긴죠 레지스 카뮤 X 시치켄",
+    "won": 89900,
+    "vol": null
+   },
+   {
+    "name": "카츠야마 준마이긴죠 레이",
+    "won": 69900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "sake",
+  "ours": "고쿠류 다이긴조 류",
+  "producer": "고쿠류주조(黒龍酒造)",
+  "band": 3,
+  "asked": "고쿠류 다이긴조 류",
+  "cands": [
+   {
+    "name": "닷사이 준마이 다이긴죠 39",
+    "won": 42800,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 닷사이 준마이 다이긴죠 23",
+    "won": 89900,
+    "vol": null
+   },
+   {
+    "name": "쿠보타 준마이 다이긴죠",
+    "won": 32900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 치타네노히구라 오토코야마 준마이 다이긴죠",
+    "won": 25700,
+    "vol": null
+   },
+   {
+    "name": "[9/9(수) 앵콜 종료] 닷사이 준마이 다이긴죠 45",
+    "won": 36900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 타테노카와 준마이 다이긴죠 세이류",
+    "won": 29900,
+    "vol": null
+   }
+  ]
+ }
+]

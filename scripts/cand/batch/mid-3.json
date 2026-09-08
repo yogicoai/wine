@@ -1,0 +1,609 @@
+[
+ {
+  "cat": "soju",
+  "ours": "이제우린",
+  "producer": "Sunyang Soju (선양소주, formerly Mackiss Company)",
+  "band": 1,
+  "asked": "이제우린",
+  "cands": [
+   {
+    "name": "이제 우린 병 360ml",
+    "won": 1900,
+    "vol": null
+   },
+   {
+    "name": "이제 우린 병 360ml",
+    "won": 1900,
+    "vol": null
+   },
+   {
+    "name": "이제 우린 페트 640ml",
+    "won": 3300,
+    "vol": null
+   },
+   {
+    "name": "이제 우린 페트 640ml",
+    "won": 3300,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "일품진로 리미티드 에디션 23년",
+  "producer": null,
+  "band": 5,
+  "asked": "일품진로 리미티드 에디션",
+  "cands": [
+   {
+    "name": "더 글렌그란트 15년 배치 스트렝스 말띠 에디션 전용잔 패키지(스템노징 글라스 2개)",
+    "won": 110000,
+    "vol": null
+   },
+   {
+    "name": "더 글렌그란트 12년 말띠 에디션 전용잔 패키지(스템노징 글라스 2개)",
+    "won": 57800,
+    "vol": null
+   },
+   {
+    "name": "안동맥주 경화수월 만취 에디션",
+    "won": 12900,
+    "vol": null
+   },
+   {
+    "name": "장솔주 일타강사 백사부 역천 에디션",
+    "won": 13900,
+    "vol": null
+   },
+   {
+    "name": "화요 진심 정관장 홍삼주 에디션 750ml",
+    "won": 66000,
+    "vol": null
+   },
+   {
+    "name": "장솔주 일타강사 백사부 청룡 에디션",
+    "won": 13900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "자두에이슬",
+  "producer": "HiteJinro (하이트진로)",
+  "band": 1,
+  "asked": "자두에이슬",
+  "cands": [
+   {
+    "name": "자몽에이슬 병 360ml",
+    "won": 2000,
+    "vol": null
+   },
+   {
+    "name": "[1병 2000원 입니다] 자몽에이슬 병 360ml",
+    "won": 2000,
+    "vol": null
+   },
+   {
+    "name": "자몽에이슬 병 360ml",
+    "won": 2000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "자연과사람 우리소주조합 강릉소주 25도",
+  "producer": null,
+  "band": 1,
+  "asked": "자연과사람 우리소주조합 강릉소주",
+  "cands": [
+   {
+    "name": "강릉 소주",
+    "won": 5900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "제주 고소리술",
+  "producer": null,
+  "band": 3,
+  "asked": "제주 고소리술",
+  "cands": [
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "김포 예주",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "경주 법주 초특선",
+    "won": 50000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 보리 소주",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 고구마 소주",
+    "won": 21900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "제주샘 고소리술 40도",
+  "producer": null,
+  "band": 2,
+  "asked": "제주샘 고소리술 40도",
+  "cands": [
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "[지금바로 픽업가능 금토는 24시간 운영중] 추사 40% 500ml",
+    "won": 67000,
+    "vol": null
+   },
+   {
+    "name": "킷도 준마이 다이긴죠 야마다 40",
+    "won": 45900,
+    "vol": null
+   },
+   {
+    "name": "유래 포트 캐스크 피니시 40% 750ml",
+    "won": 139000,
+    "vol": null
+   },
+   {
+    "name": "밀담 40% 360ml",
+    "won": 13800,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 안동소주 일품 골드 블랙 40% 500ml",
+    "won": 35900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "조은술세종 유기농 쌀소주 이도",
+  "producer": null,
+  "band": 1,
+  "asked": "조은술세종 유기농 쌀소주",
+  "cands": [
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 보리 소주",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 고구마 소주",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "멧챠우마 고구마 소주 2L",
+    "won": 26900,
+    "vol": null
+   },
+   {
+    "name": "마오우 마왕 메이몬노이키 고구마 소주",
+    "won": 82000,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 디스틸러데어 하우스 오크 소주",
+    "won": 8000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "조은술세종 이도 42도",
+  "producer": null,
+  "band": 2,
+  "asked": "조은술세종 이도 42도",
+  "cands": [
+   {
+    "name": "이연 38 2병 선물 세트",
+    "won": 31900,
+    "vol": null
+   },
+   {
+    "name": "노주노교 블랙 42% 500ml",
+    "won": 14900,
+    "vol": null
+   },
+   {
+    "name": "노주노교 블랙 42% 500ml 잔세트",
+    "won": 19000,
+    "vol": null
+   },
+   {
+    "name": "요카이치 이모",
+    "won": 36000,
+    "vol": null
+   },
+   {
+    "name": "레몬진 제로 9도 캔 500ml 6캔 세트",
+    "won": 12900,
+    "vol": null
+   },
+   {
+    "name": "성도인상 팬더 42% 500ml",
+    "won": 18000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "좋은데이 복숭아",
+  "producer": "Muhak (무학)",
+  "band": 1,
+  "asked": "좋은데이 복숭아",
+  "cands": [
+   {
+    "name": "오롯이 복숭아 스파클링 와인 375ml",
+    "won": 11800,
+    "vol": null
+   },
+   {
+    "name": "우메노야도 아라고시 복숭아",
+    "won": 47500,
+    "vol": null
+   },
+   {
+    "name": "호오비덴 모모(복숭아)",
+    "won": 56100,
+    "vol": null
+   },
+   {
+    "name": "오롯이 복숭아 라이트 스파클링",
+    "won": 5900,
+    "vol": null
+   },
+   {
+    "name": "뻬띠엉 드 리스텔 복숭아",
+    "won": 15000,
+    "vol": null
+   },
+   {
+    "name": "좋은데이 깔라만시",
+    "won": 2000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "좋은데이 석류",
+  "producer": "Muhak (무학)",
+  "band": 1,
+  "asked": "좋은데이 석류",
+  "cands": [
+   {
+    "name": "좋은데이 석류톡톡 병 360ml",
+    "won": 2000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "좋은데이 유자",
+  "producer": "Muhak (무학)",
+  "band": 1,
+  "asked": "좋은데이 유자",
+  "cands": [
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "츠루우메 유즈",
+    "won": 39500,
+    "vol": null
+   },
+   {
+    "name": "[추석 특가] 분자 기프트 세트 전용 아이스 큐브 세트",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "분자",
+    "won": 69000,
+    "vol": null
+   },
+   {
+    "name": "츠루우메 유즈",
+    "won": 52000,
+    "vol": null
+   },
+   {
+    "name": "유래 포트 캐스크 피니시 40% 750ml",
+    "won": 139000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "좋은데이 자몽",
+  "producer": "Muhak (무학)",
+  "band": 1,
+  "asked": "좋은데이 자몽",
+  "cands": [
+   {
+    "name": "자쿠 미야비노토모 나카도리 준마이 다이긴죠",
+    "won": 39500,
+    "vol": null
+   },
+   {
+    "name": "공부가주 자약",
+    "won": 34500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 자쿠 임프레션 G 준마이 겐슈",
+    "won": 39900,
+    "vol": null
+   },
+   {
+    "name": "자쿠 카이잔-잇테키스이 준마이 다이긴죠",
+    "won": 88900,
+    "vol": null
+   },
+   {
+    "name": "공부가주 자약",
+    "won": 34000,
+    "vol": null
+   },
+   {
+    "name": "공부가주 자약",
+    "won": 41500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "주향25 쌀증류주 25% 담을술공방",
+  "producer": null,
+  "band": 1,
+  "asked": "주향25 쌀증류주 25%",
+  "cands": [
+   {
+    "name": "다이야메 900ml 25%",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 닷사이 준마이 다이긴죠 23",
+    "won": 89900,
+    "vol": null
+   },
+   {
+    "name": "더 글렌그란트 15년 배치 스트렝스 말띠 에디션 전용잔 패키지(스템노징 글라스 2개)",
+    "won": 110000,
+    "vol": null
+   },
+   {
+    "name": "[9/9(수) 앵콜 종료] 닷사이 준마이 다이긴죠 45",
+    "won": 36900,
+    "vol": null
+   },
+   {
+    "name": "더 글렌그란트 12년 말띠 에디션 전용잔 패키지(스템노징 글라스 2개)",
+    "won": 57800,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "죽향도가 죽향41 골드라벨 41도",
+  "producer": null,
+  "band": 2,
+  "asked": "죽향도가 죽향41 골드",
+  "cands": [
+   {
+    "name": "죽향 41 골드",
+    "won": 37000,
+    "vol": null
+   },
+   {
+    "name": "죽향 41 골드",
+    "won": 37000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "진로 이즈백",
+  "producer": "HiteJinro (하이트진로)",
+  "band": 1,
+  "asked": "진로 이즈백",
+  "cands": [
+   {
+    "name": "진로이즈백 병 360ml",
+    "won": 1800,
+    "vol": null
+   },
+   {
+    "name": "[맥주/소주] 진로이즈백 병 360ml",
+    "won": 5000,
+    "vol": null
+   },
+   {
+    "name": "진로이즈백 병 360ml",
+    "won": 1800,
+    "vol": null
+   },
+   {
+    "name": "진로이즈백 페트 640ml",
+    "won": 3300,
+    "vol": null
+   },
+   {
+    "name": "진로이즈백 페트 640ml",
+    "won": 3300,
+    "vol": null
+   },
+   {
+    "name": "진로 이즈 백 페트 400ml",
+    "won": 2100,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "참이슬 담금주",
+  "producer": "HiteJinro (하이트진로)",
+  "band": 1,
+  "asked": "참이슬 담금주",
+  "cands": [
+   {
+    "name": "참이슬 페트 640ml",
+    "won": 3300,
+    "vol": null
+   },
+   {
+    "name": "황금주",
+    "won": 28000,
+    "vol": null
+   },
+   {
+    "name": "참이슬 페트 200ml",
+    "won": 1700,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 서울릉 이슬 팜하우스 에일 4캔 세트",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "참이슬 오리지널 360ml",
+    "won": 1900,
+    "vol": null
+   },
+   {
+    "name": "[24시간 픽업 가능] 참이슬 오리지널 360ml",
+    "won": 1500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "참조은 전통 증류소주 20.5도",
+  "producer": null,
+  "band": 1,
+  "asked": "참조은 전통 증류소주",
+  "cands": [
+   {
+    "name": "[추석 특가] 분자 기프트 세트 전용 아이스 큐브 세트",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "느린 마을 증류주",
+    "won": 2900,
+    "vol": null
+   },
+   {
+    "name": "안동 일품 소주 전통 라호 전용잔 패키지",
+    "won": 37000,
+    "vol": null
+   },
+   {
+    "name": "느린 마을 증류주 8병 세트",
+    "won": 23300,
+    "vol": null
+   },
+   {
+    "name": "느린 마을 증류주 70ml 미니어처 4병 세트",
+    "won": 9900,
+    "vol": null
+   },
+   {
+    "name": "압생트 전용 스푼+잔 패키지",
+    "won": 74000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "최강록쉐프 프리미엄 네오40 40도 가루미",
+  "producer": null,
+  "band": 2,
+  "asked": "최강록쉐프 프리미엄 네오40",
+  "cands": [
+   {
+    "name": "N-888 프리미엄",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 프리미엄 몰츠 마스터즈 드림 맥주 350ml 6캔 세트",
+    "won": 38200,
+    "vol": null
+   },
+   {
+    "name": "산토리 프리미엄 몰트 캔 500ml 전용잔 세트",
+    "won": 27800,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 프리미엄 몰츠 마스터즈 드림 맥주 350ml 1박스(24캔)",
+    "won": 149000,
+    "vol": null
+   },
+   {
+    "name": "산토리 프리미엄 몰트 캔 500ml 4캔 세트",
+    "won": 13000,
+    "vol": null
+   },
+   {
+    "name": "옐로우 로즈 프리미엄 아메리칸 위스키",
+    "won": 43000,
+    "vol": null
+   }
+  ]
+ }
+]

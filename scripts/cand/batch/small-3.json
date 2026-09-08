@@ -1,0 +1,564 @@
+[
+ {
+  "cat": "highball",
+  "ours": "카브루 레디 하이볼 클래식",
+  "producer": "카브루 (이마트24)",
+  "band": 1,
+  "asked": "카브루 레디 하이볼",
+  "cands": [
+   {
+    "name": "무초 마스 레드",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "오차드 레인 말보로 소비뇽 블랑",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 레드",
+    "won": 17000,
+    "vol": null
+   },
+   {
+    "name": "하쿠타케 카오루 900ml",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "테리토리오 레드",
+    "won": 13800,
+    "vol": null
+   },
+   {
+    "name": "킨즈마라울리 마라니 킨즈마라울리 레드 세미 스위트",
+    "won": 38900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "highball",
+  "ours": "하이볼에 빠진 레몬",
+  "producer": "세븐브로이",
+  "band": 1,
+  "asked": "하이볼에 빠진 레몬",
+  "cands": [
+   {
+    "name": "진격의 거인 더 파이널 컷 Chapter 02 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 레드",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "오차드 레인 말보로 소비뇽 블랑",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 레드",
+    "won": 17000,
+    "vol": null
+   },
+   {
+    "name": "테리토리오 레드",
+    "won": 13800,
+    "vol": null
+   },
+   {
+    "name": "진격의 거인 더 라이벌 Chapter 01 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "highball",
+  "ours": "호로요이 백포도",
+  "producer": "산토리",
+  "band": 1,
+  "asked": "호로요이 백포도",
+  "cands": [
+   {
+    "name": "264 청포도 와인 절정 750ml 2병 세트",
+    "won": 56900,
+    "vol": null
+   },
+   {
+    "name": "산토리 카나데 하쿠토(백도)",
+    "won": 47900,
+    "vol": null
+   },
+   {
+    "name": "264 청포도 와인 절정 750ml",
+    "won": 28800,
+    "vol": null
+   },
+   {
+    "name": "이상한 나라의 카시스 칠흑 카시스와 흑포도",
+    "won": 38700,
+    "vol": null
+   },
+   {
+    "name": "오롯이 포도 스파클링",
+    "won": 5900,
+    "vol": null
+   },
+   {
+    "name": "264 청포도 와인 꽃 750ml 2병 세트",
+    "won": 56900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "Monkey 47 Gin",
+  "producer": null,
+  "band": 4,
+  "asked": "Monkey 47 Gin",
+  "cands": [
+   {
+    "name": "[9/9(수) 앵콜 종료] 닷사이 준마이 다이긴죠 45",
+    "won": 36900,
+    "vol": null
+   },
+   {
+    "name": "진격의 거인 더 파이널 컷 Chapter 02 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "몽키숄더",
+    "won": 51900,
+    "vol": null
+   },
+   {
+    "name": "진격의 거인 더 라이벌 Chapter 01 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "크로넨버그 1664 블랑 캔 500ml 4캔 세트",
+    "won": 9000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "대대로영농 프리미엄 진도 홍주 40도",
+  "producer": null,
+  "band": 2,
+  "asked": "대대로영농 프리미엄 진도",
+  "cands": [
+   {
+    "name": "진격의 거인 더 파이널 컷 Chapter 02 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "진격의 거인 더 라이벌 Chapter 01 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "킷도 준마이 다이긴죠",
+    "won": 29900,
+    "vol": null
+   },
+   {
+    "name": "진격의 거인 더 브리치 Chapter 03 오리지널 진",
+    "won": 69000,
+    "vol": null
+   },
+   {
+    "name": "화요 진심 정관장 홍삼주 에디션 750ml",
+    "won": 66000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 바탕 배럴 2026 싱글 캐스크 정원 진 캐스크",
+    "won": 29000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "문경주조 폭스진 25도",
+  "producer": null,
+  "band": 1,
+  "asked": "문경주조 폭스진",
+  "cands": [
+   {
+    "name": "문경주조 폭스진 200ml",
+    "won": 15500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "부들스",
+  "producer": "프록시모 스피리츠",
+  "band": 2,
+  "asked": "부들스",
+  "cands": [
+   {
+    "name": "부커스 2026-01E",
+    "won": 198000,
+    "vol": null
+   },
+   {
+    "name": "부커스 2025-01E",
+    "won": 235000,
+    "vol": null
+   },
+   {
+    "name": "부커스",
+    "won": 240000,
+    "vol": null
+   },
+   {
+    "name": "부커스 2026-01E",
+    "won": 209900,
+    "vol": null
+   },
+   {
+    "name": "부커스 2024-01E",
+    "won": 299000,
+    "vol": null
+   },
+   {
+    "name": "부커스 2023-01E",
+    "won": 360000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "부자진",
+  "producer": "부자진 (BUJA GIN)",
+  "band": 3,
+  "asked": "부자진",
+  "cands": [
+   {
+    "name": "부자 진 서울 525ml",
+    "won": 79000,
+    "vol": null
+   },
+   {
+    "name": "부자 진 서울 200ml",
+    "won": 36000,
+    "vol": null
+   },
+   {
+    "name": "[선물용으로 최고입니다] 부자 진 오크",
+    "won": 140000,
+    "vol": null
+   },
+   {
+    "name": "부자 진 오미자",
+    "won": 69900,
+    "vol": null
+   },
+   {
+    "name": "부자 진 2023 디스틸러즈 컷(탱자)",
+    "won": 120000,
+    "vol": null
+   },
+   {
+    "name": "부자 진 2025 디스틸러즈 컷(미나리)",
+    "won": 100000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "불독 런던 드라이 진",
+  "producer": "불독 진 (캄파리 그룹)",
+  "band": 2,
+  "asked": "불독 런던 드라이",
+  "cands": [
+   {
+    "name": "58진, 런던 드라이",
+    "won": 74000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "브리즈앤스트림 나물 진 47도 산나물 진 지관통",
+  "producer": null,
+  "band": 2,
+  "asked": "브리즈앤스트림 나물 진",
+  "cands": [
+   {
+    "name": "나물 진",
+    "won": 32500,
+    "vol": null
+   },
+   {
+    "name": "나물 진",
+    "won": 39000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "블룸 런던 드라이 진",
+  "producer": "G&J 디스틸러스 (G&J Distillers)",
+  "band": 2,
+  "asked": "블룸 런던 드라이",
+  "cands": [
+   {
+    "name": "58진, 런던 드라이",
+    "won": 74000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "술샘 퍼플진 36.5도 오미자가 첨가된 한국적인 진",
+  "producer": null,
+  "band": 2,
+  "asked": "술샘 퍼플진 오미자가",
+  "cands": [
+   {
+    "name": "유키노마유 준마이 다이긴죠 히이레(퍼플)",
+    "won": 34900,
+    "vol": null
+   },
+   {
+    "name": "새로 오미자 360ml",
+    "won": 1900,
+    "vol": null
+   },
+   {
+    "name": "술샘 16%",
+    "won": 12000,
+    "vol": null
+   },
+   {
+    "name": "돈나푸가타 술 불카노 비앙코",
+    "won": 59000,
+    "vol": null
+   },
+   {
+    "name": "퍼플 진",
+    "won": 37000,
+    "vol": null
+   },
+   {
+    "name": "술샘 19",
+    "won": 12000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "술샘 퍼플진 오미자 과실 진 36.5도",
+  "producer": null,
+  "band": 2,
+  "asked": "술샘 퍼플진 오미자",
+  "cands": [
+   {
+    "name": "오미네 3츠부 사이토노 시즈쿠",
+    "won": 43900,
+    "vol": null
+   },
+   {
+    "name": "오미네 3츠부 야마다니시키",
+    "won": 37900,
+    "vol": null
+   },
+   {
+    "name": "오미네 3츠부 오마치 히야오로시",
+    "won": 41900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 오미네 3츠부 아이야마 히이레",
+    "won": 42900,
+    "vol": null
+   },
+   {
+    "name": "유키노마유 준마이 다이긴죠 히이레(퍼플)",
+    "won": 34900,
+    "vol": null
+   },
+   {
+    "name": "오미네 3츠부 데와산산 히이레",
+    "won": 43900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "술하우스 문경주조 폭스진 진 수제증류주 도",
+  "producer": null,
+  "band": 2,
+  "asked": "술하우스 문경주조 폭스진",
+  "cands": [
+   {
+    "name": "[공동구매 취소 수량] 디스틸러데어 하우스 오크 소주",
+    "won": 8000,
+    "vol": null
+   },
+   {
+    "name": "노르딕 진 하우스 코펜하겐 네이비 스트렝스 진",
+    "won": 57600,
+    "vol": null
+   },
+   {
+    "name": "컴파스 박스 오차드 하우스",
+    "won": 80000,
+    "vol": null
+   },
+   {
+    "name": "머드 하우스 소비뇽 블랑",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 서울릉 이슬 팜하우스 에일 4캔 세트",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "문경주조 폭스진 200ml",
+    "won": 15500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "시타델",
+  "producer": "메종 페랑",
+  "band": 3,
+  "asked": "시타델",
+  "cands": [
+   {
+    "name": "시타델 오리지날",
+    "won": 56000,
+    "vol": null
+   },
+   {
+    "name": "시타델 오리지날",
+    "won": 56000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "코퍼헤드 런던 드라이 진",
+  "producer": null,
+  "band": 4,
+  "asked": "코퍼헤드 런던 드라이",
+  "cands": [
+   {
+    "name": "58진, 런던 드라이",
+    "won": 74000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "키노비",
+  "producer": "교토 디스틸러리",
+  "band": 4,
+  "asked": "키노비",
+  "cands": [
+   {
+    "name": "키노비 교토 드라이 진",
+    "won": 49000,
+    "vol": null
+   },
+   {
+    "name": "키노비 200ml 3종 패키지",
+    "won": 109900,
+    "vol": null
+   },
+   {
+    "name": "키노비 교토 드라이 진",
+    "won": 52400,
+    "vol": null
+   },
+   {
+    "name": "키노비 세이 교토 드라이 진",
+    "won": 89300,
+    "vol": null
+   },
+   {
+    "name": "키노비 세이 교토 드라이 진",
+    "won": 59000,
+    "vol": null
+   },
+   {
+    "name": "키노비 세이 교토 드라이 진",
+    "won": 46957,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "gin",
+  "ours": "탱커레이",
+  "producer": "디아지오",
+  "band": 2,
+  "asked": "탱커레이",
+  "cands": [
+   {
+    "name": "텐커레이 No.10",
+    "won": 58000,
+    "vol": null
+   },
+   {
+    "name": "텐커레이 진 750ml",
+    "won": 28000,
+    "vol": null
+   },
+   {
+    "name": "텐커레이 진 700ml",
+    "won": 39000,
+    "vol": null
+   },
+   {
+    "name": "텐커레이 No.10",
+    "won": 41900,
+    "vol": null
+   },
+   {
+    "name": "텐커레이 No.10 1L",
+    "won": 44044,
+    "vol": null
+   },
+   {
+    "name": "텐커레이 런던 드라이 진 1L",
+    "won": 33000,
+    "vol": null
+   }
+  ]
+ }
+]

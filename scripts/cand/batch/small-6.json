@@ -1,0 +1,649 @@
+[
+ {
+  "cat": "baijiu",
+  "ours": "로얄팀버레드 고량주 53도 금강송심재 숙성 한국고량주",
+  "producer": null,
+  "band": 4,
+  "asked": "로얄팀버레드 고량주 금강송심재",
+  "cands": [
+   {
+    "name": "연태 고량주 골드 500ml",
+    "won": 16000,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 1L",
+    "won": 30000,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 250ml",
+    "won": 10200,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 타이페이 고량주 길상 300ml",
+    "won": 11900,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 타이페이 고량주 부귀 300ml",
+    "won": 10700,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 500ml",
+    "won": 16000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "마깨주 서울고량주 2종",
+  "producer": null,
+  "band": 2,
+  "asked": "마깨주 서울고량주 2종",
+  "cands": [
+   {
+    "name": "다이야메 900ml 25%",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 닷사이 준마이 다이긴죠 23",
+    "won": 89900,
+    "vol": null
+   },
+   {
+    "name": "더 글렌그란트 15년 배치 스트렝스 말띠 에디션 전용잔 패키지(스템노징 글라스 2개)",
+    "won": 110000,
+    "vol": null
+   },
+   {
+    "name": "더 글렌그란트 12년 말띠 에디션 전용잔 패키지(스템노징 글라스 2개)",
+    "won": 57800,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 레드",
+    "won": 8500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "백주 구성",
+  "producer": null,
+  "band": 3,
+  "asked": "백주 구성",
+  "cands": [
+   {
+    "name": "구로 기리시마 900ml",
+    "won": 22500,
+    "vol": null
+   },
+   {
+    "name": "진격의 거인 더 파이널 컷 Chapter 02 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 구로 기리시마 EX 900ml",
+    "won": 24300,
+    "vol": null
+   },
+   {
+    "name": "김포 예주",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "진격의 거인 더 라이벌 Chapter 01 캐스크 숙성 진",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "경주 법주 초특선",
+    "won": 50000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "보배고량주 소 35도",
+  "producer": null,
+  "band": 1,
+  "asked": "보배고량주 소",
+  "cands": [
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   },
+   {
+    "name": "N-888 프리미엄",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 마산 정종 2병 선물 세트",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블루 말띠 에디션 스탬프 패키지 ver.2",
+    "won": 398000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "북경고량주 50%",
+  "producer": null,
+  "band": 3,
+  "asked": "북경고량주 50%",
+  "cands": [
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "화요 53 500ml",
+    "won": 46900,
+    "vol": null
+   },
+   {
+    "name": "노주노교 보신 판다주 52%",
+    "won": 20500,
+    "vol": null
+   },
+   {
+    "name": "금문고량주 블랙 58% 600ml",
+    "won": 71900,
+    "vol": null
+   },
+   {
+    "name": "월계관 준마이 750",
+    "won": 14900,
+    "vol": null
+   },
+   {
+    "name": "아드벡 위 비스티 5년",
+    "won": 68300,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "사천 고량주",
+  "producer": null,
+  "band": 2,
+  "asked": "사천 고량주",
+  "cands": [
+   {
+    "name": "사천고량주 500ml",
+    "won": 15000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "서울 고량주 붉은말 춘식이 에디션 25도",
+  "producer": null,
+  "band": 2,
+  "asked": "서울 고량주 붉은말",
+  "cands": [
+   {
+    "name": "서울고량주 레드",
+    "won": 8500,
+    "vol": null
+   },
+   {
+    "name": "[9/9(수) 앵콜 마감] 서울고량주 레드 전용잔 선물 세트",
+    "won": 32800,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 레드 2병 세트",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 춘식 에디션 25도 변색잔 패키지",
+    "won": 15000,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 레드",
+    "won": 12400,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 오크",
+    "won": 15200,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "서울고량주",
+  "producer": "농업회사법인 한국고량주",
+  "band": 1,
+  "asked": "서울고량주",
+  "cands": [
+   {
+    "name": "서울고량주 레드",
+    "won": 8500,
+    "vol": null
+   },
+   {
+    "name": "[9/9(수) 앵콜 마감] 서울고량주 레드 전용잔 선물 세트",
+    "won": 32800,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 레드 2병 세트",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 춘식 에디션 25도 변색잔 패키지",
+    "won": 15000,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 레드",
+    "won": 12400,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 오크",
+    "won": 15200,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "설원고량주 연태고량주 대용량 집안 모임",
+  "producer": null,
+  "band": 2,
+  "asked": "설원고량주 연태고량주 대용량",
+  "cands": [
+   {
+    "name": "연태고량 백년노장",
+    "won": 95135,
+    "vol": null
+   },
+   {
+    "name": "연태고량 백년노장",
+    "won": 350000,
+    "vol": null
+   },
+   {
+    "name": "연태고량 1930",
+    "won": 130000,
+    "vol": null
+   },
+   {
+    "name": "연태고량 백년노장 53%",
+    "won": 214500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "스테인리스 술병 술통 백주 소주 증류주 보관",
+  "producer": null,
+  "band": 2,
+  "asked": "스테인리스 술병 술통",
+  "cands": [
+   {
+    "name": "[마감 D-1] 마산 정종 2병 선물 세트",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "화로17 375ml 6병 세트",
+    "won": 22400,
+    "vol": null
+   },
+   {
+    "name": "이연 38 2병 선물 세트",
+    "won": 31900,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 올라 덥 하이랜드 파크 캐스크 숙성 맥주 3병 패키지(12년 2병, 18년 1병)",
+    "won": 37900,
+    "vol": null
+   },
+   {
+    "name": "경주 법주 초특선 2병 세트",
+    "won": 99000,
+    "vol": null
+   },
+   {
+    "name": "[4개 14,000원] 아사히 병 640ml",
+    "won": 4900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "연태고량주",
+  "producer": "연태양조유한공사",
+  "band": 1,
+  "asked": "연태고량주",
+  "cands": [
+   {
+    "name": "연태 고량주 골드 500ml",
+    "won": 16000,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 1L",
+    "won": 30000,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 250ml",
+    "won": 10200,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 500ml",
+    "won": 16000,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 250ml",
+    "won": 10500,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 골드 500ml",
+    "won": 12300,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "용봉주조 용봉백주 오향주 단품",
+  "producer": null,
+  "band": 1,
+  "asked": "용봉주조 용봉백주 오향주",
+  "cands": [
+   {
+    "name": "발레앙 테시니에 오다주",
+    "won": 346900,
+    "vol": null
+   },
+   {
+    "name": "앙리 지로, 오마주 오 피노 누아 브뤼",
+    "won": 171900,
+    "vol": null
+   },
+   {
+    "name": "[마감] 삼분수 오마주",
+    "won": 81900,
+    "vol": null
+   },
+   {
+    "name": "부안 해풍 오디주",
+    "won": 12000,
+    "vol": null
+   },
+   {
+    "name": "부안 해풍 오디주",
+    "won": 12000,
+    "vol": null
+   },
+   {
+    "name": "크리스찬 드루앵 오다주",
+    "won": 220000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "우량액",
+  "producer": "의빈오량액그룹",
+  "band": 5,
+  "asked": "우량액",
+  "cands": [
+   {
+    "name": "우량예 첨장고광",
+    "won": 29000,
+    "vol": null
+   },
+   {
+    "name": "우량예 우량춘",
+    "won": 124000,
+    "vol": null
+   },
+   {
+    "name": "우량예 39%",
+    "won": 443000,
+    "vol": null
+   },
+   {
+    "name": "우량예 52%",
+    "won": 429000,
+    "vol": null
+   },
+   {
+    "name": "우량예 52%",
+    "won": 158558,
+    "vol": null
+   },
+   {
+    "name": "우량예 52% 선물세트",
+    "won": 499000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "이연 고량주",
+  "producer": "한국고량주",
+  "band": 1,
+  "asked": "이연 고량주",
+  "cands": [
+   {
+    "name": "연태 고량주 골드 500ml",
+    "won": 16000,
+    "vol": null
+   },
+   {
+    "name": "이연 38 2병 선물 세트",
+    "won": 31900,
+    "vol": null
+   },
+   {
+    "name": "요카이치 이모",
+    "won": 36000,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 1L",
+    "won": 30000,
+    "vol": null
+   },
+   {
+    "name": "연태 고량주 250ml",
+    "won": 10200,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 타이페이 고량주 길상 300ml",
+    "won": 11900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "장솔주 분주기",
+  "producer": null,
+  "band": 2,
+  "asked": "장솔주 분주기",
+  "cands": [
+   {
+    "name": "장솔주 500ml 2병 분주기 패키지",
+    "won": 40000,
+    "vol": null
+   },
+   {
+    "name": "장솔주 500ml 2병 분주기 패키지",
+    "won": 31900,
+    "vol": null
+   },
+   {
+    "name": "장솔주 일타강사 백사부 역천 에디션",
+    "won": 13900,
+    "vol": null
+   },
+   {
+    "name": "장솔주 500ml",
+    "won": 15900,
+    "vol": null
+   },
+   {
+    "name": "장솔주 500ml",
+    "won": 12500,
+    "vol": null
+   },
+   {
+    "name": "장솔주 일타강사 백사부 청룡 에디션",
+    "won": 13900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "중국 백주",
+  "producer": null,
+  "band": 2,
+  "asked": "중국 백주",
+  "cands": [
+   {
+    "name": "김포 예주",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "경주 법주 초특선",
+    "won": 50000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 보리 소주",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 고구마 소주",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "멧챠우마 고구마 소주 2L",
+    "won": 26900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "포러스)연태고량주",
+  "producer": null,
+  "band": 1,
+  "asked": "포러스)연태고량주",
+  "cands": [
+   {
+    "name": "[9월 행사] 조쉬 셀러스 까베르네 소비뇽",
+    "won": 25000,
+    "vol": null
+   },
+   {
+    "name": "포울스, 레이디스 후 슛 데얼 런치 샤르도네",
+    "won": 59000,
+    "vol": null
+   },
+   {
+    "name": "[쉬라즈 인기상품] 포울스, 레이디스 후 슛 데얼 런치 쉬라즈",
+    "won": 59000,
+    "vol": null
+   },
+   {
+    "name": "연태고량 백년노장",
+    "won": 95135,
+    "vol": null
+   },
+   {
+    "name": "연태고량 백년노장",
+    "won": 350000,
+    "vol": null
+   },
+   {
+    "name": "연태고량 1930",
+    "won": 130000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "푸바오 고량주",
+  "producer": null,
+  "band": 2,
+  "asked": "푸바오 고량주",
+  "cands": [
+   {
+    "name": "푸바오 고량주 2병 선물 세트",
+    "won": 32000,
+    "vol": null
+   },
+   {
+    "name": "푸바오 고량주 2병 선물 세트",
+    "won": 19000,
+    "vol": null
+   }
+  ]
+ }
+]

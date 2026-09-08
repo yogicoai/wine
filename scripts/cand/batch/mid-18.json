@@ -1,0 +1,589 @@
+[
+ {
+  "cat": "beer",
+  "ours": "스미딕스 아이리시 레드 에일",
+  "producer": "스미딕스(Smithwick's)",
+  "band": 1,
+  "asked": "스미딕스 아이리시 레드",
+  "cands": [
+   {
+    "name": "무초 마스 레드",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 레드",
+    "won": 17000,
+    "vol": null
+   },
+   {
+    "name": "테리토리오 레드",
+    "won": 13800,
+    "vol": null
+   },
+   {
+    "name": "킨즈마라울리 마라니 킨즈마라울리 레드 세미 스위트",
+    "won": 38900,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 레드",
+    "won": 8500,
+    "vol": null
+   },
+   {
+    "name": "[9/9(수) 앵콜 마감] 서울고량주 레드 전용잔 선물 세트",
+    "won": 32800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "스타로프라멘 프리미엄 라거",
+  "producer": "스타로프라멘(Staropramen)",
+  "band": 1,
+  "asked": "스타로프라멘 프리미엄 라거",
+  "cands": [
+   {
+    "name": "배비치 블랙 라벨 말보로 소비뇽 블랑",
+    "won": 20800,
+    "vol": null
+   },
+   {
+    "name": "N-888 프리미엄",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "뵈브 클리코 옐로우 라벨",
+    "won": 77000,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 프리미엄 몰츠 마스터즈 드림 맥주 350ml 6캔 세트",
+    "won": 38200,
+    "vol": null
+   },
+   {
+    "name": "러셀 리저브 싱글배럴 라이",
+    "won": 79800,
+    "vol": null
+   },
+   {
+    "name": "배비치 블랙 라벨 말보로 소비뇽 블랑",
+    "won": 22900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "아잉거 셀레브라토어",
+  "producer": "아잉거(Ayinger)",
+  "band": 1,
+  "asked": "아잉거 셀레브라토어",
+  "cands": [
+   {
+    "name": "아잉거 브로바이스",
+    "won": 5900,
+    "vol": null
+   },
+   {
+    "name": "아잉거 우르바이스",
+    "won": 5900,
+    "vol": null
+   },
+   {
+    "name": "아잉거 브로바이스 500ml 1박스 (20병)",
+    "won": 120000,
+    "vol": null
+   },
+   {
+    "name": "아잉거 우르바이스 500ml 1박스 (20병)",
+    "won": 120000,
+    "vol": null
+   },
+   {
+    "name": "아잉거 야훈데르트",
+    "won": 5900,
+    "vol": null
+   },
+   {
+    "name": "[1박스 20병입니다] 아잉거 셀레브레이터 도펠복",
+    "won": 230000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "오트 노어폴로지 IPA",
+  "producer": null,
+  "band": 3,
+  "asked": "오트 노어폴로지 IPA",
+  "cands": [
+   {
+    "name": "아사히 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "조니워커 그린 15년 700ml 전용잔 세트",
+    "won": 78500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 파스 시 비트 그랑 리저브 GSM",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 파스 시 비트 그랑 리저브 샤르도네",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "웨스트말레 트리펠",
+  "producer": "웨스트말레 트라피스트 수도원",
+  "band": 1,
+  "asked": "웨스트말레 트리펠",
+  "cands": [
+   {
+    "name": "트리펠 까르멜리엇 750ml",
+    "won": 15900,
+    "vol": null
+   },
+   {
+    "name": "그란츠 트리플 우드 1L",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "볼스 트리플 섹",
+    "won": 15900,
+    "vol": null
+   },
+   {
+    "name": "글렌피딕 12년 트리플 오크",
+    "won": 77000,
+    "vol": null
+   },
+   {
+    "name": "디카이퍼 트리플 섹",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "볼스 트리플 섹",
+    "won": 13900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "유니언잭 IPA 캔 *",
+  "producer": null,
+  "band": 2,
+  "asked": "유니언잭 IPA 캔",
+  "cands": [
+   {
+    "name": "아사히 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   },
+   {
+    "name": "크로넨버그 1664 블랑 캔 500ml 4캔 세트",
+    "won": 9000,
+    "vol": null
+   },
+   {
+    "name": "[4개 12,000원] 파울라너 옥토버페스트 비어 캔 500ml",
+    "won": 4500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "제주 거멍 에일",
+  "producer": "제주맥주",
+  "band": 1,
+  "asked": "제주 거멍 에일",
+  "cands": [
+   {
+    "name": "[24캔 65400원 입니다] 제주 거멍 에일 1박스(24캔)",
+    "won": 65400,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "제주 슬라이스",
+  "producer": "제주맥주",
+  "band": 1,
+  "asked": "제주 슬라이스",
+  "cands": [
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "김포 예주",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "경주 법주 초특선",
+    "won": 50000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 보리 소주",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 고구마 소주",
+    "won": 21900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "제주 위트 에일",
+  "producer": "제주맥주",
+  "band": 1,
+  "asked": "제주 위트 에일",
+  "cands": [
+   {
+    "name": "[4캔 10900원입니다] 제주 위트 에일 캔 500ml",
+    "won": 10900,
+    "vol": null
+   },
+   {
+    "name": "[4개 13,000원] 제주 위트 에일 캔 500ml",
+    "won": 4200,
+    "vol": null
+   },
+   {
+    "name": "제주 위트 에일 1박스(24캔)",
+    "won": 64800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "제주 펠롱 에일",
+  "producer": "제주맥주",
+  "band": 1,
+  "asked": "제주 펠롱 에일",
+  "cands": [
+   {
+    "name": "제주 펠롱 에일 1박스(24캔)",
+    "won": 64800,
+    "vol": null
+   },
+   {
+    "name": "[1캔에 3000원 입니다] 제주 펠롱 에일 캔 500ml",
+    "won": 3000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "창",
+  "producer": "타이베버리지(ThaiBev)",
+  "band": 1,
+  "asked": "창",
+  "cands": [
+   {
+    "name": "[선물용으로 최고입니다] 창 클래식 맥주",
+    "won": 3000,
+    "vol": null
+   },
+   {
+    "name": "해창 12%",
+    "won": 16600,
+    "vol": null
+   },
+   {
+    "name": "고창명주 복분자 선물 세트 1호",
+    "won": 25000,
+    "vol": null
+   },
+   {
+    "name": "해창 9% 3병 세트",
+    "won": 28800,
+    "vol": null
+   },
+   {
+    "name": "해창 12%",
+    "won": 24000,
+    "vol": null
+   },
+   {
+    "name": "해창 2종 세트(9%, 12%)",
+    "won": 26400,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "첫사랑 IPA 캔",
+  "producer": null,
+  "band": 1,
+  "asked": "첫사랑 IPA 캔",
+  "cands": [
+   {
+    "name": "[3개 12,900원] 첫사랑 IPA 캔 500ml",
+    "won": 4500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "카브루 IPA",
+  "producer": null,
+  "band": 3,
+  "asked": "카브루 IPA",
+  "cands": [
+   {
+    "name": "하쿠타케 카오루 900ml",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "[4개 12,000원] 미켈러 버스트 IPA 500ml",
+    "won": 4500,
+    "vol": null
+   },
+   {
+    "name": "[4개 13,000원] 구스 아일랜드 IPA 캔 473ml",
+    "won": 4900,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 레볼루션 브루잉 헤이지 히어로 IPA 6캔 세트",
+    "won": 39000,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 구스 아일랜드 배럴 에이지드 서울 IPA",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "파운더스 올데이 IPA 355ml 6병 세트",
+    "won": 35900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "카스 0.0",
+  "producer": "오비맥주",
+  "band": 1,
+  "asked": "카스 0.0",
+  "cands": [
+   {
+    "name": "카스 0.0 캔 500ml",
+    "won": 2800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "카스 라이트",
+  "producer": "오비맥주",
+  "band": 1,
+  "asked": "카스 라이트",
+  "cands": [
+   {
+    "name": "카스 라이트 캔 330ml 6캔 세트",
+    "won": 8900,
+    "vol": null
+   },
+   {
+    "name": "[4개 11,000원] 카스 라이트 캔 500ml",
+    "won": 2800,
+    "vol": null
+   },
+   {
+    "name": "[4개 10,000원] 카스 라이트 캔 355ml",
+    "won": 2500,
+    "vol": null
+   },
+   {
+    "name": "카스 라이트 페트 1.6L",
+    "won": 8300,
+    "vol": null
+   },
+   {
+    "name": "카스 라이트 페트 1.6L",
+    "won": 8300,
+    "vol": null
+   },
+   {
+    "name": "카스 라이트 캔 355ml 1박스(24캔)",
+    "won": 41000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "카스 레몬 스퀴즈",
+  "producer": "오비맥주",
+  "band": 1,
+  "asked": "카스 레몬 스퀴즈",
+  "cands": [
+   {
+    "name": "카스 레몬 스퀴즈 7.0 4캔 세트",
+    "won": 12000,
+    "vol": null
+   },
+   {
+    "name": "[4개 10,000원] 카스 레몬 스퀴즈 캔 355ml",
+    "won": 2500,
+    "vol": null
+   },
+   {
+    "name": "[4개 11,000원] 카스 레몬 스퀴즈 캔 500ml",
+    "won": 2800,
+    "vol": null
+   },
+   {
+    "name": "[4개 12,000원] 카스 레몬 스퀴즈 7.0 500ml",
+    "won": 4900,
+    "vol": null
+   },
+   {
+    "name": "카스 레몬 스퀴즈 0.0 캔 473ml",
+    "won": 2800,
+    "vol": null
+   },
+   {
+    "name": "카스 레몬 스퀴즈 캔 500ml 4캔 세트",
+    "won": 11000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "카스 프레시",
+  "producer": "오비맥주",
+  "band": 1,
+  "asked": "카스 프레시",
+  "cands": [
+   {
+    "name": "[4개 11,000원] 카스 프레시 아이스 캔 464ml",
+    "won": 2800,
+    "vol": null
+   },
+   {
+    "name": "카스 신선픽업 1박스(24캔)",
+    "won": 32900,
+    "vol": null
+   },
+   {
+    "name": "카스 신선픽업 패키지",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "카스 신선픽업 1박스(24캔)",
+    "won": 32900,
+    "vol": null
+   },
+   {
+    "name": "[제주 지역 픽업] 카스 신선픽업 패키지",
+    "won": 19800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "코나 빅 웨이브",
+  "producer": "코나 브루잉(AB인베브)",
+  "band": 1,
+  "asked": "코나 빅 웨이브",
+  "cands": [
+   {
+    "name": "[1병 4500원 입니다] 코나 빅 웨이브 리퀴드 알로하 355ml",
+    "won": 5000,
+    "vol": null
+   },
+   {
+    "name": "빅웨이브 1박스(24캔)",
+    "won": 73900,
+    "vol": null
+   },
+   {
+    "name": "빅웨이브 1박스(24캔)",
+    "won": 114000,
+    "vol": null
+   },
+   {
+    "name": "[3개 12,900원] 빅웨이브 캔 473ml",
+    "won": 5400,
+    "vol": null
+   },
+   {
+    "name": "빅웨이브 캔 473ml",
+    "won": 3900,
+    "vol": null
+   },
+   {
+    "name": "[전국최저가에 도전합니다] 빅웨이브 473ml 4캔 세트",
+    "won": 18000,
+    "vol": null
+   }
+  ]
+ }
+]

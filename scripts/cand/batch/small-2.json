@@ -1,0 +1,644 @@
+[
+ {
+  "cat": "vodka",
+  "ours": "케틀원",
+  "producer": "놀렛 디스틸러리(디아지오)",
+  "band": 2,
+  "asked": "케틀원",
+  "cands": [
+   {
+    "name": "케틀원 보드카",
+    "won": 56400,
+    "vol": null
+   },
+   {
+    "name": "케틀원 보드카",
+    "won": 55000,
+    "vol": null
+   },
+   {
+    "name": "케틀 원 보드카",
+    "won": 66000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "vodka",
+  "ours": "핀란디아",
+  "producer": "코카콜라 HBC",
+  "band": 1,
+  "asked": "핀란디아",
+  "cands": [
+   {
+    "name": "핀란디아 라임",
+    "won": 37900,
+    "vol": null
+   },
+   {
+    "name": "핀란디아 라임",
+    "won": 35500,
+    "vol": null
+   },
+   {
+    "name": "핀란디아 보드카",
+    "won": 29700,
+    "vol": null
+   },
+   {
+    "name": "핀란디아 보드카",
+    "won": 39000,
+    "vol": null
+   },
+   {
+    "name": "[구형] 핀란디아 자몽",
+    "won": 29000,
+    "vol": null
+   },
+   {
+    "name": "핀란디아 플래티넘",
+    "won": 65000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "vodka",
+  "ours": "하쿠",
+  "producer": "산토리",
+  "band": 2,
+  "asked": "하쿠",
+  "cands": [
+   {
+    "name": "하쿠라쿠세이 준마이 긴죠",
+    "won": 34900,
+    "vol": null
+   },
+   {
+    "name": "하쿠타케 카오루 900ml",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "하쿠쯔루 준마이 다이긴죠",
+    "won": 26400,
+    "vol": null
+   },
+   {
+    "name": "하쿠라쿠세이 준마이 다이긴죠",
+    "won": 39900,
+    "vol": null
+   },
+   {
+    "name": "하쿠타케 시로 쌀 소주",
+    "won": 24600,
+    "vol": null
+   },
+   {
+    "name": "하쿠슈 DR",
+    "won": 210000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "liqueur",
+  "ours": "그랑 마니에르",
+  "producer": "마르니에 라포스톨 (캄파리 그룹)",
+  "band": 3,
+  "asked": "그랑 마니에르",
+  "cands": [
+   {
+    "name": "그랑 마르니에",
+    "won": 59900,
+    "vol": null
+   },
+   {
+    "name": "그랑 마르니에",
+    "won": 45900,
+    "vol": null
+   },
+   {
+    "name": "그랑 마르니에 350ml",
+    "won": 34900,
+    "vol": null
+   },
+   {
+    "name": "그랑 마르니에 1L",
+    "won": 58000,
+    "vol": null
+   },
+   {
+    "name": "그랑 마르니에 퀸테센스",
+    "won": 2585721,
+    "vol": null
+   },
+   {
+    "name": "그랑 마르니에 미니어처",
+    "won": 9000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "liqueur",
+  "ours": "디사론노 오리지날레",
+  "producer": "일바 사론노 (Illva Saronno)",
+  "band": 2,
+  "asked": "디사론노 오리지날레",
+  "cands": [
+   {
+    "name": "디사론노",
+    "won": 42000,
+    "vol": null
+   },
+   {
+    "name": "디사론노",
+    "won": 44900,
+    "vol": null
+   },
+   {
+    "name": "디사론노 200ml",
+    "won": 18900,
+    "vol": null
+   },
+   {
+    "name": "리코 43 오리지날 700ml",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "디사론노 벨벳 700ml",
+    "won": 46000,
+    "vol": null
+   },
+   {
+    "name": "번하임 오리지날 7년 켄터키 스트레이트 위트 위스키",
+    "won": 96000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "liqueur",
+  "ours": "미도리 멜론",
+  "producer": "산토리 (Suntory)",
+  "band": 2,
+  "asked": "미도리 멜론",
+  "cands": [
+   {
+    "name": "[2022 매그넘] 장 루이 샤브 셀렉시옹 꼬뜨 뒤 론 몽 꼬르",
+    "won": 83000,
+    "vol": null
+   },
+   {
+    "name": "론 코리나 151 1L",
+    "won": 30000,
+    "vol": null
+   },
+   {
+    "name": "미도리 700ml",
+    "won": 38000,
+    "vol": null
+   },
+   {
+    "name": "미도리 750ml",
+    "won": 39000,
+    "vol": null
+   },
+   {
+    "name": "볼스 멜론",
+    "won": 15000,
+    "vol": null
+   },
+   {
+    "name": "볼스 멜론",
+    "won": 13900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "liqueur",
+  "ours": "베일리스 오리지널",
+  "producer": "디아지오 (Diageo)",
+  "band": 2,
+  "asked": "베일리스 오리지널",
+  "cands": [
+   {
+    "name": "진격의 거인 더 브리치 Chapter 03 오리지널 진",
+    "won": 69000,
+    "vol": null
+   },
+   {
+    "name": "글렌모렌지 디 오리지널 12년",
+    "won": 69000,
+    "vol": null
+   },
+   {
+    "name": "말리부 오리지널",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "베일리스",
+    "won": 40000,
+    "vol": null
+   },
+   {
+    "name": "말리부 오리지널",
+    "won": 22900,
+    "vol": null
+   },
+   {
+    "name": "글렌모렌지 디 오리지널 12년",
+    "won": 86300,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "liqueur",
+  "ours": "빌라 마사 리몬첼로",
+  "producer": "빌라 마사 (Villa Massa)",
+  "band": 2,
+  "asked": "빌라 마사 리몬첼로",
+  "cands": [
+   {
+    "name": "무초 마스 레드",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 레드",
+    "won": 17000,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 화이트",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 마산 정종 2병 선물 세트",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "토마시 아마로네 델라 발폴리첼라 클라시코",
+    "won": 71800,
+    "vol": null
+   },
+   {
+    "name": "모루메 아라 43% 500ml",
+    "won": 36000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "liqueur",
+  "ours": "생제르맹",
+  "producer": "쿠퍼 스피리츠 (바카디 그룹)",
+  "band": 3,
+  "asked": "생제르맹",
+  "cands": [
+   {
+    "name": "생 제르맹",
+    "won": 74000,
+    "vol": null
+   },
+   {
+    "name": "생 제르맹",
+    "won": 71000,
+    "vol": null
+   },
+   {
+    "name": "생 제르맹",
+    "won": 74200,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "liqueur",
+  "ours": "코인트로",
+  "producer": "레미 쿠앵트로 (Rémy Cointreau)",
+  "band": 2,
+  "asked": "코인트로",
+  "cands": [
+   {
+    "name": "코앵트로",
+    "won": 32000,
+    "vol": null
+   },
+   {
+    "name": "코앵트로",
+    "won": 33900,
+    "vol": null
+   },
+   {
+    "name": "코앵트로",
+    "won": 33900,
+    "vol": null
+   },
+   {
+    "name": "코앵트로",
+    "won": 37500,
+    "vol": null
+   },
+   {
+    "name": "코앵트로 1L",
+    "won": 30492,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "makgeolli",
+  "ours": "문경 오미자 생막걸리",
+  "producer": "A regional brewery in Mungyeong, Gyeongsangbuk-do (specific producer unconfirmed)",
+  "band": 1,
+  "asked": "문경 오미자 생막걸리",
+  "cands": [
+   {
+    "name": "오미네 3츠부 사이토노 시즈쿠",
+    "won": 43900,
+    "vol": null
+   },
+   {
+    "name": "오미네 3츠부 야마다니시키",
+    "won": 37900,
+    "vol": null
+   },
+   {
+    "name": "오미네 3츠부 오마치 히야오로시",
+    "won": 41900,
+    "vol": null
+   },
+   {
+    "name": "느린 마을 막걸리",
+    "won": 3100,
+    "vol": null
+   },
+   {
+    "name": "자연담은 복분자 막걸리",
+    "won": 3800,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 오미네 3츠부 아이야마 히이레",
+    "won": 42900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "highball",
+  "ours": "매실하이볼 순",
+  "producer": "보해양조 (GS25)",
+  "band": 1,
+  "asked": "매실하이볼 순",
+  "cands": [
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   },
+   {
+    "name": "N-888 프리미엄",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 마산 정종 2병 선물 세트",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블루 말띠 에디션 스탬프 패키지 ver.2",
+    "won": 398000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "highball",
+  "ours": "블랙서클 하이볼 레몬",
+  "producer": "세븐일레븐 PB · 치어리오 츄부(일본 제조)",
+  "band": 1,
+  "asked": "블랙서클 하이볼 레몬",
+  "cands": [
+   {
+    "name": "무초 마스 레드",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "오차드 레인 말보로 소비뇽 블랑",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 레드",
+    "won": 17000,
+    "vol": null
+   },
+   {
+    "name": "테리토리오 레드",
+    "won": 13800,
+    "vol": null
+   },
+   {
+    "name": "킨즈마라울리 마라니 킨즈마라울리 레드 세미 스위트",
+    "won": 38900,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 레드",
+    "won": 8500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "highball",
+  "ours": "생레몬 하이볼",
+  "producer": "부루구루",
+  "band": 1,
+  "asked": "생레몬 하이볼",
+  "cands": [
+   {
+    "name": "[3개 12,000원] 생 레몬 하이볼 500ml",
+    "won": 4500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "highball",
+  "ours": "서울의밤 유자 그린티 하이볼",
+  "producer": "더한주류",
+  "band": 1,
+  "asked": "서울의밤 유자 그린티",
+  "cands": [
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "츠루우메 유즈",
+    "won": 39500,
+    "vol": null
+   },
+   {
+    "name": "조니워커 그린 15년 700ml 전용잔 세트",
+    "won": 78500,
+    "vol": null
+   },
+   {
+    "name": "조니워커 그린 15년 700ml",
+    "won": 119000,
+    "vol": null
+   },
+   {
+    "name": "[추석 특가] 분자 기프트 세트 전용 아이스 큐브 세트",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "서봉주 그린 45%",
+    "won": 24500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "highball",
+  "ours": "서울의밤 진토닉 하이볼",
+  "producer": "더한주류",
+  "band": 1,
+  "asked": "서울의밤 진토닉 하이볼",
+  "cands": [
+   {
+    "name": "더 글렌그란트 10년 말띠 에디션 글라스 패키지(테이스팅 글라스, 하이볼 글라스)",
+    "won": 50000,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블론드 500ml 전용잔 패키지 (하이볼 글라스)",
+    "won": 20900,
+    "vol": null
+   },
+   {
+    "name": "카발란 하이볼 캔 320ml",
+    "won": 5000,
+    "vol": null
+   },
+   {
+    "name": "기원 싱글몰트 위스키 하이볼",
+    "won": 33000,
+    "vol": null
+   },
+   {
+    "name": "파이퍼 하이직 뀌베 브뤼",
+    "won": 81900,
+    "vol": null
+   },
+   {
+    "name": "[바로픽업가능] 파이퍼 하이직 뀌베 브뤼",
+    "won": 81000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "highball",
+  "ours": "어프어프 하이볼 레몬토닉",
+  "producer": "부루구루",
+  "band": 1,
+  "asked": "어프어프 하이볼 레몬토닉",
+  "cands": [
+   {
+    "name": "[3개 12,000원] 어프어프 자몽 레몬토닉 하이볼 제로 500ml",
+    "won": 4500,
+    "vol": null
+   },
+   {
+    "name": "[3개 12,000원] 어프어프 레몬토닉 하이볼 500ml",
+    "won": 4500,
+    "vol": null
+   },
+   {
+    "name": "더 글렌그란트 10년 말띠 에디션 글라스 패키지(테이스팅 글라스, 하이볼 글라스)",
+    "won": 50000,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블론드 500ml 전용잔 패키지 (하이볼 글라스)",
+    "won": 20900,
+    "vol": null
+   },
+   {
+    "name": "카발란 하이볼 캔 320ml",
+    "won": 5000,
+    "vol": null
+   },
+   {
+    "name": "기원 싱글몰트 위스키 하이볼",
+    "won": 33000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "highball",
+  "ours": "어프어프 하이볼 얼그레이",
+  "producer": "부루구루",
+  "band": 1,
+  "asked": "어프어프 하이볼 얼그레이",
+  "cands": [
+   {
+    "name": "[3개 12,000원] 어프어프 얼그레이 하이볼 500ml",
+    "won": 4500,
+    "vol": null
+   },
+   {
+    "name": "더 글렌그란트 10년 말띠 에디션 글라스 패키지(테이스팅 글라스, 하이볼 글라스)",
+    "won": 50000,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블론드 500ml 전용잔 패키지 (하이볼 글라스)",
+    "won": 20900,
+    "vol": null
+   },
+   {
+    "name": "카발란 하이볼 캔 320ml",
+    "won": 5000,
+    "vol": null
+   },
+   {
+    "name": "그레이 구스",
+    "won": 56000,
+    "vol": null
+   },
+   {
+    "name": "기원 싱글몰트 위스키 하이볼",
+    "won": 33000,
+    "vol": null
+   }
+  ]
+ }
+]

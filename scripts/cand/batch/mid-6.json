@@ -1,0 +1,639 @@
+[
+ {
+  "cat": "brandy",
+  "ours": "레미마틴 1738 아코드 로얄",
+  "producer": "레미마틴",
+  "band": 4,
+  "asked": "레미마틴 1738 아코드",
+  "cands": [
+   {
+    "name": "레미 마틴 1738",
+    "won": 117500,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 1738",
+    "won": 134900,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 1738",
+    "won": 150500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "레미마틴 VSOP",
+  "producer": "레미마틴",
+  "band": 3,
+  "asked": "레미마틴 VSOP",
+  "cands": [
+   {
+    "name": "레미 마틴 VSOP",
+    "won": 77000,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 VSOP",
+    "won": 89900,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 VSOP",
+    "won": 117900,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 VSOP",
+    "won": 92900,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 VSOP 1L",
+    "won": 76026,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 VSOP 패키지(1738 미니어처 포함)",
+    "won": 110000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "레미마틴 XO",
+  "producer": "레미마틴",
+  "band": 4,
+  "asked": "레미마틴 XO",
+  "cands": [
+   {
+    "name": "레미 마틴 XO",
+    "won": 158558,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 XO",
+    "won": 269000,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 XO",
+    "won": 329000,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 XO(구형)",
+    "won": 380000,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 XO",
+    "won": 319500,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 XO(구형)",
+    "won": 335000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "레미마틴 엑스트라",
+  "producer": "레미마틴",
+  "band": 5,
+  "asked": "레미마틴 엑스트라",
+  "cands": [
+   {
+    "name": "레미 마틴 엑스트라",
+    "won": 640000,
+    "vol": null
+   },
+   {
+    "name": "[30ml] 레미 마틴 엑스트라 바이알",
+    "won": 80000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "로저 그루 레제르브",
+  "producer": "로저 그루",
+  "band": 3,
+  "asked": "로저 그루 레제르브",
+  "cands": [
+   {
+    "name": "파 로드 말보로 소비뇽 블랑",
+    "won": 16500,
+    "vol": null
+   },
+   {
+    "name": "아리온, 러스치케토 로쏘",
+    "won": 10900,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블루 750ml",
+    "won": 259000,
+    "vol": null
+   },
+   {
+    "name": "조니워커 그린 15년 700ml 전용잔 세트",
+    "won": 78500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 파스 시 비트 그랑 리저브 GSM",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 파스 시 비트 그랑 리저브 샤르도네",
+    "won": 23900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "루이 13세",
+  "producer": "레미마틴",
+  "band": 5,
+  "asked": "루이 13세",
+  "cands": [
+   {
+    "name": "루이 13세 제로보암 3L",
+    "won": 75000000,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 루이 13세 1.5L",
+    "won": 9045960,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 루이 13세 700ml",
+    "won": 7900000,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 루이 13세 700ml",
+    "won": 3709860,
+    "vol": null
+   },
+   {
+    "name": "[케이스 없음] 레미 마틴 루이 13세 미니어처",
+    "won": 850000,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 루이 13세 미니어처",
+    "won": 1219680,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "르네 뒤 아르마냑 12",
+  "producer": null,
+  "band": 4,
+  "asked": "르네 뒤 아르마냑",
+  "cands": [
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   },
+   {
+    "name": "N-888 프리미엄",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 마산 정종 2병 선물 세트",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블루 말띠 에디션 스탬프 패키지 ver.2",
+    "won": 398000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "마깨주 환희 브랜디 40도 산막와이너리 산막와인",
+  "producer": null,
+  "band": 2,
+  "asked": "마깨주 환희 브랜디",
+  "cands": [
+   {
+    "name": "[데일리샷 단독] 마깨주 찹쌀막걸리 블랙 1.5L",
+    "won": 15900,
+    "vol": null
+   },
+   {
+    "name": "마깨주 찹쌀막걸리 500ml",
+    "won": 6500,
+    "vol": null
+   },
+   {
+    "name": "마깨주 찹쌀막걸리 1L",
+    "won": 12400,
+    "vol": null
+   },
+   {
+    "name": "마깨주 찹쌀 약주 375ml",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "디카이퍼 애프리콧 브랜디",
+    "won": 15900,
+    "vol": null
+   },
+   {
+    "name": "디카이퍼 애프리콧 브랜디",
+    "won": 22500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "마르텔 VS",
+  "producer": "마르텔",
+  "band": 2,
+  "asked": "마르텔 VS",
+  "cands": [
+   {
+    "name": "마르텔 VSOP",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "마르텔 VSOP 레드 배럴스",
+    "won": 99700,
+    "vol": null
+   },
+   {
+    "name": "마르텔 VSOP 레드 배럴스",
+    "won": 72000,
+    "vol": null
+   },
+   {
+    "name": "마르텔 VSOP 레드 배럴스",
+    "won": 71066,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "마리아주 36.5% MBA포도 증류주 프리미엄 브랜디",
+  "producer": null,
+  "band": 3,
+  "asked": "마리아주 36.5% MBA포도",
+  "cands": [
+   {
+    "name": "괴즈 마리아주 파르페 750ml",
+    "won": 18800,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 크릭 마리아주 파르페 375ml",
+    "won": 17500,
+    "vol": null
+   },
+   {
+    "name": "티아 마리아 700ml",
+    "won": 33500,
+    "vol": null
+   },
+   {
+    "name": "마리아 셉 무스터 웰치리슬링 봄 오포크 2021",
+    "won": 46900,
+    "vol": null
+   },
+   {
+    "name": "에도네 뀌베 드 마리아 블랑 드 블랑 6병 세트",
+    "won": 139000,
+    "vol": null
+   },
+   {
+    "name": "마리아주",
+    "won": 107000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "밀양40",
+  "producer": "레드애플팜",
+  "band": 2,
+  "asked": "밀양40",
+  "cands": [
+   {
+    "name": "밀양 40% 375ml",
+    "won": 32200,
+    "vol": null
+   },
+   {
+    "name": "밀양 40% 375ml",
+    "won": 39000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "밀양40 오크 40도 밀양사공 사과브랜디",
+  "producer": null,
+  "band": 2,
+  "asked": "밀양40 오크 밀양사공",
+  "cands": [
+   {
+    "name": "메이커스 마크",
+    "won": 38000,
+    "vol": null
+   },
+   {
+    "name": "맥캘란 12년 셰리 오크",
+    "won": 129900,
+    "vol": null
+   },
+   {
+    "name": "소그라페 실크 앤 스파이스",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "내외 오크 컬렉션: 더 퍼스트",
+    "won": 74000,
+    "vol": null
+   },
+   {
+    "name": "메이커스 마크",
+    "won": 45900,
+    "vol": null
+   },
+   {
+    "name": "라프로익 10년 셰리 오크 피니시 700ml",
+    "won": 107000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "바야흐로 오크 40도 시나브로 청수 브랜디",
+  "producer": null,
+  "band": 3,
+  "asked": "바야흐로 오크 시나브로",
+  "cands": [
+   {
+    "name": "시나브로 바야흐로 오크",
+    "won": 72000,
+    "vol": null
+   },
+   {
+    "name": "시나브로 바야흐로 오크",
+    "won": 72000,
+    "vol": null
+   },
+   {
+    "name": "메이커스 마크",
+    "won": 38000,
+    "vol": null
+   },
+   {
+    "name": "맥캘란 12년 셰리 오크",
+    "won": 129900,
+    "vol": null
+   },
+   {
+    "name": "소그라페 실크 앤 스파이스",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "내외 오크 컬렉션: 더 퍼스트",
+    "won": 74000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "베리 리좀 꼬냑",
+  "producer": null,
+  "band": 5,
+  "asked": "베리 리좀 꼬냑",
+  "cands": [
+   {
+    "name": "블랙 닛카 리치 블렌드",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "[2023 빈티지] 케이머스 나파 밸리 까베르네 소비뇽",
+    "won": 137900,
+    "vol": null
+   },
+   {
+    "name": "시바스 리갈 12년 500ml",
+    "won": 34000,
+    "vol": null
+   },
+   {
+    "name": "아베 베가",
+    "won": 48900,
+    "vol": null
+   },
+   {
+    "name": "프레시넷 꼬든 네그로 까바 브뤼",
+    "won": 18900,
+    "vol": null
+   },
+   {
+    "name": "시바스 리갈 12년",
+    "won": 39900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "보나-리자드 꼬냑",
+  "producer": null,
+  "band": 4,
+  "asked": "보나-리자드 꼬냑",
+  "cands": [
+   {
+    "name": "루나 가이아, 지비뽀",
+    "won": 30900,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 보리 소주",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "노주노교 보신 판다주 52%",
+    "won": 20500,
+    "vol": null
+   },
+   {
+    "name": "루나 가이아, 지비뽀",
+    "won": 41000,
+    "vol": null
+   },
+   {
+    "name": "프레시넷 꼬든 네그로 까바 브뤼",
+    "won": 18900,
+    "vol": null
+   },
+   {
+    "name": "루나 가이아, 치아라몬테시 네로 다볼라",
+    "won": 33900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "부스넬 VSOP",
+  "producer": "부스넬",
+  "band": 3,
+  "asked": "부스넬 VSOP",
+  "cands": [
+   {
+    "name": "헤네시 VSOP",
+    "won": 78000,
+    "vol": null
+   },
+   {
+    "name": "헤네시 VSOP",
+    "won": 88200,
+    "vol": null
+   },
+   {
+    "name": "헨리 무니에 VSOP",
+    "won": 59900,
+    "vol": null
+   },
+   {
+    "name": "생 레미 VSOP",
+    "won": 28900,
+    "vol": null
+   },
+   {
+    "name": "헨리 무니에 VSOP",
+    "won": 62900,
+    "vol": null
+   },
+   {
+    "name": "레미 마틴 VSOP",
+    "won": 77000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "북극성 브랜디 45도",
+  "producer": null,
+  "band": 2,
+  "asked": "북극성 브랜디",
+  "cands": [
+   {
+    "name": "디카이퍼 애프리콧 브랜디",
+    "won": 15900,
+    "vol": null
+   },
+   {
+    "name": "디카이퍼 애프리콧 브랜디",
+    "won": 22500,
+    "vol": null
+   },
+   {
+    "name": "한여름 밤의 북극곰",
+    "won": 17900,
+    "vol": null
+   },
+   {
+    "name": "브랜드 나파밸리 N95 까베르네 소비뇽",
+    "won": 259000,
+    "vol": null
+   },
+   {
+    "name": "타운 브랜치 7년 켄터키 싱글몰트 위스키",
+    "won": 95000,
+    "vol": null
+   },
+   {
+    "name": "우메슈 브랜디",
+    "won": 40000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "불라르 그랑 솔라주",
+  "producer": "칼바도스 불라르",
+  "band": 2,
+  "asked": "불라르 그랑 솔라주",
+  "cands": [
+   {
+    "name": "러시안 잭 소비뇽 블랑",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "러시안 잭 소비뇽 블랑",
+    "won": 29900,
+    "vol": null
+   },
+   {
+    "name": "파 로드 말보로 소비뇽 블랑",
+    "won": 16500,
+    "vol": null
+   },
+   {
+    "name": "[한정수량 재입고] 봄바 소비뇽 블랑",
+    "won": 13900,
+    "vol": null
+   },
+   {
+    "name": "조니워커 그린 15년 700ml 전용잔 세트",
+    "won": 78500,
+    "vol": null
+   },
+   {
+    "name": "클라우디 베이 소비뇽 블랑",
+    "won": 49900,
+    "vol": null
+   }
+  ]
+ }
+]

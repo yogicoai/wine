@@ -1,0 +1,268 @@
+[
+ {
+  "cat": "baijiu",
+  "ours": "프리미엄 금문고량주 56도",
+  "producer": null,
+  "band": 4,
+  "asked": "프리미엄 금문고량주",
+  "cands": [
+   {
+    "name": "프리미엄 진년 8년 금문고량주",
+    "won": 519000,
+    "vol": null
+   },
+   {
+    "name": "프리미엄 진년 8년 금문고량주",
+    "won": 91882,
+    "vol": null
+   },
+   {
+    "name": "N-888 프리미엄",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 프리미엄 몰츠 마스터즈 드림 맥주 350ml 6캔 세트",
+    "won": 38200,
+    "vol": null
+   },
+   {
+    "name": "금문고량주 블랙 58% 600ml",
+    "won": 71900,
+    "vol": null
+   },
+   {
+    "name": "산토리 프리미엄 몰트 캔 500ml 전용잔 세트",
+    "won": 27800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "한국고량주 극락 75도",
+  "producer": null,
+  "band": 3,
+  "asked": "한국고량주 극락",
+  "cands": [
+   {
+    "name": "오리지널비어컴퍼니 불락 스타우트",
+    "won": 29900,
+    "vol": null
+   },
+   {
+    "name": "사락 골드 전용잔 패키지",
+    "won": 56000,
+    "vol": null
+   },
+   {
+    "name": "셀락 소비뇽 블랑",
+    "won": 17900,
+    "vol": null
+   },
+   {
+    "name": "사락 골드",
+    "won": 26074,
+    "vol": null
+   },
+   {
+    "name": "사락 골드",
+    "won": 51200,
+    "vol": null
+   },
+   {
+    "name": "더 위스키 테일즈 몰트 더 락 베이스 리나 2012 벤 네비스 12년",
+    "won": 287000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "한국고량주 김수한무 39도",
+  "producer": null,
+  "band": 3,
+  "asked": "한국고량주 김수한무",
+  "cands": [
+   {
+    "name": "김수한무 고량주",
+    "won": 49800,
+    "vol": null
+   },
+   {
+    "name": "[선물용으로 최고입니다] 김수한무 고량주",
+    "won": 99000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "한국고량주 로얄 팀버레드 53도",
+  "producer": null,
+  "band": 4,
+  "asked": "한국고량주 로얄 팀버레드",
+  "cands": [
+   {
+    "name": "[당일픽업가능] 로얄 팀버레드",
+    "won": 130000,
+    "vol": null
+   },
+   {
+    "name": "로얄 팀버레드",
+    "won": 124800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "한국고량주 서울고량주 레드 35도",
+  "producer": null,
+  "band": 1,
+  "asked": "한국고량주 서울고량주 레드",
+  "cands": [
+   {
+    "name": "서울고량주 레드",
+    "won": 8500,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 레드",
+    "won": 12400,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 레드 & 오크 선물 세트",
+    "won": 26000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "한국고량주 오크 40도 x 오크통숙성",
+  "producer": null,
+  "band": 2,
+  "asked": "한국고량주 오크 x",
+  "cands": [
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 구로 기리시마 EX 900ml",
+    "won": 24300,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "메이커스 마크",
+    "won": 38000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   },
+   {
+    "name": "맥캘란 12년 셰리 오크",
+    "won": 129900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "한국고량주 이연 38도 이연복셰프공동개발",
+  "producer": null,
+  "band": 1,
+  "asked": "한국고량주 이연 이연복셰프공동개발",
+  "cands": [
+   {
+    "name": "이연 38 2병 선물 세트",
+    "won": 31900,
+    "vol": null
+   },
+   {
+    "name": "요카이치 이모",
+    "won": 36000,
+    "vol": null
+   },
+   {
+    "name": "[공동구매 취소 수량] 서울릉 이슬 팜하우스 에일 4캔 세트",
+    "won": 23900,
+    "vol": null
+   },
+   {
+    "name": "이본 끌레제 볼네이 레 쁘띠 푸아소",
+    "won": 193000,
+    "vol": null
+   },
+   {
+    "name": "모엣 샹동 로제 임페리얼 2025 엔드 오브 이어 에디션",
+    "won": 93900,
+    "vol": null
+   },
+   {
+    "name": "카 데이 프라티 이 프라티 루가나",
+    "won": 35900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "한국고량주 한국고량주 김수한무고량주 39도",
+  "producer": null,
+  "band": 3,
+  "asked": "한국고량주 한국고량주 김수한무고량주",
+  "cands": [
+   {
+    "name": "김수한무 고량주",
+    "won": 49800,
+    "vol": null
+   },
+   {
+    "name": "[선물용으로 최고입니다] 김수한무 고량주",
+    "won": 99000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "baijiu",
+  "ours": "한통술 이화백주 25도",
+  "producer": null,
+  "band": 1,
+  "asked": "한통술 이화백주",
+  "cands": [
+   {
+    "name": "이화주",
+    "won": 8000,
+    "vol": null
+   },
+   {
+    "name": "이화백주",
+    "won": 14000,
+    "vol": null
+   },
+   {
+    "name": "이화주",
+    "won": 9000,
+    "vol": null
+   },
+   {
+    "name": "대나무 통술",
+    "won": 3600,
+    "vol": null
+   }
+  ]
+ }
+]

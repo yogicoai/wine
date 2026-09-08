@@ -1,0 +1,40 @@
+[
+ {
+  "ours": "문경 오미자 생막걸리",
+  "producer": "A regional brewery in Mungyeong, Gyeongsangbuk-do (specific producer unconfirmed)",
+  "band": 1,
+  "asked": "문경 오미자 생막걸리",
+  "cands": [
+   {
+    "name": "오미네 3츠부 사이토노 시즈쿠",
+    "won": 43900,
+    "vol": null
+   },
+   {
+    "name": "오미네 3츠부 야마다니시키",
+    "won": 37900,
+    "vol": null
+   },
+   {
+    "name": "오미네 3츠부 오마치 히야오로시",
+    "won": 41900,
+    "vol": null
+   },
+   {
+    "name": "느린 마을 막걸리",
+    "won": 3100,
+    "vol": null
+   },
+   {
+    "name": "자연담은 복분자 막걸리",
+    "won": 3800,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 오미네 3츠부 아이야마 히이레",
+    "won": 42900,
+    "vol": null
+   }
+  ]
+ }
+]

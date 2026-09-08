@@ -1,0 +1,704 @@
+[
+ {
+  "cat": "soju",
+  "ours": "토끼소주 화이트 23도",
+  "producer": null,
+  "band": 1,
+  "asked": "토끼소주 화이트 23도",
+  "cands": [
+   {
+    "name": "[마감 D-1] 닷사이 준마이 다이긴죠 23",
+    "won": 89900,
+    "vol": null
+   },
+   {
+    "name": "짐빔 화이트 750ml",
+    "won": 22000,
+    "vol": null
+   },
+   {
+    "name": "무초 마스 화이트",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "닷사이 준마이 다이긴죠 23",
+    "won": 158000,
+    "vol": null
+   },
+   {
+    "name": "짐빔 화이트 1L",
+    "won": 28900,
+    "vol": null
+   },
+   {
+    "name": "닷사이 준마이 다이긴죠 23 우드 케이스(닷사이)",
+    "won": 113900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "프리미엄 증류주 단양40 단양30 소주 도깨비양조장",
+  "producer": null,
+  "band": 2,
+  "asked": "프리미엄 증류주 단양40",
+  "cands": [
+   {
+    "name": "N-888 프리미엄",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 프리미엄 몰츠 마스터즈 드림 맥주 350ml 6캔 세트",
+    "won": 38200,
+    "vol": null
+   },
+   {
+    "name": "느린 마을 증류주",
+    "won": 2900,
+    "vol": null
+   },
+   {
+    "name": "산토리 프리미엄 몰트 캔 500ml 전용잔 세트",
+    "won": 27800,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 프리미엄 몰츠 마스터즈 드림 맥주 350ml 1박스(24캔)",
+    "won": 149000,
+    "vol": null
+   },
+   {
+    "name": "산토리 프리미엄 몰트 캔 500ml 4캔 세트",
+    "won": 13000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "프리미엄증류주 소주한잔 26도 이천쌀100",
+  "producer": null,
+  "band": 1,
+  "asked": "프리미엄증류주 소주한잔 26도",
+  "cands": [
+   {
+    "name": "[마감 D-1] 쿠플라트 황동 변온 소주잔 2개 선물세트 (난초+레드 꽃)",
+    "won": 25000,
+    "vol": null
+   },
+   {
+    "name": "264 청포도 와인 절정 750ml 2병 세트",
+    "won": 56900,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 춘식 에디션 25도 변색잔 패키지",
+    "won": 15000,
+    "vol": null
+   },
+   {
+    "name": "264 청포도 와인 절정 750ml",
+    "won": 28800,
+    "vol": null
+   },
+   {
+    "name": "메이커스 마크 CS 26-01",
+    "won": 85000,
+    "vol": null
+   },
+   {
+    "name": "264 청포도 와인 꽃 750ml 2병 세트",
+    "won": 56900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "한 소주 70도 행주산성주가 프리미엄소주",
+  "producer": null,
+  "band": 4,
+  "asked": "한 소주 70도",
+  "cands": [
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "경주 법주 초특선",
+    "won": 50000,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 보리 소주",
+    "won": 21900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "한라산 17",
+  "producer": "Hallasan Co., Ltd. ((주)한라산)",
+  "band": 1,
+  "asked": "한라산 17",
+  "cands": [
+   {
+    "name": "와일드 터키 101 1L",
+    "won": 44900,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 1L",
+    "won": 34900,
+    "vol": null
+   },
+   {
+    "name": "미스터 보스턴 버번 1L",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "그란츠 트리플 우드 1L",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블랙 1L",
+    "won": 55000,
+    "vol": null
+   },
+   {
+    "name": "화로17 375ml 6병 세트",
+    "won": 22400,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "해치소주 22도",
+  "producer": null,
+  "band": 1,
+  "asked": "해치소주 22도",
+  "cands": [
+   {
+    "name": "사카리 말차 No.22",
+    "won": 51900,
+    "vol": null
+   },
+   {
+    "name": "서울고량주 춘식 에디션 25도 변색잔 패키지",
+    "won": 15000,
+    "vol": null
+   },
+   {
+    "name": "키 소주 22% 375ml",
+    "won": 26000,
+    "vol": null
+   },
+   {
+    "name": "로얄 브라클라 22년 익셉셔널 캐스크 시리즈 팔로 코르타도 캐스크 피니시",
+    "won": 580000,
+    "vol": null
+   },
+   {
+    "name": "시그나토리 스페이사이드(M) 2005 CS 20년 #22",
+    "won": 650496,
+    "vol": null
+   },
+   {
+    "name": "루이 에슈너 골드 22K 스파클링",
+    "won": 53000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "해치소주 44도",
+  "producer": null,
+  "band": 1,
+  "asked": "해치소주 44도",
+  "cands": [
+   {
+    "name": "카이쿄 시모노세키 SPIRIT OF 445 준마이 다이긴죠",
+    "won": 29900,
+    "vol": null
+   },
+   {
+    "name": "44°N 진",
+    "won": 140000,
+    "vol": null
+   },
+   {
+    "name": "44°N 진",
+    "won": 142000,
+    "vol": null
+   },
+   {
+    "name": "해치 소주 44",
+    "won": 19400,
+    "vol": null
+   },
+   {
+    "name": "해치 소주 44",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "시그나토리 2015 툴리바딘 9년 #44 100 프루프",
+    "won": 136000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "화로 17도 2년숙성 순수소주",
+  "producer": null,
+  "band": 1,
+  "asked": "화로 17도 2년숙성",
+  "cands": [
+   {
+    "name": "구로 기리시마 900ml",
+    "won": 22500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 싱하 유자 소다 제로 330ml 1박스 (24캔)",
+    "won": 16900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 구로 기리시마 EX 900ml",
+    "won": 24300,
+    "vol": null
+   },
+   {
+    "name": "화로17 375ml 6병 세트",
+    "won": 22400,
+    "vol": null
+   },
+   {
+    "name": "발렌타인 17년 700ml",
+    "won": 120000,
+    "vol": null
+   },
+   {
+    "name": "루나 가이아, 치아라몬테시 네로 다볼라",
+    "won": 33900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "화심소주 군고구마 25도",
+  "producer": null,
+  "band": 2,
+  "asked": "화심소주 군고구마 25도",
+  "cands": [
+   {
+    "name": "다이야메 900ml 25%",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 오스미 고구마 소주",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "멧챠우마 고구마 소주 2L",
+    "won": 26900,
+    "vol": null
+   },
+   {
+    "name": "화요 25 750ml",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "마오우 마왕 메이몬노이키 고구마 소주",
+    "won": 82000,
+    "vol": null
+   },
+   {
+    "name": "다이야메 900ml 25%",
+    "won": 46500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "화심소주 군쌀 40도",
+  "producer": null,
+  "band": 2,
+  "asked": "화심소주 군쌀 40도",
+  "cands": [
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "멧챠우마 쌀 소주 2L",
+    "won": 27900,
+    "vol": null
+   },
+   {
+    "name": "[지금바로 픽업가능 금토는 24시간 운영중] 추사 40% 500ml",
+    "won": 67000,
+    "vol": null
+   },
+   {
+    "name": "킷도 준마이 다이긴죠 야마다 40",
+    "won": 45900,
+    "vol": null
+   },
+   {
+    "name": "유래 포트 캐스크 피니시 40% 750ml",
+    "won": 139000,
+    "vol": null
+   },
+   {
+    "name": "하쿠타케 시로 쌀 소주",
+    "won": 24600,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "화요 3종",
+  "producer": null,
+  "band": 3,
+  "asked": "화요 3종",
+  "cands": [
+   {
+    "name": "화요 17,25,41 미니어처 3종 패키지",
+    "won": 8456,
+    "vol": null
+   },
+   {
+    "name": "화요 17, 25, 41 375ml 3종 선물세트",
+    "won": 59000,
+    "vol": null
+   },
+   {
+    "name": "화요 41,53,X.P 200ml 3종 패키지",
+    "won": 78900,
+    "vol": null
+   },
+   {
+    "name": "[화요 직영점] 화요 17,25,41 미니어처 3종 패키지",
+    "won": 10000,
+    "vol": null
+   },
+   {
+    "name": "화요 17, 25, 41 375ml 3종 선물세트",
+    "won": 59000,
+    "vol": null
+   },
+   {
+    "name": "화요 17, 25, 41 375ml 3종 선물세트",
+    "won": 62900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "화요 X 나 혼자만 레벨업 화요 17도",
+  "producer": null,
+  "band": 1,
+  "asked": "화요 X 나",
+  "cands": [
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 구로 기리시마 EX 900ml",
+    "won": 24300,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   },
+   {
+    "name": "화요 X.P 750ml",
+    "won": 175000,
+    "vol": null
+   },
+   {
+    "name": "화요 진심 정관장 홍삼주 에디션 750ml",
+    "won": 66000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "황금보리 17도",
+  "producer": null,
+  "band": 1,
+  "asked": "황금보리 17도",
+  "cands": [
+   {
+    "name": "화로17 375ml 6병 세트",
+    "won": 22400,
+    "vol": null
+   },
+   {
+    "name": "발렌타인 17년 700ml",
+    "won": 120000,
+    "vol": null
+   },
+   {
+    "name": "발렌타인 17년 700ml",
+    "won": 104000,
+    "vol": null
+   },
+   {
+    "name": "발렌타인 17년 750ml",
+    "won": 149000,
+    "vol": null
+   },
+   {
+    "name": "밀담 17",
+    "won": 3600,
+    "vol": null
+   },
+   {
+    "name": "화요 17, 25, 41 375ml 3종 선물세트",
+    "won": 59000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "황금보리 25도",
+  "producer": null,
+  "band": 1,
+  "asked": "황금보리 25도",
+  "cands": [
+   {
+    "name": "다이야메 900ml 25%",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "화요 25 750ml",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "다이야메 900ml 25%",
+    "won": 46500,
+    "vol": null
+   },
+   {
+    "name": "이강주 25% 500ml 주병세트",
+    "won": 54500,
+    "vol": null
+   },
+   {
+    "name": "다이야메 900ml 25%",
+    "won": 45900,
+    "vol": null
+   },
+   {
+    "name": "일품진로 오크 25",
+    "won": 12000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "황금보리 40도",
+  "producer": null,
+  "band": 1,
+  "asked": "황금보리 40도",
+  "cands": [
+   {
+    "name": "[마감 D-1] 안동 일품 소주 40",
+    "won": 8200,
+    "vol": null
+   },
+   {
+    "name": "[지금바로 픽업가능 금토는 24시간 운영중] 추사 40% 500ml",
+    "won": 67000,
+    "vol": null
+   },
+   {
+    "name": "킷도 준마이 다이긴죠 야마다 40",
+    "won": 45900,
+    "vol": null
+   },
+   {
+    "name": "유래 포트 캐스크 피니시 40% 750ml",
+    "won": 139000,
+    "vol": null
+   },
+   {
+    "name": "밀담 40% 360ml",
+    "won": 13800,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 안동소주 일품 골드 블랙 40% 500ml",
+    "won": 35900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "soju",
+  "ours": "황금보리소주 375ml 도",
+  "producer": null,
+  "band": 3,
+  "asked": "황금보리소주 375ml 도",
+  "cands": [
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 핫카이산 준마이 다이긴죠 유키무로 3년 숙성",
+    "won": 88800,
+    "vol": null
+   },
+   {
+    "name": "N-888 프리미엄",
+    "won": 31500,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 마산 정종 2병 선물 세트",
+    "won": 19800,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블루 말띠 에디션 스탬프 패키지 ver.2",
+    "won": 398000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "Hennessy X.O Cognac",
+  "producer": null,
+  "band": 5,
+  "asked": "Hennessy X.O Cognac",
+  "cands": [
+   {
+    "name": "화요 X.P 750ml",
+    "won": 175000,
+    "vol": null
+   },
+   {
+    "name": "헤네시 VSOP",
+    "won": 78000,
+    "vol": null
+   },
+   {
+    "name": "헤네시 VSOP",
+    "won": 88200,
+    "vol": null
+   },
+   {
+    "name": "헤네시 XO",
+    "won": 339000,
+    "vol": null
+   },
+   {
+    "name": "화요 X.P 200ml",
+    "won": 39500,
+    "vol": null
+   },
+   {
+    "name": "화요 X.P 750ml",
+    "won": 195000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "brandy",
+  "ours": "Sam Edelman 우먼 Canna - Rich 꼬냑",
+  "producer": null,
+  "band": 4,
+  "asked": "Sam Edelman 우먼",
+  "cands": [
+   {
+    "name": "그란츠 트리플 우드 1L",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "우노 프리미티보 디 만두리아",
+    "won": 22900,
+    "vol": null
+   },
+   {
+    "name": "닷사이 준마이 다이긴죠 23 우드 케이스(닷사이)",
+    "won": 113900,
+    "vol": null
+   },
+   {
+    "name": "닷사이 준마이 다이긴죠 23 우드 케이스(감사)",
+    "won": 116900,
+    "vol": null
+   },
+   {
+    "name": "산 미구엘 애플",
+    "won": 3500,
+    "vol": null
+   },
+   {
+    "name": "산 마르짜노 F 네그로아마로",
+    "won": 49000,
+    "vol": null
+   }
+  ]
+ }
+]

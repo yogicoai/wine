@@ -1,0 +1,554 @@
+[
+ {
+  "cat": "beer",
+  "ours": "문화)경복궁IPA캔",
+  "producer": null,
+  "band": 1,
+  "asked": "문화)경복궁IPA캔",
+  "cands": [
+   {
+    "name": "설화 맥주 캔 500ml 4캔 세트",
+    "won": 8000,
+    "vol": null
+   },
+   {
+    "name": "설화 맥주 캔 500ml 1박스(24캔)",
+    "won": 41500,
+    "vol": null
+   },
+   {
+    "name": "[추석 기념 쿠폰 행사] 한주 매화 35% 700ml 잔세트",
+    "won": 47900,
+    "vol": null
+   },
+   {
+    "name": "나베시마 썸머 문",
+    "won": 43600,
+    "vol": null
+   },
+   {
+    "name": "[4개 11,000원] 설화 맥주 캔 500ml",
+    "won": 3000,
+    "vol": null
+   },
+   {
+    "name": "[24캔 한박스에 53400원 입니다] 설화 맥주 캔 500ml",
+    "won": 53400,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "바이엔슈테판 헤페바이스비어",
+  "producer": "바이엔슈테판 국립양조장",
+  "band": 1,
+  "asked": "바이엔슈테판 헤페바이스비어",
+  "cands": [
+   {
+    "name": "바이엔슈테판 비투스",
+    "won": 7500,
+    "vol": null
+   },
+   {
+    "name": "바이엔슈테판 헤페바이스",
+    "won": 6000,
+    "vol": null
+   },
+   {
+    "name": "바이엔슈테판 크리스탈",
+    "won": 4900,
+    "vol": null
+   },
+   {
+    "name": "바이엔슈테판 헤페바이스 둔켈",
+    "won": 6000,
+    "vol": null
+   },
+   {
+    "name": "바이엔슈테판 비투스 500ml 1박스(12병)",
+    "won": 72000,
+    "vol": null
+   },
+   {
+    "name": "바이엔슈테판 크리스탈 500ml 1박스(12병)",
+    "won": 60000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "버드 오브 프레이 논알콜 IPA",
+  "producer": null,
+  "band": 2,
+  "asked": "버드 오브 프레이",
+  "cands": [
+   {
+    "name": "버드 오브 프레이 논알콜 IPA 12캔 세트",
+    "won": 58900,
+    "vol": null
+   },
+   {
+    "name": "버드 오브 프레이 논알콜 IPA 6캔 세트",
+    "won": 29800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "브루독 펑크 IPA",
+  "producer": "브루독",
+  "band": 1,
+  "asked": "브루독 펑크 IPA",
+  "cands": [
+   {
+    "name": "메이커스 마크",
+    "won": 38000,
+    "vol": null
+   },
+   {
+    "name": "맥캘란 12년 셰리 오크",
+    "won": 129900,
+    "vol": null
+   },
+   {
+    "name": "소그라페 실크 앤 스파이스",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "메이커스 마크",
+    "won": 45900,
+    "vol": null
+   },
+   {
+    "name": "내외 오크 컬렉션: 더 퍼스트",
+    "won": 74000,
+    "vol": null
+   },
+   {
+    "name": "라프로익 10년 셰리 오크 피니시 700ml",
+    "won": 107000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "브루클린 라거",
+  "producer": "브루클린 브루어리",
+  "band": 1,
+  "asked": "브루클린 라거",
+  "cands": [
+   {
+    "name": "배비치 블랙 라벨 말보로 소비뇽 블랑",
+    "won": 20800,
+    "vol": null
+   },
+   {
+    "name": "뵈브 클리코 옐로우 라벨",
+    "won": 77000,
+    "vol": null
+   },
+   {
+    "name": "러셀 리저브 싱글배럴 라이",
+    "won": 79800,
+    "vol": null
+   },
+   {
+    "name": "배비치 블랙 라벨 말보로 소비뇽 블랑",
+    "won": 22900,
+    "vol": null
+   },
+   {
+    "name": "뵈브 클리코 옐로우 라벨",
+    "won": 85900,
+    "vol": null
+   },
+   {
+    "name": "라벨 5 700ml",
+    "won": 15900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "비어라오",
+  "producer": "라오 브루어리",
+  "band": 1,
+  "asked": "비어라오",
+  "cands": [
+   {
+    "name": "비어라오 라거 500ml 1박스(6캔)",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "[선물용으로 최고입니다] 비어라오 라거 500ml 1박스(6캔)",
+    "won": 19000,
+    "vol": null
+   },
+   {
+    "name": "[선물용으로 최고 입니다] 비어라오 IPA 330ml 1박스(6병)",
+    "won": 21000,
+    "vol": null
+   },
+   {
+    "name": "비어라오 IPA 330ml 1박스(6병)",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "비어라오 그린 330ml 1박스(6병)",
+    "won": 21900,
+    "vol": null
+   },
+   {
+    "name": "[선물용으로 최고입니다] 비어라오 그린 330ml 1박스(6병)",
+    "won": 21000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "비어라오 IPA",
+  "producer": null,
+  "band": 3,
+  "asked": "비어라오 IPA",
+  "cands": [
+   {
+    "name": "[선물용으로 최고 입니다] 비어라오 IPA 330ml 1박스(6병)",
+    "won": 21000,
+    "vol": null
+   },
+   {
+    "name": "비어라오 IPA 330ml 1박스(6병)",
+    "won": 21900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "비온뒤 어스름 별숲 수제맥주",
+  "producer": null,
+  "band": 1,
+  "asked": "비온뒤 어스름 별숲",
+  "cands": [
+   {
+    "name": "배상면 원 별생 막걸리",
+    "won": 2100,
+    "vol": null
+   },
+   {
+    "name": "배상면 원 별생 막걸리",
+    "won": 2100,
+    "vol": null
+   },
+   {
+    "name": "[2017] 비온디 산티, 브루넬로 디 몬탈치노",
+    "won": 590000,
+    "vol": null
+   },
+   {
+    "name": "비온디 산티, 로쏘 디 몬탈치노",
+    "won": 220500,
+    "vol": null
+   },
+   {
+    "name": "별빛 청하 295ml",
+    "won": 2650,
+    "vol": null
+   },
+   {
+    "name": "[맥주/소주] 별빛 청하 295ml",
+    "won": 6000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "비트버거 프리미엄 필스",
+  "producer": "비트버거(Bitburger)",
+  "band": 1,
+  "asked": "비트버거 프리미엄 필스",
+  "cands": [
+   {
+    "name": "[공동구매 취소 수량] 비트버거 프리미엄 필스너 500ml 2026 풋볼 에디션 4캔 패키지",
+    "won": 13900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "사무엘 스미스 오트밀 스타우트",
+  "producer": "사무엘 스미스(Samuel Smith)",
+  "band": 1,
+  "asked": "사무엘 스미스 오트밀",
+  "cands": [
+   {
+    "name": "사무엘 스미스 오가닉 초콜렛 스타우트 330ml",
+    "won": 8000,
+    "vol": null
+   },
+   {
+    "name": "사무엘 아담스 병 355ml",
+    "won": 4400,
+    "vol": null
+   },
+   {
+    "name": "쇼 앤 스미스, M3 샤르도네",
+    "won": 67000,
+    "vol": null
+   },
+   {
+    "name": "듀어스 8년 캐리비안 스무스",
+    "won": 32800,
+    "vol": null
+   },
+   {
+    "name": "사무엘 스미스 임페리얼 스타우트",
+    "won": 8000,
+    "vol": null
+   },
+   {
+    "name": "듀어스 8년 캐리비안 스무스",
+    "won": 49000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "산토리 더 프리미엄 몰츠",
+  "producer": "산토리",
+  "band": 1,
+  "asked": "산토리 더 프리미엄",
+  "cands": [
+   {
+    "name": "산토리 더 프리미엄 몰츠 마스터즈 드림 맥주 350ml 6캔 세트",
+    "won": 38200,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 프리미엄 몰츠 마스터즈 드림 맥주 350ml 1박스(24캔)",
+    "won": 149000,
+    "vol": null
+   },
+   {
+    "name": "산토리 더 프리미엄 몰츠 카오루에일 350ml 6캔 세트",
+    "won": 38900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "삿포로 프리미엄",
+  "producer": "삿포로맥주",
+  "band": 1,
+  "asked": "삿포로 프리미엄",
+  "cands": [
+   {
+    "name": "삿포로 프리미엄 캔 350ml 1박스(24캔)",
+    "won": 49500,
+    "vol": null
+   },
+   {
+    "name": "삿포로 프리미엄 150주년 에디션 캔 330ml 1박스(24캔)",
+    "won": 49500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "서울숲 수제 라거 캔",
+  "producer": null,
+  "band": 1,
+  "asked": "서울숲 수제 라거",
+  "cands": [
+   {
+    "name": "[4개 12,000원] 서울숲 수제 라거 캔 500ml",
+    "won": 4000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "설레임",
+  "producer": "와일드웨이브 브루잉",
+  "band": 1,
+  "asked": "설레임",
+  "cands": [
+   {
+    "name": "[선물용으로 최고입니다] 베베마루 설레임",
+    "won": 90000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "성산일출봉 에일",
+  "producer": "제주맥주",
+  "band": 1,
+  "asked": "성산일출봉 에일",
+  "cands": [
+   {
+    "name": "에반 윌리엄스 블랙",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "에반 윌리엄스 블랙",
+    "won": 27900,
+    "vol": null
+   },
+   {
+    "name": "에반 윌리엄스 바틀 인 본드",
+    "won": 37900,
+    "vol": null
+   },
+   {
+    "name": "에반 윌리엄스 애플",
+    "won": 26000,
+    "vol": null
+   },
+   {
+    "name": "[4개 10,000원] 강서 마일드 에일 캔 500ml",
+    "won": 4500,
+    "vol": null
+   },
+   {
+    "name": "에반 윌리엄스 블랙 1750ml",
+    "won": 61800,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "세인트 베르나르두스 아브트 12",
+  "producer": "세인트 베르나르두스(St. Bernardus)",
+  "band": 1,
+  "asked": "세인트 베르나르두스 아브트",
+  "cands": [
+   {
+    "name": "아사히 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "조니워커 그린 15년 700ml 전용잔 세트",
+    "won": 78500,
+    "vol": null
+   },
+   {
+    "name": "기린 이치방 캔 500ml 6캔 세트",
+    "won": 13500,
+    "vol": null
+   },
+   {
+    "name": "KCBC 초신선 츄라이 355ml 6캔 세트",
+    "won": 21600,
+    "vol": null
+   },
+   {
+    "name": "크로넨버그 1664 블랑 캔 500ml 4캔 세트",
+    "won": 9000,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블랙 700ml 온더락잔 2개 세트",
+    "won": 49900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "수제맥주 병뚜껑 왕관",
+  "producer": null,
+  "band": 2,
+  "asked": "수제맥주 병뚜껑 왕관",
+  "cands": [
+   {
+    "name": "대관 사케 컵 30개 세트",
+    "won": 71000,
+    "vol": null
+   },
+   {
+    "name": "조니워커 블론드 전용잔 패키지(전용잔, 빨대, 뚜껑)",
+    "won": 42900,
+    "vol": null
+   },
+   {
+    "name": "왕주 40%",
+    "won": 18000,
+    "vol": null
+   },
+   {
+    "name": "왕주 40%",
+    "won": 18000,
+    "vol": null
+   },
+   {
+    "name": "오매락 지관",
+    "won": 50000,
+    "vol": null
+   },
+   {
+    "name": "오매락 지관",
+    "won": 45000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "beer",
+  "ours": "슈나이더 바이세 탑07",
+  "producer": "슈나이더(Schneider Weisse)",
+  "band": 1,
+  "asked": "슈나이더 바이세 탑07",
+  "cands": [
+   {
+    "name": "카제노모리 츠유하카제 507",
+    "won": 39500,
+    "vol": null
+   },
+   {
+    "name": "굴레 바이 꼬스 데스뚜르넬 2014",
+    "won": 49900,
+    "vol": null
+   },
+   {
+    "name": "볼랭저 스페셜 뀌베 브뤼 007 에디션",
+    "won": 123900,
+    "vol": null
+   },
+   {
+    "name": "카제노모리 츠유하카제 807",
+    "won": 37900,
+    "vol": null
+   },
+   {
+    "name": "카제노모리 야마다니시키 807",
+    "won": 37700,
+    "vol": null
+   },
+   {
+    "name": "슈나이더 바이세 탭5 호펜바이세",
+    "won": 9500,
+    "vol": null
+   }
+  ]
+ }
+]

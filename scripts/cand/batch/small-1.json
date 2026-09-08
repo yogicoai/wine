@@ -1,0 +1,604 @@
+[
+ {
+  "cat": "tequila",
+  "ours": "데킬라 로즈",
+  "producer": null,
+  "band": 2,
+  "asked": "데킬라 로즈",
+  "cands": [
+   {
+    "name": "카바 데 오로, 데킬라 로즈 골드",
+    "won": 318000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "데킬라 슬래머",
+  "producer": null,
+  "band": 3,
+  "asked": "데킬라 슬래머",
+  "cands": [
+   {
+    "name": "[바로픽업가능] 818 데킬라 레포사도 750ml",
+    "won": 136000,
+    "vol": null
+   },
+   {
+    "name": "818 데킬라 블랑코",
+    "won": 107000,
+    "vol": null
+   },
+   {
+    "name": "듀랑고 실버 데킬라 1L",
+    "won": 35000,
+    "vol": null
+   },
+   {
+    "name": "에스폴론 아네호 데킬라",
+    "won": 89000,
+    "vol": null
+   },
+   {
+    "name": "에스폴론 아네호 데킬라",
+    "won": 108000,
+    "vol": null
+   },
+   {
+    "name": "818 데킬라 아네호",
+    "won": 185000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "사우자 실버",
+  "producer": "사우자 (산토리 글로벌 스피리츠)",
+  "band": 2,
+  "asked": "사우자 실버",
+  "cands": [
+   {
+    "name": "소그라페 실크 앤 스파이스",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "실뱅 파타유 부르고뉴 알리고떼 2023",
+    "won": 53000,
+    "vol": null
+   },
+   {
+    "name": "페트론 실버 750ml",
+    "won": 99000,
+    "vol": null
+   },
+   {
+    "name": "실뱅 파타유 부르고뉴 피노 누아 2023",
+    "won": 66000,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 실버",
+    "won": 33000,
+    "vol": null
+   },
+   {
+    "name": "후안길 실버 라벨",
+    "won": 33000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "엘 히마도르 블랑코",
+  "producer": "카사 에라두라 (브라운포맨)",
+  "band": 2,
+  "asked": "엘 히마도르 블랑코",
+  "cands": [
+   {
+    "name": "러시안 잭 소비뇽 블랑",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "러시안 잭 소비뇽 블랑",
+    "won": 29900,
+    "vol": null
+   },
+   {
+    "name": "파 로드 말보로 소비뇽 블랑",
+    "won": 16500,
+    "vol": null
+   },
+   {
+    "name": "[한정수량 재입고] 봄바 소비뇽 블랑",
+    "won": 13900,
+    "vol": null
+   },
+   {
+    "name": "클라우디 베이 소비뇽 블랑",
+    "won": 49900,
+    "vol": null
+   },
+   {
+    "name": "킴 크로포드 말보로 소비뇽 블랑",
+    "won": 25900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "카사미고스 블랑코",
+  "producer": "카사미고스 (디아지오)",
+  "band": 4,
+  "asked": "카사미고스 블랑코",
+  "cands": [
+   {
+    "name": "카사미고스 블랑코 1L",
+    "won": 49044,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "타코 튜즈데이 데킬라 캑터스",
+  "producer": null,
+  "band": 4,
+  "asked": "타코 튜즈데이 데킬라",
+  "cands": [
+   {
+    "name": "타카 소비뇽 블랑",
+    "won": 16800,
+    "vol": null
+   },
+   {
+    "name": "마스카 델 타코 올드 바인 프리미티보",
+    "won": 20700,
+    "vol": null
+   },
+   {
+    "name": "타카 소비뇽 블랑",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "마스카 델 타코 수수마니엘로",
+    "won": 35900,
+    "vol": null
+   },
+   {
+    "name": "타카 소비뇽 블랑",
+    "won": 17900,
+    "vol": null
+   },
+   {
+    "name": "타카 애플",
+    "won": 20000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "패트론 레포사도",
+  "producer": "패트론 스피리츠",
+  "band": 3,
+  "asked": "패트론 레포사도",
+  "cands": [
+   {
+    "name": "페트론 레포사도 1L",
+    "won": 58056,
+    "vol": null
+   },
+   {
+    "name": "페트론 레포사도 700ml",
+    "won": 155000,
+    "vol": null
+   },
+   {
+    "name": "[한정수량] 페트론 레포사도 미니어처",
+    "won": 16000,
+    "vol": null
+   },
+   {
+    "name": "페트론 레포사도 750ml",
+    "won": 164000,
+    "vol": null
+   },
+   {
+    "name": "페트론 레포사도 750ml",
+    "won": 147700,
+    "vol": null
+   },
+   {
+    "name": "페트론 레포사도 750ml",
+    "won": 150000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "패트론 실버",
+  "producer": "패트론 스피리츠",
+  "band": 3,
+  "asked": "패트론 실버",
+  "cands": [
+   {
+    "name": "페트론 실버 750ml",
+    "won": 99000,
+    "vol": null
+   },
+   {
+    "name": "페트론 실버 미니어처",
+    "won": 16000,
+    "vol": null
+   },
+   {
+    "name": "페트론 실버 1L",
+    "won": 119000,
+    "vol": null
+   },
+   {
+    "name": "페트론 실버 1L",
+    "won": 60984,
+    "vol": null
+   },
+   {
+    "name": "페트론 실버 700ml",
+    "won": 145000,
+    "vol": null
+   },
+   {
+    "name": "페트론 실버 750ml",
+    "won": 139000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "패트론 아네호",
+  "producer": "패트론 스피리츠",
+  "band": 4,
+  "asked": "패트론 아네호",
+  "cands": [
+   {
+    "name": "페트론 아네호 750ml",
+    "won": 125000,
+    "vol": null
+   },
+   {
+    "name": "페트론 아네호 1L",
+    "won": 64968,
+    "vol": null
+   },
+   {
+    "name": "[한정수량] 페트론 아네호 미니어처",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "페트론 아네호 700ml",
+    "won": 169900,
+    "vol": null
+   },
+   {
+    "name": "페트론 아네호 750ml",
+    "won": 164000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "페페 로페즈 골드",
+  "producer": "브라운포먼",
+  "band": 2,
+  "asked": "페페 로페즈 골드",
+  "cands": [
+   {
+    "name": "페페로페즈 골드",
+    "won": 36500,
+    "vol": null
+   },
+   {
+    "name": "페페로페즈 골드",
+    "won": 27900,
+    "vol": null
+   },
+   {
+    "name": "페페로페즈 실버",
+    "won": 36000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "페페 로페즈 골드 데킬라",
+  "producer": null,
+  "band": 2,
+  "asked": "페페 로페즈 골드",
+  "cands": [
+   {
+    "name": "페페로페즈 골드",
+    "won": 27900,
+    "vol": null
+   },
+   {
+    "name": "페페로페즈 골드",
+    "won": 36500,
+    "vol": null
+   },
+   {
+    "name": "페페로페즈 실버",
+    "won": 36000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "푼타 페르디즈 미니 데킬라 백_블루",
+  "producer": null,
+  "band": 4,
+  "asked": "푼타 페르디즈 미니",
+  "cands": [
+   {
+    "name": "미션 서드 까베르네-시라",
+    "won": 18000,
+    "vol": null
+   },
+   {
+    "name": "스톤 베이 스타 버블 에디션",
+    "won": 19900,
+    "vol": null
+   },
+   {
+    "name": "[마감 D-1] 하타 16%",
+    "won": 17000,
+    "vol": null
+   },
+   {
+    "name": "글렌모렌지 더 넥타 16년",
+    "won": 115000,
+    "vol": null
+   },
+   {
+    "name": "조지 미쉘 말보로 소비뇽 블랑",
+    "won": 25900,
+    "vol": null
+   },
+   {
+    "name": "라 리오하 알타 비냐 아르단자 리제르바",
+    "won": 79900,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "호세 쿠엘보 에스페시알 골드",
+  "producer": "호세 쿠엘보",
+  "band": 2,
+  "asked": "호세 쿠엘보 에스페시알",
+  "cands": [
+   {
+    "name": "호세 쿠엘보 에스페샬 1L",
+    "won": 34900,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 750ml",
+    "won": 33000,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 700ml",
+    "won": 28000,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 750ml",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 1L",
+    "won": 38000,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 실버",
+    "won": 33000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "tequila",
+  "ours": "호세 쿠엘보 에스페시알 실버",
+  "producer": "호세 쿠엘보",
+  "band": 2,
+  "asked": "호세 쿠엘보 에스페시알",
+  "cands": [
+   {
+    "name": "호세 쿠엘보 에스페샬 1L",
+    "won": 34900,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 750ml",
+    "won": 33000,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 700ml",
+    "won": 28000,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 750ml",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 1L",
+    "won": 38000,
+    "vol": null
+   },
+   {
+    "name": "호세 쿠엘보 에스페샬 실버",
+    "won": 33000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "vodka",
+  "ours": "그레이구스",
+  "producer": "바카디",
+  "band": 3,
+  "asked": "그레이구스",
+  "cands": [
+   {
+    "name": "그레이 구스",
+    "won": 56000,
+    "vol": null
+   },
+   {
+    "name": "그레이 구스 보드카 페어",
+    "won": 56000,
+    "vol": null
+   },
+   {
+    "name": "그레이 구스",
+    "won": 69000,
+    "vol": null
+   },
+   {
+    "name": "그레이 구스",
+    "won": 64200,
+    "vol": null
+   },
+   {
+    "name": "그레이 구스 200ml",
+    "won": 12874,
+    "vol": null
+   },
+   {
+    "name": "그레이 구스 1L",
+    "won": 80000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "vodka",
+  "ours": "벨베디어",
+  "producer": "모엣 헤네시(LVMH)",
+  "band": 3,
+  "asked": "벨베디어",
+  "cands": [
+   {
+    "name": "벨베디어 보드카 700ml",
+    "won": 43000,
+    "vol": null
+   },
+   {
+    "name": "벨베디어 보드카",
+    "won": 85000,
+    "vol": null
+   },
+   {
+    "name": "벨베디어 시트러스",
+    "won": 80000,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "vodka",
+  "ours": "스미노프 레드 No.21",
+  "producer": "디아지오",
+  "band": 1,
+  "asked": "스미노프 레드 No.21",
+  "cands": [
+   {
+    "name": "스미노프 레드",
+    "won": 12900,
+    "vol": null
+   },
+   {
+    "name": "스미노프 레드",
+    "won": 20900,
+    "vol": null
+   },
+   {
+    "name": "안동 일품 소주 21",
+    "won": 5700,
+    "vol": null
+   },
+   {
+    "name": "스미노프 레드",
+    "won": 29800,
+    "vol": null
+   },
+   {
+    "name": "스미노프 레드",
+    "won": 32500,
+    "vol": null
+   },
+   {
+    "name": "내외 21",
+    "won": 29500,
+    "vol": null
+   }
+  ]
+ },
+ {
+  "cat": "vodka",
+  "ours": "시로크",
+  "producer": "디아지오",
+  "band": 3,
+  "asked": "시로크",
+  "cands": [
+   {
+    "name": "시로 기리시마",
+    "won": 23500,
+    "vol": null
+   },
+   {
+    "name": "하쿠타케 시로 쌀 소주",
+    "won": 24600,
+    "vol": null
+   },
+   {
+    "name": "시로이 카와이 리치",
+    "won": 37900,
+    "vol": null
+   },
+   {
+    "name": "사츠마 호우잔 시로",
+    "won": 24900,
+    "vol": null
+   },
+   {
+    "name": "캠벨타운 로크",
+    "won": 119000,
+    "vol": null
+   },
+   {
+    "name": "아드나호 인피니트 로크",
+    "won": 129000,
+    "vol": null
+   }
+  ]
+ }
+]
