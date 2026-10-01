@@ -488,14 +488,6 @@
   "url": "https://dailyshot.co/m/item/7091"
  },
  {
-  "ours": "복순도가 손막걸리 +빨간쌀 막걸리",
-  "q": "복순도가 손막걸리 +빨간쌀 막걸리",
-  "theirs": "복순도가 손막걸리",
-  "won": 13400,
-  "vol": "935ml",
-  "url": "https://dailyshot.co/m/item/7091"
- },
- {
   "ours": "부산 생탁",
   "q": "부산 생탁",
   "theirs": "부산 생탁",
@@ -1048,14 +1040,6 @@
   "url": "https://dailyshot.co/m/item/20409"
  },
  {
-  "ours": "추사 40",
-  "q": "추사 40",
-  "theirs": "추사 백 40",
-  "won": 30500,
-  "vol": "500ml",
-  "url": "https://dailyshot.co/m/item/6982"
- },
- {
   "ours": "톡쏘는 쌀막걸리",
   "q": "톡쏘는 쌀막걸리",
   "theirs": "톡쏘는 쌀막걸리",
@@ -1106,10 +1090,10 @@
  {
   "ours": "풍정사계 춘",
   "q": "풍정사계 춘",
-  "theirs": "풍정사계 동",
-  "won": 27000,
-  "vol": "375ml",
-  "url": "https://dailyshot.co/m/item/9650"
+  "theirs": "풍정사계 춘",
+  "won": 39000,
+  "vol": "500ml",
+  "url": "https://dailyshot.co/m/item/9647"
  },
  {
   "ours": "피어펙트 르네상스",

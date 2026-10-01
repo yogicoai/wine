@@ -48,6 +48,14 @@
   "url": "https://dailyshot.co/m/item/19464"
  },
  {
+  "ours": "선양 소주",
+  "q": "선양 소주",
+  "theirs": "선양 병 360ml",
+  "won": 1800,
+  "vol": null,
+  "url": "https://dailyshot.co/m/item/19464"
+ },
+ {
   "ours": "선양 오크",
   "q": "선양 오크",
   "theirs": "선양 오크 소주 병 360ml",
@@ -124,7 +132,7 @@
   "q": "자몽에이슬",
   "theirs": "자몽에이슬 병 360ml",
   "won": 2000,
-  "vol": null,
+  "vol": "360ml",
   "url": "https://dailyshot.co/m/item/12245"
  },
  {

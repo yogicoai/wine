@@ -44,7 +44,7 @@
   "q": "기네스 드래프트",
   "theirs": "기네스 드래프트 캔 440ml",
   "won": 4000,
-  "vol": null,
+  "vol": "440ml",
   "url": "https://dailyshot.co/m/item/18922"
  },
  {
@@ -52,7 +52,7 @@
   "q": "기린 이치방",
   "theirs": "기린 이치방 캔 500ml",
   "won": 3000,
-  "vol": null,
+  "vol": "500ml",
   "url": "https://dailyshot.co/m/item/18924"
  },
  {
@@ -190,14 +190,6 @@
   "won": 1900,
   "vol": "330ml",
   "url": "https://dailyshot.co/m/item/33361"
- },
- {
-  "ours": "벡스",
-  "q": "벡스",
-  "theirs": "벡스 리슬링",
-  "won": 13900,
-  "vol": null,
-  "url": "https://dailyshot.co/m/item/5624"
  },
  {
   "ours": "볼파스 엔젤맨 IPA",
@@ -440,14 +432,6 @@
   "url": "https://dailyshot.co/m/item/18953"
  },
  {
-  "ours": "카스 레몬 스퀴즈",
-  "q": "카스 레몬 스퀴즈",
-  "theirs": "카스 레몬 스퀴즈 제로 캔 330ml",
-  "won": 2500,
-  "vol": null,
-  "url": "https://dailyshot.co/m/item/39354"
- },
- {
   "ours": "카프리",
   "q": "카프리",
   "theirs": "카프리 병 330ml",
@@ -476,7 +460,7 @@
   "q": "빅웨이브 캔 473ml",
   "theirs": "빅웨이브 캔 473ml",
   "won": 3900,
-  "vol": null,
+  "vol": "473ml",
   "url": "https://dailyshot.co/m/item/18995"
  },
  {
@@ -636,7 +620,7 @@
   "q": "필스너 우르켈",
   "theirs": "필스너 우르켈 캔 500ml",
   "won": 3000,
-  "vol": null,
+  "vol": "500ml",
   "url": "https://dailyshot.co/m/item/18973"
  },
  {
@@ -644,16 +628,8 @@
   "q": "하이네켄",
   "theirs": "하이네켄 캔 500ml",
   "won": 2600,
-  "vol": null,
+  "vol": "500ml",
   "url": "https://dailyshot.co/m/item/18975"
- },
- {
-  "ours": "하이네켄 케그",
-  "q": "하이네켄 케그",
-  "theirs": "하이네켄 설화 케그 캔 1L",
-  "won": 6400,
-  "vol": null,
-  "url": "https://dailyshot.co/m/item/37899"
  },
  {
   "ours": "하이트 엑스트라 콜드",
