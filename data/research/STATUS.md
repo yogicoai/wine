@@ -147,3 +147,11 @@
 - 13:58 에 사용자가 서버를 다시 켠 뒤 "Could not find the module … global-error.js#default in the React Client Manifest" 오류와 함께 먹통(CPU 3.3코어, 요청 무응답). 원인은 `.next-wine/dev/cache`(1.3GB, 8/19 부터 쌓인 Turbopack 영구 캐시)가 꼬인 것 — 같은 코드를 새 폴더 `.next-verify` 로 5790 에 띄우면 `/` 가 0.13초에 정상.
 - 조치: 서버 종료 → `.next-wine` 삭제 → `next.config.mjs` 에 `experimental.turbopackFileSystemCacheForDev: false`(개발용 영구 캐시 끔, 미커밋) → `npm run dev:wine` 을 숨김 프로세스로 재기동(로그 `data/research/_work/dev-5700.out.log`·`.err.log`). 첫 컴파일 13.6초, 유휴 CPU 0.02코어·메모리 0.8GB.
 - 앞서 낮에 보고된 `@zxing/library` "Module not found" 도 같은 서버 상태(누수·캐시)에서 나온 것으로 보인다 — 코드·패키지는 멀쩡했다.
+
+### 2026-10-02 15~16시 — 신뢰도 측정 · 가격대·짝 정리 · 공유용 보고 (모델을 Opus 5.5 로 바꾼 뒤)
+- 10-01 15:52 ~ 10-02 14:18 대화와 밤샘 러너 767묶음은 Sonnet 5.5 였다(사용자가 확인 후 `/model opus`).
+- **Opus 표본 재검증**: 등급별 무작위 40종 중 32종 완료(사용자가 "비용 나가면 안 된다"며 중단 — 러너의 $ 는 API 환산, 실제 결제 없음). 주장 347개 오류율 6.4%, 국가·생산자·종류 0 오류. 32종에 `audit` 기록, 14종 23곳 수정(`scripts/audit-apply.mjs`, 백업 `data/backup/audit-fixes-2026-10-02.json`).
+- **비용 0 DB 대조**: 판매처 색인과 국가 99.5% · 도수 95.6%(짝 정리 후) 일치.
+- **짝 정리·가격대**(`scripts/pair-band-fix.mjs`, 백업 `data/backup/pair-band-2026-10-02.json`): 다른 상품을 이은 판매처 짝 5건 끊음, 판매처 가격으로 가격대 242종 수정(1,669종에 priceBandBasis) → 판매처 가격과 같은 구간 85% → 99%.
+- **보고서**: `docs/데이터-현황-보고.html`(맨 앞 '보고 요약') · 공유용 비공개 링크 https://claude.ai/artifact/YUVKG6XitYQVkJ3DyZ8cs1. 앞으로 사용자 선호: 이 대화에서 처리하고 DB 에 저장, 별도 세션은 먼저 승인.
+- **16시 — 비용 0 추가 뽑기**(사용자: "비용 없이 최대한, 주간 90% 넘으면 멈춤"): 중복 '안동소주 올소' 1건 숨김(dupeOf) · 와인 밖 22종 빈칸 채움(`wine-structured-fill.mjs --category nonwine`) · Vivino 평점 561종 → result.ratings(`zero-cost-extract.mjs`, 이름 꽉 맞는 짝·평가 30건 이상) · 검증된 술 967종에 영문 상품명·83종 어울리는 음식·4종 시음 노트(`verified-seller-fill.mjs`). 조사 시세로 가격대 맞추기는 시세 자체가 틀린 예(메이커스 마크 시세 6~8만 vs 판매처 31,900원)가 있어 하지 않음(`--with-priceinfo` 로만). 데이터 값 103,433 → 104,086. 주간 사용량 77%.

@@ -6,9 +6,57 @@ import { dirname } from "node:path";
 
 const arg = (k, d = null) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
 const OUT = arg("--out", "docs/데이터-현황-보고.html");
+// --artifact <경로> : 공유용 페이지(Artifact)로도 쓴다 — 문서 뼈대(doctype·head·body)는 게시할 때 씌워지므로 내용만 쓴다
+const ART = arg("--artifact");
+// 2026-10-02 오후에 DB 에 반영한 정리 (scripts/audit-apply.mjs · scripts/pair-band-fix.mjs 로그와 백업 기준)
+const TODAY = { auditFixes: 23, auditDocs: 14, bandFixed: 242, bandBefore: 85, pairsUnlinked: 5, dupHidden: 1, vivino: 561, enNames: 987, pairing: 83, nonwineFill: 22 };
 const R = JSON.parse(readFileSync("data/research/_work/spec/data-report.json", "utf8"));
 // 가격대 정확도 대조(있을 때만) — data/research/_work/spec/_band-check.mjs 가 만든다
 const BC = (() => { try { return JSON.parse(readFileSync("data/research/_work/spec/band-check.json", "utf8")); } catch { return null; } })();
+// Opus 표본 재검증(있을 때만) — scripts/audit-report.mjs 가 만든다
+const AU = (() => { try { return JSON.parse(readFileSync("data/research/_work/audit-report.json", "utf8")); } catch { return null; } })();
+const pct1 = (x) => (x == null ? "-" : `${(x * 100).toFixed(1)}%`);
+const FIELD_AU = { country: "국가", region: "지역·산지", producer: "생산자", type: "종류", alcohol: "도수", vintage: "빈티지", specs: "제원", history: "역사 연표", story: "이야기", winery: "생산자 소개", trivia: "트리비아", aging: "숙성", 기타: "기타" };
+// 비용 없는 DB 대조(있을 때만) — data/research/_work/spec/_db-crosscheck.mjs 가 만든다
+const XC = (() => { try { return JSON.parse(readFileSync("data/research/_work/spec/db-crosscheck.json", "utf8")); } catch { return null; } })();
+function crossHtml() {
+  if (!XC) return "";
+  const row = (e) => `<tr><th scope="row">${esc(e.name)}<small style="display:block;color:var(--ink3);font-weight:400">${esc(CAT_KO[e.cat] || e.cat)} · ${esc(e.level || "")} 등급</small></th><td>${esc(e.ours)}</td><td>${esc(e.theirs)}</td><td>${esc(e.ds)}</td></tr>`;
+  return `<h3>판매처 데이터와 전수 대조 (비용 0)</h3>
+  <p class="sub">모델을 부르지 않고 DB 안의 두 출처를 맞춰 봤습니다. 웹 조사로 검증한 값과, 판매처(데일리샷) 색인이 가진 값입니다.</p>
+  <div class="kv">
+    <div><span>국가 비교</span><b>${n(XC.ctry.compared)}종 · 일치 ${pc(XC.ctry.agree, XC.ctry.compared)}%</b></div>
+    <div><span>도수 비교</span><b>${n(XC.abv.compared)}종 · 일치 ${pc(XC.abv.agree, XC.abv.compared)}%</b></div>
+  </div>
+  <h3>국가가 다른 ${n(XC.ctry.disagree.length)}종</h3>
+  ${table(["술", "우리 DB", "판매처", "판매처 상품명"], XC.ctry.disagree.map(row))}
+  <p class="foot">다른 곳은 대부분 우리 값이 더 정확하다. 스톨리치나야는 지금 라트비아에서 만들고, 크라켄은 트리니다드 토바고산 럼이며, 라벨 5 버번 배럴은 스카치다. 도수가 다른 ${n(XC.abv.disagree.length)}종은 빈티지마다 도수가 다른 와인이 대부분이다. 판매처 쪽 오기도 섞여 있다(예: 샤또 라투르 16%). 상품을 잘못 이은 경우도 있다(예: 더 라인 ↔ 라인 39).</p>`;
+}
+function auditHtml() {
+  if (!AU) return "";
+  const lvRows = ["A", "B", "C"].map((lv) => { const t = AU.byLevel[lv]; const d = t.correct + t.wrong + t.partly; return `<tr><th scope="row">${lv} 등급</th><td class="num">${n(t.items)}</td><td class="num">${n(t.claims)}</td><td class="num">${n(t.correct)}</td><td class="num">${n(t.wrong)}</td><td class="num">${n(t.partly)}</td><td class="num">${n(t.unverifiable)}</td><td class="num"><b>${d ? pct1((t.wrong + t.partly) / d) : "-"}</b></td><td class="num">${n(t.itemsWithError)}/${n(t.items)}</td></tr>`; });
+  const t = AU.all, d = t.correct + t.wrong + t.partly;
+  lvRows.push(`<tr class="total"><th scope="row">합계</th><td class="num">${n(t.items)}</td><td class="num">${n(t.claims)}</td><td class="num">${n(t.correct)}</td><td class="num">${n(t.wrong)}</td><td class="num">${n(t.partly)}</td><td class="num">${n(t.unverifiable)}</td><td class="num"><b>${d ? pct1((t.wrong + t.partly) / d) : "-"}</b></td><td class="num">${n(t.itemsWithError)}/${n(t.items)}</td></tr>`);
+  const fRows = Object.entries(AU.byField).sort((a, b) => b[1].claims - a[1].claims).map(([k, f]) => { const dd = f.correct + f.wrong + f.partly; return `<tr><th scope="row">${esc(FIELD_AU[k] || k)}</th><td class="num">${n(f.claims)}</td><td class="num">${n(f.wrong + f.partly)}</td><td class="num">${n(f.unverifiable)}</td><td class="num">${dd ? pct1((f.wrong + f.partly) / dd) : "-"}</td></tr>`; });
+  const probs = AU.problems.map((x) => `<tr><td>${x.verdict === "wrong" ? "틀림" : "일부"}</td><th scope="row">${esc(x.name)}<small style="display:block;color:var(--ink3);font-weight:400">${esc(CAT_KO[x.category] || x.category)} · ${esc(x.level)} 등급</small></th><td>${esc(FIELD_AU[x.field] || x.field)}</td><td>${esc(x.claim)}</td><td>${esc(x.correct)}</td><td>${x.source ? `<code>${esc(String(x.source).replace(/^https?:\/\//, "").slice(0, 60))}</code>` : ""}</td></tr>`);
+  return `<h3>Opus 표본 재검증</h3>
+  <p class="sub">웹 조사로 검증한 술 중 ${n(AU.itemsPlanned)}종을 등급별로 무작위로 뽑았고, 그중 ${n(AU.itemsDone)}종(A ${n(AU.byLevel.A.items)} · B ${n(AU.byLevel.B.items)} · C ${n(AU.byLevel.C.items)})을 다른 모델(${esc(AU.models.join(", "))})이 처음부터 다시 확인했습니다${AU.missing?.length ? `(나머지 ${n(AU.missing.length)}종은 도중에 멈춤)` : ""}. 우리가 붙인 출처는 넘기지 않고 스스로 출처를 찾게 했습니다. 맛 표현·페어링 같은 주관적 서술은 빼고 사실 주장만 봤습니다.</p>
+  <div class="kv">
+    <div><span>확인한 주장</span><b>${n(t.claims)}개 (술 ${n(t.items)}종)</b></div>
+    <div><span>틀림 · 일부 틀림</span><b>${n(t.wrong)} · ${n(t.partly)}</b></div>
+    <div><span>확인 불가(출처 없음)</span><b>${n(t.unverifiable)}</b></div>
+    <div><span>주장 오류율</span><b>${pct1(AU.errorRate)} (95% ${AU.errorCI ? AU.errorCI.map(pct1).join("~") : "-"})</b></div>
+    <div><span>등급 비중으로 가중한 오류율</span><b>${pct1(AU.weightedErrorRate)}</b></div>
+    <div><span>틀린 곳이 하나라도 있는 술</span><b>${pct1(AU.itemErrorShare)} (${n(t.itemsWithError)}/${n(t.items)})</b></div>
+    <div><span>재검증에 쓴 것</span><b>검색 ${n(AU.searches)} · 열람 ${n(AU.fetches)} · 구독 사용량(API 환산 $${AU.cost}, 실제 결제 없음)</b></div>
+    <div><span>DB 에 반영</span><b>32종에 재검증 기록 · 14종 23곳 수정</b></div>
+  </div>
+  ${table(["등급", "술", "주장", "맞음", "틀림", "일부", "확인 불가", "오류율", "틀린 술"], lvRows, [1, 2, 3, 4, 5, 6, 7, 8])}
+  <h3>칸별</h3>
+  ${table(["칸", "주장", "틀림·일부", "확인 불가", "오류율"], fRows, [1, 2, 3, 4])}
+  ${probs.length ? `<h3>틀렸거나 일부 틀린 주장 ${n(probs.length)}개</h3>${table(["판정", "술", "칸", "우리 DB 의 주장", "재검증이 찾은 값", "근거"], probs)}` : ""}
+  <p class="foot">오류율 = (틀림 + 일부 틀림) ÷ 판정이 난 주장. 확인 불가는 분모에서 뺐다. 표본이 ${n(t.items)}종이라 구간이 넓다 — 대략의 수준을 보는 값이다. ${AU.missing?.length ? `결과가 없는 술 ${AU.missing.length}종: ${esc(AU.missing.map((m) => m.name).join(", "))}.` : ""}</p>`;
+}
 
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const n = (x) => Number(x || 0).toLocaleString("ko-KR");
@@ -101,6 +149,10 @@ code{font:12.5px/1.5 var(--mono);background:var(--code);padding:1px 6px;border-r
 .kv b{font-variant-numeric:tabular-nums}
 footer{margin-top:40px;padding-block:20px 44px;border-top:1px solid var(--line);color:var(--ink3);font-size:12.5px}
 footer p{margin:4px 0;max-width:88ch}
+.summary{padding-block:26px 4px}
+.sum{margin:8px 0 0;padding:16px 20px 16px 36px;background:var(--surface);border:1px solid var(--line);border-radius:6px;display:grid;gap:10px}
+.sum li{color:var(--ink2);line-height:1.7}
+.sum li b{color:var(--ink)}
 @media (max-width:640px){.hbar{width:90px}}
 `;
 
@@ -123,6 +175,20 @@ const html = `<!doctype html>
   <p class="meta">기준 ${esc(kst(R.at))} KST · DB 를 직접 센 값(읽기만) · 데이터 값 = 글·숫자 칸은 1개, 목록 칸(연표·페어링·제원·팁·맛 축 등)은 원소 수만큼</p>
   <div class="tiles">${tiles.map((t) => `<div class="tile"><b>${esc(t.big)}</b><span>${esc(t.label)}</span><small>${esc(t.sub)}</small></div>`).join("")}</div>
 </header>
+
+<section class="summary">
+  <h2>보고 요약</h2>
+  <ol class="sum">
+    <li><b>술 ${n(T)}종의 정보를 DB 에 쌓았습니다.</b> 데이터 값은 ${n(R.totalPoints)}개(술 한 종에 평균 ${(R.totalPoints / T).toFixed(0)}개)이고, 설명 글은 약 ${n(Math.round(R.fields.reduce((a, f) => a + f.chars, 0) / 10000))}만 자입니다. 제원 ${n(R.fields.find((f) => f.key === "specs")?.points)}줄 · 맛 축 ${n(R.fields.find((f) => f.key === "tasteProfile")?.points)}개 · 페어링 ${n(R.fields.find((f) => f.key === "foodPairing")?.points)}개 · 역사 연표 ${n(R.fields.find((f) => f.key === "history")?.points)}건이 들어 있습니다.</li>
+    <li><b>${n(V.docs)}종(${pc(V.docs, T)}%)은 웹 자료로 하나하나 대조했습니다.</b> 출처 ${n(V.sources)}건을 붙였고, 기존 값 ${n(V.corrections)}건을 고쳤으며, 확인되지 않은 주장 ${n(V.removed)}건은 지웠습니다. 판매처 정보로 채운 술 ${n(Object.values(R.byCat).reduce((a, c) => a + c.structured, 0))}종을 더하면 정보가 채워진 술은 ${n(V.docs + Object.values(R.byCat).reduce((a, c) => a + c.structured, 0))}종(${pc(V.docs + Object.values(R.byCat).reduce((a, c) => a + c.structured, 0), T)}%)입니다.</li>
+    <li><b>사진 ${n(X.photoHosted)}장(${pc(X.photoHosted, T)}%)</b>을 이름의 그 상품인지 확인한 뒤 우리 서버에 올렸습니다.</li>
+    <li><b>가격</b>은 “N만원대” 가격대로 ${n(X.priceBand)}종에 있고, 판매처 가격 색인 ${n(R.dsIndex.total)}개를 갖고 있습니다.${BC ? ` 판매처 가격과 이어진 ${n(BC.A.all.n)}종은 실제 판매가와 ${pc(BC.A.all.exact, BC.A.all.n)}% 같은 구간입니다.` : ""}</li>
+    ${AU ? `<li><b>신뢰도</b> — 다른 AI(Opus)가 표본 ${n(AU.itemsDone)}종을 처음부터 다시 확인한 결과 사실 주장의 오류율은 ${pct1(AU.errorRate)}였고, 나라·생산자·종류는 틀린 것이 없었습니다(틀린 곳은 연도·제원 같은 세부).${XC ? ` 판매처 데이터와 전수로 맞춰 보면 국가 ${pc(XC.ctry.agree, XC.ctry.compared)}% · 도수 ${pc(XC.abv.agree, XC.abv.compared)}%가 일치합니다.` : ""}</li>` : ""}
+    <li><b>오늘(10-02) 바로잡은 것</b> — 재검증에서 나온 ${TODAY.auditFixes}곳(${TODAY.auditDocs}종), 가격대 ${n(TODAY.bandFixed)}종, 다른 상품과 잘못 이어진 판매처 짝 ${TODAY.pairsUnlinked}건, 같은 술이 두 칸을 차지한 중복 ${TODAY.dupHidden}건. 모두 원래 값을 백업해 두었습니다.</li>
+    <li><b>오늘(10-02) 비용 없이 더한 것</b> — 이미 가진 판매처 데이터에서 이름이 꽉 맞는 짝만 골라 Vivino 평점 ${n(TODAY.vivino)}종, 영어 화면용 영문 상품명 ${n(TODAY.enNames)}종, 어울리는 음식 ${n(TODAY.pairing)}종을 채웠고, 와인 밖 술 ${TODAY.nonwineFill}종의 빈칸(종류·용량·시음 노트 등)도 채웠습니다. 모델 호출 없이 DB 안에서만 했습니다.</li>
+    <li><b>남은 과제</b> — 판매처가 취급하지 않는 와인 962종은 이름·가격대만 있습니다. 영어·일본어는 이름·나라·제원만 번역했고 설명 글은 한국어입니다. 사용자 기록(스캔·셀러)은 아직 시험 수준입니다.</li>
+  </ol>
+</section>
 
 <section>
   <h2>1. 무엇이 몇 개 쓰여 있나 — 칸별</h2>
@@ -166,9 +232,11 @@ const html = `<!doctype html>
     <ul>
       <li>웹 조사 ${n(W.batches)}묶음은 모두 <b>${esc(Object.keys(W.models).join(", "))}</b> 가 했다(검색 ${n(W.searches)}회, ${esc(kst(W.from))} ~ ${esc(kst(W.to))} KST). 사진 찾기 ${n(W.imageFind.batches)}묶음은 ${esc(Object.keys(W.imageFind.models).join(", ") || "기록 없음")}, 사진 확인 ${n(W.imageCheck.batches)}묶음은 ${esc(Object.keys(W.imageCheck.models).join(", ") || "기록 없음")}.</li>
       <li>DB 에 넣기 전에 형식(칸 종류·길이·주소)과 출처 유무는 기계적으로 검사했다. 반면 “출처가 정말 그 말을 하는가”를 다른 모델이 다시 읽어 확인한 적은 없다.</li>
-      <li>그래서 정확도를 숫자로 말하려면 표본 재검증이 필요하다 — 검증한 술을 무작위로 골라 다른 모델(Opus)로 처음부터 다시 조사해 틀린 값의 비율을 잰다.</li>
+      <li>${AU ? "그래서 아래처럼 표본을 뽑아 다른 모델(Opus)로 다시 확인해 틀린 비율을 쟀다." : "그래서 정확도를 숫자로 말하려면 표본 재검증이 필요하다 — 검증한 술을 무작위로 골라 다른 모델(Opus)로 처음부터 다시 조사해 틀린 값의 비율을 잰다."}</li>
     </ul>
   </div>
+  ${auditHtml()}
+  ${crossHtml()}
 </section>
 
 <section>
@@ -188,7 +256,7 @@ const html = `<!doctype html>
     ["판매처 가격 (전체)", BC.A.all], ["판매처 가격 (표준 병 500~1000ml)", BC.A.std], ["웹 조사 검증된 술", BC.A.byVerified.yes], ["검증 안 된 술", BC.A.byVerified.no], ["조사 시세 범위의 가운데 값", BC.B.all],
     ...Object.entries(BC.A.byCat).sort((a, b) => b[1].n - a[1].n).slice(0, 8).map(([k, t]) => [`· ${CAT_KO[k] || k}`, t]),
   ].map(([label, t]) => `<tr><th scope="row">${esc(label)}</th><td class="num">${n(t.n)}</td><td class="num"><b>${pc(t.exact, t.n)}%</b></td><td class="num">${pc(t.off1, t.n)}%</td><td class="num">${pc(t.off2, t.n)}%</td><td class="num">${pc(t.low, t.n)}%</td><td class="num">${pc(t.high, t.n)}%</td></tr>`), [1, 2, 3, 4, 5, 6])}
-  <p class="foot">한 구간 차이 251종 중 경계 ±10% 안(예: 4만 9천 원과 5만 2천 원)은 33%뿐이고, 46%는 경계에서 20% 넘게 떨어져 있다 — 상당수는 구간을 실제로 잘못 매긴 것이다(10-02 측정). 판매처 가격이 이어진 술은 그 값으로 다시 매기면 비용 없이 바로잡을 수 있다. 두 구간 이상 어긋난 예: ${esc(BC.A.examples.slice(0, 4).map((e) => `${e.name} — 가격대 ${e.band} vs ${n(e.price)}원`).join(" · "))}.</p>` : ""}
+  <p class="foot">10-02 오후까지는 같은 구간이 ${TODAY.bandBefore}%였다. 한 구간 어긋난 것의 46%가 경계에서 20% 넘게 벗어난 실제 오류여서, 판매처 가격으로 ${n(TODAY.bandFixed)}종을 다시 매겼다(행사가·세트·미니·옛 빈티지·표준 병이 아닌 값은 근거로 쓰지 않음, 원래 값은 백업). 예: 실제 29,000원인 와인이 '10~30만원'으로 들어가 있었다. 남은 차이는 근거에서 뺀 값들이다.</p>` : ""}
 </section>
 
 <section>
@@ -265,3 +333,13 @@ const html = `<!doctype html>
 mkdirSync(dirname(OUT), { recursive: true });
 writeFileSync(OUT, html, "utf8");
 console.log(`저장: ${OUT} (${(Buffer.byteLength(html) / 1024).toFixed(0)}KB)`);
+if (ART) {
+  const body = html
+    .replace(/<!doctype html>\s*/i, "").replace(/<html[^>]*>\s*/i, "").replace(/<\/html>\s*$/i, "")
+    .replace(/<head>\s*/i, "").replace(/<\/head>\s*/i, "")
+    .replace(/<meta charset="utf-8">\s*/i, "").replace(/<meta name="viewport"[^>]*>\s*/i, "").replace(/<meta name="description"[^>]*>\s*/i, "")
+    .replace(/<body>\s*/i, "").replace(/<\/body>\s*/i, "");
+  mkdirSync(dirname(ART), { recursive: true });
+  writeFileSync(ART, body, "utf8");
+  console.log(`공유용: ${ART}`);
+}

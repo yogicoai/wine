@@ -25,6 +25,8 @@ const LANES = Number(arg("--lanes", 4));
 // --kind imgfind : 사진이 없는 술의 병 사진 주소를 웹에서 찾는다 (data/images/_work/find-{in,out}, 검색·열람 가능)
 const KIND = arg("--kind", "research");
 const IMG = KIND === "images", FIND = KIND === "imgfind", LIGHT = IMG || FIND;
+// --kind audit   : 검증된 술 표본을 다른 모델로 다시 확인한다 (data/research/_work/audit-{in,out}, 검색·열람 가능, 규칙 scripts/wf/audit-rules.md)
+const AUDIT = KIND === "audit";
 const MODEL = arg("--model", "claude-sonnet-5-5");
 const EFFORT = arg("--effort", LIGHT ? "medium" : "high");
 const MAX_USD = Number(arg("--max-usd", LIGHT ? 3 : 6));
@@ -36,9 +38,12 @@ const MAX_ATTEMPTS = 2;
 
 const UW = "data/research/_work";                              // 사용률 기록·전체 멈춤 파일은 항상 여기
 const W = LIGHT ? "data/images/_work" : UW;
-const IN = FIND ? `${W}/find-in` : `${W}/in`, OUT = FIND ? `${W}/find-out` : `${W}/out`;
-const SUF = IMG ? "-img" : FIND ? "-find" : "";
-const LOG = `${W}/runner${SUF}.log`, RUNS = `${W}/runs${FIND ? "-find" : ""}.jsonl`, STOPF = `${W}/RUNNER_STOP`, STATUS = `${W}/runner${SUF}-status.json`;
+const IN = FIND ? `${W}/find-in` : AUDIT ? `${W}/audit-in` : `${W}/in`, OUT = FIND ? `${W}/find-out` : AUDIT ? `${W}/audit-out` : `${W}/out`;
+const SUF = IMG ? "-img" : FIND ? "-find" : AUDIT ? "-audit" : "";
+// 감사는 따로 멈춘다(AUDIT_STOP) — 밤샘 조사를 닫으며 남긴 RUNNER_STOP 에 막히지 않게
+const LOG = `${W}/runner${SUF}.log`, RUNS = `${W}/runs${FIND ? "-find" : AUDIT ? "-audit" : ""}.jsonl`, STOPF = AUDIT ? `${W}/AUDIT_STOP` : `${W}/RUNNER_STOP`, STATUS = `${W}/runner${SUF}-status.json`;
+// --hard-stop : 도는 중에도 몇 분마다 주간 사용률을 다시 재서, 선(--week-stop)에 닿으면 도는 묶음까지 끊고 멈춘다
+const HARD = process.argv.includes("--hard-stop");
 mkdirSync(OUT, { recursive: true });
 const ts = () => new Date().toLocaleString("sv-SE", { timeZone: "Asia/Seoul" });
 const log = (s) => { const l = `${ts()} ${s}`; console.log(l); try { appendFileSync(LOG, l + "\n"); } catch {} };
@@ -49,6 +54,7 @@ if (!QUEUE.length) { console.error("--queue 가 필요합니다 (예: sk,wp,tr)"
 // ── 프롬프트: research.mjs 의 RULES 를 꺼내 쓴다 ──
 function loadRules() {
   if (FIND) return readFileSync("scripts/wf/imgfind-rules.md", "utf8").trim();
+  if (AUDIT) return readFileSync("scripts/wf/audit-rules.md", "utf8").trim();
   const file = IMG ? "scripts/wf/imgcheck.mjs" : "scripts/wf/research.mjs";
   const src = readFileSync(file, "utf8");
   const a = src.indexOf("const RULES = `");
@@ -62,6 +68,8 @@ function loadRules() {
 const RULES = loadRules();
 const promptFor = (inPath, outPath) => FIND
   ? `${RULES}\n\n입력 파일: ${inPath}\n결과 파일: ${outPath}`
+  : AUDIT
+  ? `${RULES}\n\n입력 파일: ${inPath}\n결과 파일: ${outPath}\n\n먼저 입력 파일을 Read 하고, 모든 술을 확인해 결과 파일을 Write 로 쓰세요. 쓴 뒤 Read 로 다시 열어 JSON 이 유효한지 확인하세요. 마지막 응답은 요약 한 줄(술 수·주장 수·판정별 개수)만 쓰세요.`
   : IMG
   ? `${RULES}\n\n입력 파일: ${inPath}\n결과 파일: ${outPath}\n\n먼저 입력 파일을 Read 하고, 사진을 열어 판정해 결과 파일을 Write 로 쓰세요. 쓴 뒤 Read 로 다시 열어 JSON 이 유효한지 확인하세요. 마지막 응답은 요약 한 줄(항목 수·맞음·다름·불명·상품 아님)만 쓰세요.`
   : `${RULES}\n\n입력 파일: ${inPath}\n결과 파일: ${outPath}\n\n먼저 입력 파일을 Read 하고, 모든 항목을 조사해 결과 파일을 Write 로 쓰세요. 쓴 뒤 Read 로 다시 열어 JSON 이 유효한지 확인하세요. 마지막 응답은 요약 한 줄(항목 수·상태별 개수·고친 수·뺀 수·검색 횟수)만 쓰세요.`;
@@ -85,11 +93,11 @@ const childEnv = (() => {
 })();
 
 // ── 사용률 ──
-function usage() {
+function usage(maxAge = 8 * 60000) {
   let u = null;
   try { u = JSON.parse(readFileSync(`${UW}/usage.json`, "utf8")); } catch {}
   const age = u ? Date.now() - new Date(u.at).getTime() : Infinity;
-  if (!u || age > 8 * 60000) {
+  if (!u || age > maxAge) {
     const r = spawnSync(process.execPath, ["scripts/usage-probe.mjs", "--json"], { encoding: "utf8", timeout: 120000 });
     try { u = JSON.parse(String(r.stdout).trim().split("\n").pop()); } catch {}
   }
@@ -110,7 +118,7 @@ function pending() {
   return list;
 }
 
-const state = { running: new Map(), done: 0, failed: 0, costUsd: 0, attempts: {}, startedAt: ts(), consecFail: 0 };
+const state = { running: new Map(), children: new Map(), halt: false, done: 0, failed: 0, costUsd: 0, attempts: {}, startedAt: ts(), consecFail: 0 };
 const writeStatus = (extra = {}) => { try { writeFileSync(STATUS, JSON.stringify({ at: ts(), lanes: LANES, effort: EFFORT, model: MODEL, queue: QUEUE, running: [...state.running.keys()], done: state.done, failed: state.failed, costUsd: +state.costUsd.toFixed(2), ...extra }, null, 1)); } catch {} };
 
 function runBatch(file) {
@@ -121,12 +129,13 @@ function runBatch(file) {
       "-p", "--model", MODEL, "--effort", EFFORT, "--output-format", "stream-json", "--verbose", "--no-session-persistence",
       ...(IMG
         ? ["--tools", "Read,Write", "--allowedTools", "Read", "Write"]
-        : FIND ? ["--tools", "Read,Write,WebSearch,WebFetch", "--allowedTools", "Read", "Write", "WebSearch", "WebFetch"]
+        : FIND || AUDIT ? ["--tools", "Read,Write,WebSearch,WebFetch", "--allowedTools", "Read", "Write", "WebSearch", "WebFetch"]
         : ["--tools", "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch", "--allowedTools", "Read", "Write", "Edit", "Glob", "Grep", "WebSearch", "WebFetch"]),
       "--permission-mode", "acceptEdits", "--permission-prompts", "none",
       "--strict-mcp-config", "--disable-slash-commands", "--max-budget-usd", String(MAX_USD),
     ];
     const child = spawn(EXE, args, { cwd: process.cwd(), env: childEnv, windowsHide: true, stdio: ["pipe", "pipe", "pipe"] });
+    state.children.set(file, child);
     let stdout = "", stderr = "";
     child.stdout.on("data", (d) => { stdout += d; });
     child.stderr.on("data", (d) => { stderr += d; });
@@ -134,6 +143,7 @@ function runBatch(file) {
     const killer = setTimeout(() => { try { child.kill(); } catch {} }, 55 * 60000);       // 한 묶음 55분 상한
     child.on("close", (code) => {
       clearTimeout(killer);
+      state.children.delete(file);
       // stream-json: 줄마다 사건이다. 마지막 result 가 합계이고, assistant 의 tool_use 로 도구 호출 수를 센다
       let res = null; const tools = {};
       for (const ln of stdout.split("\n")) {
@@ -162,7 +172,8 @@ function runBatch(file) {
 
 async function lane(k, queue) {
   while (true) {
-    if (existsSync(STOPF) || existsSync(`${UW}/RUNNER_STOP`)) { log(`레인 ${k}: RUNNER_STOP — 멈춤`); return; }
+    if (state.halt) { log(`레인 ${k}: 사용률 선에 닿아 멈춤`); return; }
+    if (existsSync(STOPF) || (!AUDIT && existsSync(`${UW}/RUNNER_STOP`))) { log(`레인 ${k}: 멈춤 파일(${STOPF.split("/").pop()}) — 멈춤`); return; }
     if (Date.now() > UNTIL) { log(`레인 ${k}: 시간이 다 되어 멈춤`); return; }
     // 사용률 확인
     const u = usage();
@@ -197,6 +208,17 @@ async function lane(k, queue) {
 const queue = pending();
 log(`러너 시작 — 큐 ${QUEUE.join(",")} · 대기 ${queue.length}묶음 · 레인 ${LANES} · 모델 ${MODEL} · 강도 ${EFFORT} · 묶음당 상한 $${MAX_USD}`);
 if (DRY) { console.log(queue.slice(0, 20).join(" ") + (queue.length > 20 ? " …" : "")); process.exit(0); }
+// 도는 중에도 3분마다 주간 사용률을 다시 재고, 선에 닿으면 도는 묶음까지 끊는다 (사용자가 정한 선을 넘지 않게)
+if (HARD) setInterval(() => {
+  if (state.halt) return;
+  const u = usage(3 * 60000);
+  if (u?.sevenDay != null && u.sevenDay >= WEEK_STOP) {
+    state.halt = true;
+    log(`주간 ${Math.round(u.sevenDay * 100)}% — 선(${Math.round(WEEK_STOP * 100)}%)에 닿아 도는 묶음 ${state.children.size}개를 끊고 멈춤`);
+    for (const c of state.children.values()) { try { c.kill(); } catch {} }
+    writeStatus({ halted: "week-stop", sevenDay: u.sevenDay });
+  }
+}, 3 * 60000).unref();
 await Promise.all(Array.from({ length: LANES }, (_, i) => lane(i + 1, queue)));
 log(`러너 끝 — 완료 ${state.done} · 실패 ${state.failed} · 비용 $${state.costUsd.toFixed(2)}`);
 writeStatus({ finished: true });

@@ -16,6 +16,9 @@ import { abvNum, canonCountry } from "./_facts-lib.mjs";
 const APPLY = process.argv.includes("--apply");
 const REDO = process.argv.includes("--redo");
 const SHOW = Number(process.argv[process.argv.indexOf("--show") + 1] || 4);
+// --category wine(기본) | nonwine(와인 밖 전부) | beer,traditional 처럼 여럿. 와인 밖은 판매처 칸이 다르다:
+//   품종 대신 종류(약주·라거 등)·용량·도수·국가가 오고, 맛 수치 축이 와인과 달라 맛 수치는 옮기지 않는다.
+const CAT = process.argv.includes("--category") ? process.argv[process.argv.indexOf("--category") + 1] : "wine";
 
 const GEN = /(위스키|와인|사케|맥주|보드카|데킬라|리큐르|브랜디|꼬냑|코냑|막걸리)/g;
 const core = (s) =>
@@ -25,9 +28,10 @@ const core = (s) =>
 const client = new MongoClient(process.env.MONGODB_URI, { serverSelectionTimeoutMS: 15000 });
 await client.connect();
 const col = client.db(process.env.MONGODB_DB || "winelens").collection("catalog");
-const q = { category: "wine", notDrink: { $ne: true }, dupeOf: { $in: [null, ""] }, "verified.by": { $exists: false }, "sourceFacts.dailyshot.name": { $exists: true } };
+const catQ = CAT === "wine" ? "wine" : CAT === "nonwine" ? { $ne: "wine" } : { $in: CAT.split(",") };
+const q = { category: catQ, notDrink: { $ne: true }, dupeOf: { $in: [null, ""] }, "verified.by": { $exists: false }, "sourceFacts.dailyshot.name": { $exists: true } };
 if (!REDO) q.enrichedBy = { $ne: "dailyshot-structured" };
-const docs = await col.find(q, { projection: { name: 1, result: 1, i18n: 1, "sourceFacts.dailyshot": 1 } }).toArray();
+const docs = await col.find(q, { projection: { name: 1, category: 1, result: 1, i18n: 1, "sourceFacts.dailyshot": 1 } }).toArray();
 
 const blank = (v) => v == null || v === "" || (Array.isArray(v) && !v.length);
 const AXIS = { 바디: "바디", 당도: "당도", 산미: "산도", 타닌: "탄닌" };
@@ -59,7 +63,7 @@ for (const d of docs) {
 
   // 맛 수치 — 우리가 추정한 값이면 판매처의 실제 값으로
   const tastes = Object.fromEntries((ds.tastes || []).filter((t) => AXIS[t.label] && Number.isFinite(Number(t.value))).map((t) => [AXIS[t.label], Math.max(0, Math.min(100, Math.round(Number(t.value) * 20)))]));
-  if (Object.keys(tastes).length >= 3 && (r.tasteEstimated !== false)) {
+  if (d.category === "wine" && Object.keys(tastes).length >= 3 && (r.tasteEstimated !== false)) {
     const prof = Array.isArray(r.tasteProfile) && r.tasteProfile.length ? r.tasteProfile.map((a) => ({ ...a })) : [];
     for (const [axis, val] of Object.entries(tastes)) { const a = prof.find((x) => x.axis === axis); if (a) a.value = val; else prof.push({ axis, value: val }); }
     set["result.tasteProfile"] = prof; set["result.tasteEstimated"] = false; filled.push("tasteProfile"); stat.taste++;
@@ -74,7 +78,9 @@ for (const d of docs) {
   if (blank(r.pairingTip) && foods) { set["result.pairingTip"] = `판매처가 추천하는 음식: ${foods}`; filled.push("pairingTip"); stat.tip++; }
 
   // 영어 이름 — 영어 화면용 번역층의 name
-  if (ds.enName && !d.i18n?.en?.name) { set["i18n.en.name"] = String(ds.enName).replace(/\s*,\s*/g, " ").replace(/\s{2,}/g, " ").trim(); filled.push("i18n.en.name"); stat.enName++; }
+  // 와인 밖 술은 판매처 영문명에 도수·용량이 붙어 오고("… 18.6%"), 한글 그대로인 것도 있다 — 떼고, 한글이면 쓰지 않는다
+  const en = String(ds.enName || "").replace(/\s*\d+(\.\d+)?\s*(%|ml|l|도)(?=\s|$)/gi, " ").replace(/\s*,\s*/g, " ").replace(/\s{2,}/g, " ").trim();
+  if (en && !/[가-힣]/.test(en) && !d.i18n?.en?.name) { set["i18n.en.name"] = en; filled.push("i18n.en.name"); stat.enName++; }
 
   if (!filled.length) continue;
   if (blank(r.basis)) set["result.basis"] = "판매처(데일리샷)의 구조화 정보 기준이며 웹 조사로 따로 확인하지는 않았습니다.";
@@ -85,7 +91,7 @@ for (const d of docs) {
   if (samples.length < SHOW) samples.push({ name: d.name, ds: ds.name, filled, set });
 }
 
-console.log(`대상 ${stat.docs}종 (판매처 짝이 있고 조사 안 된 와인) — 꽉 맞는 짝 ${stat.tight} · 변종 가능성으로 건너뜀 ${stat.skippedLoose}`);
+console.log(`대상 ${stat.docs}종 (판매처 짝이 있고 조사 안 된 술 · 주종 ${CAT}) — 꽉 맞는 짝 ${stat.tight} · 변종 가능성으로 건너뜀 ${stat.skippedLoose}`);
 console.log(`채우는 필드: 지역 ${stat.region} · 국가 ${stat.country} · 도수 ${stat.alcohol} · 종류 ${stat.type} · 상세(품종·용량·평점) ${stat.specs} · 맛 수치 ${stat.taste} · 시음 노트 ${stat.notes} · 어울리는 음식 ${stat.tip} · 영문명 ${stat.enName}`);
 console.log(`적용 대상 문서 ${writes.length}종`);
 for (const s of samples) { console.log(`\n■ ${s.name}  ⇢ ${s.ds}\n  채움: ${s.filled.join(", ")}`); for (const [k, v] of Object.entries(s.set)) if (/^result\.(region|specs|tastingNotes|pairingTip|tasteProfile)|i18n/.test(k)) console.log(`   ${k}: ${JSON.stringify(v).slice(0, 170)}`); }
