@@ -1,0 +1,149 @@
+# 정보 조사·이미지 작업 진행 기록
+
+> 컨텍스트가 끊겨도 이 파일과 DB(`catalog.verified`, `data/images/manifest.json`)만 보면 이어서 할 수 있게 적는다.
+
+## 지시 (사용자, 2026-10-01)
+- 방향: 가격은 "N만원대"만. 승부처는 정확한 정보. 전체 주종을 웹 조사로 확인해 DB 에 저장한다. 확인된 것만.
+- 이미지도 최대한 가져와 Cafe24 FTP 에 저장한다. 한 번에 몰아 올리지 않는다 — 전용 폴더에 `_staging` 으로 먼저, 확인 뒤 이동.
+- **내일(2026-10-02) 오전 9시까지 꾸준히 돌린다. PC 는 켜 둔다.**
+- **주간 한도가 70% 에 차면 멈춘다.** 그 전까지는 계속 돌린다.
+
+## 파이프라인
+```
+정보  research-pack.mjs → wf/research.mjs(웹 조사, 결과를 out/ 에 JSON 으로) → research-apply.mjs → DB(catalog.result, catalog.verified)
+사진  images-stage.mjs(PC 폴더에 규격화) → images-pack.mjs → wf/imgcheck.mjs(눈으로 확인) → images-verdict-apply.mjs → images-upload.mjs(_staging → 이동 → DB image)
+대조  dailyshot-detail.mjs(판매처 구조화 정보 → catalog.sourceFacts.dailyshot) → facts-crosscheck.mjs(도수·국가 대조)
+```
+작업 폴더: `data/research/_work/{in,out}/`, `data/images/{stage,manifest.json,_work}/` (둘 다 git 제외)
+
+## 규칙
+- 확인한 사실만 쓴다. 틀린 정보 하나가 빈칸보다 나쁘다.
+- 고친 필드의 번역(i18n.en/ja)은 지운다. 화면은 원문(한국어)으로 돌아간다. `i18nStale` 에 남긴다.
+- 도수·국가가 판매처와 다르면 출처를 댄 경우에만 적용한다. 아니면 보류하고 목록에 남긴다.
+- 사진은 판매처·브랜드의 저작물이다. `imageOrigin`·`imageSource` 를 남기고 `imagePrev` 에 옛 주소를 둔다.
+
+## 파일럿 (2026-10-01 17:23)
+- 위스키 6 · 사케 4 · 와인 4 · 맥주 3 · 전통주 4 · 브랜디 3 — 7묶음
+- 기존 정보 오류 예: 킬커란 국가 미국→스코틀랜드, 와일드 터키 라이 도수 50.5→40.5(101 라이는 별개 제품)
+
+## 진행
+(아래에 시각과 함께 이어서 적는다)
+
+### 2026-10-01 17:55 — 본 가동 시작
+- 파일럿 24항목 DB 적용 완료 (고침 92 · 뺌 85, 항목당 3.8건). 토큰 약 193만 → 항목당 약 8만, 한 묶음(4항목) 약 28분.
+- 1파 동시 가동: 위스키 101묶음(403항목) · 사케 51묶음(203항목). 워크플로 작업 ID: wr2hwktgx(위스키), whaayiq1z(사케).
+- 상태줄로 사용률 읽기를 시도했으나 VS Code 확장에서는 파일이 생기지 않았다 (`.claude/settings.local.json` + `scripts/statusline-usage.mjs`). 사용자에게 수동 보고를 부탁했다.
+- 하드 상한: 서브에이전트 토큰 합계 1.2억 (`data/research/_work/budget.json`). 시작 8시 15분 이후엔 새 가동을 걸지 않고 9시에 정리 보고한다.
+- 다음 가동 후보(우선순위): 스피리츠 388 → 맥주 158 → 전통주 580 → 와인(인기순, 이야기 없는 것) → 와인 기존 503 검증.
+
+### 2026-10-01 17:58 — 사진 가동 시작
+- 판매처 상세 수집 완료 (2,244건). 도수·국가 대조: 둘 다 있는 854종 중 177건(21%) 어긋남, 국가 1,308종 중 78건(6%). 비어 있던 도수 1,240·국가 824를 꽉 맞는 짝에서 채움.
+- 이미지 규격화 3,506장 (데일리샷 2,344 · 네이버 1,162). 네이버 사진의 "19" 배지를 지움. 데일리샷 사진은 octet-stream 헤더라 처음 417건이 네이버로 대체됐다가 고침.
+- 자동 통과(데일리샷·이름 꽉 맞음) 1,840장 → 업로드 분당 30장으로 시작 (백그라운드). 눈으로 볼 것 1,793장(129묶음) → 워크플로 wt92x1xo0.
+- 사진 없음 626 · 받다 실패 211 (기존 네이버 링크가 이미 죽어 있음) → 2차: 데일리샷 검색 후보를 눈으로 대조해 채운다 (아직 안 함).
+
+## 운영 지침 (하트비트가 읽는다 — 이 절을 최신으로 유지)
+**멈춤 조건** — 사용률은 직접 잰다: `node scripts/usage-probe.mjs` (공식 CLI 의 rate_limit_event, 메모리 usage-measurement 참고). 기록 `data/research/_work/usage.jsonl`, 감시기 로그 `usage-watch.log`.
+ (1) 주간(seven_day) 60% 이상 → 새 가동 금지. (2) 주간 68% 이상 → 러너·워크플로 전부 멈춘다 (사용자 선은 70%). (3) 2026-10-02 08:15 이후 새 가동 금지 → 09:00 전에 한국어 최종 보고.
+감시기: `node scripts/usage-watch.mjs --exit-at 0.60 --every 5` (Bash 백그라운드, timeout 7200000 — 2시간마다 다시 띄운다. 60% 를 넘으면 `--exit-at 0.68` 로).
+먼저 `date` 로 지금 시각을 확인한다. 사용자는 자리에 없다 (PC 는 켜 둠, 절전 없음 확인).
+
+**조사는 러너가 한다** (`scripts/research-runner.mjs`, 대화 세션과 분리된 프로세스). 이유: WebSearch 가 세션당 200회로 막혀 있어 워크플로 에이전트는 검색을 못 한다. 러너는 묶음마다 새 `claude -p` 세션을 띄워 새 검색 예산을 받고, 사용률을 보고 스스로 속도를 조절한다 (5시간 창 90% 이상이면 새 묶음을 미루고, 주간 66% 이상이면 멈춘다).
+ · 살아 있나: PowerShell `Get-CimInstance Win32_Process -Filter "Name='node.exe'" | ? CommandLine -match 'research-runner'`. 로그 `data/research/_work/runner.log`(UTF-8 — PowerShell 로 읽으면 글자가 깨지니 Bash tail), 상태 `runner-status.json`, 묶음별 비용 `runs.jsonl`.
+ · 죽었고 `RUNNER_STOP` 이 없으면 다시 띄운다 (남은 묶음만 자동으로 고른다). PowerShell: `Start-Process "C:\Program Files\nodejs\node.exe" -ArgumentList scripts/research-runner.mjs,--queue,x1,sk,wp,wv,tr,wh,sp,be,--lanes,6,--effort,high,--until,2026-10-02T08:30:00+09:00 -WorkingDirectory "C:\Users\Yogibo Design\Desktop\wine" -WindowStyle Hidden -RedirectStandardOutput data\research\_work\runner.out -RedirectStandardError data\research\_work\runner.err`
+ · 멈추기: `data/research/_work/RUNNER_STOP` 파일을 만든다 (새 묶음을 걸지 않고 도는 것이 끝나면 끝낸다).
+ · 큐 끝(609묶음)이 가까워지면 다음을 검토: 와인 나머지(이야기 없는 ~2천종 — `research-pack.mjs --cat wine --where noStory --order popular --prefix wr` 로 묶음 만들기), `partial` 재조사.
+ · 강도는 high (같은 입력 4개로 비교: medium $0.26 얕음 / high $0.50 / xhigh $0.80). 묶음당 약 $0.5·2분.
+
+**점검 순서 (하트비트마다)**
+1. **러너·업로더·감시기 생존** — 위 방법으로 러너, PowerShell 로 `images-upload` node 프로세스, 감시기 로그 마지막 시각. 업로더가 없고 `data/images/_work/STOP` 도 없으면 다시 띄운다 (중복 금지):
+   `node --env-file=.env.local scripts/images-upload.mjs --rate 30 --watch --until 2026-10-02T08:45:00+09:00 >> data/images/_work/upload.out 2>> data/images/_work/upload.err` (Bash `run_in_background`, `timeout: 7200000`). 로그 `data/images/_work/upload.log`.
+2. **끝난 결과 반영** — 조사: `node --env-file=.env.local scripts/research-apply.mjs` (dry-run 으로 오류·거절 수 확인) 후 `--apply`. 사진 판정: `node scripts/images-verdict-apply.mjs --apply` 뒤 `node --env-file=.env.local scripts/images-pair-unlink.mjs --apply`. 조사 결과의 사진 주소는 `scripts/images-from-research.mjs --apply` → `images-pack.mjs --prefix imr` → 눈 확인.
+3. **사진 눈 확인**(워크플로 `w3v5a3q49`, 3레인)이 끝나면 남은 것은 `node scripts/_remaining.mjs images img` 로 골라 `scripts/wf/imgcheck.mjs` (`args: {"files":[...],"lanes":3}`).
+4. **이상 징후** — 429·연속 실패·호스팅 오류는 원인을 적는다. 러너 실패 묶음은 자동으로 한 번 더 한다.
+5. `data/research/STATUS.md` 를 갱신한다 (몇 묶음 끝났나, 비용, 사용률).
+
+**주의**: `manifest.json` 은 `scripts/_manifest-lib.mjs` 의 병합 저장으로만 쓴다. `images-stage.mjs --restage` 는 판정 대기 중인 사진이 있으면 돌리지 않는다.
+
+### 2026-10-01 18:06 — 업로더 교체
+- 기록(manifest) 을 여러 스크립트가 통째로 덮어써 서로의 변경을 지울 수 있어서, 저장을 "내가 바꾼 항목만 병합 + 잠금" 방식으로 바꿨다 (`_manifest-lib.mjs`, 4개 스크립트 적용, 4프로세스 동시 쓰기 800/800 시험 통과).
+- 업로더는 감시 모드로 교체 (`--watch`): 새로 verified 가 되는 사진을 계속 올린다. 끊긴 앞 실행의 3장은 DB 와 대조해 보정. 이때 live 206 · verified 1,637.
+- 다음 가동용 입력 묶음을 만들어 둠: `sp` 96(381항목) · `be` 39(155) · `tr` 144(576).
+
+### 2026-10-01 18:20 — 속도 조절 (사용률 실측)
+- `scripts/usage-probe.mjs` 로 요금제 사용률을 직접 읽을 수 있게 됨 (공식 CLI 의 rate_limit_event). 18:11 주간 15%·5시간 57% → 18:17 주간 17%·5시간 64%. 에이전트 약 33개가 5분에 5시간창 +6%p, 주간 +2%p 를 쓴다.
+- 5시간 창이 100% 에 닿으면 에이전트가 한꺼번에 막히고 이 세션도 막혀서 감시·반영이 멈춘다 (초기화 19:50). 그래서 우선순위가 낮은 위스키(wh)와 사진 확인(img) 워크플로를 멈췄다. 결과 파일은 남아 있다 (wh 6묶음 · 판정 25/129 묶음).
+- 앞으로는 `lanes` 인자로 동시 실행 수를 직접 정한다 (워크플로 하나의 동시 실행은 10개로 고정이라, 레인 수만큼의 에이전트가 각자 순서대로 처리하는 방식). 목표는 5시간 창이 90% 를 넘지 않는 속도 (분당 0.3%p 안팎).
+- 우선순위: 사케(sk, 진행 중) → 와인 인기순(wp) → 전통주(tr) → 위스키 이어서(wh) → 스피리츠(sp) → 맥주(be) → 와인 기존 검증(wv). 예산에 따라 뒤쪽은 못 할 수 있다.
+
+### 2026-10-01 18:24 — 새 규칙으로 재가동 (레인 방식)
+- 원인 분석: 사케 한 묶음이 WebFetch 를 128번 불렀다 (규칙은 항목당 2~4회). 도구 호출이 하나씩 차례로 나가 턴이 늘고, 턴마다 큰 맥락을 다시 읽는 캐시 읽기가 비용의 절반 이상이다.
+- `scripts/wf/research.mjs` 규칙에 추가: 항목당 검색 6·열람 10회 상한, 알고 싶은 사실을 prompt 에 이름 지어 묻기, 독립적인 호출은 한 응답에서 동시에. `imgcheck.mjs` 도 사진을 4~5장씩 동시에 열게 함. 조사 결과에 `imageCandidates`(열어 본 페이지의 병 사진 주소) 필드 추가.
+- 재가동: 사케 41묶음(sk-011~051) 4레인 `wyhb7r24b`, 와인 인기순 71묶음(wp) 4레인 `wfz3yesc6`. 에이전트 8개. 옛 사케·위스키·사진 워크플로는 멈춤 (결과 파일은 남아 있고 `_remaining.mjs` 로 남은 묶음만 골라 이어 건다).
+- 지금까지 DB 반영: 84종 (위스키 34 · 사케 36 · 전통주 4 · 와인 4 · 브랜디 3 · 맥주 3).
+
+### 2026-10-01 18:47 — 워크플로 → 러너 전환 (중요)
+- **발견**: WebSearch 는 "세션당 200회"(CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION)로 막혀 있고, 워크플로의 에이전트는 이 대화 세션을 공유한다. 첫 가동에서 200회를 다 써서 그 뒤 에이전트는 검색 없이 주소를 짐작해 열었다 (위스키·사케 결과 일부가 `partial` 인 이유). 이 대화 세션의 한도는 늘릴 수 없다.
+- **조치**: `scripts/research-runner.mjs` — 묶음마다 별도의 `claude -p` 세션을 띄운다. 세션마다 새 검색 예산, 묶음별 비용·토큰·도구 호출 수가 `data/research/_work/runs.jsonl` 에 정확히 남고, 사용률을 보고 스스로 속도를 조절한다(5시간 90% 에서 미룸, 주간 66% 에서 멈춤). 이 대화와 맥락·한도를 따로 쓴다.
+- **강도 실험**(같은 입력 4개): medium $0.26·1분(검색 요약만, 본문 안 읽음) / **high $0.50·2분(열람 7)** / xhigh $0.80·4분(열람 11). 핵심 사실은 같고 깊이는 high≈xhigh. 사용자 전역 설정의 effortLevel 이 xhigh 라 워크플로 에이전트가 그것을 물려받았고 묶음당 $3.7(열람 128회)이 들었다 → 러너 high 는 약 7분의 1.
+- **가동**: 러너(PID 19260, 대화 세션과 분리된 프로세스) 큐 `x1,sk,wp,wv,tr,wh,sp,be` 609묶음 · 레인 6 · high · `--until 2026-10-02T08:30`. 로그 `data/research/_work/runner.log`, 상태 `runner-status.json`. 멈추기: `data/research/_work/RUNNER_STOP` 파일 생성. 사진 눈 확인 워크플로(img, 3레인)는 그대로.
+- 옛 워크플로 결과(위스키 7묶음·사케 10묶음)는 검색이 막힌 채 쓴 것이 섞여 있다. 러너 큐가 끝난 뒤 `partial` 인 항목을 다시 조사하는 2차를 검토한다.
+- 18:51 **반영 반복기**(PID 17260, 분리 프로세스) `scripts/_apply-loop.mjs` — 10분마다 조사 결과(research-apply, 새 파일만)·사진 판정(images-verdict-apply)·짝 끊기(images-pair-unlink)를 자동 반영한다. 로그 `data/research/_work/apply-loop.log`, 멈추기 `APPLY_STOP` 파일. 그래서 사람이 따로 반영하지 않아도 DB 에 쌓인다 (하트비트는 로그만 본다).
+- 18:57 **사진 눈 확인 러너**(PID 22096, `--kind images`, 3레인, medium): 묶음(14장)당 $0.11·25초 — 워크플로(묶음당 ~$1.5)의 1/14. 같은 입력에서 판정 13/14 일치(나머지 1건도 둘 다 거절). 로그 `data/images/_work/runner-img.log`.
+- 18:58 **사진 찾기 러너**(PID 28008, `--kind imgfind`, 3레인, high): 사진 없는 887종(없음·실패·거절) 111묶음(fnd-NNN, 8종씩). 에이전트가 공식·판매 페이지에서 병 사진의 직접 주소를 찾아 `data/images/_work/find-out/` 에 쓴다 → `scripts/images-from-research.mjs --apply`(받아서 규격화, staged) → `images-pack.mjs --prefix imr --source research-page` → 사진 눈 확인 러너 `--queue imr` → 판정 반영(반복기) → 업로더. 시험 24종 중 5종(21%) 찾음(medium), 찾은 주소 10개는 모두 실제로 받아짐. high 는 묶음당 ~$0.66.
+- 19:00 사용률 5시간 88%·주간 22% (러너 12세션 동시). 러너는 5시간 90% 에서 새 묶음을 미룬다 (초기화 19:50).
+
+### 2026-10-01 20:35 — 중간 점검 · 실측 보정
+- 진행: 조사 133묶음 완료($84)·남음 477, 사진 찾기 111묶음 완료($58, 사진 없음 617→236 — 약 380종 새로 찾음, 성공률 약 43%), 사진 확인 $13, 합계 $156. 사케 209종 중 205 검증(98%). 공개 사진 3,145장.
+- **실측 보정(러너가 기록한 달러 기준)**: 20:05→20:31 사이 $78 을 쓰자 주간 25→31%(+6%p), 5시간 14→48%(+34%p). 즉 **주간 1%p ≈ $13, 5시간 창 100% ≈ $230**. 주간 70% 선까지(66% 정지선) 남은 예산 ≈ $450. 남은 큐 ≈ $310 이라 끝나면 주간 55% 안팎 — 여유는 $100~150 정도뿐이라 번역·2차 검증 같은 추가 작업은 사용자 확인 뒤에.
+- 25~30분마다 `_status.mjs --heal` 알람(백그라운드 sleep)이 점검·복구한다. 크론 하트비트가 실제로 깨우는지 확신이 없어 이 방식을 쓴다.
+- 20:34 첫 워크플로(검색 한도 소진 뒤)에서 나온 위스키·사케 결과 중 검색 없이 쓴 34항목(`rr-NNN`, 9묶음)을 러너(1레인)로 다시 조사한다.
+- 러너 실패 묶음은 이제 바로 다음 순서로 재시도(코드 수정, 다음 재시작부터 적용). 에이전트가 쓴 JSON 이 깨지는 경우가 약 1.3%.
+
+### 2026-10-02 08:15 — 마감
+- 조사 큐 730묶음 + 재조사(rr 9, rp 21, xhigh) 완료. 검증 2,882/4,501(64%), 사진 live 3,425. 비용 $556(API 환산: 조사 $483 · 사진 찾기 $59 · 사진 확인 $15), 주간 15%→60%.
+- 마감 정리: 멈춤 파일(`RUNNER_STOP`·`APPLY_STOP`·`HEAL_STOP`·`STOP`·`CYCLE_STOP`) 생성, 반복기들은 다음 깨어날 때 종료. 감시기만 09:00 까지 기록.
+- 최종 보고서 `data/research/REPORT-2026-10-02.md`. 남은 일은 보고서의 '남은 일'.
+
+### 2026-10-02 — 후속: 와인 나머지·번역을 모델 없이 (사용자 지시: "토큰 사용 안 하고")
+- **와인 나머지**: 판매처(데일리샷) 짝이 있는 조사 안 된 와인 639종 중 이름이 꽉 맞는 577종을 `scripts/wine-structured-fill.mjs` 로 채움 (지역 500 · 품종·용량·Vivino 평점 558 · 맛 수치 469 · 시음 노트 533 · 어울리는 음식 217 · 영문명 576). 비어 있는 필드만, 판매처 서술문은 베끼지 않고 사실만. `enrichedBy: dailyshot-structured`, `structuredFill`(채운 필드 기록), `result.basis` 에 출처 명시. tier 는 stub 그대로. 변종 가능성이 있는 62종과 짝이 없는 900종은 출처가 없어 못 채움 (짝이 없는 것은 데일리샷이 아예 취급하지 않는 와인).
+- **번역**: 로컬 NLLB-200(1.3B, CTranslate2 int8, CPU)을 시험했다. 속도는 문장당 0.45초(63,229문장×2언어 → 약 16시간)이고, 품질이 이 분야 문장에서 의미가 바뀌는 오역이 많아(까바→cabbage, 튤립형 코냑 잔→cork cup, 향을 맡고→perfume, 부가물 라거→baggage rack) 서술문에는 쓰지 않기로 했다. 구글 번역 비공식 주소는 429 로 막혔다. 기존 번역에서 뽑은 번역 메모리는 정확 일치가 1.1% 라 쓸모가 없었다.
+- **적용한 것(용어집 번역)**: 사람이 쓴 용어집(`scripts/mt/glossary-wine-desc.tsv` 시음 단어 381 · `glossary-wine-misc.tsv` 음식 76·품종·지역·종류·라벨)과 정해진 틀로 영어·일본어 번역층을 만들었다 (`scripts/mt/glossary-apply.mjs`). 용어집에 없는 낱말이 있으면 그 필드는 넣지 않는다. 나라 이름은 모든 문서에: 3,482종 적용 (와인 577종은 type·region·specs·tastingNotes·pairingTip·basis·country 전부). 전수 검사 12,798건 문제 없음.
+- **못 한 것**: 조사로 새로 쓴 서술문(story·winery·trivia·history·tips 등 고유 문장 63,229개)의 영어·일본어. 정확한 번역은 LLM 이 필요하다 — 선택지: (1) 한국어로 둠(현재) (2) 무료 Gemini API 키(사용자가 aistudio 에서 발급) 로 우리 쪽에서 돌리기 (3) 토큰 사용 ($65~90).
+- 로컬 번역 환경은 `data/mt/`(가상환경·모델 약 2GB, git 제외)에 남아 있다. 지워도 된다.
+
+### 2026-10-02 오후 — 가격 안내 문구 · 962종 점검 · 로컬 번역 재시험
+- **가격 안내(앱 코드)**: 결과 화면 가격 카드 — 판매처 실시간 값도 조사 시세도 없고 우리가 매긴 가격대·어림 범위뿐이면 제목을 "예상 가격대"로 바꾸고 "실제 판매가가 아니라 우리가 매긴 가격대 추정치입니다…" 줄을 붙임(`estimateOnly`). 탐색 화면 가격 필터 밑에 "가격대는 추정치이며…". 뼈대 안내문 "가격대만 확인된 상태" → "예상 가격대만 있는 상태". 영어·일본어 문구 `lib/i18n.js` 끝에 추가. JSX 문법 검사만 했고 화면 확인은 못 함. 미커밋.
+- **조사 안 된 와인 962종**: harvest 940 · manual 21 · scan 1 (7/28~8/12 생성), 조회수 최대 1, 와인장·찜·취향·알림 참조 0건(sessions 2건이 이름만 언급). 종류 723·나라 319·지역 22·도수 4, 맛 수치 추정값 777. 사진: 우리 호스팅 420 · 눈 확인 거절 398 · 받기 실패 134 · 없음 10 — 거절·실패 532종의 옛 외부 사진 주소가 DB 에 그대로 남아 있음(틀린 사진이 보일 수 있음). 삭제는 비추천(되돌릴 수 없음·이름 색인 감소) → 추정값만 걷고 이름 색인으로 유지 / 숨김 / 백업 후 삭제 중 사용자 결정 대기.
+- **로컬 번역(NLLB) 재시험은 중단**: 이 PC 의 `wine` 개발 서버(Next, 포트 5700, PID 17236)가 CPU 를 4코어 넘게 계속 써서(응답 10~20초) 번역이 1.8코어밖에 못 받는다. 6코어 PC 에서 전체(6.2만 문장 × 2언어 + 역번역 검증)는 한가한 때에도 하루 안팎이 걸릴 것으로 추정. 번역 환경은 프로젝트 밖 `C:\Users\Yogibo Design\mt-work`(옛 `data/mt`)로 옮겼다.
+
+### 2026-10-02 오후 — 사용자 결정 반영: 962종 정리 · 사진 정리 · 번역 시험 결론
+- **962종(출처 없는 와인)**: 삭제하지 않고 **추정 맛 수치 777종을 걷었다** (`scripts/wine-strip-estimates.mjs`). 서로 다른 한국 과실주들에 똑같은 `[68,20,60,56]` 같은 기본값이 들어 있던 것. 원래 값은 문서의 `strippedEstimates` 와 `data/backup/wine-estimates-2026-10-02.json`. 이름·주종·가격대·종류·나라·사진은 그대로(이름 색인). 이야기가 있는 4종(본템피 몬테풀치아노 다브루초 · 운두라가 시부미 카르메네르 · 로버트 바일 주니어 리슬링 트로켄 · 월류봉 하우스 디저트 와인)은 지시 범위 밖이라 손대지 않았다 — 조사에서 정체를 못 밝혔는데 이야기가 남아 있어 처리 지시가 필요하다.
+- **틀린 사진 주소 정리**: 눈 확인에서 거절된(이름과 다름·상품 아님·불명) 사진 341종과 죽은 주소 155종, 합계 **496종**의 옛 주소를 DB 에서 걷었다 (`scripts/images-clean-rejected.mjs`). 원래 주소·이유는 `imageRejected` 와 `data/backup/images-rejected-2026-10-02.json` — 되돌릴 수 있다. 같은 상품이지만 문구·워터마크로 거른 244건은 사진이 맞아서 두었고, DB 에 다른 사진이 걸린 62종은 건드리지 않았다. 사진이 없는 항목은 화면이 주종 엠블럼으로 대신한다(`components/Thumb.js`). 사진이 있는 문서 3,679/4,501 (우리 호스팅 3,425).
+- **로컬 번역(NLLB 1.3B) 시험 결론 — DB 에 넣지 않음**: 영어 300문장을 정번역(beam 2, 문장당 0.37초)·역번역(greedy)하고 사람이 읽어 표시했다. ① 무작위 60문장 중 약 41개(68%)가 의미가 바뀐 번역 (약주→medicine, 초밥→grilled chicken, 생탁주→towel, 즙→vinegar, 훈연→anise). ② 역번역 일치도가 높은 상위 36개도 15개(42%)가 틀림 — 거의 전부 고유명사(Donnafugata→"Don Napougatas", Sipsmith→"Tissmith", Founders→"Pounders", Martinborough→"Martinburr", Pernod Ricard→"Pernorrica"). 한국어 음역 이름을 영어로 잘못 옮기고 그것을 같은 한국어로 되돌리므로 역번역은 이 오류를 못 거른다. ③ 우리 DB 의 "한글(원어)" 짝으로 이름 사전을 만들었으나(영어 3,629·일본어 1,875) 오역이 난 이름 17개 중 2개만 들어 있어 소용이 없었다. 계산량은 문제가 아니다(30,000문장 ≈ 3시간/언어) — 정확도가 문제다.
+- 번역 도구(`scripts/i18n-export.mjs`·`i18n-import.mjs`·`scripts/mt/*`)와 환경(`C:\Users\Yogibo Design\mt-work`)은 남겨 둔다. 서술문 번역의 현실적 길: (a) 한국어로 둠 (b) 무료 Gemini 키(우리 쪽 스크립트가 호출) (c) 토큰 사용 (d) 로컬 기계번역을 "자동 번역 · 참고용" 표시를 붙여 노출(오역이 보이는 것을 감수).
+
+### 2026-10-02 오후 — 번역은 한국어로 둔다 (사용자 결정) · 개발 서버 점검
+- **결정**: "한국어로 두자 그냥" — 서술문(고유 문장 약 6.2만 개)의 영어·일본어 번역 작업은 여기서 닫는다. 위 (b)(c)(d) 는 사용자가 다시 꺼내기 전에는 하지 않는다.
+- **DB 확인**: 번역층 엔진 표시는 `glossary-v1`(영어·일본어 합산 6,944건)과 표시 없는 옛 번역 20건뿐이고, 기계번역(`nllb`) 표시 문서는 **0건**. 기계번역이 DB 에 들어간 적이 없다.
+- **정리**: 번역 환경 `C:\Users\Yogibo Design\mt-work`(가상환경·NLLB 모델·시험 파일 1.6GB)를 지웠다. 시험 증거(300문장 정번역·역번역·표본, 164KB)는 `data/research/_work/mt-eval/` 에 남겼다(git 제외). 도구 스크립트(`scripts/mt/*`, `i18n-export/import.mjs`)는 코드로 남겨 둔다 — 쓰려면 환경부터 다시 만들어야 한다. 위 두 항목(113·124행)의 "환경은 남겨 둔다"는 이 항목으로 대체됨.
+- **`@zxing/library` 오류 보고(사용자, "오류난다")**: 재현되지 않았다. 패키지는 정상(0.23.0, `package-lock.json`·git 에 기록, `esm/index.js` 상대 import 108개 모두 존재, node 에서 불러짐). 쓰시던 5700 서버도, 별도 빌드 폴더(`.next-verify`, 이미 삭제)로 처음부터 띄운 임시 서버(5790, 이미 종료)도 `lib/barcodeScan.js` 의 동적 import 를 `node_modules/@zxing/library/esm/index.js` 로 정상 컴파일한다. 붙여 준 글에 첫 줄(오류 종류)이 없어 원인은 확정하지 못했다.
+- **5700 개발 서버(PID 17236) 상태**: 20.4시간 켜져 있고 작업 집합 **14.8GB**·핸들 5,441개, 연결은 1개(브라우저 탭)인데 한가한 30초 동안 **CPU 4.9코어**를 썼다. 같은 코드로 새로 띄운 서버는 한가할 때 0.05코어다. 서버 안에 누수·폭주가 쌓인 상태로 보이며(오래된 Turbopack 서버), 일시적 컴파일 오류와 응답 지연(10~20초)이 여기서 나왔을 가능성이 크다 — **재시작이 처방**(사용자 터미널에서 Ctrl+C 후 `npm run dev:wine`). 서버를 대신 끄고 켜지는 않았다(사용자 터미널에 붙어 있음).
+- 참고: 개발 서버를 켤 때마다 "워크스페이스 루트를 `C:\Users\Yogibo Design\package-lock.json` 으로 잡았다" 경고가 나온다 — 홈 폴더에 `package.json`(jsdom 만 있음)·`package-lock.json` 이 따로 있기 때문이다. 동작에는 문제가 없고(새 서버가 한가할 때 조용함) 조용히 하려면 `next.config.mjs` 에 `turbopack.root` 를 주면 된다. 아직 바꾸지 않았다.
+
+### 2026-10-02 오후 — 기능서·현황서 HTML 한 장 (사용자 요청: "진행상황과 기능서 정리파일을 한꺼번에 체크해서 HTML 하나")
+- **산출물**: `docs/기능서-현황.html` (외부 파일 없이 열림, 밝게·어둡게 전환, 기능 검색·상태 거르기). 구성: 주종별 진행 현황(막대+수치) · 앱별 합계 · 데이터 작업 현황 · 지금 결정이 필요한 것 · 기능서 316개(7영역, 상태·근거 파일:줄) · 앱 6종 비교와 결과 화면 구성 매트릭스 · 기능 스위치 4개·크론·가격 출처 · 공개 전 위험 · 문서 기준 남은 일 · 정리파일과 코드가 어긋난 곳 · 읽은 정리파일 28개.
+- **만든 방법**: 워크플로(`bottle-lens-spec`, run `wf_00eb32a3-bf6`, 에이전트 23개·약 26분·읽기 전용)로 정리파일 6묶음·코드 7영역을 따로 읽고, 영역마다 독립 검증자가 반박을 기본값으로 코드를 다시 열어 확인(교정 68·추가 55·반박 0), 문서 주장 251개를 코드에 비춰 판정(그대로 117 · 바뀜 71 · 낡음 12 · 남음 22 · 확인 불가 28 · 끝남 1), 누락 점검자는 근거로 인용되지 않은 파일(이미지·CSS 등 기능 없는 것 12묶음)만 찾았다. 진행 수치는 DB 를 직접 센 값이고 문서 단위 계산과 `countDocuments` 를 따로 세어 맞췄다(일치).
+- **다시 만들기**: `node --env-file=.env.local scripts/_progress-stats.mjs` (수치·표) → `node scripts/_overview-html.mjs` (읽어 둔 `data/research/_work/spec/spec.json` 으로) 또는 `--journal <워크플로 journal.jsonl>` 로 기능 목록까지 다시. 앱 6종 프로필은 `data/research/_work/spec/apps.json`(lib/apps/*.js 에서 추출).
+- **코드 점검에서 나온 위험(공개 전)** — 사용자 결정 대기, 아직 아무것도 고치지 않았다:
+  1. `POST /api/catalog/import`(인증 없음)를 부르면 seed 1,317건이 result 를 덮어쓴다. DB 에서 1,317건 모두 기존 문서와 키가 같고 **1,276건이 웹 조사로 검증된 문서** — 정정이 사라지고 verified 표시만 남는다 (`data/research/_work/spec/_import-risk.mjs` 로 읽기만 해서 센 값).
+  2. catalog 의 import·merge·cleanup·seed(유료)·images·sakenowa·rakuten 과 `/api/naver/ping` 에는 인증이 없고 middleware(proxy)도 없다. harvest·backfill·크론·바코드 연결만 `CRON_SECRET` 이 있을 때 Bearer 검사(미설정이면 열림). `/api/upload` 는 인증·크기·형식 검사 없이 FTP 호스팅에 올린다.
+  3. 셀러·기록·취향이 owner 'local' 한 벌로 앱 단위 공용 저장 — 공개하면 모든 방문자의 기록이 섞인다(서랍은 "이 기기에만 저장"이라고 적음).
+  4. 표시 오류: `components/AccountDrawer.js:114-118` 중괄호 빠져 코드 글자가 화면에 나옴 · `app/guide/page.js:121` 이 꺼 둔 특가 알림을 약속 · `lib/prompts.js` 주종 16종 vs 스키마 12종.
+- **참고**: 바코드·실시간 시세(셀러 가치·목표가·특가 알림 구독·빈티지 가격)·언어 바꾸기·글자 크기는 `lib/features.js` 스위치 4개로 꺼져 있다(이 PC 의 .env.local 에는 설정 없음, 배포 환경 값은 확인 못 함). 언어 바꾸기는 서술문이 한국어로 남아 켜면 두 언어가 섞인다 — 결정 필요. `data/changelog.json` 은 어디서도 읽지 않는 기록용 파일.
+- **사용량**: 작업 뒤 측정 주간 67%(10-03 04:00 초기화), 5시간 17% — 사용자 선 70% 에 3%p 남음. 이 워크플로의 에이전트 토큰은 약 308만.
+
+### 2026-10-02 14시 — 5700 개발 서버 먹통 정리 (사용자 승인)
+- 13:58 에 사용자가 서버를 다시 켠 뒤 "Could not find the module … global-error.js#default in the React Client Manifest" 오류와 함께 먹통(CPU 3.3코어, 요청 무응답). 원인은 `.next-wine/dev/cache`(1.3GB, 8/19 부터 쌓인 Turbopack 영구 캐시)가 꼬인 것 — 같은 코드를 새 폴더 `.next-verify` 로 5790 에 띄우면 `/` 가 0.13초에 정상.
+- 조치: 서버 종료 → `.next-wine` 삭제 → `next.config.mjs` 에 `experimental.turbopackFileSystemCacheForDev: false`(개발용 영구 캐시 끔, 미커밋) → `npm run dev:wine` 을 숨김 프로세스로 재기동(로그 `data/research/_work/dev-5700.out.log`·`.err.log`). 첫 컴파일 13.6초, 유휴 CPU 0.02코어·메모리 0.8GB.
+- 앞서 낮에 보고된 `@zxing/library` "Module not found" 도 같은 서버 상태(누수·캐시)에서 나온 것으로 보인다 — 코드·패키지는 멀쩡했다.

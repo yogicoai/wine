@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>보틀 렌즈 데이터 보고</title>
+<meta name="description" content="보틀 렌즈 DB 에 조사로 쌓인 데이터가 무엇이 몇 개인지 — 칸별·주종별·출처·사진·가격·번역·사용 기록">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#f0f5f2;--surface:#fff;--surface2:#e6eee9;--ink:#13211a;--ink2:#46584e;--ink3:#6f8077;--line:#cfdbd4;--line2:#e1eae5;--accent:#1a6a4f;--accent-ink:#fff;--warn:#a1610b;--dead:#a5352f;--bar:#1a6a4f;--bar-bg:#e1eae5;--code:#e8efeb;--font:"IBM Plex Sans KR","Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0d1612;--surface:#141f1a;--surface2:#1b2923;--ink:#e3ede7;--ink2:#a2b3aa;--ink3:#7c8e85;--line:#2a3b33;--line2:#22322b;--accent:#5bc59b;--accent-ink:#06130d;--warn:#e6b25a;--dead:#f19c96;--bar:#4fb88f;--bar-bg:#22322b;--code:#1a2822;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1612;--surface:#141f1a;--surface2:#1b2923;--ink:#e3ede7;--ink2:#a2b3aa;--ink3:#7c8e85;--line:#2a3b33;--line2:#22322b;--accent:#5bc59b;--accent-ink:#06130d;--warn:#e6b25a;--dead:#f19c96;--bar:#4fb88f;--bar-bg:#22322b;--code:#1a2822;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 var(--font);word-break:keep-all;overflow-wrap:break-word}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px}
+header.top{padding-block:40px 6px}
+h1{font-size:clamp(26px,4vw,36px);line-height:1.2;margin:0 0 10px;text-wrap:balance}
+.lead{color:var(--ink2);max-width:66ch;margin:0 0 6px;font-size:16px}
+.meta{font-size:13px;color:var(--ink3);margin:0}
+section{padding-block:30px 4px}
+h2{font-size:21px;margin:0 0 6px;text-wrap:balance}
+h3{font-size:15.5px;margin:22px 0 6px}
+p.sub{margin:0 0 14px;color:var(--ink2);max-width:72ch}
+.foot{font-size:12.5px;color:var(--ink3);margin:8px 0 0;max-width:88ch}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:20px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.tile b{font-size:28px;line-height:1.15;color:var(--accent);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.tile span{font-weight:600}
+.tile small{color:var(--ink3);font-size:12px;line-height:1.5}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.t{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+.t th,.t td{padding:7px 12px;text-align:left;border-bottom:1px solid var(--line2);vertical-align:middle}
+.t thead th{font-size:12px;color:var(--ink3);font-weight:600;background:var(--surface2);white-space:nowrap}
+.t tbody tr:last-child th,.t tbody tr:last-child td{border-bottom:0}
+.t th[scope=row]{font-weight:500;white-space:nowrap}
+.t .num{text-align:right;white-space:nowrap}
+.t tr.total th,.t tr.total td{background:var(--surface2);font-weight:700}
+.hbar{display:inline-block;width:160px;height:10px;background:var(--bar-bg);border-radius:2px;overflow:hidden;vertical-align:middle}
+.hbar i{display:block;height:100%;background:var(--bar)}
+.hbar.warn i{background:var(--warn)}.hbar.dead i{background:var(--dead)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.two>div{min-width:0}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 16px;font-size:14px;color:var(--ink2)}
+.note b{color:var(--ink)}
+.note ul{margin:6px 0 0;padding-left:1.2rem}
+code{font:12.5px/1.5 var(--mono);background:var(--code);padding:1px 6px;border-radius:3px;color:var(--ink)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 18px;margin:4px 0 0;padding:12px 16px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+.kv div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line2);padding:3px 0;font-size:13.5px}
+.kv b{font-variant-numeric:tabular-nums}
+footer{margin-top:40px;padding-block:20px 44px;border-top:1px solid var(--line);color:var(--ink3);font-size:12.5px}
+footer p{margin:4px 0;max-width:88ch}
+@media (max-width:640px){.hbar{width:90px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="top">
+  <h1>보틀 렌즈 데이터 보고</h1>
+  <p class="lead">지금 DB 에 술 4,501종의 정보가 데이터 값 103,431개로 쓰여 있습니다. 그중 2,882종은 웹 자료로 대조해 출처 8,526건을 붙였고, 확인되지 않은 주장 5,996건은 지웠습니다.</p>
+  <p class="meta">기준 2026-10-02 15:28 KST · DB 를 직접 센 값(읽기만) · 데이터 값 = 글·숫자 칸은 1개, 목록 칸(연표·페어링·제원·팁·맛 축 등)은 원소 수만큼</p>
+  <div class="tiles"><div class="tile"><b>4,501</b><span>술 항목</span><small>앱 6종이 보여 주는 술 (숨긴 술 아님·중복 397종 제외)</small></div><div class="tile"><b>103,431</b><span>쓰여 있는 데이터 값</span><small>술 한 종에 평균 23.0개 · 글 약 149만 자</small></div><div class="tile"><b>2,882</b><span>웹 조사로 검증한 술</span><small>출처 8,526건 · 정정 4,895 · 뺀 주장 5,996</small></div><div class="tile"><b>3,425</b><span>확인해 올린 사진</span><small>76% · 37.7MB</small></div><div class="tile"><b>26,001</b><span>판매처 가격 색인</span><small>데일리샷 상품 · 가격 있음 26,001</small></div></div>
+</header>
+
+<section>
+  <h2>1. 무엇이 몇 개 쓰여 있나 — 칸별</h2>
+  <p class="sub">술 정보 화면에 나오는 칸마다, 채워진 술이 몇 종이고 값이 몇 개인지입니다. 제원·맛 축·페어링·연표처럼 여러 줄로 된 칸이 데이터의 대부분을 차지합니다.</p>
+  <div class="scroll"><table class="t"><thead><tr><th scope="col">칸</th><th scope="col" class="num">채워진 술</th><th scope="col" class="num">비율</th><th scope="col" class="num">데이터 값</th><th scope="col"></th><th scope="col" class="num">글 분량</th></tr></thead><tbody><tr><th scope="row">제원</th><td class="num">3,458</td><td class="num">77%</td><td class="num"><b>18,061</b></td><td><span class="hbar "><i style="width:100%"></i></span></td><td class="num"></td></tr><tr><th scope="row">맛 축 수치</th><td class="num">3,449</td><td class="num">77%</td><td class="num"><b>13,779</b></td><td><span class="hbar "><i style="width:76.29145672997065%"></i></span></td><td class="num"></td></tr><tr><th scope="row">페어링 음식</th><td class="num">2,777</td><td class="num">62%</td><td class="num"><b>8,333</b></td><td><span class="hbar "><i style="width:46.13808759204917%"></i></span></td><td class="num"></td></tr><tr><th scope="row">비슷한 술</th><td class="num">2,638</td><td class="num">59%</td><td class="num"><b>7,458</b></td><td><span class="hbar "><i style="width:41.29339460716461%"></i></span></td><td class="num"></td></tr><tr><th scope="row">역사 연표</th><td class="num">2,133</td><td class="num">47%</td><td class="num"><b>5,351</b></td><td><span class="hbar "><i style="width:29.627373899562592%"></i></span></td><td class="num"></td></tr><tr><th scope="row">종류</th><td class="num">4,206</td><td class="num">93%</td><td class="num"><b>4,206</b></td><td><span class="hbar "><i style="width:23.287747079342232%"></i></span></td><td class="num">50천 자</td></tr><tr><th scope="row">음용 팁</th><td class="num">2,544</td><td class="num">57%</td><td class="num"><b>4,085</b></td><td><span class="hbar "><i style="width:22.61779524943248%"></i></span></td><td class="num"></td></tr><tr><th scope="row">국가</th><td class="num">3,809</td><td class="num">85%</td><td class="num"><b>3,809</b></td><td><span class="hbar "><i style="width:21.08964066220032%"></i></span></td><td class="num">12천 자</td></tr><tr><th scope="row">시음 노트</th><td class="num">3,371</td><td class="num">75%</td><td class="num"><b>3,371</b></td><td><span class="hbar "><i style="width:18.66452577376668%"></i></span></td><td class="num">274천 자</td></tr><tr><th scope="row">도수</th><td class="num">3,330</td><td class="num">74%</td><td class="num"><b>3,330</b></td><td><span class="hbar "><i style="width:18.437517302474944%"></i></span></td><td class="num">16천 자</td></tr><tr><th scope="row">지역·산지</th><td class="num">3,287</td><td class="num">73%</td><td class="num"><b>3,287</b></td><td><span class="hbar "><i style="width:18.199435247217764%"></i></span></td><td class="num">37천 자</td></tr><tr><th scope="row">이야기</th><td class="num">2,852</td><td class="num">63%</td><td class="num"><b>2,852</b></td><td><span class="hbar "><i style="width:15.790930734732298%"></i></span></td><td class="num">310천 자</td></tr><tr><th scope="row">생산자</th><td class="num">2,846</td><td class="num">63%</td><td class="num"><b>2,846</b></td><td><span class="hbar "><i style="width:15.757709982835944%"></i></span></td><td class="num">58천 자</td></tr><tr><th scope="row">생산자 소개</th><td class="num">2,727</td><td class="num">61%</td><td class="num"><b>2,727</b></td><td><span class="hbar "><i style="width:15.098831736891643%"></i></span></td><td class="num">254천 자</td></tr><tr><th scope="row">음용 온도</th><td class="num">2,715</td><td class="num">60%</td><td class="num"><b>2,715</b></td><td><span class="hbar "><i style="width:15.03239023309894%"></i></span></td><td class="num">22천 자</td></tr><tr><th scope="row">페어링 팁</th><td class="num">2,597</td><td class="num">58%</td><td class="num"><b>2,597</b></td><td><span class="hbar "><i style="width:14.379048779137369%"></i></span></td><td class="num">92천 자</td></tr><tr><th scope="row">서빙 메모</th><td class="num">2,213</td><td class="num">49%</td><td class="num"><b>2,213</b></td><td><span class="hbar "><i style="width:12.252920657770888%"></i></span></td><td class="num">82천 자</td></tr><tr><th scope="row">피할 음식</th><td class="num">2,078</td><td class="num">46%</td><td class="num"><b>2,078</b></td><td><span class="hbar "><i style="width:11.505453740102984%"></i></span></td><td class="num">60천 자</td></tr><tr><th scope="row">알고 마시면 더 맛있는 이야기</th><td class="num">1,952</td><td class="num">43%</td><td class="num"><b>1,952</b></td><td><span class="hbar "><i style="width:10.807817950279608%"></i></span></td><td class="num">152천 자</td></tr><tr><th scope="row">술 색</th><td class="num">1,576</td><td class="num">35%</td><td class="num"><b>1,576</b></td><td><span class="hbar "><i style="width:8.725984164774928%"></i></span></td><td class="num">11천 자</td></tr><tr><th scope="row">숙성</th><td class="num">1,440</td><td class="num">32%</td><td class="num"><b>1,440</b></td><td><span class="hbar "><i style="width:7.972980455124301%"></i></span></td><td class="num">56천 자</td></tr><tr><th scope="row">빈티지</th><td class="num">42</td><td class="num">1%</td><td class="num"><b>42</b></td><td><span class="hbar "><i style="width:0.5%"></i></span></td><td class="num">204자</td></tr><tr><th scope="row">출처별 평점</th><td class="num">7</td><td class="num">0%</td><td class="num"><b>7</b></td><td><span class="hbar "><i style="width:0.5%"></i></span></td><td class="num"></td></tr><tr><th scope="row">가격대(N만원대)</th><td class="num">4,497</td><td class="num">100%</td><td class="num"><b>4,497</b></td><td><span class="hbar "><i style="width:24.898953546315266%"></i></span></td><td></td></tr><tr><th scope="row">조사 시세(가격 범위)</th><td class="num">819</td><td class="num">18%</td><td class="num"><b>819</b></td><td><span class="hbar "><i style="width:4.534632633851946%"></i></span></td><td></td></tr><tr class="total"><th scope="row">합계</th><td></td><td></td><td class="num"><b>103,431</b></td><td></td><td class="num">149만 자</td></tr></tbody></table></div>
+  <p class="foot">비율은 술 4,501종 대비. 맛 축 수치 중 303종은 품종에서 짐작한 값이라 화면에 “짐작한 값”으로 밝힌다(출처 없는 와인 777종의 짐작값은 10-02 에 걷었다). 이름·주종처럼 모든 술에 있는 기본 칸은 세지 않았다.</p>
+</section>
+
+<section>
+  <h2>2. 주종별 데이터</h2>
+  <p class="sub">와인이 항목 수는 가장 많지만 판매처가 취급하지 않는 와인 962종은 이름 색인만 있어 술당 데이터 값이 낮습니다. 나머지 주종은 90% 이상이 웹 조사를 거쳤습니다.</p>
+  <div class="scroll"><table class="t"><thead><tr><th scope="col">주종</th><th scope="col" class="num">술</th><th scope="col" class="num">웹 조사 검증</th><th scope="col" class="num">판매처 구조화</th><th scope="col" class="num">데이터 값</th><th scope="col" class="num">술당 평균</th><th scope="col" class="num">이야기</th><th scope="col" class="num">연표</th><th scope="col" class="num">페어링</th><th scope="col" class="num">제원</th></tr></thead><tbody><tr><th scope="row">와인</th><td class="num">2,763</td><td class="num">1,224</td><td class="num">577</td><td class="num"><b>46,682</b></td><td class="num">16.9</td><td class="num">1,197</td><td class="num">800</td><td class="num">1,186</td><td class="num">1,778</td></tr><tr><th scope="row">전통주</th><td class="num">470</td><td class="num">431</td><td class="num">0</td><td class="num"><b>13,985</b></td><td class="num">29.8</td><td class="num">439</td><td class="num">313</td><td class="num">408</td><td class="num">449</td></tr><tr><th scope="row">위스키</th><td class="num">414</td><td class="num">412</td><td class="num">0</td><td class="num"><b>14,954</b></td><td class="num">36.1</td><td class="num">414</td><td class="num">342</td><td class="num">414</td><td class="num">414</td></tr><tr><th scope="row">사케</th><td class="num">209</td><td class="num">205</td><td class="num">0</td><td class="num"><b>7,743</b></td><td class="num">37.0</td><td class="num">209</td><td class="num">193</td><td class="num">209</td><td class="num">209</td></tr><tr><th scope="row">맥주</th><td class="num">158</td><td class="num">149</td><td class="num">0</td><td class="num"><b>5,156</b></td><td class="num">32.6</td><td class="num">147</td><td class="num">139</td><td class="num">145</td><td class="num">148</td></tr><tr><th scope="row">브랜디</th><td class="num">117</td><td class="num">102</td><td class="num">0</td><td class="num"><b>3,408</b></td><td class="num">29.1</td><td class="num">98</td><td class="num">81</td><td class="num">92</td><td class="num">101</td></tr><tr><th scope="row">소주</th><td class="num">104</td><td class="num">103</td><td class="num">0</td><td class="num"><b>3,225</b></td><td class="num">31.0</td><td class="num">99</td><td class="num">79</td><td class="num">89</td><td class="num">102</td></tr><tr><th scope="row">백주</th><td class="num">71</td><td class="num">66</td><td class="num">0</td><td class="num"><b>1,979</b></td><td class="num">27.9</td><td class="num">61</td><td class="num">39</td><td class="num">58</td><td class="num">66</td></tr><tr><th scope="row">럼</th><td class="num">61</td><td class="num">58</td><td class="num">0</td><td class="num"><b>1,837</b></td><td class="num">30.1</td><td class="num">57</td><td class="num">39</td><td class="num">51</td><td class="num">58</td></tr><tr><th scope="row">진</th><td class="num">45</td><td class="num">45</td><td class="num">0</td><td class="num"><b>1,466</b></td><td class="num">32.6</td><td class="num">45</td><td class="num">36</td><td class="num">42</td><td class="num">45</td></tr><tr><th scope="row">데킬라</th><td class="num">39</td><td class="num">38</td><td class="num">0</td><td class="num"><b>1,210</b></td><td class="num">31.0</td><td class="num">36</td><td class="num">26</td><td class="num">33</td><td class="num">38</td></tr><tr><th scope="row">리큐르</th><td class="num">18</td><td class="num">18</td><td class="num">0</td><td class="num"><b>641</b></td><td class="num">35.6</td><td class="num">18</td><td class="num">15</td><td class="num">18</td><td class="num">18</td></tr><tr><th scope="row">하이볼</th><td class="num">15</td><td class="num">15</td><td class="num">0</td><td class="num"><b>519</b></td><td class="num">34.6</td><td class="num">15</td><td class="num">14</td><td class="num">15</td><td class="num">15</td></tr><tr><th scope="row">보드카</th><td class="num">15</td><td class="num">15</td><td class="num">0</td><td class="num"><b>559</b></td><td class="num">37.3</td><td class="num">15</td><td class="num">15</td><td class="num">15</td><td class="num">15</td></tr><tr><th scope="row">막걸리</th><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num"><b>67</b></td><td class="num">33.5</td><td class="num">2</td><td class="num">2</td><td class="num">2</td><td class="num">2</td></tr><tr class="total"><th scope="row">합계</th><td class="num">4,501</td><td class="num">2,882</td><td class="num">577</td><td class="num"><b>103,431</b></td><td class="num">23.0</td><td class="num">2,852</td><td class="num">2,133</td><td class="num">2,777</td><td class="num">3,458</td></tr></tbody></table></div>
+</section>
+
+<section>
+  <h2>3. 검증과 출처 — 얼마나 믿을 수 있나</h2>
+  <p class="sub">웹 조사는 술마다 자료를 찾아 기존 값과 대조하고, 출처로 확인한 것만 남겼습니다. 등급은 A 권위 있는 출처 둘 이상 · B 한 출처 또는 일반 지식과 일치 · C 일부만 확인(확인 못 한 부분은 줄이거나 뺌)입니다.</p>
+  <div class="kv">
+    <div><span>검증한 술</span><b>2,882종</b></div>
+    <div><span>A 등급</span><b>1,324 (46%)</b></div>
+    <div><span>B 등급</span><b>650 (23%)</b></div>
+    <div><span>C 등급(부분)</span><b>908 (32%)</b></div>
+    <div><span>붙인 출처</span><b>8,526건</b></div>
+    <div><span>술당 평균 출처</span><b>3.0건</b></div>
+    <div><span>고유 주소 · 도메인</span><b>7,331 · 2,234</b></div>
+    <div><span>서로 다른 사이트 2곳 이상</span><b>2,655종 (92%)</b></div>
+    <div><span>출처가 받쳐 준 칸 표시</span><b>22,232건</b></div>
+    <div><span>고친 값</span><b>4,895건</b></div>
+    <div><span>확인 못 해 뺀 주장</span><b>5,996건</b></div>
+  </div>
+  <h3>술마다 붙은 출처 수</h3>
+  <div class="scroll"><table class="t"><thead><tr><th scope="col">출처 수</th><th scope="col" class="num">술</th><th scope="col" class="num">비율</th></tr></thead><tbody><tr><th scope="row">0건</th><td class="num">13</td><td class="num">0%</td></tr><tr><th scope="row">1건</th><td class="num">156</td><td class="num">5%</td></tr><tr><th scope="row">2건</th><td class="num">849</td><td class="num">29%</td></tr><tr><th scope="row">3건 이상</th><td class="num">1,864</td><td class="num">65%</td></tr></tbody></table></div>
+  <h3>많이 쓰인 출처 사이트</h3>
+  <div class="scroll"><table class="t"><thead><tr><th scope="col" class="num">순위</th><th scope="col">사이트</th><th scope="col" class="num">인용</th><th scope="col" class="num">비율</th><th scope="col"></th></tr></thead><tbody><tr><td class="num">1</td><th scope="row"><code>dailyshot.co</code></th><td class="num">1,110</td><td class="num">13%</td><td><span class="hbar "><i style="width:100%"></i></span></td></tr><tr><td class="num">2</td><th scope="row"><code>en.wikipedia.org</code></th><td class="num">853</td><td class="num">10%</td><td><span class="hbar "><i style="width:76.84684684684684%"></i></span></td></tr><tr><td class="num">3</td><th scope="row"><code>vivino.com</code></th><td class="num">242</td><td class="num">3%</td><td><span class="hbar "><i style="width:21.8018018018018%"></i></span></td></tr><tr><td class="num">4</td><th scope="row"><code>namu.wiki</code></th><td class="num">145</td><td class="num">2%</td><td><span class="hbar "><i style="width:13.063063063063062%"></i></span></td></tr><tr><td class="num">5</td><th scope="row"><code>ja.wikipedia.org</code></th><td class="num">97</td><td class="num">1%</td><td><span class="hbar "><i style="width:8.73873873873874%"></i></span></td></tr><tr><td class="num">6</td><th scope="row"><code>sooldalda.com</code></th><td class="num">92</td><td class="num">1%</td><td><span class="hbar "><i style="width:8.288288288288289%"></i></span></td></tr><tr><td class="num">7</td><th scope="row"><code>soolmarket.com</code></th><td class="num">83</td><td class="num">1%</td><td><span class="hbar "><i style="width:7.4774774774774775%"></i></span></td></tr><tr><td class="num">8</td><th scope="row"><code>wine.com</code></th><td class="num">73</td><td class="num">1%</td><td><span class="hbar "><i style="width:6.576576576576576%"></i></span></td></tr><tr><td class="num">9</td><th scope="row"><code>kihya.com</code></th><td class="num">73</td><td class="num">1%</td><td><span class="hbar "><i style="width:6.576576576576576%"></i></span></td></tr><tr><td class="num">10</td><th scope="row"><code>sakenomy.jp</code></th><td class="num">58</td><td class="num">1%</td><td><span class="hbar "><i style="width:5.225225225225225%"></i></span></td></tr><tr><td class="num">11</td><th scope="row"><code>diffordsguide.com</code></th><td class="num">53</td><td class="num">1%</td><td><span class="hbar "><i style="width:4.774774774774775%"></i></span></td></tr><tr><td class="num">12</td><th scope="row"><code>sooldamhwa.com</code></th><td class="num">52</td><td class="num">1%</td><td><span class="hbar "><i style="width:4.684684684684685%"></i></span></td></tr><tr><td class="num">13</td><th scope="row"><code>decanter.com</code></th><td class="num">49</td><td class="num">1%</td><td><span class="hbar "><i style="width:4.414414414414415%"></i></span></td></tr><tr><td class="num">14</td><th scope="row"><code>nongmin.com</code></th><td class="num">49</td><td class="num">1%</td><td><span class="hbar "><i style="width:4.414414414414415%"></i></span></td></tr><tr><td class="num">15</td><th scope="row"><code>soollove.com</code></th><td class="num">48</td><td class="num">1%</td><td><span class="hbar "><i style="width:4.324324324324325%"></i></span></td></tr></tbody></table></div>
+  <p class="foot">상위 12개 사이트가 인용의 34%이고 나머지는 2,234개 사이트에 흩어져 있다(한 사이트에 쏠리지 않았다). 판매처(데일리샷) 페이지는 제원·지역·품종 근거로는 쓸 만하지만 이야기·역사의 근거로는 약하다.</p>
+  <div class="two">
+    <div><h3>고친 값이 많은 칸</h3><div class="scroll"><table class="t"><thead><tr><th scope="col">칸</th><th scope="col" class="num">건</th><th scope="col"></th></tr></thead><tbody><tr><th scope="row">제원</th><td class="num">1,127</td><td><span class="hbar warn"><i style="width:100%"></i></span></td></tr><tr><th scope="row">역사 연표</th><td class="num">901</td><td><span class="hbar warn"><i style="width:79.94676131322093%"></i></span></td></tr><tr><th scope="row">도수</th><td class="num">599</td><td><span class="hbar warn"><i style="width:53.149955634427684%"></i></span></td></tr><tr><th scope="row">이야기</th><td class="num">371</td><td><span class="hbar warn"><i style="width:32.91925465838509%"></i></span></td></tr><tr><th scope="row">시음 노트</th><td class="num">291</td><td><span class="hbar warn"><i style="width:25.820763087843833%"></i></span></td></tr><tr><th scope="row">지역·산지</th><td class="num">244</td><td><span class="hbar warn"><i style="width:21.650399290150844%"></i></span></td></tr><tr><th scope="row">트리비아</th><td class="num">195</td><td><span class="hbar warn"><i style="width:17.30257320319432%"></i></span></td></tr><tr><th scope="row">종류</th><td class="num">192</td><td><span class="hbar warn"><i style="width:17.036379769299025%"></i></span></td></tr></tbody></table></div></div>
+    <div><h3>확인 못 해 뺀 주장이 많은 칸</h3><div class="scroll"><table class="t"><thead><tr><th scope="col">칸</th><th scope="col" class="num">건</th><th scope="col"></th></tr></thead><tbody><tr><th scope="row">이야기</th><td class="num">1,112</td><td><span class="hbar dead"><i style="width:98.66903283052352%"></i></span></td></tr><tr><th scope="row">트리비아</th><td class="num">946</td><td><span class="hbar dead"><i style="width:83.9396628216504%"></i></span></td></tr><tr><th scope="row">역사 연표</th><td class="num">679</td><td><span class="hbar dead"><i style="width:60.24844720496895%"></i></span></td></tr><tr><th scope="row">시음 노트</th><td class="num">538</td><td><span class="hbar dead"><i style="width:47.73735581188998%"></i></span></td></tr><tr><th scope="row">제원</th><td class="num">505</td><td><span class="hbar dead"><i style="width:44.809228039041706%"></i></span></td></tr><tr><th scope="row">생산자 소개</th><td class="num">450</td><td><span class="hbar dead"><i style="width:39.92901508429459%"></i></span></td></tr><tr><th scope="row">drinkFrom/drinkPeak/drinkUntil</th><td class="num">335</td><td><span class="hbar dead"><i style="width:29.724933451641526%"></i></span></td></tr><tr><th scope="row">숙성</th><td class="num">287</td><td><span class="hbar dead"><i style="width:25.465838509316768%"></i></span></td></tr></tbody></table></div></div>
+  </div>
+  <div class="note" style="margin-top:14px"><b>이 조사를 한 모델과 한계</b>
+    <ul>
+      <li>웹 조사 767묶음은 모두 <b>claude-sonnet-5-5</b> 가 했다(검색 5,070회, 2026-10-01 18:40 ~ 2026-10-02 08:02 KST). 사진 찾기 114묶음은 claude-sonnet-5-5, 사진 확인 155묶음은 claude-sonnet-5-5.</li>
+      <li>DB 에 넣기 전에 형식(칸 종류·길이·주소)과 출처 유무는 기계적으로 검사했다. 반면 “출처가 정말 그 말을 하는가”를 다른 모델이 다시 읽어 확인한 적은 없다.</li>
+      <li>그래서 정확도를 숫자로 말하려면 표본 재검증이 필요하다 — 검증한 술을 무작위로 골라 다른 모델(Opus)로 처음부터 다시 조사해 틀린 값의 비율을 잰다.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>4. 판매처·가격 데이터</h2>
+  <div class="kv">
+    <div><span>판매처 가격 색인(데일리샷 상품)</span><b>26,001개</b></div>
+    <div><span>그중 가격 있음</span><b>26,001개</b></div>
+    <div><span>그중 Vivino 평점 있음</span><b>0개</b></div>
+    <div><span>판매처 상세 사실이 붙은 술</span><b>2,322종</b></div>
+    <div><span>가격대(N만원대)가 있는 술</span><b>4,497종 (100%)</b></div>
+    <div><span>조사 시세(가격 범위)가 있는 술</span><b>819종</b></div>
+  </div>
+  <p class="foot">가격은 2026-10-01 결정대로 “N만원대” 가격대로만 보여 준다. 판매처 색인은 결과 화면의 최저가 확인과 셀러 가격 이력에 쓰인다.</p>
+  <h3>가격대가 실제 값과 맞는가</h3>
+  <p class="sub">판매처 가격이 이어진 술 1,806종의 가격대를 실제 판매가로 다시 매겨 견줬습니다. 가격대 구간은 2만 이하 · 2~5만 · 5~10만 · 10~30만 · 30만 이상입니다.</p>
+  <div class="scroll"><table class="t"><thead><tr><th scope="col">기준</th><th scope="col" class="num">술</th><th scope="col" class="num">같은 구간</th><th scope="col" class="num">한 구간 차이</th><th scope="col" class="num">두 구간 이상</th><th scope="col" class="num">실제보다 낮게</th><th scope="col" class="num">실제보다 높게</th></tr></thead><tbody><tr><th scope="row">판매처 가격 (전체)</th><td class="num">1,806</td><td class="num"><b>85%</b></td><td class="num">14%</td><td class="num">1%</td><td class="num">9%</td><td class="num">5%</td></tr><tr><th scope="row">판매처 가격 (표준 병 500~1000ml)</th><td class="num">1,721</td><td class="num"><b>85%</b></td><td class="num">14%</td><td class="num">1%</td><td class="num">10%</td><td class="num">5%</td></tr><tr><th scope="row">웹 조사 검증된 술</th><td class="num">1,175</td><td class="num"><b>84%</b></td><td class="num">15%</td><td class="num">1%</td><td class="num">10%</td><td class="num">6%</td></tr><tr><th scope="row">검증 안 된 술</th><td class="num">631</td><td class="num"><b>88%</b></td><td class="num">11%</td><td class="num">1%</td><td class="num">8%</td><td class="num">4%</td></tr><tr><th scope="row">조사 시세 범위의 가운데 값</th><td class="num">818</td><td class="num"><b>79%</b></td><td class="num">21%</td><td class="num">0%</td><td class="num">14%</td><td class="num">7%</td></tr><tr><th scope="row">· 와인</th><td class="num">1,235</td><td class="num"><b>87%</b></td><td class="num">13%</td><td class="num">1%</td><td class="num">9%</td><td class="num">4%</td></tr><tr><th scope="row">· 위스키</th><td class="num">212</td><td class="num"><b>83%</b></td><td class="num">17%</td><td class="num">0%</td><td class="num">14%</td><td class="num">3%</td></tr><tr><th scope="row">· 전통주</th><td class="num">96</td><td class="num"><b>81%</b></td><td class="num">19%</td><td class="num">0%</td><td class="num">1%</td><td class="num">18%</td></tr><tr><th scope="row">· 사케</th><td class="num">48</td><td class="num"><b>73%</b></td><td class="num">27%</td><td class="num">0%</td><td class="num">8%</td><td class="num">19%</td></tr><tr><th scope="row">· 맥주</th><td class="num">44</td><td class="num"><b>95%</b></td><td class="num">0%</td><td class="num">5%</td><td class="num">0%</td><td class="num">5%</td></tr><tr><th scope="row">· 브랜디</th><td class="num">43</td><td class="num"><b>81%</b></td><td class="num">19%</td><td class="num">0%</td><td class="num">14%</td><td class="num">5%</td></tr><tr><th scope="row">· 럼</th><td class="num">31</td><td class="num"><b>90%</b></td><td class="num">10%</td><td class="num">0%</td><td class="num">6%</td><td class="num">3%</td></tr><tr><th scope="row">· 백주</th><td class="num">24</td><td class="num"><b>71%</b></td><td class="num">29%</td><td class="num">0%</td><td class="num">21%</td><td class="num">8%</td></tr></tbody></table></div>
+  <p class="foot">한 구간 차이 251종 중 경계 ±10% 안(예: 4만 9천 원과 5만 2천 원)은 33%뿐이고, 46%는 경계에서 20% 넘게 떨어져 있다 — 상당수는 구간을 실제로 잘못 매긴 것이다(10-02 측정). 판매처 가격이 이어진 술은 그 값으로 다시 매기면 비용 없이 바로잡을 수 있다. 두 구간 이상 어긋난 예: 디아블로 리제르바 프리바다 카베르네소비뇽 — 가격대 4 vs 29,000원 · 라피스 루나 진판델 — 가격대 4 vs 33,900원 · 인디카 IPA — 가격대 4 vs 4,500원 · 일품진로 1924 헤리티지 100주년 에디션 — 가격대 5 vs 72,000원.</p>
+</section>
+
+<section>
+  <h2>5. 사진</h2>
+  <div class="kv">
+    <div><span>우리 호스팅(Cafe24)에 올린 사진</span><b>3,425종</b></div>
+    <div><span>외부 주소가 남은 술</span><b>254종</b></div>
+    <div><span>사진 없음(주종 엠블럼으로 대신)</span><b>822종</b></div>
+    <div><span>올린 사진 출처 · research-page</span><b>433장</b></div><div><span>올린 사진 출처 · 데일리샷</span><b>2,244장</b></div><div><span>올린 사진 출처 · 네이버쇼핑</span><b>748장</b></div>
+    <div><span>눈 확인에서 거른 사진</span><b>726장</b></div>
+    <div><span>틀린 옛 주소를 걷은 술</span><b>496종</b></div>
+  </div>
+  <p class="foot">사진은 이름의 그 상품인지 눈으로 확인한 것만 올렸다. 판매처·브랜드의 사진이므로 문서마다 출처(imageSource·imageOrigin)를 남겼다.</p>
+</section>
+
+<section>
+  <h2>6. 영어·일본어 번역</h2>
+  <div class="kv">
+    <div><span>영어 번역이 있는 술</span><b>3,839종 · 칸 11,799</b></div>
+    <div><span>일본어 번역이 있는 술</span><b>3,839종 · 칸 11,843</b></div>
+    <div><span>이야기까지 번역된 술</span><b>영어 14 · 일본어 36</b></div>
+    <div><span>조사로 고쳐져 옛 번역을 지운 술</span><b>2,882종</b></div>
+  </div>
+  <p class="foot">이름·나라·제원 같은 정형 칸만 용어집으로 번역했다. 서술문(이야기·역사 등)은 2026-10-02 결정으로 한국어로 둔다.</p>
+</section>
+
+<section>
+  <h2>7. 앱 사용 기록</h2>
+  <p class="sub">사용자가 쌓는 데이터는 아직 시험 수준입니다. 사용자 구분(로그인)이 없어 앱 단위로 한 벌씩 저장됩니다.</p>
+  <div class="kv">
+    <div><span>스캔 기록</span><b>50건</b></div>
+    <div><span>셀러에 담긴 술</span><b>4건 (위시 1 · 보유 3)</b></div>
+    <div><span>취향 문답 답</span><b>3건</b></div>
+    <div><span>못 찾은 술 목록</span><b>8건</b></div>
+    <div><span>특가·음용 적기 알림 기록</span><b>2건</b></div>
+  </div>
+</section>
+
+<section>
+  <h2>8. DB 전체</h2>
+  <div class="scroll"><table class="t"><thead><tr><th scope="col">컬렉션</th><th scope="col">내용</th><th scope="col" class="num">문서 수</th></tr></thead><tbody><tr><th scope="row"><code>dailyshot</code></th><td>판매처 가격 색인(데일리샷)</td><td class="num">26,001</td></tr><tr><th scope="row"><code>catalog</code></th><td>술 정보(카탈로그)</td><td class="num">4,898</td></tr><tr><th scope="row"><code>sessions</code></th><td>스캔 기록</td><td class="num">50</td></tr><tr><th scope="row"><code>wanted</code></th><td>못 찾은 술 목록</td><td class="num">8</td></tr><tr><th scope="row"><code>cellar</code></th><td>셀러(내 술)</td><td class="num">4</td></tr><tr><th scope="row"><code>preferences</code></th><td>취향 문답 답</td><td class="num">3</td></tr><tr><th scope="row"><code>deal_notices</code></th><td>특가 알림 기록</td><td class="num">1</td></tr><tr><th scope="row"><code>drink_notices</code></th><td>음용 적기 알림 기록</td><td class="num">1</td></tr></tbody></table></div>
+  <p class="foot">catalog 전체 4,898건 중 397건은 술이 아닌 상품·중복이라 화면에서 뺀다(지우지 않고 표시만).</p>
+</section>
+
+<section>
+  <h2>9. 조사 작업 기록</h2>
+  <div class="kv">
+    <div><span>기간</span><b>2026-10-01 18:40 ~ 2026-10-02 08:02</b></div>
+    <div><span>조사 묶음</span><b>767 (실패 3)</b></div>
+    <div><span>처리한 술(중복 포함)</span><b>3,043</b></div>
+    <div><span>웹 검색</span><b>5,070회</b></div>
+    <div><span>모델 · 추론 강도</span><b>claude-sonnet-5-5 · medium 3, high 742, xhigh 22</b></div>
+    <div><span>비용(API 환산)</span><b>조사 $484 · 사진 찾기 $59 · 사진 확인 $15</b></div>
+  </div>
+</section>
+
+<section>
+  <h2>10. 되돌릴 수 있게 남긴 것</h2>
+  <div class="kv">
+    <div><span>걷은 짐작 맛 수치</span><b>777종 (원래 값 보관)</b></div>
+    <div><span>걷은 틀린 사진 주소</span><b>496종 (원래 주소 보관)</b></div>
+    <div><span>백업 <code>images-rejected-2026-10-02.json</code></span><b>137KB</b></div><div><span>백업 <code>wine-estimates-2026-10-02.json</code></span><b>182KB</b></div>
+  </div>
+  <p class="foot">정정 내역(고친 값·이유·출처)은 술마다 catalog.verified 에, 조사 원본은 data/research/_work/out/ 에 남아 있다.</p>
+</section>
+</main>
+<footer><div class="wrap">
+  <p>만든 방법: scripts/_data-report.mjs 가 DB 를 읽기만 해서 세고, scripts/_data-report-html.mjs 가 이 문서를 만든다. 앱 기능과 공개 전 위험은 docs/기능서-현황.html 에 있다.</p>
+  <p>생성 2026-10-02 15:28 KST</p>
+</div></footer>
+</body>
+</html>

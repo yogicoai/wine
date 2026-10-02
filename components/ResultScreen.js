@@ -827,13 +827,16 @@ export default function ResultScreen({
       const abroad = globalLabel(info);
       const age = priceAge(info);
       const trust = priceTrust(info);
+      // 판매처에 물어 확인한 값도, 조사해 둔 시세 범위도 없고 우리가 매긴 가격대나 어림한 범위뿐인 경우.
+      // 이때의 숫자는 판매가가 아니라 추정치다 — 제목부터 그렇게 부른다.
+      const estimateOnly = !live && !money;
       return (
         <div className="card">
           {/* 확인한 값만 "최저가"라고 부른다. 판매처에 못 물어본 값은 대표가라
               정가에 가깝고, 그것을 최저가라고 하면 실제로 살 때 더 싼 곳을
               놓치게 만든다. */}
           <div className="card-title">
-            {live ? (shop.verified ? t("최저가") : t("판매가")) : t("시세")}
+            {live ? (shop.verified ? t("최저가") : t("판매가")) : estimateOnly ? t("예상 가격대") : t("시세")}
           </div>
           <div className="price-line">
             {/* 실제 값 → 조사해 둔 시장가 → 대역 순으로 물러선다 */}
@@ -902,6 +905,13 @@ export default function ResultScreen({
               band.note 는 "특별한 자리" 같은 자리값이라 그대로 둔다. */}
           {((!live && r.priceNote) || band?.note) && (
             <div className="price-note">{(!live && r.priceNote) || t(band.note)}</div>
+          )}
+          {/* "5~10만원" 이 실제로 파는 값처럼 읽히면 안 된다. 가격대는 우리가 매긴 추정치고
+              판매가는 판매처마다 다르다. priceNote 가 이미 그 말을 하고 있으면 겹치지 않게 물러난다. */}
+          {estimateOnly && !r.priceNote && (
+            <div className="price-note">
+              {t("실제 판매가가 아니라 우리가 매긴 가격대 추정치입니다. 판매처와 시기에 따라 다릅니다.")}
+            </div>
           )}
           {/* 확신이 낮은 값은 낮다고 말한다. 국내에 정식 유통되지 않는 술은
               판매처가 몇 곳뿐이라 정직하게 조사해도 폭이 넓게 나온다.
@@ -1062,7 +1072,7 @@ export default function ResultScreen({
         </div>
         {partial && (
           <div className="partial-note">
-            {t("이 술은 이름·주종·가격대만 확인된 상태입니다. 라벨을 찍으면 스토리와 페어링까지 채워집니다.")}
+            {t("이 술은 이름·주종과 예상 가격대만 있는 상태입니다. 라벨을 찍으면 스토리와 페어링까지 채워집니다.")}
           </div>
         )}
         <div className="badges">

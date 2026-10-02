@@ -264,6 +264,8 @@ export default function DiscoverScreen({ onOpen, onToast }) {
             ))}
           </div>
         </div>
+        {/* 가격대는 우리가 매긴 추정치다. 실제 판매가로 읽히지 않게 필터 바로 밑에서 말한다. */}
+        <div className="price-note">{t("가격대는 추정치이며 실제 판매가와 다를 수 있습니다.")}</div>
       </div>
 
       <div className="card">

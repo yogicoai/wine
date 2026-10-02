@@ -23,3 +23,17 @@ ds-sake.log
 ds-*.txt
 ds-*-tmp.mjs
 ds-backfill.log
+
+# 이미지 수집 작업 폴더 — 규격을 맞춘 사진과 진행 기록. 용량이 커서 저장소에 넣지 않는다.
+data/images/
+# 조사 결과 원본(에이전트가 쓴 파일) — 검증 뒤 DB 에 들어간다
+data/research/_work/
+
+# 이 PC 에서만 쓰는 Claude Code 설정 (사용률 기록용 상태줄)
+.claude/settings.local.json
+
+# 로컬 번역 모델·가상환경 (용량이 크다)
+data/mt/
+
+# 되돌리기용 백업
+data/backup/

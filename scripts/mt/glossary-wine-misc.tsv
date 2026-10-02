@@ -1,0 +1,316 @@
+food	치즈	cheese	チーズ
+food	소고기	beef	牛肉
+food	양고기	lamb	羊肉
+food	스테이크	steak	ステーキ
+food	파스타	pasta	パスタ
+food	돼지고기	pork	豚肉
+food	오리고기	duck	鴨肉
+food	닭고기	chicken	鶏肉
+food	샐러드	salad	サラダ
+food	디저트	dessert	デザート
+food	연어	salmon	サーモン
+food	새우	shrimp	エビ
+food	과일	fruit	フルーツ
+food	소고기 스튜	beef stew	牛肉のシチュー
+food	해산물	seafood	海鮮
+food	참치	tuna	マグロ
+food	베지테리안	vegetarian dishes	ベジタリアン料理
+food	피자	pizza	ピザ
+food	양갈비	lamb chops	ラムチョップ
+food	케이크	cake	ケーキ
+food	에피타이저	appetizers	前菜
+food	숙성 치즈	aged cheese	熟成チーズ
+food	버섯 요리	mushroom dishes	キノコ料理
+food	아페르티프	aperitif	アペリティフ
+food	붉은 육류	red meat	赤身肉
+food	치킨 로스트	roast chicken	ローストチキン
+food	바베큐	barbecue	バーベキュー
+food	생선구이	grilled fish	焼き魚
+food	구운 채소	grilled vegetables	焼き野菜
+food	무거운 육류 요리	hearty meat dishes	重めの肉料理
+food	매콤한 요리	spicy dishes	辛い料理
+food	샤퀴테리	charcuterie	シャルキュトリー
+food	견과류	nuts	ナッツ
+food	훈제 고기	smoked meat	燻製肉
+food	생선 요리	fish dishes	魚料理
+food	살라미	salami	サラミ
+food	아시아 음식	Asian cuisine	アジア料理
+food	로스트 비프	roast beef	ローストビーフ
+food	야생 고기	game meat	ジビエ
+food	갈비찜	braised short ribs (galbijjim)	カルビチム（韓国風牛カルビの煮込み）
+food	블루 치즈	blue cheese	ブルーチーズ
+food	아이스크림	ice cream	アイスクリーム
+food	양념이 진한 육류 요리	richly seasoned meat dishes	味の濃い肉料理
+food	크리미 치즈	creamy cheese	クリーミーなチーズ
+food	햄버거	hamburger	ハンバーガー
+food	삼겹살	pork belly (samgyeopsal)	豚バラ肉（サムギョプサル）
+food	각종 육류 요리	various meat dishes	各種肉料理
+food	베이컨 크림 파스타	bacon cream pasta	ベーコンクリームパスタ
+food	말린 과일	dried fruit	ドライフルーツ
+food	초밥	sushi	寿司
+food	단단한 치즈	hard cheese	ハードチーズ
+food	초콜릿	chocolate	チョコレート
+food	토마토 스튜	tomato stew	トマトシチュー
+food	한국 음식	Korean food	韓国料理
+food	불고기	bulgogi	プルコギ
+food	회	sashimi	刺身
+food	연어 샐러드	salmon salad	サーモンサラダ
+food	그릴 요리	grilled dishes	グリル料理
+food	라자냐	lasagna	ラザニア
+food	트러플	truffle	トリュフ
+food	건과일	dried fruit	ドライフルーツ
+food	레드 와인 소스를 얹은 스테이크	steak with red wine sauce	赤ワインソースのステーキ
+food	돼지 갈비	pork ribs	豚カルビ
+food	한우	Korean beef (hanu)	韓牛
+food	바비큐폭립	BBQ pork ribs	バーベキューポークリブ
+food	탕수육	sweet and sour pork (tangsuyuk)	酢豚（タンスユク）
+food	태국 음식	Thai food	タイ料理
+food	나초	nachos	ナチョス
+food	수육	boiled pork slices (suyuk)	茹で豚（スユク）
+food	소시지	sausage	ソーセージ
+food	족발	braised pig's trotters (jokbal)	豚足（チョッパル）
+food	흰 살 생선	white fish	白身魚
+food	크림 파스타	cream pasta	クリームパスタ
+food	랍스터	lobster	ロブスター
+food	타르트	tart	タルト
+food	조개	clams and shellfish	貝類
+grape	피노 누아	Pinot Noir	ピノ・ノワール
+grape	피노누아	Pinot Noir	ピノ・ノワール
+grape	샤르도네	Chardonnay	シャルドネ
+grape	메를로	Merlot	メルロー
+grape	쉬라즈	Shiraz	シラーズ
+grape	리슬링	Riesling	リースリング
+grape	네비올로	Nebbiolo	ネッビオーロ
+grape	까베르네 소비뇽	Cabernet Sauvignon	カベルネ・ソーヴィニヨン
+grape	소비뇽 블랑	Sauvignon Blanc	ソーヴィニヨン・ブラン
+grape	말벡	Malbec	マルベック
+grape	모스카토	Moscato	モスカート
+grape	진판델	Zinfandel	ジンファンデル
+grape	시라	Syrah	シラー
+grape	산지오베제	Sangiovese	サンジョヴェーゼ
+grape	까베르네 프랑	Cabernet Franc	カベルネ・フラン
+grape	알리고떼	Aligoté	アリゴテ
+grape	투리가 나시오날	Touriga Nacional	トゥリガ・ナシオナル
+grape	토리가 나시오날	Touriga Nacional	トゥリガ・ナシオナル
+grape	템프라니요	Tempranillo	テンプラニーリョ
+grape	피노 뫼니에	Pinot Meunier	ピノ・ムニエ
+grape	투리가 프란카	Touriga Franca	トゥリガ・フランカ
+grape	토리가 프랑카	Touriga Franca	トゥリガ・フランカ
+grape	그르나슈	Grenache	グルナッシュ
+grape	쁘띠 시라	Petite Sirah	プティ・シラー
+grape	틴타 바로카	Tinta Barroca	ティンタ・バロッカ
+grape	틴토 바로카	Tinta Barroca	ティンタ・バロッカ
+grape	틴타 로리즈	Tinta Roriz	ティンタ・ロリス
+grape	틴타 라로즈	Tinta Roriz	ティンタ・ロリス
+grape	비오시뉴	Viosinho	ヴィオジーニョ
+grape	쁘띠 베르도	Petit Verdot	プティ・ヴェルド
+grape	글레라	Glera	グレーラ
+grape	말바시아 피나	Malvasia Fina	マルヴァジア・フィナ
+grape	바르베라	Barbera	バルベーラ
+grape	가르나차	Garnacha	ガルナッチャ
+grape	라비가토	Rabigato	ラビガート
+grape	고바이오	Gouveio	ゴウヴェイオ
+grape	고베이오	Gouveio	ゴウヴェイオ
+grape	트레비아노	Trebbiano	トレッビアーノ
+grape	세미용	Sémillon	セミヨン
+grape	마타로	Mataro (Mourvèdre)	マタロ（ムールヴェードル）
+grape	비오니에	Viognier	ヴィオニエ
+grape	쌩쏘	Cinsault	サンソー
+grape	마카베오	Macabeo	マカベオ
+grape	아이렌	Airén	アイレン
+grape	그르나슈 블랑	Grenache Blanc	グルナッシュ・ブラン
+grape	말바시아	Malvasia	マルヴァジア
+grape	코데가 오 라린호	Códega do Larinho	コデガ・ド・ラリーニョ
+grape	틴타 까오	Tinta Cão	ティンタ・カオン
+grape	틴토 까오	Tinta Cão	ティンタ・カオン
+grape	가메	Gamay	ガメイ
+grape	가르가네가	Garganega	ガルガーネガ
+grape	가르가네가 베로네제	Garganega	ガルガーネガ
+grape	피노 네로	Pinot Nero	ピノ・ネロ
+grape	뮈스까 블랑	Muscat Blanc	ミュスカ・ブラン
+grape	무스캇 블랑	Muscat Blanc	ミュスカ・ブラン
+grape	나세타	Nascetta	ナシェッタ
+grape	만조니 등	Manzoni and others	マンゾーニなど
+grape	브라케토	Brachetto	ブラケット
+grape	그레카니코	Grecanico	グレカニコ
+grape	그릴로	Grillo	グリッロ
+grape	알바리뇨	Albariño	アルバリーニョ
+grape	마르셀란	Marselan	マルスラン
+grape	무드베르드	Mourvèdre	ムールヴェードル
+grape	머스캣	Muscat	マスカット
+grape	미스텔	Mistelle	ミステル
+grape	까리냥	Carignan	カリニャン
+grape	뮈스까	Muscat	ミュスカ
+grape	코르비나	Corvina	コルヴィーナ
+grape	까르미네르	Carménère	カルメネール
+grape	모나스트렐	Monastrell	モナストレル
+grape	뫼니에	Meunier	ムニエ
+grape	샤렐로	Xarel·lo	チャレッロ
+grape	빠레야다	Parellada	パレリャーダ
+grape	콜롱바드	Colombard	コロンバール
+grape	베르데호	Verdejo	ベルデホ
+grape	시리아(Siria)	Siria	シリア
+grape	고데요	Godello	ゴデーリョ
+grape	바이탈	Vital	ヴィタル
+grape	보알 프랑코	Boal	ボアル
+grape	네로 다볼라	Nero d'Avola	ネロ・ダーヴォラ
+grape	체사네제	Cesanese	チェザネーゼ
+grape	피노 비앙코	Pinot Bianco	ピノ・ビアンコ
+grape	케르너	Kerner	ケルナー
+grape	게뷔르츠트라미너	Gewürztraminer	ゲヴュルツトラミネール
+grape	심포니	Symphony	シンフォニー
+grape	레드 블렌드	red blend	レッドブレンド
+region	캘리포니아	California	カリフォルニア
+region	부르고뉴	Burgundy	ブルゴーニュ
+region	피에몬테	Piedmont	ピエモンテ
+region	피에몬테, 피에몬테	Piedmont	ピエモンテ
+region	멘도사	Mendoza	メンドーサ
+region	샹파뉴	Champagne	シャンパーニュ
+region	상파뉴	Champagne	シャンパーニュ
+region	사우스 오스트레일리아	South Australia	南オーストラリア
+region	남호주	South Australia	南オーストラリア
+region	센트럴 밸리	Central Valley	セントラル・ヴァレー
+region	말보로	Marlborough	マールボロ
+region	나파 밸리	Napa Valley	ナパ・ヴァレー
+region	나파밸리	Napa Valley	ナパ・ヴァレー
+region	바롤로	Barolo	バローロ
+region	랑그독 루씨용	Languedoc-Roussillon	ラングドック・ルーション
+region	랑그독	Languedoc	ラングドック
+region	바로사 밸리	Barossa Valley	バロッサ・ヴァレー
+region	바로사	Barossa	バロッサ
+region	맥라렌 베일	McLaren Vale	マクラーレン・ヴェール
+region	빅토리아	Victoria	ヴィクトリア
+region	토스카나	Tuscany	トスカーナ
+region	오리건	Oregon	オレゴン
+region	베네토	Veneto	ヴェネト
+region	소노마 카운티	Sonoma County	ソノマ・カウンティ
+region	소노마	Sonoma	ソノマ
+region	소노마 코스트	Sonoma Coast	ソノマ・コースト
+region	포르투	Porto	ポルト
+region	포르토	Porto	ポルト
+region	아스티	Asti	アスティ
+region	러시안 리버 밸리	Russian River Valley	ロシアン・リヴァー・ヴァレー
+region	모젤	Mosel	モーゼル
+region	윌라멧 밸리	Willamette Valley	ウィラメット・ヴァレー
+region	워싱턴	Washington	ワシントン
+region	도우로	Douro	ドウロ
+region	도우로 밸리	Douro Valley	ドウロ・ヴァレー
+region	두오로 밸리	Douro Valley	ドウロ・ヴァレー
+region	리오하	Rioja	リオハ
+region	산타 바바라 카운티	Santa Barbara County	サンタバーバラ・カウンティ
+region	앤더슨 밸리	Anderson Valley	アンダーソン・ヴァレー
+region	라펠 밸리	Rapel Valley	ラペル・ヴァレー
+region	카사블랑카 밸리	Casablanca Valley	カサブランカ・ヴァレー
+region	보르도	Bordeaux	ボルドー
+region	풀리아	Puglia	プーリア
+region	클레어 밸리	Clare Valley	クレア・ヴァレー
+region	클레어 벨리	Clare Valley	クレア・ヴァレー
+region	센트럴 코스트	Central Coast	セントラル・コースト
+region	코킴보	Coquimbo	コキンボ
+region	리마리 밸리	Limarí Valley	リマリ・ヴァレー
+region	시칠리아	Sicily	シチリア
+region	애들레이드 힐스	Adelaide Hills	アデレード・ヒルズ
+region	콜롬비아 밸리	Columbia Valley	コロンビア・ヴァレー
+region	가스코뉴	Gascony	ガスコーニュ
+region	우코 밸리	Uco Valley	ウコ・ヴァレー
+region	팔츠	Pfalz	プファルツ
+region	웨스턴 오스트레일리아	Western Australia	西オーストラリア
+region	쿠나와라	Coonawarra	クナワラ
+region	랑혼 크릭	Langhorne Creek	ラングホーン・クリーク
+region	에덴 밸리	Eden Valley	エデン・ヴァレー
+region	소아베	Soave	ソアーヴェ
+region	코드루	Codru	コドル
+region	와이파라	Waipara	ワイパラ
+region	페이독	Pays d'Oc	ペイ・ドック
+region	페이 독	Pays d'Oc	ペイ・ドック
+region	마울레 밸리	Maule Valley	マウレ・ヴァレー
+region	로디	Lodi	ロダイ
+region	카탈루냐	Catalonia	カタルーニャ
+region	까탈루냐	Catalonia	カタルーニャ
+region	뉴 사우스 웨일스	New South Wales	ニューサウスウェールズ
+region	뉴 사우스 웨일즈	New South Wales	ニューサウスウェールズ
+region	루아르	Loire	ロワール
+region	라만차	La Mancha	ラ・マンチャ
+region	카스티야	Castilla	カスティーリャ
+region	토로	Toro	トロ
+region	마이포 밸리	Maipo Valley	マイポ・ヴァレー
+region	말레코 밸리	Malleco Valley	マジェコ・ヴァレー
+region	노스 코스트	North Coast	ノース・コースト
+region	아콩가구아	Aconcagua	アコンカグア
+region	아콩카구아	Aconcagua	アコンカグア
+region	꼬뜨 드 가스코뉴	Côtes de Gascogne	コート・ド・ガスコーニュ
+region	꼬뜨 드 가스꼬뉴	Côtes de Gascogne	コート・ド・ガスコーニュ
+region	포드라비에	Podravje	ポドラヴィエ
+region	루에다	Rueda	ルエダ
+region	롬바르디아	Lombardy	ロンバルディア
+region	카스티야 이 레온	Castilla y León	カスティーリャ・イ・レオン
+region	아르헨티나	Argentina	アルゼンチン
+region	오클랜드	Auckland	オークランド
+region	마드리드	Madrid	マドリード
+region	끼안티 클라시코	Chianti Classico	キャンティ・クラッシコ
+region	알바	Alba	アルバ
+region	샤블리	Chablis	シャブリ
+region	리아스 바이사스	Rías Baixas	リアス・バイシャス
+region	꼬뜨 드 바	Côte des Bar	コート・デ・バール
+region	질롱	Geelong	ジーロング
+region	와이라라파	Wairarapa	ワイララパ
+region	사우스 아일랜드	South Island	南島
+region	넬슨	Nelson	ネルソン
+region	꼬뜨 드 뉘	Côte de Nuits	コート・ド・ニュイ
+region	오뜨 꼬뜨 드 뉘	Hautes-Côtes de Nuits	オート・コート・ド・ニュイ
+region	샤샤뉴 몽라쉐	Chassagne-Montrachet	シャサーニュ・モンラッシェ
+region	스텔렌보쉬	Stellenbosch	ステレンボッシュ
+region	경북 경산시	Gyeongsan, North Gyeongsang	慶尚北道慶山市
+region	밸러랫	Ballarat	バララット
+region	페네데스	Penedès	ペネデス
+region	베이라	Beira	ベイラ
+region	갈리시아	Galicia	ガリシア
+region	로렌	Lorraine	ロレーヌ
+region	산타 리타 힐스	Santa Rita Hills	サンタ・リタ・ヒルズ
+region	몬터레이 카운티	Monterey County	モントレー・カウンティ
+region	몬테레이	Monterey	モントレー
+region	헌터 밸리	Hunter Valley	ハンター・ヴァレー
+region	움브리아	Umbria	ウンブリア
+region	데알루 마레	Dealu Mare	ディアル・マレ
+region	파소 로블스	Paso Robles	パソ・ロブレス
+region	라치오	Lazio	ラツィオ
+region	라임스톤 코스트	Limestone Coast	ライムストーン・コースト
+region	살타	Salta	サルタ
+region	바란카스	Barrancas	バランカス
+region	사우스웨스트 프랑스	Southwest France	南西フランス
+region	산 라파엘	San Rafael	サン・ラファエル
+region	레이다 밸리	Leyda Valley	レイダ・ヴァレー
+region	마코네	Mâconnais	マコネ
+region	콜차구아 밸리	Colchagua Valley	コルチャグア・ヴァレー
+region	사우스이스턴 오스트레일리아	South Eastern Australia	南東オーストラリア
+region	라인가우	Rheingau	ラインガウ
+region	바하우	Wachau	ヴァッハウ
+region	라인헤센	Rheinhessen	ラインヘッセン
+region	알자스	Alsace	アルザス
+region	온타리오	Ontario	オンタリオ
+region	모스카토 다스티	Moscato d'Asti	モスカート・ダスティ
+region	프로세코	Prosecco	プロセッコ
+type	레드 와인	Red wine	赤ワイン
+type	화이트 와인	White wine	白ワイン
+type	로제 와인	Rosé wine	ロゼワイン
+type	스파클링 와인	Sparkling wine	スパークリングワイン
+type	로제 스파클링 와인	Rosé sparkling wine	ロゼ・スパークリングワイン
+type	디저트 와인	Dessert wine	デザートワイン
+type	내추럴 와인	Natural wine	ナチュラルワイン
+type	내추럴 오렌지 와인	Natural orange wine	ナチュラル・オレンジワイン
+type	내추럴 화이트 와인	Natural white wine	ナチュラル・白ワイン
+type	와인	Wine	ワイン
+type	탁주	Takju (Korean rice wine)	濁酒（タクチュ）
+type	생탁주	Fresh takju (Korean rice wine)	生濁酒（センタクチュ）
+type	발효주	Fermented liquor	醸造酒
+type	기타 주류	Other liquor	その他のお酒
+type	포트	Port	ポート
+type	아이스와인	Icewine	アイスワイン
+type	프로세코	Prosecco	プロセッコ
+type	카바	Cava	カバ
+label	품종	Grape varieties	品種
+label	용량	Volume	容量
+label	Vivino 평점	Vivino rating	Vivino評価
+label	향	Aroma	香り
+label	맛	Palate	味わい
+label	여운	Finish	余韻
