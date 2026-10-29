@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Icon from "./Icon";
-import WineCard from "./WineCard";
+import WineCard, { liquidOf } from "./WineCard";
 import KindRail from "./KindRail";
 import { BrandMark } from "./Brand";
 import { APP, kindBottle } from "@/lib/appProfile";
@@ -67,7 +67,7 @@ export default function HomeScreen({ onOpen, onBrowse, onSearch, onQuiz, onMe, m
 
       <div className="bento">
         {today ? (
-          <button className="bt bt-today" style={{ "--liquid": today.liquidColor || "var(--gold)" }} onClick={() => onOpen(today)}>
+          <button className="bt bt-today" style={{ "--liquid": liquidOf(today) }} onClick={() => onOpen(today)}>
             <span className="bt-eyebrow">{t("오늘의 {noun}", { noun: t(H.noun) })}</span>
             <span className="bt-today-shot">
               <img src={today.image || kindBottle(today)} alt="" fetchPriority="high" />

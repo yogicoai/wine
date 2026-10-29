@@ -9,14 +9,18 @@ import { t } from "@/lib/i18n";
 // item 은 lib/browse.js 모양. rank 를 주면 왼쪽 위에 순위.
 
 const KINDS = APP.theme.light?.kinds || [];
-const kindLabel = (item) => KINDS.find((k) => new RegExp(k.term).test(`${item.type || ""} ${item.name}`))?.label;
+const kindOf = (item) => KINDS.find((k) => new RegExp(k.term).test(`${item.type || ""} ${item.name}`));
+const kindLabel = (item) => kindOf(item)?.label;
 const bandLabel = (n) => PRICE_BANDS.find((b) => b.band === n)?.label;
+
+// 판에 깔 색 — 술 색이 DB 에 없으면(와인 대부분) 종류 카드 색으로. 앱 색으로 채우면 화이트 와인까지 분홍 판이 된다
+export const liquidOf = (item) => item.liquidColor || kindOf(item)?.color || "#ece8e1";
 
 export default function WineCard({ item, rank = null, onOpen }) {
   const bottle = item.image ? null : kindBottle(item);
   return (
     <button className="wcard" onClick={() => onOpen?.(item)}>
-      <span className={`wcard-shot ${bottle ? "is-cut" : ""}`} style={{ "--liquid": item.liquidColor || "var(--gold)" }}>
+      <span className={`wcard-shot ${bottle ? "is-cut" : ""}`} style={{ "--liquid": liquidOf(item) }}>
         {(item.image || bottle) && <img src={item.image || bottle} alt="" loading="lazy" decoding="async" />}
         {rank && <span className="wcard-rank">{rank}</span>}
       </span>
