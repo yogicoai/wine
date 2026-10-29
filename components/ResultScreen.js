@@ -823,7 +823,13 @@ export default function ResultScreen({
   // 무엇을 먼저 보여 줄지는 술마다 다르다. 와인은 빈티지와 음용 적기가 중요하고,
   // 사케·맥주는 온도와 잔이 먼저다. 그래서 순서를 앱(lib/apps/<키>.js)이 정한다.
   const sections = {
-    confidence: (
+    // 판매처 상품 정보로 넣은 술은 인식(라벨 판독)을 거치지 않아 신뢰도 숫자가 없다 — "–%" 대신 어디서 온 정보인지만
+    confidence: r.confidence == null && r.basis ? (
+      <div className="card">
+        <div className="card-title">{t("정보 출처")}</div>
+        <div className="basis">{r.basis}</div>
+      </div>
+    ) : (
       <div className="card">
         <div className="card-title">{t("인식 신뢰도")}</div>
         <div className="meter-row">
@@ -1096,7 +1102,10 @@ export default function ResultScreen({
         </div>
         {partial && (
           <div className="partial-note">
-            {t("이 술은 이름·주종과 예상 가격대만 있는 상태입니다. 라벨을 찍으면 스토리와 페어링까지 채워집니다.")}
+            {/* 판매처 상품 정보로 넣은 술(basis 가 있다)은 도수 · 정미율까지 있어 "이름만"이 아니다 */}
+            {r.basis
+              ? t("판매처(데일리샷) 상품 정보까지만 있는 술이에요. 이야기·페어링은 아직 없어요 — 라벨을 찍으면 분석해서 채워 드려요.")
+              : t("이 술은 이름·주종과 예상 가격대만 있는 상태입니다. 라벨을 찍으면 스토리와 페어링까지 채워집니다.")}
           </div>
         )}
         <div className="badges">

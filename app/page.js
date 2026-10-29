@@ -242,12 +242,13 @@ export default function Home() {
   }
 
   // 리스트에서 항목 하나를 눌렀을 때 — 이름으로 상세를 연다 (DB에 있으므로 무료)
+  // 목록의 판매처 정보만 있는 술(item.stub)은 AI 없이 아는 정보만 받는다
   function openListItem(item) {
-    explore(item.vintage ? `${item.name} ${item.vintage}` : item.name);
+    explore(item.vintage ? `${item.name} ${item.vintage}` : item.name, { stubOk: !!item.stub });
   }
 
   // 사진 없이 이름만으로 분석 (유사주 칩 클릭 / 웹 검색 재분석)
-  async function explore(name, { web = false } = {}) {
+  async function explore(name, { web = false, stubOk = false } = {}) {
     remember();
     setScreen("loading");
     setThumb(null);
@@ -256,7 +257,7 @@ export default function Home() {
       const res = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, web }),
+        body: JSON.stringify({ name, web, ...(stubOk ? { stubOk: true } : {}) }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || t("분석 실패"));

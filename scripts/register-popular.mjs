@@ -10,6 +10,16 @@
 // · 이미 있는 술은 넣지 않는다 — 표기를 맞춰(죠→조, 쥬→주, 더/the·라벨 떼기) 이름이 같거나 한쪽이 다른 쪽을 품으면 있는 것으로 본다(모든 주종 대상).
 // · 넣는 칸: 이름·영문명·도수·국가·종류·용량·가격대(판매처 가격, 비표준 병은 700ml 기준으로 환산)·Vivino(있으면).
 //   이야기·역사는 비워 둔다 — 누가 찍으면 정식 분석이 채운다(tier stub). 판매처 사진은 imageCandidate 로만 두고 눈 확인 뒤에 올린다.
+//
+// 2026-10-29 덧붙임(사용자 "사케 305종은 너무 적다" — 판매 중 전부 · 과실주 포함):
+//   --since <ISO>  색인에서 그 뒤에 본(=지금 판매 중인) 상품만. 먼저 `node scripts/dailyshot-index.mjs 42` 로 색인을 새로 받는다
+//   --detail       대표 상품의 상품 페이지(무료)에서 종류·용량·도수·국가·정미율·일본주도·산도를 채운다. 목록 API 가 이 값을
+//                  주지 않아 10-01 뒤에 올라온 상품은 색인에 비어 있다. 판매처 소개글은 화면에 쓰지 않고 조사 재료로만 남긴다
+//   종류(사케)     데일리샷 "기타"에 섞인 우메슈 · 유즈슈 같은 과실주는 이름으로 가려 "과실주 · 리큐르"로, 등급 낱말이 이름에 있으면
+//                  그 등급으로 적는다. 둘 다 아니면 비워 둔다 — 틀린 종류보다 빈칸이 낫다
+//   --sets         세트 · 케이스 · 잔 패키지로만 올라온 술도 넣는다 — 포장 말을 떼고 낱병 이름으로 묶는다. 낱병 상품이 있으면 그쪽이
+//                  대표가 된다. 세트로만 있는 술은 값이 병 값이 아니라 가격대를 비워 둔다
+//   백업 파일 이름의 날짜는 넣는 날(KST)이다
 import { MongoClient } from "mongodb";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { displayName } from "../lib/nameClean.js";
@@ -17,10 +27,48 @@ import { displayName } from "../lib/nameClean.js";
 const arg = (k, d = null) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
 const CAT = arg("--cat"), MIN = Number(arg("--min", 10)), APPLY = process.argv.includes("--apply");
 const PICK = arg("--names") ? new Set(JSON.parse(readFileSync(arg("--names"), "utf8"))) : null, TAG = arg("--tag");
+const SINCE = arg("--since") ? new Date(arg("--since")) : null, DETAIL = process.argv.includes("--detail"), SETS = process.argv.includes("--sets");
+// 세트 상품 이름에서 포장 말을 뗀 낱병 이름 — "닷사이 23 오동나무 케이스 에디션" → "닷사이 23"
+const setCore = (s) => String(s || "")
+  .replace(/\[[^\]]*\]|\([^)]*\)/g, " ")
+  .replace(/(우드|종이|오동나무|나무|선물|기프트|고급)?\s*(케이스|박스|box)(\s*에디션)?/gi, " ")
+  .replace(/(전용\s*)?(도쿠리|토쿠리|오쵸코|오초코|술잔|잔|글라스)(\s*\d+\s*개)?(\s*(세트|패키지))?/g, " ")
+  .replace(/\d+\s*(개|팩|병|입|종)(\s*(세트|패키지|묶음|구성))?/g, " ")
+  .replace(/(홈술\s*)?(세트|패키지|기획|선물용|선물|기프트|증정|포장|미니어처|미니)/gi, " ")
+  .replace(/\s{2,}/g, " ").trim();
 const DS_CAT = { whisky: "위스키", sake: "사케" }[CAT];
 if (!DS_CAT) { console.error("--cat whisky|sake"); process.exit(2); }
 if (PICK && !TAG) { console.error("--names 를 쓸 때는 --tag 로 백업 이름을 따로 준다"); process.exit(2); }
-const BACKUP = `data/backup/register-${CAT}-2026-10-02${TAG ? "-" + TAG : ""}.json`;
+if (SINCE && isNaN(SINCE)) { console.error("--since 는 날짜(ISO)"); process.exit(2); }
+const DAY = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
+const BACKUP = `data/backup/register-${CAT}-${DAY}${TAG ? "-" + TAG : ""}.json`;
+
+// 상품 페이지 — 서버가 그린 페이지에 상품 정보 표(information)가 실려 온다. 목록 API 에는 없는 값들이다
+async function pageFacts(id) {
+  try {
+    const r = await fetch(`https://dailyshot.co/m/item/${id}`, { headers: { "user-agent": "Mozilla/5.0" }, signal: AbortSignal.timeout(20000) });
+    if (!r.ok) return null;
+    const m = (await r.text()).match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+    const d = m && JSON.parse(m[1]).props?.pageProps?.dehydratedState?.queries?.[0]?.state?.data;
+    if (!d) return null;
+    const info = Object.fromEntries((d.information || []).filter((x) => x?.label && x?.value).map((x) => [x.label.trim(), String(x.value).trim()]));
+    const text = (h) => String(h || "").replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, " ").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/[ \t]+/g, " ").trim();
+    const comments = (d.comments || []).map((c) => ({ title: text(c.title), text: text(c.description) })).filter((c) => c.text);
+    return { info, enName: d.en_name || null, thumbnail: d.thumbnail_image || null, comments };
+  } catch {
+    return null;
+  }
+}
+// 사케 분류 "기타"에 섞인 과실주 · 리큐르 — 이름으로 가린다
+const LIQUEUR = /유즈|유자|우메슈|매실|리큐르|멜론|망고|피치|복숭아|모모|딸기|이치고|레몬|미캉|귤|링고|사과|블루베리|살구|안즈|샤인\s*머스캣|리치|시소|요구르트|요거트|커피|초콜릿|말차|체리|키위|파인애플|라임|자몽|진저|생강|시쿠와사|하쿠토|백도|포도/;
+const GRADE = [[/준마이\s*다이긴[조죠]/, "준마이 다이긴조"], [/준마이\s*긴[조죠]/, "준마이 긴조"], [/다이긴[조죠]/, "다이긴조"], [/긴[조죠]/, "긴조"], [/혼[조죠][조죠]/, "혼조조"], [/준마이/, "준마이"], [/니고리/, "니고리"], [/나마/, "나마자케"]];
+function sakeType(base, name) {
+  const b = base && base !== "기타" ? base : null;
+  if ((!b || b === "사케(청주)") && LIQUEUR.test(name)) return /우메슈|매실/.test(name) ? "우메슈(매실주)" : /유즈슈|유자주/.test(name) ? "유즈슈(유자술)" : "과실주 · 리큐르";
+  if (b) return b.replace(/죠/g, "조");
+  const g = GRADE.find(([re]) => re.test(name));
+  return g ? g[1] : null;
+}
 
 const GEN = /(위스키|와인|사케|맥주|보드카|데킬라|리큐르|브랜디|꼬냑|코냑|막걸리|일본|청주)/g;
 const norm = (s) => String(s || "").replace(/\[[^\]]*\]|\([^)]*\)/g, " ").replace(/\d+(\.\d+)?\s*(ml|l|리터|%|도)/gi, " ").replace(/\b(19|20)\d{2}\b/g, " ")
@@ -63,18 +111,20 @@ const oursEn = all.filter((d) => SCOPE.includes(d.category)).flatMap((d) => [d.i
 const have = (k, name, en) => ours.some((o) => o === k || (o.length >= 4 && k.length >= 4 && (o.includes(k) || k.includes(o)))) || oursTok.some((t) => sameByTokens(toks(name), t))
   || (en ? oursEn.some((t) => sameByTokens(enToks(en), t)) : false);
 
-const idx = await db.collection("dailyshot").find({ category: DS_CAT }, { projection: { _id: 0, history: 0 } }).toArray();
+const idx = await db.collection("dailyshot").find({ category: DS_CAT, ...(SINCE ? { seenAt: { $gte: SINCE } } : {}) }, { projection: { _id: 0, history: 0 } }).toArray();
 const groups = new Map();
 for (const x of idx) {
-  if (SETLIKE.test(x.name || "")) continue;
-  const k = norm(x.name); if (!k) continue;
+  const isSet = SETLIKE.test(x.name || "");
+  if (isSet && !SETS) continue;
+  const base = isSet ? setCore(x.name) : x.name;
+  const k = norm(base); if (!k || k.length < 2) continue;
   const g = groups.get(k) || { k, items: [], reviews: 0, have: false };
-  g.items.push(x); g.reviews += Number(x.reviews || 0);
-  if (linked.has(x.itemId) || have(k, x.name, x.nameEn)) g.have = true;
+  g.items.push(isSet ? { ...x, isSet: true, coreName: base } : x); g.reviews += Number(x.reviews || 0);
+  if (linked.has(x.itemId) || have(k, base, x.nameEn)) g.have = true;
   groups.set(k, g);
 }
 const STD = CAT === "sake" ? [700, 760] : [690, 760];
-const now = new Date(), docs = [], skipped = { dupKey: 0, noName: 0 };
+const now = new Date(), docs = [], skipped = { dupKey: 0, noName: 0 }, pageN = { tried: 0, ok: 0 };
 const missing = (PICK ? [...groups.values()].filter((g) => g.items.some((x) => PICK.has(x.name))) : [...groups.values()].filter((g) => !g.have && g.reviews >= MIN)).sort((a, b) => b.reviews - a.reviews);
 if (PICK) {
   const found = new Set(missing.flatMap((g) => g.items.map((x) => x.name)));
@@ -86,26 +136,41 @@ for (const g of missing) {
   const byRev = [...g.items].sort((a, b) => (b.reviews || 0) - (a.reviews || 0));
   const std = (x) => { const v = ml(x.volume) ?? ml(x.name); return v != null && v >= STD[0] && v <= STD[1]; };
   // 정보가 다 찬 상품을 우선한다 (행사 표시 없음 > 도수·국가·용량 있음 > 표준 병 > 후기 수)
-  const score = (x) => (PROMO.test(x.name) ? 0 : 8) + (x.abv ? 2 : 0) + (x.country ? 2 : 0) + (x.volume ? 1 : 0) + (std(x) ? 1 : 0);
-  const rep = [...byRev].sort((a, b) => score(b) - score(a) || (b.reviews || 0) - (a.reviews || 0))[0];
-  const name = cleanName(rep.name);
+  // 낱병 상품이 세트보다 앞선다(--sets 일 때만 세트가 섞여 있다)
+  const score = (x) => (x.isSet ? 0 : 16) + (PROMO.test(x.name) ? 0 : 8) + (x.abv ? 2 : 0) + (x.country ? 2 : 0) + (x.volume ? 1 : 0) + (std(x) ? 1 : 0);
+  const rep0 = [...byRev].sort((a, b) => score(b) - score(a) || (b.reviews || 0) - (a.reviews || 0))[0];
+  const name = cleanName(rep0.isSet ? rep0.coreName : rep0.name);
   if (!name) { skipped.noName++; continue; }
   const key = catalogKey(name, null);
   if (keys.has(key)) { skipped.dupKey++; continue; }
   keys.add(key);
+  // 상품 페이지 값이 색인 값보다 앞선다(색인은 예전 수집본 · 목록 API 라 비어 있거나 낡았다)
+  const page = DETAIL ? await pageFacts(rep0.id) : null;
+  if (DETAIL) { pageN.tried++; if (page) pageN.ok++; await new Promise((z) => setTimeout(z, 250)); }
+  const pi = page?.info || {};
+  const rep = {
+    ...rep0,
+    abv: pi["도수"] || rep0.abv, country: pi["국가"] || rep0.country, volume: pi["용량"] || rep0.volume,
+    // 상품 페이지 종류가 "사케"처럼 뭉뚱그린 말이면 목록의 세부 분류(준마이 …)가 낫다
+    subcategory: (pi["종류"] && !/^(사케|사케\(청주\)|청주|일본주|기타)$/.test(pi["종류"]) ? pi["종류"] : rep0.subcategory) || pi["종류"] || null,
+    nameEn: page?.enName && !/[가-힣]/.test(page.enName) ? page.enName : rep0.nameEn,
+    image: page?.thumbnail || rep0.image,
+  };
+  const extraSpecs = page ? [["정미율", pi["정미율"]], ["일본주도", pi["일본주도"] || pi["주도"]], ["산도", pi["산도"]]].filter(([, v]) => v).map(([label, value]) => ({ label, value })) : [];
   // 가격대 — 대표 상품 값. 표준 병이 아니면 700ml(사케 720ml) 기준으로 환산
   const v = ml(rep.volume) ?? ml(rep.name), base = CAT === "sake" ? 720 : 700;
   const price = Number(rep.price || 0);
   // 2L·3L 팩도 환산한다 — 큰 팩 값을 그대로 쓰면 가격대가 한두 칸 위로 간다
   const scaled = price > 0 && v && v >= 180 && v <= 5000 && !std(rep) ? Math.round(price * (base / v)) : price;
-  const band = scaled > 0 ? bandOf(scaled) : null;
+  // 세트로만 있는 술 — 값이 병 값이 아니다(잔 · 여러 병 · 케이스). 가격대를 비워 둔다
+  const band = scaled > 0 && !rep.isSet ? bandOf(scaled) : null;
   const en = cleanEn(rep.nameEn);
   const vv = rep.vivino && typeof rep.vivino === "object" ? rep.vivino : null;
   const ratings = vv && Number(vv.score) > 0 && Number(vv.review_count || vv.count || 0) >= 30 ? [{ source: "Vivino", score: `${Number(vv.score).toFixed(1)} / 5 (평가 ${Number(vv.review_count || vv.count).toLocaleString("ko-KR")}건)` }] : undefined;
   const fields = ["name", "type", "specs"];
   // 종류 칸도 우리 표기로 (사케: 긴죠 → 긴조) — 잔·도구 추천 규칙이 '긴조'로 찾는다
-  const type = rep.subcategory ? (CAT === "sake" ? rep.subcategory.replace(/죠/g, "조") : rep.subcategory) : null;
-  const result = { found: true, name, category: CAT, type, specs: rep.volume ? [{ label: "용량", value: rep.volume }] : [], tier: "stub", basis: "판매처(데일리샷) 상품 정보 기준이며 웹 조사로 따로 확인하지는 않았습니다." };
+  const type = CAT === "sake" ? sakeType(rep.subcategory, name) : rep.subcategory || null;
+  const result = { found: true, name, category: CAT, type, specs: [...(rep.volume ? [{ label: "용량", value: rep.volume }] : []), ...extraSpecs], tier: "stub", basis: "판매처(데일리샷) 상품 정보 기준이며 웹 조사로 따로 확인하지는 않았습니다." };
   if (rep.country) { result.country = rep.country; fields.push("country"); }
   if (rep.abv) { result.alcohol = rep.abv; fields.push("alcohol"); }
   if (band) { result.priceBand = band; fields.push("priceBand"); }
@@ -116,9 +181,17 @@ for (const g of missing) {
     result, tier: "stub", usedWeb: false, model: null, source: "dailyshot-index", hits: 0, createdAt: now, updatedAt: now,
     ...(band ? { priceBand: band, priceBandBasis: { by: "dailyshot-price", price, volume: rep.volume || null, itemId: rep.itemId, seenAt: rep.seenAt || null, at: now, ...(scaled !== price ? { scaledTo: `${base}ml`, scaledPrice: scaled } : {}) } } : {}),
     ...(en ? { i18n: { en: { name: en } } } : {}),
-    sourceFacts: { dailyshot: { id: rep.id, itemId: rep.itemId, name: rep.name, enName: rep.nameEn || null, url: rep.url, facts: { abv: rep.abv || null, country: rep.country || null, volume: rep.volume || null, type: rep.subcategory || null }, fetchedAt: rep.seenAt || null } },
+    sourceFacts: { dailyshot: {
+      id: rep.id, itemId: rep.itemId, name: rep.name, enName: rep.nameEn || null, url: rep.url,
+      facts: { abv: rep.abv || null, country: rep.country || null, volume: rep.volume || null, type: rep.subcategory || null, ...(page ? { info: pi } : {}) },
+      // 사진 받기(images-stage)가 이 주소를 데일리샷 사진으로 쓴다
+      ...(rep.image ? { thumbnail: rep.image } : {}),
+      // 판매처 소개글 — 화면에 그대로 옮기지 않는다(그쪽 글이다). 이야기 조사 때 재료로 쓴다
+      ...(page?.comments?.length ? { comments: page.comments } : {}),
+      fetchedAt: page ? now : rep.seenAt || null,
+    } },
     ...(rep.image ? { imageCandidate: { url: rep.image, source: "dailyshot", itemId: rep.itemId } } : {}),
-    enrichedBy: "dailyshot-structured", enrichedAt: now, registeredFrom: "dailyshot-index",
+    enrichedBy: "dailyshot-structured", enrichedAt: now, registeredFrom: rep.isSet ? "dailyshot-index-set" : "dailyshot-index",
     structuredFill: { at: now, source: "dailyshot", url: rep.url, fields: [...fields, ...(en ? ["i18n.en.name"] : [])] },
     popularity: { dailyshotReviews: g.reviews, listings: g.items.length },
   };

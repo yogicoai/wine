@@ -355,6 +355,8 @@ button.bt:active { transform: scale(0.98); }
 .bt-jack > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
 .bt-label { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 4px; padding: 7px 8px 7px 12px; border-radius: 15px; background: rgba(255, 255, 255, 0.88); font-size: 14px; font-weight: 700; }
 .bt-label small { display: block; font-size: 11px; font-weight: 700; color: var(--ink-3); }
+/* 좁은 폰에서 "치즈·샤퀴테리와"가 "와" 한 글자만 다음 줄로 꺾이지 않게 — 넘치면 말줄임 */
+.bt-label > span { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* 배너 — 계절 한 잔 */
 .banners { display: grid; gap: 10px; margin: 14px 0 0; }
@@ -523,10 +525,12 @@ button.bt:active { transform: scale(0.98); }
   .banner strong { font-size: 19px; }
   .banner span { font-size: 15px; }
 
-  /* 결과 — 왼쪽(병 · 이름 · 기본 정보, 내려 읽어도 따라온다), 오른쪽(나머지 판). 폰에서는 한 줄 그대로 */
-  [data-ui="light"] .result { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); column-gap: 40px; align-items: start; }
-  [data-ui="light"] .result > .hero { grid-column: 1; grid-row: 1 / span 60; position: sticky; top: calc(var(--nav-h) + 16px); }
-  [data-ui="light"] .result > :not(.hero) { grid-column: 2; }
+  /* 결과 — 왼쪽(병 · 이름 · 기본 정보, 내려 읽어도 따라온다), 오른쪽(나머지 판). 폰에서는 한 줄 그대로.
+   * 술창고(CellarScreen)도 바깥 상자 이름이 .result 라, 병 첫 판(.hero)이 있는 결과 화면에만 건다 —
+   * 안 그러면 술창고 판이 전부 오른쪽 칸으로 몰리고 왼쪽 400px 이 빈다(10-29 운영에서 발견) */
+  [data-ui="light"] .result:has(> .hero) { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); column-gap: 40px; align-items: start; }
+  [data-ui="light"] .result:has(> .hero) > .hero { grid-column: 1; grid-row: 1 / span 60; position: sticky; top: calc(var(--nav-h) + 16px); }
+  [data-ui="light"] .result:has(> .hero) > :not(.hero) { grid-column: 2; }
   [data-ui="light"] .result > .hero + * { margin-top: 0; }
 }
 

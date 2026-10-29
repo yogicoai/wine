@@ -23,7 +23,8 @@ export async function POST(request) {
     // image: base64 (data URL prefix 제거) / name: 이름으로 분석 / web: 웹 검색 강제
     // fresh: true → 캐시 무시하고 재분석
     // barcode: 바코드로는 못 찾아 라벨을 찍은 경우 — 분석 후 그 번호를 연결해 둔다
-    const { image, name, web, fresh, barcode } = await request.json();
+    // stubOk: 목록에서 연 판매처 정보만 있는 술 — AI 를 부르지 않고 아는 정보(뼈대)를 그대로 돌려준다(2026-10-29)
+    const { image, name, web, fresh, barcode, stubOk } = await request.json();
     if (!image && !name && hasApiKey()) {
       return NextResponse.json({ error: "이미지 또는 이름이 필요합니다." }, { status: 400 });
     }
@@ -44,8 +45,8 @@ export async function POST(request) {
 
     // ── 1) 이름 요청: 바로 카탈로그 조회
     if (name && useCache) {
-      const hit = await lookupCatalog(name, null);
-      if (hit) return NextResponse.json({ demo: false, cached: true, ...hit });
+      const hit = await lookupCatalog(name, null, { allowStub: stubOk === true });
+      if (hit) return NextResponse.json({ demo: false, cached: true, ...(hit.stub ? { partial: true } : {}), ...hit });
     }
 
     // ── 2) 사진 요청: 저비용 판독으로 제품명을 얻어 카탈로그 조회
