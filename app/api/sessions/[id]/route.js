@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/mongodb";
+import { catalogImagesByName } from "@/lib/catalog";
 
 export const runtime = "nodejs";
 
@@ -16,7 +17,10 @@ export async function GET(_request, { params }) {
     return NextResponse.json({ error: "잘못된 ID" }, { status: 400 });
   }
   if (!session) return NextResponse.json({ error: "없음" }, { status: 404 });
-  return NextResponse.json({ session: { ...session, _id: session._id.toString() } });
+  // 사진 없이 저장된 기록이면 지금 카탈로그 사진으로 채워 연다
+  let thumb = session.thumb;
+  if (!thumb && session.result?.name) thumb = (await catalogImagesByName([session.result.name])).get(session.result.name) || null;
+  return NextResponse.json({ session: { ...session, thumb, _id: session._id.toString() } });
 }
 
 // 세션 삭제

@@ -31,7 +31,7 @@ export default function HistoryDrawer({ open, sessions, noDb, onClose, onOpenSes
           const cat = catOf(s.result?.category);
           return (
             <button key={s._id} className="hist-item" onClick={() => onOpenSession(s._id)}>
-              <Thumb src={s.thumb} category={s.result?.category} />
+              <Thumb src={s.thumb} category={s.result?.category} kind={s.result} />
               <div>
                 <div className="hist-name">{s.result?.name || t("인식 실패")}</div>
                 <div className="hist-meta">

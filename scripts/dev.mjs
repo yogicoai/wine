@@ -9,7 +9,7 @@
 // 앱마다 포트와 빌드 폴더를 따로 준다 — 넷을 동시에 띄워 놓고 견줘 볼 수 있다.
 
 import { spawn } from "node:child_process";
-import { PROFILES } from "../lib/appProfile.js";
+import { PROFILES, DEFAULT_APP } from "../lib/appProfile.js";
 
 const PORTS = {
   wine: 5700,
@@ -20,7 +20,7 @@ const PORTS = {
   spirits: 5705,
 };
 
-const app = (process.argv[2] || "wine").trim();
+const app = (process.argv[2] || DEFAULT_APP).trim();
 const mode = (process.argv[3] || "dev").trim(); // dev | build | start
 
 if (!PROFILES[app]) {

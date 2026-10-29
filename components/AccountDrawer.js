@@ -112,9 +112,9 @@ export default function AccountDrawer({ open, onClose, onOpenCellar, onOpenWine,
           })}
         </div>
         <p className="drawer-note" style={{ marginTop: 6 }}>
-          MULTILINGUAL
+          {MULTILINGUAL
             ? t("화면과 술 정보에 함께 적용됩니다. 번역이 준비되지 않은 술은 한국어로 나옵니다.")
-            : t("영어·일본어는 술 정보 번역을 준비하는 중입니다. 준비되면 여기서 고를 수 있습니다.")
+            : t("영어·일본어는 술 정보 번역을 준비하는 중입니다. 준비되면 여기서 고를 수 있습니다.")}
         </p>
 
         {/* 로그인 전 — 자리만 잡아 둔다 */}

@@ -1,0 +1,245 @@
+/* ── 밝은 디자인 — 와인 · 사케 (2026-10-28 사용자: "와인보틀이랑 사케보틀 2개만 디자인 전체적으로 변경") ──
+ *
+ * 기준은 위스키 렌즈(바탕화면 whisky 저장소)의 지금 디자인이다.
+ *  - 흰 바탕, 판은 그림자 없는 옅은 회색 타일(--tile). 판 안의 칩 · 단추는 흰색(같은 회색이 겹치면 안 보인다)
+ *  - 흐린 유리는 떠 있는 층에만 — 아래 메뉴 · 토스트 · 위로 가기 · 공유 창
+ *  - 제목은 Pretendard 700, 자간 -0.03em. 세리프 · 대문자 자간 벌림 · 금박 · 필름 그레인 · 배경 사진은 쓰지 않는다
+ *  - 강조는 앱 색 하나(와인 클라렛 · 사케 쪽빛) — 누르는 단추는 앱 색 알약에 흰 글자, 고른 칩은 잉크 알약
+ *
+ * 모든 규칙이 html[data-ui="light"] 아래에 있다 — 앱 설정(lib/apps/<키>.js 의 theme.ui)이 "light" 인 앱에만 걸린다.
+ * 앱 색은 app/layout.js 가 lightCss()(lib/appProfile.js)로 넣는다. 여기서는 앱마다 같은 것만 정한다.
+ * 금색 계열 변수(--gold · --gold-hi …)는 이름은 그대로 두고 값만 앱 색으로 바뀐다 — globals.css 200여 곳을 고치지 않으려고.
+ */
+
+html[data-ui="light"] {
+  --bg: #ffffff;
+  --bg-2: var(--tile);
+  --bg-3: var(--tile-2);
+  --line: rgba(70, 55, 35, 0.12);
+  --line-soft: rgba(70, 55, 35, 0.07);
+  --ink: #1d1b18;
+  --ink-dim: #6a635a; /* 작은 글씨도 흰 바탕 5.5:1 */
+  --surface: var(--tile);
+  --surface-2: var(--tile-2);
+  --bad: #b3402f;
+  --radius: 24px;
+  --radius-sm: 16px;
+  /* 제목 서체도 Pretendard — 세리프는 예전 "고급 흉내"의 문법이다 */
+  --font-d: var(--font-b);
+  --font-s: var(--font-b);
+  /* 배경 사진 · 장막 · 그레인 · 문양을 끈다 */
+  --veil-1: transparent; --veil-2: transparent; --veil-3: transparent; --veil-4: transparent; --veil-edge: transparent;
+  --bg-image: none; --grain: 0; --pattern: none;
+  --wine-glow: transparent; --gold-glow: transparent;
+  /* 떠 있는 층 */
+  --glass-float: rgba(255, 255, 255, 0.62);
+  --glass-blur: blur(22px) saturate(1.8);
+  --shadow-float: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.6), 0 18px 40px -16px rgba(40, 30, 20, 0.38);
+  --tabbar-h: 80px;
+  color-scheme: light;
+}
+
+html[data-ui="light"], [data-ui="light"] body { background: #ffffff; background-image: none; }
+[data-ui="light"] body::before, [data-ui="light"] body::after { display: none; }
+
+/* ── 머리말 — 마크는 흰 바탕용(테두리가 검은 렌즈)이라 섞기(screen)를 끈다. 켜 두면 흰 바탕에서 마크가 사라진다 */
+/* 마크 그림은 흰 바탕째 만들어져 회색 판 위에서는 흰 네모가 비친다 — 곱하기로 흰 바탕만 지운다(검은 테 · 술 색은 그대로) */
+[data-ui="light"] :is(.brand-mark, .brand-emblem) { mix-blend-mode: multiply; }
+/* 영문 글자 로고(img_b.png)는 검은 바탕용 흰 글자라 흰 바탕에서는 뒤집어 진한 글자로 보이게 한다 */
+[data-ui="light"] .brand-word { mix-blend-mode: normal; filter: invert(1) brightness(0.18); }
+[data-ui="light"] .scan-empty .brand-emblem { opacity: 0.85; }
+
+/* ── 머리말 — 앱 이름은 굵은 고딕, 강조 글자는 앱 색 */
+[data-ui="light"] .hdr-logo { font-size: 22px; font-weight: 700; letter-spacing: -0.03em; }
+[data-ui="light"] .hdr-logo em { font-weight: 500; color: var(--gold-hi); }
+[data-ui="light"] .hdr-sub { font-size: 12px; letter-spacing: -0.01em; }
+
+/* ── 아래 메뉴 — 떠 있는 유리 알약(위스키 렌즈와 같은 모양) */
+[data-ui="light"] .tabbar {
+  left: 50%; right: auto; bottom: calc(12px + env(safe-area-inset-bottom));
+  width: min(440px, calc(100% - 24px)); height: 68px; padding: 6px; gap: 0;
+  border: 0; border-radius: 999px;
+  background: var(--glass-float); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-float);
+  transform: translateX(-50%);
+}
+@media (min-width: 620px) {
+  [data-ui="light"] .tabbar { max-width: none; margin: 0; border: 0; border-radius: 999px; }
+}
+[data-ui="light"] .tab { justify-content: center; padding: 0; border-radius: 999px; color: var(--ink-dim); }
+[data-ui="light"] .tab span { font-size: 10.5px; font-weight: 700; }
+[data-ui="light"] .tab:active { background: var(--tile); }
+/* 지금 탭 — 흰 유리 방울 + 앱 색 */
+[data-ui="light"] .tab.on {
+  color: var(--gold-hi);
+  background: linear-gradient(180deg, #ffffff, var(--gold-soft));
+  box-shadow: inset 0 1px 0 #fff, 0 6px 14px -8px rgba(60, 40, 30, 0.45);
+}
+[data-ui="light"] .tab.has-dot::after { box-shadow: 0 0 0 2px #fff; }
+/* 촬영 중에는 메뉴를 내린다 — 가운데 정렬(translateX)을 지키며 내린다 */
+[data-ui="light"] body:has(.cap-live) .tabbar { transform: translate(-50%, 140%); }
+
+/* ── 판 — 그림자 · 테두리 · 흐림 없는 회색 타일 */
+[data-ui="light"] :is(.card, .hero, .quiz-card, .hint, .cellar-item) {
+  background: var(--tile); border: 0; box-shadow: none;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+[data-ui="light"] .card { border-radius: var(--radius); }
+[data-ui="light"] .hero { border-radius: 28px; }
+[data-ui="light"] .card-title { font-size: 17px; font-weight: 700; letter-spacing: -0.03em; }
+
+/* 판 안에 놓인 칩 · 단추 · 작은 칸은 흰색 */
+[data-ui="light"] :is(.card, .hero, .quiz-card, .hint, .cellar-item) :is(.chip, .btn:not(.primary), .filter-chip:not(.on), .ox, .scale-btn, .target-hint, .shop-ref, .timer-btn, .hero-cat) {
+  background: #ffffff;
+}
+
+/* ── 단추 */
+[data-ui="light"] .btn { border: 0; background: var(--tile); color: var(--ink); font-weight: 700; letter-spacing: -0.02em; }
+[data-ui="light"] .btn:hover { background: var(--tile-2); color: var(--ink); }
+[data-ui="light"] .btn.primary,
+[data-ui="light"] .btn.primary:hover {
+  background: var(--btn); color: #ffffff; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 10px 22px -12px var(--gold-lo);
+}
+[data-ui="light"] .btn.primary:disabled { opacity: 0.55; }
+
+/* ── 칩 — 기본은 회색 타일, 고른 것은 잉크 알약 */
+[data-ui="light"] .chip { border: 0; background: var(--tile); font-weight: 600; }
+[data-ui="light"] .chip:hover { background: var(--tile-2); color: var(--ink); }
+[data-ui="light"] .filter-chip {
+  border: 0; background: var(--tile); color: var(--ink-dim);
+  font-family: var(--font-b); font-size: 12.5px; font-weight: 600;
+}
+[data-ui="light"] .filter-chip:hover { color: var(--ink); }
+[data-ui="light"] .filter-chip.on { background: var(--ink); color: #ffffff; }
+
+/* 고르는 칸(모드 전환) — 흰 칸이 떠오르는 세그먼트 */
+[data-ui="light"] .mode-switch { border: 0; background: rgba(110, 92, 66, 0.1); box-shadow: inset 0 1px 3px rgba(70, 52, 30, 0.1); }
+[data-ui="light"] .mode-switch button { font-family: var(--font-b); font-weight: 600; letter-spacing: -0.01em; }
+[data-ui="light"] .mode-switch button.on {
+  background: #ffffff; color: var(--gold-hi);
+  box-shadow: inset 0 1px 0 #fff, 0 0 0 1px rgba(90, 72, 48, 0.06), 0 6px 14px -8px rgba(70, 52, 30, 0.45);
+}
+
+/* ── 촬영 판 — 카메라를 켜기 전에는 그 술의 실사 사진(힉스필드, 2026-10-28)을 깔고 위쪽 빈 바탕에 안내와 단추를 둔다.
+ * 사진은 위 40% 를 비워 두고 찍었다. 카메라가 켜지면 영상이 판을 덮으므로 사진은 보이지 않는다(영상 위 조작은 어두운 그대로) */
+[data-ui="light"] .cam-frame {
+  border: 0; border-radius: 28px; box-shadow: none;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+  background: var(--tile) var(--hero-photo, none) center bottom / cover no-repeat;
+}
+/* 사진 위쪽에 바탕색 안개를 한 겹 — 병 목이 안내 글자 뒤로 올라와도 글자가 읽히게 */
+[data-ui="light"] .cam-frame::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(246, 240, 232, 0.92) 0%, rgba(246, 240, 232, 0.6) 34%, rgba(246, 240, 232, 0) 56%);
+}
+[data-ui="light"] .cam-frame:has(.cam-video:not(.is-hidden))::before { display: none; }
+[data-ui="light"] .cam-fallback { z-index: 1; justify-content: flex-start; padding-top: 30px; gap: 10px; color: var(--ink); }
+[data-ui="light"] .cam-fallback .big { color: var(--gold); opacity: 0.9; }
+[data-ui="light"] .cam-msg { font-size: 15px; font-weight: 600; line-height: 1.6; color: var(--ink); }
+[data-ui="light"] .cam-start {
+  padding: 13px 28px; border-radius: 999px; background: var(--btn); color: #ffffff;
+  font-family: var(--font-b); font-weight: 700; font-size: 15px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 10px 22px -12px var(--gold-lo);
+}
+[data-ui="light"] .cam-alt { color: var(--ink); font-weight: 600; border-bottom-color: rgba(70, 55, 35, 0.25); }
+[data-ui="light"] .dragover .cam-frame { box-shadow: 0 0 0 3px var(--gold-soft); }
+[data-ui="light"] .scan-frame { border: 0; border-radius: 28px; background: var(--tile); box-shadow: 0 22px 50px -26px rgba(40, 30, 20, 0.45); }
+
+/* 셔터 — 흰 바탕에서는 흰 링이 사라진다. 앱 색 링 + 흰 속 원 */
+[data-ui="light"] .shutter { border-color: var(--gold); box-shadow: 0 10px 24px -12px var(--gold-lo); }
+[data-ui="light"] .shutter::after { background: var(--gold-soft); }
+[data-ui="light"] .shutter:hover::after { background: var(--gold); }
+[data-ui="light"] .shutter.is-off { opacity: 0.45; box-shadow: none; }
+[data-ui="light"] .side-btn { background: var(--tile); }
+
+/* ── 결과 첫 판 — 상품 사진은 그 술 색이 옅게 번지는 둥근 판 위에(위스키 렌즈 위스키 카드와 같은 방식).
+ * 판매처 사진은 흰 바탕이라 곱하기(multiply)로 판 색에 녹인다 — 예전 진열장 장식(베이지 판 · 금 테두리 두 겹)은 걷는다 */
+[data-ui="light"] .hero-visual { max-width: 260px; }
+[data-ui="light"] .hero-visual:is(.is-case, .is-web) {
+  padding: 18px; border: 0; border-radius: 28px; box-shadow: none; isolation: isolate;
+  background: radial-gradient(75% 65% at 50% 58%, color-mix(in oklab, var(--tint, var(--gold)) 24%, #ffffff) 0%, #fbf9f6 60%, var(--tile-2) 100%);
+}
+[data-ui="light"] .hero-visual.is-case::after { content: none; }
+[data-ui="light"] .hero-visual:is(.is-case, .is-web) .hero-shot { mix-blend-mode: multiply; filter: none; }
+/* 종류 대표 병(사진 없는 술) — 배경 없는 병이라 곱하기 없이 그대로, 목록 칸에서는 잘리지 않게 */
+[data-ui="light"] .hero-visual.is-generic .hero-shot { mix-blend-mode: normal; max-height: 92%; filter: drop-shadow(0 14px 14px rgba(60, 40, 20, 0.18)); }
+[data-ui="light"] .is-generic:not(.hero-visual) { object-fit: contain; background: var(--tile); padding: 3px; }
+[data-ui="light"] .hero-visual.is-loading { border: 0; border-radius: 28px; background: var(--tile-2); }
+[data-ui="light"] .hero-mine { border: 0; border-radius: 14px; padding: 0; background: #fff; box-shadow: 0 0 0 3px #fff, 0 8px 18px -8px rgba(40, 30, 20, 0.45); }
+[data-ui="light"] .hero-name { font-size: 28px; font-weight: 700; line-height: 1.28; }
+[data-ui="light"] .badge.gold { border-color: transparent; background: var(--gold-soft); color: var(--gold-hi); }
+
+/* ── 막대 · 진행 */
+[data-ui="light"] :is(.meter, .timer-bar) { background: var(--tile-2); }
+[data-ui="light"] .timer-btn:hover { background: var(--tile-2); }
+
+/* ── 서랍(기록 · 내 정보) — 흰 판이 옆에서 나온다 */
+[data-ui="light"] .drawer { background: #ffffff; border-left: 0; box-shadow: -24px 0 60px -24px rgba(30, 20, 10, 0.35); }
+[data-ui="light"] .drawer h3 {
+  font-family: var(--font-b); font-size: 19px; font-weight: 700; letter-spacing: -0.03em;
+  text-transform: none; color: var(--ink);
+}
+[data-ui="light"] .drawer-close { background: var(--tile); border: 0; }
+[data-ui="light"] :is(.acct-avatar, .acct-timer) { background: var(--tile); border: 0; }
+[data-ui="light"] .scale-btn { background: var(--tile); }
+
+/* ── 찾기 · 취향 문답 */
+[data-ui="light"] .disc-search { background: var(--tile); border: 0; border-radius: 999px; color: var(--ink); }
+[data-ui="light"] .ox { background: var(--tile); }
+[data-ui="light"] .target-hint { background: var(--tile); border: 0; }
+[data-ui="light"] .shop-ref { background: var(--tile); border: 0; }
+
+/* ── 떠 있는 것 — 유리 · 짙은 알약 */
+[data-ui="light"] .timer-bubble {
+  background: var(--glass-float); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-float); border: 0; color: var(--ink);
+}
+[data-ui="light"] .to-top {
+  background: var(--glass-float); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-float); border: 0; color: var(--ink);
+}
+[data-ui="light"] .toast {
+  background: rgba(29, 27, 24, 0.92); color: #ffffff; border: 0; border-radius: 999px;
+  font-family: var(--font-b); letter-spacing: -0.01em; box-shadow: 0 14px 36px -14px rgba(0, 0, 0, 0.5);
+}
+[data-ui="light"] .share-modal { box-shadow: 0 30px 70px -20px rgba(30, 20, 10, 0.4); }
+
+/* ── 홈 종류 색 카드 줄(components/KindRail.js) — 위스키 렌즈 홈의 종류 카드와 같은 모양.
+ * 카드마다 제 색, 오른쪽 아래에 배경 없는 잔 · 병(힉스필드)을 살짝 기울여 올린다 */
+.kind-section { margin-top: 26px; }
+.kind-head { font-size: 19px; font-weight: 700; letter-spacing: -0.03em; }
+.kind-rail {
+  display: flex; gap: 12px; overflow-x: auto; margin: 12px -18px 0; padding: 2px 18px 8px;
+  scrollbar-width: none; overscroll-behavior-x: contain; scroll-snap-type: x proximity;
+  scroll-padding-inline: 18px; /* 멈춤 위치도 여백을 지킨다 — 없으면 첫 카드가 화면 끝에 붙는다 */
+}
+.kind-rail::-webkit-scrollbar { display: none; }
+.kind-card {
+  position: relative; flex: none; width: 148px; height: 196px; padding: 16px; overflow: hidden;
+  border: 0; border-radius: 26px; background: var(--kc); color: #1a1610; text-align: left;
+  font-family: var(--font-b); cursor: pointer; scroll-snap-align: start; transition: transform 0.15s ease;
+}
+.kind-card:active { transform: scale(0.97); }
+.kind-card strong { display: block; position: relative; z-index: 1; font-size: 17px; font-weight: 700; }
+.kind-card span { display: block; position: relative; z-index: 1; margin-top: 2px; font-size: 12.5px; font-weight: 650; color: rgba(30, 20, 10, 0.62); }
+.kind-card small { position: absolute; z-index: 1; left: 16px; bottom: 14px; font-size: 12.5px; font-weight: 700; color: rgba(30, 20, 10, 0.72); }
+.kind-card img {
+  position: absolute; right: -10px; bottom: -14px; height: 150px; width: auto; max-width: none;
+  transform: rotate(8deg); filter: drop-shadow(0 14px 12px rgba(60, 35, 10, 0.22));
+}
+
+/* ── 찾기 "나의 취향" 판 — 시음 사진을 판 위쪽 가득 */
+[data-ui="light"] .disc-taste { overflow: hidden; }
+[data-ui="light"] .disc-taste-photo {
+  display: block; width: calc(100% + 40px); max-width: none; height: 150px; margin: -22px -20px 16px;
+  object-fit: cover; object-position: 70% 60%;
+}
+
+/* ── 글자 — 예전 디자인의 넓은 자간(0.04~0.3em)과 영문 대문자 표기가 40여 곳에 흩어져 있다.
+ * 하나씩 고치지 않고 밝은 디자인에서는 한꺼번에 기본으로 돌린다. 제목만 아래에서 다시 조인다 */
+[data-ui="light"] body * { letter-spacing: -0.01em !important; text-transform: none !important; }
+[data-ui="light"] :is(.hdr-logo, .card-title, .drawer h3, .hero h1, .hero h2, .hero-name, .kind-head) { letter-spacing: -0.03em !important; }
+/* 낙관(酒)은 도장이라 그대로 */
+[data-ui="light"] .hdr-seal { letter-spacing: 0 !important; }

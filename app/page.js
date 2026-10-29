@@ -9,6 +9,7 @@ import { BrandMark } from "@/components/Brand";
 import useActiveTimers from "@/components/useActiveTimer";
 import TimerBubble from "@/components/TimerBubble";
 import FirstHint from "@/components/FirstHint";
+import KindRail from "@/components/KindRail";
 import OfflineBanner from "@/components/OfflineBanner";
 import CellarScreen from "@/components/CellarScreen";
 import WineListScreen from "@/components/WineListScreen";
@@ -33,6 +34,8 @@ function offlineAware(err, fallback) {
 
 export default function Home() {
   const [screen, setScreen] = useState("capture"); // capture | loading | result | cellar | winelist
+  // 홈 종류 카드로 찾기에 들어갈 때의 검색어 — 탭으로 들어가면 비운다
+  const [discoverQ, setDiscoverQ] = useState("");
   const [wineList, setWineList] = useState(null);
   const [thumb, setThumb] = useState(null);
   const [result, setResult] = useState(null);
@@ -305,6 +308,13 @@ export default function Home() {
     setScreen(next);
   }
 
+  // 종류 카드 — 그 종류로 찾아 둔 찾기 화면을 연다
+  function openKind(term) {
+    setDiscoverQ(term);
+    go("discover");
+    window.scrollTo({ top: 0 });
+  }
+
   function rescan() {
     setResult(null);
     setThumb(null);
@@ -356,15 +366,18 @@ export default function Home() {
       {screen === "capture" && (
         <>
           <CaptureScreen onCapture={analyze} onBarcode={scanBarcode} onWineList={scanWineList} />
+          <KindRail onPick={openKind} />
           {/* 처음 온 사람에게만 한 번 — 닫으면 다시 나오지 않는다 */}
-          <FirstHint onOpenDiscover={() => go("discover")} />
+          <FirstHint onOpenDiscover={() => openKind("")} />
         </>
       )}
       {screen === "loading" && <LoadingScreen thumb={thumb} />}
       {screen === "winelist" && (
         <WineListScreen data={wineList} onOpen={openListItem} onRescan={rescan} />
       )}
-      {screen === "discover" && <DiscoverScreen onOpen={openListItem} onToast={showToast} />}
+      {screen === "discover" && (
+        <DiscoverScreen key={discoverQ} initialQuery={discoverQ} onOpen={openListItem} onToast={showToast} />
+      )}
       {screen === "cellar" && (
         <CellarScreen
           data={cellar}
@@ -425,7 +438,7 @@ export default function Home() {
         </button>
         <button
           className={`tab ${screen === "discover" ? "on" : ""}`}
-          onClick={() => go("discover")}
+          onClick={() => openKind("")}
         >
           <Icon name="search" />
           <span>{t("찾기")}</span>

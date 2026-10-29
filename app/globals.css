@@ -766,6 +766,63 @@ body:has(.cap-live) .timer-bubble {
 .tip-line { margin-top: 14px; font-size: 12.5px; color: var(--gold); font-family: var(--font-s); line-height: 1.7; }
 .avoid-line { margin-top: 6px; font-size: 12px; color: var(--bad); opacity: 0.85; line-height: 1.7; }
 
+/* 섞어 마시기 — 제조법 · 비율 · 잔 연출 (components/MixGuide.js) */
+.mix-lead { font-size: 13px; line-height: 1.65; color: var(--ink-dim); margin: -4px 0 12px; }
+.mix-recipes { margin-bottom: 8px; }
+/* 추천 밖의 레시피를 펼치는 칩 — 고를 것이 아니라 여는 것이라 테두리를 점선으로 */
+.mix-more { border-style: dashed; color: var(--gold); }
+.mix-why { font-size: 12.5px; color: var(--gold); font-family: var(--font-s); line-height: 1.6; margin-bottom: 14px; }
+.mix-body { display: grid; grid-template-columns: 128px 1fr; gap: 18px; align-items: center; }
+.mix-stage { width: 128px; height: 160px; }
+.mix-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.mix-row > span { flex: none; width: 42px; font-size: 11px; color: var(--ink-dim); font-family: var(--font-s); }
+.mix-amounts {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 4px;
+  background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--radius-sm); overflow: hidden;
+}
+.mix-amounts > div { background: var(--bg-2); padding: 10px 4px 9px; text-align: center; }
+.mix-amounts b { display: block; font-family: var(--font-d); font-size: 22px; font-weight: 500; color: var(--gold-hi); letter-spacing: -0.01em; }
+.mix-amounts small { font-size: 11px; color: var(--gold); margin-left: 1px; }
+.mix-amounts em { display: block; font-style: normal; font-size: 10.5px; color: var(--ink-dim); margin-top: 2px; }
+.mix-steps { list-style: none; counter-reset: mx; margin: 16px 0 0; padding: 0; display: grid; gap: 4px; }
+.mix-steps li {
+  counter-increment: mx; position: relative; padding: 8px 10px 8px 36px;
+  font-size: 13px; line-height: 1.55; color: var(--ink-dim); border-radius: var(--radius-sm);
+  transition: background 0.3s, color 0.3s;
+}
+.mix-steps li::before {
+  content: counter(mx); position: absolute; left: 10px; top: 9px; width: 17px; height: 17px;
+  border: 1px solid var(--line); border-radius: 50%; font-family: var(--font-d); font-size: 10px;
+  line-height: 15px; text-align: center;
+}
+.mix-steps li.now { background: var(--gold-soft); color: var(--ink); }
+.mix-steps li.now::before { border-color: var(--gold); color: var(--gold-hi); }
+.mix-steps li.done { color: var(--ink); }
+.mix-steps li.done::before { content: "✓"; border-color: var(--gold); color: var(--gold); }
+/* 잔 연출 — 탄산은 올라가고, 바스푼은 젓거나 들어 올리고, 가니시는 톡 얹힌다 */
+.mx-bubble { opacity: 0; animation: mxBubble 2.4s ease-in infinite; }
+@keyframes mxBubble {
+  0% { opacity: 0; transform: translateY(0); }
+  15% { opacity: 0.8; }
+  100% { opacity: 0; transform: translateY(-58px); }
+}
+.mx-pour { transform-box: fill-box; transform-origin: top; animation: mxPour 0.45s ease-out; }
+@keyframes mxPour { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.mx-spoon.stir { animation: mxStir 0.8s ease-in-out infinite alternate; }
+@keyframes mxStir { from { transform: translateX(-5px); } to { transform: translateX(5px); } }
+.mx-spoon.lift { animation: mxLift 1.4s ease-in-out infinite; }
+@keyframes mxLift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+.mx-garnish { transform-box: fill-box; transform-origin: center; animation: mxPop 0.45s cubic-bezier(0.3, 1.5, 0.6, 1); }
+@keyframes mxPop { from { transform: scale(0); } to { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .mx-bubble, .mx-pour, .mx-spoon, .mx-garnish { animation: none !important; }
+  .mx-bubble { opacity: 0.5; }
+}
+@media (max-width: 480px) {
+  .mix-body { grid-template-columns: 1fr; gap: 12px; }
+  .mix-stage { margin: 0 auto; }
+}
+
 /* 평점 / 유사주 / 팁 */
 /* 평점 — AI가 "약 90~97점 (빈티지별 상이)" 처럼 긴 문자열을 주는 경우가 있어
    글자 수에 따라 크기가 줄고 단어 단위로 줄바꿈되도록 한다 */

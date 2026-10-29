@@ -6,7 +6,9 @@ import TasteQuiz from "./TasteQuiz";
 import { PRICE_BANDS } from "@/lib/curation";
 import Flag from "./Flag";
 import { t, uiLocale } from "@/lib/i18n";
-import { DEFAULT_CATEGORY } from "@/lib/appProfile";
+import { APP, UI, DEFAULT_CATEGORY } from "@/lib/appProfile";
+
+const TASTE_PHOTO = UI === "light" ? APP.theme.light?.tastePhoto : null;
 import { catOf } from "@/lib/cats";
 
 // 발견 — 사진을 찍을 상황이 아닐 때의 진입로.
@@ -86,8 +88,9 @@ function WineRow({ item, onOpen }) {
   );
 }
 
-export default function DiscoverScreen({ onOpen, onToast }) {
-  const [q, setQ] = useState("");
+// initialQuery — 홈의 종류 카드(KindRail)를 누르고 들어오면 그 종류("스파클링" 등)로 바로 찾아 둔다
+export default function DiscoverScreen({ onOpen, onToast, initialQuery = "" }) {
+  const [q, setQ] = useState(initialQuery);
   const [results, setResults] = useState(null);
   const [searching, setSearching] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -207,7 +210,9 @@ export default function DiscoverScreen({ onOpen, onToast }) {
           }}
         />
       ) : (
-        <div className="card">
+        <div className="card disc-taste">
+          {/* 밝은 디자인(와인 · 사케)에만 있는 시음 사진 — 판 위쪽을 가득 채운다 */}
+          {TASTE_PHOTO && <img className="disc-taste-photo" src={TASTE_PHOTO} alt="" loading="lazy" />}
           <div className="card-title">{t("나의 취향")}</div>
           {answered ? (
             <>

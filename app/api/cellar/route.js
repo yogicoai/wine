@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getDb } from "@/lib/mongodb";
 import { toCellarDoc, buildTasteProfile } from "@/lib/cellar";
 import { ownScope, stamp } from "@/lib/appProfile";
+import { catalogImagesByName } from "@/lib/catalog";
 
 export const runtime = "nodejs";
 
@@ -22,8 +23,10 @@ export async function GET() {
     .limit(200)
     .toArray();
 
+  // 사진 없이 담긴 술은 지금 카탈로그 사진으로 채워 보여 준다(기록과 같은 이유 — lib/catalog.js)
+  const images = await catalogImagesByName(items.filter((d) => !d.thumb).map((d) => d.name));
   return NextResponse.json({
-    items: items.map(serialize),
+    items: items.map((d) => serialize({ ...d, thumb: d.thumb || images.get(d.name) || null })),
     taste: buildTasteProfile(items),
   });
 }

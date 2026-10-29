@@ -1,4 +1,4 @@
-import { APP } from "@/lib/appProfile";
+import { APP, UI } from "@/lib/appProfile";
 
 // PWA 매니페스트 — 정적 public/manifest.json 대신 앱 프로필에서 생성한다.
 // 같은 소스로 네 앱을 배포하므로 이름·언어가 앱마다 달라야 한다.
@@ -14,8 +14,9 @@ export default function manifest() {
     start_url: "/",
     display: "standalone",
     orientation: "portrait",
-    background_color: "#12100c",
-    theme_color: "#12100c",
+    // 밝은 디자인(와인 · 사케)은 흰 바탕 — 앱을 열 때 잠깐 보이는 판도 흰색이어야 깜빡임이 없다
+    background_color: UI === "light" ? "#ffffff" : "#12100c",
+    theme_color: UI === "light" ? "#ffffff" : "#12100c",
     lang: APP.locale,
     // 홈 화면 아이콘도 앱마다 다르다 — 마크를 그 앱 배경색 판에 올린 것
     icons: [

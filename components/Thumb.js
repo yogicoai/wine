@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import CatIcon from "./CatIcon";
+import { kindBottle } from "@/lib/appProfile";
 
 // 목록에 쓰는 작은 사진.
 //
@@ -14,6 +15,7 @@ import CatIcon from "./CatIcon";
  * @param {string}  fallback  "emblem"(기본) 또는 "none".
  *   목록의 한 칸을 차지하는 자리에는 엠블럼을 채워 줄이 어긋나지 않게 하고,
  *   특가 알림처럼 사진이 곁들이일 뿐인 자리에서는 아무것도 그리지 않는다.
+ * @param {object}  kind  {type, name} — 밝은 디자인(와인 · 사케)은 엠블럼 대신 그 종류의 대표 병을 그린다
  */
 export default function Thumb({
   src,
@@ -21,11 +23,14 @@ export default function Thumb({
   size = 26,
   className = "hist-thumb",
   fallback = "emblem",
+  kind = null,
 }) {
   const [dead, setDead] = useState(false);
 
   if (!src || dead) {
     if (fallback === "none") return null;
+    const bottle = kindBottle(kind);
+    if (bottle) return <img className={`${className} is-generic`} src={bottle} alt="" loading="lazy" />;
     return (
       <div className={className}>
         <CatIcon category={category} size={size} />

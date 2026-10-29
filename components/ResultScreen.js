@@ -12,11 +12,12 @@ import Flag from "./Flag";
 import useActiveTimers from "./useActiveTimer";
 import { startTimer, clearTimer, progressOf, formatRemain } from "@/lib/timer";
 import { t, fmtWon } from "@/lib/i18n";
-import { LAYOUT } from "@/lib/appProfile";
+import { LAYOUT, kindBottle } from "@/lib/appProfile";
 import Radar from "./Radar";
 import CatIcon from "./CatIcon";
 import CellarActions from "./CellarActions";
 import TimerVisual from "./TimerVisual";
+import MixGuide from "./MixGuide";
 import ScrollTop from "./ScrollTop";
 import ShareCard from "./ShareCard";
 import VintageCompare from "./VintageCompare";
@@ -704,6 +705,21 @@ function HeroVisual({ result, thumb, shop }) {
   }
 
   if (!shown) {
+    // 밝은 디자인(와인 · 사케)은 엠블럼 대신 그 종류의 대표 병을 — 실제 상품 사진이 아니라고 밝혀 둔다
+    const bottle = kindBottle(result);
+    if (bottle) {
+      return (
+        <>
+          <div
+            className="hero-visual is-web is-generic"
+            style={result.liquidColor ? { "--tint": result.liquidColor } : undefined}
+          >
+            <img className="hero-shot" src={bottle} alt="" />
+          </div>
+          <div className="hero-credit">{t("종류 대표 이미지 · 실제 상품 사진이 아닙니다")}</div>
+        </>
+      );
+    }
     // 사진이 없을 때의 자리 — 같은 주종이면 엠블럼이 전부 같아서 목록이 밋밋해진다.
     // 술마다 아는 액체 색을 입혀 최소한 서로 달라 보이게 한다.
     return (
@@ -718,7 +734,13 @@ function HeroVisual({ result, thumb, shop }) {
 
   return (
     <>
-      <div className={`hero-visual ${usingProduct ? "is-case" : ""}`}>
+      {/* 술 색은 밝은 디자인(app/light.css)이 사진 뒤에 옅게 번지게 쓴다 */}
+      {/* is-web — 판매처 · 카탈로그 사진(웹 주소, 대개 흰 바탕). 이름으로 찾아 들어오면 상품 사진이 판매처 사진이 아닌
+          기본 사진 자리로 온다. 내가 찍은 사진(data: · blob:)은 실내 배경이 있어 판에 섞지 않는다 */}
+      <div
+        className={`hero-visual ${usingProduct ? "is-case" : ""} ${/^https?:|^\//.test(shown) ? "is-web" : ""}`}
+        style={result.liquidColor ? { "--tint": result.liquidColor } : undefined}
+      >
         <img
           className="hero-shot"
           src={shown}
@@ -1016,6 +1038,8 @@ export default function ResultScreen({
     // 잔·도구 — 술 정보에서 규칙으로 고르므로 분석 비용이 들지 않는다
     glass: <GlasswareCard result={r} />,
     gear: <GearCard result={r} />,
+    // 섞어 마시기 — 위스키만. 제조법을 규칙으로 고르므로(lib/mixes.js) 분석 비용이 없다
+    mix: <MixGuide result={r} />,
     prep: <ServingTimer result={r} />,
     // 유사주 — 카탈로그에 있는 술만 눌러서 볼 수 있다 (새 분석 비용 없음)
     similar: (

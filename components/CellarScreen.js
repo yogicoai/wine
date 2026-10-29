@@ -277,7 +277,7 @@ export default function CellarScreen({ data, onOpen, onReload, onToast }) {
         return (
           <div className="cellar-item" key={it._id}>
             <button className="cellar-main" onClick={() => onOpen?.(it._id)}>
-              <Thumb src={it.thumb} category={it.category} />
+              <Thumb src={it.thumb} category={it.category} kind={{ name: it.name, type: it.type }} />
               <div className="cellar-info">
                 <div className="hist-name">{it.name}</div>
                 <div className="hist-meta">

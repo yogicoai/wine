@@ -1,6 +1,10 @@
 "use client";
 import Image from "next/image";
-import { APP } from "@/lib/appProfile";
+import { APP, UI } from "@/lib/appProfile";
+
+// 밝은 디자인(와인 · 사케)은 흰 바탕용 마크를 쓴다 — 렌즈 테 안에 그 술이 반쯤(위스키 렌즈 마크와 한 가족, 힉스필드 2026-10-28).
+// 어두운 원본 마크는 검정 바탕이 칠해져 있어 흰 바탕에서는 검은 네모로 보였다.
+const LIGHT_MARK = UI === "light" ? APP.theme.light?.mark : null;
 
 // 브랜드 로고 — 앱마다 다르다.
 //
@@ -13,7 +17,7 @@ export function BrandMark({ size = 38, className = "" }) {
   return (
     <Image
       className={`brand-mark ${className}`}
-      src={APP.theme.brandMark || "/icons/img_a.png"}
+      src={LIGHT_MARK || APP.theme.brandMark || "/icons/img_a.png"}
       alt=""
       width={size}
       height={size}
@@ -41,7 +45,7 @@ export function BrandEmblem({ size = 260, className = "" }) {
   return (
     <Image
       className={`brand-emblem ${className}`}
-      src={APP.theme.brandEmblem || "/icons/img_c.png"}
+      src={LIGHT_MARK || APP.theme.brandEmblem || "/icons/img_c.png"}
       alt=""
       width={size}
       height={size}

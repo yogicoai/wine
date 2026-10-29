@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getDb } from "@/lib/mongodb";
 import { ownScope, stamp } from "@/lib/appProfile";
+import { catalogImagesByName } from "@/lib/catalog";
 
 export const runtime = "nodejs";
 
@@ -20,8 +21,14 @@ export async function GET() {
     .sort({ createdAt: -1 })
     .limit(MAX_SESSIONS)
     .toArray();
+  // 사진 없이 저장된 기록은 지금 카탈로그 사진으로 채워 보여 준다 (lib/catalog.js catalogImagesByName)
+  const images = await catalogImagesByName(sessions.filter((s) => !s.thumb).map((s) => s.result?.name));
   return NextResponse.json({
-    sessions: sessions.map((s) => ({ ...s, _id: s._id.toString() })),
+    sessions: sessions.map((s) => ({
+      ...s,
+      _id: s._id.toString(),
+      thumb: s.thumb || images.get(s.result?.name) || null,
+    })),
   });
 }
 

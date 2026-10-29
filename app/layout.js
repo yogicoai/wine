@@ -8,8 +8,10 @@ import {
 } from "next/font/google";
 import { cookies } from "next/headers";
 import { FONT_SCALE } from "@/lib/features";
-import { APP, themeCss } from "@/lib/appProfile";
+import { APP, UI, themeCss, lightCss } from "@/lib/appProfile";
 import "./globals.css";
+// 밝은 디자인(와인 · 사케) — 모든 규칙이 html[data-ui="light"] 아래에 있어 다른 앱에는 닿지 않는다
+import "./light.css";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -79,7 +81,7 @@ export const metadata = {
   title: TITLE,
   description: DESC,
   applicationName: APP.name,
-  appleWebApp: { capable: true, title: APP.name, statusBarStyle: "black-translucent" },
+  appleWebApp: { capable: true, title: APP.name, statusBarStyle: UI === "light" ? "default" : "black-translucent" },
   openGraph: {
     title: TITLE,
     description: DESC,
@@ -99,7 +101,7 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover", // 아이폰 노치 영역까지 배경이 채워지도록
-  themeColor: "#12100c", // 모바일 브라우저 상단바 색
+  themeColor: UI === "light" ? "#ffffff" : "#12100c", // 모바일 브라우저 상단바 색
 };
 
 // 저장해 둔 글자 크기를 첫 그림 전에 적용한다.
@@ -123,12 +125,12 @@ export default async function RootLayout({ children }) {
   const uiLocale = picked === "ko" || picked === "en" || picked === "ja" ? picked : APP.locale;
 
   return (
-    <html lang={uiLocale}>
+    <html lang={uiLocale} data-ui={UI}>
       <head>
         {/* 앱별 색·서체 — globals.css 의 기본값(와인 앱)을 이 앱의 것으로 덮는다 */}
         <style
           dangerouslySetInnerHTML={{
-            __html: `${themeCss()}:root{--font-d:var(${DISPLAY_VAR}),var(--font-serif-kr),serif;--font-b:${bodyFontFor(uiLocale)};}`,
+            __html: `${themeCss()}:root{--font-d:var(${DISPLAY_VAR}),var(--font-serif-kr),serif;--font-b:${bodyFontFor(uiLocale)};}${lightCss()}`,
           }}
         />
         {/* Pretendard — 한글 UI 가독성이 좋고, 쓰이는 글자만 내려받는 방식이라 가볍다 */}
@@ -147,7 +149,7 @@ export default async function RootLayout({ children }) {
         className={`${displayFont} ${serifKr.variable} ${sansKr.variable} ${sansJp.variable} ${inter.variable}`}
       >
         {/* 전통 문양 층 — 앱이 문양을 정했을 때만 보인다 (없으면 투명) */}
-        {APP.theme.pattern && <div className="pattern-layer" aria-hidden="true" />}
+        {APP.theme.pattern && UI !== "light" && <div className="pattern-layer" aria-hidden="true" />}
         {children}
       </body>
     </html>
