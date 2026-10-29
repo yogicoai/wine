@@ -12,10 +12,15 @@ import { MongoClient } from "mongodb";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 const APPLY = process.argv.includes("--apply");
-const OUT = "data/backup/register-wine-2026-10-29-fix.json";
-const keys = JSON.parse(readFileSync("data/backup/register-wine-2026-10-29.json", "utf8")).keys;
+// --keys <등록 백업> --out <손질 백업> — 같은 날 두 번째 등록분(사이트맵)에도 쓴다
+const argOf = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
+const OUT = argOf("--out", "data/backup/register-wine-2026-10-29-fix.json");
+const keys = JSON.parse(readFileSync(argOf("--keys", "data/backup/register-wine-2026-10-29.json"), "utf8")).keys;
 
-const KEEP_AMP = [/^장 폴 & 브누아 드루앵/, /^엔리크&엔리크/, /^J&J /, /^엘렌&크리스토프/, /^엑스엑스엘\(XXL\)/, /^카판넬레 50 & 50/, /^에릭슨 & 카라딘/, /^마티니 & 로시/, /^르그라 & 아스/, /^꼴렛 실렉스 & 크레/];
+const KEEP_AMP = [/^장 폴 & 브누아 드루앵/, /^엔리크&엔리크/, /^J&J /, /^엘렌&크리스토프/, /^엑스엑스엘\(XXL\)/, /^카판넬레 50 & 50/, /^에릭슨 & 카라딘/, /^마티니 & 로시/, /^르그라 & 아스/, /^꼴렛 실렉스 & 크레/,
+  // 두 번째 등록분(사이트맵)에서 눈으로 가린 생산자 · 와인 이름
+  /^도멘 실베인 & 알랑 노르망/, /^르플레브 & 어쏘시에/, /^파이크, 힐스 & 밸리/, /^마틸드 & 플로리앙 베크/, /비스트로따쥬 B\.14\+1/, /^토페 P\+R/,
+  /^베린저 메인 & 바인/, /^캐논볼 엔젤스 & 카우보이스/, /^몽그라스 안투 까베르네 소비뇽 & 시라/, /^레지 & 실뱅/, /^장 페리에 & 피스/, /^에르 F&R/];
 const MULTI = /\s*(\d+)\s*(병|입|캔)$/;
 const bandOf = (p) => (p <= 20000 ? 1 : p <= 50000 ? 2 : p <= 100000 ? 3 : p <= 300000 ? 4 : 5);
 const ml = (v) => { const m = /([\d.]+)\s*(ml|l)\b/i.exec(String(v || "")); if (!m) return null; return m[2].toLowerCase() === "l" ? Number(m[1]) * 1000 : Number(m[1]); };
@@ -35,7 +40,8 @@ const col = c.db(process.env.MONGODB_DB || "winelens").collection("catalog");
 const docs = await col.find({ key: { $in: keys } }).toArray();
 const allKeys = new Set((await col.find({}, { projection: { key: 1 } }).toArray()).map((d) => d.key));
 
-const drop = [], rename = [], retype = [];
+const drop = [], rename = [], retype = [], toTrad = [];
+const KR = /막걸리|탁주|약주|청주|모주|동동주|생막|누룩|이화주|과하주/;
 for (const d of docs) {
   const n = d.name;
   const bundle = (/&|\+/.test(n) && !KEEP_AMP.some((re) => re.test(n))) || /\d+\s*종(?![가-힣])/.test(n) || /올리브\s*오일/.test(n);
@@ -54,17 +60,19 @@ for (const d of docs) {
     allKeys.add(key);
     continue;
   }
+  if (KR.test(`${n} ${d.result?.type || ""}`) && !/와인/.test(n)) { toTrad.push(d); continue; }
   const t2 = fixType(d.result?.type);
   if (t2 !== d.result?.type) retype.push({ d, before: d.result?.type, after: t2 });
 }
-console.log(`지울 것 ${drop.length} · 낱병 이름으로 ${rename.length} · 종류 표기 ${retype.length}`);
+console.log(`지울 것 ${drop.length} · 낱병 이름으로 ${rename.length} · 종류 표기 ${retype.length} · 전통주로 ${toTrad.length}`);
+if (toTrad.length) console.log("전통주로:", toTrad.map((d) => d.name).join(" | "));
 console.log("지움:", drop.map((d) => d.name).join(" | "));
 console.log("바꿈:", rename.map((x) => `${x.d.name} → ${x.base} (병당 ${x.per}원 → 가격대 ${x.band})`).join(" | "));
 const tc = {}; for (const x of retype) { const k = `${x.before.split(" · ")[0]} → ${x.after.split(" · ").slice(0, 2).join(" · ")}`; tc[k] = (tc[k] || 0) + 1; }
 console.log("종류:", Object.entries(tc).map(([k, v]) => `${v} ${k}`).join(" | "));
 if (!APPLY) { console.log("보기만 했습니다. 적으려면 --apply"); await c.close(); process.exit(0); }
 if (existsSync(OUT)) throw new Error(`${OUT} 가 이미 있다 — 두 번 적지 않게 멈춤`);
-writeFileSync(OUT, JSON.stringify({ at: new Date(), note: "10-29 와인 등록분 손질 — 지운 문서는 통째로, 바꾼 것은 바뀌기 전 값", dropped: drop, renamed: rename.map((x) => ({ key: x.d.key, name: x.d.name, priceBand: x.d.priceBand ?? null, to: { key: x.key, name: x.base, priceBand: x.band } })), retyped: retype.map((x) => ({ key: x.d.key, before: x.before, after: x.after })) }, null, 1));
+writeFileSync(OUT, JSON.stringify({ at: new Date(), note: "10-29 와인 등록분 손질 — 지운 문서는 통째로, 바꾼 것은 바뀌기 전 값", dropped: drop, renamed: rename.map((x) => ({ key: x.d.key, name: x.d.name, priceBand: x.d.priceBand ?? null, to: { key: x.key, name: x.base, priceBand: x.band } })), retyped: retype.map((x) => ({ key: x.d.key, before: x.before, after: x.after })), toTraditional: toTrad.map((d) => ({ key: d.key, name: d.name })) }, null, 1));
 await col.deleteMany({ _id: { $in: drop.map((d) => d._id) } });
 for (const x of rename) {
   await col.updateOne({ _id: x.d._id }, { $set: {
@@ -72,6 +80,7 @@ for (const x of rename) {
     ...(x.band ? { priceBand: x.band, "result.priceBand": x.band, "priceBandBasis.perBottle": x.per, "priceBandBasis.scaledPrice": x.scaled } : {}),
   }, ...(x.band ? {} : { $unset: { priceBand: "", "result.priceBand": "" } }) });
 }
+if (toTrad.length) await col.updateMany({ _id: { $in: toTrad.map((d) => d._id) } }, { $set: { category: "traditional", "result.category": "traditional", updatedAt: new Date() } });
 for (const x of retype) await col.updateOne({ _id: x.d._id }, { $set: { "result.type": x.after, updatedAt: new Date() } });
 console.log(`적었습니다 — 지움 ${drop.length} · 바꿈 ${rename.length} · 종류 ${retype.length} (백업 ${OUT})`);
 await c.close();

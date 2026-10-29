@@ -28,6 +28,12 @@ const arg = (k, d = null) => { const i = process.argv.indexOf(k); return i > 0 ?
 const CAT = arg("--cat"), MIN = Number(arg("--min", 10)), APPLY = process.argv.includes("--apply");
 const PICK = arg("--names") ? new Set(JSON.parse(readFileSync(arg("--names"), "utf8"))) : null, TAG = arg("--tag");
 const SINCE = arg("--since") ? new Date(arg("--since")) : null, DETAIL = process.argv.includes("--detail"), SETS = process.argv.includes("--sets");
+// --in-sitemap: 데일리샷 사이트맵에 지금도 있는 상품만(scripts/dailyshot-sitemap.mjs 가 남긴 번호 목록) — 내려간 상품은 넣지 않는다
+const IN_SITEMAP = process.argv.includes("--in-sitemap")
+  ? new Set(JSON.parse(readFileSync("data/research/_work/dailyshot-sitemap-ids.json", "utf8")).ids)
+  : null;
+// --skip <파일>: 넣지 않을 이름(JSON 배열, 다듬은 이름) — & 든 이름 중 눈으로 가린 "다른 술 두 병 세트"
+const SKIP = arg("--skip") ? new Set(JSON.parse(readFileSync(arg("--skip"), "utf8"))) : null;
 // 세트 상품 이름에서 포장 말을 뗀 낱병 이름 — "닷사이 23 오동나무 케이스 에디션" → "닷사이 23"
 const setCore = (s) => String(s || "")
   .replace(/\[[^\]]*\]|\([^)]*\)/g, " ")
@@ -130,7 +136,8 @@ const oursEn = all.filter((d) => SCOPE.includes(d.category)).flatMap((d) => [d.i
 const have = (k, name, en) => ours.some((o) => o === k || (o.length >= 4 && k.length >= 4 && (o.includes(k) || k.includes(o)))) || oursTok.some((t) => sameByTokens(toks(name), t))
   || (en ? oursEn.some((t) => sameByTokens(enToks(en), t)) : false);
 
-const idx = await db.collection("dailyshot").find({ category: DS_CAT, ...(SINCE ? { seenAt: { $gte: SINCE } } : {}) }, { projection: { _id: 0, history: 0 } }).toArray();
+const idx = (await db.collection("dailyshot").find({ category: DS_CAT, ...(SINCE ? { seenAt: { $gte: SINCE } } : {}) }, { projection: { _id: 0, history: 0 } }).toArray())
+  .filter((x) => !IN_SITEMAP || IN_SITEMAP.has(x.id));
 const groups = new Map();
 for (const x of idx) {
   const isSet = SETLIKE.test(x.name || "");
@@ -138,7 +145,7 @@ for (const x of idx) {
   // 두 술을 묶은 세트("닷사이 39 & 45 잔세트")는 한 종이 아니다
   if (isSet && /\s[&+]\s|\d\s*[&+]\s*\d/.test(x.name || "")) continue;
   // 같은 술 여러 병 · 캔 묶음("…6병", "…24캔", "3종 6캔") — 값이 묶음 값이다. 낱병 상품이 따로 있으면 그쪽으로 잡힌다(10-29 와인 16건)
-  if (/\d+\s*(병|입|캔|종)(?![가-힣])/.test(cleanName(x.name))) continue;
+  if (/\d+\s*(병|입|캔|종|팩)(?![가-힣])/.test(cleanName(x.name))) continue;
   const base = isSet ? setCore(x.name) : x.name;
   const k = norm(base); if (!k || k.length < 2) continue;
   const g = groups.get(k) || { k, items: [], reviews: 0, have: false };
@@ -181,6 +188,7 @@ for (const g of missing) {
   const rep0 = pickRep(g);
   const name = cleanName(rep0.isSet ? rep0.coreName : rep0.name);
   if (!name) { skipped.noName++; continue; }
+  if (SKIP?.has(name)) { skipped.listed = (skipped.listed || 0) + 1; continue; }
   const key = catalogKey(name, null);
   if (keys.has(key)) { skipped.dupKey++; continue; }
   keys.add(key);

@@ -25,6 +25,13 @@ export default function SakenowaCard({ info }) {
           <span>{t("사케 애호가 평가 기준")}</span>
         </div>
       )}
+      {/* 전국 100위 밖이어도 제 현에서 10위 안이면 그것을 말한다(さけのわ 현별 순위, 2026-10-29) */}
+      {!info.rank && info.areaRank && info.area && (
+        <div className="sake-rank">
+          <b>{t("{area} 인기 {n}위", { area: info.area, n: info.areaRank })}</b>
+          <span>{t("사케 애호가 평가 기준")}</span>
+        </div>
+      )}
 
       <div className="sake-flavor">
         {FLAVOR_AXES.map((a) => {
