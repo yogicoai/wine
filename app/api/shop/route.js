@@ -103,6 +103,8 @@ export async function GET(request) {
       // 채워 둔 값은 반나절 동안 다시 쓰므로 두 번째 사람부터는 기다림이 없다.
       const live = await freshLow(ds);
       const low = live?.low || ds.low || null;
+      // 보통 가격 — 이 술을 파는 매장 값의 가운데. 화면이 크게 쓴다(2026-10-29, 가장 싼 한 곳은 튀는 값일 수 있다)
+      const typical = live?.mid || ds.mid || null;
       return NextResponse.json({
         items: [
           {
@@ -110,10 +112,15 @@ export async function GET(request) {
             link: ds.url,
             image: ds.image,
             mall: "데일리샷",
-            price: low,
+            price: typical || low,
           },
         ],
+        // 기준 최저가 — 지나치게 싼 값 · 품절을 뺀 가장 싼 곳. 술창고 가치 · 특가 알림 · 가격 이력이 같은 값을 쓴다
         reference: low,
+        typical,
+        typicalBand: live?.band ?? ds.midBand ?? null,
+        typicalBandCount: live?.bandCount ?? ds.midBandCount ?? null,
+        outliers: live?.outliers ?? ds.lowOutliers ?? 0,
         // 검색 건수가 아니라 "이 술을 파는 곳"의 수다. 화면이 그렇게 밝힌다.
         sampled: live?.sellers ?? ds.sellers,
         // 이 값을 파는 매장. 상품 페이지를 열면 다른 값이 떠 있는 것이 보통이라
@@ -229,9 +236,13 @@ const LOW_TTL = 12 * 60 * 60 * 1000;
  */
 async function freshLow(ds) {
   if (!ds?.itemId) return null;
-  const fresh = ds.lowAt && Date.now() - new Date(ds.lowAt).getTime() < LOW_TTL;
+  // 가운데 값(mid)이 없는 것은 10-29 전에 담은 값이다 — 한 곳 최저가뿐이라 반나절이 안 됐어도 다시 묻는다
+  const fresh = ds.lowAt && ds.mid != null && Date.now() - new Date(ds.lowAt).getTime() < LOW_TTL;
   if (fresh)
-    return { low: ds.low, sellers: ds.sellers, seller: ds.lowSeller, region: ds.lowRegion };
+    return {
+      low: ds.low, sellers: ds.sellers, seller: ds.lowSeller, region: ds.lowRegion,
+      mid: ds.mid, band: ds.midBand ?? null, bandCount: ds.midBandCount ?? null, outliers: ds.lowOutliers ?? 0,
+    };
 
   const live = await livePrice(ds.itemId);
   if (!live) return null;
@@ -245,6 +256,7 @@ async function freshLow(ds) {
           low: live.low, sellers: live.sellers, lowAt: new Date(),
           lowSeller: live.seller || null, lowRegion: live.region || null,
           lowSoldOut: !!live.soldOut,
+          mid: live.mid ?? null, midBand: live.band ?? null, midBandCount: live.bandCount ?? null, lowOutliers: live.outliers ?? 0,
         },
         $push: { history: { $each: [{ at: new Date(), low: live.low }], $slice: -60 } },
       }

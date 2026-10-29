@@ -50,6 +50,11 @@ function useShopItems(name, keyword) {
               items: d.items,
               noApi: false,
               reference: d.reference || null,
+              // 보통 가격(매장 값의 가운데) · 가장 많이 몰린 만원대 · 최저가에서 뺀 튀는 값 수(2026-10-29)
+              typical: d.typical || null,
+              typicalBand: d.typicalBand ?? null,
+              typicalBandCount: d.typicalBandCount ?? null,
+              outliers: d.outliers || 0,
               sampled: d.sampled || d.items.length,
               // 값이 어디서 왔는지 — 화면이 기준을 밝힐 수 있어야 한다
               source: d.source || null,
@@ -92,13 +97,18 @@ function useShopItems(name, keyword) {
   return { ...state, query: candidates[0] || "" };
 }
 
-// 구매 정보 — 네이버쇼핑 API(실제 제품 이미지·가격·구매 링크) + 검색 딥링크 폴백
+// "3만원대" — 가장 많이 몰린 만원대. 1만원 밑은 "1만원 미만"
+const bandWord = (b) => (b == null ? null : b <= 0 ? t("1만원 미만") : t("{b}만원대", { b }));
+
+// 구매 정보 — 데일리샷 매장 값(보통 가격 · 가장 싼 곳) + Wine-Searcher.
+// 네이버쇼핑 링크는 뺐다(2026-10-29) — 쇼핑 검색 주소가 "접속이 일시적으로 제한되었습니다" 화면으로 막힌다.
 function PurchaseCard({ shop }) {
   const state = shop;
   const query = shop.query;
   if (!query) return null;
-  const naverLink = `https://search.shopping.naver.com/search/all?query=${encodeURIComponent(query)}`;
   const wsLink = `https://www.wine-searcher.com/find/${encodeURIComponent(query)}`;
+  // 보통 가격과 다른, 지나치게 싼 값을 뺀 가장 싼 곳
+  const cheaper = state.typical && state.reference && state.reference < state.typical ? state.reference : null;
 
   return (
     <div className="card">
@@ -120,7 +130,32 @@ function PurchaseCard({ shop }) {
       {/* 기준 최저가 — 셀러 가치·가격 이력·특가 알림이 쓰는 것과 같은 값.
           아래 목록은 바로 살 수 있는 판매처를 앞세운 순서라 가격순이 아니므로,
           "얼마짜리 술인가"는 여기서 따로 알려 준다. */}
-      {!state.loading && state.reference && (
+      {/* 보통 가격 — 매장 값의 가운데(2026-10-29). 가장 싼 한 곳은 잘못 올린 값 · 떨이일 수 있어
+          (에셈베 로제: 157곳 중 135곳이 3만~4만원인데 한 곳이 15,000원) 크게 쓰지 않고 아래 줄에 작게 둔다 */}
+      {!state.loading && state.typical && (
+        <div className="shop-ref">
+          <div>
+            <b>{fmtWon(state.typical)}</b>
+            <span>{t("보통 가격")}</span>
+          </div>
+          <em>
+            {state.typicalBandCount && state.sampled > 1
+              ? t("전국 {n}곳 중 {k}곳이 {b}", { n: state.sampled, k: state.typicalBandCount, b: bandWord(state.typicalBand) })
+              : state.sampled > 1
+                ? t("전국 {n}곳 판매가의 가운데 값", { n: state.sampled })
+                : t("판매처 한 곳의 값입니다 · 매장 픽업가")}
+            {cheaper && (
+              <>
+                <br />
+                {state.lowRegion
+                  ? t("가장 싼 곳 {p} · {where} {seller}", { p: fmtWon(cheaper), where: state.lowRegion, seller: state.lowSeller || "" })
+                  : t("가장 싼 곳 {p}", { p: fmtWon(cheaper) })}
+              </>
+            )}
+          </em>
+        </div>
+      )}
+      {!state.loading && !state.typical && state.reference && (
         <div className="shop-ref">
           <div>
             <b>{fmtWon(state.reference)}</b>
@@ -161,7 +196,7 @@ function PurchaseCard({ shop }) {
               </div>
               {it.price && (
                 <div className="shop-price">
-                  {fmtWon(it.price)}<small>{t("판매가")}</small>
+                  {fmtWon(it.price)}<small>{state.typical ? t("보통 가격") : t("판매가")}</small>
                 </div>
               )}
             </a>
@@ -196,16 +231,7 @@ function PurchaseCard({ shop }) {
         </>
       )}
 
-      {/* 사진에 남아 있던 카탈로그 번호로 만든 정확한 상품 주소.
-          일반 주류는 온라인 판매가 막혀 있어 그 페이지가 결제가 아니라 정보 페이지다 —
-          공식 사진과 정확한 용량·도수가 있다. 전통주만 실제로 살 수 있다. */}
-      {!state.loading && state.productUrl && (
-        <a className="product-page" href={state.productUrl} target="_blank" rel="noreferrer">
-          {state.onlineSale
-            ? t("네이버쇼핑에서 이 제품 구매")
-            : t("네이버쇼핑에서 이 제품 정보 보기")}
-        </a>
-      )}
+      {/* 네이버쇼핑 카탈로그 상품 주소(productUrl)는 걸지 않는다 — 쇼핑 주소가 접속 제한 화면으로 막힌다(2026-10-29) */}
 
       <div className="shop-note">
         {/* 데일리샷은 이름·도수·용량을 맞춰 고른 한 건을 준다. 목록이 아니라
@@ -213,14 +239,16 @@ function PurchaseCard({ shop }) {
             가리킬 목록이 없다. 그 자리에는 그 값이 무엇인지를 적는다. */}
         {state.source === "dailyshot" && (
           <>
-            {state.verified
-              ? state.lowSeller
-                ? t(
-                    "전국 매장 중 가장 싼 {where} {seller}의 값입니다. 링크를 열면 가까운 매장 값이 떠서 이 숫자와 다를 수 있습니다 — 매장을 바꿔 고르면 됩니다.",
-                    { where: state.lowRegion || "", seller: state.lowSeller }
-                  )
-                : t("전국 매장 판매가 중 가장 낮은 값입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다.")
-              : t("데일리샷에 올라온 판매가입니다. 지금 파는 매장을 확인하지 못해 실제 구매가는 다를 수 있습니다.")}
+            {state.typical
+              ? t("보통 가격은 이 술을 파는 매장 값의 한가운데입니다. 가장 싼 곳은 품절과 지나치게 싼 값(보통 가격의 60% 밑 — 잘못 올린 값일 수 있음)을 빼고 골랐어요. 링크를 열면 가까운 매장 값이 떠서 다를 수 있습니다.")
+              : state.verified
+                ? state.lowSeller
+                  ? t(
+                      "전국 매장 중 가장 싼 {where} {seller}의 값입니다. 링크를 열면 가까운 매장 값이 떠서 이 숫자와 다를 수 있습니다 — 매장을 바꿔 고르면 됩니다.",
+                      { where: state.lowRegion || "", seller: state.lowSeller }
+                    )
+                  : t("전국 매장 판매가 중 가장 낮은 값입니다. 일반 주류는 온라인 주문 후 매장 픽업(스마트오더) 방식으로 구매할 수 있습니다.")
+                : t("데일리샷에 올라온 판매가입니다. 지금 파는 매장을 확인하지 못해 실제 구매가는 다를 수 있습니다.")}
             {" · "}
           </>
         )}
@@ -230,10 +258,6 @@ function PurchaseCard({ shop }) {
             {" · "}
           </>
         )}
-        <a className="shop-more" href={naverLink} target="_blank" rel="noreferrer">
-          {state.items?.length > 0 ? t("네이버쇼핑에서 더 보기") : t("네이버쇼핑에서 찾기")}
-        </a>
-        {" · "}
         <a className="shop-more" href={wsLink} target="_blank" rel="noreferrer">Wine-Searcher</a>
       </div>
     </div>
@@ -849,7 +873,9 @@ export default function ResultScreen({
       const money = priceLabel(info);
       // 지금 실제로 팔리는 값. 있으면 이것이 답이고, 추정 범위는 물러난다.
       // "8~12만원 · 추정치"보다 "103,000원 · 지금 팔리는 값"이 언제나 낫다.
-      const live = !shop.loading && shop.reference ? shop.reference : null;
+      // 보통 가격(매장 값의 가운데)이 있으면 그것을 크게 — 가장 싼 한 곳은 튀는 값일 수 있다(2026-10-29)
+      const typical = !shop.loading && shop.typical ? shop.typical : null;
+      const live = typical || (!shop.loading && shop.reference ? shop.reference : null);
       if (!live && !money && !r.priceRange && !band) return null;
       const dots = r.priceTier || r.priceBand || band?.band;
       const abroad = globalLabel(info);
@@ -864,7 +890,7 @@ export default function ResultScreen({
               정가에 가깝고, 그것을 최저가라고 하면 실제로 살 때 더 싼 곳을
               놓치게 만든다. */}
           <div className="card-title">
-            {live ? (shop.verified ? t("최저가") : t("판매가")) : estimateOnly ? t("예상 가격대") : t("시세")}
+            {typical ? t("보통 가격") : live ? (shop.verified ? t("최저가") : t("판매가")) : estimateOnly ? t("예상 가격대") : t("시세")}
           </div>
           <div className="price-line">
             {/* 실제 값 → 조사해 둔 시장가 → 대역 순으로 물러선다 */}
@@ -883,19 +909,31 @@ export default function ResultScreen({
           {/* 무엇을 기준으로 한 값인지 밝힌다 — 밝히지 않은 숫자는 믿을 수 없는 숫자다 */}
           {live && (
             <div className="price-basis">
-              {shop.source === "dailyshot"
-                ? !shop.verified || !shop.sampled
-                  ? t("데일리샷 판매가")
-                  : shop.sampled > 1
-                    ? t("전국 {n}곳 중 최저가 · 오늘 확인", { n: shop.sampled })
-                    : t("판매처 한 곳의 값 · 오늘 확인")
-                : t("판매 중인 {n}건 중 최저가 · 오늘 확인", { n: shop.sampled || 1 })}
+              {typical
+                ? [
+                    shop.typicalBandCount && shop.sampled > 1
+                      ? t("전국 {n}곳 중 {k}곳이 {b}", { n: shop.sampled, k: shop.typicalBandCount, b: bandWord(shop.typicalBand) })
+                      : t("전국 {n}곳 판매가의 가운데 값", { n: shop.sampled || 1 }),
+                    shop.reference && shop.reference < typical ? t("가장 싼 곳 {p}", { p: fmtWon(shop.reference) }) : null,
+                    t("오늘 확인"),
+                  ].filter(Boolean).join(" · ")
+                : shop.source === "dailyshot"
+                  ? !shop.verified || !shop.sampled
+                    ? t("데일리샷 판매가")
+                    : shop.sampled > 1
+                      ? t("전국 {n}곳 중 최저가 · 오늘 확인", { n: shop.sampled })
+                      : t("판매처 한 곳의 값 · 오늘 확인")
+                  : t("판매 중인 {n}건 중 최저가 · 오늘 확인", { n: shop.sampled || 1 })}
             </div>
           )}
           {/* 값이 어떻게 움직였나.
               점이 하나뿐인 동안에는 priceTrend 가 null 을 주므로 아무것도 그리지
               않는다. 이력은 사람이 열어 볼 때마다 하루 한 점씩 쌓이므로, 이 그래프는
-              쓰이면서 저절로 자란다. 없는 그래프 자리를 비워 두지 않는 편이 낫다. */}
+              쓰이면서 저절로 자란다. 없는 그래프 자리를 비워 두지 않는 편이 낫다.
+              이력은 가장 싼 곳 값으로 쌓인다 — 보통 가격을 크게 쓸 때는 선이 무엇인지 밝힌다 */}
+          {live && typical && priceTrend({ priceHistory: shop.history }) && (
+            <div className="price-basis">{t("선은 가장 싼 곳 값의 움직임")}</div>
+          )}
           {live && <Sparkline trend={priceTrend({ priceHistory: shop.history })} />}
           {/* 실제 값이 있어도 조사해 둔 범위를 함께 두면 "싼 편인가"를 가늠할 수 있다 */}
           {live && money && (
