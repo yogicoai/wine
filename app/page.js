@@ -395,7 +395,30 @@ export default function Home() {
       {/* 끊기면 버튼이 안 먹는 게 아니라 왜 안 되는지 보여야 한다 */}
       <OfflineBanner />
 
-      {/* 밝은 디자인은 화면마다 제 제목을 쓰고 로고는 홈 위에만 둔다(위스키 렌즈와 같게) */}
+      {/* 밝은 디자인 — 위쪽 이름 줄이 어느 화면이든 따라온다(2026-10-29 클라이언트 "어딜 들어가도 상단 로고 따라 다니게").
+          왼쪽 로고(누르면 홈), 오른쪽 내 정보. 결과 화면에서는 로고 앞에 뒤로 단추. PC 는 위쪽 메뉴 줄이 대신한다(light.css) */}
+      {LIGHT && (
+        <header className="topbar">
+          {screen === "result" && (
+            <button className="topbar-back" onClick={goBack} aria-label={t("뒤로")}>
+              <Icon name="back" size={22} stroke={1.9} />
+            </button>
+          )}
+          <button className="topbar-brand" onClick={goHome} aria-label={t("홈")}>
+            <BrandMark size={28} />
+            <span className="home-word">
+              {APP.nameEn.split(" ")[0]} <b>{APP.nameEn.split(" ").slice(1).join(" ")}</b>
+            </span>
+          </button>
+          <button
+            className={`home-me ${activeTimers.length > 0 ? "has-dot" : ""}`}
+            onClick={() => { setDrawer(false); setAccount(true); }}
+            aria-label={t("내 정보")}
+          >
+            <Icon name="user" size={22} />
+          </button>
+        </header>
+      )}
       {!LIGHT && <header className="hdr">
         {/* 로고는 어디서든 처음 화면으로 돌아가는 길이다 (촬영 아이콘을 따로 두지 않는 이유) */}
         <button className="hdr-home" onClick={rescan} aria-label={t("처음 화면으로")}>
@@ -416,14 +439,7 @@ export default function Home() {
       </header>}
 
       {screen === "home" && (
-        <HomeScreen
-          onOpen={openListItem}
-          onBrowse={openBrowse}
-          onSearch={() => openKind("")}
-          onQuiz={openQuiz}
-          onMe={() => { setDrawer(false); setAccount(true); }}
-          meDot={activeTimers.length > 0}
-        />
+        <HomeScreen onOpen={openListItem} onBrowse={openBrowse} onSearch={() => openKind("")} onQuiz={openQuiz} />
       )}
       {screen === "browse" && (
         <BrowseScreen key={JSON.stringify(browseQ)} initial={browseQ} onOpen={openListItem} onSearch={() => openKind("")} />
@@ -479,7 +495,7 @@ export default function Home() {
           />
         </Narrow>
       )}
-      {/* 결과 화면의 뒤로 — 떠 있는 유리 동그라미(위스키 렌즈 상세와 같게) */}
+      {/* 결과 화면의 뒤로 — PC 에서만 본문 맨 위에 둔다. 폰 · 태블릿은 위쪽 이름 줄 안의 뒤로 단추를 쓴다 */}
       {screen === "result" && LIGHT && (
         <button className="back-float" onClick={goBack} aria-label={t("뒤로")}>
           <Icon name="back" size={22} stroke={1.9} />

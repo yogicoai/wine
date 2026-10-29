@@ -255,10 +255,11 @@ html[data-ui="light"] {
   --accent: var(--gold);
   --radius-l: 26px;
   --wrap: 480px; /* 가운데 칸 폭 — 넓은 화면에서 커진다(태블릿 760 · PC 1120, 위스키 렌즈와 같은 값) */
-  --nav-h: 0px; /* 위쪽 메뉴 높이 — PC 에서만 */
+  --nav-h: 60px; /* 위에 붙어 있는 줄의 높이 — 폰 · 태블릿은 이름 줄(.topbar), PC 는 위쪽 메뉴. 붙는 칩 줄이 그 아래에 선다 */
 }
-/* 옆 여백은 폰에서도 18px 고정 — 작은 폰 규칙(globals.css, 14px)을 따르면 옆으로 넘기는 줄(-18px)이 화면 밖으로 4px 삐져 가로로 흔들린다 */
-[data-ui="light"] .app { max-width: var(--wrap); padding-left: 18px; padding-right: 18px; }
+/* 옆 여백은 폰에서도 18px 고정 — 작은 폰 규칙(globals.css, 14px)을 따르면 옆으로 넘기는 줄(-18px)이 화면 밖으로 4px 삐져 가로로 흔들린다.
+ * 위 여백은 이름 줄이 맨 위에 붙도록 0 */
+[data-ui="light"] .app { max-width: var(--wrap); padding-top: 0; padding-left: 18px; padding-right: 18px; }
 [data-ui="light"] :is(.bt, .bt-head, .bt-rank button, .banner, .wcard, .link-more, .search-link, .home-count, .home-me, .sorts button, .chips .chip, .more-btn) {
   font-family: var(--font-b); text-align: left; cursor: pointer;
 }
@@ -276,9 +277,19 @@ html[data-ui="light"] {
 .link-more { border: 0; background: none; padding: 0; font-size: 14px; font-weight: 750; color: var(--ink-2); white-space: nowrap; }
 .link-more::after { content: " ›"; color: var(--accent); }
 
-/* 홈 위 — 로고 · 내 정보 · 몇 종 알약 · 큰 제목 */
-.home-top { display: flex; align-items: center; justify-content: space-between; padding-top: 2px; }
-.home-brand { display: inline-flex; align-items: center; gap: 8px; }
+/* 위쪽 이름 줄 — 어느 화면이든 따라온다(2026-10-29 클라이언트 "어딜 들어가도 상단 로고 따라 다니게").
+ * 내려 읽어도 맨 위에 붙어 있고, 뒤 내용이 비치는 흰 유리. PC 는 위쪽 메뉴 줄이 로고를 들고 있어 숨긴다 */
+.topbar {
+  position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 4px; height: var(--nav-h);
+  margin: 0 -18px; padding: 0 18px;
+  background: rgba(255, 255, 255, 0.88); -webkit-backdrop-filter: blur(16px) saturate(1.6); backdrop-filter: blur(16px) saturate(1.6);
+}
+.topbar-brand { display: inline-flex; align-items: center; gap: 8px; margin-right: auto; padding: 6px 0; border: 0; background: none; cursor: pointer; }
+.topbar-back { display: grid; place-items: center; width: 40px; height: 40px; margin-left: -8px; border: 0; border-radius: 50%; background: none; color: var(--ink); cursor: pointer; }
+.topbar-back:active { background: var(--tile); }
+.topbar .home-me { width: 40px; height: 40px; }
+
+/* 홈 위 — 몇 종 알약 · 큰 제목(로고 · 내 정보는 위쪽 이름 줄) */
 .home-word { font-size: 21px; font-weight: 800; line-height: 1; white-space: nowrap; color: var(--ink); }
 .home-word b { font-weight: 500; color: var(--gold-hi); }
 .home-me { position: relative; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--tile); color: var(--ink); }
@@ -398,14 +409,12 @@ button.bt:active { transform: scale(0.98); }
 .wcard-rate small { font-size: 11.5px; font-weight: 600; color: var(--ink-3); }
 [data-ui="light"] .more-btn { width: 100%; margin-top: 18px; text-align: center; justify-content: center; }
 
-/* 결과 화면의 뒤로 — 떠 있는 유리 동그라미. 결과 첫 판은 그만큼 내려 단추와 겹치지 않게 */
+/* 결과 화면의 뒤로 — PC 에서만 본문 맨 위의 유리 동그라미. 폰 · 태블릿은 위쪽 이름 줄 안의 뒤로 단추(.topbar-back) */
 .back-float {
-  position: fixed; z-index: 25; top: calc(12px + env(safe-area-inset-top)); left: max(12px, calc(50% - 268px));
-  display: grid; place-items: center; width: 46px; height: 46px; border: 0; border-radius: 50%;
+  display: none; place-items: center; width: 46px; height: 46px; border: 0; border-radius: 50%;
   background: var(--glass-float); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
   color: var(--ink); box-shadow: var(--shadow-float); cursor: pointer;
 }
-[data-ui="light"] .back-float + * { margin-top: 52px; }
 
 /* ══ 넓은 화면 — 위스키 렌즈와 같은 단계(2026-10-29 클라이언트: "웹버전처럼 크게")
  * 폰 480 → 태블릿(720~) 가운데 760, 벤토 네 칸 → PC(1080~) 가운데 1120, 아래 메뉴가 위쪽 메뉴 줄로, 결과는 두 칸 */
@@ -423,7 +432,7 @@ button.bt:active { transform: scale(0.98); }
   html[data-ui="light"] { --wrap: 760px; }
   [data-ui="light"] .app { padding-left: 24px; padding-right: 24px; }
   .rail { margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; scroll-padding: 0 24px; }
-  .sticky-chips { margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; }
+  .sticky-chips, .topbar { margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; }
   .kind-rail { margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; scroll-padding-inline: 24px; }
   .display { font-size: 44px; }
   .page-narrow { max-width: 600px; margin: 0 auto; }
@@ -492,12 +501,11 @@ button.bt:active { transform: scale(0.98); }
   /* 내 정보 — "찍기" 뒤 맨 끝의 둥근 단추 */
   [data-ui="light"] .tab-acct { display: flex; order: 2; justify-content: center; width: 44px; margin-left: 6px; padding: 0; background: var(--tile); color: var(--ink); }
 
-  /* 뒤로 가기 — 위쪽 메뉴가 있으니 떠 있지 않고 본문 맨 위에 */
-  .back-float { position: static; margin: 0 0 16px; }
-  [data-ui="light"] .back-float + * { margin-top: 0; }
+  /* 뒤로 가기 — 위쪽 메뉴가 있으니 본문 맨 위에. 이름 줄은 위쪽 메뉴가 로고를 들고 있어 숨긴다 */
+  .back-float { display: grid; margin: 0 0 16px; }
+  .topbar { display: none; }
 
   /* 홈 — 이름 · 내 정보는 위쪽 메뉴에 있다. 벤토는 같은 네 칸을 크게 */
-  .home-top { display: none; }
   .home-count { margin-top: 4px; font-size: 14.5px; }
   .home-title { margin: 14px 0 26px; font-size: 42px; }
   .kind-rail { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 12px 0 0; padding: 2px 0 6px; overflow: visible; }

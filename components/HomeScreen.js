@@ -3,22 +3,20 @@ import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import WineCard, { liquidOf } from "./WineCard";
 import KindRail from "./KindRail";
-import { BrandMark } from "./Brand";
 import { APP, kindBottle } from "@/lib/appProfile";
 import { PRICE_BANDS } from "@/lib/curation";
 import { t } from "@/lib/i18n";
 
 // 홈 — 위스키 렌즈 홈(바탕화면 whisky 저장소 app/page.js)과 같은 구성(2026-10-29 클라이언트 요구: "똑같이").
-//   1. 로고 + 내 정보 · "와인 N종" 알약 · 큰 제목
+//   1. "와인 N종" 알약 · 큰 제목 (로고 · 내 정보는 어느 화면이든 따라오는 위쪽 이름 줄(app/page.js .topbar)로 옮겼다)
 //   2. 벤토 — 오늘의 술(큰 칸) · 맛있는 온도 · 인기 TOP · 내 취향 찾기 · 찾기 · 페어링 사진
 //   3. 계절 배너 · 종류로 둘러보기 · 인기(두 칸 바둑판) · 처음이라면 · 가격대로
 // 칸에 들어가는 말 · 사진은 앱 설정(theme.light.home)에, 술 목록은 /api/browse?home=1(lib/browse.js, 읽기만).
 // 술을 누르면 이름으로 연다(DB 에 있는 정식 술만 보여 주므로 분석 비용이 없다).
 
 const H = APP.theme.light?.home || {};
-const [FIRST, ...REST] = APP.nameEn.split(" ");
 
-export default function HomeScreen({ onOpen, onBrowse, onSearch, onQuiz, onMe, meDot = false }) {
+export default function HomeScreen({ onOpen, onBrowse, onSearch, onQuiz }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -39,18 +37,6 @@ export default function HomeScreen({ onOpen, onBrowse, onSearch, onQuiz, onMe, m
 
   return (
     <div className="page-home">
-      <div className="home-top">
-        <span className="home-brand">
-          <BrandMark size={30} />
-          <span className="home-word">
-            {FIRST} <b>{REST.join(" ")}</b>
-          </span>
-        </span>
-        <button className={`home-me ${meDot ? "has-dot" : ""}`} onClick={onMe} aria-label={t("내 정보")}>
-          <Icon name="user" size={22} />
-        </button>
-      </div>
-
       <button className="home-count" onClick={() => onBrowse({})}>
         <Icon name="bottle" size={16} />
         <span>
