@@ -33,11 +33,11 @@ const setCore = (s) => String(s || "")
   .replace(/\[[^\]]*\]|\([^)]*\)/g, " ")
   .replace(/(우드|종이|오동나무|나무|선물|기프트|고급)?\s*(케이스|박스|box)(\s*에디션)?/gi, " ")
   .replace(/(전용\s*)?(도쿠리|토쿠리|오쵸코|오초코|술잔|잔|글라스)(\s*\d+\s*개)?(\s*(세트|패키지))?/g, " ")
-  .replace(/\d+\s*(개|팩|병|입|종)(\s*(세트|패키지|묶음|구성))?/g, " ")
+  .replace(/\d+\s*(개|팩|병|입|종|캔)(\s*(세트|패키지|묶음|구성))?/g, " ")
   .replace(/(홈술\s*)?(세트|패키지|기획|선물용|선물|기프트|증정|포장|미니어처|미니)/gi, " ")
   .replace(/\s{2,}/g, " ").trim();
-const DS_CAT = { whisky: "위스키", sake: "사케" }[CAT];
-if (!DS_CAT) { console.error("--cat whisky|sake"); process.exit(2); }
+const DS_CAT = { whisky: "위스키", sake: "사케", wine: "와인" }[CAT];
+if (!DS_CAT) { console.error("--cat whisky|sake|wine"); process.exit(2); }
 if (PICK && !TAG) { console.error("--names 를 쓸 때는 --tag 로 백업 이름을 따로 준다"); process.exit(2); }
 if (SINCE && isNaN(SINCE)) { console.error("--since 는 날짜(ISO)"); process.exit(2); }
 const DAY = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
@@ -54,7 +54,11 @@ async function pageFacts(id) {
     const info = Object.fromEntries((d.information || []).filter((x) => x?.label && x?.value).map((x) => [x.label.trim(), String(x.value).trim()]));
     const text = (h) => String(h || "").replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, " ").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/[ \t]+/g, " ").trim();
     const comments = (d.comments || []).map((c) => ({ title: text(c.title), text: text(c.description) })).filter((c) => c.text);
-    return { info, enName: d.en_name || null, thumbnail: d.thumbnail_image || null, comments };
+    // 와인은 맛 점수(바디 · 당도 · 산미, 1~5) · 향 · 맛 · 여운 묘사 · Vivino 도 실려 온다(사케는 대개 비어 있다)
+    const tastes = (d.tastes || []).filter((x) => x?.label && x.value != null).map((x) => ({ label: x.label, value: x.value }));
+    const notes = (d.tasting_notes || []).filter((x) => x?.value).map((x) => ({ label: x.label_ko || x.label, value: x.value }));
+    const vivino = d.vivino && Number(d.vivino.score) > 0 ? { score: Number(d.vivino.score), review_count: Number(d.vivino.review_count || 0), at: d.vivino.score_date || null } : null;
+    return { info, enName: d.en_name || null, thumbnail: d.thumbnail_image || null, comments, tastes, notes, vivino };
   } catch {
     return null;
   }
@@ -62,12 +66,25 @@ async function pageFacts(id) {
 // 사케 분류 "기타"에 섞인 과실주 · 리큐르 — 이름으로 가린다
 const LIQUEUR = /유즈|유자|우메슈|매실|리큐르|멜론|망고|피치|복숭아|모모|딸기|이치고|레몬|미캉|귤|링고|사과|블루베리|살구|안즈|샤인\s*머스캣|리치|시소|요구르트|요거트|커피|초콜릿|말차|체리|키위|파인애플|라임|자몽|진저|생강|시쿠와사|하쿠토|백도|포도/;
 const GRADE = [[/준마이\s*다이긴[조죠]/, "준마이 다이긴조"], [/준마이\s*긴[조죠]/, "준마이 긴조"], [/다이긴[조죠]/, "다이긴조"], [/긴[조죠]/, "긴조"], [/혼[조죠][조죠]/, "혼조조"], [/준마이/, "준마이"], [/니고리/, "니고리"], [/나마/, "나마자케"]];
+// 와인 종류 — 우리 표기 "화이트 와인 · 소비뇽 블랑". 상품 페이지는 "화이트 와인", 목록 분류는 "화이트"
+function wineType(base, grape) {
+  const kind0 = String(base || "").split(/\s*,\s*/).filter(Boolean)[0] || null;
+  const kind = kind0 ? (/와인$/.test(kind0) ? kind0 : `${kind0} 와인`) : null;
+  const g = grape ? String(grape).split(/\s*,\s*/).filter(Boolean).slice(0, 2).join(" · ") : null;
+  return kind ? (g ? `${kind} · ${g}` : kind) : g;
+}
+// 상품 페이지 종류 칸은 "사케, 리큐르"처럼 여럿을 쉼표로 적기도 한다(10-29 첫 등록에서 80종이 그렇게 들어가 고쳤다)
 function sakeType(base, name) {
-  const b = base && base !== "기타" ? base : null;
-  if ((!b || b === "사케(청주)") && LIQUEUR.test(name)) return /우메슈|매실/.test(name) ? "우메슈(매실주)" : /유즈슈|유자주/.test(name) ? "유즈슈(유자술)" : "과실주 · 리큐르";
-  if (b) return b.replace(/죠/g, "조");
+  const parts = String(base || "").split(/\s*,\s*/).filter(Boolean);
+  const vague = !parts.length || parts.every((p) => /^(기타|사케\(청주\))$/.test(p));
+  if (parts.some((p) => /리큐르|매실주/.test(p)) || (vague && LIQUEUR.test(name))) {
+    return /우메슈|매실/.test(name) ? "우메슈(매실주)" : /유즈슈|유자주/.test(name) ? "유즈슈(유자술)" : "리큐르";
+  }
+  const b = parts.find((p) => !/^(사케|기타)$/.test(p));
+  if (b) return b.replace(/죠/g, "조").replace(/^준마이긴조$/, "준마이 긴조").replace(/^준마이다이긴조$/, "준마이 다이긴조");
   const g = GRADE.find(([re]) => re.test(name));
-  return g ? g[1] : null;
+  // "기타"만 있으면 비운다 — 틀린 종류보다 빈칸이 낫다. "사케"는 맞는 말이라 남긴다
+  return g ? g[1] : parts.find((p) => p !== "기타") || null;
 }
 
 const GEN = /(위스키|와인|사케|맥주|보드카|데킬라|리큐르|브랜디|꼬냑|코냑|막걸리|일본|청주)/g;
@@ -90,6 +107,8 @@ const bandOf = (p) => (p <= 20000 ? 1 : p <= 50000 ? 2 : p <= 100000 ? 3 : p <= 
 const cleanName = (s) => {
   let n = String(s || "").replace(/\[[^\]]*\]/g, " ").replace(/\((?:구형|신형|리뉴얼|단종)\)/g, " ").replace(/\s*\d+(\.\d+)?\s*(ml|l|리터|%)(?=\s|$)/gi, " ").replace(/\s{2,}/g, " ").trim();
   if (CAT === "sake") n = n.replace(/죠/g, "조").replace(/쥬/g, "주");
+  // 와인은 빈티지를 뗀 이름이 한 종이다(같은 와인의 해마다 다른 병)
+  if (CAT === "wine") n = n.replace(/(?<!\d)(19|20)\d{2}(?!\d)|\bNV\b/g, " ").replace(/\s*,\s*$/, "").replace(/\s{2,}/g, " ").trim();
   return n;
 };
 const cleanEn = (s) => { const e = String(s || "").replace(/\s*\d+(\.\d+)?\s*(ml|l|%)(?=\s|$)/gi, " ").replace(/\s*\((?:old bottle|new bottle)\)/gi, " ").replace(/\s*,\s*/g, " ").replace(/\s{2,}/g, " ").trim(); return e && !/[가-힣]/.test(e) ? e : null; };
@@ -104,7 +123,7 @@ const EN_WEAK = new Set(["junmai", "daiginjo", "ginjo", "daiginjyo", "ginjyo", "
 const enToks = (s) => String(s || "").replace(/\([^)]*\)/g, " ").replace(/\d+(\.\d+)?\s*(ml|l|%)(?=\s|$)/gi, " ").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").split(/[^a-z0-9]+/).filter((t) => t && t.length > 1 && !EN_WEAK.has(t));
 const keys = new Set(all.map((d) => d.key));
 const ours = all.map((d) => norm(d.name)).filter((k) => k.length >= 2);
-const SCOPE = CAT === "sake" ? ["sake", "soju"] : ["whisky", "brandy", "spirits"];
+const SCOPE = CAT === "sake" ? ["sake", "soju"] : CAT === "wine" ? ["wine"] : ["whisky", "brandy", "spirits"];
 const oursTok = all.filter((d) => SCOPE.includes(d.category)).map((d) => toks(d.name));
 const linked = new Set(all.flatMap((d) => [d.sourceFacts?.dailyshot?.itemId, d.sourceFacts?.dailyshotUnlinked?.itemId]).filter(Boolean));
 const oursEn = all.filter((d) => SCOPE.includes(d.category)).flatMap((d) => [d.i18n?.en?.name, d.sourceFacts?.dailyshot?.enName, /[a-z]{3,}/i.test(d.searchKeyword || "") ? d.searchKeyword : null]).filter(Boolean).map(enToks).filter((t) => t.length);
@@ -116,6 +135,10 @@ const groups = new Map();
 for (const x of idx) {
   const isSet = SETLIKE.test(x.name || "");
   if (isSet && !SETS) continue;
+  // 두 술을 묶은 세트("닷사이 39 & 45 잔세트")는 한 종이 아니다
+  if (isSet && /\s[&+]\s|\d\s*[&+]\s*\d/.test(x.name || "")) continue;
+  // 같은 술 여러 병 · 캔 묶음("…6병", "…24캔", "3종 6캔") — 값이 묶음 값이다. 낱병 상품이 따로 있으면 그쪽으로 잡힌다(10-29 와인 16건)
+  if (/\d+\s*(병|입|캔|종)(?![가-힣])/.test(cleanName(x.name))) continue;
   const base = isSet ? setCore(x.name) : x.name;
   const k = norm(base); if (!k || k.length < 2) continue;
   const g = groups.get(k) || { k, items: [], reviews: 0, have: false };
@@ -123,7 +146,7 @@ for (const x of idx) {
   if (linked.has(x.itemId) || have(k, base, x.nameEn)) g.have = true;
   groups.set(k, g);
 }
-const STD = CAT === "sake" ? [700, 760] : [690, 760];
+const STD = CAT === "whisky" ? [690, 760] : [700, 760];
 const now = new Date(), docs = [], skipped = { dupKey: 0, noName: 0 }, pageN = { tried: 0, ok: 0 };
 const missing = (PICK ? [...groups.values()].filter((g) => g.items.some((x) => PICK.has(x.name))) : [...groups.values()].filter((g) => !g.have && g.reviews >= MIN)).sort((a, b) => b.reviews - a.reviews);
 if (PICK) {
@@ -131,22 +154,39 @@ if (PICK) {
   const lost = [...PICK].filter((n) => !found.has(n));
   console.log(`지정 목록 ${PICK.size}개 중 판매처 색인에서 찾음 ${PICK.size - lost.length}` + (lost.length ? ` — 못 찾음: ${lost.join(" | ")}` : ""));
 }
+// 대표 상품: 행사 표시 없고 표준 병인 것 중 후기 많은 것 → 없으면 행사 표시 없는 것 → 아무거나
+const std = (x) => { const v = ml(x.volume) ?? ml(x.name); return v != null && v >= STD[0] && v <= STD[1]; };
+// 정보가 다 찬 상품을 우선한다 (행사 표시 없음 > 도수·국가·용량 있음 > 표준 병 > 후기 수)
+// 낱병 상품이 세트보다 앞선다(--sets 일 때만 세트가 섞여 있다)
+const score = (x) => (x.isSet ? 0 : 16) + (PROMO.test(x.name) ? 0 : 8) + (x.abv ? 2 : 0) + (x.country ? 2 : 0) + (x.volume ? 1 : 0) + (std(x) ? 1 : 0);
+const pickRep = (g) => [...g.items].sort((a, b) => score(b) - score(a) || (b.reviews || 0) - (a.reviews || 0))[0];
+
+// --detail: 상품 페이지를 미리 셋씩 받아 둔다 — 차례로 받으면 와인 2,460종에 70분이 든다(장당 1.2~1.7초)
+const pages = new Map();
+if (DETAIL) {
+  const ids = [...new Set(missing.map((g) => pickRep(g).id))];
+  let next = 0;
+  const worker = async () => {
+    while (next < ids.length) {
+      const id = ids[next++];
+      pages.set(id, await pageFacts(id));
+      if (pages.size % 200 === 0) console.log(`  … 상품 페이지 ${pages.size}/${ids.length}`);
+      await new Promise((z) => setTimeout(z, 300));
+    }
+  };
+  await Promise.all(Array.from({ length: 3 }, worker));
+}
+
 for (const g of missing) {
-  // 대표 상품: 행사 표시 없고 표준 병인 것 중 후기 많은 것 → 없으면 행사 표시 없는 것 → 아무거나
-  const byRev = [...g.items].sort((a, b) => (b.reviews || 0) - (a.reviews || 0));
-  const std = (x) => { const v = ml(x.volume) ?? ml(x.name); return v != null && v >= STD[0] && v <= STD[1]; };
-  // 정보가 다 찬 상품을 우선한다 (행사 표시 없음 > 도수·국가·용량 있음 > 표준 병 > 후기 수)
-  // 낱병 상품이 세트보다 앞선다(--sets 일 때만 세트가 섞여 있다)
-  const score = (x) => (x.isSet ? 0 : 16) + (PROMO.test(x.name) ? 0 : 8) + (x.abv ? 2 : 0) + (x.country ? 2 : 0) + (x.volume ? 1 : 0) + (std(x) ? 1 : 0);
-  const rep0 = [...byRev].sort((a, b) => score(b) - score(a) || (b.reviews || 0) - (a.reviews || 0))[0];
+  const rep0 = pickRep(g);
   const name = cleanName(rep0.isSet ? rep0.coreName : rep0.name);
   if (!name) { skipped.noName++; continue; }
   const key = catalogKey(name, null);
   if (keys.has(key)) { skipped.dupKey++; continue; }
   keys.add(key);
   // 상품 페이지 값이 색인 값보다 앞선다(색인은 예전 수집본 · 목록 API 라 비어 있거나 낡았다)
-  const page = DETAIL ? await pageFacts(rep0.id) : null;
-  if (DETAIL) { pageN.tried++; if (page) pageN.ok++; await new Promise((z) => setTimeout(z, 250)); }
+  const page = DETAIL ? pages.get(rep0.id) ?? null : null;
+  if (DETAIL) { pageN.tried++; if (page) pageN.ok++; }
   const pi = page?.info || {};
   const rep = {
     ...rep0,
@@ -155,10 +195,12 @@ for (const g of missing) {
     subcategory: (pi["종류"] && !/^(사케|사케\(청주\)|청주|일본주|기타)$/.test(pi["종류"]) ? pi["종류"] : rep0.subcategory) || pi["종류"] || null,
     nameEn: page?.enName && !/[가-힣]/.test(page.enName) ? page.enName : rep0.nameEn,
     image: page?.thumbnail || rep0.image,
+    vivino: page?.vivino || rep0.vivino,
   };
-  const extraSpecs = page ? [["정미율", pi["정미율"]], ["일본주도", pi["일본주도"] || pi["주도"]], ["산도", pi["산도"]]].filter(([, v]) => v).map(([label, value]) => ({ label, value })) : [];
+  const SPEC_KEYS = CAT === "wine" ? [["지역", pi["지역"]], ["품종", pi["품종"]]] : [["정미율", pi["정미율"]], ["일본주도", pi["일본주도"] || pi["주도"]], ["산도", pi["산도"]]];
+  const extraSpecs = page ? SPEC_KEYS.filter(([, v]) => v).map(([label, value]) => ({ label, value })) : [];
   // 가격대 — 대표 상품 값. 표준 병이 아니면 700ml(사케 720ml) 기준으로 환산
-  const v = ml(rep.volume) ?? ml(rep.name), base = CAT === "sake" ? 720 : 700;
+  const v = ml(rep.volume) ?? ml(rep.name), base = CAT === "sake" ? 720 : CAT === "wine" ? 750 : 700;
   const price = Number(rep.price || 0);
   // 2L·3L 팩도 환산한다 — 큰 팩 값을 그대로 쓰면 가격대가 한두 칸 위로 간다
   const scaled = price > 0 && v && v >= 180 && v <= 5000 && !std(rep) ? Math.round(price * (base / v)) : price;
@@ -169,9 +211,10 @@ for (const g of missing) {
   const ratings = vv && Number(vv.score) > 0 && Number(vv.review_count || vv.count || 0) >= 30 ? [{ source: "Vivino", score: `${Number(vv.score).toFixed(1)} / 5 (평가 ${Number(vv.review_count || vv.count).toLocaleString("ko-KR")}건)` }] : undefined;
   const fields = ["name", "type", "specs"];
   // 종류 칸도 우리 표기로 (사케: 긴죠 → 긴조) — 잔·도구 추천 규칙이 '긴조'로 찾는다
-  const type = CAT === "sake" ? sakeType(rep.subcategory, name) : rep.subcategory || null;
+  const type = CAT === "sake" ? sakeType(rep.subcategory, name) : CAT === "wine" ? wineType(rep.subcategory, pi["품종"]) : rep.subcategory || null;
   const result = { found: true, name, category: CAT, type, specs: [...(rep.volume ? [{ label: "용량", value: rep.volume }] : []), ...extraSpecs], tier: "stub", basis: "판매처(데일리샷) 상품 정보 기준이며 웹 조사로 따로 확인하지는 않았습니다." };
   if (rep.country) { result.country = rep.country; fields.push("country"); }
+  if (CAT === "wine" && pi["지역"]) { result.region = pi["지역"]; fields.push("region"); }
   if (rep.abv) { result.alcohol = rep.abv; fields.push("alcohol"); }
   if (band) { result.priceBand = band; fields.push("priceBand"); }
   if (ratings) { result.ratings = ratings; fields.push("ratings"); }
@@ -188,6 +231,9 @@ for (const g of missing) {
       ...(rep.image ? { thumbnail: rep.image } : {}),
       // 판매처 소개글 — 화면에 그대로 옮기지 않는다(그쪽 글이다). 이야기 조사 때 재료로 쓴다
       ...(page?.comments?.length ? { comments: page.comments } : {}),
+      // 판매처 맛 점수 · 향 · 맛 · 여운 — 아직 화면에 안 쓴다(우리 맛 축과 맞춰 보기 전)
+      ...(page?.tastes?.length ? { tastes: page.tastes } : {}),
+      ...(page?.notes?.length ? { tastingNotes: page.notes } : {}),
       fetchedAt: page ? now : rep.seenAt || null,
     } },
     ...(rep.image ? { imageCandidate: { url: rep.image, source: "dailyshot", itemId: rep.itemId } } : {}),
@@ -202,6 +248,9 @@ const haveN = groupsAll.filter((g) => g.have).length;
 console.log(`${CAT}: 판매처 후기 ${MIN}개 이상 ${groupsAll.length}종 — 이미 있음 ${haveN} · 빠짐 ${missing.length} → 넣을 것 ${docs.length} (같은 키가 이미 있어 건너뜀 ${skipped.dupKey}) · 넣은 뒤 보유 ${haveN + docs.length}/${groupsAll.length}`);
 const bandN = docs.filter((d) => d.priceBand).length, enN = docs.filter((d) => d.i18n?.en?.name).length, imgN = docs.filter((d) => d.imageCandidate).length;
 console.log(`  가격대 ${bandN} · 영문명 ${enN} · 도수 ${docs.filter((d) => d.result.alcohol).length} · 국가 ${docs.filter((d) => d.result.country).length} · Vivino ${docs.filter((d) => d.result.ratings).length} · 사진 후보 ${imgN}`);
+// 이름에 &가 든 것 — 생산자 이름(마티니 & 로시)일 수도, 서로 다른 와인 두 병 묶음일 수도 있다. 규칙으로 못 가른다 — 눈으로 본다
+const amp = docs.filter((d) => /&|\+/.test(d.name));
+if (amp.length) console.log(`  & 가 든 이름 ${amp.length}개 — 두 술 묶음인지 눈으로 볼 것: ${amp.map((d) => d.name).join(" | ")}`);
 for (const d of docs.slice(0, PICK ? Infinity : 14)) console.log(`  + ${d.name} | ${d.result.type || "-"} · ${d.result.alcohol || "-"} · ${d.result.country || "-"} · ${d.result.specs[0]?.value || "-"} · 가격대 ${d.priceBand || "-"} · EN ${d.i18n?.en?.name || "-"} (후기 ${d.popularity.dailyshotReviews})`);
 if (!APPLY) { console.log("보기만 했습니다. 넣으려면 --apply"); await client.close(); process.exit(0); }
 mkdirSync("data/backup", { recursive: true });

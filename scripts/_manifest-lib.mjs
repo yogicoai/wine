@@ -4,7 +4,12 @@
 //       나중에 쓴 쪽이 먼저 쓴 쪽의 변경을 지운다 (판정 결과가 사라지거나, 올린 사진이 도로 "확인됨"으로 돌아간다).
 // 해결: 저장할 때마다 (1) 잠금을 잡고 (2) 디스크의 최신 기록을 다시 읽어 (3) 내가 바꾼 항목만 덮어 쓰고 (4) 쓴다.
 //       그러니 각 스크립트는 자기가 바꾼 이름(touched)만 기억하면 된다.
-import { existsSync, mkdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, renameSync, rmdirSync, statSync, writeFileSync } from "node:fs";
+
+// 잠금은 빈 폴더 하나라 rmdirSync 로 지운다. rmSync(recursive) 는 Node 24 에서 C++ 로 바뀌었는데, 한글이 든 경로
+// (10-27 에 저장소를 Dropbox 의 한글 폴더로 옮김)에서 프로세스를 통째로 죽인다 — 0xC0000409, 오류 문구도 없이 (2026-10-29).
+// 그 바람에 잠금 폴더가 남아 사진 받기 · 올리기가 저장할 때마다 말없이 꺼졌다.
+const unlock = () => { try { rmdirSync(LOCK); } catch {} };
 
 export const MANIFEST = "data/images/manifest.json";
 const LOCK = "data/images/.manifest.lock";
@@ -24,12 +29,12 @@ async function withLock(fn) {
     try { mkdirSync(LOCK); break; }
     catch (e) {
       if (e.code !== "EEXIST") throw e;
-      try { if (Date.now() - statSync(LOCK).mtimeMs > 30000) rmSync(LOCK, { recursive: true, force: true }); } catch {}   // 죽은 프로세스의 잠금
+      try { if (Date.now() - statSync(LOCK).mtimeMs > 30000) unlock(); } catch {}   // 죽은 프로세스의 잠금
       if (Date.now() - t0 > 60000) throw new Error("manifest 잠금을 얻지 못했습니다");
       await sleep(80 + Math.random() * 160);
     }
   }
-  try { return await fn(); } finally { try { rmSync(LOCK, { recursive: true, force: true }); } catch {} }
+  try { return await fn(); } finally { unlock(); }
 }
 
 /** local 의 touched(이름 집합) 항목만 디스크 최신 기록에 반영해 저장한다. */

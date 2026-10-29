@@ -18,6 +18,8 @@ const core = (s) =>
     .replace(/\d+(\.\d+)?\s*(ml|l|리터|%|도)/gi, " ")
     .replace(/\b(19|20)\d{2}\b/g, " ")
     .replace(GENERIC, " ")
+    // 사케는 우리 표기(긴조 · 센주)로 바꿔 넣는다 — 데일리샷 표기(긴죠 · 센쥬)와 같은 이름으로 본다(2026-10-29, 195장이 이것뿐인 차이로 걸렸다)
+    .replace(/죠/g, "조").replace(/쥬/g, "주")
     .toLowerCase()
     .replace(/[^a-z0-9가-힣]/g, "");
 

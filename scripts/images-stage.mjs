@@ -36,7 +36,7 @@ const FORCE = process.argv.includes("--force");
 // --ds-only : 데일리샷 사진이 있는 것만 (데일리샷을 우선으로 다시 받을 때)
 const RESTAGE = process.argv.includes("--restage");
 const DS_ONLY = process.argv.includes("--ds-only");
-const WORKERS = 4;
+const WORKERS = Number(arg("--workers")) || 4;
 
 const manifest = readManifest();
 const touched = new Set();
