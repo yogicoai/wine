@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import CaptureScreen from "@/components/CaptureScreen";
 import LoadingScreen from "@/components/LoadingScreen";
 import ResultScreen from "@/components/ResultScreen";
@@ -10,14 +10,24 @@ import useActiveTimers from "@/components/useActiveTimer";
 import TimerBubble from "@/components/TimerBubble";
 import FirstHint from "@/components/FirstHint";
 import KindRail from "@/components/KindRail";
+import HomeScreen from "@/components/HomeScreen";
+import BrowseScreen from "@/components/BrowseScreen";
 import OfflineBanner from "@/components/OfflineBanner";
 import CellarScreen from "@/components/CellarScreen";
 import WineListScreen from "@/components/WineListScreen";
 import DiscoverScreen from "@/components/DiscoverScreen";
 import Icon from "@/components/Icon";
 import { downscale, stripPrefix } from "@/lib/imageClient";
-import { APP } from "@/lib/appProfile";
+import { APP, UI } from "@/lib/appProfile";
 import { t } from "@/lib/i18n";
+
+// 밝은 디자인(와인 · 사케) — 화면 구성과 흐름을 위스키 렌즈와 같게(2026-10-29 클라이언트 요구 "똑같이").
+// 처음 화면은 홈(HomeScreen), 아래 메뉴는 홈 · 와인 · 찍기 · 셀러 · 기록, 내 정보는 홈 오른쪽 위.
+// 다른 앱(맥주 · 전통주 · 스피리츠 · 위스키)은 예전 구성(처음 화면 = 촬영) 그대로다.
+const LIGHT = UI === "light";
+const NOUN = APP.theme.light?.home?.noun || "";
+// 넓은 화면에서 가운데 좁은 칸 — 밝은 디자인만. 예전 디자인은 감싸지 않는다(.app > … 규칙이 그대로 걸리게)
+const Narrow = ({ children }) => (LIGHT ? <div className="page-narrow">{children}</div> : children);
 
 // 오류 문구는 원인을 짚어야 다음 행동이 정해진다.
 // "오류가 발생했습니다"만 보면 다시 눌러야 할지 기다려야 할지 알 수 없다.
@@ -33,9 +43,15 @@ function offlineAware(err, fallback) {
 }
 
 export default function Home() {
-  const [screen, setScreen] = useState("capture"); // capture | loading | result | cellar | winelist
-  // 홈 종류 카드로 찾기에 들어갈 때의 검색어 — 탭으로 들어가면 비운다
+  // capture | loading | result | cellar | winelist | discover — 밝은 디자인은 home · browse 가 더 있다
+  const [screen, setScreen] = useState(LIGHT ? "home" : "capture");
+  // 찾기에 들어갈 때의 검색어 — 탭으로 들어가면 비운다. quiz 면 취향 문답부터 연다(홈 "내 취향 찾기")
   const [discoverQ, setDiscoverQ] = useState("");
+  const [discoverQuiz, setDiscoverQuiz] = useState(false);
+  // 목록 탭을 열 때의 거르기({kind, band, easy}) — 홈의 종류 카드 · 가격대 · 처음이라면에서 넘어온다
+  const [browseQ, setBrowseQ] = useState({});
+  // 결과 화면의 뒤로 — 결과를 열기 직전 화면으로 돌아간다
+  const backTo = useRef(LIGHT ? "home" : "capture");
   const [wineList, setWineList] = useState(null);
   const [thumb, setThumb] = useState(null);
   const [result, setResult] = useState(null);
@@ -90,6 +106,7 @@ export default function Home() {
   const MIN_SCAN_SHOW = 3200;
 
   async function analyze(dataUrl) {
+    remember();
     setScreen("loading");
     const startedAt = Date.now();
     try {
@@ -231,6 +248,7 @@ export default function Home() {
 
   // 사진 없이 이름만으로 분석 (유사주 칩 클릭 / 웹 검색 재분석)
   async function explore(name, { web = false } = {}) {
+    remember();
     setScreen("loading");
     setThumb(null);
     const startedAt = Date.now();
@@ -276,6 +294,7 @@ export default function Home() {
   }
 
   async function openSession(id) {
+    remember();
     setDrawer(false);
     try {
       const res = await fetch(`/api/sessions/${id}`);
@@ -308,10 +327,41 @@ export default function Home() {
     setScreen(next);
   }
 
-  // 종류 카드 — 그 종류로 찾아 둔 찾기 화면을 연다
+  // 찾기 화면을 연다 — term 이 있으면 그 말로 찾아 둔다
   function openKind(term) {
     setDiscoverQ(term);
+    setDiscoverQuiz(false);
     go("discover");
+    window.scrollTo({ top: 0 });
+  }
+
+  // 홈 "내 취향 찾기" — 찾기 화면을 취향 문답부터 연다
+  function openQuiz() {
+    setDiscoverQ("");
+    setDiscoverQuiz(true);
+    go("discover");
+    window.scrollTo({ top: 0 });
+  }
+
+  // 목록 탭 — 홈의 종류 카드 · 가격대 · 처음이라면에서 넘어오면 그 조건으로 걸러 연다
+  function openBrowse(q = {}) {
+    setBrowseQ(q);
+    go("browse");
+    window.scrollTo({ top: 0 });
+  }
+
+  function goHome() {
+    go("home");
+    window.scrollTo({ top: 0 });
+  }
+
+  // 결과를 열기 직전 화면을 기억한다 — 결과 화면의 뒤로가 그리로 간다
+  function remember() {
+    if (screen !== "loading" && screen !== "result") backTo.current = screen;
+  }
+
+  function goBack() {
+    go(backTo.current || (LIGHT ? "home" : "capture"));
     window.scrollTo({ top: 0 });
   }
 
@@ -325,6 +375,7 @@ export default function Home() {
 
   // 셀러 항목 열기 — 저장해둔 분석 결과 스냅샷을 그대로 복원
   async function openCellarItem(id) {
+    remember();
     try {
       const res = await fetch(`/api/cellar/${id}`);
       const data = await res.json();
@@ -344,7 +395,8 @@ export default function Home() {
       {/* 끊기면 버튼이 안 먹는 게 아니라 왜 안 되는지 보여야 한다 */}
       <OfflineBanner />
 
-      <header className="hdr">
+      {/* 밝은 디자인은 화면마다 제 제목을 쓰고 로고는 홈 위에만 둔다(위스키 렌즈와 같게) */}
+      {!LIGHT && <header className="hdr">
         {/* 로고는 어디서든 처음 화면으로 돌아가는 길이다 (촬영 아이콘을 따로 두지 않는 이유) */}
         <button className="hdr-home" onClick={rescan} aria-label={t("처음 화면으로")}>
           {/* 워드마크 이미지는 두 줄로 쌓인 형태라 헤더 높이로 줄이면 글자가 뭉개진다.
@@ -361,30 +413,77 @@ export default function Home() {
           {/* 낙관 — 일본풍 앱의 서명. theme.seal 이 있을 때만 찍힌다 */}
           {APP.theme.seal && <span className="hdr-seal">{APP.theme.seal}</span>}
         </button>
-      </header>
+      </header>}
 
-      {screen === "capture" && (
+      {screen === "home" && (
+        <HomeScreen
+          onOpen={openListItem}
+          onBrowse={openBrowse}
+          onSearch={() => openKind("")}
+          onQuiz={openQuiz}
+          onMe={() => { setDrawer(false); setAccount(true); }}
+          meDot={activeTimers.length > 0}
+        />
+      )}
+      {screen === "browse" && (
+        <BrowseScreen key={JSON.stringify(browseQ)} initial={browseQ} onOpen={openListItem} onSearch={() => openKind("")} />
+      )}
+
+      {screen === "capture" && (LIGHT ? (
+        // 찍기 탭 — 위스키 렌즈 "라벨 찍기"와 같게: 제목 · 촬영 판 · 아래 이름으로 찾기.
+        // 넓은 화면에서도 촬영 판이 화면 가득 커지지 않게 가운데 좁은 칸(page-narrow)에 둔다 — 찾기 · 셀러도 같다
+        <div className="page-narrow">
+          <h1 className="display">{t("라벨 찍기")}</h1>
+          <p className="lead">{t("병 앞면 라벨을 찍으면 어떤 {noun}인지 읽어 정보·가격대·페어링을 찾아 드려요.", { noun: t(NOUN) })}</p>
+          <CaptureScreen onCapture={analyze} onBarcode={scanBarcode} onWineList={scanWineList} />
+          <section className="section">
+            <h2 className="h2">{t("이름으로 찾기")}</h2>
+            <button className="search-field search-link" onClick={() => openKind("")}>
+              <Icon name="search" size={22} />
+              <span>{t("{noun} 이름 · 생산자 · 산지", { noun: t(NOUN) })}</span>
+            </button>
+          </section>
+        </div>
+      ) : (
         <>
           <CaptureScreen onCapture={analyze} onBarcode={scanBarcode} onWineList={scanWineList} />
           <KindRail onPick={openKind} />
           {/* 처음 온 사람에게만 한 번 — 닫으면 다시 나오지 않는다 */}
           <FirstHint onOpenDiscover={() => openKind("")} />
         </>
-      )}
+      ))}
       {screen === "loading" && <LoadingScreen thumb={thumb} />}
       {screen === "winelist" && (
         <WineListScreen data={wineList} onOpen={openListItem} onRescan={rescan} />
       )}
       {screen === "discover" && (
-        <DiscoverScreen key={discoverQ} initialQuery={discoverQ} onOpen={openListItem} onToast={showToast} />
+        <Narrow>
+          {LIGHT && <h1 className="display">{t("{noun} 찾기", { noun: t(NOUN) })}</h1>}
+          <DiscoverScreen
+            key={`${discoverQ}|${discoverQuiz}`}
+            initialQuery={discoverQ}
+            initialQuiz={discoverQuiz}
+            onOpen={openListItem}
+            onToast={showToast}
+          />
+        </Narrow>
       )}
       {screen === "cellar" && (
-        <CellarScreen
-          data={cellar}
-          onOpen={openCellarItem}
-          onReload={loadCellar}
-          onToast={showToast}
-        />
+        <Narrow>
+          {LIGHT && <h1 className="display">{t("셀러")}</h1>}
+          <CellarScreen
+            data={cellar}
+            onOpen={openCellarItem}
+            onReload={loadCellar}
+            onToast={showToast}
+          />
+        </Narrow>
+      )}
+      {/* 결과 화면의 뒤로 — 떠 있는 유리 동그라미(위스키 렌즈 상세와 같게) */}
+      {screen === "result" && LIGHT && (
+        <button className="back-float" onClick={goBack} aria-label={t("뒤로")}>
+          <Icon name="back" size={22} stroke={1.9} />
+        </button>
       )}
       {screen === "result" && (
         <ResultScreen
@@ -428,6 +527,45 @@ export default function Home() {
       {/* 아래 탭 — 화면 위쪽 아이콘 줄을 대신한다.
           한 손으로 쥔 폰에서 엄지가 닿는 곳은 위가 아니라 아래다.
           어디에 무엇이 있는지도 글자로 보여 준다 (아이콘만으로는 알 수 없었다) */}
+      {LIGHT ? (
+        // 밝은 디자인 — 위스키 렌즈와 같은 다섯 칸(홈 · 술 · 찍기 · 모아 두는 곳 둘). 내 정보는 홈 오른쪽 위.
+        // PC(가로 1080px~)에서는 같은 칸이 위쪽 메뉴 줄이 된다 — 왼쪽 이름, 오른쪽 메뉴, 끝에 "찍기" 단추와 내 정보(light.css)
+        <nav className="tabbar" aria-label={t("주요 이동")}>
+          <button className="tabbar-brand" onClick={goHome} aria-label={t("홈")}>
+            <BrandMark size={28} />
+            <span className="home-word">
+              {APP.nameEn.split(" ")[0]} <b>{APP.nameEn.split(" ").slice(1).join(" ")}</b>
+            </span>
+          </button>
+          <button className={`tab ${screen === "home" ? "on" : ""}`} onClick={goHome}>
+            <Icon name="home" />
+            <span>{t("홈")}</span>
+          </button>
+          <button className={`tab ${screen === "browse" ? "on" : ""}`} onClick={() => openBrowse({})}>
+            <Icon name="glass" />
+            <span>{t(NOUN)}</span>
+          </button>
+          <button className={`tab tab-primary ${screen === "capture" || screen === "loading" ? "on" : ""}`} onClick={rescan}>
+            <Icon name="camera" />
+            <span>{t("찍기")}</span>
+          </button>
+          <button className={`tab ${screen === "cellar" ? "on" : ""}`} onClick={() => go("cellar")}>
+            <Icon name="bottle" />
+            <span>{t("셀러")}</span>
+          </button>
+          <button className={`tab ${drawer ? "on" : ""}`} onClick={() => { setAccount(false); setDrawer(true); }}>
+            <Icon name="archive" />
+            <span>{t("기록")}</span>
+          </button>
+          <button
+            className={`tab tab-acct ${activeTimers.length > 0 ? "has-dot" : ""}`}
+            onClick={() => { setDrawer(false); setAccount(true); }}
+            aria-label={t("내 정보")}
+          >
+            <Icon name="user" />
+          </button>
+        </nav>
+      ) : (
       <nav className="tabbar" aria-label={t("주요 이동")}>
         <button
           className={`tab ${screen === "capture" || screen === "loading" ? "on" : ""}`}
@@ -468,6 +606,7 @@ export default function Home() {
           <span>{t("내 정보")}</span>
         </button>
       </nav>
+      )}
 
       {toast && <div className={`toast ${toast.err ? "err" : ""}`}>{toast.text}</div>}
     </main>

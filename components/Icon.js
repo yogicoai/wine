@@ -96,6 +96,24 @@ const PATHS = {
       <path d="m15.5 15.5 4 4" />
     </>
   ),
+  // 밝은 디자인(와인 · 사케)의 홈 · 목록 · 뒤로 — 위스키 렌즈 아이콘과 같은 자리에 쓰는 것들
+  home: <path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z" />,
+  arrow: <path d="M5 12h14m-5.5-5.5L19 12l-5.5 5.5" />,
+  chevron: <path d="m9.5 6 6 6-6 6" />,
+  back: <path d="m14.5 5.5-6.5 6.5 6.5 6.5" />,
+  trophy: (
+    <>
+      <path d="M8 4h8v5a4 4 0 0 1-8 0z" />
+      <path d="M8 6H5.5a2.5 2.5 0 0 0 2.6 3.4M16 6h2.5a2.5 2.5 0 0 1-2.6 3.4M12 13v3.5M8.5 20h7l-.8-3.5H9.3z" />
+    </>
+  ),
+  bottle: <path d="M10 3h4v4.2c1.9.8 3 2.4 3 4.6V20a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-8.2c0-2.2 1.1-3.8 3-4.6zM7 13.5h10" />,
+  thermo: (
+    <>
+      <path d="M10 13.6V5a2 2 0 1 1 4 0v8.6a4 4 0 1 1-4 0z" />
+      <path d="M12 9v7" />
+    </>
+  ),
 };
 
 export default function Icon({ name, size = 20, stroke = 1.6, className }) {

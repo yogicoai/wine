@@ -88,14 +88,14 @@ function WineRow({ item, onOpen }) {
   );
 }
 
-// initialQuery — 홈의 종류 카드(KindRail)를 누르고 들어오면 그 종류("스파클링" 등)로 바로 찾아 둔다
-export default function DiscoverScreen({ onOpen, onToast, initialQuery = "" }) {
+// initialQuery — 그 말로 바로 찾아 둔다. initialQuiz — 홈 "내 취향 찾기"로 들어오면 취향 문답부터 연다
+export default function DiscoverScreen({ onOpen, onToast, initialQuery = "", initialQuiz = false }) {
   const [q, setQ] = useState(initialQuery);
   const [results, setResults] = useState(null);
   const [searching, setSearching] = useState(false);
   const [failed, setFailed] = useState(false);
 
-  const [quiz, setQuiz] = useState(false);
+  const [quiz, setQuiz] = useState(initialQuiz);
   const [summary, setSummary] = useState(null);
   const [answered, setAnswered] = useState(0);
 
