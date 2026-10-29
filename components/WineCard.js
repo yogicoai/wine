@@ -1,10 +1,10 @@
 "use client";
 import { PRICE_BANDS } from "@/lib/curation";
 import { APP, kindBottle } from "@/lib/appProfile";
-import { t } from "@/lib/i18n";
+import { t, fmtWon } from "@/lib/i18n";
 
 // 술 카드 — 위스키 렌즈 WhiskyCard 와 같은 모양(밝은 디자인: 와인 · 사케).
-// 그 술 색이 옅게 깔린 판 위에 병, 아래에 이름 · 종류 · 가격대 · 별점(데일리샷).
+// 그 술 색이 옅게 깔린 판 위에 병, 아래에 이름 · 종류 · 보통 가격(데일리샷 매장 값의 가운데, 없으면 가격대) · 별점(데일리샷).
 // 판매처 사진은 흰 바탕이라 곱하기로 판 색에 녹인다. 사진이 없으면 종류 대표 병(배경 없음).
 // item 은 lib/browse.js 모양. rank 를 주면 왼쪽 위에 순위.
 
@@ -25,7 +25,12 @@ export default function WineCard({ item, rank = null, onOpen }) {
         {rank && <span className="wcard-rank">{rank}</span>}
       </span>
       <strong className="wcard-name">{item.name}</strong>
-      <span className="wcard-meta">{[kindLabel(item) && t(kindLabel(item)), item.priceBand && t(bandLabel(item.priceBand))].filter(Boolean).join(" · ")}</span>
+      <span className="wcard-meta">
+        {[
+          kindLabel(item) && t(kindLabel(item)),
+          item.price ? `${item.priceChannel === "cross" ? t("직구") + " " : ""}${fmtWon(item.price)}` : item.priceBand && t(bandLabel(item.priceBand)),
+        ].filter(Boolean).join(" · ")}
+      </span>
       {item.rating ? (
         <span className="wcard-rate">
           ★ {item.rating}

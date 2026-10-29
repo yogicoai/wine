@@ -27,11 +27,14 @@ import CommunityRating from "./CommunityRating";
 
 // 판매처 조회 — 히어로의 대표 이미지와 구매 정보 카드가 같은 결과를 쓴다.
 // 두 곳에서 따로 부르면 같은 요청이 두 번 나가고, 화면마다 다른 상품이 잡힐 수 있다.
-function useShopItems(name, keyword) {
+function useShopItems(name, keyword, dailyshotId = null) {
   const cleaned = (name || "").replace(/\s*\([^)]*\)\s*/g, " ").trim(); // 괄호 병기 제거
   const noYear = cleaned.replace(/\b(19|20)\d{2}\b/g, "").replace(/\s+/g, " ").trim();
   // AI가 준 국내 통용 표기 → 이름 → 연도 제거 이름 순으로 시도
   const candidates = [...new Set([keyword, cleaned, noYear].filter(Boolean))];
+  // 카탈로그와 이어진 술은 데일리샷 상품 번호로 먼저 묻는다 — 이름으로 찾다 "구로 기리시마 EX"에 "구로 기리시마 720ml"
+  // 값이 붙었고, 첫 후보가 색인에 없으면 10초 넘게 걸렸다(2026-10-29). 번호로 못 찾을 때만 이름 후보로 물러선다
+  const ask = (q, i) => `/api/shop?q=${encodeURIComponent(q)}${i === 0 && dailyshotId ? `&ds=${dailyshotId}` : ""}`;
   const [state, setState] = useState({ loading: true, items: null, noApi: false });
 
   useEffect(() => {
@@ -39,9 +42,9 @@ function useShopItems(name, keyword) {
     let alive = true;
     setState({ loading: true, items: null, noApi: false });
     (async () => {
-      for (const q of candidates) {
+      for (const [i, q] of candidates.entries()) {
         try {
-          const d = await fetch(`/api/shop?q=${encodeURIComponent(q)}`).then((r) => r.json());
+          const d = await fetch(ask(q, i)).then((r) => r.json());
           if (!alive) return;
           if (d.noApi) return setState({ loading: false, items: null, noApi: true });
           if (d.items?.length) {
@@ -55,6 +58,8 @@ function useShopItems(name, keyword) {
               typicalBand: d.typicalBand ?? null,
               typicalBandCount: d.typicalBandCount ?? null,
               outliers: d.outliers || 0,
+              // pickup(국내 매장 픽업) | cross(해외직구 — 매장 픽업 판매처가 없는 술)
+              channel: d.channel || "pickup",
               sampled: d.sampled || d.items.length,
               // 값이 어디서 왔는지 — 화면이 기준을 밝힐 수 있어야 한다
               source: d.source || null,
@@ -92,7 +97,7 @@ function useShopItems(name, keyword) {
       alive = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [candidates.join("|")]);
+  }, [candidates.join("|"), dailyshotId]);
 
   return { ...state, query: candidates[0] || "" };
 }
@@ -136,14 +141,18 @@ function PurchaseCard({ shop }) {
         <div className="shop-ref">
           <div>
             <b>{fmtWon(state.typical)}</b>
-            <span>{t("보통 가격")}</span>
+            <span>{state.channel === "cross" ? t("해외직구 보통 가격") : t("보통 가격")}</span>
           </div>
           <em>
-            {state.typicalBandCount && state.sampled > 1
-              ? t("전국 {n}곳 중 {k}곳이 {b}", { n: state.sampled, k: state.typicalBandCount, b: bandWord(state.typicalBand) })
-              : state.sampled > 1
-                ? t("전국 {n}곳 판매가의 가운데 값", { n: state.sampled })
-                : t("판매처 한 곳의 값입니다 · 매장 픽업가")}
+            {state.channel === "cross"
+              ? state.sampled > 1
+                ? t("해외직구 판매처 {n}곳 판매가의 가운데 값", { n: state.sampled })
+                : t("해외직구 판매처 한 곳의 값")
+              : state.typicalBandCount && state.sampled > 1
+                ? t("전국 {n}곳 중 {k}곳이 {b}", { n: state.sampled, k: state.typicalBandCount, b: bandWord(state.typicalBand) })
+                : state.sampled > 1
+                  ? t("전국 {n}곳 판매가의 가운데 값", { n: state.sampled })
+                  : t("판매처 한 곳의 값입니다 · 매장 픽업가")}
             {cheaper && (
               <>
                 <br />
@@ -239,7 +248,9 @@ function PurchaseCard({ shop }) {
             가리킬 목록이 없다. 그 자리에는 그 값이 무엇인지를 적는다. */}
         {state.source === "dailyshot" && (
           <>
-            {state.typical
+            {state.typical && state.channel === "cross"
+              ? t("국내 매장 픽업 판매처가 없어 해외직구 값을 보여 드려요. 해외 판매처가 직접 보내며 받는 분의 개인통관부호가 필요하고, 관세·배송 조건은 판매처마다 다릅니다.")
+              : state.typical
               ? t("보통 가격은 이 술을 파는 매장 값의 한가운데입니다. 가장 싼 곳은 품절과 지나치게 싼 값(보통 가격의 60% 밑 — 잘못 올린 값일 수 있음)을 빼고 골랐어요. 링크를 열면 가까운 매장 값이 떠서 다를 수 있습니다.")
               : state.verified
                 ? state.lowSeller
@@ -795,7 +806,7 @@ export default function ResultScreen({
   const r = result;
   // 훅은 조건부로 부를 수 없으므로 이른 반환보다 위에서 부른다.
   // 히어로 이미지와 구매 정보 카드가 이 결과를 함께 쓴다.
-  const shop = useShopItems(r?.found === false ? null : r?.name, r?.searchKeyword);
+  const shop = useShopItems(r?.found === false ? null : r?.name, r?.searchKeyword, r?.dailyshotId);
 
   if (!r || r.found === false) {
     // 사진을 찍어서 실패한 것과 이름으로 찾다 실패한 것은 다른 상황이다.
@@ -890,7 +901,7 @@ export default function ResultScreen({
               정가에 가깝고, 그것을 최저가라고 하면 실제로 살 때 더 싼 곳을
               놓치게 만든다. */}
           <div className="card-title">
-            {typical ? t("보통 가격") : live ? (shop.verified ? t("최저가") : t("판매가")) : estimateOnly ? t("예상 가격대") : t("시세")}
+            {typical ? (shop.channel === "cross" ? t("해외직구 보통 가격") : t("보통 가격")) : live ? (shop.verified ? t("최저가") : t("판매가")) : estimateOnly ? t("예상 가격대") : t("시세")}
           </div>
           <div className="price-line">
             {/* 실제 값 → 조사해 둔 시장가 → 대역 순으로 물러선다 */}
@@ -911,9 +922,11 @@ export default function ResultScreen({
             <div className="price-basis">
               {typical
                 ? [
-                    shop.typicalBandCount && shop.sampled > 1
-                      ? t("전국 {n}곳 중 {k}곳이 {b}", { n: shop.sampled, k: shop.typicalBandCount, b: bandWord(shop.typicalBand) })
-                      : t("전국 {n}곳 판매가의 가운데 값", { n: shop.sampled || 1 }),
+                    shop.channel === "cross"
+                      ? t("해외직구 판매처 {n}곳의 가운데 값 · 관세·배송 별도일 수 있음", { n: shop.sampled || 1 })
+                      : shop.typicalBandCount && shop.sampled > 1
+                        ? t("전국 {n}곳 중 {k}곳이 {b}", { n: shop.sampled, k: shop.typicalBandCount, b: bandWord(shop.typicalBand) })
+                        : t("전국 {n}곳 판매가의 가운데 값", { n: shop.sampled || 1 }),
                     shop.reference && shop.reference < typical ? t("가장 싼 곳 {p}", { p: fmtWon(shop.reference) }) : null,
                     t("오늘 확인"),
                   ].filter(Boolean).join(" · ")

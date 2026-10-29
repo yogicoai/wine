@@ -13,12 +13,13 @@ import { getDb } from "@/lib/mongodb";
 import { catalogKey } from "@/lib/catalog";
 import { ONLINE_SALE_OK, onlineShops } from "@/lib/onlineSale";
 import { priceOf, hasPriceKey, priceReadyFor } from "@/lib/danawa";
-import { dailyshotFor, goodsFor, livePrice, searchAndMatch } from "@/lib/dailyshot";
+import { dailyshotById, dailyshotFor, goodsFor, livePrice, searchAndMatch } from "@/lib/dailyshot";
 import { searchElevenst, hasElevenstKey } from "@/lib/elevenst";
 
 export const runtime = "nodejs";
 
 // GET /api/shop?q=샤또딸보              → { items: [...] }        (주류, 최대 4개)
+// GET /api/shop?q=…&ds=4114             → 카탈로그에 이어 둔 데일리샷 상품 번호로 바로(이름으로 다시 찾지 않는다)
 // GET /api/shop?type=food&q=A&q=B&q=C  → { results: [{q, item}] } (안주, 키워드별 1개)
 export async function GET(request) {
   const params = new URL(request.url).searchParams;
@@ -73,8 +74,11 @@ export async function GET(request) {
       return NextResponse.json({ results });
     }
 
+    // 카탈로그와 이어진 술이면 그 데일리샷 상품 번호로 바로 — 이름으로 찾다 비슷한 상품에 붙지 않게(2026-10-29)
+    const exact = params.get("ds") ? await dailyshotById(params.get("ds")) : null;
+
     // 이 술이 어느 주종인지 먼저 본다 — 어디에 물을지가 여기서 갈린다.
-    const cat = await categoryOf(queries[0]);
+    const cat = exact ? null : await categoryOf(queries[0]);
 
     // 데일리샷이 첫 번째다.
     //
@@ -88,10 +92,10 @@ export async function GET(request) {
     // 것도 검색에는 걸린다. 다만 그쪽 검색은 매우 느슨해서 — "카시예로 델
     // 디아블로"에 2,956건을 주고 첫 줄이 "러시안 잭 소비뇽 블랑"이다 —
     // 결과를 후보로만 받고 판단은 우리 잣대로 한다.
-    const ds = cat
+    const ds = exact || (cat
       ? (await dailyshotFor(queries[0], { category: cat })) ||
         (await searchAndMatch(queries[0], { category: cat }))
-      : null;
+      : null);
     if (ds) {
       // 이름은 색인에서 맞추고, 값은 판매처에 직접 묻는다.
       //
@@ -121,6 +125,8 @@ export async function GET(request) {
         typicalBand: live?.band ?? ds.midBand ?? null,
         typicalBandCount: live?.bandCount ?? ds.midBandCount ?? null,
         outliers: live?.outliers ?? ds.lowOutliers ?? 0,
+        // pickup(국내 매장 픽업) | cross(해외직구 — 매장 픽업 판매처가 없는 술). 화면이 "해외직구"라고 밝힌다
+        channel: live?.channel || ds.lowChannel || "pickup",
         // 검색 건수가 아니라 "이 술을 파는 곳"의 수다. 화면이 그렇게 밝힌다.
         sampled: live?.sellers ?? ds.sellers,
         // 이 값을 파는 매장. 상품 페이지를 열면 다른 값이 떠 있는 것이 보통이라
@@ -242,6 +248,7 @@ async function freshLow(ds) {
     return {
       low: ds.low, sellers: ds.sellers, seller: ds.lowSeller, region: ds.lowRegion,
       mid: ds.mid, band: ds.midBand ?? null, bandCount: ds.midBandCount ?? null, outliers: ds.lowOutliers ?? 0,
+      channel: ds.lowChannel || "pickup",
     };
 
   const live = await livePrice(ds.itemId);
@@ -257,6 +264,7 @@ async function freshLow(ds) {
           lowSeller: live.seller || null, lowRegion: live.region || null,
           lowSoldOut: !!live.soldOut,
           mid: live.mid ?? null, midBand: live.band ?? null, midBandCount: live.bandCount ?? null, lowOutliers: live.outliers ?? 0,
+          lowChannel: live.channel || "pickup",
         },
         $push: { history: { $each: [{ at: new Date(), low: live.low }], $slice: -60 } },
       }

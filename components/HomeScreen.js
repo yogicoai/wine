@@ -5,7 +5,7 @@ import WineCard, { liquidOf } from "./WineCard";
 import KindRail from "./KindRail";
 import { APP, kindBottle } from "@/lib/appProfile";
 import { PRICE_BANDS } from "@/lib/curation";
-import { t } from "@/lib/i18n";
+import { t, fmtWon } from "@/lib/i18n";
 
 // 홈 — 위스키 렌즈 홈(바탕화면 whisky 저장소 app/page.js)과 같은 구성(2026-10-29 클라이언트 요구: "똑같이").
 //   1. "와인 N종" 알약 · 큰 제목 (로고 · 내 정보는 어느 화면이든 따라오는 위쪽 이름 줄(app/page.js .topbar)로 옮겼다)
@@ -61,7 +61,7 @@ export default function HomeScreen({ onOpen, onBrowse, onSearch, onQuiz }) {
             <span className="bt-today-copy">
               <strong className="bt-today-name">{today.name}</strong>
               <span className="bt-today-meta">
-                {[today.rating && `★ ${today.rating}`, today.country && t(today.country), today.priceBand && t(bandLabel(today.priceBand))].filter(Boolean).join(" · ")}
+                {[today.rating && `★ ${today.rating}`, today.country && t(today.country), today.price ? `${today.priceChannel === "cross" ? t("직구") + " " : ""}${fmtWon(today.price)}` : today.priceBand && t(bandLabel(today.priceBand))].filter(Boolean).join(" · ")}
               </span>
               {today.note && <span className="bt-today-note">{today.note}</span>}
             </span>
