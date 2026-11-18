@@ -10,7 +10,7 @@
     "dev:tradition": "node scripts/dev.mjs tradition",
     "dev:whisky": "node scripts/dev.mjs whisky",
     "dev:spirits": "node scripts/dev.mjs spirits",
-    "build": "next build",
+    "build": "next build --webpack",
     "build:wine": "node scripts/dev.mjs wine build",
     "build:sake": "node scripts/dev.mjs sake build",
     "build:beer": "node scripts/dev.mjs beer build",
